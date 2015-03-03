@@ -73,13 +73,13 @@ Because the *A* record is the defual, we can do like above example
 ```ruby
 resolver = Net::DNS::Resolver.start("google.com")
 ```
-or in one line to get exactely **`answer`**.
+or in one line to get exact **`answer`**.
 
 ```ruby
 resolver = Net::DNS::Resolver.start("google.com").answer
 ```
 
-will return an array with all IPs assinged to this domain
+will return an array with all IPs assigned to this domain
 ```
 [google.com.             34      IN      A       74.125.239.35,
  google.com.             34      IN      A       74.125.239.39,
@@ -142,7 +142,7 @@ resolver.nameservers = ["8.8.4.4" , "8.8.8.8"]
 
 
 ### Zone Transfere(AXFR)
-It's rar to find a domain zone transfer these days, even Zonetransfer.me stop transfer, it was created for that reasone!
+It's rare to find a domain zone transfer these days, even Zonetransfer.me stop transfer, it was created for that reason!
 ```ruby
 axfr = Net::DNS::Resolver.start("Zonetransfere.me", Net::DNS::AXFR).answer
 ```
