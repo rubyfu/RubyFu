@@ -38,7 +38,7 @@ TO BE COMPLETED.............
 
 
 ##### Commandline
-Use single ticks to highlight your commandline. ex. `` `ls` ``
+Use triple ticks to highlight your commandline. ex. ` ```ls``` `
 
 
 
