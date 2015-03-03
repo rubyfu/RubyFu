@@ -1,6 +1,6 @@
 # Chapter 0x2 | Array KungFu
 
-## Patern
+## Pattern
 
 #### Pattern create
 
