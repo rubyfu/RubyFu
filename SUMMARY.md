@@ -12,6 +12,8 @@
 * [Chapter 0x3 | System KungFu](chapter_0x3__system_kungfu/README.md)
    * [File manipulation](chapter_0x3__system_kungfu/file_manipulation.md)
 * [Chapter 0x4 | Network KungFu](chapter_0x4__network_kungfu/README.md)
+   * [Network Scanning](chapter_0x4__network_kungfu/network_scanning.md)
+       * [Nmap](chapter_0x4__network_kungfu/nmap.md)
    * [DNS Enumeration](chapter_0x4__network_kungfu/dns_enumeration.md)
        * [DNS bruteforce](chapter_0x4__network_kungfu/dns_bruteforce.md)
    * [SSH](chapter_0x4__network_kungfu/ssh.md)

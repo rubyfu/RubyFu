@@ -39,7 +39,7 @@ or
 ```ruby
 ["41424344"].pack('H*')
 ```
-return 
+return
 ```
 ABCD
 ```

@@ -8,6 +8,13 @@ For best presentation, please visit [RubyFu on Gitbook](http://kingsabri.gitbook
 ## Who should read this book?
 Ideally, Hackers!
 
+## Organization of the book
+### Chapter 0x1 | String KungFu
+### Chapter 0x2 | Array KungFu
+### Chapter 0x3 | System KungFu
+### Chapter 0x4 | Network KungFu
+### Chapter 0x5 | Web KungFu
+### Chapter 0x6 | Exploitation KungFu
 
 
 
