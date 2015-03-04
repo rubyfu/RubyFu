@@ -23,7 +23,7 @@ There are several kind of contributions could help this book to get the best res
 ### Start contributing
 Please find all you need to know about gitbook and markdown editing in [References](references/README.md) section.
 
-TO BE COMPLETED.............
+**TO BE COMPLETED`.............`**
 
 
 ### Contributing with Code
