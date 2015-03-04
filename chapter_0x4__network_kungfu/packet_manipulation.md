@@ -1,4 +1,5 @@
 # Packet manipulation
+In this chapter, we'll try to do many implementations using the awesome lib, PacketFu
 
 ## PacketFu - The packet manipulaton
 Before installing packetfu gem you'll need to install ruby-dev and libpcap-dev
@@ -72,3 +73,30 @@ end
 
 scan
 ```
+
+### Simple IDS
+This is a simple IDS will print source and destination of any communication has "hacked" payload
+```ruby
+require 'packetfu'
+
+capture = PacketFu::Capture.new(:iface => ARGV[0], :start => true, :filter => "ip")
+loop do
+  capture.stream.each do |pkt|
+    packet = PacketFu::Packet.parse(pkt)
+    puts "#{Time.now}: " + "Source IP: #{packet.ip_saddr}" + " --> " + "Destination IP: #{packet.ip_daddr}" if packet.payload =~ /hacked/
+  end
+end
+```
+Now try to netcat any open port then send hacked
+```
+echo "Hacked" | nc -nv 192.168.0.15 4444
+```
+return
+```
+2015-03-04 23:20:38 +0300: Source IP: 192.168.0.13 --> Destination IP: 192.168.0.15
+```
+
+### DNS spoofing
+http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/
+http://tuftsdev.github.io/DefenseOfTheDarkArts/assignments/manipulatingthenetworkwithpacketfu-110314111058-phpapp01.pdf
+
