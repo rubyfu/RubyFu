@@ -20,6 +20,8 @@
    * [Remote Shell](module_0x3__system_kungfu/system_shell.md)
    * [Backdoor](module_0x4__network_kungfu/backdoor.md)
    * [Packet manipulation](module_0x4__network_kungfu/packet_manipulation.md)
+       * [ARP Spoofing](module_0x4__network_kungfu/arp_spoofing.md)
+       * [DNS Spoofing](module_0x4__network_kungfu/dns_spoofing.md)
 * [Module 0x5 | Web KungFu](module_0x5__web_kungfu/README.md)
 * [Module 0x6 | Exploitation KungFu](module_0x6__exploitation_kungfu/README.md)
    * [Metasploit](module_0x6__exploitation_kungfu/metasploit.md)
