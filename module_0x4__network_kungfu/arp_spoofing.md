@@ -2,7 +2,6 @@
 As you know, ARP Spoofing attack in the core of MiTM attack.
 
 
-
 **Scenario**
 
 | Host/Info |   IP Address  |    MAC Address    |
@@ -68,3 +67,9 @@ while true
     arp_packet_router.to_w(info[:iface])
 end
 ```
+Source[^*]
+
+
+<br><br>
+---
+[^*] Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)
