@@ -20,9 +20,6 @@ Ideally, Hackers!
 
 https://github.com/larskanis/libusb
 
-{{md  /home/KING/Code/RubyFu/SUMMARY.md }}
-
-<<[/home/KING/Code/RubyFu/SUMMARY.md]
 
 
 
