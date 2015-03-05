@@ -51,7 +51,7 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
     Your notes should be under footer's line, Add the follwoing to intial the footer if not exist
 
         <br><br><br>
-        **---**
+        ---
         YOUR NOTES SHALL BE HERE
 
 * Try to use readable code, if you have to add more tricky/skilled code then explain it well
@@ -64,7 +64,7 @@ Use triple ticks to highlight your commandline. ex. ` ```ls``` `
 
 
 <br><br><br>
-**---**
+---
 [^1]: [More about GPL](http://www.gnu.org/copyleft/gpl.html)
 
 

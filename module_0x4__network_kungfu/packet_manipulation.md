@@ -79,11 +79,11 @@ This is a simple IDS will print source and destination of any communication has 
 ```ruby
 require 'packetfu'
 
-capture = PacketFu::Capture.new(:iface => ARGV[0], :start => true, :filter => "ip")
+capture = PacketFu::Capture.new(:iface => "wlan0", :start => true, :filter => "ip")
 loop do
   capture.stream.each do |pkt|
     packet = PacketFu::Packet.parse(pkt)
-    puts "#{Time.now}: " + "Source IP: #{packet.ip_saddr}" + " --> " + "Destination IP: #{packet.ip_daddr}" if packet.payload =~ /hacked/
+    puts "#{Time.now}: " + "Source IP: #{packet.ip_saddr}" + " --> " + "Destination IP: #{packet.ip_daddr}" if packet.payload =~ /hacked/i
   end
 end
 ```
@@ -97,6 +97,10 @@ return
 ```
 
 ### DNS spoofing
-http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/
+
+[^2]http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/
 http://tuftsdev.github.io/DefenseOfTheDarkArts/assignments/manipulatingthenetworkwithpacketfu-110314111058-phpapp01.pdf
 
+<br><br>
+---
+[^2] Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)

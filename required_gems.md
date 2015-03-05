@@ -10,3 +10,4 @@ To run pry with best appearance
 ```
 pry --simple-prompt
 ```
+

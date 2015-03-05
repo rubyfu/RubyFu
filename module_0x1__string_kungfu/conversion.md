@@ -34,6 +34,7 @@ or
 ```ruby
 "ABCD".chars.map {|c| '\x%x' % c.ord}.join
 ```
+source[^1]
 
 ## Convert String to Hex
 ```ruby
@@ -57,3 +58,7 @@ end
 
 puts hex
 ```
+
+<br><br><br>
+---
+[^1]: Source: [Ruby| Convert ASCII to HEX](http://king-sabri.net/?p=2613).
