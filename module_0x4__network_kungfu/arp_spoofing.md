@@ -125,6 +125,10 @@ while true
 end
 ```
 
+> Note: Don't forget to enable packet forwarding on your system to allow victim to browse internet.
+
+> `echo "1" > /proc/sys/net/ipv4/ip_forward `
+
 Returns, time to wiresharking ;)
 ```
 [+] Sending ARP packet to victim: 192.168.0.21
