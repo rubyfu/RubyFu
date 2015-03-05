@@ -27,6 +27,7 @@
     * [Rubymonk.com](https://rubymonk.com/)
     * http://www.natontesting.com/2011/01/01/rubys-each-select-and-reject-methods/
     * [Byte manipulation in ruby](http://www.happybearsoftware.com/byte-manipulation-in-ruby.html)
+    * [Ruby Format](http://www.dotnetperls.com/format)
 * **Hacking Tools built with ruby**
     * Metasploit framework
     * Beef framework
