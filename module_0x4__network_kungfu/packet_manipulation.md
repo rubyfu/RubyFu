@@ -17,8 +17,8 @@ gem install packetfu
 require 'packetfu'
 
 def pkts
-  $config = PacketFu::Config.new(PacketFu::Utils.whoami?(:iface=> "wlan0")).config 	# set interface
-  #$config = PacketFu::Config.new(:iface=> "wlan0").config   # use this line instead of above if you face `whoami?': uninitialized constant PacketFu::Capture (NameError)
+  #$config = PacketFu::Config.new(PacketFu::Utils.whoami?(:iface=> "wlan0")).config 	# set interface
+  $config = PacketFu::Config.new(:iface=> "wlan0").config   # use this line instead of above if you face `whoami?': uninitialized constant PacketFu::Capture (NameError)
 
   #
   #--> Build TCP/IP
@@ -96,11 +96,4 @@ return
 2015-03-04 23:20:38 +0300: Source IP: 192.168.0.13 --> Destination IP: 192.168.0.15
 ```
 
-### DNS spoofing
 
-[^2]http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/
-http://tuftsdev.github.io/DefenseOfTheDarkArts/assignments/manipulatingthenetworkwithpacketfu-110314111058-phpapp01.pdf
-
-<br><br>
----
-[^2] Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)
