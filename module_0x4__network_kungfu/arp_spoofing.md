@@ -151,6 +151,6 @@ Returns, time to wiresharking ;)
 
 <br><br>
 ---
-[^1] Creat table the easy way - [Table Generator](http://www.tablesgenerator.com/markdown_tables)
+[^1]: Creat table the easy way - [Table Generator](http://www.tablesgenerator.com/markdown_tables)
 
-[^2] Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)
+[^2]: Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)

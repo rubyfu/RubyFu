@@ -120,4 +120,4 @@ return
 
 <br><br><br>
 ---
-[^1]: [More about GPL](https://github.com/packetfu/packetfu)
+[^1]: [PacketFu Homepage](https://github.com/packetfu/packetfu)
