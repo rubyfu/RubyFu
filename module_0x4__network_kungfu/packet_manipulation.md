@@ -1,8 +1,19 @@
 # Packet manipulation
 In this chapter, we'll try to do many implementations using the awesome lib, PacketFu
 
+
 ## PacketFu - The packet manipulaton
-Before installing packetfu gem you'll need to install ruby-dev and libpcap-dev
+
+**PacketFu Features**
+* Manibulating TCP protocol
+* Manibulating UDP protocol
+* Manibulating ICMP protocl
+* Packet Capturing - Support TCPdump style
+* Read and write PCAP files
+
+
+### Installing PacketFu
+Before installing packetfu[^1] gem you'll need to install ruby-dev and libpcap-dev
 ```
 apt-get -y install ruby ruby-dev libpcap-dev
 ```
@@ -74,6 +85,17 @@ end
 scan
 ```
 
+
+### Simple TCPdump
+Lets see how we can
+```ruby
+require 'packetfu'
+
+capture = PacketFu::Capture.new(:iface=> "wlan0", :promisc => true, :start => true)
+capture.show_live
+```
+
+
 ### Simple IDS
 This is a simple IDS will print source and destination of any communication has "hacked" payload
 ```ruby
@@ -96,4 +118,6 @@ return
 2015-03-04 23:20:38 +0300: Source IP: 192.168.0.13 --> Destination IP: 192.168.0.15
 ```
 
-
+<br><br><br>
+---
+[^1]: [More about GPL](https://github.com/packetfu/packetfu)
