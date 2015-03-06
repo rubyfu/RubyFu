@@ -9,7 +9,7 @@ We have 3 machines in this senario as showen below.
                  ٧
 |Victim| -----------------> |Router| ---> Internet
 ```
-Here the list of IP and MAC address of each of theme
+Here the list of IP and MAC addresses of each of theme in the follwing table[^1]
 
 | Host/Info |   IP Address  |    MAC Address    |
 |-----------|:-------------:|:-----------------:|
@@ -77,7 +77,7 @@ while true
     arp_packet_router.to_w(info[:iface])
 end
 ```
-Source[^*]
+Source[^2]
 
 putting all together and run as `root`
 
@@ -151,4 +151,6 @@ Returns, time to wiresharking ;)
 
 <br><br>
 ---
-[^*] Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)
+[^1] Creat table the easy way - [Table Generator](http://www.tablesgenerator.com/markdown_tables)
+
+[^2] Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)
