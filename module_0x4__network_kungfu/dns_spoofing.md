@@ -38,7 +38,12 @@ Now we cant intercept DNS Query packet comming from victim's machine. Since Pack
 | ANY   | 255   | Request for All Records                 |
 
 From wireshark, if we take a deeper look at the DNS query payload in `Domain Name System (query)`, we can see its presentation in hexdecimal.
-![Wireshark](../images/module04/dns_spoofing_wireshark1.png)
+
+|      ![Wireshark](../images/module04/dns_spoofing_wireshark1.png)      |
+|:---------------:|
+| **Figure 1:** Full Payload content |
+
+
 
 Let's to anatomize our payload
 ```
