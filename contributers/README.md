@@ -2,7 +2,7 @@
 
 Big love to those people who support this book by any meaning.
 
-![](https://www.shropshirepetals.com/assets/blog/Ruby_Loves_Us__Button.jpg)
+![](../images/others/Ruby_Loves_Us.jpg)
 
 ## Elite contributers (> 20 contributions. No order)
 * TO BE CONTINUED
