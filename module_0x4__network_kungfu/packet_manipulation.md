@@ -38,6 +38,12 @@ ifconfig[:eth_saddr]
 Utils.arp("192.168.0.21", :iface => "wlan0")
 ```
 
+#### Read Pcap file
+```ruby
+PacketFu::PcapFile.read_packets("file.pcap")
+```
+
+
 ### Building TCP Syn packet
 
 ```ruby
