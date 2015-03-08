@@ -38,21 +38,25 @@ Let's to anatomize our payload
 * The First 2 bytes is the **Transaction ID** and we don't care about it. (Our case: `\xe7\x1d`)
 * The Nex 2 bytes is the **Flags**[^3]. (We need: `\x01\x00` = \x10)
 * Farthermore, in **Queries** section which contains
+
 ```
 0000   07 74 77 69 74 74 65 72 03 63 6f 6d 00 00 01 00
 0010   01
 ```
-    * The **Queries** starts at *13 byte* of the payload.
-        * The13th byte specifies the length of the domain name *before* the *very first dot* (without last dot com or whatever the top domain is). (Our canse: `\x07`)
-        **Try:**`[%w{ 74 77 69 74 74 65 72 }.join].pack("H*")`
-            * Notice The domain name of "twitter.com" equals `\x07` but "www.twitter.com" equals `\x03` the same consideration for subdomains
-            * Each dot after first dot will be replaced with the length of the followed characters
 
-            **e.g.** www.google.co.uk
-                * First length (**www**)  => will be replaced with `\x03`
-                * First dot(**.google**) => will be replaced with `\x06`
-                * Second dot(**.co**)    => will be replaced with `\x02`
-                * Third dot(**.uk**)     => will be replaced with `\x02`
+
+
+* The **Queries** starts at *13 byte* of the payload.
+    * The13th byte specifies the length of the domain name *before* the *very first dot* (without last dot com or whatever the top domain is). (Our canse: `\x07`)
+        **Try:**`[%w{ 74 77 69 74 74 65 72 }.join].pack("H*")`
+        * Notice The domain name of "twitter.com" equals `\x07` but "www.twitter.com" equals `\x03` the same consideration for subdomains
+        * Each dot after first dot will be replaced with the length of the followed characters
+
+        **e.g.** www.google.co.uk
+            * First length (**www**)  => will be replaced with `\x03`
+            * First dot(**.google**) => will be replaced with `\x06`
+            * Second dot(**.co**)    => will be replaced with `\x02`
+            * Third dot(**.uk**)     => will be replaced with `\x02`
 
     * The very end of the domain name string is terminated by a `\x00`.
     * The next 2 bytes refers to the **type of the query**[^4]. (Our canse: `\x00\x01`)
