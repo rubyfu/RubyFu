@@ -1,13 +1,12 @@
 # Required Gems
 
-Install main required gems in one line. Later will be more
-
+Install main required gems in one line.
 ```
-apt-get -y install ruby ruby-dev libpcap-dev
+gem install pry
 ```
-
 To run pry with best appearance
 ```
 pry --simple-prompt
 ```
 
+> **Note:** Most of our example will be executed on pry so please consider it as main part of our environment.
