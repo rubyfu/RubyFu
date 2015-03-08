@@ -8,20 +8,36 @@ In this chapter, we'll try to do many implementations using the awesome lib, Pac
 * Manibulating TCP protocol
 * Manibulating UDP protocol
 * Manibulating ICMP protocl
-* Packet Capturing - Support TCPdump style
+* Packet Capturing - Support TCPdump style[^1]
 * Read and write PCAP files
 
 
 ### Installing PacketFu
-Before installing packetfu[^1] gem you'll need to install ruby-dev and libpcap-dev
+Before installing packetfu[^2] gem you'll need to install ruby-dev and libpcap-dev
 ```
-apt-get -y install ruby ruby-dev libpcap-dev
+apt-get -y install libpcap-dev
 ```
 
 then install packetfu
 ```
 gem install packetfu
 ```
+
+### Basic Usage
+
+#### Get your interface information
+```ruby
+ifconfig = Utils.ifconfig("wlan0")
+ifconfig[:iface]
+ifconfig[:ip_saddr]
+ifconfig[:eth_saddr]
+```
+
+#### Get MAC address of a remote host
+```ruby
+Utils.arp("192.168.0.21", :iface => "wlan0")
+```
+
 ### Building TCP Syn packet
 
 ```ruby
@@ -120,4 +136,5 @@ return
 
 <br><br><br>
 ---
-[^1]: [PacketFu Homepage](https://github.com/packetfu/packetfu)
+[^1]: [TCPdump Cheat sheet](http://packetlife.net/media/library/12/tcpdump.pdf)
+[^2]: [PacketFu Homepage](https://github.com/packetfu/packetfu)
