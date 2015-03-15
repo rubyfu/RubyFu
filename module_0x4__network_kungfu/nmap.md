@@ -2,12 +2,10 @@
 
 required gem
 ```
-gem install ruby-nmap
+gem install ruby-nmap ronin-scanners
 ```
 As far as you understand how to use nmap and how basicly it works, you'll find this lib is easy to use. You can do most  most of nmap functionalties
 
-
-## Scanning
 
 ### Basic Scan
 ```ruby
@@ -77,7 +75,7 @@ end
 
 
 
-
+https://github.com/ronin-ruby/ronin-scanners
 
 
 

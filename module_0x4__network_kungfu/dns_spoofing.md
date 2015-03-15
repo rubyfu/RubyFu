@@ -73,7 +73,7 @@ Let's to anatomize our payload
 * We need to make sure this packet is a DNS query
 * We need to get the queried/requested domain
     * We need to know the domain length
-    * Get the domain then append dot or top domain
+    * We need to get the FQDN
 * Replace the requested domain with any domain we want
 * Re inject the packet into victim connection
 
@@ -92,7 +92,7 @@ include PacketFu
 # * We need to capture UDP packets on port 53 only
 #
 filter = "udp and port 53 and host " + "192.168.0.21"
-capture = Capture.new(:iface => "wlan0", :start => true, :promisc => true, :filter => filter, :save => true)
+capture = Capture.new(:iface => "wlan0",:start => true, :promisc => true, :filter => filter, :save => true)
 
 # * We need to get the queried/requested domain
 #    * We need to know the domain length
@@ -148,9 +148,14 @@ capture.stream.each do |pkt|
   end
 end
 ```
+Till now we successfully finished arp spoofing then DNS cupturing but still we need to replace the requested domain with our domain. eg. attacker.zone
+
+
+
+
+
 
 Sources[^1] [^2] - The code has been modified and fixed for simplicty
-
 
 <br><br>
 ---

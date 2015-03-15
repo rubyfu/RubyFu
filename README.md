@@ -18,11 +18,3 @@ Ideally, Hackers!
 ### Module 0x4 | Network KungFu
 ### Module 0x5 | Web KungFu
 ### Module 0x6 | Exploitation KungFu
-
-
-
-https://github.com/larskanis/libusb
-
-
-
-

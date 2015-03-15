@@ -30,12 +30,14 @@
     * [Byte manipulation in ruby](http://www.happybearsoftware.com/byte-manipulation-in-ruby.html)
     * [Ruby Format](http://www.dotnetperls.com/format)
 * **Hacking Tools built with ruby**
-    * Metasploit framework
-    * Beef framework
-    * wpscan
-    * BufferOverflow kit
+    * Metasploit framework - Exploitation framework
+    * Beef framework - XSS framework
+    * METASM - Assembly manipulation suite
+    * wpscan - Wordpress vulnerability scanner
+    * BufferOverflow kit - Exploitation tool Kit
     * HTTP Traceroute
     * CeWL - Custom Word List generator
+    * Roini - Vulnerability research and exploit development framework
     * [ADD YOUR RYBY HACKING TOOL HERE!]
 
 

