@@ -25,6 +25,7 @@
        * [DNS Spoofing](module_0x3__network_kungfu/dns_spoofing.md)
 * [Module 0x4 | Web KungFu](module_0x4__web_kungfu/README.md)
 * [Module 0x5 | Exploitation KungFu](module_0x5__exploitation_kungfu/README.md)
+   * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
 * [References](references/README.md)
 * [FAQs](faqs/README.md)
