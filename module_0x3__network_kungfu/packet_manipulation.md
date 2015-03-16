@@ -1,5 +1,5 @@
 # Packet manipulation
-In this chapter, we'll try to do many implementations using the awesome lib, PacketFu
+In this chapter, we'll try to do many implementations using the awesome lib, PacketFu[^1].
 
 
 ## PacketFu - The packet manipulaton
@@ -8,12 +8,12 @@ In this chapter, we'll try to do many implementations using the awesome lib, Pac
 * Manibulating TCP protocol
 * Manibulating UDP protocol
 * Manibulating ICMP protocl
-* Packet Capturing - Support TCPdump style[^1]
+* Packet Capturing - Support TCPdump style[^2]
 * Read and write PCAP files
 
 
 ### Installing PacketFu
-Before installing packetfu[^2] gem you'll need to install ruby-dev and libpcap-dev
+Before installing packetfu gem you'll need to install ruby-dev and libpcap-dev
 ```
 apt-get -y install libpcap-dev
 ```
@@ -142,5 +142,5 @@ return
 
 <br><br><br>
 ---
-[^1]: [TCPdump Cheat sheet](http://packetlife.net/media/library/12/tcpdump.pdf)
-[^2]: [PacketFu Homepage](https://github.com/packetfu/packetfu)
+[^1]: [PacketFu Homepage](https://github.com/packetfu/packetfu)
+[^2]: [TCPdump Cheat sheet](http://packetlife.net/media/library/12/tcpdump.pdf)
