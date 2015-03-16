@@ -12,9 +12,8 @@ For best presentation, please visit [RubyFu on Gitbook](http://kingsabri.gitbook
 Ideally, Hackers!
 
 ## Organization of the book
-### Module 0x1 | String KungFu
-### Module 0x2 | Array KungFu
-### Module 0x3 | System KungFu
-### Module 0x4 | Network KungFu
-### Module 0x5 | Web KungFu
-### Module 0x6 | Exploitation KungFu
+### Module 0x1 | Basic Ruby KunkFu
+### Module 0x2 | System KungFu
+### Module 0x3 | Network KungFu
+### Module 0x4 | Web KungFu
+### Module 0x5 | Exploitation KungFu
