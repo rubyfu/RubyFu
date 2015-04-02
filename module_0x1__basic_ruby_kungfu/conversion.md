@@ -60,6 +60,29 @@ end
 puts hex
 ```
 
+## En/Deccode base-64 Sting
+We'll presint it by many ways
+
+**Encode string**
+```ruby
+["RubyFu"].pack('m0')
+```
+or
+```ruby
+require 'base64'
+Base64.encode64 "RubyFu"
+```
+
+
+**Decode**
+```ruby
+"UnVieUZ1".unpack('m0')
+```
+or
+```ruby
+ Base64.decode64 "UnVieUZ1"
+```
+
 <br><br><br>
 ---
 [^1]: Source: [Ruby| Convert ASCII to HEX](http://king-sabri.net/?p=2613).
