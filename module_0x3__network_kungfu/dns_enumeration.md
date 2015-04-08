@@ -142,14 +142,15 @@ resolver.nameservers = ["8.8.4.4" , "8.8.8.8"]
 
 
 ### Zone Transfere(AXFR)
-It's rare to find a domain zone transfer these days, even Zonetransfer.me stop transfer, it was created for that reason!
+It's rare to find a domain zone transfer these days, '[Zonetransfer.me](http://digi.ninja/projects/zonetransferme.php)' especially benn created for that reason!
 ```ruby
-axfr = Net::DNS::Resolver.start("Zonetransfere.me", Net::DNS::AXFR).answer
+axfr = Net::DNS::Resolver.new(nameserver: "81.4.108.41").axfr "Zonetransfer.me"
 ```
 
 
-
-
+<br><br><br>
+---
+http://searchsignals.com/tutorials/reverse-dns-lookup/
 
 
 
