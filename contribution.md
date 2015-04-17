@@ -29,16 +29,17 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 ### Contributing with Code
 
 ##### Ruby code
-* Use the triple ticks ` ``` `  followed by `ruby` then your code in between then ` ``` ` to get ruby code highlighted.
+* Use the triple ticks ` ``` `  followed by `ruby` then your code in between then ` ``` ` to get ruby code highlighted. eg.
 
-    ```ruby
-    puts "Ruby Code here"
-    ```
+        ```ruby
+        puts "Ruby Code here"
+        ```
 
 * Explain the main idea -with some details- of the code, if you explain every line that would be great but it's not a must.
+* Choose the correct Module.
 * Make your title clear.
 * Use Text editor/ide for code identiation before pasting your code
-* Mention the souce, if you copied or developed a code the created by others please mention the souce in the footer. eg.
+* Mention the souce, if you copied or developed a code that created by others please mention the souce in the footer. eg.
 
         ```ruby
         puts "Your good code"

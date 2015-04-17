@@ -5,9 +5,17 @@ Since we mostly working with commandline, we need our output to be more egent. H
 
 ```ruby
 class String
-  def red; colorize(self, "\e[31m"); end
-  def green; colorize(self, "\e[32m"); end
+  def red; colorize(self, "\e[1m\e[31m"); end
+  def green; colorize(self, "\e[1m\e[32m"); end
+  def dark_green; colorize(self, "\e[32m"); end
   def yellow; colorize(self, "\e[1m\e[33m"); end
+  def blue; colorize(self, "\e[1m\e[34m"); end
+  def dark_blue; colorize(self, "\e[34m"); end
+  def purple; colorize(self, "\e[35m"); end
+  def dark_purple; colorize(self, "\e[1;35m"); end
+  def cyan; colorize(self, "\e[1;36m"); end
+  def dark_cyan; colorize(self, "\e[36m"); end
+  def pure; colorize(self, "\e[1m\e[35m"); end
   def bold; colorize(self, "\e[1m"); end
   def colorize(text, color_code)  "#{color_code}#{text}\e[0m" end
 end
@@ -27,3 +35,39 @@ then just require it in your script
 ```ruby
 require 'colorize'
 ```
+
+## Overwriting Console Output
+It's awesome the have more filixability in your terminal and somethimes we need to do more and with our scripts.
+
+Overwriting console outputs is one is great looking in muture applications so why don't make our application more muture and elegant?!.
+
+Some application
+### Create Progress percet
+
+```ruby
+(1..10).each do |percent|
+  print "#{percent*10}% complete\r"
+  sleep(0.5)
+  print  ("\e[K") # Delete current line
+end
+puts "Done!"
+```
+another example
+
+```ruby
+(1..5).to_a.reverse.each do |c|
+  print "\rI'll exit after #{c} second(s)"
+  print "\e[K"
+  sleep 1
+end
+```
+
+
+
+
+
+
+
+
+
+

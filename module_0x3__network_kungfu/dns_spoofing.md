@@ -152,7 +152,7 @@ end
 Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS cupturing but still we need to replace the requested domain with our domain. eg. attacker.zone
 
 
-
+https://github.com/SilverFoxx/Spoofa/blob/master/spoofa
 
 
 
