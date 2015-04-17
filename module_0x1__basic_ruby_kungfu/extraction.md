@@ -1,5 +1,5 @@
 # Extraction
-String extraction is one of the main tasks that all programmers need. Sometimes it's getting harder because we didn't get an easy string presentation to extract useful data/information. Here some,
+String extraction is one of the main tasks that all programmers need. Sometimes it's getting even harder because we didn't get an easy string presentation to extract useful data/information. Here some,
 
 ## Extracting Network Strings
 
