@@ -1,7 +1,7 @@
 # FAQs
 
 ###### Q \ Why there is no explination for beginers?
-We respect all beginers and new commers from all levels and all programming languages; But, this book helps certain type of people (hackers) to find a common challenged code in their journey. So with our love, we add very good references to help you to start and we can't wait to see you writting to this book.
+We respect all beginers and new commers from all levels and all programming languages; But, this book helps certain type of people (hackers) to find a common challenged code in their journey. So with our love, we add good references to help you to start and we can't wait to see you writting to this book.
 
 ###### Q \ If I can add valuable contents to beginners section, can I add?
 In this stage we really focus on the core, whoever if you have really **valuable and complete** contents to add, we may add a complete chapter for beginners in this book and we'll appreciate that too. Till that moment, you can do a spelling, grammer, etc review.
