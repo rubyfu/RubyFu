@@ -1,5 +1,5 @@
 # ARP Spoofing
-As you know, ARP Spoofing attack in the core of MiTM attacks. In this part we'll know how to wirte simple and effective arp spoofer tool in order to use it in later spoofing attacks.
+As you know, ARP Spoofing attack in the core of MiTM attacks. In this part we'll know how to wirte simple and effective arp spoofer tool to use it in later spoofing attacks.
 
 #### Scenario
 We have 3 machines in this senario as showen below.
