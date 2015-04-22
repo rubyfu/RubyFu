@@ -31,6 +31,34 @@ Let's to take the follwoing form as a simple post form to mimic in our script
 |:---------------:|
 | **Figure 1.** Simple Post form |
 
+Post form code:
+
+```html
+<FORM METHOD=POST ACTION="http://wwwx.cs.unc.edu/~jbs/aw-wwwp/docs/resources/perl/perl-cgi/programs/cgi_stdin.cgi">
+
+    <P>Name field: <INPUT TYPE="text" Name="name" SIZE=30 VALUE = "You name">
+    <P>Name field: <TEXTAREA TYPE="textarea" ROWS=5 COLS=30 Name="textarea">Your comment.</TEXTAREA>
+
+    <P>Your age: <INPUT TYPE="radio" NAME="radiobutton" VALUE="youngun" CHECKED> younger than 21,
+    <INPUT TYPE="radio" NAME="radiobutton" VALUE="middleun"> 21 -59,
+    <INPUT TYPE="radio" NAME="radiobutton" VALUE="oldun"> 60 or older
+
+    <P>Things you like: <INPUT TYPE="checkbox" NAME="checkedbox" VALUE="pizza" >pizza,
+    <INPUT TYPE="checkbox" NAME="checkedbox" VALUE="hamburgers">hamburgers,
+    <INPUT TYPE="checkbox" NAME="checkedbox" VALUE="spinich" CHECKED>spinich,
+    <INPUT TYPE="checkbox" NAME="checkedbox" VALUE="mashed potatoes">mashed potatoes
+
+    <P>What you like most:
+    <SELECT NAME="selectitem">
+        <OPTION>pizza<OPTION>hamburgers<OPTION SELECTED>spinich<OPTION>mashed potatoes<OPTION>other
+    </SELECT>
+
+    <P>Reset: <INPUT TYPE="reset" >
+
+    <P>Submit: <INPUT TYPE="submit" NAME="submitbutton" VALUE="Do it!" ACTION="SEND">
+</FORM>
+
+```
 
 We need to send a Post request as the form figure 1 would do with contol on each value and variable.
 ```ruby
@@ -72,7 +100,6 @@ puts "Status code: " + response.code
 puts "Response body: " + response.body
 
 ```
-
 
 
 
