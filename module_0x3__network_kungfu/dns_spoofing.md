@@ -25,7 +25,7 @@ Now we cant intercept DNS Query packet comming from victim's machine. Since Pack
 
 From wireshark, if we take a deeper look at the DNS query payload in `Domain Name System (query)`, we can see its been presented in hexdecimal format.
 
-| ![Wireshark](../images/module04/dns_spoofing_wireshark1.png) |
+| ![Wireshark](../images/module03/dns_spoofing_wireshark1.png) |
 |:---------------:|
 | **Figure 1.** DNS query Payload  |
 
