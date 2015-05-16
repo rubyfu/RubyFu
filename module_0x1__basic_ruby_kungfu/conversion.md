@@ -1,7 +1,7 @@
 # Conversion
 
 
-## Convert Hex to String
+## Convert String to Hex
 for a single character
 ```ruby
 '\x'+("A".unpack('H*')[0])
@@ -10,6 +10,10 @@ for a single character
 
 ```ruby
 "ABCD".unpack('H*')[0].scan(/.{2}/).map {|h| '\x'+h }.join
+```
+or
+```ruby
+"ABCD".unpack('C*').map { |c| '\\x%02x' % c }.join
 ```
 or
 ```ruby
@@ -37,7 +41,7 @@ or
 ```
 source[^1]
 
-## Convert String to Hex
+## Convert Hex to String
 ```ruby
 ["41424344"].pack('H*')
 ```
