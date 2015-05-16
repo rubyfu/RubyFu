@@ -27,7 +27,9 @@ gem install packetfu
 
 #### Get your interface information
 ```ruby
-ifconfig = Utils.ifconfig("wlan0")
+require 'packetfu'
+
+ifconfig = PacketFu::Utils.ifconfig("wlan0")
 ifconfig[:iface]
 ifconfig[:ip_saddr]
 ifconfig[:eth_saddr]
@@ -35,7 +37,7 @@ ifconfig[:eth_saddr]
 
 #### Get MAC address of a remote host
 ```ruby
-Utils.arp("192.168.0.21", :iface => "wlan0")
+PacketFu::Utils.arp("192.168.0.21", :iface => "wlan0")
 ```
 
 #### Read Pcap file

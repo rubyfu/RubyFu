@@ -24,6 +24,7 @@
     * [Working with Unix Processes](http://www.jstorimer.com/products/working-with-unix-processes)
     * [Working with Ruby Threads](http://www.jstorimer.com/products/working-with-ruby-threads)
     * [Ruby Cookbook](http://shop.oreilly.com/product/9780596523695.do)
+    * [Learn Ruby The Hard Way](http://learnrubythehardway.org/book/)
 * **Sites, Topics and Articls**
     * [Rubymonk.com](https://rubymonk.com/)
     * http://www.natontesting.com/2011/01/01/rubys-each-select-and-reject-methods/
