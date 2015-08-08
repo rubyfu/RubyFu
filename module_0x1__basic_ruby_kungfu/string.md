@@ -37,9 +37,9 @@ require 'colorize'
 ```
 
 ## Overwriting Console Output
-It's awesome the have more filixability in your terminal and somethimes we need to do more and with our scripts.
+It's awesome to have more filixability in your terminal and somethimes we need to do more and with our scripts.
 
-Overwriting console outputs is one is great looking in muture applications so why don't make our application more muture and elegant?!.
+Overwriting console outputs makes our applications less noisy for repeated outputs like counting and loading progresss bars.
 
 Some application
 ### Create Progress percet

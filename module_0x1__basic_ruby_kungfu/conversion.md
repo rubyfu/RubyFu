@@ -29,7 +29,7 @@ or
 ```
 or
 ```ruby
-puts "ABCD".chars.map {|c| '\x' + c.ord.to_s(16)}*""
+"ABCD".chars.map {|c| '\x' + c.ord.to_s(16)}*""
 ```
 or
 ```ruby
@@ -41,6 +41,14 @@ or
 ```
 source[^1]
 
+
+Return
+```
+\x41\x42\x43\x44
+```
+
+
+
 ## Convert Hex to String
 ```ruby
 ["41424344"].pack('H*')
@@ -50,19 +58,6 @@ return
 ABCD
 ```
 
-## Convert Binary file to Hex
-
-```ruby
-file     = File.open("File_name" , 'rb')
-file2hex = file.read.each_byte.map { |b| "%02x" % b }    # b.to_s(16).rjust(2, '0')
-
-hex = ""
-file2hex.map do |byte|
-	hex << '\x' + byte
-end
-
-puts hex
-```
 
 ## En/Deccode base-64 Sting
 We'll presint it by many ways

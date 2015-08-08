@@ -1,13 +1,19 @@
 # Nmap
 
-required gem
 ```
 gem install ruby-nmap ronin-scanners
 ```
-As far as you understand how to use nmap and how basicly it works, you'll find this lib is easy to use. You can do most  most of nmap functionalties
+As far as you understand how to use nmap and how basicly it works, you'll find this lib is easy to use. You can do most of nmap functionalties
 
 
 ### Basic Scan
+Ruby-nmap gem is a Ruby interface to nmap, the exploration tool and security / port scanner.
+
+* Provides a Ruby interface for running nmap.
+* Provides a Parser for enumerating nmap XML scan files.
+
+let's see how it dose work.
+
 ```ruby
 require 'nmap'
 scan = Nmap::Program.scan(:targets => '192.168.0.15', :verbose => true)

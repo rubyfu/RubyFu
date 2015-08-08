@@ -1,5 +1,50 @@
 # Chapter 0x4 | Web KungFu
 
+## Send Get request
+
+Humbly detailed send GET script
+```ruby
+#!/usr/bin/env ruby
+# KING SABRI
+# Usage | ruby send_get.rb [HOST] [SESSION_ID]
+#
+require "net/http"
+
+
+host       = ARGV[0] || "172.16.50.139"
+session_id = ARGV[1] || "3c0e9a7edfa6682cb891f1c3df8a33ad"
+
+
+def send_sqli(query)
+
+  uri = URI.parse("https://#{host}/script/path/file.php?")
+  uri.query = URI.encode_www_form({"var1"=> "val1",
+                                   "var2"=> "val2",
+                                   "var3"=> "val3"})
+
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+
+  request = Net::HTTP::Get.new(uri.request_uri)
+  request["User-Agent"] = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0"
+  request["Connection"] = "keep-alive"
+  request["Accept-Language"] = "en-US,en;q=0.5"
+  request["Accept-Encoding"] = "gzip, deflate"
+  request["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+  request["PHPSESSID"] = session_id
+
+  begin
+    puts "Sendinging "
+    response = http.request(request).body
+  rescue Exception => e
+    puts "[!] Failed!"
+    puts e
+  end
+
+end
+```
+
+
 ## Send HTTP Post request with custom headers
 Here the post body from a file
 ```ruby

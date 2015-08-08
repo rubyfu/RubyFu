@@ -3,7 +3,6 @@
 ## Enigma script
 
 
-
 | ![Wireshark](../images/module02/Cryptography__wiringdiagram.png) |
 |:---------------:|
 | **Figure 1.** Enigma machine diagram  |

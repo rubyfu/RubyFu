@@ -33,8 +33,9 @@
 * **Hacking Tools built with ruby**
     * Metasploit framework - Exploitation framework
     * Beef framework - XSS framework
+    * Arachni - Web Application scanner framework
     * METASM - Assembly manipulation suite
-    * wpscan - Wordpress vulnerability scanner
+    * WPscan - Wordpress vulnerability scanner
     * BufferOverflow kit - Exploitation tool Kit
     * HTTP Traceroute
     * CeWL - Custom Word List generator
