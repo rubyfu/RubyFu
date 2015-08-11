@@ -60,7 +60,7 @@ string = "text here http://foo1.example.org/bla1 and http://foo2.example.org/bla
 <br>
 **Using Regex**
 ```ruby
-string.scan(/http[s]?:\/\/(.+)/i)
+string.scan(/https?:\/\/[\S]+/)
 ```
 
 **Using standard URI module**
@@ -70,3 +70,15 @@ require 'uri'
 URI.extract(string, ["http" , "https"])
 ```
 
+### Extracting URLs from web site
+Using above tricks
+
+```ruby
+require 'net/http'
+URI.extract(Net::HTTP.get(URI.parse("http://rubyfu.net")), ["http", "https"])
+```
+or
+```ruby
+require 'net/http'
+Net::HTTP.get(URI.parse("http://rubyfu.net")).scan(/https?:\/\/[\S]+/)
+```
