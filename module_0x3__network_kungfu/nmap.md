@@ -78,6 +78,37 @@ Nmap::Program.scan do |nmap|
 end
 ```
 
+### Parsing nmap XML scan file
+I made an aggressive scan on `scanme.nmap.org`
+```
+nmap -n -v -A scanme.nmap.org -oX scanme.nmap.org.xml
+```
+
+I quted the code from official documenations (https://github.com/sophsec/ruby-nmap)
+
+```ruby
+require 'nmap/xml'
+
+Nmap::XML.new(ARGV[0]) do |xml|
+  xml.each_host do |host|
+    puts "[#{host.ip}]"
+
+    # Print: Port/Protocol      port_status      service_name
+    host.each_port do |port|
+      puts "  #{port.number}/#{port.protocol}\t#{port.state}\t#{port.service}"
+    end
+  end
+end
+```
+
+Returns
+```
+[45.33.32.156]
+  22/tcp        open    ssh
+  80/tcp        open    http
+  9929/tcp      open    nping-echo
+```
+
 
 
 

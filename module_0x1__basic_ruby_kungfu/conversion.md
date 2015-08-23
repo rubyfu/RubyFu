@@ -42,7 +42,7 @@ or
 source[^1]
 
 
-Return
+Returns
 ```
 \x41\x42\x43\x44
 ```
@@ -53,7 +53,7 @@ Return
 ```ruby
 ["41424344"].pack('H*')
 ```
-return
+Return
 ```
 ABCD
 ```
