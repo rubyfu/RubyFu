@@ -59,7 +59,7 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
     > **Remeber!** Hacker's code **=!** Cryptic code
 
 
-##### Commandline
+##### Command-line
 Use triple ticks to highlight your commandline. ex. ` ```ls``` `
 
 
