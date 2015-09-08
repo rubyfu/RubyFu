@@ -5,7 +5,7 @@ This book is under GPLv3[^1] License so we appreciate all kind of contributions.
 There are several kind of contributions could help this book to get the best result
 
 * Contribution by adding tricky code.
-* Contribution by adding more explanation for exist code.
+* Contribution by adding more explanation for existing code.
 * Contribution by enhancing the code quality or alternatives.
 * Contribution by enhancing the book quality:
     * Structure enhancements
@@ -60,7 +60,10 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 
 
 ##### Command-line
-Use triple ticks to highlight your commandline. ex. ` ```ls``` `
+Use triple ticks to highlight your commandline. ex. 
+    ```
+    ls
+    ``` 
 
 
 
