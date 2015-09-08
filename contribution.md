@@ -38,8 +38,8 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 * Explain the main idea -with some details- of the code, if you explain every line that would be great but it's not a must.
 * Choose the correct Module.
 * Make your title clear.
-* Use Text editor/ide for code identiation before pasting your code
-* Mention the souce, if you copied or developed a code that created by others please mention the souce in the footer. eg.
+* Use Text editor/ide for code identification before pasting your code
+* Mention the source, if you copied or developed a code that created by others please mention the souce in the footer. eg.
 
         ```ruby
         puts "Your good code"
