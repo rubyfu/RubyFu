@@ -16,6 +16,7 @@ mkdir rshell
 cd rshell
 ```
 Create your application -in our case, reverse shell- 
+**rshell.rb**
 ```ruby
 #!/usr/bin/env ruby
 require 'socket'
