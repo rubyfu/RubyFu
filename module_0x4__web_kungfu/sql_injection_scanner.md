@@ -109,3 +109,8 @@ puts "[+] The #{URL.decode(uri.to_s)} is vulnerable!" unless response.match(/#{e
 
 Try this url (http://testasp.vulnweb.com/showforum.asp?id=0)
 
+Results
+```
+ruby sqli.rb http://testasp.vulnweb.com/showforum.asp?id=0
+[+] The http://testphp.vulnweb.com/artists.php?artist=1' is vulnerable!
+```
