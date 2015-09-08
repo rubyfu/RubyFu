@@ -291,21 +291,21 @@ https://docs.docker.com/compose/install/
 
 
 ## Closed Source code
-RubyEncoder http://rubyencoder.com
+Sometimes we don't want to disclose our source code for any reasone, but we still want to share our  
+
+RubyEncoder[^3] protects Ruby scripts by compiling Ruby source code into a bytecode format and this is followed by encryption. This protects your scripts from reverse engineering. Ruby scripts protected with RubyEncoder can be executed but cannot be used to extract Ruby source code as there is no source code remaining within the protected script in any form.
 
 
 
 
 
-
-
-
-
-Then add the follwoing to the footer
-
-[^1]: Source: [The Original code Title](http://TheSouceCodeURL)
-Your notes should be under footer's line, Add the follwoing to intial the footer if not exist
 
 <br><br><br>
 ---
-YOUR NOTES SHALL BE HERE
+[^1]: Traveling-ruby: [Official website](http://phusion.github.io/traveling-ruby/)
+[^2]: Traveling-ruby: [Official website](http://phusion.github.io/traveling-ruby/)
+[^3]: RubyEncoder: [Official website](http://rubyencoder.com)
+
+
+
+
