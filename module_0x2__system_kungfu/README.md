@@ -104,7 +104,7 @@ Let's do a basic sanity test by running your app with a bundled Ruby interpreter
 
 ```
 cd rshell-osx
-./lib/ruby/bin/ruby lib/app/hello.rb
+./lib/ruby/bin/ruby lib/app/rshell.rb
 # => ruby rshell.rb.rb [HACKER_IP  HACKER_PORT]
 
 cd ..
