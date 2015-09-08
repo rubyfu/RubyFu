@@ -4,7 +4,7 @@
 
 
 
-This book will be collection of ideas and skills that could be useful for hackers and a good reference for lots of search and experience. It is  not intended to teach you ruby programming.
+This book will be collection of ideas and skills that could be useful for hackers and a good reference for lots of search and experience. It is not intended to teach you ruby programming.
 
 For best presentation, please visit [RubyFu on Gitbook](http://RubyFu.net)
 
