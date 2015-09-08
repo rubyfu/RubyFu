@@ -1,5 +1,39 @@
 # SQL Injection Scanner
 
+
+## Basic SQLi script as command line browser
+
+The is a very basic script take your given payload and send it to the vulnerable parameter and returns the response back to you. I'll use (http://testphp.vulnweb.com/) as it's legal to test it.
+
+```ruby
+#!/usr/bin/evn ruby
+#
+# Send your payload from command line
+#
+require "net/http"
+
+if ARGV.size < 2
+  puts "[+] ruby #{__FILE__} [IP ADDRESS] [PAYLOAD]"
+  exit 0
+else
+  host, payload = ARGV
+end
+
+uri = URI.parse("http://#{host}/artists.php?")
+uri.query = URI.encode_www_form({"artist" => "#{payload}"})
+http = Net::HTTP.new(uri.host, uri.port)
+# http.set_debug_output($stdout)
+
+request = Net::HTTP::Get.new(uri.request_uri)
+response = http.request(request)
+puts "[+] Status code: "+ response.code + "\n\n"
+puts response.body.gsub('|\n', '').gsub(/<.*?>/, '')
+
+puts ""
+```
+
+
+
 Here a very basic and simple SQL-injection solid scanner, develop it as far as you can!
 
 ```ruby
