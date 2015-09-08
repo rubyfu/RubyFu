@@ -276,6 +276,10 @@ cd rshell-1.0.0-linux-x86_64
 ```
 
 #### mruby
+**mruby CLI**[^2] A utility for setting up a CLI with mruby that compiles binaries to Linux, OS X, and Windows.
+
+
+
 https://www.youtube.com/watch?v=OvuZ8R4Y9xA
 
 https://github.com/hone/mruby-cli
@@ -291,9 +295,9 @@ https://docs.docker.com/compose/install/
 
 
 ## Closed Source code
-Sometimes we don't want to disclose our source code for any reason, but we still want to share our applications either commercially or for free.
+Sometimes we don't want to disclose our source code for any reason, but we still want to share our applications either commercially or for free. Here a commercial solution for that purpose, RubyEncoder.
 
-RubyEncoder[^3] protects Ruby scripts by compiling Ruby source code into a bytecode format and this is followed by encryption. This protects your scripts from reverse engineering. Ruby scripts protected with RubyEncoder can be executed but cannot be used to extract Ruby source code as there is no source code remaining within the protected script in any form.
+**RubyEncoder**[^3] protects Ruby scripts by compiling Ruby source code into a bytecode format and this is followed by encryption. This protects your scripts from reverse engineering. Ruby scripts protected with RubyEncoder can be executed but cannot be used to extract Ruby source code as there is no source code remaining within the protected script in any form.
 
 
 
@@ -303,7 +307,7 @@ RubyEncoder[^3] protects Ruby scripts by compiling Ruby source code into a bytec
 <br><br><br>
 ---
 [^1]: Traveling-ruby: [Official website](http://phusion.github.io/traveling-ruby/)
-[^2]: Traveling-ruby: [Official website](http://phusion.github.io/traveling-ruby/)
+[^2]: mruby CLI: [Official website](https://github.com/hone/mruby-cli)
 [^3]: RubyEncoder: [Official website](http://rubyencoder.com)
 
 
