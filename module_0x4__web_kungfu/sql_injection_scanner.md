@@ -107,5 +107,5 @@ puts "[+] The #{uri.to_s} is vulnerable!" unless response.match(/#{errors[:mysql
 
 ```
 
-Try this url (http://testasp.vulnweb.com/showforum.asp?id=0)
+Try this url (URL.decode http://testasp.vulnweb.com/showforum.asp?id=0)
 
