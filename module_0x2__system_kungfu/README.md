@@ -40,7 +40,17 @@ ruby rshell.rb
 
 
 ##### Creating package directories
+The next step is to prepare packages for all the target platforms, by creating a directory each platform, and by copying your app into each directory. (Assuming that your application could differ from OS to another)
+
 ```
+mkdir -p rshell-linuxx86/lib/app
+cp rshell.rb rshell-linuxx86/lib/app/
+
+mkdir -p rshell-linuxx86_64/lib/app
+cp rshell.rb rshell-linuxx86_64/lib/app/
+
+mkdir -p rshell-osx/lib/app/
+cp rshell.rb rshell-osx/lib/app/
 ```
 
 ##### Quick sanity testing
