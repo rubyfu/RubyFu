@@ -279,18 +279,13 @@ cd rshell-1.0.0-linux-x86_64
 **mruby CLI**[^2] A utility for setting up a CLI with mruby that compiles binaries to Linux, OS X, and Windows.
 
 
+##### Prerequisites
+- mruby-cli
+- Docker
+- Docker Compose
 
+##### Developer introduction
 https://www.youtube.com/watch?v=OvuZ8R4Y9xA
-
-https://github.com/hone/mruby-cli
-
-https://github.com/hone/mruby-cli/releases
-
-https://docs.docker.com/installation/
-
-https://docs.docker.com/compose/install/
-
-
 
 
 
