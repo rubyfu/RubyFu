@@ -27,7 +27,7 @@ http = Net::HTTP.new(uri.host, uri.port)
 request = Net::HTTP::Get.new(uri.request_uri)
 response = http.request(request)
 puts "[+] Status code: "+ response.code + "\n\n"
-puts response.body.gsub("\n\n\n\n", '').gsub(/<.*?>/, '').strip
+puts response.body.gsub('\n\n\n\n', '').gsub(/<.*?>/, '').strip
 
 puts ""
 ```
