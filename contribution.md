@@ -10,7 +10,7 @@ There are several kind of contributions could help this book to get the best res
 * Contribution by enhancing the book quality:
     * Structure enhancements
     * Spelling enhancements
-    * Desing enhancements
+    * Design enhancements
     * Ideas and requests
     * Any other
 * Contribution by spread the book in social media and information security communities.
@@ -65,6 +65,7 @@ Use triple ticks to highlight your commandline. ex.
     ls
     ``` 
 
+> Note: Since this book is dynamically and un-ordered enhanced it's hard to make the footer notes with order series of numbers for all the book so -until I find better solution- I'll make the number order separated for each page. 
 
 
 <br><br><br>
