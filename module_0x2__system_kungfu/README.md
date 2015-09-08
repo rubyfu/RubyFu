@@ -291,7 +291,7 @@ https://docs.docker.com/compose/install/
 
 
 ## Closed Source code
-Sometimes we don't want to disclose our source code for any reason, but we still want to share our application 
+Sometimes we don't want to disclose our source code for any reason, but we still want to share our applications either commercially or for free.
 
 RubyEncoder[^3] protects Ruby scripts by compiling Ruby source code into a bytecode format and this is followed by encryption. This protects your scripts from reverse engineering. Ruby scripts protected with RubyEncoder can be executed but cannot be used to extract Ruby source code as there is no source code remaining within the protected script in any form.
 
