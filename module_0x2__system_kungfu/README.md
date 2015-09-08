@@ -6,7 +6,7 @@ Many questions about building a standalone application that doesn't require Ruby
 
 
 ### Traveling-ruby
-From official site "*Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems.*"
+From official site[^1] "*Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems.*"
 
 
 > Note: The following script is taken from the official docs.
@@ -293,3 +293,19 @@ https://docs.docker.com/compose/install/
 ## Closed Source code
 RubyEncoder http://rubyencoder.com
 
+
+
+
+
+
+
+
+
+Then add the follwoing to the footer
+
+[^1]: Source: [The Original code Title](http://TheSouceCodeURL)
+Your notes should be under footer's line, Add the follwoing to intial the footer if not exist
+
+<br><br><br>
+---
+YOUR NOTES SHALL BE HERE
