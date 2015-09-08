@@ -53,13 +53,31 @@ mkdir -p rshell-osx/lib/app/
 cp rshell.rb rshell-osx/lib/app/
 ```
 
-##### Quick sanity testing
+Next, create a `packaging` directory and download Traveling Ruby binaries for each platform into that directory. Then extract these binaries into each packaging directory. You can find a list of binaries at the Traveling Ruby Amazon S3 bucket. For faster download times, use the CloudFront domain "http://d6r77u77i8pq3.cloudfront.net". In this tutorial we're extracting version 20141215-2.1.5.
+
 ```
+mkdir packaging
+cd packaging
+wget -c  http://d6r77u77i8pq3.cloudfront.net/releases/traveling-ruby-20141215-2.1.5-linux-x86.tar.gz
+wget -c  http://d6r77u77i8pq3.cloudfront.net/releases/traveling-ruby-20141215-2.1.5-linux-x86_64.tar.gz
+wget -c  http://d6r77u77i8pq3.cloudfront.net/releases/traveling-ruby-20141215-2.1.5-osx.tar.gz
+cd ..
+
+mkdir rshell-linuxx86/lib/ruby && tar -xzf packaging/traveling-ruby-20141215-2.1.5-linux-x86.tar.gz -C rshell-linuxx86/lib/ruby
+mkdir rshell-linuxx86_64/lib/ruby && tar -xzf packaging/traveling-ruby-20141215-2.1.5-linux-x86_64.tar.gz -C rshell-linuxx86_64/lib/ruby
+mkdir rshell-osx/lib/ruby && tar -xzf packaging/traveling-ruby-20141215-2.1.5-osx.tar.gz -C rshell-osx/lib/ruby
+```
+
+##### Quick sanity testing
+
+```
+s
 ```
 
 
 ##### Creating a wrapper script
 ```
+s
 ```
 
 ##### Finalizing packages
@@ -68,12 +86,16 @@ cp rshell.rb rshell-osx/lib/app/
 
 
 ##### Automating the process
+
 ```ruby
+s
 ```
 
 
 ##### On Victim Machine
+
 ```
+s
 ```
 
 
