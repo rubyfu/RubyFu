@@ -103,9 +103,9 @@ uri.query += payloads[0]
 response = Net::HTTP.get uri
 
 # Search if an error occured = vulnerable
-puts "[+] The #{uri.to_s} is vulnerable!" unless response.match(/#{errors[:mysql][0]}/i).nil?
+puts "[+] The #{URL.decode(uri.to_s)} is vulnerable!" unless response.match(/#{errors[:mysql][0]}/i).nil?
 
 ```
 
-Try this url (URL.decode http://testasp.vulnweb.com/showforum.asp?id=0)
+Try this url (http://testasp.vulnweb.com/showforum.asp?id=0)
 
