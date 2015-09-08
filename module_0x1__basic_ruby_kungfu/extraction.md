@@ -77,8 +77,50 @@ Using above tricks
 require 'net/http'
 URI.extract(Net::HTTP.get(URI.parse("http://rubyfu.net")), ["http", "https"])
 ```
-or
+or using Regex 
 ```ruby
 require 'net/http'
 Net::HTTP.get(URI.parse("http://rubyfu.net")).scan(/https?:\/\/[\S]+/)
 ```
+
+
+### Extracting Strings from HTML tags 
+
+Assume we have the following HTML contents and we need to get strings only and eliminate all HTML tags.
+
+
+```ruby
+
+string = "<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is another <strong>contents</strong>.</p>
+
+</body>
+</html>"
+
+
+puts string.gsub(/<.*?>/,'').strip
+
+```
+
+Returns
+```
+Page Title
+
+
+
+This is a Heading
+This is another contents.
+```
+
+
+
+
+
+
