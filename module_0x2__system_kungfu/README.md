@@ -9,6 +9,7 @@ Many questions about building a standalone application that doesn't require Ruby
 From official site "*Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems.*"
 
 
+> Note: The following script is taken from the official docs.
 
 #### Preparation 
 ```
@@ -164,6 +165,8 @@ An x86 Linux user could now use your app like this:
 ```
 
 ##### Automating the process
+Going through all of the above steps on every release is a hassle, so you should automate the packaging process, for example by using Rake. Here's how the Rakefile could look like:
+
 
 ```ruby
 PACKAGE_NAME = "rshell"
@@ -224,7 +227,6 @@ def download_runtime(target)
 end
 
 ```
-
 
 You can then create all 3 packages by running:
 
@@ -289,5 +291,5 @@ https://docs.docker.com/compose/install/
 
 
 ## Closed Source code
-RubyEncoder rubyencoder.com
+RubyEncoder http://rubyencoder.com
 
