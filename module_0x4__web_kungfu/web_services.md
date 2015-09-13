@@ -3,7 +3,7 @@
 ### SOAP - WSDL
 
 ```
-gem install savon --version '~> 2.0'
+gem install savon httpclient
 ```
 
 ```ruby
