@@ -169,7 +169,7 @@ Net::HTTP.start(uri1.host, uri1.port) do |http|
   puts "[*] Do Post-authentication actions"
   Net::HTTP::Get.new(uri2)
   g_request  = Net::HTTP::Get.new(uri2)
-  g_request['Cookie'] = cookies				# Restore Saved Cookies
+  g_request['Cookie'] = cookies                     # Restore Saved Cookies
   g_response = http.request(g_request)
 end
 ```
