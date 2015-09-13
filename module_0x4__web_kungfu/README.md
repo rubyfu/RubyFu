@@ -157,9 +157,9 @@ Notes:
 ```ruby
 puts "[*] Logging-in"
 uri1 = URI.parse("http://host/login.aspx")
-uri2 = URI.parse("http://host/login.aspx")
+uri2 = URI.parse("http://host/report.aspx")
 
-Net::HTTP.start(uri2.host, uri2.port) do |http|
+Net::HTTP.start(uri1.host, uri2.port) do |http|
   puts "[*] Logging in"
   p_request  = Net::HTTP::Post.new(uri2)
   p_request.set_form_data({"loginName"=>"admin", "password"=>"P@ssw0rd"})
