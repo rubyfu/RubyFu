@@ -149,6 +149,9 @@ puts "Response body: " + response.body
 
 ## Dealing with Cookies
 
+Notes: 
+- To read the cookies you need to get **set-cookie** from response
+
 
 
 ## CGI
