@@ -161,7 +161,7 @@ uri2 = URI.parse("http://host/report.aspx")
 
 Net::HTTP.start(uri1.host, uri1.port) do |http|
   puts "[*] Logging in"
-  p_request  = Net::HTTP::Post.new(uri2)
+  p_request  = Net::HTTP::Post.new(uri1)
   p_request.set_form_data({"loginName"=>"admin", "password"=>"P@ssw0rd"})
   p_response = http.request(p_request)
   cookies    = p_response.response['set-cookie']	# Save Cookies
