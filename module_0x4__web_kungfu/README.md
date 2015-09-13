@@ -150,7 +150,8 @@ puts "Response body: " + response.body
 ## Dealing with Cookies
 
 Notes: 
-- To read the cookies you need to get **set-cookie** from response
+- To read cookies you need to get **set-cookie** from response
+- To set cookies you need to set **Cookie** to response 
 
 
 
