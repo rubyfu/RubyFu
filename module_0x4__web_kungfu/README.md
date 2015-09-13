@@ -147,6 +147,9 @@ puts "Response body: " + response.body
 ```
 
 
+## Dealing with Cookies
+
+
 
 ## CGI
 ### Get info - from XSS/HTMLi exploitation
