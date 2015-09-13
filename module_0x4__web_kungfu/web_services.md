@@ -7,7 +7,7 @@ gem install savon httpclient
 ```
 
 
-This is a working exploit for 
+This is a working exploit for Vtiger CRM SOAP from Auth-bypass to Shell upload 
 ```ruby
 #!/usr/bin/evn ruby
 #
