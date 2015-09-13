@@ -155,7 +155,7 @@ Notes:
 
 
 ```ruby
-puts "[*] Logging in"
+puts "[*] Logging-in"
 uri2 = URI.parse("http://#{rhost}:9000/#{shell_name}")
 Net::HTTP.start(uri2.host, uri2.port) do |http|
   puts "[*] Logging in"
