@@ -2,7 +2,7 @@
 
 * [Module 0x0 | Introduction](README.md)
    * [Acknowledgment](acknowledgment.md)
-   * [Contribution ](contribution.md)
+   * [Contribution](contribution.md)
    * [Beginners](beginners.md)
    * [Required Gems](required_gems.md)
 * [Module 0x1 | Basic Ruby KungFu](module_0x1__basic_ruby_kungfu/README.md)
@@ -14,6 +14,7 @@
    * [File manipulation](module_0x2__system_kungfu/file_manipulation.md)
    * [Cryptography](module_0x2__system_kungfu/cryptography.md)
    * [Remote Shell](module_0x2__system_kungfu/system_shell.md)
+       * Ncat.rb
 * [Module 0x3 | Network KungFu](module_0x3__network_kungfu/README.md)
    * [Network Scanning](module_0x3__network_kungfu/network_scanning.md)
        * [Nmap](module_0x3__network_kungfu/nmap.md)
