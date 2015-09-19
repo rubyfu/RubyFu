@@ -18,4 +18,3 @@ Big love to those people who support this book by any meaning.
 
 ## Sponsers
 * [Security4arabs Community](http://www.security4arabs.com/)
-* [TechArch](http://techarch.com.sa)
