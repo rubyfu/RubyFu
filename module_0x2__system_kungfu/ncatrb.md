@@ -111,7 +111,7 @@ tools.run(ARGV)
 
 
 ## Another Implementation Ncat.rb 
-Again from [Hood3dRob1n](https://github.com/Hood3dRob1n/) a standalone [RubyCat](https://github.com/Hood3dRob1n/RubyCat).
+Again from [Hood3dRob1n](https://github.com/Hood3dRob1n/) a standalone [RubyCat](https://github.com/Hood3dRob1n/RubyCat) which supports password protection for bind shell.
 
 
 
