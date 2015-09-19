@@ -1,5 +1,7 @@
 # Pure Ruby NetCat
 
+
+## Simple Ncat.rb
 http://4thmouse.com/index.php/2008/02/20/netcat-clone-in-three-languages-part-i-ruby/
 
 http://kaoticcreations.blogspot.com/2013/10/rubycat-pure-ruby-netcat-alternative.html
@@ -102,3 +104,15 @@ end
 tools = NetTools.new
 tools.run(ARGV)
 ```
+
+
+
+
+
+
+## Another good Ncat.rb 
+This is an awesome implementation for a standalone  [bind](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/bind.rb) and [reverse](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/rubyrev.rb) shells scripts written by [Hood3dRob1n](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells) on github . The bind shell requires authentication while reverse is not.
+
+
+
+
