@@ -2,9 +2,7 @@
 
 
 ## Simple Ncat.rb
-http://4thmouse.com/index.php/2008/02/20/netcat-clone-in-three-languages-part-i-ruby/
-
-http://kaoticcreations.blogspot.com/2013/10/rubycat-pure-ruby-netcat-alternative.html
+I found [these](http://4thmouse.com/index.php/2008/02/20/netcat-clone-in-three-languages-part-i-ruby/) simple ncat so I did some enhancements on it and add some comments on it as well. 
 
 
 ```ruby
