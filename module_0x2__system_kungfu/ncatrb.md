@@ -7,7 +7,7 @@ http://4thmouse.com/index.php/2008/02/20/netcat-clone-in-three-languages-part-i-
 http://kaoticcreations.blogspot.com/2013/10/rubycat-pure-ruby-netcat-alternative.html
 
 
-```
+```ruby
 #!/usr/bin/ruby
 require 'optparse'
 require 'ostruct'
