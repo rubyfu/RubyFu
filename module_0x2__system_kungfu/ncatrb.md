@@ -20,7 +20,6 @@ class String
 end
 
 
-
 class NetCat
 
   #
