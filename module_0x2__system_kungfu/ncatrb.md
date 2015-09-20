@@ -151,7 +151,6 @@ class NetCat
 end
 ncat = NetCat.new
 ncat.run(ARGV)
-
 ```
 
 
