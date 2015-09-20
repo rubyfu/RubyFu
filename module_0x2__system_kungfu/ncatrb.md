@@ -76,22 +76,6 @@ class NetCat
       puts opts
       exit
     end
-    if @options.shell == :shell
-      case
-        when RbConfig::CONFIG["host_os"].scan(/linux|gnu/i)[0] != nil
-          puts "It's Linux! "
-          @options.os_shell = "/bin/sh"
-        when RbConfig::CONFIG["host_os"].scan(/cygwin|mswin|mingw|bccwin|wince|emx/i)[0] != nil
-          puts "It's Windows! "
-          @options.os_shell = "cmd.exe"
-        when RbConfig::CONFIG["host_os"].scan(/darwin/)[0] != nil
-          puts "It's MAC "
-          @options.os_shell = "/bin/bash"
-        else
-          puts "[!] ".red + "It's Fucking Unknown OS!"
-          exit
-      end
-    end
   end
 
   #
