@@ -60,7 +60,7 @@ ABCD
 
 
 ## En/Deccode base-64 Sting
-We'll presint it by many ways
+We'll present it by many ways
 
 **Encode string**
 ```ruby
