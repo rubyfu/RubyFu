@@ -28,6 +28,7 @@
 * [Module 0x4 | Web KungFu](module_0x4__web_kungfu/README.md)
    * [SQL Injection Scanner](module_0x4__web_kungfu/sql_injection_scanner.md)
    * [Web Services](module_0x4__web_kungfu/web_services.md)
+   * Databases
 * [Module 0x5 | Exploitation KungFu](module_0x5__exploitation_kungfu/README.md)
    * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
