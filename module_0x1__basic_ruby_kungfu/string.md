@@ -144,6 +144,30 @@ class String
 end
 ```
 
+And as PoC, I've used the same previous one 
+```ruby
+#!/usr/bin/env ruby
+# Level 1
+(1..3).map do |num|
+  print "\rNumber: #{num}"
+  sleep 0.7
+  # Level 2
+  ('a'..'c').map do |char|
+      print "Characters: #{char}".mv_down
+      sleep 0.5
+      # Level 3
+      ('A'..'C').map do |char1|
+          print "Capital: #{char1}".mv_down
+          sleep 0.2
+          print "".mv_up
+      end
+      print "".mv_up
+  end
+  sleep 0.7
+end
+print "".mv_down 3
+
+```
 
 
 
