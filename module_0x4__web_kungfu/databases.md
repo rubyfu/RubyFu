@@ -119,8 +119,26 @@ Attackers.find(2).destroy
 So to write a complete script, 
 ```ruby
 #!/usr/bin/env ruby
+#
+# ActiveRecord with MySQL
+#
+require 'active_record'  
 
+# Connect to database
+ActiveRecord::Base.establish_connection(  
+:adapter  => "mysql",
+:username => "root",
+:password => "root",
+:host     => "localhost",  
+:database => "rubyfu_db"  
+)  
 
+class Attackers < ActiveRecord::Base  
+end
+
+Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
+Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
+Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")
 
 ```
 
