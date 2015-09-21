@@ -65,7 +65,7 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(  
 :adapter  => "mysql",
 :username => "root",
-:password => "toor",
+#:password => "toor",
 :host     => "localhost",  
 :database => "rubyfu_db"  
 )  
