@@ -89,7 +89,7 @@ You will observe ActiveRecord examines the database tables themselves to find ou
 You can find the item 
 - by id
 ```
-Attackers.fin(1)
+Attackers.find(1)
 ```
 - by name
 ```
