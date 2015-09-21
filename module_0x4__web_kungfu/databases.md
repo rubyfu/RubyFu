@@ -63,7 +63,9 @@ Now, let's to connect to *rubyfu_db* database
 ```ruby
 require 'active_record'  
 ActiveRecord::Base.establish_connection(  
-:adapter  => "mysql",  
+:adapter  => "mysql",
+:username => "root",
+:password => "",
 :host     => "localhost",  
 :database => "rubyfu_db"  
 )  
