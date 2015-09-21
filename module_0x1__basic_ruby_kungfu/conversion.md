@@ -59,7 +59,7 @@ ABCD
 ```
 
 
-## En/Deccode base-64 Sting
+## En/Deccode base-64 String
 We'll present it by many ways
 
 **Encode string**
