@@ -143,7 +143,7 @@ class String
 end
 ```
 
-Then as PoC, I've used the same previous one (after updating String class on-the-fly)
+Then as PoC, I've used the same previous one (after updating String class on-the-fly in the same script)
 ```ruby
 #!/usr/bin/env ruby
 # Level 1
