@@ -70,7 +70,7 @@ ActiveRecord::Base.establish_connection(
 :database => "rubyfu_db"  
 )  
   
-class Attacker < ActiveRecord::Base  
+class Attackers < ActiveRecord::Base  
 end  
 ```
 - Using the ActiveRecord library, available as the activerecord gem.
