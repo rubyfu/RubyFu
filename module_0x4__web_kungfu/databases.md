@@ -142,6 +142,14 @@ Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")
 Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
 Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")
 
+# Interact with table items 
+attacker = Attackers.find(3)
+attacker.id
+attacker.name
+attacker.ip
+
+# Delete a table Item
+Attackers.find(2).destroy
 ```
 
 
