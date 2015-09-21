@@ -65,12 +65,12 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(  
 :adapter  => "mysql",
 :username => "root",
-:password => "root",
+:password => "toor",
 :host     => "localhost",  
 :database => "rubyfu_db"  
 )  
   
-class RubyfuDB < ActiveRecord::Base  
+class Attacker < ActiveRecord::Base  
 end  
 ```
 - Using the ActiveRecord library, available as the activerecord gem.
@@ -81,7 +81,7 @@ end
 
 
 ```ruby
-RubyfuDB.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
+Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
 RubyfuDB.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
 RubyfuDB.create(:name => 'Lizard Squad', :ip => "192.168.0.253")  
 ```
