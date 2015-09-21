@@ -45,7 +45,7 @@ https://gist.github.com/KINGSABRI/2860989
 ```
                               |--------DMZ------|---Local Farm---|
                               |                 |                |
-|Attacker| ----SSH Tunnel---> | |Web Server| <-SSH-> |Database|  |
+|Attacker| <---SSH Tunnel---- | |Web Server| <-SSH-> |Database|  |
                               |                 |                |
                               |-----------------|----------------|
 ```
