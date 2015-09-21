@@ -181,5 +181,6 @@ This part has been pretty quoted from *IP address Operations in Ruby* [^1] topic
 
 
 <br><br><br>
+---
 [^1]: Source: - [The original topic](http://www.brownfort.com/2014/09/ip-operations-ruby/)
 
