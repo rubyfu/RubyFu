@@ -73,8 +73,8 @@ end
 ```
 - Using the ActiveRecord library, available as the activerecord gem.
 - Using the ActiveRecord adapter namely mysql
-- Establishing a connection to the database students
-- Creating a class called Rubyist following the conventions mentioned above
+- Establishing a connection to the database rubyfu_db
+- Creating a class called RubyfuDB following the conventions mentioned above
 
 
 
