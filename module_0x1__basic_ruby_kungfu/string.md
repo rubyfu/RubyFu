@@ -69,6 +69,80 @@ I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO
   \033[u
        
 ```
+So to test that I did the following PoC 
+```ruby
+#!/usr/bin/env ruby
+
+(1..3).map do |num|
+  print "\rNumber: #{num}"
+  sleep 0.5
+  print ("\033[1B")	# Move cursor down 1 line 
+  
+  ('a'..'c').map do |char|
+    print "\rCharacter: #{char}"
+    print  ("\e[K")
+    sleep 0.5
+    print ("\033[1B")	# Move cursor down 1 lines
+    
+    ('A'..'C').map do |char1|
+      print "\rCapital letters: #{char1}"
+      print  ("\e[K")
+      sleep 0.3
+    end
+    print ("\033[1A")	# Move curse up 1 line
+    
+  end
+
+  print ("\033[1A")	# Move curse up 1 line
+end
+
+print ("\033[2B")	# Move cursor down 2 lines
+
+puts ""
+```
+
+So far so good, but why don't we make it as ruby methods for more elegant usage? so I came up with the following
+```
+class String
+
+  def mv_up(n=1)
+    cursor(self, "\033[#{n}A")
+  end
+
+  def mv_down(n=1)
+    cursor(self, "\033[#{n}B")
+  end
+
+  def mv_fw(n=1)
+    cursor(self, "\033[#{n}C")
+  end
+
+  def mv_bw(n=1)
+    cursor(self, "\033[#{n}D")
+  end
+
+  def cls_upline
+    cursor(self, "\e[K")
+  end
+
+  def cls
+    # cursor(self, "\033[2J")
+    cursor(self, "\e[H\e[2J")
+  end
+
+  def save_position
+    cursor(self, "\033[s")
+  end
+
+  def restore_position
+    cursor(self, "\033[u")
+  end
+
+  def cursor(text, position)
+    "\r#{position}#{text}"
+  end
+end
+```
 
 
 Some application
