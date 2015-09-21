@@ -49,7 +49,7 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 
         [^1]: Source: [The Original code Title](http://TheSouceCodeURL)
 
-    Your notes should be under footer's line, Add the follwoing to intial the footer if not exist
+    Your notes should be under footer's line, Add the following to initial the footer if not exist
 
         <br><br><br>
         ---
