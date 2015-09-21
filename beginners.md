@@ -1,7 +1,7 @@
 # Beginners
 
 ## Stretching - for beginners
-Ok, if you belive you're a beginner and need to wormup, here's a list of tasks todo **using ruby** before start this book.
+Ok, if you belive you're a beginner and need to worm-up, here's a list of tasks todo **using ruby** before start this book.
 
 - **String**
     - [ ] Print the following string `\x52\x75\x62\x79\x46\x75` as it is, it should **NOT** be resolved to characters.
