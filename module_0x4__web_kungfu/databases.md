@@ -68,7 +68,7 @@ ActiveRecord::Base.establish_connection(
 :database => "rubyfu_db"  
 )  
   
-class RubyfuDb < ActiveRecord::Base  
+class RubyfuDB < ActiveRecord::Base  
 end  
 ```
 
