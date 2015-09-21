@@ -190,7 +190,7 @@ another example
 end
 ```
 
-Using our elegant way
+Using our elegant way(after updating String class on-the-fly)
 ```
 (1..5).to_a.reverse.each do |c|
   print "I'll exit after #{c} second".cls_upline
