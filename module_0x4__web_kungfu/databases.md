@@ -133,9 +133,11 @@ ActiveRecord::Base.establish_connection(
 :database => "rubyfu_db"  
 )  
 
+# Create and Object for the table 
 class Attackers < ActiveRecord::Base  
 end
 
+# Create Entries to the table 
 Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
 Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
 Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")
