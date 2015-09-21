@@ -33,11 +33,11 @@ https://gist.github.com/KINGSABRI/2860989
 
 ### Forward SSH Tunnel 
 ```
-                              |--------DMZ------|---Local Farm---|
-                              |                 |                |
-|Attacker| ----SSH Tunnel---> | |Web Server| <-SSH-> |Database|  |
-                              |                 |                |
-                              |-----------------|----------------|
+                              |--------DMZ------|---Local Farm----|
+                              |                 |                 |
+|Attacker| ----SSH Tunnel---> | |SSH Server| <-SSH-> |Web server| |
+                              |                 |                 |
+                              |-----------------|-----------------|
 ```
 
 
