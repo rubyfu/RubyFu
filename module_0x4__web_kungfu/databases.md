@@ -78,7 +78,11 @@ end
 
 
 
-
+```ruby
+RubyfuDB.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
+RubyfuDB.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
+RubyfuDB.create(:name => 'Lizard Squad', :ip => "192.168.0.253")  
+```
 
 
 
