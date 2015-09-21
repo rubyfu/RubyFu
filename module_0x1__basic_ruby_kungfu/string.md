@@ -166,7 +166,7 @@ It's much more elegant, isn't it?, Say yes plz
 
 
 Some application
-### Create Progress percet
+### Create Progress percent
 
 ```ruby
 (1..10).each do |percent|
