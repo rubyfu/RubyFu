@@ -41,6 +41,37 @@ It's awesome to have more flexibility  in your terminal and sometimes we need to
 
 Overwriting console outputs makes our applications elegant and less noisy for repeated outputs like counting and loading progress bars.
 
+I've read a how-to about bash Prompt about **cursor movement** and I found it it's convenent to have it in our scripts. Here what have been said so far
+```
+http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html
+
+- Position the Cursor:
+  \033[<L>;<C>H
+     Or
+  \033[<L>;<C>f
+  puts the cursor at line L and column C.
+- Move the cursor up N lines:
+  \033[<N>A
+- Move the cursor down N lines:
+  \033[<N>B
+- Move the cursor forward N columns:
+  \033[<N>C
+- Move the cursor backward N columns:
+  \033[<N>D
+
+- Clear the screen, move to (0,0):
+  \033[2J
+- Erase to end of line:
+  \033[K
+
+- Save cursor position:
+  \033[s
+- Restore cursor position:
+  \033[u
+       
+```
+
+
 Some application
 ### Create Progress percet
 
