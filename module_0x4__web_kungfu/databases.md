@@ -99,6 +99,15 @@ Result
 #<Attackers:0x000000010a6ad0 id: 1, name: "Anonymous", ip: "192.168.0.7">
 ```
 
+or you can work it as object
+```ruby
+attacker = Attackers.find(3)
+attacker.id
+attacker.name
+attacker.ip
+```
+
+
 If you want to delete an item from the database, you can use the destroy (Deletes the record in the database) method of ActiveRecord::Base:
 
 
