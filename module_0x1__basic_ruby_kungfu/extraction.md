@@ -5,7 +5,7 @@ String extraction is one of the main tasks that all programmers need. Sometimes 
 
 
 ### Extracting MAC address from string
-We need to extract all MAC address from an arbitary string
+We need to extract all MAC address from an arbitrary string
 ```ruby
 mac = "ads fs:ad fa:fs:fe: Wind00-0C-29-38-1D-61ows 1100:50:7F:E6:96:20dsfsad fas fa1 3c:77:e6:68:66:e9 f2"
 ```
