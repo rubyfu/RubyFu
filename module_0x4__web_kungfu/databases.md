@@ -93,7 +93,7 @@ Attackers.fin(1)
 ```
 - by name
 ```
-Attackers.find_by_name("Anonymous")
+Attackers.find_by(name: "Anonymous")
 ```
 Result 
 ```ruby
@@ -133,7 +133,7 @@ ActiveRecord::Base.establish_connection(
 :database => "rubyfu_db"  
 )  
 
-# Create and Object for the table 
+# Create Active Record Model for the table 
 class Attackers < ActiveRecord::Base  
 end
 
