@@ -57,7 +57,7 @@ mysql> exit
 ## Active Record
 - To install ActiveRecord and most known adabters 
 ```
-gem install activerecord mysql activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter 
+gem install activerecord mysql tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter 
 ```
 
 Now, let's to connect to *rubyfu_db* database 
