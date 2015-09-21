@@ -65,7 +65,7 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(  
 :adapter  => "mysql",
 :username => "root",
-#:password => "toor",
+:password => "root",
 :host     => "localhost",  
 :database => "rubyfu_db"  
 )  
@@ -82,8 +82,8 @@ end
 
 ```ruby
 Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
-RubyfuDB.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
-RubyfuDB.create(:name => 'Lizard Squad', :ip => "192.168.0.253")  
+Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
+Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")  
 ```
 
 
