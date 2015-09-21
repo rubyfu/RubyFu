@@ -105,7 +105,7 @@ Post form code:
 
 ```
 
-We need to send a Post request as the form figure 1 would do with contol on each value and variable.
+We need to send a Post request as the form figure 1 would do with control on each value and variable.
 ```ruby
 require "net/http"
 require "uri"
