@@ -85,10 +85,22 @@ Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")
 ```
 You will observe ActiveRecord examines the database tables themselves to find out which columns are available. This is how we were able to use accessor methods for participant.name without explicitly defining them: we defined them in the database, and ActiveRecord picked them up.
 
+You can find the item 
+- by id
+```
+Attackers.fin(1)
+```
+- by name
+```
+Attackers.find_by_name("Anonymous")
+```
+
 If you want to delete an item from the database, you can use the destroy (Deletes the record in the database) method of ActiveRecord::Base:
 
 
-
+```ruby
+Attackers.find(:first).destroy  
+```
 
 
 
