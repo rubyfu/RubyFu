@@ -26,7 +26,7 @@ Returns
 ```
 
 ### Extracting IPv4 address from string
-We need to extract all IPv4 address from an arbitary string
+We need to extract all IPv4 address from an arbitrary string
 
 ```ruby
 ip = "ads fs:ad fa:fs:fe: Wind10.0.4.5ows 11192.168.0.15dsfsad fas fa1 20.555.1.700 f2"
