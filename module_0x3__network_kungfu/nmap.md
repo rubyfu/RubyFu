@@ -84,7 +84,7 @@ I made an aggressive scan on `scanme.nmap.org`
 nmap -n -v -A scanme.nmap.org -oX scanme.nmap.org.xml
 ```
 
-I quted the code from official documenations (https://github.com/sophsec/ruby-nmap)
+I quoted the code from official documenations (https://github.com/sophsec/ruby-nmap)
 
 ```ruby
 require 'nmap/xml'
