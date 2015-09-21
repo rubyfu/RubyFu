@@ -130,7 +130,7 @@ for list of types, please refer to the [gem docs](http://www.rubydoc.info/gems/n
 resolver = Net::DNS::Resolver.new
 query = resolver.query("69.171.239.12", Net::DNS::PTR)
 ```
-If you want to spacify the nameserver(s) to use, it support an array of nameserver
+If you want to specify the nameserver(s) to use, it support an array of nameserver
 ```ruby
 resolver = Net::DNS::Resolver.new(:nameserver => "8.8.8.8")
 ```
