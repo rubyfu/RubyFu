@@ -98,7 +98,7 @@ puts ""
 ```
 
 So far so good, but why don't we make it as ruby methods for more elegant usage? so I came up with the following
-```
+```ruby
 class String
   def mv_up(n=1)
     cursor(self, "\033[#{n}A")
