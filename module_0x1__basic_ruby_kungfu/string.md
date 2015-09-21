@@ -17,7 +17,7 @@ class String
   def dark_cyan; colorize(self, "\e[36m"); end
   def pure; colorize(self, "\e[1m\e[35m"); end
   def bold; colorize(self, "\e[1m"); end
-  def colorize(text, color_code)  "#{color_code}#{text}\e[0m" end
+  def colorize(text, color_code) "#{color_code}#{text}\e[0m" end
 end
 ```
 All you need is to call the color when you ```puts``` it
