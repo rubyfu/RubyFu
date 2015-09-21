@@ -34,7 +34,7 @@ https://gist.github.com/KINGSABRI/2860989
 ```
                               |------DMS------|----------------|
                               |               |                |
-|Attacker| -----------------> | |Web Server|  |   |Database|   |
+|Attacker| -----------------> |  |Web Server| |   |Database|   |
                               |               |                |
                               |---------------|----------------|
 ```
