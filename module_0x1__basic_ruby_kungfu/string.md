@@ -198,9 +198,6 @@ puts
 ```
 
 
-so so SSS balbla
-
-
 
 
 
