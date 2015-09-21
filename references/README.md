@@ -18,8 +18,9 @@
     * [Lynda: Ruby Essential Training - Commercial Training](https://www.youtube.com/playlist?list=PLFI1RBqfVaOrMxWjIuFXbtGYtdmezgap3)
     * [Ruby from InfiniteSkills - Commercial Training](https://www.youtube.com/playlist?list=PLFI1RBqfVaOqvspvlnwS_ECczfRXnJee2)
     * [Qick Ruby syntax Cheat sheet](http://overapi.com/ruby/)
-    * TO BE CONTINUED
+    * TO BE CONTINUED 
 * **Books**
+    * [Ruby Learning](http://rubylearning.com/satishtalim/tutorial.html) 
     * [Working with TCP Sockets](http://www.jstorimer.com/products/working-with-tcp-sockets)
     * [Working with Unix Processes](http://www.jstorimer.com/products/working-with-unix-processes)
     * [Working with Ruby Threads](http://www.jstorimer.com/products/working-with-ruby-threads)
