@@ -94,12 +94,16 @@ Attackers.fin(1)
 ```
 Attackers.find_by_name("Anonymous")
 ```
+Result 
+```ruby
+#<Attackers:0x000000010a6ad0 id: 1, name: "Anonymous", ip: "192.168.0.7">
+```
 
 If you want to delete an item from the database, you can use the destroy (Deletes the record in the database) method of ActiveRecord::Base:
 
 
 ```ruby
-Attackers.find(:first).destroy  
+Attackers.find(2).destroy  
 ```
 
 
