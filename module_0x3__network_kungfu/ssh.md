@@ -32,9 +32,9 @@ https://gist.github.com/KINGSABRI/2860989
 ## SSH Tunneling
 
 ```
-                              |--------DMZ------|---------------|
-                              |                 |               |
-|Attacker| -----------------> | |Web Server| <-SSH-> |Database| |
-                              |                 |               |
-                              |-----------------|---------------|
+                              |--------DMZ------|---Local Farm---|
+                              |                 |                |
+|Attacker| -----------------> | |Web Server| <-SSH-> |Database|  |
+                              |                 |                |
+                              |-----------------|----------------|
 ```
