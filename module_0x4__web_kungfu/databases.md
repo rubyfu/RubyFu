@@ -76,16 +76,16 @@ end
 - Using the ActiveRecord library, available as the activerecord gem.
 - Using the ActiveRecord adapter namely *mysql*
 - Establishing a connection to the database *rubyfu_db*
-- Creating a class called *RubyfuDB* following the conventions mentioned above
-
-
+- Creating a class called *Attackers* following the conventions mentioned above (attacker)
 
 ```ruby
 Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
 Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
 Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")  
 ```
+You will observe ActiveRecord examines the database tables themselves to find out which columns are available. This is how we were able to use accessor methods for participant.name without explicitly defining them: we defined them in the database, and ActiveRecord picked them up.
 
+If you want to delete an item from the database, you can use the destroy (Deletes the record in the database) method of ActiveRecord::Base:
 
 
 
