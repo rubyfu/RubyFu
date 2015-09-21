@@ -124,7 +124,7 @@ returns
 for list of types, please refer to the [gem docs](http://www.rubydoc.info/gems/net-dns/Net/DNS/RR/Types)
 
 
-### Reverse DNS lookp
+### Reverse DNS lookup
 
 ```ruby
 resolver = Net::DNS::Resolver.new
