@@ -121,7 +121,7 @@ returns
  facebook.com.           149133  IN      NS      a.ns.facebook.com.]
 ```
 
-for list of types, please refere to the [gem docs](http://www.rubydoc.info/gems/net-dns/Net/DNS/RR/Types)
+for list of types, please refer to the [gem docs](http://www.rubydoc.info/gems/net-dns/Net/DNS/RR/Types)
 
 
 ### Reverse DNS lookp
