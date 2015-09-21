@@ -8,7 +8,7 @@ Assume the pattern length = 500, You can change it to any value. By default this
 ```ruby
 pattern_create = ('Aa0'..'Zz9').to_a.join.each_char.first(500).join
 ```
-Incase you need longer pattern(ex. 30000) you can do the following
+In case you need longer pattern(ex. 30000) you can do the following
 ```ruby
 pattern_create = ('Aa0'..'Zz9').to_a.join
 pattern_create = pattern_create  * (30000 / 20280.to_f).ceil
