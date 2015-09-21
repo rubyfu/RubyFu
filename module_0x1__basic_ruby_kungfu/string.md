@@ -41,9 +41,8 @@ It's awesome to have more flexibility  in your terminal and sometimes we need to
 
 Overwriting console outputs makes our applications elegant and less noisy for repeated outputs like counting and loading progress bars.
 
-I've read a how-to about bash Prompt about **cursor movement** and I found it it's convenent to have it in our scripts. Here what have been said so far
+I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html) and I found it it's convenent to have it in our scripts. Here what have been said so far
 ```
-http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html
 
 - Position the Cursor:
   \033[<L>;<C>H
