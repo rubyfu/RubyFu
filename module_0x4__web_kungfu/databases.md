@@ -20,7 +20,7 @@ exit
 
 The outputs look like following 
 ```
-mysql -uroot -p
+mysql -u root -p
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 41
