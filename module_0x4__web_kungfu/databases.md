@@ -13,5 +13,5 @@ mysql> create table attackers (
     ->   ip text not null,  
     ->   primary key (id)  
     -> );
-mysql> 
+mysql> exit
 ```
