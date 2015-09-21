@@ -30,7 +30,7 @@
    * [SQL Injection Scanner](module_0x4__web_kungfu/sql_injection_scanner.md)
    * [Web Services](module_0x4__web_kungfu/web_services.md)
    * [Databases](module_0x4__web_kungfu/databases.md)
-   * Extending BurpSuite
+   * [Extending BurpSuite](module_0x4__web_kungfu/extending_burpsuite.md)
 * [Module 0x5 | Exploitation KungFu](module_0x5__exploitation_kungfu/README.md)
    * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
