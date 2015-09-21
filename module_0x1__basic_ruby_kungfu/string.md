@@ -66,7 +66,6 @@ I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO
   \033[s
 - Restore cursor position:
   \033[u
-       
 ```
 So to test that I did the following PoC 
 ```ruby
