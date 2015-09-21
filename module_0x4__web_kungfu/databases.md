@@ -116,6 +116,14 @@ If you want to delete an item from the database, you can use the destroy (Delete
 Attackers.find(2).destroy  
 ```
 
+So to write a complete script, 
+```ruby
+#!/usr/bin/env ruby
+
+
+
+```
+
 
 
 
