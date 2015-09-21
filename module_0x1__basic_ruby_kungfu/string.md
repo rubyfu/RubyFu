@@ -56,12 +56,10 @@ I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO
   \033[<N>C
 - Move the cursor backward N columns:
   \033[<N>D
-
 - Clear the screen, move to (0,0):
   \033[2J
 - Erase to end of line:
   \033[K
-
 - Save cursor position:
   \033[s
 - Restore cursor position:
