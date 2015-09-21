@@ -1,7 +1,7 @@
 # String
 
 ## Colorize your outputs
-Since we mostly working with commandline, we need our output to be more egent. Here main colors you may need to do so. you can add to add to these set.
+Since we mostly working with commandline, we need our output to be more elegant. Here main colors you may need to do so. you can add to add to these set.
 
 ```ruby
 class String
