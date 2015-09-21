@@ -1,1 +1,1 @@
-# Extending Burp Suite
+# Extending BurpSuite
