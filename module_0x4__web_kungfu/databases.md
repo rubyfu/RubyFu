@@ -56,7 +56,7 @@ mysql> exit
 
 ## Active Record
 ```
-gem install activerecord
+gem install mysql activerecord
 ```
 
 Now, let's to connect to *rubyfu_db* database 
@@ -72,9 +72,9 @@ class RubyfuDB < ActiveRecord::Base
 end  
 ```
 - Using the ActiveRecord library, available as the activerecord gem.
-- Using the ActiveRecord adapter namely mysql
-- Establishing a connection to the database rubyfu_db
-- Creating a class called RubyfuDB following the conventions mentioned above
+- Using the ActiveRecord adapter namely *mysql*
+- Establishing a connection to the database *rubyfu_db*
+- Creating a class called *RubyfuDB* following the conventions mentioned above
 
 
 
