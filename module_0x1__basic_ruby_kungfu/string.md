@@ -166,9 +166,8 @@ And as PoC, I've used the same previous one
   sleep 0.7
 end
 print "".mv_down 3
-
 ```
-
+It's much more elegant, isn't it?, Say yes plz
 
 
 Some application
