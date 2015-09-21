@@ -190,6 +190,15 @@ another example
 end
 ```
 
+Using our elegant way
+```
+(1..5).to_a.reverse.each do |c|
+  print "I'll exit after #{c} second".cls_upline
+  sleep 1
+end
+puts 
+```
+
 
 
 
