@@ -48,3 +48,6 @@ https://www.browserstack.com/automate/ruby
 http://watirwebdriver.com/
 
 http://watir.com/
+
+
+http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/
