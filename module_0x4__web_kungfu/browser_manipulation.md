@@ -28,7 +28,7 @@ driver.navigate.to "http://www.altoromutual.com/search.aspx?"
 # Interact with elements
 element = driver.find_element(:name, 'txtSearch')
 element.send_keys "<img src=x onerror='alert(1)'>"
-element.send_keys(:control, 't')
+element.send_keys(:control, 't')        # Open a new tab
 
 element = driver.find_element(:name, 'txtSearch')
 element.send_keys "<img src=x onerror='alert(1)'>"
