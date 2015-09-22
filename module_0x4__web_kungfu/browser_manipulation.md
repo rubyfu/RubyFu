@@ -22,7 +22,7 @@ profile.native_events = true
 # Start Driver 
 driver = Selenium::WebDriver.for(:firefox, :profile => profile)         # Start firefox driver with specified profile
 # driver = Selenium::WebDriver.for(:firefox, :profile => "default")     # Use this line if just need a current profile and no need to setup or tweak your profile
-driver.manage.window.resize_to(500, 400)                                #
+driver.manage.window.resize_to(500, 400)                                # Set Browser windows size
 driver.navigate.to "http://www.altoromutual.com/search.aspx?"           #
 
 # Interact with elements
