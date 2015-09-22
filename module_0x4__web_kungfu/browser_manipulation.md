@@ -23,7 +23,7 @@ profile.native_events = true
 driver = Selenium::WebDriver.for(:firefox, :profile => profile)         # Start firefox driver with specified profile
 # driver = Selenium::WebDriver.for(:firefox, :profile => "default")     # Use this line if just need a current profile and no need to setup or tweak your profile
 driver.manage.window.resize_to(500, 400)                                # Set Browser windows size
-driver.navigate.to "http://www.altoromutual.com/search.aspx?"           #
+driver.navigate.to "http://www.altoromutual.com/search.aspx?"           # The URL to navigate 
 
 # Interact with elements
 element = driver.find_element(:name, 'txtSearch')   # Find an element named 'txtSearch'
