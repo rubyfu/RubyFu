@@ -12,9 +12,10 @@
 
 https://www.browserstack.com/automate/ruby
 
-http://watir.com/
 
 
 
 
 ## Watir Webdriver
+http://watirwebdriver.com/
+http://watir.com/
