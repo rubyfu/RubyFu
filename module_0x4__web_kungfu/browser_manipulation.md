@@ -12,14 +12,15 @@
 #
 require "selenium-webdriver"
 
-# Profile setup
+# Profile Setup
 proxy = Selenium::WebDriver::Proxy.new(:http => "localhost:8080")
 profile = Selenium::WebDriver::Firefox::Profile.from_name "default"
 profile.proxy = proxy		# Set Proxy
 profile.assume_untrusted_certificate_issuer = false	# Set Accept untrusted SSL cetificates
 profile.native_events = true
-driver = Selenium::WebDriver.for(:firefox, :profile => profile)
 
+# Start Driver 
+driver = Selenium::WebDriver.for(:firefox, :profile => profile)
 # driver = Selenium::WebDriver.for(:firefox, :profile => "default")
 driver.manage.window.resize_to(500, 400)
 driver.navigate.to "http://www.altoromutual.com/search.aspx?"
