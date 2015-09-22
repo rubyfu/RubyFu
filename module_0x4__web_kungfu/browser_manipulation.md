@@ -20,10 +20,10 @@ profile.assume_untrusted_certificate_issuer = false	# Set Accept untrusted SSL c
 profile.native_events = true
 
 # Start Driver 
-driver = Selenium::WebDriver.for(:firefox, :profile => profile)
-# driver = Selenium::WebDriver.for(:firefox, :profile => "default")
-driver.manage.window.resize_to(500, 400)
-driver.navigate.to "http://www.altoromutual.com/search.aspx?"
+driver = Selenium::WebDriver.for(:firefox, :profile => profile)         # Start firefox driver with specified profile
+# driver = Selenium::WebDriver.for(:firefox, :profile => "default")     # 
+driver.manage.window.resize_to(500, 400)                                #
+driver.navigate.to "http://www.altoromutual.com/search.aspx?"           #
 
 # Interact with elements
 element = driver.find_element(:name, 'txtSearch')   # Find an element named 'txtSearch'
