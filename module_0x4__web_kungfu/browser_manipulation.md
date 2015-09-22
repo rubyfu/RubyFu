@@ -14,9 +14,9 @@ require "selenium-webdriver"
 
 # Profile Setup and Tweak 
 proxy = Selenium::WebDriver::Proxy.new(:http => "localhost:8080")
-profile = Selenium::WebDriver::Firefox::Profile.from_name "default"
-profile.proxy = proxy		# Set Proxy
-profile.assume_untrusted_certificate_issuer = false	# Accept untrusted SSL certificates 
+profile = Selenium::WebDriver::Firefox::Profile.from_name "default"     # Set an existing profile name 
+profile.proxy = proxy		                                            # Set Proxy
+profile.assume_untrusted_certificate_issuer = false	                    # Accept untrusted SSL certificates 
 
 # Start Driver 
 driver = Selenium::WebDriver.for(:firefox, :profile => profile)         # Start firefox driver with specified profile
