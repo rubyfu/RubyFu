@@ -26,7 +26,7 @@ driver.manage.window.resize_to(500, 400)
 driver.navigate.to "http://www.altoromutual.com/search.aspx?"
 
 # Interact with elements
-element = driver.find_element(:name, 'txtSearch')   # Find an element named 'textSearch'
+element = driver.find_element(:name, 'txtSearch')   # Find an element named 'txtSearch'
 element.send_keys "<img src=x onerror='alert(1)'>"  # Send your keys to element
 element.send_keys(:control, 't')                    # Open a new tab
 element.submit                                      # Submit 
