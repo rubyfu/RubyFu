@@ -40,7 +40,7 @@ element.submit                                      # Submit the text you've jus
 
 https://www.browserstack.com/automate/ruby
 
-
+https://gist.github.com/kenrett/7553278
 
 
 
