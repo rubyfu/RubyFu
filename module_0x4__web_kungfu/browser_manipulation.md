@@ -3,9 +3,15 @@ As a hacker, sometimes you need to automate your client side tests (ex. XSS) and
 
 Here we'll learn to make ruby control our browser in order to simulate the same attacks from from browser and get the real results.
 
-The most known APIs for this task are ***Selenium*** and ***Watir***
+The most known APIs for this task are ***Selenium*** and ***Watir*** which support most know web browsers currently exist.
 
 ## Selenium Webdriver
+To install selenium gem
+
+```
+gem install selenium-webdriver
+```
+
 
 ### GET Request 
 ```ruby
