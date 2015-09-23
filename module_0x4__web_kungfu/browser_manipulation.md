@@ -78,11 +78,6 @@ submit = browser.find_element(:name, "btnSubmit").click #.submit
 
 
 
-https://www.browserstack.com/automate/ruby
-
-https://gist.github.com/kenrett/7553278
-
-
 
 ## Watir Webdriver
 [**Watir**](http://watirwebdriver.com/) is abbreviation for (Web Application Testing in Ruby)
@@ -96,4 +91,4 @@ https://gist.github.com/kenrett/7553278
 ---
 - [Selenium Cheat Sheet](https://gist.github.com/kenrett/7553278) 
 - [Selenium webdriver vs Watir-webdriver in Ruby](http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/)
-- writing automate test scripts in Ruby.
+- [writing automate test scripts in Ruby](https://www.browserstack.com/automate/ruby)
