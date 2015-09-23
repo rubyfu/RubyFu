@@ -54,7 +54,7 @@ input = wait.until {
   [element_user, element_pass] if element_user.displayed? and element_pass.displayed?
 }
 
-input[0].send_keys("' or 1=1;--")	# Send key for the 1st element 
+input[0].send_keys("' or 1=1;--")   # Send key for the 1st element 
 input[1].send_keys("password")      # Send key fro the next element
 sleep 1
 
