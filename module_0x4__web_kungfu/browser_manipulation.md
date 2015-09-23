@@ -5,7 +5,7 @@
 
 ## Selenium Webdriver
 
-
+### GET Request 
 ```ruby
 #!/usr/bin/env ruby
 #
@@ -33,6 +33,10 @@ element.submit                                      # Submit the text you've jus
 
 
 > Note that the actual keys to send depend on your OS, for example, Mac uses `COMMAND + t`, instead of `CONTROL + t`.
+
+
+### POST Request 
+
 
 
 
