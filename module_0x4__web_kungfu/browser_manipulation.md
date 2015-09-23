@@ -82,7 +82,7 @@ submit = browser.find_element(:name, "btnSubmit").click #.submit
 ## Watir Webdriver
 [**Watir**](http://watirwebdriver.com/) is abbreviation for (Web Application Testing in Ruby)
 
-To install watir gem
+- To install watir gem
 ```
 gem install watir-webdriver
 ```
