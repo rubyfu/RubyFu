@@ -77,6 +77,8 @@ https://gist.github.com/kenrett/7553278
 
 
 ## Watir Webdriver
+**Watir** is abbreviation for (Web Application Testing in Ruby)
+
 http://watirwebdriver.com/
 
 http://watir.com/
