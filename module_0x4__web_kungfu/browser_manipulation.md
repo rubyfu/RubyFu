@@ -88,8 +88,6 @@ https://gist.github.com/kenrett/7553278
 [**Watir**](http://watirwebdriver.com/) is abbreviation for (Web Application Testing in Ruby)
 
 
-http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/
-
 
 
 
@@ -97,4 +95,5 @@ http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/
 
 <br><br><br>
 ---
-YOUR NOTES SHALL BE HERE
+- [Selenium Cheat Sheet](https://gist.github.com/kenrett/7553278) 
+- [Selenium webdriver vs Watir-webdriver in Ruby](http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/)
