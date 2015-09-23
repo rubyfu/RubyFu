@@ -87,6 +87,16 @@ gem install watir-webdriver
 ```
 
 
+### GET Request 
+
+
+
+### POST Request 
+
+
+
+
+
 
 <br><br><br>
 ---
