@@ -38,6 +38,9 @@ element.submit                                      # Submit the text you've jus
 ### POST Request 
 ```
 #!/usr/bin/env ruby
+#
+#
+require "selenium-webdriver"
 
 ```
 
