@@ -77,6 +77,7 @@ submit = browser.find_element(:name, "btnSubmit").click #.submit
 Let's test the page against XSS vulnerability 
 
 ```ruby
+
 ```
 
 
