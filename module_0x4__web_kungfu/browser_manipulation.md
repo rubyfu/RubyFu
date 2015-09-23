@@ -74,7 +74,16 @@ submit = browser.find_element(:name, "btnSubmit").click #.submit
 ```
 
 
-Let's test the page against XSS vulnerability 
+Let's test the page against XSS vulnerability. First I'll list what kind of action we need from browser
+
+1. Open a browser window (Firefox)
+2. Navigate to a URL (altoromutual.com)
+3. Perform some operations (Send an XSS payload)
+4. Open a new tab in the "same" browser window
+5. Perform some operations in the newly opened tab
+6. Switch back to the previously opened tab
+7. Perform some operations in this tab
+8. 
 
 ```ruby
 
