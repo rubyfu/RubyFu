@@ -8,8 +8,7 @@ The most known APIs for this task are ***Selenium*** and ***Watir*** which suppo
 ## Selenium Webdriver
 [**Selenium**](https://github.com/seleniumhq/selenium) is an umbrella project encapsulating a variety of tools and libraries enabling web browser automation.
 
-To install selenium gem
-
+- To install selenium gem
 ```
 gem install selenium-webdriver
 ```
