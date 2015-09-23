@@ -1,6 +1,5 @@
 # Browser Manipulation 
-
-
+As a hacker, sometimes you need to automate your client side tests (ex. XSS) and reduce the fulse 
 
 
 ## Selenium Webdriver
