@@ -6,6 +6,8 @@ Here we'll learn to make ruby control our browser in order to simulate the same 
 The most known APIs for this task are ***Selenium*** and ***Watir*** which support most know web browsers currently exist.
 
 ## Selenium Webdriver
+[**Selenium**](https://github.com/seleniumhq/selenium) is an umbrella project encapsulating a variety of tools and libraries enabling web browser automation.
+
 To install selenium gem
 
 ```
@@ -83,11 +85,8 @@ https://gist.github.com/kenrett/7553278
 
 
 ## Watir Webdriver
-**Watir** is abbreviation for (Web Application Testing in Ruby)
+[**Watir**](http://watirwebdriver.com/) is abbreviation for (Web Application Testing in Ruby)
 
-http://watirwebdriver.com/
-
-http://watir.com/
 
 
 http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/
