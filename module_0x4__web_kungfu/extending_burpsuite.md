@@ -4,7 +4,8 @@
 
 1. Download a stable version of JRuby from [JRuby Downloads](http://jruby.org/download)
 2. Select the Binary tar for Linux (JRuby x.x.x Binary .tar.gz) or Executable for Windows.
-3. Unzip the tar/zip file 
+3. Unzip the tar/zip file.
+4. Fine jruby.jar in `lib/` for Linux and `bin/` for Windows
 
 
 - http://human.versus.computer/buby/
