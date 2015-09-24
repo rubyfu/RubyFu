@@ -1,5 +1,10 @@
 # Extending BurpSuite
 
+## Setting up the Ruby environment for Burp Extensions 
+
+1. Download a stable version of JRuby from [JRuby Downloads](http://jruby.org/download)
+2. Select the Binary tar for Linux (JRuby x.x.x Binary .tar.gz) or Executable for Windows 
+3. Unzip the 
 
 
 - http://human.versus.computer/buby/
