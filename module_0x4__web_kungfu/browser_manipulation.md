@@ -106,6 +106,7 @@ payloads =
   ]
 
 browser = Selenium::WebDriver.for :firefox
+browser.manage.window.resize_to(500, 400)
 browser.get "http://www.altoromutual.com/search.aspx?"
 
 wait = Selenium::WebDriver::Wait.new(:timeout => 20)
