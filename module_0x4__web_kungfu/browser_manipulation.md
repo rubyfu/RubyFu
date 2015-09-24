@@ -85,7 +85,7 @@ Let's test the page against XSS vulnerability. First I'll list what kind of acti
 1. Open a browser window (Firefox)
 2. Navigate to a URL (altoromutual.com)
 3. Perform some operations (Send an XSS payload)
-4. Open a new tab in the "same" browser window
+4. Check if the payload is working or it's false positive 
 5. Perform some operations in the newly opened tab (Navigate and send payload)
 6. Switch back to the previously opened tab
 7. Perform some operations in this tab
