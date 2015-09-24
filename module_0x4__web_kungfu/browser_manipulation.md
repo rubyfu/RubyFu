@@ -151,7 +151,7 @@ False Positive: alert(/6/.source)
 
 
 ## Watir Webdriver
-[**Watir**](http://watirwebdriver.com/) is abbreviation for (Web Application Testing in Ruby)
+[**Watir**](http://watirwebdriver.com/) is abbreviation for (Web Application Testing in Ruby). I believe that Watir is more elegant than Selenium but I like to know many ways to do the same thing, just in case. 
 
 - To install watir gem
 ```
