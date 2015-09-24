@@ -123,8 +123,8 @@ payloads.each do |payload|
     wait.until do 
       txt = browser.switch_to.alert
       if (1..100) === txt.text.to_i
-	puts "Payload is working: #{payload}"
-	txt.accept 
+	    puts "Payload is working: #{payload}"
+	    txt.accept 
       end
     end
   rescue Selenium::WebDriver::Error::NoAlertOpenError
