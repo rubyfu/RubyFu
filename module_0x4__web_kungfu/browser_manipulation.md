@@ -134,6 +134,7 @@ payloads.each do |payload|
   
 end
 
+browser.close
 ```
 
 Result
