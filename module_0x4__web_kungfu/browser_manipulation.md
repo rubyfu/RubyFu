@@ -22,8 +22,13 @@ gem install selenium-webdriver
 require "selenium-webdriver"
 
 # Profile Setup and Tweak 
-proxy = Selenium::WebDriver::Proxy.new(:http => "localhost:8080")       # Set Proxy hostname and port 
+proxy = Selenium::WebDriver::Proxy.newproxy = Selenium::WebDriver::Proxy.new(
+  :http     => PROXY,
+  :ftp      => PROXY,
+  :ssl      => PROXY
+)       # Set Proxy hostname and port 
 profile = Selenium::WebDriver::Firefox::Profile.from_name "default"     # Use an existing profile name 
+profile['general.useragent.override'] = "Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)"                # ssss
 profile.proxy = proxy                                                   # Set Proxy
 profile.assume_untrusted_certificate_issuer = false                     # Accept untrusted SSL certificates 
 
@@ -112,6 +117,7 @@ gem install watir-webdriver
 
 <br><br><br>
 ---
+- [Selenium official documentations](http://docs.seleniumhq.org/docs/)
 - [Selenium Cheat Sheet](https://gist.github.com/kenrett/7553278) 
 - [Selenium webdriver vs Watir-webdriver in Ruby](http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/)
 - [writing automate test scripts in Ruby](https://www.browserstack.com/automate/ruby)
