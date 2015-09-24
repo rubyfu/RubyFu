@@ -205,3 +205,4 @@ btn = browser.button(name: 'btnSubmit').click
 - [writing automate test scripts in Ruby](https://www.browserstack.com/automate/ruby)
 - [Selenium WebDriver and Ruby](https://swdandruby.wordpress.com/)
 - [The Selenium Guidebook - Commercial ](https://seleniumguidebook.com/)
+- [Watir WebDriver](http://watirwebdriver.com/)
