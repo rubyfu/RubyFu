@@ -4,6 +4,7 @@
 
 http://human.versus.computer/buby/
 
+http://human.versus.computer/buby/rdoc/index.html
 
 
 https://github.com/null--/what-the-waf/blob/master/what-the-waf.rb
