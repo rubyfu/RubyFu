@@ -6,7 +6,7 @@
 2. Select the Binary tar for Linux (JRuby x.x.x Binary .tar.gz) or Executable for Windows.
 3. Unzip the tar/zip file.
 4. Find JRuby in `lib/jruby.jar` for Linux and `bin/jruby.exe` for Windows.
-5. 
+5. Import the environment from BrupSuite >> Extender >> Options >> Ruby Environment 
 
 
 - http://human.versus.computer/buby/
