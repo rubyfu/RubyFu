@@ -30,7 +30,7 @@ proxy = Selenium::WebDriver::Proxy.newproxy = Selenium::WebDriver::Proxy.new(
 profile = Selenium::WebDriver::Firefox::Profile.from_name "default"     # Use an existing profile name 
 profile['general.useragent.override'] = "Mozilla/5.0 (compatible; MSIE 9.0; " + 
                                         "Windows Phone OS 7.5; Trident/5.0; " + 
-					"IEMobile/9.0)"                # Set User Agentprofile.proxy = proxy                                                   # Set Proxy
+					                    "IEMobile/9.0)"                # Set User Agentprofile.proxy = proxy                                                   # Set Proxy
 profile.assume_untrusted_certificate_issuer = false                     # Accept untrusted SSL certificates 
 
 # Start Driver 
