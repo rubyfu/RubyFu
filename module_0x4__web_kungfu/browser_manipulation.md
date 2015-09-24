@@ -126,7 +126,7 @@ payloads.each do |payload|
 	txt.accept 
       end
     end
-  rescue 
+  rescue Selenium::WebDriver::Error::NoAlertOpenError
     puts "False Positive: #{payload}"
     next
   end
