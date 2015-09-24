@@ -174,5 +174,5 @@ gem install watir-webdriver
 - [Selenium Cheat Sheet](https://gist.github.com/kenrett/7553278) 
 - [Selenium webdriver vs Watir-webdriver in Ruby](http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/)
 - [writing automate test scripts in Ruby](https://www.browserstack.com/automate/ruby)
-- [Selenium and Ruby](https://swdandruby.wordpress.com/)
+- [Selenium WebDriver and Ruby](https://swdandruby.wordpress.com/)
 - [The Selenium Guidebook - Commercial ](https://seleniumguidebook.com/)
