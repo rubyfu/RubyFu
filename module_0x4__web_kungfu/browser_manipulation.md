@@ -86,9 +86,7 @@ Let's test the page against XSS vulnerability. First I'll list what kind of acti
 2. Navigate to a URL (altoromutual.com)
 3. Perform some operations (Send an XSS payload)
 4. Check if the payload is working or it's false positive 
-5. Perform some operations in the newly opened tab (Navigate and send payload)
-6. Switch back to the previously opened tab
-7. Perform some operations in this tab
+5. Print the succeed payloads on terminal
 
 
 ```ruby
