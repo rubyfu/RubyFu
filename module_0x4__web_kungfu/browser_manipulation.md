@@ -85,7 +85,7 @@ Let's test the page against XSS vulnerability. First I'll list what kind of acti
 1. Open a browser window (Firefox)
 2. Navigate to a URL (altoromutual.com)
 3. Perform some operations (Send an XSS payload)
-4. Check if the payload is working(Popping-up) or it's false positive 
+4. Check if the payload is working(Popping-up) or it's a false positive 
 5. Print the succeed payloads on terminal
 
 **selenium-xss.rb**
