@@ -14,7 +14,7 @@ Big love to those people who support this book by any meaning.
 - TO BE CONTINUED
 
 ## Contributors (< 20 contributions and reviewers. No order)
-* TO BE CONTINUED
+* William Coppola | @SubINacls
 
 
 ## Sponsors
