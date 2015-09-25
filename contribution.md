@@ -44,8 +44,8 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
         ```ruby
         puts "Your good code"
         ```
-        Souce [^1]
-    Then add the follwoing to the footer
+        Source [^1]
+    Then add the following to the footer
 
         [^1]: Source: [The Original code Title](http://TheSouceCodeURL)
 
