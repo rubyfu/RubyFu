@@ -55,10 +55,15 @@ mysql> exit
 ```
 
 ## Active Record
-- To install ActiveRecord and most known adapters 
+- To install ActiveRecord 
 ```
-gem install activerecord mysql tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter 
+gem install activerecord 
 ```
+- To install most known adapters 
+```
+mysql tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter 
+```
+
 
 Now, let's to connect to *rubyfu_db* database 
 ```ruby
