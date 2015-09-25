@@ -4,7 +4,7 @@
 ***RubyFu is where Ruby goes evil!*** 
 
 
-This book is a collection of ideas, teaks and skills that could be useful for Hackers and Pentesters. It's a unique reference summarizes a lot of re-search and experience.
+This book is a collection of ideas, teaks and skills that could be useful for Hackers. It's a unique reference summarizes a lot of re-search and experience in order to achieve your goal in shortest and smartest way.
 
 
 
