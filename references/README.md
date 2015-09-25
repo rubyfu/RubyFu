@@ -10,7 +10,7 @@
         * [Markdown docs - Gitbook](http://help.gitbook.com/format/markdown.html "Official docs")
         * [Mastering Markdown - Github](https://guides.github.com/features/mastering-markdown/ "Mastering Markdown")
     * Gitbook Desktop Editor
-        * [Download and installation](https://github.com/GitbookIO/editor)
+        * [Download and installation](https://www.gitbook.com/editor)
 * **Beginner**
     * [Ruby Tutorials - Tutorialspoint](http://www.tutorialspoint.com/ruby/)
     * [Ruby programming Tutorials - Simple Free videos](https://www.thenewboston.com/videos.php?cat=50)
