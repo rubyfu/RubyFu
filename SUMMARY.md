@@ -38,6 +38,6 @@
 * [Module 0x6 | Reverse Engineering KungkFu](module_0x6__reverse_engineering/README.md)
 * [References](references/README.md)
 * [FAQs](faqs/README.md)
-* [Contributers](contributers/README.md)
+* [Contributors](contributers/README.md)
    * [TODO](contributers/todo.md)
 
