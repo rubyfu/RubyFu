@@ -12,7 +12,7 @@ mac = "ads fs:ad fa:fs:fe: Wind00-0C-29-38-1D-61ows 1100:50:7F:E6:96:20dsfsad fa
 
 **Using Regex**
 
-The regex should supports windows and linux mac address formats.
+The regex should supports windows and Linux mac address formats.
 
 `(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]`
 
