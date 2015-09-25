@@ -5,3 +5,10 @@
 - And enumeration
 - SMTP users enumeration
 - Check the IP address operation in Network Fu part
+
+
+
+* major
+    - minor
+        - *important* detail
+    - minor
