@@ -11,7 +11,6 @@
     * Markdown [Documentations]
         * [Markdown docs - Gitbook](http://help.gitbook.com/format/markdown.html "Official docs")
         * [Mastering Markdown - Github](https://guides.github.com/features/mastering-markdown/ "Mastering Markdown")
-
 * **Beginner**
     * [Ruby Tutorials - Tutorialspoint](http://www.tutorialspoint.com/ruby/)
     * [Ruby programming Tutorials - Simple Free videos](https://www.thenewboston.com/videos.php?cat=50)
