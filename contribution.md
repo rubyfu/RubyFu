@@ -31,9 +31,6 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 6. From github, send a **Pull Request(PR)**
 
 
-**`TO BE COMPLETED`**
-
-
 ### Contributing with Code
 
 ##### Ruby code
