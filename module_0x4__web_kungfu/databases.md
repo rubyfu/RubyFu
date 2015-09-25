@@ -55,7 +55,7 @@ mysql> exit
 ```
 
 ## Active Record
-- To install ActiveRecord and most known adabters 
+- To install ActiveRecord and most known adapters 
 ```
 gem install activerecord mysql tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter 
 ```
