@@ -2,7 +2,7 @@
 In this chapter, we'll try to do many implementations using the awesome lib, PacketFu[^1].
 
 
-## PacketFu - The packet manipulaton
+## PacketFu - The packet manipulation
 
 **PacketFu Features**
 * Manipulating TCP protocol
