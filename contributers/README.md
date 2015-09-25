@@ -9,7 +9,7 @@ Big love to those people who support this book by any meaning.
 ## Founder
 - KING SABRI | @KINGSABRI
 
-## Contributors (> 20 contributions. No order)
+## Contributors
 - KING SABRI | @KINGSABRI
 - Bashar | @b_free2
 - William Coppola | @SubINacls
