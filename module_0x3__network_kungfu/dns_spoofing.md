@@ -69,7 +69,7 @@ Let's to anatomize our payload
 * We need to start capturing/sniffing on specific interface
 * We need to enable promiscuous mode on our interface
 * We need to capture UDP packets on port 53 only
-* We need parse/analize the valide UDP packets only
+* We need parse/analyze the valide UDP packets only
 * We need to make sure this packet is a DNS query
 * We need to get the queried/requested domain
     * We need to know the domain length
