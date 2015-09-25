@@ -1,5 +1,7 @@
 # References
 * **Contributors**
+    * Gitbook Desktop Editor
+        * [Download and installation](https://www.gitbook.com/editor)
     * How to Gitbook [Videos]
         * [Create Gitbook online](https://www.youtube.com/watch?v=kdpfRLpu0FQ)
         * [Install Gitbook Editor (on Linux Ubuntu)](https://www.youtube.com/watch?v=2e21bHRqG9M)
@@ -9,8 +11,7 @@
     * Markdown [Documentations]
         * [Markdown docs - Gitbook](http://help.gitbook.com/format/markdown.html "Official docs")
         * [Mastering Markdown - Github](https://guides.github.com/features/mastering-markdown/ "Mastering Markdown")
-    * Gitbook Desktop Editor
-        * [Download and installation](https://www.gitbook.com/editor)
+
 * **Beginner**
     * [Ruby Tutorials - Tutorialspoint](http://www.tutorialspoint.com/ruby/)
     * [Ruby programming Tutorials - Simple Free videos](https://www.thenewboston.com/videos.php?cat=50)
