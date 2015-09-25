@@ -69,7 +69,7 @@ resolver.additional
 
 #### A record
 
-Because the *A* record is the defual, we can do like above example
+Because the *A* record is the default, we can do like above example
 ```ruby
 resolver = Net::DNS::Resolver.start("google.com")
 ```
