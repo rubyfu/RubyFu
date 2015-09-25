@@ -1,4 +1,4 @@
-# Contributers
+# Contributors
 
 Big love to those people who support this book by any meaning.
 
