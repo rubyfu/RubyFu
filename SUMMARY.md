@@ -1,7 +1,6 @@
 # Summary
 
 * [Module 0x0 | Introduction](README.md)
-   * [Acknowledgment](acknowledgment.md)
    * [Contribution](contribution.md)
    * [Beginners](beginners.md)
    * [Required Gems](required_gems.md)
