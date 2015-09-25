@@ -9,7 +9,7 @@ Big love to those people who support this book by any meaning.
 * Bashar | @b_free2
 * TO BE CONTINUED
 
-## contributers (< 20 contributions and reviewers. No order)
+## Contributors (< 20 contributions and reviewers. No order)
 * TO BE CONTINUED
 
 ## Founder
