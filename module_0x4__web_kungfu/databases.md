@@ -89,7 +89,7 @@ Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")
 Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
 Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")  
 ```
-You will observe ActiveRecord examines the database tables themselves to find out which columns are available. This is how we were able to use accessor methods for participant.name without explicitly defining them: we defined them in the database, and ActiveRecord picked them up.
+You will observe that ActiveRecord examines the database tables themselves to find out which columns are available. This is how we were able to use accessor methods for participant.name without explicitly defining them: we defined them in the database, and ActiveRecord picked them up.
 
 You can find the item 
 - by id
