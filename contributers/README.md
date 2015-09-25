@@ -16,5 +16,5 @@ Big love to those people who support this book by any meaning.
 * KING SABRI | @KINGSABRI
 
 
-## Sponsers
+## Sponsors
 * [Security4arabs Community](http://www.security4arabs.com/)
