@@ -1,14 +1,12 @@
 # RubyFu
 
 ![Wireshark](images/other/rubyfu.png)
+***RubyFu is where Ruby goes evil!***
 
 
-
-This book will be collection of ideas and skills that could be useful for Hackers and Pentesters. It's good reference summarizing a lot of re-search and experience. Simply, ***RubyFu is where Ruby goes evil!***
-
+This book will be collection of ideas and skills that could be useful for Hackers and Pentesters. It's good reference summarizing a lot of re-search and experience.
 
 
-For best presentation, please visit [RubyFu on Gitbook](http://RubyFu.net)
 
 ### Who should read this book?
 Ideally, Hackers!
