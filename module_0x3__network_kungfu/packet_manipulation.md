@@ -7,7 +7,7 @@ In this chapter, we'll try to do many implementations using the awesome lib, Pac
 **PacketFu Features**
 * Manipulating TCP protocol
 * Manipulating UDP protocol
-* Manipulating ICMP protocl
+* Manipulating ICMP protocol
 * Packet Capturing - Support TCPdump style[^2]
 * Read and write PCAP files
 
