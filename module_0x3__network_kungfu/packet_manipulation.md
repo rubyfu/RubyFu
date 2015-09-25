@@ -1,5 +1,5 @@
 # Packet manipulation
-In this chapter, we'll try to do variant implementations using an awesome lib, PacketFu[^1].
+In this chapter, we'll try to do variant implementations using the awesome lib, PacketFu[^1].
 
 
 ## PacketFu - The packet manipulation
