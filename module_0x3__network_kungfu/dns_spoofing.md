@@ -78,7 +78,7 @@ Let's to anatomize our payload
 * Replace the requested domain with any domain we want
 * Re inject the packet into victim connection and send
 
-I'll divide our tasks then wrape it up in one script
+I'll divide our tasks then wrap it up in one script
 
 ```ruby
 #!/usr/bin/env ruby
