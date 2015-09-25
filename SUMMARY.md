@@ -36,7 +36,7 @@
    * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
    * [metasm](module_0x5__exploitation_kungfu/metasm.md)
-* [Module 0x6 | Reverse Engineering](module_0x6__reverse_engineering/README.md)
+* [Module 0x6 | Reverse Engineering KungkFu](module_0x6__reverse_engineering/README.md)
 * [References](references/README.md)
 * [FAQs](faqs/README.md)
 * [Contributers](contributers/README.md)
