@@ -1,5 +1,5 @@
 # References
-* **Contributer**
+* **Contributors**
     * How to Gitbook [Videos]
         * [Create Gitbook online](https://www.youtube.com/watch?v=kdpfRLpu0FQ)
         * [Install Gitbook Editor (on Linux Ubuntu)](https://www.youtube.com/watch?v=2e21bHRqG9M)
