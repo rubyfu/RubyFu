@@ -4,7 +4,9 @@
 
 
 
-This book will be collection of ideas and skills that could be useful for Hackers and  and a good reference for lots of search and experience. It is not intended to teach you ruby programming.
+This book will be collection of ideas and skills that could be useful for Hackers and Pentesters. It's good reference summarizing a lot of re-search and experience. 
+
+> **RubyFu** is where Ruby goes evil
 
 For best presentation, please visit [RubyFu on Gitbook](http://RubyFu.net)
 
