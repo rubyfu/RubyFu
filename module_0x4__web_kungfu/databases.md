@@ -61,7 +61,7 @@ gem install activerecord
 ```
 - To install most known adapters 
 ```
-mysql tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter 
+mysql tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter
 ```
 
 
