@@ -2,7 +2,7 @@
 
 Big love to those people who support this book by any meaning.
 
-![](../images/other/Ruby_Loves_Us.jpg)
+<center>![](../images/other/Ruby_Loves_Us.jpg)</center>
 
 
 ## Founder
