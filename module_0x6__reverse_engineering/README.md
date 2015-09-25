@@ -1,5 +1,8 @@
 # Module 0x6 | Reverse Engineering
 
+
+## This Chapter is under development, if you can help, please don't hesitate to contact me.
+
 ```
 gem install rbkb --source http://gemcutter.org
 ```
