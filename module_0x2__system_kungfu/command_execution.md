@@ -30,7 +30,7 @@ The following ways are applicable on all operating systems.
 ### Rake#sh
 
 
-### %x(), 
+### %x[], %x{}, %x$''$ 
 
 
 
