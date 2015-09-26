@@ -57,20 +57,22 @@ stdin, stdout, stderr = Open3.popen3('dc')
 => "15\n"
 ```
 
-### Rake#sh
-```ruby
-
-
-
-```
-
-
 ### %x[], %x{}, %x$''$ 
 
 ```ruby
 
 
 
+```
+
+### Rake#sh
+```ruby
+require 'rake'
+sh %w(xxxxx) do |ok, res|
+   if !ok
+     abort 'the operation failed'
+   end
+end
 ```
 
 
