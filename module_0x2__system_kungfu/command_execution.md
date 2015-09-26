@@ -42,7 +42,9 @@ Sun Sep 27 00:40:06 AST 2015
 
 ### Open3#popen3
 ```ruby
-
+require 'open3'
+>> stdin, stdout, stderr = Open3.popen3('dc') 
+=> [#<IO:fd 14>, #<IO:fd 16>, #<IO:fd 18>, #<Process::Waiter:0x00000002f68bd0 sleep>]
 
 
 ```
