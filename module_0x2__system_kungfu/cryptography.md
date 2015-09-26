@@ -1,5 +1,11 @@
 # Cryptography
 
+
+## Generate Hashes 
+
+
+
+
 ## Enigma script
 
 
