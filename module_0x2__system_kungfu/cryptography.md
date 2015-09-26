@@ -4,7 +4,12 @@
 ## Generate Hashes 
 
 - MD5
+```
+require 'digest'
+```
+
 - SHA1,2
+
 
 
 ## Enigma script
