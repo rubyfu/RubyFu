@@ -1,7 +1,7 @@
 # Cryptography
 
 
-## Generate Hashes 
+## Generating Hashes 
 
 ###  MD5 hash
 ```ruby
