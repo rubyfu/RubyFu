@@ -21,7 +21,7 @@ The following ways are applicable on all operating systems.
 ```ruby
 >> exec('date')
 Sun Sep 27 00:39:22 AST 2015
-KING( ~ )-> 
+RubyFu( ~ )-> 
 ```
 
 ### Kernel#system
