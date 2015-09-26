@@ -102,7 +102,7 @@ uri.query += payloads[0]
 # Send get request
 response = Net::HTTP.get uri
 
-# Search if an error occured = vulnerable
+# Search if an error occurred = vulnerable
 puts "[+] The #{URL.decode(uri.to_s)} is vulnerable!" unless response.match(/#{errors[:mysql][0]}/i).nil?
 
 ```
