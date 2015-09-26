@@ -91,17 +91,13 @@ Sun Sep 27 00:59:05 AST 2015
 
 
 ### Extra
-```ruby
-
-
-
-```
-
+To check the status of the backtick operation you can execute $?.success?
 #### $?
 ```ruby
-
-
-
+>> `date`
+=> "Sun Sep 27 01:06:42 AST 2015\n"
+>> $?.success?
+=> true
 ```
 
 
