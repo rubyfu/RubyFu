@@ -8,7 +8,7 @@
 require 'digest'
 puts Digest::MD5.hexdigest 'P@ssw0rd'
 ```
-- SHA1,2
+- SHA1,2,3
 ```
 require 'digest'
 puts Digest::SHA256.hexdigest 'P@ssw0rd'
