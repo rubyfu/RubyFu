@@ -27,6 +27,14 @@ puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 puts "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest('P@ssw0rd')).upcase
 ```
 
+### PostgreSQL Password has
+PostgreSQL hashes combined name and password and adds **md5** in front of the hash
+```ruby
+require 'digest/md5'
+puts 'md5' + Digest::MD5.hexdigest('P@ssw0rd' + 'admin')
+```
+
+
 
 ## Enigma script
 
