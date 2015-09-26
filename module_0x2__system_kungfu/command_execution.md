@@ -43,10 +43,18 @@ Sun Sep 27 00:40:06 AST 2015
 ### Open3#popen3
 ```ruby
 require 'open3'
->> stdin, stdout, stderr = Open3.popen3('dc') 
+stdin, stdout, stderr = Open3.popen3('dc') 
 => [#<IO:fd 14>, #<IO:fd 16>, #<IO:fd 18>, #<Process::Waiter:0x00000002f68bd0 sleep>]
-
-
+>> stdin.puts(5)
+=> nil
+>> stdin.puts(10)
+=> nil
+>> stdin.puts("+")
+=> nil
+>> stdin.puts("p")
+=> nil
+>> stdout.gets
+=> "15\n"
 ```
 
 
