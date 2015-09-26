@@ -3,7 +3,8 @@
 
 ## Generate Hashes 
 
-
+- MD5
+- SHA1,2
 
 
 ## Enigma script
