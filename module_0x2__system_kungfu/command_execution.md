@@ -13,9 +13,8 @@ The following ways are applicable on all operating systems.
 
 ### Kernel#` (backticks)
 ```ruby
-
-
-
+>> `date`
+=> "Sun Sep 27 00:38:54 AST 2015\n"
 ```
 
 ### Kernel#exec
