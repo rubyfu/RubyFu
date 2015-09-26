@@ -16,15 +16,15 @@ puts Digest::SHA384.hexdigest 'P@ssw0rd'
 puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ```
 
-### Windows NTLM Password hash
+### Windows NTLM password hash
 ```ruby
 require 'openssl'
 puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 ```
 
-### MySQL Password hash
+### MySQL password hash
 ```ruby
-"*" + Digest::SHA1.hexdigest(Digest::SHA1.digest('P@ssw0rd')).upcase
+puts "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest('P@ssw0rd')).upcase
 ```
 
 
