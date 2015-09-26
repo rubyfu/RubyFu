@@ -57,15 +57,6 @@ stdin, stdout, stderr = Open3.popen3('dc')
 => "15\n"
 ```
 
-
-### Open4#popen4
-```ruby
-
-
-
-```
-
-
 ### Rake#sh
 ```ruby
 
