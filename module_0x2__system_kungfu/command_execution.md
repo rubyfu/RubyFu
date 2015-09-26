@@ -19,9 +19,9 @@ The following ways are applicable on all operating systems.
 
 ### Kernel#exec
 ```ruby
-
-
-
+>> exec('date')
+Sun Sep 27 00:39:22 AST 2015
+KING@Archer ( ~ )-> 
 ```
 
 ### Kernel#system
