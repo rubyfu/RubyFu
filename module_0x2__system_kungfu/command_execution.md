@@ -12,32 +12,82 @@ The following ways are applicable on all operating systems.
 
 
 ### Kernel#` (backticks)
+```ruby
+
+
+
+```
 
 ### Kernel#exec
+```ruby
+
+
+
+```
 
 ### Kernel#system
+```ruby
+
+
+
+```
 
 
 ### IO#popen
+```ruby
+
+
+
+```
 
 
 ### Open3#popen3
+```ruby
+
+
+
+```
 
 
 ### Open4#popen4
+```ruby
+
+
+
+```
 
 
 ### Rake#sh
+```ruby
+
+
+
+```
 
 
 ### %x[], %x{}, %x$''$ 
 
+```ruby
+
+
+
+```
 
 
 
 ### Extra
+```ruby
+
+
+
+```
 
 #### $?-
+```ruby
+
+
+
+```
 
 
 
