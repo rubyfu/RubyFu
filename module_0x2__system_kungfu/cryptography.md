@@ -19,7 +19,7 @@ puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ### Windows NTLM hash
 ```ruby
 require 'openssl'
-puts OpenSSL::Digest::MD4.hexdigest("P@ssw0rd".encode('UTF-16LE'))
+puts OpenSSL::Digest::MD4.hexdigest("P@ssw0rd".encode('UTF-16LE')).uppercase
 ```
 
 ### 
