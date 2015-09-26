@@ -206,3 +206,4 @@ btn = browser.button(name: 'btnSubmit').click
 - [Selenium WebDriver and Ruby](https://swdandruby.wordpress.com/)
 - [The Selenium Guidebook - Commercial ](https://seleniumguidebook.com/)
 - [Watir WebDriver](http://watirwebdriver.com/)
+- [Watir Cheat Sheet](https://github.com/watir/watir/wiki/Cheat-Sheet)
