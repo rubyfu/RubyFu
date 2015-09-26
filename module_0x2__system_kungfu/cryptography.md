@@ -27,8 +27,7 @@ puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 ```ruby
 require 'openssl'
 
-puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('ISO-8859-1').uppercase
-
+puts "P@ssw0rd".encode('ISO-8859-1').unpack("C*").map {|c| "%02X" % c}.join
 
 ```
 
