@@ -82,7 +82,7 @@ Sun Sep 27 00:50:44 AST 2015
 ### Rake#sh
 ```ruby
 require 'rake'
-sh 'date'
+>> sh 'date'
 date
 Sun Sep 27 00:59:05 AST 2015
 #=> true
