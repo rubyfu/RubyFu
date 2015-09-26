@@ -23,6 +23,8 @@ The following ways are applicable on all operating systems.
 
 ### Open3#popen3
 
+### Open4#popen4
+
 
 ### Rake#sh
 
