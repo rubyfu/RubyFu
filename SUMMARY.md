@@ -25,6 +25,7 @@
    * [Packet manipulation](module_0x3__network_kungfu/packet_manipulation.md)
        * [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md)
        * [DNS Spoofing](module_0x3__network_kungfu/dns_spoofing.md)
+   * SNMP Enumeration
 * [Module 0x4 | Web KungFu](module_0x4__web_kungfu/README.md)
    * [SQL Injection Scanner](module_0x4__web_kungfu/sql_injection_scanner.md)
    * [Web Services](module_0x4__web_kungfu/web_services.md)
