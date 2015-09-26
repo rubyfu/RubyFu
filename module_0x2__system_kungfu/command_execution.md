@@ -1,5 +1,15 @@
 # Command Execution
-The following 
+Some things to think about when choosing between these mechanisms are:
+
+1. Do you just want stdout or do you need stderr as well? or even separated out?
+2. How big is your output? Do you want to hold the entire result in memory?
+3. Do you want to read some of your output while the subprocess is still running?
+4. Do you need result codes?
+5. Do you need a ruby object that represents the process and lets you kill it on demand?
+
+
+The following ways are applicable on all operating systems. 
+
 
 ### Kernel#` (backticks)
 
