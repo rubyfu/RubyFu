@@ -194,7 +194,7 @@ btn = browser.button(name: 'btnSubmit').click
 # browser.close
 ```
 
-> Since Waiter is intergrated with Selenium, you can use both to achievement   one goal 
+> Since Waiter is intergrated with Selenium, you can use both to achieve   one goal 
 
 
 
