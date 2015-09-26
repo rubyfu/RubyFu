@@ -69,9 +69,12 @@ Sun Sep 27 00:50:44 AST 2015
 ### %x[], %x{}, %x$''$ 
 
 ```ruby
-
-
-
+>> %x[date]
+=> "Sun Sep 27 00:58:00 AST 2015\n"
+>> %x{date}
+=> "Sun Sep 27 00:58:06 AST 2015\n"
+>> %x$'date'$
+=> "Sun Sep 27 00:58:12 AST 2015\n"
 ```
 
 ### Rake#sh
