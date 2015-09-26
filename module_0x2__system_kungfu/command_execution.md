@@ -59,7 +59,11 @@ stdin, stdout, stderr = Open3.popen3('dc')
 
 
 ### Process#spawn
+Kernel.spawn executes the given command in a subshell. It returns immediately with the process id.
 ```ruby
+pid = Process.spawn("date")
+Sun Sep 27 00:50:44 AST 2015
+=> 12242
 
 ```
 
