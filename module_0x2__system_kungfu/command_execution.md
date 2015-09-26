@@ -29,6 +29,7 @@ The following ways are applicable on all operating systems.
 ```ruby
 >> system 'date'
 Sun Sep 27 00:38:01 AST 2015
+=> true
 ```
 
 
