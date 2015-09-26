@@ -77,11 +77,7 @@ Sun Sep 27 00:50:44 AST 2015
 ### Rake#sh
 ```ruby
 require 'rake'
-sh %w(xxxxx) do |ok, res|
-   if !ok
-     abort 'the operation failed'
-   end
-end
+sh 'date'
 ```
 
 
