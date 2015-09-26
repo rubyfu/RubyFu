@@ -57,6 +57,12 @@ stdin, stdout, stderr = Open3.popen3('dc')
 => "15\n"
 ```
 
+
+### Process#spawn
+```ruby
+
+```
+
 ### %x[], %x{}, %x$''$ 
 
 ```ruby
