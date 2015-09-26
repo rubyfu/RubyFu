@@ -126,4 +126,5 @@ Sun Sep 27 00:59:05 AST 2015
 - [Ruby | Execute system commands](http://king-sabri.net/?p=2553)
 - [5 ways to run commands from Ruby](http://mentalized.net/journal/2010/03/08/5-ways-to-run-commands-from-ruby/)
 - [6 ways to run Shell commands in Ruby](http://tech.natemurray.com/2007/03/ruby-shell-commands.html)
-- [How to choose the correct way](http://stackoverflow.com/a/4413/967283) 
+- [How to choose the correct way](http://stackoverflow.com/a/4413/967283)
+- [Executing commands in ruby](http://blog.bigbinary.com/2012/10/18/backtick-system-exec-in-ruby.html)
