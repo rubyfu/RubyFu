@@ -10,7 +10,7 @@
        * [Extraction](module_0x1__basic_ruby_kungfu/extraction.md)
    * [Array](module_0x1__basic_ruby_kungfu/array.md)
 * [Module 0x2 | System KungFu](module_0x2__system_kungfu/README.md)
-   * Command Execution
+   * [Command Execution](module_0x2__system_kungfu/command_execution.md)
    * [File manipulation](module_0x2__system_kungfu/file_manipulation.md)
    * [Cryptography](module_0x2__system_kungfu/cryptography.md)
    * [Remote Shell](module_0x2__system_kungfu/system_shell.md)
