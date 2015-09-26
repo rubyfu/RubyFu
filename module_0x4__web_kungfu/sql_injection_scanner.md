@@ -70,9 +70,9 @@ require 'net/http'
 # Some SQLi payloads
 payloads =
     [
-      '\'',
+      "'",
       '"',
-      '\' or 1=2--+'
+      "' or 1=2--+"
     ]
 
 # Some database error responses
