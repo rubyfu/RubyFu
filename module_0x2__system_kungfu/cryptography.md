@@ -22,6 +22,7 @@ require 'openssl'
 puts OpenSSL::Digest::MD4.hexdigest("P@ssw0rd".encode('utf-16le'))
 ```
 
+### 
 
 
 ## Enigma script
