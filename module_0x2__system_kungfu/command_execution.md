@@ -14,7 +14,7 @@ The following ways are applicable on all operating systems.
 ### Kernel#` (backticks)
 ```ruby
 >> `date`
-=> "Sun Sep 27 00:38:54 AST 2015\n"
+#=> "Sun Sep 27 00:38:54 AST 2015\n"
 ```
 
 ### Kernel#exec
@@ -28,7 +28,7 @@ KING@Archer ( ~ )->
 ```ruby
 >> system 'date'
 Sun Sep 27 00:38:01 AST 2015
-=> true
+#=> true
 ```
 
 
@@ -36,7 +36,7 @@ Sun Sep 27 00:38:01 AST 2015
 ```ruby
 >> IO.popen("date") { |f| puts f.gets }
 Sun Sep 27 00:40:06 AST 2015
-=> nil
+#=> nil
 ```
 
 
@@ -44,17 +44,17 @@ Sun Sep 27 00:40:06 AST 2015
 ```ruby
 require 'open3'
 stdin, stdout, stderr = Open3.popen3('dc') 
-=> [#<IO:fd 14>, #<IO:fd 16>, #<IO:fd 18>, #<Process::Waiter:0x00000002f68bd0 sleep>]
+#=> [#<IO:fd 14>, #<IO:fd 16>, #<IO:fd 18>, #<Process::Waiter:0x00000002f68bd0 sleep>]
 >> stdin.puts(5)
-=> nil
+#=> nil
 >> stdin.puts(10)
-=> nil
+#=> nil
 >> stdin.puts("+")
-=> nil
+#=> nil
 >> stdin.puts("p")
-=> nil
+#=> nil
 >> stdout.gets
-=> "15\n"
+#=> "15\n"
 ```
 
 
@@ -63,7 +63,7 @@ Kernel.spawn executes the given command in a subshell. It returns immediately wi
 ```ruby
 pid = Process.spawn("date")
 Sun Sep 27 00:50:44 AST 2015
-=> 12242
+#=> 12242
 ```
 
 ### %x[], %x{}, %x$''$ 
