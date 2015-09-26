@@ -8,13 +8,14 @@
 require 'digest'
 puts Digest::MD5.hexdigest 'P@ssw0rd'
 ```
-- SHA1,2,3
+- SHA1,2
 ```
 require 'digest'
 puts Digest::SHA256.hexdigest 'P@ssw0rd'
 puts Digest::SHA384.hexdigest 'P@ssw0rd'
 puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ```
+
 
 
 ## Enigma script
