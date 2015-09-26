@@ -19,10 +19,19 @@ puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ### Windows NTLM hash
 ```ruby
 require 'openssl'
-puts OpenSSL::Digest::MD4.hexdigest("P@ssw0rd".encode('UTF-16LE')).uppercase
+puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 ```
 
 ### 
+
+```ruby
+require 'openssl'
+
+puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('ISO-8859-1').uppercase
+
+
+```
+
 
 
 ## Enigma script
