@@ -82,16 +82,13 @@ The following ways are applicable on all operating systems.
 
 ```
 
-#### $?-
+#### $?
 ```ruby
 
 
 
 ```
 
-
-
-### 
 
 
 
