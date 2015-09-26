@@ -20,8 +20,8 @@
        * [Nmap](module_0x3__network_kungfu/nmap.md)
    * [DNS Enumeration](module_0x3__network_kungfu/dns_enumeration.md)
        * [DNS bruteforce](module_0x3__network_kungfu/dns_bruteforce.md)
-   * [SSH](module_0x3__network_kungfu/ssh.md)
    * SNMP Enumeration
+   * [SSH](module_0x3__network_kungfu/ssh.md)
    * [Backdoor](module_0x3__network_kungfu/backdoor.md)
    * [Packet manipulation](module_0x3__network_kungfu/packet_manipulation.md)
        * [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md)
