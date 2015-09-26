@@ -64,7 +64,6 @@ Kernel.spawn executes the given command in a subshell. It returns immediately wi
 pid = Process.spawn("date")
 Sun Sep 27 00:50:44 AST 2015
 => 12242
-
 ```
 
 ### %x[], %x{}, %x$''$ 
