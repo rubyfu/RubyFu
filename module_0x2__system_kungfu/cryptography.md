@@ -3,12 +3,12 @@
 
 ## Generate Hashes 
 
-- MD5
+###  MD5 hash
 ```
 require 'digest'
 puts Digest::MD5.hexdigest 'P@ssw0rd'
 ```
-- SHA1,2
+### SHA1,2 hash
 ```
 require 'digest'
 puts Digest::SHA256.hexdigest 'P@ssw0rd'
@@ -16,6 +16,7 @@ puts Digest::SHA384.hexdigest 'P@ssw0rd'
 puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ```
 
+### Windows NTLM hash
 
 
 ## Enigma script
