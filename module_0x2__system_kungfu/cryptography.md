@@ -82,6 +82,8 @@ http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-l
 
 
 
+
+
 <br><br><br>
 ---
 
