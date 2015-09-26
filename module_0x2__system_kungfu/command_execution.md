@@ -34,9 +34,9 @@ Sun Sep 27 00:38:01 AST 2015
 
 ### IO#popen
 ```ruby
-
-
-
+>> IO.popen("date") { |f| puts f.gets }
+Sun Sep 27 00:40:06 AST 2015
+=> nil
 ```
 
 
