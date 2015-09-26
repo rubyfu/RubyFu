@@ -22,12 +22,6 @@ require 'openssl'
 puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 ```
 
-### Windows LM hash
-
-```ruby
-puts "P@ssw0rd".encode('ISO-8859-1').unpack("C*").map {|c| "%02X" % c}.join
-```
-
 
 
 ## Enigma script
