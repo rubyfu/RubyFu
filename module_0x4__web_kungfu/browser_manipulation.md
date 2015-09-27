@@ -197,7 +197,7 @@ btn = browser.button(name: 'btnSubmit').click
 ```
 
 > - Since Waiter is integrated with Selenium, you can use both to achieve one goal 
-> - For Some reason in some login cases, you may need to add a delay time between entering username and password then submit.
+> - For Some reason in some log-in cases, you may need to add a delay time between entering username and password then submit.
 
 
 
