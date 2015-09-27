@@ -130,13 +130,12 @@ So to write a complete script,
 require 'active_record'  
 
 # Connect to database
-ActiveRecord::Base.establish_connection(  
-:adapter  => "mysql",
-:username => "root",
-:password => "root",
-:host     => "localhost",  
-:database => "rubyfu_db"  
-)  
+ActiveRecord::Base.establish_connection(:adapter  => "mysql",
+                                        :username => "root",
+                                        :password => "root",
+                                        :host     => "localhost",  
+                                        :database => "rubyfu_db"  
+                                       )  
 
 # Create Active Record Model for the table 
 class Attackers < ActiveRecord::Base  
