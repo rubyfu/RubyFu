@@ -3,6 +3,7 @@
 ```
 gem install rake
 ```
+
 Login to mysql console and create database *rubyfu_db* and table *attackers*
 
 ```
