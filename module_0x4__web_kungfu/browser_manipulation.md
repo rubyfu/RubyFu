@@ -279,6 +279,7 @@ payloads.each do |payload|
   if @browser.alert.exists?
     @browser.alert.ok
     puts "[+] Exploit found!: " + payload
+    @browser.close
   end 
 end
 ```
