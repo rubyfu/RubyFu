@@ -38,6 +38,6 @@ pry --simple-prompt
 - selenium-webdriver 
 - watir-webdriver
 #### Module 0x5 | Exploitation KungFu
-- s 
+- metasm
 #### Module 0x6 | Reverse Engineering KungFu
-- s 
+- metasm
