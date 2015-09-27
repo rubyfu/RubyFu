@@ -1,5 +1,7 @@
 # Required Gems
-I'd like to list all external gems that might be used in this book. Note that you don't need to install it all unless you need it.
+I'd like to list all external gems that might be used in this book. This list will be updated once new gem required. 
+
+Note that you don't need to install it all unless you need it.
 
 ## Main Gems
 Install main required gems in one line.
