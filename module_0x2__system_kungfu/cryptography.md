@@ -89,7 +89,7 @@ puts "Encrypted '#{plain_text}' to '#{encrypted = input(plain_text)}'"
 puts "Decrypted '#{encrypted}' to '#{decrypted = input(encrypted)}'"
 puts 'Success!' if plain_text == decrypted
 ```
-http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game
+Source[^1]
 
 
 
@@ -97,6 +97,6 @@ http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-l
 
 <br><br><br>
 ---
-
+[^1][Understanding the Enigma machine with 30 lines of Ruby"](http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game)
 
 
