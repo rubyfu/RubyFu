@@ -39,6 +39,6 @@
     * CeWL - Custom Word List generator
     * Roini - Vulnerability research and exploit development framework
     * Idb - is a tool to simplify some common tasks for iOS pentesting and research
-    * [ADD YOUR RYBY HACKING TOOL HERE!]
+    * [ADD YOUR RUBY HACKING TOOL HERE!]
 
 
