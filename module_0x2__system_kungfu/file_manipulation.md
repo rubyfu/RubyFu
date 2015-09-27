@@ -25,6 +25,7 @@ File.open('hola.pdf', 'wb') {|file| file.print recov_file}
 
 ## Simple Binary file to Hex
 
+**hex-simple.rb**
 ```ruby
 #!/usr/bin/env ruby
 # Simple file to hex converter script
