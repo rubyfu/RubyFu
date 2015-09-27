@@ -21,4 +21,4 @@ Here are some main points:
 Why not?!
 
 ###### Q \ When this book get finished?
-We'll, it shouldn't. This book is an experience base, so as far as we learn from our daily hacking and the need of automation 
+We'll, it shouldn't. This book is an experience base, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
