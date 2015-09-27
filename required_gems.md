@@ -1,5 +1,5 @@
 # Required Gems
-I'd like to list all gems that will be used in this book. Note that you don't need to install it all unless you need it.
+I'd like to list all gems that might be used in this book. Note that you don't need to install it all unless you need it.
 
 ## Main Gems
 Install main required gems in one line.
