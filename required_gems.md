@@ -22,7 +22,8 @@ pry --simple-prompt
 - s 
 #### Module 0x3 | Network KungFu
 -  net-ping
--  
+-  ruby-nmap 
+-  ronin-scanners
 #### Module 0x4 | Web KungFu
 - s 
 #### Module 0x5 | Exploitation KungFu
