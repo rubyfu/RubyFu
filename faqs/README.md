@@ -19,3 +19,6 @@ Here are some main points:
 
 ###### Q \ Why Ruby language?
 Why not?!
+
+###### Q \ When this book get finished?
+We'll, it shouldn't 
