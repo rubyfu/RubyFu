@@ -213,7 +213,7 @@ File.chmod(0200, file)  # To prevent public access to the log file
 puts ""
 ```
 
-### Web Shell - command execution via GET
+### Web Shell[^1] - command execution via GET
 
 if you have a server that supports ruby CGI, you can use the follwoing as backdoor
 ```ruby
