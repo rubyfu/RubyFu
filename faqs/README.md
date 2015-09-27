@@ -21,4 +21,4 @@ Here are some main points:
 Why not?!
 
 ###### Q \ When this book get finished?
-We'll, it shouldn't. This book is an experiance base
+We'll, it shouldn't. This book is an experience base
