@@ -204,7 +204,42 @@ btn = browser.button(name: 'btnSubmit').click
 ## Selenium, Watir Arbitrary POST request
 Here another scenario I've faced, I was against POST request without submit button, in another word, the test was against intercepted request generated from jquery function, in my case was a drop menu. So The work round wad quite simple, Just create an HTML file contains POST form with the original parameters plus a **Submit button**(***just like creating CSRF exploit from a POST form***) then call that html file to the browser and deal with it as normal form. Let's to see an example here.
 
+**POST request**
+```
+POST /path/of/editfunction HTTP/1.1
+Host: example.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Content-Length: 100
+Cookie: PHPSESSIONID=111111111111111111111
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
 
+field1=""&field2=""&field3=""&field4=""
+```
+
+**example.html**
+```html
+<html>
+  <head>
+    <title>Tesla</title>
+  </head>
+  <body>
+    <form action="https://example.com/path/of/editfunction" method="POST">
+      <input type="text" name="field1" value="" />
+      <input type="text" name="field2" value="" />
+      <input type="text" name="field3" value="" />
+      <input type="text" name="field4" value="" />
+      <p><input type="submit" value="Send" /></p>
+    </form>
+  </body>
+</html>
+```
 
 
 
