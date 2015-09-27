@@ -30,6 +30,7 @@ pry --simple-prompt
 #### Module 0x4 | Web KungFu
 - savon 
 - httpclient
+- activerecord
 #### Module 0x5 | Exploitation KungFu
 - s 
 #### Module 0x6 | Reverse Engineering KungFu
