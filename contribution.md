@@ -61,7 +61,7 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
         YOUR NOTES SHALL BE HERE
 
 * Try to use readable code, if you have to add more tricky/skilled code then explain it well
-    > **Remeber!** Hacker's code **=!** Cryptic code
+    > **Remember!** Hacker's code **=!** Cryptic code
 
 
 ##### Command-line
