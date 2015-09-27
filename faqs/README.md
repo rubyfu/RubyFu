@@ -6,7 +6,7 @@ We respect all beginners and newcomers from all levels and all programming langu
 ###### Q \ If I can add valuable contents to beginners section, can I add?
 In this stage we really focus on the core, whoever if you have really **valuable and complete** contents to add, we may add a complete chapter for beginners in this book and we'll appreciate that too. Till that moment, you can do a spelling, grammer, etc review.
 
-###### Q \ Do you add contributers' name even it was small contribution?
+###### Q \ Do you add contributors' name even it was small contribution?
 Yes, in a make sense mount of course ;)
 
 ###### Q \ Why did you choose Gitbook?
