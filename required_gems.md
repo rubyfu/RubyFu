@@ -9,7 +9,7 @@ Note that you don't need to install it all unless you need it.
 gem install pry
 ```
 To run pry with best appearance
-```
+```bash
 pry --simple-prompt
 ```
 
