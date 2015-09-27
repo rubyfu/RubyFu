@@ -28,7 +28,8 @@ pry --simple-prompt
 -  net-ssh
 -  packetfu
 #### Module 0x4 | Web KungFu
-- s 
+- savon 
+- httpclient
 #### Module 0x5 | Exploitation KungFu
 - s 
 #### Module 0x6 | Reverse Engineering KungFu
