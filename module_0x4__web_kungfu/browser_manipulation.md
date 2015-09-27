@@ -202,7 +202,7 @@ btn = browser.button(name: 'btnSubmit').click
 
 
 ## Selenium, Watir Arbitrary POST request
-Here another scenario I've faced, I was against POST request without submit button, that means the test was aganst s
+Here another scenario I've faced, I was against POST request without submit button, that means the test was against s
 
 
 
