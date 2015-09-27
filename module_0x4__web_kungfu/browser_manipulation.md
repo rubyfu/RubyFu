@@ -254,10 +254,10 @@ require 'watir-webdriver'
 @browser.goto "file:///home/KING/Code/example.html"
 
 def sendpost(payload)
-  @browser.text_field(name: 'field1').set("")
+  @browser.text_field(name: 'field1').set(payload)
   @browser.text_field(name: 'field2').set(payload)
-  @browser.text_field(name: 'field3').set("")
-  @browser.text_field(name: 'field4').set("")
+  @browser.text_field(name: 'field3').set(payload)
+  @browser.text_field(name: 'field4').set(payload)
   sleep 0.1
   @browser.button(value: 'Send').click
 end
