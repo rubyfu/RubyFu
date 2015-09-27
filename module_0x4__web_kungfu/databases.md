@@ -130,7 +130,8 @@ So to write a complete script,
 require 'active_record'  
 
 # Connect to database
-ActiveRecord::Base.establish_connection(:adapter  => "mysql",
+ActiveRecord::Base.establish_connection(
+                                        :adapter  => "mysql",
                                         :username => "root",
                                         :password => "root",
                                         :host     => "localhost",  
