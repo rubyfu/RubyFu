@@ -1,6 +1,6 @@
 # RubyFu
 
-![Wireshark](images/other/rubyfu.png)
+![](images/other/rubyfu.png)
 ***RubyFu is where Ruby goes evil!*** 
 
 
