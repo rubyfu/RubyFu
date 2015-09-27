@@ -1,4 +1,4 @@
-# Module 0x6 | Reverse Engineering KungkFu
+# Module 0x6 | Reverse Engineering KungFu
 
 
 ## This Chapter is under development, if you can help, please don't hesitate to contact me.
