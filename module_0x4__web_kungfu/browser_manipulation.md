@@ -273,7 +273,7 @@ puts "[*] Exploitation start"
 puts "[*] Number of payloads: #{payloads.size} payloads" 
 payloads.each do |payload|
   print "\r[*] Trying: #{payload}"
-  print  ("\e[K")
+  print "\e[K"
   sendpost payload
   
   if @browser.alert.exists?
