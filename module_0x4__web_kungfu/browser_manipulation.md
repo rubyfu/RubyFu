@@ -270,6 +270,11 @@ payloads =
 
 payloads.each do |payload|
   sendpost payload
+  
+  if @browser.alert.exists?
+    @browser.alert.ok
+    puts "[+] Exploit found!: " + payload
+  end 
 end
 ```
 
