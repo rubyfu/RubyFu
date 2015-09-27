@@ -26,6 +26,7 @@ pry --simple-prompt
 -  ronin-scanners
 -  net-dns
 -  net-ssh
+-  packetfu
 #### Module 0x4 | Web KungFu
 - s 
 #### Module 0x5 | Exploitation KungFu
