@@ -9,4 +9,4 @@ To run pry with best appearance
 pry --simple-prompt
 ```
 
-> **Note:** Most of our example will be executed on pry so please consider it as main part of our environment. Otherwise (when you see `#!/usr/bin/env ruby`) then it means a file script to execute.
+> **Note:** Most of our example will be executed on **pry** so please consider it as main part of our environment. Otherwise (when you see `#!/usr/bin/env ruby`) then it means a file script to execute.
