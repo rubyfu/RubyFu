@@ -262,7 +262,6 @@ def sendpost(payload)
   @browser.button(value: 'Send').click
 end
 
-
 payloads = 
     [
       '"><script>alert(1)</script>',
