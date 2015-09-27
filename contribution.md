@@ -69,7 +69,7 @@ Use triple ticks to highlight your commandline. ex.
     ls
     ``` 
 
-> Note: Since this book is dynamically and un-ordered enhanced, it's hard to make the footer notes with order series of numbers for all the book so -until I find better solution- I'll make the number order separated for each page. 
+> Note: Since this book is dynamically and un-ordered enhanced, it's hard to make the footer notes with order series of numbers for the whole book so -until I find better solution- I'll make the number order separated for each page. 
 
 
 <br><br><br>
