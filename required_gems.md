@@ -15,3 +15,11 @@ pry --simple-prompt
 
 
 ## Modules gems 
+
+##### Module 0x1 | Basic Ruby KungFu
+- 
+##### Module 0x2 | System KungFu
+##### Module 0x3 | Network KungFu
+##### Module 0x4 | Web KungFu
+##### Module 0x5 | Exploitation KungFu
+##### Module 0x6 | Reverse Engineering KungFu
