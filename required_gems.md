@@ -25,6 +25,7 @@ pry --simple-prompt
 -  ruby-nmap 
 -  ronin-scanners
 -  net-dns
+-  net-ssh
 #### Module 0x4 | Web KungFu
 - s 
 #### Module 0x5 | Exploitation KungFu
