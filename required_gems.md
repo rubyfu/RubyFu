@@ -31,6 +31,9 @@ pry --simple-prompt
 - savon 
 - httpclient
 - activerecord
+- tiny_tds 
+- activerecord-sqlserver-adapter 
+- activerecord-oracle_enhanced-adapter
 #### Module 0x5 | Exploitation KungFu
 - s 
 #### Module 0x6 | Reverse Engineering KungFu
