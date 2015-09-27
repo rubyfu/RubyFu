@@ -39,7 +39,6 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
         ```ruby
         puts "Ruby Code here"
         ```
-
 * Explain the main idea -with some details- of the code, if you explain every line that would be great but it's not a must.
 * Choose the correct Module.
 * Make your title clear.
