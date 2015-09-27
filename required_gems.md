@@ -34,6 +34,7 @@ pry --simple-prompt
 - tiny_tds 
 - activerecord-sqlserver-adapter 
 - activerecord-oracle_enhanced-adapter
+- buby
 - selenium-webdriver 
 - watir-webdriver
 #### Module 0x5 | Exploitation KungFu
