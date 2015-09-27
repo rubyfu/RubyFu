@@ -18,8 +18,10 @@ pry --simple-prompt
 
 #### Module 0x1 | Basic Ruby KungFu
 - None
+
 #### Module 0x2 | System KungFu
 - None
+
 #### Module 0x3 | Network KungFu
 -  net-ping
 -  ruby-nmap 
@@ -27,6 +29,7 @@ pry --simple-prompt
 -  net-dns
 -  net-ssh
 -  packetfu
+
 #### Module 0x4 | Web KungFu
 - savon 
 - httpclient
@@ -37,7 +40,9 @@ pry --simple-prompt
 - buby
 - selenium-webdriver 
 - watir-webdriver
+
 #### Module 0x5 | Exploitation KungFu
 - metasm
+
 #### Module 0x6 | Reverse Engineering KungFu
 - metasm
