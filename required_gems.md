@@ -21,7 +21,7 @@ pry --simple-prompt
 #### Module 0x2 | System KungFu
 - s 
 #### Module 0x3 | Network KungFu
-- s 
+-  net-ping
 #### Module 0x4 | Web KungFu
 - s 
 #### Module 0x5 | Exploitation KungFu
