@@ -65,8 +65,8 @@ arp_packet_router.arp_daddr_ip = "192.168.0.1"          # the router's IP
 arp_packet_router.arp_opcode = 2                        # arp code 2 == ARP reply
 
 ```
-**Run ARP Spoofing attack**
 
+**Run ARP Spoofing attack**
 ```ruby
 # Send our packet through the wire
 while true
