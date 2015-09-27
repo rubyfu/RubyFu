@@ -17,9 +17,9 @@ pry --simple-prompt
 ## Modules gems 
 
 #### Module 0x1 | Basic Ruby KungFu
-- s 
+- None
 #### Module 0x2 | System KungFu
-- s 
+- None
 #### Module 0x3 | Network KungFu
 -  net-ping
 -  ruby-nmap 
