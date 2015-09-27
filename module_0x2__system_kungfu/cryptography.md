@@ -97,6 +97,6 @@ Source[^1]
 
 <br><br><br>
 ---
-[^1][Understanding the Enigma machine with 30 lines of Ruby"](http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game)
+[^1]: [Understanding the Enigma machine with 30 lines of Ruby"](http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game)
 
 
