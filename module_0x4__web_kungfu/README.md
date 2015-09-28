@@ -215,7 +215,7 @@ puts ""
 
 ### Web Shell[^1] - command execution via GET
 
-if you have a server that supports ruby CGI, you can use the follwoing as backdoor
+if you have a server that supports ruby CGI, you can use the following as backdoor
 ```ruby
 #!/usr/bin/env ruby
 require 'cgi'
