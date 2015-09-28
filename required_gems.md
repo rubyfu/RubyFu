@@ -32,6 +32,7 @@ pry --simple-prompt
 -  net-dns
 -  net-ssh
 -  packetfu
+-  geoip
 
 #### Module 0x4 | Web KungFu
 - savon 
