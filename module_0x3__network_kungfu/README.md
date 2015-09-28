@@ -187,7 +187,14 @@ The special thing about geoip lib is that it's an API for offline database you d
 gem install geoip
 ```
 
+- Usage
+```ruby
+#!/usr/bin/env ruby
 
+geoip = GeoIP.new('GeoLiteCity.dat')
+geoinfo = geoip.country(ip).to_hash
+	
+```
 
 
 <br><br><br>
