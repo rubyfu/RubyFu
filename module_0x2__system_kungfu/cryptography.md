@@ -16,6 +16,14 @@ puts Digest::SHA384.hexdigest 'P@ssw0rd'
 puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ```
 
+### Windows LM Password hash
+```ruby
+password = "P@ssw0rd"
+secret   = "RUN THE SECRITE "
+
+```
+
+
 ### Windows NTLM Password hash
 ```ruby
 require 'openssl'
