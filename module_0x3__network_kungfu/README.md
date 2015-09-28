@@ -176,8 +176,13 @@ you may need to know more information about IP location due attack investigation
 ### Geoip
 The special thing about geoip lib is that it's an API for offline database you download from [www.maxmind.com](http://www.maxmind.com). There are few free databases from maxmind whoever you can have a subscription database version though. 
 
-- Install geoip gem
+- Download free GeoLite country, city or ASN databases
+    - [GeoLiteCountry](geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz)
+    - [GeoLiteCity](geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz)
+    - [GeoIPASNum](geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz)
 
+
+- Install geoip gem
 ```
 gem install geoip
 ```
