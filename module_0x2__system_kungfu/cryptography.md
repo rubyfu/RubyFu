@@ -30,6 +30,7 @@ def gen_keys(str)
     bits = split7(str7.unpack("B*")[0]).inject('') do |ret, tkn| 
       ret += tkn + (tkn.gsub('1', '').size % 2).to_s 
     end
+    
     [bits].pack("B*")
   end
 end
