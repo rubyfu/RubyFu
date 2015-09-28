@@ -16,7 +16,7 @@ def send_mail(smtpsrv, username, password, frmemail, dstemail)
   msg += "Date: #{date}\n"
   msg += "Subject: Email Subject\n"
   msg += "Content-type: text/html\n\n"
-  msg += "<strong>Hi<br>All Your Email is Forwarded to us!</strong>"
+  msg += "<strong>Hi<br>Please click to win!</strong>"
 
   begin
 
