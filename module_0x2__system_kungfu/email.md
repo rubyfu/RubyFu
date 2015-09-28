@@ -19,7 +19,6 @@ def send_mail(smtpsrv, username, password, frmemail, dstemail)
   msg += "<strong>winter is coming<br>Hi Jon Snow, Please click to win!</strong>"
 
   begin
-
     Net::SMTP.start(smtpsrv, 25, 'localhost', username, password, :login) do |smtp|
       smtp.send_message msg, frmemail, dstemail
     end
@@ -28,7 +27,7 @@ def send_mail(smtpsrv, username, password, frmemail, dstemail)
     puts "[!] Failed to send the mail"
     puts e
   end
-
+  
 end
 
 smtpsrv  = ARGV[0]
