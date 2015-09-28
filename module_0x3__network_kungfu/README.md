@@ -11,7 +11,7 @@ In network programming, we always perform some operations on IP addresses. Follo
 - Check whether an IP address belongs to a subnet or not.
 - Converting subnet mask from dot-decimal notation to integer.
 
-Ruby provides a class(IPAddr) for basic operations on IP address that can be used to perform all operations mentioned above.
+Ruby provides class(IPAddr) for basic operations on IP address that can be used to perform all operations mentioned above.
 
 ```ruby
 require 'ipaddr'
