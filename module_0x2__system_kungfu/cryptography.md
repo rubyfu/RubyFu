@@ -64,7 +64,7 @@ puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 require 'openssl'
 ntlmv1 = OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 userdomain = "administrator".encode('UTF-16LE')
-OpenSSL::HMAC.digest(OpenSSL::Digest::MD5.new, ntlmv1, userdomain)
+puts OpenSSL::HMAC.digest(OpenSSL::Digest::MD5.new, ntlmv1, userdomain)
 ```
 
 
