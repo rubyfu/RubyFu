@@ -19,7 +19,7 @@ puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ### Windows LM Password hash
 ```ruby
 password = "P@ssw0rd"
-secret   = "RUN THE SECRITE "
+secret   = "RUN THE SECRIT"
 
 ```
 
