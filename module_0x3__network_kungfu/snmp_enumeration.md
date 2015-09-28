@@ -51,7 +51,6 @@ manager.close
 
 
 
-
 <br><br><br>
 ---
 [^1]: [ruby-snmp repository](https://github.com/hallidave/ruby-snmp/)
