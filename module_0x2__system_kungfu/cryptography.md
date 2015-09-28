@@ -24,7 +24,7 @@ secret   = "RELEASE THE SECRET MONSTER"
 ```
 
 
-### Windows NTLM Password hash
+### Windows NTLMv1 Password hash
 ```ruby
 require 'openssl'
 puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
