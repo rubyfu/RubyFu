@@ -15,6 +15,7 @@
    * [Cryptography](module_0x2__system_kungfu/cryptography.md)
    * [Remote Shell](module_0x2__system_kungfu/system_shell.md)
        * [Ncat.rb](module_0x2__system_kungfu/ncatrb.md)
+   * Virustotal
 * [Module 0x3 | Network KungFu](module_0x3__network_kungfu/README.md)
    * [Ruby Socket](module_0x3__network_kungfu/ruby_socket.md)
    * [SSH](module_0x3__network_kungfu/ssh.md)
