@@ -164,14 +164,7 @@ Output:
 ```
 prashantk@ubuntu:~$ ruby ip_example.rb 255.255.255.0
 24
-```
-
-
-**References**
-
-http://ruby-doc.org/stdlib-1.9.3/libdoc/ipaddr/rdoc/IPAddr.html
-
-
+``
 
 This part has been pretty quoted from *IP address Operations in Ruby* [^1] topic
 
@@ -184,3 +177,4 @@ This part has been pretty quoted from *IP address Operations in Ruby* [^1] topic
 ---
 [^1]: Source: - [The original topic](http://www.brownfort.com/2014/09/ip-operations-ruby/)
 
+- [RubyDoc | IPAddr](http://ruby-doc.org/stdlib-1.9.3/libdoc/ipaddr/rdoc/IPAddr.html)
