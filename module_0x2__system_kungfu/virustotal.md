@@ -52,11 +52,16 @@ virustotal -f <file_with_hashes_one_per_line> -x
 ```
 
 - **Upload a file to Virustotal and wait for analysis**
+```
+virustotal -u </path/to/file>
+```
 
 - **Search for a single URL**
 ```
 virustotal -s "http://www.google.com"
 ```
+
+
 
 
 ## uirusu gem 
