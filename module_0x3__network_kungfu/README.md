@@ -173,7 +173,10 @@ This part has been pretty quoted from *IP address Operations in Ruby* [^1] topic
 you may need to know more information about IP location due attack investigation or any other reason. 
 
 ### Geoip
+The special thing about geoip lib is that it's an API for offline database you download from [www.maxmind.com](http://www.maxmind.com) 
+
 - Install geoip gem
+
 ```
 gem install geoip
 ```
