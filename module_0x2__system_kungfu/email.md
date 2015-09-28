@@ -72,7 +72,7 @@ mail_ids = imap.search(['ALL'])
 # Read all emails 
 mail_ids.each do |id|
   envelope = imap.fetch(id, "ENVELOPE")[0].attr["ENVELOPE"]
-  puts "[+] Deleting message, Subject: #{envelope.subject}"
+  puts "[+] Reading message, Subject: #{envelope.subject}"
   imap.store(id, '+FLAGS', [:Deleted]) # Deletes forever No trash!
 end
 
