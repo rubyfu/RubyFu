@@ -1,4 +1,8 @@
 # SNMP Enumeration
+- Install ruby-snmp
+```
+gem install snmp
+```
 
 ## Get Request
 ```ruby
