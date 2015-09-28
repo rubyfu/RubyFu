@@ -87,3 +87,9 @@ imap.close
 imap.logout
 imap.disconnect
 ```
+
+
+
+<br><br><br>
+---
+- More useful example | alvinalexander.com
