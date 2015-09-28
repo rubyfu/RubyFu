@@ -18,6 +18,7 @@ puts Digest::SHA512.hexdigest 'P@ssw0rd'
 
 ### Windows LM Password hash
 ```ruby
+require 'openssl'
 
 def split7(str)
   str.scan(/.{1,7}/)
