@@ -22,7 +22,7 @@ hostname = manager.get("sysName.0").each_varbind.map {|vb| vb.value.to_s}       
 contact  = manager.get("sysContact.0").each_varbind.map {|vb| vb.value.to_s}    # manager.get("sysContact.0").varbind_list[0]
 location = manager.get("sysLocation.0").each_varbind.map {|vb| vb.value.to_s}   # manager.get("sysLocation.0").varbind_list[0]
 
-# It takes an array too
+# It takes an array of OIDs
 response = manager.get(["sysName.0", "sysContact.0", "sysLocation.0"])
 response.each_varbind do |vb|
     
