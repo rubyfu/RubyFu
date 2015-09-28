@@ -45,3 +45,8 @@ end
 
 send_mail smtpsrv, username, password, frmemail, dstemail
 ```
+
+## Reading Email
+```ruby
+
+```
