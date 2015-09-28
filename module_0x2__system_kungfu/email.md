@@ -32,10 +32,10 @@ def send_mail(smtpsrv, username, password, frmemail, dstemail)
 end
 
 smtpsrv  = ARGV[0]
-username = "admin@offsec.local"
-password = "123456"
-frmemail = "admin@offsec.local"
-dstemail = "admin@offsec.local"
+username = "admin@attacker.zone"
+password = "P@ssw0rd"
+frmemail = "admin@attacker.zone"
+dstemail = "JonSnow@victim.com"
 
 smtpsrv = ARGV[0]
 if smtpsrv.nil?
