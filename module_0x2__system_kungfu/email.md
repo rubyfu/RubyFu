@@ -92,4 +92,4 @@ imap.disconnect
 
 <br><br><br>
 ---
-- More useful example | alvinalexander.com
+- [More useful example | alvinalexander.com](http://alvinalexander.com/search/node/ruby%20mail)
