@@ -2,7 +2,7 @@
 
 
 ## Sending Email
-
+**sendmail.rb**
 ```ruby
 #!/usr/bin/env ruby
 # 
@@ -47,6 +47,36 @@ send_mail smtpsrv, username, password, frmemail, dstemail
 ```
 
 ## Reading Email
+readmail.rb
 ```ruby
+#!/usr/bin/env ruby
+#
+# 
+require 'net/imap'
 
+host = ARGV[0]
+if host.nil?
+  puts "[!] IP address Missing \nruby #{__FILE__}.rb [IP ADDRESS]\n\n"
+  exit 0
+end
+
+username = ARGV[1] || "admin@offsec.local"
+password = ARGV[2] || "123456"
+
+imap = Net::IMAP.new(host, 993, true, nil, false)
+imap.login(username, password)
+imap.select('INBOX')
+
+mail_ids = imap.search(['ALL'])
+mail_ids.each do |id|
+
+  envelope = imap.fetch(id, "ENVELOPE")[0].attr["ENVELOPE"]
+
+  puts "[+] Deleting message, Subject: #{envelope.subject}"
+  imap.store(id, '+FLAGS', [:Deleted]) # Deletes forever No trash!
+end
+
+imap.close
+imap.logout
+imap.disconnect
 ```
