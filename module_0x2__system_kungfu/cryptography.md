@@ -18,10 +18,10 @@ puts Digest::SHA512.hexdigest 'P@ssw0rd'
 
 ### Windows LM Password hash
 ```ruby
-password = "P@ssw0rd"
+passwordtxt = "P@ssw0rd"
 secret   = "RELEASE THE SECRET MONSTER"
 
-str = password.scan(/.{1,7}/)
+passwd = passwordtxt.scan(/.{1,7}/)
 
 LM_MAGIC = "KGS!@\#$%"
 
