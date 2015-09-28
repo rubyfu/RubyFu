@@ -25,7 +25,7 @@ location = manager.get("sysLocation.0").each_varbind.map {|vb| vb.value.to_s}   
 # It takes an array of OIDs
 response = manager.get(["sysName.0", "sysContact.0", "sysLocation.0"])
 response.each_varbind do |vb|
-    
+    puts vb.value.to_s
 end
 
 ```
