@@ -60,8 +60,8 @@ if host.nil?
   exit 0
 end
 
-username = ARGV[1] || "admin@offsec.local"
-password = ARGV[2] || "123456"
+username = ARGV[1] || "admin@attacker.zone"
+password = ARGV[2] || "P@ssw0rd"
 
 imap = Net::IMAP.new(host, 993, true, nil, false)
 imap.login(username, password)
