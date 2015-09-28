@@ -31,6 +31,7 @@ pry --simple-prompt
 - ruby-nmap 
 - ronin-scanners
 - net-dns
+- snmp
 - net-ssh
 - packetfu
 
