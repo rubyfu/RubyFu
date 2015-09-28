@@ -6,6 +6,7 @@ Virsuttotal is one of the most known online service that analyzes files and URLs
 1. Register/Sign-in to Virustotal
 2. Go to **My API key**
 3. Request a private APT key
+>  Do not disclose your private key to anyone that you do not trust
 
 ## Virustotal gem 
 ruby-virustotal is virustotal automation and convenience tool for hash, file and URL submission.
