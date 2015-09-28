@@ -10,7 +10,7 @@ In this stage we're really focus on the core, whoever if you have really **valua
 Yes, in a make sense mount of course ;)
 
 ###### Q \ Why did you choose Gitbook?
-Here are some main reason:
+Here are some main reasons:
 * Easy to read
 * Easy to write - using markdown
 * Easy to contribute - using gitbook or github
