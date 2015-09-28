@@ -2,7 +2,7 @@
 
 http://www.evilsocket.net/2015/02/12/rubertooth-a-complete-ruby-porting-of-the-ubertooth-libraries-and-utilities/#sthash.sNhWFzor.dpbs?utm_source=rubyweekly&utm_medium=email
 
-## IP Address operation
+## IP Address Operation
 In network programming, we always perform some operations on IP addresses. Following are some examples.
 
 - Calculating network prefix of an IP address from IP address and subnet mask.
@@ -169,6 +169,14 @@ prashantk@ubuntu:~$ ruby ip_example.rb 255.255.255.0
 This part has been pretty quoted from *IP address Operations in Ruby* [^1] topic
 
 
+## IP Geolocation
+you may need to know more information about IP location due attack investigation or any other reason. 
+
+### Geoip
+- Install geoip gem
+```
+gem install geoip
+```
 
 
 
