@@ -39,7 +39,7 @@
     * CeWL - Custom Word List generator
     * Roini - Vulnerability research and exploit development framework
     * Idb - is a tool to simplify some common tasks for iOS pentesting and research
-    * bettercap - Extensible MITM tool and framework
+    * Bettercap - Extensible MITM tool and framework
     * [ADD YOUR RUBY HACKING TOOL HERE!]
 
 
