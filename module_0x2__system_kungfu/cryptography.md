@@ -30,6 +30,15 @@ require 'openssl'
 puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 ```
 
+### Windows NTLMv2 Password hash
+```ruby
+require 'openssl'
+ntlmv1 = OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
+userdomain = "administrator".encode('UTF-16LE')
+OpenSSL::HMAC.digest(OpenSSL::Digest::MD5.new, ntlmhash, userdomain)
+```
+
+
 ### MySQL Password hash
 ```ruby
 puts "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest('P@ssw0rd')).upcase
