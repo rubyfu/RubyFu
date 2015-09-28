@@ -161,10 +161,11 @@ Output:
 1
 2
 ```
+
 ```
 prashantk@ubuntu:~$ ruby ip_example.rb 255.255.255.0
 24
-``
+```
 
 This part has been pretty quoted from *IP address Operations in Ruby* [^1] topic
 
