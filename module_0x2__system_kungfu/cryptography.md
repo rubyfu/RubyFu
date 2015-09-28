@@ -56,7 +56,8 @@ puts lm_hash "P@ssw0rd"
 ### Windows NTLMv1 Password hash
 ```ruby
 require 'openssl'
-puts OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
+ntlmv1 = OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
+puts ntlmv1
 ```
 
 ### Windows NTLMv2 Password hash
