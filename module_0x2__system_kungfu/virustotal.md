@@ -17,6 +17,23 @@ ruby-virustotal is virustotal automation and convenience tool for hash, file and
 gem install virustotal
 ```
 
+## Command line usage
+You can use ruby-virustotla gem as command line tool 
+
+- Create virustotal local profile 
+ 
+to interact with virustotal as 
+```
+virustotal --create-config
+```
+
+- Searching a file of hashes
+```
+virustotal -f <file_with_hashes_one_per_line>
+```
+
+- Searching a single hash
+
 
 
 ## uirusu gem 
