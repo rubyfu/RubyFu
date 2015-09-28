@@ -14,9 +14,9 @@ puts "Write Community: " + manager.config[:WriteCommunity]
 
 
 # Get hostname, contact and location
-hostname = manager.get("sysName.0")
-contact  = manager.get("sysContact.0")
-location = manager.get("sysLocation.0")
+hostname = manager.get("sysName.0").varbind_list[0]
+contact  = manager.get("sysContact.0").varbind_list[0]
+location = manager.get("sysLocation.0").varbind_list[0]
 ```
 
-Note: the OID names are case sensitive 
+> Note: the OID names are case sensitive 
