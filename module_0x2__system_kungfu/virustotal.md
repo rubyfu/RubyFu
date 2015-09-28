@@ -72,3 +72,4 @@ uirusu is an Virustotal automation and convenience tool for hash, file and URL s
 gem install uirusu
 ```
 
+Usage is identical to virustotal gem 
