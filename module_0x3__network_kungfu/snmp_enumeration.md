@@ -1,5 +1,5 @@
 # SNMP Enumeration
-- Install ruby-snmp
+- Install ruby-snmp[^1]
 ```
 gem install snmp
 ```
@@ -48,3 +48,10 @@ manager.set(varbind)
 manager.get("sysName.0").each_varbind.map {|vb| vb.value.to_s}
 manager.close
 ```
+
+
+
+
+<br><br><br>
+---
+[^1]: [ruby-snmp repository](https://github.com/hallidave/ruby-snmp/)
