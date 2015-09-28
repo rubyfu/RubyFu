@@ -46,7 +46,7 @@ virustotal -f <file_with_hashes_one_per_line>
 virustotal -h FD287794107630FA3116800E617466A9
 ```
 
-- **Searching a file of hashes and outputting to XM**L
+- **Searching a file of hashes and outputting to XML**
 ```
 virustotal -f <file_with_hashes_one_per_line> -x
 ```
