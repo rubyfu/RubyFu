@@ -205,6 +205,19 @@ puts "Longitude:\t"    + geoinfo[:longitude]
 puts "Time zone:\t"    + geoinfo[:timezone]
 ```
 
+```
+-> ruby ip2location.rb 108.168.255.243
+
+IP address:     108.168.255.243
+Country:        United States
+Country code:   US
+City name:      Dallas
+Latitude:       32.9299
+Longitude:      -96.8353
+Time zone:      America/Chicago
+
+```
+
 
 <br><br><br>
 ---
