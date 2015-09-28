@@ -47,7 +47,7 @@ send_mail smtpsrv, username, password, frmemail, dstemail
 ```
 
 ## Reading Email
-readmail.rb
+**readmail.rb**
 ```ruby
 #!/usr/bin/env ruby
 #
