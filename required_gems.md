@@ -26,13 +26,13 @@ pry --simple-prompt
 - None
 
 #### Module 0x3 | Network KungFu
--  geoip
--  net-ping
--  ruby-nmap 
--  ronin-scanners
--  net-dns
--  net-ssh
--  packetfu
+- geoip
+- net-ping
+- ruby-nmap 
+- ronin-scanners
+- net-dns
+- net-ssh
+- packetfu
 
 #### Module 0x4 | Web KungFu
 - savon 
