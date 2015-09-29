@@ -165,14 +165,16 @@ Attackers.find(2).destroy
 
 ### Oracle database
 
+- Pre- requists 
+
+in order to make ruby-oci8 works you've to do some extra steps: 
+- Download links for [Linux](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) | [Windows](http://www.oracle.com/technetwork/topics/winsoft-085727.html) | [Mac](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) 
+ - instantclient-basic-[OS].[Arch]-[VERSION].zip
+ - instantclient-sqlplus-[OS].[Arch]-[VERSION].zip
+ - instantclient-sdk-[OS].[Arch]-[VERSION].zip
+
+
 - To install Oracle adapter
-
-in order to make ruby-oci8 works you've to do some extra steps
-
-- instantclient-basic-macos.x64-11.2.0.3.0.zip
-- instantclient-sqlplus-macos.x64-11.2.0.3.0.zip
-- instantclient-sdk-macos.x64-11.2.0.3.0.zip
-
 ```
 gem install activerecord-oracle_enhanced-adapter
 ```
