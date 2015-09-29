@@ -163,7 +163,7 @@ Attackers.find(2).destroy
 ```
 
 
-### Oracle 
+### Oracle database
 ```
 gem install activerecord-oracle_enhanced-adapter
 ```
