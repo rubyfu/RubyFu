@@ -164,6 +164,9 @@ Attackers.find(2).destroy
 
 
 ### Oracle database
+
+- To install MySQL adapter
+
 ```
 gem install activerecord-oracle_enhanced-adapter
 ```
