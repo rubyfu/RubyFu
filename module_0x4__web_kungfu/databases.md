@@ -1,6 +1,19 @@
 # Databases
 
 
+
+## Active Record
+- To install ActiveRecord 
+```
+gem install activerecord 
+```
+
+### MySQL database
+- To install MySQL adapter
+```
+gem install mysql 
+```
+
 Login to mysql console and create database *rubyfu_db* and table *attackers*
 
 ```
@@ -54,17 +67,7 @@ Query OK, 0 rows affected (0.01 sec)
 mysql> exit
 ```
 
-## Active Record
-- To install ActiveRecord 
-```
-gem install activerecord 
-```
 
-### MySQL
-- To install MySQL adapter
-```
-mysql 
-```
 
 
 Now, let's to connect to *rubyfu_db* database 
@@ -162,7 +165,7 @@ Attackers.find(2).destroy
 
 ### Oracle 
 ```
-gem install tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter
+gem install activerecord-oracle_enhanced-adapter
 ```
 
 
