@@ -250,7 +250,7 @@ require 'watir-webdriver'
 
 @browser = Watir::Browser.new :firefox
 @browser.window.resize_to(800, 600)
-@browser.window.move_to(2456, 94)
+@browser.window.move_to(400, 300)
 
 def sendpost(payload)
   @browser.goto "file:///home/KING/Code/example.html"
