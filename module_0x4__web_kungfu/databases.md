@@ -165,7 +165,7 @@ Attackers.find(2).destroy
 
 ### Oracle database
 
-- Prerequisite
+- Prerequisites
 
 in order to make ruby-oci8 works you've to do some extra steps: 
 - Download links for [Linux](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) | [Windows](http://www.oracle.com/technetwork/topics/winsoft-085727.html) | [Mac](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) 
