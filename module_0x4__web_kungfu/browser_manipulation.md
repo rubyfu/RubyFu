@@ -227,7 +227,7 @@ field1=""&field2=""&field3=""&field4=""
 ```html
 <html>
   <head>
-    <title>Tesla</title>
+    <title>Victim Site - POST request</title>
   </head>
   <body>
     <form action="https://example.com/path/of/editfunction" method="POST">
