@@ -59,9 +59,11 @@ mysql> exit
 ```
 gem install activerecord 
 ```
-- To install most known adapters 
+
+### MySQL
+- To install MySQL adapter
 ```
-mysql tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter
+mysql 
 ```
 
 
@@ -156,6 +158,25 @@ attacker.ip
 # Delete a table Item
 Attackers.find(2).destroy
 ```
+
+
+### Oracle 
+```
+gem install tiny_tds activerecord-sqlserver-adapter activerecord-oracle_enhanced-adapter
+```
+
+
+
+
+
+### MSSQL database
+
+
+
+```
+gem install tiny_tds activerecord-sqlserver-adapter
+```
+
 
 
 
