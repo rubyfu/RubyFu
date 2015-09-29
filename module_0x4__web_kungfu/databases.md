@@ -165,7 +165,13 @@ Attackers.find(2).destroy
 
 ### Oracle database
 
-- To install MySQL adapter
+- To install Oracle adapter
+
+in order to make ruby-oci8 works you've to do some extra steps
+
+- instantclient-basic-macos.x64-11.2.0.3.0.zip
+- instantclient-sqlplus-macos.x64-11.2.0.3.0.zip
+- instantclient-sdk-macos.x64-11.2.0.3.0.zip
 
 ```
 gem install activerecord-oracle_enhanced-adapter
@@ -175,9 +181,11 @@ gem install activerecord-oracle_enhanced-adapter
 
 
 
+
 ### MSSQL database
 
 
+- To install MSSQL adapter
 
 ```
 gem install tiny_tds activerecord-sqlserver-adapter
