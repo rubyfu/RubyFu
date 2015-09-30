@@ -240,7 +240,7 @@ ruby tns_brute.rb 192.168.0.13 1521
 <br><br><br>
 ---
 - [Research Oracle TNS Protocal](https://thesprawl.org/research/oracle-tns-protocol/) 
-- Metasploit | sid_brute auxilary module
+- Metasploit | sid_brute auxiliary module
 
 
 
