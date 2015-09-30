@@ -167,7 +167,7 @@ Attackers.find(2).destroy
 
 - Prerequisites
 
-in order to make ruby-oci8 works you've to do some extra steps: 
+in order to make [ruby-oci8](http://www.rubydoc.info/gems/ruby-oci8/file/docs/install-full-client.md) works you've to do some extra steps: 
 - Download links for [Linux](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) | [Windows](http://www.oracle.com/technetwork/topics/winsoft-085727.html) | [Mac](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) 
  - instantclient-basic-[OS].[Arch]-[VERSION].zip
  - instantclient-sqlplus-[OS].[Arch]-[VERSION].zip
@@ -220,6 +220,7 @@ mv * /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin/
 # Symlink of instantclient
 cd /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin
 ln -s libclntsh.so.12.1 libclntsh.so
+ln -s ../lib/sdk sdk
 cd -
 ```
 
@@ -233,7 +234,8 @@ Append oracle environment variables in to `~/.bashrc` Then add the following:
 export ORACLE_BASE=/usr/local/oracle
 export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
 export PATH=$ORACLE_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=$ORACLE_HOME/bin
+export LD_LIBRARY_PATH
 export TNS_ADMIN=$ORACLE_BASE/admin/network
 export SQLPATH=$ORACLE_HOME/sqlplus/admin
 ```
