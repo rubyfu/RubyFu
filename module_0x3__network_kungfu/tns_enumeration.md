@@ -120,6 +120,22 @@ def tns_packet(connect_data)
 end
 ```
 
+- SID Request 
+
+There is a data structure for interacting with the TNS which the following `(DESCRIPTION=(CONNECT_DATA=(SID=#{sid})(CID=(PROGRAM=)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=#{host})(PORT=#{port})))`
+```ruby
+def sid_request(sid,host, port)
+  connect_data = "(DESCRIPTION=(CONNECT_DATA=(SID=#{sid})(CID=(PROGRAM=)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=#{host})(PORT=#{port})))"
+  pkt = tns_packet(connect_data)
+end
+```
+
+Now we have everything to send our packet, let's to build a simple tns brute force to enumerate the exist tns listeners. The default behavior for oracle 11g is to reply with nothing if listener exist, and reply with error if it doesn't, the error similar to this `g"[(DESCRIPTION=(TMP=)(VSNNUM=186647040)(ERR=12505)(ERROR_STACK=(ERROR=(CODE=12505)(EMFI=4))))`.
+
+
+
+
+
 
 
 
