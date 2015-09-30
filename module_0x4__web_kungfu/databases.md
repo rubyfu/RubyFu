@@ -256,10 +256,10 @@ Now let's to connect
 require 'active_record'
 
 ActiveRecord::Base.establish_connection(
-					  :adapter=>"oracle_enhanced",
-					  :database=>"192.168.0.13:1521/XE",
-					  :username=>"oracle",
-					  :password=>"welcome1"
+					  :adapter  => "oracle_enhanced",
+					  :database => "192.168.0.13:1521/XE",
+					  :username => "SYSDBA",
+					  :password => "welcome1"
 				       )
 
 class DBAUsers < ActiveRecord::Base
