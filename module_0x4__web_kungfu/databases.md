@@ -167,7 +167,7 @@ Attackers.find(2).destroy
 
 - Prerequisites
 
-in order to make [ruby-oci8](http://www.rubydoc.info/gems/ruby-oci8/file/docs/install-full-client.md) works you've to do some extra steps: 
+in order to make [ruby-oci8](http://www.rubydoc.info/gems/ruby-oci8/file/docs/install-full-client.md) -which is the main dependency for oracle driver- works you've to do some extra steps: 
 - Download links for [Linux](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) | [Windows](http://www.oracle.com/technetwork/topics/winsoft-085727.html) | [Mac](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) 
  - instantclient-basic-[OS].[Arch]-[VERSION].zip
  - instantclient-sqlplus-[OS].[Arch]-[VERSION].zip
@@ -253,6 +253,16 @@ Now let's to connect
 ```
 require 'active_record'
 
+ActiveRecord::Base.establish_connection(
+					  :adapter=>"oracle_enhanced",
+					  :database=>"192.168.0.13:1521/XE",
+					  :username=>"oracle",
+					  :password=>"welcome1"
+				       )
+
+class DBAUsers < ActiveRecord::Base
+# self.dba_users = "dba_users"
+end
 
 
 ```
