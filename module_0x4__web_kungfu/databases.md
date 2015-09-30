@@ -197,6 +197,7 @@ The file structure should be
 ```
 
 - Move files 
+
 ```
 cd instantclient_12_1
 mv ojdbc* /usr/local/oracle/product/instantclient_64/*/jdbc/lib/
