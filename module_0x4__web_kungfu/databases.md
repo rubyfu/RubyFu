@@ -217,9 +217,13 @@ mv glogin.sql /usr/local/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admi
 mv sdk /usr/local/oracle/product/instantclient_64/12.1.0.2.0/lib/
 mv *README /usr/local/oracle/product/instantclient_64/12.1.0.2.0/
 mv * /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin/
+# Symlink of instantclien
+cd /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin
+ln -s libclntsh.so.12.1 libclntsh.so.12.1.so
 ```
 
 - Setup environment 
+
 
 Append oracle environment variables in to `~/.bashrc` Then add the following:
 
