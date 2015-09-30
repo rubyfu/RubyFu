@@ -229,11 +229,11 @@ cd -
 Append oracle environment variables in to `~/.bashrc` Then add the following:
 
 ```
-# Oracle Environment
+# Oracle Environment 
 export ORACLE_BASE=/usr/local/oracle
 export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
 export PATH=$ORACLE_HOME/bin:$PATH
-export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib:$DYLD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 export TNS_ADMIN=$ORACLE_BASE/admin/network
 export SQLPATH=$ORACLE_HOME/sqlplus/admin
 ```
