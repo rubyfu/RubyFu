@@ -231,6 +231,9 @@ end
 Run it 
 ```
 ruby tns_brute.rb 192.168.0.13 1521
+
+[+] Found SID: PLSExtProc
+[+] Found SID: XE
 ```
 
 
