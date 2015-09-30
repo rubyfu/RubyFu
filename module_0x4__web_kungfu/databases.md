@@ -172,7 +172,15 @@ in order to make ruby-oci8 works you've to do some extra steps:
  - instantclient-basic-[OS].[Arch]-[VERSION].zip
  - instantclient-sqlplus-[OS].[Arch]-[VERSION].zip
  - instantclient-sdk-[OS].[Arch]-[VERSION].zip
-- Unzip the file and 
+
+
+- Unzip downloaded files 
+
+```
+unzip -qq instantclient-basic-linux.x64-12.1.0.2.0.zip
+unzip -qq instantclient-sdk-linux.x64-12.1.0.2.0.zip
+unzip -qq instantclient-sqlplus-linux.x64-12.1.0.2.0.zip
+```
 
 - Create system directories
 as root / sudo 
