@@ -25,7 +25,7 @@
    * [DNS Enumeration](module_0x3__network_kungfu/dns_enumeration.md)
        * [DNS bruteforce](module_0x3__network_kungfu/dns_bruteforce.md)
    * [SNMP Enumeration](module_0x3__network_kungfu/snmp_enumeration.md)
-   * [TNS Enumeration](module_0x3__network_kungfu/tns_enumeration.md)
+   * [Oracle TNS Enumeration](module_0x3__network_kungfu/tns_enumeration.md)
    * [Packet manipulation](module_0x3__network_kungfu/packet_manipulation.md)
        * [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md)
        * [DNS Spoofing](module_0x3__network_kungfu/dns_spoofing.md)
