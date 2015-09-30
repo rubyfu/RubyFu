@@ -2,10 +2,40 @@
 
 
 
+If you take a look to pure connection from SQL*plus cline to a TNS listener, you'll find the first connect packet as bellow 
 
 | ![Wireshark](oracle_tns_enum1.png) |
 |:---------------:|
 | **Figure 1.** TNS Packet  |
+
+Description 
+```
+Transparent Network Substrate Protocol
+    Packet Length: 224
+    Packet Checksum: 0x0000
+    Packet Type: Connect (1)
+    Reserved Byte: 00
+    Header Checksum: 0x0000
+    Connect
+    	Version: 315
+    	Version (Compatible): 300
+    	Service Options: 0x0c41
+    	Session Data Unit Size: 8192
+    	Maximum Transmission Data Unit Size: 65535
+    	NT Protocol Characteristics: 0x7f08
+    	Line Turnaround Value: 0
+    	Value of 1 in Hardware: 0100
+    	Length of Connect Data: 154
+    	Offset to Connect Data: 70
+    	Maximum Receivable Connect Data: 2048
+    	Connect Flags 0: 0x41
+    	Connect Flags 1: 0x41
+    	Trace Cross Facility Item 1: 0x00000000
+    	Trace Cross Facility Item 2: 0x00000000
+    	Trace Unique Connection ID: 0x0000000000000000
+    	Connect Data: (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=XE)(CID=(PROGRAM=sqlplus@Archer)(HOST=Archer)(USER=KING)))(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.0.13)(PORT=1521)))
+
+```
 
 
 Connect 
@@ -28,7 +58,7 @@ Connect
 00f0   45 53 53 3d 28 50 52 4f 54 4f 43 4f 4c 3d 54 43  ESS=(PROTOCOL=TC
 0100   50 29 28 48 4f 53 54 3d 31 39 32 2e 31 36 38 2e  P)(HOST=192.168.
 0110   30 2e 31 33 29 28 50 4f 52 54 3d 31 35 32 31 29  0.13)(PORT=1521)
-0120   29 29
+0120   29 29                                            ))
 ```
 
 
