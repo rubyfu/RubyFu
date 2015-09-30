@@ -229,7 +229,7 @@ end
 ```
 Run it 
 ```
-ruby 
+ruby tns_brute.rb 192.168.0.13 1521
 ```
 
 
