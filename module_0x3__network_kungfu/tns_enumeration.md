@@ -1,6 +1,6 @@
 # Oracle TNS Enumeration
 
-
+The practitcal way to understand how to a specifc protocol works is to use it's clinet tools and monitor its packets. 
 
 If you take a look to pure connection from SQL*plus cline to a TNS listener, you'll find the first connect packet as bellow 
 
