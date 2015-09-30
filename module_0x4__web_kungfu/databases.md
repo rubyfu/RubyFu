@@ -249,8 +249,13 @@ source ~/.bashrc
 gem install ruby-oci8 activerecord-oracle_enhanced-adapter
 ```
 
+Now let's to connect 
+```
+require 'active_record'
 
 
+
+```
 
 
 
