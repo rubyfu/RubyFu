@@ -2,7 +2,7 @@
 
 The practitcal way to understand how to a specifc protocol works is to use it's clinet tools and monitor its packets. 
 
-If you take a look to pure connection of SQL*plus client to a TNS listener from wireshar, you'll find the first connect packet as bellow 
+If you take a look to pure connection of SQL*plus client to a TNS listener from wireshark, you'll find the first connect packet as bellow 
 
 | ![Wireshark](oracle_tns_enum1.png) |
 |:---------------:|
@@ -13,7 +13,7 @@ If you take a look to pure connection of SQL*plus client to a TNS listener from 
 Transparent Network Substrate Protocol
     Packet Length: 224
     Packet Checksum: 0x0000
-    Packet Type: Connect (1)
+    Packet Type: Connect (1) 0x01
     Reserved Byte: 00
     Header Checksum: 0x0000
     Connect
@@ -59,6 +59,12 @@ Transparent Network Substrate Protocol
 0110   30 2e 31 33 29 28 50 4f 52 54 3d 31 35 32 31 29  0.13)(PORT=1521)
 0120   29 29                                            ))
 ```
+
+Now base on our understanding, let's to build and equevlant request using ruby.
+
+
+
+
 
 
 
