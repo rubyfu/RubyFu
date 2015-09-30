@@ -62,7 +62,8 @@ Transparent Network Substrate Protocol
 
 Now base on our understanding, let's to build and equevlant request using ruby.
 
-So our TNS packet builder would be 
+- TNS packet builder would be
+
 ```ruby
 def tns_packet(connect_data)
   
