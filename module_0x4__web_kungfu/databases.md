@@ -220,6 +220,7 @@ mv * /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin/
 # Symlink of instantclient
 cd /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin
 ln -s libclntsh.so.12.1 libclntsh.so.12.1.so
+cd -
 ```
 
 - Setup environment 
