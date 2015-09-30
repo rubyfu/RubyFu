@@ -263,7 +263,6 @@ ActiveRecord::Base.establish_connection(
 				       )
 
 class DBAUsers < ActiveRecord::Base
-# self.dba_users = "dba_users"
 end
 
 
