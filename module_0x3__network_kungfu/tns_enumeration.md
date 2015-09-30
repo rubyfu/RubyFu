@@ -8,7 +8,7 @@ If you take a look to pure connection from SQL*plus cline to a TNS listener, you
 |:---------------:|
 | **Figure 1.** TNS Packet  |
 
-Description 
+- TNS Packet Description 
 ```
 Transparent Network Substrate Protocol
     Packet Length: 224
