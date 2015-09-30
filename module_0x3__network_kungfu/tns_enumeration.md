@@ -2,7 +2,7 @@
 
 The practitcal way to understand how to a specifc protocol works is to use it's clinet tools and monitor its packets. 
 
-If you take a look to pure connection from SQL*plus client to a TNS listener, you'll find the first connect packet as bellow 
+If you take a look to pure connection of SQL*plus client to a TNS listener from wireshar, you'll find the first connect packet as bellow 
 
 | ![Wireshark](oracle_tns_enum1.png) |
 |:---------------:|
