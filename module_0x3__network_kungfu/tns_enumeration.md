@@ -62,8 +62,65 @@ Transparent Network Substrate Protocol
 
 Now base on our understanding, let's to build and equevlant request using ruby.
 
-- Convert all decimal values to hex
+So our TNS packet builder would be 
+```ruby
+#
+# Build TNS Packet
+#
+def tns_packet(connect_data)
+  
+  #=> Transparent Network Substrate Protocol
+  # Packet Length
+  pkt =  [58 + connect_data.length].pack('n')
+  # Packet Checksum
+  pkt << "\x00\x00"
+  # Packet Type: Connect(1)
+  pkt << "\x01"
+  # Reserved Byte
+  pkt << "\x00"
+  # Header Checksum
+  pkt << "\x00\x00"
+  #=> Connect
+  # Version
+  pkt << "\x01\x36"
+  # Version (Compatible)
+  pkt << "\x01\x2C"
+  # Service Options
+  pkt << "\x00\x00"
+  # Session Data Unit Size
+  pkt << "\x08\x00"
+  # Maximum Transmission Data Unit Size
+  pkt << "\xFF\xFF"
+  # NT Protocol Characteristics
+  pkt << "\x7F\x08"
+  # Line Turnaround Value
+  pkt << "\x00\x00"
+  # Value of 1 in Hardware
+  pkt << "\x00\x01"
+  # Length of Connect Data
+  pkt << [connect_data.length].pack('n')
+  # Offset to Connect Data
+  pkt << "\x00\x3A"
+  # Maximum Receivable Connect Data
+  pkt << "\x00\x00\x00\x00"
+  # Connect Flags 0
+  pkt << "\x00"
+  # Connect Flags 1
+  pkt << "\x00"
+  # Trace Cross Facility Item 1
+  pkt << "\x00\x00\x00\x00"
+  # Trace Cross Facility Item 2
+  pkt << "\x00\x00\x00\x00"
+  # Trace Unique Connection ID
+  pkt << "\x00\x00\x34\xE6\x00\x00\x00\x01"
+  # Connect Data
+  pkt << "\x00\x00\x00\x00\x00\x00\x00\x00"
+  pkt << connect_data
 
+  return pkt
+
+end
+```
 
 
 
