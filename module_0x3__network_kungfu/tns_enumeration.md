@@ -34,7 +34,6 @@ Transparent Network Substrate Protocol
     	Trace Cross Facility Item 2: 0x00000000
     	Trace Unique Connection ID: 0x0000000000000000
     	Connect Data: (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=XE)(CID=(PROGRAM=sqlplus@Archer)(HOST=Archer)(USER=KING)))(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.0.13)(PORT=1521)))
-
 ```
 
 
