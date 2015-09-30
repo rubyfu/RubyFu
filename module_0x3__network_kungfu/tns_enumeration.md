@@ -132,7 +132,7 @@ end
 
 Now we have everything to send our packet, let's to build a simple tns brute force to enumerate the exist tns listeners. The default behavior for oracle 11g is to reply with nothing if listener exist, and reply with error if it doesn't, the error similar to this `g"[(DESCRIPTION=(TMP=)(VSNNUM=186647040)(ERR=12505)(ERROR_STACK=(ERROR=(CODE=12505)(EMFI=4))))`.
 
-### SID Brute force
+### SID Brute Force
 ```ruby
 #!/usr/bin/env ruby
 # -*- coding: binary -*-
