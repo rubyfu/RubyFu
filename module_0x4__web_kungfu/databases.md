@@ -185,7 +185,7 @@ unzip -qq instantclient-sqlplus-linux.x64-12.1.0.2.0.zip
 - Create system directories
 as root / sudo 
 ```
-mkdir -p oracle/{network,product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/}}
+mkdir -p /usr/local/oracle/{network,product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/}}
 ```
 The file structure should be 
 ```
@@ -209,15 +209,14 @@ The file structure should be
 
 ```
 cd instantclient_12_1
-mv ojdbc* /usr/local/oracle/product/instantclient_64/*/jdbc/lib/
-mv x*.jar /usr/local/oracle/product/instantclient_64/*/rdbms/jlib/
 
+mv ojdbc* /usr/local/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib/
+mv x*.jar /usr/local/oracle/product/instantclient_64/12.1.0.2.0/rdbms/jlib/
 # rename glogin.sql to login.sql
-mv glogin.sql /usr/local/oracle/product/instantclient_64/*/sqlplus/admin/
-
-mv sdk /usr/local/oracle/product/instantclient_64/*/lib/
-mv *README /usr/local/oracle/product/instantclient_64/*/
-mv * /usr/local/oracle/product/instantclient_64/*/bin/
+mv glogin.sql /usr/local/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admin/login.sql
+mv sdk /usr/local/oracle/product/instantclient_64/12.1.0.2.0/lib/
+mv *README /usr/local/oracle/product/instantclient_64/12.1.0.2.0/
+mv * /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin/
 ```
 
 - Setup environment 
@@ -227,7 +226,7 @@ Append oracle environment variables in to `~/.bashrc` Then add the following:
 ```
 # Oracle Environment
 export ORACLE_BASE=/usr/local/oracle
-export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/11.2.0.3.0
+export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
 export PATH=$ORACLE_HOME/bin:$PATH
 export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib:$DYLD_LIBRARY_PATH
 export TNS_ADMIN=$ORACLE_BASE/admin/network
