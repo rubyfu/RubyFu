@@ -246,7 +246,7 @@ source ~/.bashrc
 
 - To install Oracle adapter
 ```
-gem install activerecord-oracle_enhanced-adapter
+gem install ruby-oci8 activerecord-oracle_enhanced-adapter
 ```
 
 
