@@ -60,7 +60,7 @@ Transparent Network Substrate Protocol
 0120   29 29                                            ))
 ```
 
-Now base on our understanding, let's to build and equevlant request using ruby.
+Now base on our understanding, let's to build an equivalent request using ruby.
 
 - TNS packet builder
 
