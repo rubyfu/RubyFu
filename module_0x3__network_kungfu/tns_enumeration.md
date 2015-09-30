@@ -37,7 +37,7 @@ Transparent Network Substrate Protocol
 ```
 
 
-Connect 
+- TNS Packet Hexdump 
 ```
 0000   08 00 27 3a fb 1d 3c 77 e6 68 66 e9 08 00 45 00  ..':..<w.hf...E.
 0010   01 14 65 4f 40 00 40 06 53 28 c0 a8 00 0f c0 a8  ..eO@.@.S(......
