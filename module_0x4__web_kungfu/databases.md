@@ -172,6 +172,48 @@ in order to make ruby-oci8 works you've to do some extra steps:
  - instantclient-basic-[OS].[Arch]-[VERSION].zip
  - instantclient-sqlplus-[OS].[Arch]-[VERSION].zip
  - instantclient-sdk-[OS].[Arch]-[VERSION].zip
+- Unzip the file and 
+
+- Create system directories
+as root / sudo 
+```
+mkdir -p /usr/local/oracle/product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/network}
+```
+The file structure should be 
+```
+/usr/local/oracle/
+└── product
+    └── instantclient_64
+        └── 12.1.0.2.0
+            ├── bin
+            ├── jdbc
+            │   └── lib
+            ├── lib
+            ├── rdbms
+            │   └── jlib
+            └── sqlplus
+                └── admin
+                    └── network
+```
+
+- Move files 
+```
+cd instantclient_12_1
+mv ojdbc* /usr/local/oracle/product/instantclient_64/*/jdbc/lib/
+mv x*.jar /usr/local/oracle/product/instantclient_64/*/rdbms/jlib/
+
+# rename glogin.sql to login.sql
+mv glogin.sql /usr/local/oracle/product/instantclient_64/*/sqlplus/admin/
+
+mv sdk /usr/local/oracle/product/instantclient_64/*/lib/
+mv *README /usr/local/oracle/product/instantclient_64/*/
+
+mv * /usr/local/oracle/product/instantclient_64/*/bin/
+
+```
+
+
+
 
 
 - To install Oracle adapter
