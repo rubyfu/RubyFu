@@ -138,8 +138,13 @@ Now we have everything to send our packet, let's to build a simple tns brute for
 # -*- coding: binary -*-
 require 'socket'
 
-host = ARGV[0] || 'localhost'
-port = ARGV[1] || 1521
+if ARGV.size < 1
+  puts "Usage:\n#{__FILE__} <IP ADDRESS> [PORT]"
+  exit 
+else
+  host = ARGV[0]
+  port = ARGV[1] || 1521
+end
 
 
 #
@@ -217,7 +222,11 @@ sids.each do |sid|
   puts "[+] Found SID: " + sid if response.scan(/ERROR/).empty?
   sleep 0.5
 end
-s.close
+# s.close
+
+```
+Run it 
+```
 
 ```
 
