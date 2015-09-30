@@ -177,11 +177,13 @@ in order to make ruby-oci8 works you've to do some extra steps:
 - Create system directories
 as root / sudo 
 ```
-mkdir -p /usr/local/oracle/product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/network}
+mkdir -p oracle/{network,product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/}}
 ```
 The file structure should be 
 ```
 /usr/local/oracle/
+├── admin
+│   └── network
 └── product
     └── instantclient_64
         └── 12.1.0.2.0
@@ -193,7 +195,6 @@ The file structure should be
             │   └── jlib
             └── sqlplus
                 └── admin
-                    └── network
 ```
 
 - Move files 
@@ -216,6 +217,7 @@ mv * /usr/local/oracle/product/instantclient_64/*/bin/
 Append oracle environment variables in to `~/.bashrc` Then add the following:
 
 ```
+# Oracle Environment
 export ORACLE_BASE=/usr/local/oracle
 export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/11.2.0.3.0
 export PATH=$ORACLE_HOME/bin:$PATH
