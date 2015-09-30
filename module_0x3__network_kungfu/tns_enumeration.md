@@ -1,6 +1,6 @@
 # Oracle TNS Enumeration
 
-The practitcal way to understand how to a specifc protocol works is to use it's clinet tools and monitor its packets. 
+The practical way to understand how to a specifc protocol works is to use it's clinet tools and monitor its packets. 
 
 If you take a look to pure connection of SQL*plus client to a TNS listener from wireshark, you'll find the first connect packet as bellow 
 
@@ -240,6 +240,7 @@ ruby tns_brute.rb 192.168.0.13 1521
 <br><br><br>
 ---
 - [Research Oracle TNS Protocal](https://thesprawl.org/research/oracle-tns-protocol/) 
+- Metasploit | sid_brute auxilary module
 
 
 
