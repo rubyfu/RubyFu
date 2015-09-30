@@ -147,6 +147,7 @@ else
   host = ARGV[0]
   port = ARGV[1] || 1521
 end
+sid  = ARGV[2] || 'PLSExtProc'
 
 
 #
