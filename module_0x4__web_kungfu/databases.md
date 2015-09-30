@@ -184,9 +184,11 @@ unzip -qq instantclient-sqlplus-linux.x64-12.1.0.2.0.zip
 
 - Create system directories
 as root / sudo 
+
 ```
 mkdir -p /usr/local/oracle/{network,product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/}}
 ```
+
 The file structure should be 
 ```
 /usr/local/oracle/
