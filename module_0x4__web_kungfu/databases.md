@@ -225,7 +225,7 @@ export SQLPATH=$ORACLE_HOME/sqlplus/admin
 ```
 Then run:
 ```
-
+source ~/.bashrc
 ```
 
 - To install Oracle adapter
