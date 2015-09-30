@@ -140,7 +140,7 @@ require 'socket'
 
 if ARGV.size < 1
   puts "Usage:\n#{__FILE__} <IP ADDRESS> [PORT]"
-  exit 
+  exit 0
 else
   host = ARGV[0]
   port = ARGV[1] || 1521
