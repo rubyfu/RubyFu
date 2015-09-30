@@ -218,14 +218,14 @@ end
 
 sids = [ 'N00TEXIST', 'PLSExtProc', 'ORACLE', 'ORA', 'ORA1', 'ORA2', 'XE', 'SOA', 'SOA1', 'SOA2', 'DBA1', 'DBA2' 'HR', 'HR1', 'HR2','SAP', 'TEST']
 
-s = TCPSocket.new host, port.to_i
 sids.each do |sid|
+  s = TCPSocket.new host, port.to_i
   s.send sid_request(sid, host, port), 0
-  response = s.recv(100)
+  response = s.recv(1000)
   puts "[+] Found SID: " + sid if response.scan(/ERROR/).empty?
-  sleep 0.5
+#   puts "[+] No SID: " + sid , response unless response.scan(/ERROR/).empty?
+  s.close
 end
-# s.close
 
 ```
 Run it 
