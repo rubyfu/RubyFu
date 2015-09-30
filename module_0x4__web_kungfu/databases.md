@@ -208,12 +208,10 @@ mv glogin.sql /usr/local/oracle/product/instantclient_64/*/sqlplus/admin/
 
 mv sdk /usr/local/oracle/product/instantclient_64/*/lib/
 mv *README /usr/local/oracle/product/instantclient_64/*/
-
 mv * /usr/local/oracle/product/instantclient_64/*/bin/
-
 ```
 
-
+- Setup environmen
 
 
 
