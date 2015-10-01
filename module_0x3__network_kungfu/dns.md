@@ -8,7 +8,7 @@ DNS out-band connection is usually allowed in local networks, which is the major
 ```ruby
 #!/usr/bin/env ruby
 #
-# for c in $(xxd -p image.jpg); do dig @localhost $c; done
+# for hex in $(xxd -p ethernet-cable.jpg); do echo $hex | ncat -u localhost 53 ; done
 # 
 require 'socket'
 
