@@ -19,6 +19,7 @@ else
   file = ARGV[0]
 end
 
+# Open UDP Socket
 udpsoc = UDPSocket.new
 udpsoc.bind('0.0.0.0', 53)
 
