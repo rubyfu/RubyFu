@@ -19,7 +19,7 @@ else
   file = ARGV[0]
 end
 
-# Open UDP Socket
+# Open UDP Socket and bind it to port 53 on all interfaces
 udpsoc = UDPSocket.new
 udpsoc.bind('0.0.0.0', 53)
 
