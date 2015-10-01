@@ -4,6 +4,7 @@
 ## DNS Data Exfiltration 
 DNS out-band connection is usually allowed in local networks, which is the major benefits of using DNS to transfer data to external server. 
 
+**dnsteal.rb**
 ```ruby
 #!/usr/bin/env ruby
 #
