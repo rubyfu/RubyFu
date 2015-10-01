@@ -1,7 +1,7 @@
 # DNS 
 
 
-## DNS Exfiltration 
+## DNS Data Exfiltration 
 
 
 ```ruby
