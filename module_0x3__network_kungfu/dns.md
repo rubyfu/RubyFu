@@ -6,7 +6,6 @@
 # for c in $(xxd -p image.jpg); do dig @localhost $c; done
 # 
 require 'socket'
-require 'pp'
 
 if ARGV.size < 1
   puts "[+] sudp ruby #{__FILE__} <FILENAME>"
@@ -30,7 +29,7 @@ begin
     
     File.open(file, 'a') do |d|
       d.write [data].pack("H*") unless data == data_old
-      pp data unless data == data_old
+      puts data unless data == data_old
     end
     
     data_old = data 
