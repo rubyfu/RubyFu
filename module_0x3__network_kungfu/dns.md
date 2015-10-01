@@ -33,6 +33,7 @@ begin
     response = response[0].force_encoding("ISO-8859-1").encode("utf-8")
     data = response.match(/[a-f0-9]([a-f0-9]).*[a-f0-9]([a-f0-9])/i).to_s
     
+    # Write received data to file 
     File.open(file, 'a') do |d|
       d.write [data].pack("H*") unless data == data_old
       puts data unless data == data_old
