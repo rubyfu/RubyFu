@@ -24,7 +24,7 @@
        * [Nmap](module_0x3__network_kungfu/nmap.md)
    * [DNS](module_0x3__network_kungfu/dns_enumeration.md)
        * [DNS bruteforce](module_0x3__network_kungfu/dns_bruteforce.md)
-       * DNS Enumeration
+       * [DNS Enumeration](module_0x3__network_kungfu/dns_enumeration.md)
    * [SNMP Enumeration](module_0x3__network_kungfu/snmp_enumeration.md)
    * [Oracle TNS Enumeration](module_0x3__network_kungfu/tns_enumeration.md)
    * [Packet manipulation](module_0x3__network_kungfu/packet_manipulation.md)
