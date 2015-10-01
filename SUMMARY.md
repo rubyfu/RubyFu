@@ -22,7 +22,7 @@
    * [Email](module_0x2__system_kungfu/email.md)
    * [Network Scanning](module_0x3__network_kungfu/network_scanning.md)
        * [Nmap](module_0x3__network_kungfu/nmap.md)
-   * [DNS Enumeration](module_0x3__network_kungfu/dns_enumeration.md)
+   * [DNS](module_0x3__network_kungfu/dns_enumeration.md)
        * [DNS bruteforce](module_0x3__network_kungfu/dns_bruteforce.md)
    * [SNMP Enumeration](module_0x3__network_kungfu/snmp_enumeration.md)
    * [Oracle TNS Enumeration](module_0x3__network_kungfu/tns_enumeration.md)
