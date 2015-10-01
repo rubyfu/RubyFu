@@ -27,7 +27,7 @@ begin
   data_old = ''
   
   loop do
-    response = udpsoc.recvfrom(10000)
+    response = udpsoc.recvfrom(1000)
     response = response[0].force_encoding("ISO-8859-1").encode("utf-8")
     data = response.match(/[a-f0-9]([a-f0-9]).*[a-f0-9]([a-f0-9])/i).to_s
     
