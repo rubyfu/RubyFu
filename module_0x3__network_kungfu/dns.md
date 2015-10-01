@@ -2,7 +2,7 @@
 
 
 ## DNS Data Exfiltration 
-
+There are maior 
 
 ```ruby
 #!/usr/bin/env ruby
