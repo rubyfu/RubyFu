@@ -61,7 +61,7 @@ end
 - Now ssh to the SSH SSH server on port 2222, you'll be prompt for SSH server the Web Server ssh password
 
 ```
-ssh localhost -p 1234
+ssh SshServer -p 1234
 ```
 
 
