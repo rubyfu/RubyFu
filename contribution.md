@@ -23,9 +23,9 @@ There are several kind of contributions could help this book to get the best res
 ### Start contributing
 Please find all you need to know about gitbook and markdown editing in [References][1] section. As good start, you can refer to [how to use it from official readme][2]. You can easily use Gitbook [Desktop editor][3].
 
-1. Create a [github](https://github.com) account.
-2. Fork [RubyFu repository](https://github.com/KINGSABRI/RubyFu).
-3. Add forked RubyFu repository to [Gitbook Editor](https://www.gitbook.com/editor) **Toolbar** >> **Book** >> **Repository Settings**.
+1. Create a [github][4] account.
+2. Fork [RubyFu repository][4].
+3. Add forked RubyFu repository to [Gitbook Editor][3] **Toolbar** >> **Book** >> **Repository Settings**.
 4. Start your awesome contribution.
 5. From Gitbook editor, **Sync** your changes to forked repository.
 6. From github, send a **Pull Request(PR)**
@@ -48,10 +48,10 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
         ```ruby
         puts "Your good code"
         ```
-        Source [^1]
+        [Source][1]
     Then add the following to the footer
 
-        [^1]: Source: [The Original code Title](http://TheSouceCodeURL)
+        [1]: http://TheSouceCodeURL
 
     Your notes should be under footer's line, Add the following to initiate the footer if not exist
 
@@ -79,8 +79,10 @@ Use triple ticks to highlight your commandline. ex.
 [1]: references/README.md
 [2]: https://github.com/GitbookIO/gitbook
 [3]: https://www.gitbook.com/editor
-
-
+[4]: https://github.com/KINGSABRI/RubyFu
+[5]: https://github.com
+[6]: 
+[7]: 
 
 
 
