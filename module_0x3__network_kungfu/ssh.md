@@ -43,7 +43,6 @@ https://gist.github.com/KINGSABRI/2860989
 
 ```ruby
 #!/usr/bin/evn ruby
-
 require 'net/ssh'
 
 Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
