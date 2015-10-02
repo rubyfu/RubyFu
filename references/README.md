@@ -1,10 +1,10 @@
 # References
 * **Contributors**
     * Gitbook Desktop Editor
-        * [Download and installation](https://www.gitbook.com/editor)
+        * [Download and installation][1]
     * How to Gitbook [Videos]
-        * [Create Gitbook online](https://www.youtube.com/watch?v=kdpfRLpu0FQ)
-        * [Install Gitbook Editor (on Linux Ubuntu)](https://www.youtube.com/watch?v=2e21bHRqG9M)
+        * [Create Gitbook online][2]
+        * [Install Gitbook Editor (on Linux Ubuntu)][3]
         * [Create Gitbook with Editor](https://www.youtube.com/watch?v=IkV2HQLAKHY)
         * [Install the Rgitbook package](https://www.youtube.com/watch?v=V23NKHiHWg4)
     * Markdown [Documentations]
@@ -50,9 +50,9 @@
 
 <br><br><br>
 ---
-[1]: 
-[2]: 
-[3]: 
+[1]: https://www.gitbook.com/editor
+[2]: https://www.youtube.com/watch?v=kdpfRLpu0FQ
+[3]: https://www.youtube.com/watch?v=2e21bHRqG9M
 [4]: 
 [5]: 
 [6]: 
