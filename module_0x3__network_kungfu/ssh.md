@@ -47,6 +47,9 @@ Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
 end
 ```
 - Now ssh to the SSH you localhost on port 1234, you'll be prompt for remote server ssh password
+```
+ssh localhost -p 1234
+```
 
 
 ### Forward SSH Tunnel
@@ -60,9 +63,6 @@ end
 ```
 
 
-```
-ssh localhost -p 1234
-```
 
 
 ### Reverse SSH Tunnel 
