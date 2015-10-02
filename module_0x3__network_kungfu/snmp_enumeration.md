@@ -1,5 +1,5 @@
 # SNMP Enumeration
-- Install ruby-snmp[^1]
+- Install [ruby-snmp][1]
 ```
 gem install snmp
 ```
@@ -53,4 +53,4 @@ manager.close
 
 <br><br><br>
 ---
-[^1]: [ruby-snmp repository](https://github.com/hallidave/ruby-snmp/)
+[1]: https://github.com/hallidave/ruby-snmp/
