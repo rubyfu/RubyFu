@@ -33,7 +33,19 @@ https://gist.github.com/KINGSABRI/2860989
 ## SSH Tunneling
 
 
-### Forward local port
+
+
+### Forward SSH Tunnel
+
+```
+                              |--------DMZ------|---Local Farm----|
+                              |                 |                 |
+|Attacker| ----SSH Tunnel---> | |SSH Server| <-SSH-> |Web server| |
+                              |                 |                 |
+                              |-----------------|-----------------|
+```
+
+#### Forward local port
 
 ```ruby
 #!/usr/bin/evn ruby
@@ -52,16 +64,6 @@ end
 ssh localhost -p 1234
 ```
 
-
-### Forward SSH Tunnel
-
-```
-                              |--------DMZ------|---Local Farm----|
-                              |                 |                 |
-|Attacker| ----SSH Tunnel---> | |SSH Server| <-SSH-> |Web server| |
-                              |                 |                 |
-                              |-----------------|-----------------|
-```
 
 **ssh-fw-tunnel.rb**
 ```
