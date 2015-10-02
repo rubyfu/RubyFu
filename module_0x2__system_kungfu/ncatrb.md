@@ -2,7 +2,7 @@
 
 
 ## Simple Ncat.rb
-I found [these](http://4thmouse.com/index.php/2008/02/20/netcat-clone-in-three-languages-part-i-ruby/) simple ncat so I did some enhancements on it and add some comments on it as well. 
+I found [these][1] simple ncat so I did some enhancements on it and add some comments on it as well. 
 
 
 ```ruby
@@ -162,3 +162,6 @@ Again from [Hood3dRob1n](https://github.com/Hood3dRob1n/) a standalone [RubyCat]
 
 
 
+<br>
+---
+[1]: http://4thmouse.com/index.php/2008/02/20/netcat-clone-in-three-languages-part-i-ruby/
