@@ -17,3 +17,14 @@ https://media.blackhat.com/bh-us-12/Briefings/Scott/BH_US_12_Scott_ruby_for_pent
 http://www.blackhat.com/presentations/bh-usa-09/TRACY/BHUSA09-Tracy-RubyPentesters-SLIDES.pdf
 
 https://www.pentestgeek.com/penetration-testing/using-metasm-to-avoid-antivirus-detection-ghost-writing-asm/
+
+
+
+
+
+
+
+
+
+<br><br><br>
+---
