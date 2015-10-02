@@ -32,7 +32,8 @@ https://gist.github.com/KINGSABRI/2860989
 
 ## SSH Tunneling
 
-### Forward SSH Tunnel 
+### Forward SSH Tunnel
+
 ```
                               |--------DMZ------|---Local Farm----|
                               |                 |                 |
@@ -53,6 +54,7 @@ Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
 end
 ```
 - Now ssh to the SSH server on port 1234
+
 ```
 ssh localhost -p 1234
 ```
