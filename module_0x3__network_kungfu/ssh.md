@@ -8,13 +8,14 @@ gem install net-ssh
 
 
 ## Simple SSH client
+This is a very basic ssh client which sends 
 ```ruby
 require 'net/ssh'
 
 @hostname = "localhost"
 @username = "root"
 @password = "password"
-@cmd = "ls -al"
+@cmd = ARGV[0]
 
 begin
   ssh = Net::SSH.start(@hostname, @username, :password => @password)
