@@ -33,7 +33,7 @@ https://gist.github.com/KINGSABRI/2860989
 ## SSH Tunneling
 
 
-### Local SSH Forward 
+### Forward local port  
 
 ```ruby
 #!/usr/bin/evn ruby
