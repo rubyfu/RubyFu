@@ -11,9 +11,9 @@
         * [Markdown docs - Gitbook | Official docs][6]
         * [Mastering Markdown - Github | Mastering Markdown][7]
 * **Beginner**
-    * [Ruby Tutorials - Tutorialspoint](http://www.tutorialspoint.com/ruby/)
-    * [Ruby programming Tutorials - Simple Free videos](https://www.thenewboston.com/videos.php?cat=50)
-    * [Ruby Programming - Commercial Training](https://www.youtube.com/watch?v=kdpfRLpu0FQ)
+    * [Ruby Tutorials - Tutorialspoint][8]
+    * [Ruby programming Tutorials - Simple Free videos][9]
+    * [Ruby Programming - Commercial Training][10]
     * [Lynda: Ruby Essential Training - Commercial Training](https://www.youtube.com/playlist?list=PLFI1RBqfVaOrMxWjIuFXbtGYtdmezgap3)
     * [Ruby from InfiniteSkills - Commercial Training](https://www.youtube.com/playlist?list=PLFI1RBqfVaOqvspvlnwS_ECczfRXnJee2)
     * [Qick Ruby syntax Cheat sheet](http://overapi.com/ruby/)
@@ -57,9 +57,9 @@
 [5]: https://www.youtube.com/watch?v=V23NKHiHWg4
 [6]: http://help.gitbook.com/format/markdown.html
 [7]: https://guides.github.com/features/mastering-markdown/
-[8]: 
-[9]: 
-[10]: 
+[8]: http://www.tutorialspoint.com/ruby/
+[9]: https://www.thenewboston.com/videos.php?cat=50
+[10]: https://www.youtube.com/watch?v=kdpfRLpu0FQ
 [11]: 
 [12]: 
 [13]: 
