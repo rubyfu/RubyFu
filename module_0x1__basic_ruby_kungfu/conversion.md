@@ -39,7 +39,7 @@ or
 ```ruby
 "ABCD".chars.map {|c| '\x%x' % c.ord}.join
 ```
-source[^1]
+[Source: Ruby | Convert ASCII to HEX][1]
 
 
 Returns
@@ -90,4 +90,4 @@ or
 
 <br><br><br>
 ---
-[^1]: Source: [Ruby| Convert ASCII to HEX](http://king-sabri.net/?p=2613).
+[1]: http://king-sabri.net/?p=2613
