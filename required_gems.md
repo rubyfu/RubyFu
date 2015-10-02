@@ -23,7 +23,8 @@ pry --simple-prompt
 - None
 
 #### Module 0x2 | System KungFu
-- None
+- virustotal
+- uirusu
 
 #### Module 0x3 | Network KungFu
 - geoip
