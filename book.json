@@ -1,7 +1,8 @@
 {
     "plugins": [
         "toc",
-        "expandable-chapters"
+        "expandable-chapters",
+        "anchors"
     ],
     "pluginsConfig": {}
 }
