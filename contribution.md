@@ -21,7 +21,7 @@ There are several kind of contributions could help this book to get the best res
 ## How to?
 
 ### Start contributing
-Please find all you need to know about gitbook and markdown editing in [References](references/README.md) section. As good start, you can refer to [how to use it from official readme](https://github.com/GitbookIO/gitbook). You can easily use Gitbook [Desktop editor](https://www.gitbook.com/editor).
+Please find all you need to know about gitbook and markdown editing in [References][1] section. As good start, you can refer to [how to use it from official readme][2]. You can easily use Gitbook [Desktop editor][3].
 
 1. Create a [github](https://github.com) account.
 2. Fork [RubyFu repository](https://github.com/KINGSABRI/RubyFu).
@@ -76,6 +76,9 @@ Use triple ticks to highlight your commandline. ex.
 ---
 [^1]: [More about GPL](http://www.gnu.org/copyleft/gpl.html)
 
+[1]: references/README.md
+[2]: https://github.com/GitbookIO/gitbook
+[3]: https://www.gitbook.com/editor
 
 
 
