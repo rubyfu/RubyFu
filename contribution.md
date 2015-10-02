@@ -76,7 +76,6 @@ Use triple ticks to highlight your commandline. ex.
 ---
 [^1]: [More about GPL](http://www.gnu.org/copyleft/gpl.html)
 
-
 [1]: references/README.md
 [2]: https://github.com/GitbookIO/gitbook
 [3]: https://www.gitbook.com/editor
