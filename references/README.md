@@ -14,8 +14,8 @@
     * [Ruby Tutorials - Tutorialspoint][8]
     * [Ruby programming Tutorials - Simple Free videos][9]
     * [Ruby Programming - Commercial Training][10]
-    * [Lynda: Ruby Essential Training - Commercial Training](https://www.youtube.com/playlist?list=PLFI1RBqfVaOrMxWjIuFXbtGYtdmezgap3)
-    * [Ruby from InfiniteSkills - Commercial Training](https://www.youtube.com/playlist?list=PLFI1RBqfVaOqvspvlnwS_ECczfRXnJee2)
+    * [Lynda: Ruby Essential Training - Commercial Training][11]
+    * [Ruby from InfiniteSkills - Commercial Training][12]
     * [Qick Ruby syntax Cheat sheet](http://overapi.com/ruby/)
 * **Books**
     * [Ruby Learning](http://rubylearning.com/satishtalim/tutorial.html) 
@@ -60,8 +60,8 @@
 [8]: http://www.tutorialspoint.com/ruby/
 [9]: https://www.thenewboston.com/videos.php?cat=50
 [10]: https://www.youtube.com/watch?v=kdpfRLpu0FQ
-[11]: 
-[12]: 
+[11]: https://www.youtube.com/playlist?list=PLFI1RBqfVaOrMxWjIuFXbtGYtdmezgap3
+[12]: https://www.youtube.com/playlist?list=PLFI1RBqfVaOqvspvlnwS_ECczfRXnJee2
 [13]: 
 [14]: 
 [15]: 
