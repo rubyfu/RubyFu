@@ -26,8 +26,8 @@
     * [Learn Ruby The Hard Way][19]
 * **Sites, Topics and Articls**
     * [Rubymonk.com][20]
-    * [Byte manipulation in ruby](http://www.happybearsoftware.com/byte-manipulation-in-ruby.html)
-    * [Ruby Format](http://www.dotnetperls.com/format)
+    * [Byte manipulation in ruby][21]
+    * [Ruby Format][22]
 * **Hacking Tools built with ruby**
     * Metasploit framework - Exploitation framework
     * Beef framework - XSS framework
@@ -70,5 +70,5 @@
 [18]: http://shop.oreilly.com/product/9780596523695.do
 [19]: http://learnrubythehardway.org/book/
 [20]: https://rubymonk.com/
-[21]: 
-[22]: 
+[21]: http://www.happybearsoftware.com/byte-manipulation-in-ruby.html
+[22]: http://www.dotnetperls.com/format
