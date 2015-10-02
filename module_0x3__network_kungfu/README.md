@@ -143,7 +143,7 @@ false
 
 ### Converting subnet mask from dot-decimal notation to integer.
 
-We treated subnet mask as ip address and converted it into an integer by using `to_i` then used `to_s(2)` to convert the integer into binary form. Once we had the binary we counted the number of occurrence of digit 1 with `count(“1″)`.
+We treated subnet mask as ip address and converted it into an integer by using `to_i` then used `to_s(2)` to convert the integer into binary form. Once we had the binary we counted the number of occurrence of digit 1 with `count("1")`.
 ```
 1
 2
