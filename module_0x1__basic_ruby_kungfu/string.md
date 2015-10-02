@@ -195,7 +195,7 @@ end
 puts 
 ```
 
-<br>
+<br><br><br>
 ---
 [1]: https://github.com/fazibear/colorize
 
