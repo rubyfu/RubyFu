@@ -28,10 +28,10 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 3. Clone github Forked RubyFu repository (`git clone https://github.com/[YOURGITBUBACCOUNT]/RubyFu`) 
 4. Create a [Gitbook][6] account.
 4. Go to Gitbook editor and Sign-in with your Gitbook account
-3. Add forked RubyFu repository to [Gitbook Editor][3] **Toolbar** >> **Book** >> **Repository Settings**.
+3. Add forked RubyFu repository to [Gitbook Editor][3] **Toolbar** >> **File** >> **Preferences** >> **GIT**.
 4. Start your awesome contribution.
 5. From Gitbook editor, **Sync** your changes to forked repository.
-6. From github, send a **Pull Request(PR)**
+6. From Github, send a **Pull Request(PR)**
 
 
 ### Contributing with Code
