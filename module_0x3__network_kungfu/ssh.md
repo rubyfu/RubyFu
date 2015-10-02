@@ -62,7 +62,10 @@ ssh localhost -p 1234
                               |-----------------|-----------------|
 ```
 
-
+**ssh-fw-tunnel.rb**
+```
+#!/usr/bin/env ruby 
+```
 
 
 ### Reverse SSH Tunnel 
