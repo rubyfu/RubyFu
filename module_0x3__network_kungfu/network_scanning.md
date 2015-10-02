@@ -30,3 +30,8 @@ puts "Average round-trip is #{avg}\n"
 puts "#{pingfails} packets were droped"
 ```
 
+
+
+
+<br><br><br>
+---
