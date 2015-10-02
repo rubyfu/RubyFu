@@ -8,7 +8,7 @@ gem install net-ssh
 
 
 ## Simple SSH client
-This is a very basic ssh client which sends and executes a command on remote system 
+This is a very basic ssh client which sends and executes commands on a remote system 
 ```ruby
 require 'net/ssh'
 
