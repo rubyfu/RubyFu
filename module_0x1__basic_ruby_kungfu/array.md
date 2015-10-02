@@ -20,7 +20,7 @@ I’ll assume the pattern was equal or less than “20280” and we are looking 
 ```ruby
 pattern_offset = pattern_create.enum_for(:scan , '9Ak0').map {Regexp.last_match.begin(0)}
 ```
-Note: This does not consider the little indean format, for that there is extra code should be written. For more info, please take a look on the following [code](https://github.com/KINGSABRI/BufferOverflow-Kit/blob/master/lib/pattern.rb).
+Note: This does not consider the little indean format, for that there is extra code should be written. For more info, please take a look on the following [code][1](https://github.com/KINGSABRI/BufferOverflow-Kit/blob/master/lib/pattern.rb).
 
 
 #### Generate all hexdecimal values from `\x00` to `\xff`
