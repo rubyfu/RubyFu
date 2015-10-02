@@ -37,3 +37,7 @@ short and unclean
 ```ruby
 256.times.map &:chr
 ```
+
+
+<br><br><br>
+---
