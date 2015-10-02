@@ -137,7 +137,7 @@ puts "Encrypted '#{plain_text}' to '#{encrypted = input(plain_text)}'"
 puts "Decrypted '#{encrypted}' to '#{decrypted = input(encrypted)}'"
 puts 'Success!' if plain_text == decrypted
 ```
-Source[^1]
+[Source | Understanding the Enigma machine with 30 lines of Ruby][1]
 
 
 
@@ -145,6 +145,6 @@ Source[^1]
 
 <br><br><br>
 ---
-[^1]: [Understanding the Enigma machine with 30 lines of Ruby"](http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game)
+[1]: http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game
 - [RubyNTLM](https://github.com/wimm/rubyntlm)
 
