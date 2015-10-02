@@ -16,7 +16,7 @@
     * [Ruby Programming - Commercial Training][10]
     * [Lynda: Ruby Essential Training - Commercial Training][11]
     * [Ruby from InfiniteSkills - Commercial Training][12]
-    * [Qick Ruby syntax Cheat sheet](http://overapi.com/ruby/)
+    * [Qick Ruby syntax Cheat sheet][13]
 * **Books**
     * [Ruby Learning](http://rubylearning.com/satishtalim/tutorial.html) 
     * [Working with TCP Sockets](http://www.jstorimer.com/products/working-with-tcp-sockets)
@@ -62,7 +62,7 @@
 [10]: https://www.youtube.com/watch?v=kdpfRLpu0FQ
 [11]: https://www.youtube.com/playlist?list=PLFI1RBqfVaOrMxWjIuFXbtGYtdmezgap3
 [12]: https://www.youtube.com/playlist?list=PLFI1RBqfVaOqvspvlnwS_ECczfRXnJee2
-[13]: 
+[13]: http://overapi.com/ruby/
 [14]: 
 [15]: 
 [16]: 
