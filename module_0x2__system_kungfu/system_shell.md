@@ -51,7 +51,7 @@ ruby ncat.rb -cv -r RHOST -p 443
 ```
 
 ## Bind and Reverse shell 
-This is an awesome implementation for a standalone  [bind](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/bind.rb) and [reverse](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/rubyrev.rb) shells scripts written by [Hood3dRob1n](https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells) on github . The bind shell requires authentication while reverse is not.
+This is an awesome implementation for a standalone  [bind][1] and [reverse][2] shells scripts written by [Hood3dRob1n][3] on github . The bind shell requires authentication while reverse is not.
 
 
 
@@ -93,3 +93,9 @@ end
 ```
 
 
+
+<br><br><br>
+---
+[1]: https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/bind.rb
+[2]: https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/rubyrev.rb
+[3]: https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells
