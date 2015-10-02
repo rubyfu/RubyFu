@@ -5,10 +5,10 @@
     * How to Gitbook [Videos]
         * [Create Gitbook online][2]
         * [Install Gitbook Editor (on Linux Ubuntu)][3]
-        * [Create Gitbook with Editor](https://www.youtube.com/watch?v=IkV2HQLAKHY)
-        * [Install the Rgitbook package](https://www.youtube.com/watch?v=V23NKHiHWg4)
+        * [Create Gitbook with Editor][4]
+        * [Install the Rgitbook package][5]
     * Markdown [Documentations]
-        * [Markdown docs - Gitbook](http://help.gitbook.com/format/markdown.html "Official docs")
+        * [Markdown docs - Gitbook Official docs][6]
         * [Mastering Markdown - Github](https://guides.github.com/features/mastering-markdown/ "Mastering Markdown")
 * **Beginner**
     * [Ruby Tutorials - Tutorialspoint](http://www.tutorialspoint.com/ruby/)
@@ -53,9 +53,9 @@
 [1]: https://www.gitbook.com/editor
 [2]: https://www.youtube.com/watch?v=kdpfRLpu0FQ
 [3]: https://www.youtube.com/watch?v=2e21bHRqG9M
-[4]: 
-[5]: 
-[6]: 
+[4]: https://www.youtube.com/watch?v=IkV2HQLAKHY
+[5]: https://www.youtube.com/watch?v=V23NKHiHWg4
+[6]: http://help.gitbook.com/format/markdown.html
 [7]: 
 [8]: 
 [9]: 
