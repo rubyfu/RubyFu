@@ -27,7 +27,7 @@ puts "RubyFu".green
 puts "RubyFu".yellow.bold
 ```
 
-or you can use external gem called [colorized](https://github.com/fazibear/colorize) for more fanzy options
+or you can use external gem called [colorized] for more fanzy options
 ```
 gem install colorize
 ```
@@ -195,7 +195,9 @@ end
 puts 
 ```
 
-
+<br>
+---
+[1]: https://github.com/fazibear/colorize
 
 
 
