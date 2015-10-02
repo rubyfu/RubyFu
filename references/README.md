@@ -18,9 +18,9 @@
     * [Ruby from InfiniteSkills - Commercial Training][12]
     * [Qick Ruby syntax Cheat sheet][13]
 * **Books**
-    * [Ruby Learning](http://rubylearning.com/satishtalim/tutorial.html) 
-    * [Working with TCP Sockets](http://www.jstorimer.com/products/working-with-tcp-sockets)
-    * [Working with Unix Processes](http://www.jstorimer.com/products/working-with-unix-processes)
+    * [Ruby Learning][14]
+    * [Working with TCP Sockets][15]
+    * [Working with Unix Processes][16]
     * [Working with Ruby Threads](http://www.jstorimer.com/products/working-with-ruby-threads)
     * [Ruby Cookbook](http://shop.oreilly.com/product/9780596523695.do)
     * [Learn Ruby The Hard Way](http://learnrubythehardway.org/book/)
@@ -63,9 +63,9 @@
 [11]: https://www.youtube.com/playlist?list=PLFI1RBqfVaOrMxWjIuFXbtGYtdmezgap3
 [12]: https://www.youtube.com/playlist?list=PLFI1RBqfVaOqvspvlnwS_ECczfRXnJee2
 [13]: http://overapi.com/ruby/
-[14]: 
-[15]: 
-[16]: 
+[14]: http://rubylearning.com/satishtalim/tutorial.html
+[15]: http://www.jstorimer.com/products/working-with-tcp-sockets
+[16]: http://www.jstorimer.com/products/working-with-unix-processes
 [17]: 
 [18]: 
 [19]: 
