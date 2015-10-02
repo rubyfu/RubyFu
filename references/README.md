@@ -8,8 +8,8 @@
         * [Create Gitbook with Editor][4]
         * [Install the Rgitbook package][5]
     * Markdown [Documentations]
-        * [Markdown docs - Gitbook Official docs][6]
-        * [Mastering Markdown - Github](https://guides.github.com/features/mastering-markdown/ "Mastering Markdown")
+        * [Markdown docs - Gitbook | Official docs][6]
+        * [Mastering Markdown - Github | Mastering Markdown][7]
 * **Beginner**
     * [Ruby Tutorials - Tutorialspoint](http://www.tutorialspoint.com/ruby/)
     * [Ruby programming Tutorials - Simple Free videos](https://www.thenewboston.com/videos.php?cat=50)
@@ -56,7 +56,7 @@
 [4]: https://www.youtube.com/watch?v=IkV2HQLAKHY
 [5]: https://www.youtube.com/watch?v=V23NKHiHWg4
 [6]: http://help.gitbook.com/format/markdown.html
-[7]: 
+[7]: https://guides.github.com/features/mastering-markdown/
 [8]: 
 [9]: 
 [10]: 
