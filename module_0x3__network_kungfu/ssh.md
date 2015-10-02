@@ -45,7 +45,7 @@ https://gist.github.com/KINGSABRI/2860989
                               |-----------------|-----------------|
 ```
 
-#### Forwarding local port
+#### Port Forward
 
 ```ruby
 #!/usr/bin/evn ruby
