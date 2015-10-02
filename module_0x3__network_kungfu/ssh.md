@@ -32,15 +32,8 @@ https://gist.github.com/KINGSABRI/2860989
 
 ## SSH Tunneling
 
-### Forward SSH Tunnel
 
-```
-                              |--------DMZ------|---Local Farm----|
-                              |                 |                 |
-|Attacker| ----SSH Tunnel---> | |SSH Server| <-SSH-> |Web server| |
-                              |                 |                 |
-                              |-----------------|-----------------|
-```
+### Local SSH Forward 
 
 ```ruby
 #!/usr/bin/evn ruby
@@ -54,6 +47,18 @@ Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
 end
 ```
 - Now ssh to the SSH server on port 1234
+
+
+### Forward SSH Tunnel
+
+```
+                              |--------DMZ------|---Local Farm----|
+                              |                 |                 |
+|Attacker| ----SSH Tunnel---> | |SSH Server| <-SSH-> |Web server| |
+                              |                 |                 |
+                              |-----------------|-----------------|
+```
+
 
 ```
 ssh localhost -p 1234
