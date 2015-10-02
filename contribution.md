@@ -23,9 +23,9 @@ There are several kind of contributions could help this book to get the best res
 ### Start contributing
 Please find all you need to know about gitbook and markdown editing in [References][1] section. As good start, you can refer to [how to use it from official readme][2]. You can easily use Gitbook [Desktop editor][3].
 
-1. Create a [Github][4] account.
+1. Create a [Github][5] account.
 2. Fork [RubyFu repository][4].
-3. Clone githut Forked RubyFu repository (cmd: `git clone https://github.com/[YOURGITBUBACCOUNT]/RubyFu`) 
+3. Clone github Forked RubyFu repository (`git clone https://github.com/[YOURGITBUBACCOUNT]/RubyFu`) 
 3. Add forked RubyFu repository to [Gitbook Editor][3] **Toolbar** >> **Book** >> **Repository Settings**.
 4. Start your awesome contribution.
 5. From Gitbook editor, **Sync** your changes to forked repository.
