@@ -16,7 +16,7 @@ Ruby provides class(IPAddr) for basic operations on IP address that can be used 
 ```ruby
 require 'ipaddr'
 ip = IPAddr.new("192.34.56.54/24")
-````
+```
 
 
 ### Calculating network prefix of an IP address from IP address and subnet mask.
