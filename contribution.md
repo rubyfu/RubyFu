@@ -81,8 +81,7 @@ Use triple ticks to highlight your commandline. ex.
 [3]: https://www.gitbook.com/editor
 [4]: https://github.com/KINGSABRI/RubyFu
 [5]: https://github.com
-[6]: 
-[7]: 
+
 
 
 
