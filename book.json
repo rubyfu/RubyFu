@@ -1,6 +1,4 @@
 {
-    "plugins": [
-        "anchors"
-    ],
+    "plugins": [],
     "pluginsConfig": {}
 }
