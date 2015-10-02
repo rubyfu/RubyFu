@@ -21,11 +21,11 @@
     * [Ruby Learning][14]
     * [Working with TCP Sockets][15]
     * [Working with Unix Processes][16]
-    * [Working with Ruby Threads](http://www.jstorimer.com/products/working-with-ruby-threads)
-    * [Ruby Cookbook](http://shop.oreilly.com/product/9780596523695.do)
-    * [Learn Ruby The Hard Way](http://learnrubythehardway.org/book/)
+    * [Working with Ruby Threads][17]
+    * [Ruby Cookbook][18]
+    * [Learn Ruby The Hard Way][19]
 * **Sites, Topics and Articls**
-    * [Rubymonk.com](https://rubymonk.com/)
+    * [Rubymonk.com][20]
     * [Byte manipulation in ruby](http://www.happybearsoftware.com/byte-manipulation-in-ruby.html)
     * [Ruby Format](http://www.dotnetperls.com/format)
 * **Hacking Tools built with ruby**
@@ -66,9 +66,9 @@
 [14]: http://rubylearning.com/satishtalim/tutorial.html
 [15]: http://www.jstorimer.com/products/working-with-tcp-sockets
 [16]: http://www.jstorimer.com/products/working-with-unix-processes
-[17]: 
-[18]: 
-[19]: 
-[20]: 
+[17]: http://www.jstorimer.com/products/working-with-ruby-threads
+[18]: http://shop.oreilly.com/product/9780596523695.do
+[19]: http://learnrubythehardway.org/book/
+[20]: https://rubymonk.com/
 [21]: 
 [22]: 
