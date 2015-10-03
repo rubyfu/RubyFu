@@ -47,7 +47,7 @@ https://gist.github.com/KINGSABRI/2860989
 
 #### Local Port Forwarding
 
-Run ssh-ltnnel.rb on the **SSH-Server** 
+Run ssh-ltnnel.rb on the **SSH Server** 
 
 **ssh-ltunnel.rb**
 ```ruby
@@ -63,7 +63,7 @@ Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
 end
 ```
 
-Now connect to the SSH-Server on port 3333 from your RDP client, you'll be prompt for the Web Server's RDP log-in screen
+Now connect to the **SSH Server** on port 3333 from your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
 
 ```
 rdesktop WebServer:3333
