@@ -116,7 +116,7 @@ Net::SCP.upload!(
     		        "SSHServer", 
                     "root",
                     "/rubyfu/file.txt", "/root/", 
-                    :recursive => true,
+                    #:recursive => true,    # Uncomment for recursive
                     :ssh => { :password => "123123" }
                 )
 ```
@@ -130,7 +130,7 @@ Net::SCP.download!(
     		        "SSHServer", 
                     "root",
                     "/root/", "/rubyfu/file.txt",
-                    :recursive => true,
+                    #:recursive => true,    # Uncomment for recursive
                     :ssh => { :password => "123123" }
                   )
 ```
