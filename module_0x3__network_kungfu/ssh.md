@@ -136,6 +136,7 @@ Net::SCP.download!(
 ---
 - [More SSH examples](http://ruby.about.com/sitesearch.htm?q=ruby+ssh&boost=3&SUName=ruby)
 - [Capistranorb.com](http://capistranorb.com/)
+- Net:SSH old docs with example
 
 
 
