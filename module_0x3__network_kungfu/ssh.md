@@ -116,7 +116,7 @@ require 'net/scp'
 Net::SCP.upload!(
 		 "SSHServer", 
                  "root",
-                 "/home/KING/file.txt", "/root/", 
+                 "/home/Rubyfu/file.txt", "/root/", 
                  :ssh => { :password => "123123" }
                 )
 ```
@@ -130,7 +130,7 @@ require 'net/scp'
 Net::SCP.download!(
 		 "SSHServer", 
                  "root",
-                 "/home/KING/file.txt", "/root/", 
+                 "/root/", "/home/Rubyfu/file.txt",, 
                  :ssh => { :password => "123123" }
                 )
 ```
