@@ -59,7 +59,8 @@ Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
   ssh.loop { true }
 end
 ```
-- Now ssh to the SSH SSH server on port 2222, you'll be prompt for the Web Server's ssh password
+
+Now ssh to the SSH SSH server on port 2222, you'll be prompt for the Web Server's ssh password
 
 ```
 ssh SshServer -p 1234
