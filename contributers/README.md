@@ -15,7 +15,7 @@ Big love to those people who support this book by any meaning.
 - William Coppola | @SubINacls
 
 ## Sponsors
-- [Security4arabs Community][1]
+- [Arab Security Community (Security4arabs)][1]
 
 
 <br><br><br>
