@@ -112,7 +112,6 @@ gem install net-scp
 ```ruby
 require 'net/scp'
 
-
 Net::SCP.upload!(
     		        "SSHServer", 
                     "root",
@@ -125,7 +124,6 @@ Net::SCP.upload!(
 
 ```ruby
 require 'net/scp'
-
 
 Net::SCP.download!(
     		        "SSHServer", 
