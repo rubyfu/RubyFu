@@ -55,7 +55,7 @@ Run ssh-ltnnel.rb on the **SSH Server**
 require 'net/ssh'
 
 Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
-  # Forward connections coming on port 3333 to port 3389 of attacker.zone
+  # Forward connections coming on port 3333 to port 3389 of WebServer
   ssh.forward.local('0.0.0.0', 3333, "WebServer", 3389)
 
   puts "[+] Starting SSH port forward tunnel"
