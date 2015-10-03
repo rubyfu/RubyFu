@@ -34,6 +34,7 @@ pry --simple-prompt
 - net-dns
 - snmp
 - net-ssh
+- net-scp
 - packetfu
 
 #### Module 0x4 | Web KungFu
