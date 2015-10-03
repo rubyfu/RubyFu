@@ -96,7 +96,7 @@ rdesktop localhost:3333
                               |--------DMZ------|---Local Farm----|
                               |                 |                 |
 |Attacker| <---SSH Tunnel---- | |SSH Server| <-RDP-> |Web server| |
-                              |                 |                 |
+  |->-|                       |                 |                 |
                               |-----------------|-----------------|
 ```
 
