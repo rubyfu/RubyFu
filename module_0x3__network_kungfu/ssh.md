@@ -69,7 +69,8 @@ Now connect to the **SSH Server** on port 3333 via your RDP client, you'll be pr
 rdesktop WebServer:3333
 ```
 
-Run ssh-ltnnel.rb on the **SSH Server** 
+Run ssh-rtnnel.rb on the **SSH Server** 
+
 **ssh-rtunnel.rb**
 ```
 #!/usr/bin/evn ruby
