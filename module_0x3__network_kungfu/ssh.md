@@ -45,8 +45,6 @@ https://gist.github.com/KINGSABRI/2860989
                               |-----------------|-----------------|
 ```
 
-#### Local Port Forwarding
-
 Run ssh-ltnnel.rb on the **SSH Server** 
 
 **ssh-ltunnel.rb**
@@ -69,6 +67,15 @@ Now connect to the **SSH Server** on port 3333 via your RDP client, you'll be pr
 rdesktop WebServer:3333
 ```
 
+
+### Reverse SSH Tunnel 
+```
+                              |--------DMZ------|---Local Farm----|
+                              |                 |                 |
+|Attacker| <---SSH Tunnel---- | |SSH Server| <-RDP-> |Web server| |
+  |->-|                       |                 |                 |
+                              |-----------------|-----------------|
+```
 Run ssh-rtnnel.rb on the **SSH Server** 
 
 **ssh-rtunnel.rb**
@@ -90,16 +97,6 @@ Now SS from the **SSH Server** to **localhost** on the localhost's ssh port then
 ```
 rdesktop localhost:3333
 ```
-
-### Reverse SSH Tunnel 
-```
-                              |--------DMZ------|---Local Farm----|
-                              |                 |                 |
-|Attacker| <---SSH Tunnel---- | |SSH Server| <-RDP-> |Web server| |
-  |->-|                       |                 |                 |
-                              |-----------------|-----------------|
-```
-
 
 
 
