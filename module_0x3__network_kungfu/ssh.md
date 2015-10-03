@@ -47,6 +47,9 @@ https://gist.github.com/KINGSABRI/2860989
 
 #### Local Port Forwarding
 
+Run ssh-ltnnel.rb on the **SSH Server** 
+
+**ssh-ltunnel.rb**
 ```ruby
 #!/usr/bin/evn ruby
 require 'net/ssh'
