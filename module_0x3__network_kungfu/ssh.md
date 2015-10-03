@@ -129,7 +129,7 @@ require 'net/scp'
 
 Net::SCP.download!(
 		 "SSHServer", 
-                 "rubyfu",
+                 "root",
                  "/root/", "/home/rubyfu/file.txt",, 
                  :ssh => { :password => "123123" }
                 )
