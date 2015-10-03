@@ -116,7 +116,7 @@ require 'net/scp'
 Net::SCP.upload!(
 		 "SSHServer", 
                  "root",
-                 "/home/KING/cuneiform-out.txt", "/root/", 
+                 "/home/KING/file.txt", "/root/", 
                  :ssh => { :password => "123123" }
                 )
 ```
