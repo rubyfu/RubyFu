@@ -10,10 +10,8 @@ Humbly detailed send GET script
 #
 require "net/http"
 
-
 host       = ARGV[0] || "172.16.50.139"
 session_id = ARGV[1] || "3c0e9a7edfa6682cb891f1c3df8a33ad"
-
 
 def send_sqli(query)
 
