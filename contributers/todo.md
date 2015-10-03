@@ -1,6 +1,5 @@
 # TODO
 
-- Complete SSH tunneling 
 - Network ping sweeping
 - SMB scanner
 - Add enumeration
