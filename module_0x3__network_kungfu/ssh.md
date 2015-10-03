@@ -40,7 +40,7 @@ https://gist.github.com/KINGSABRI/2860989
 ```
                               |--------DMZ------|---Local Farm----|
                               |                 |                 |
-|Attacker| ----SSH Tunnel---> | |SSH Server| <-SSH-> |Web server| |
+|Attacker| ----SSH Tunnel---> | |SSH Server| <-RDP-> |Web server| |
                               |                 |                 |
                               |-----------------|-----------------|
 ```
@@ -55,9 +55,9 @@ Run ssh-ltnnel.rb on the **SSH Server**
 require 'net/ssh'
 
 Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
-  # Forward connections coming on port 2222 to port 22 of attacker.zone
-  ssh.forward.local('0.0.0.0', 2222, "WebServer", 22)
-  
+  # Forward connections coming on port 3333 to port 3389 of attacker.zone
+  ssh.forward.local('0.0.0.0', 3333, "WebServer", 3389)
+
   puts "[+] Starting SSH port forward tunnel"
   ssh.loop { true }
 end
@@ -82,7 +82,7 @@ require 'net/ssh/gateway'
 ```
                               |--------DMZ------|---Local Farm----|
                               |                 |                 |
-|Attacker| <---SSH Tunnel---- | |SSH Server| <-SSH-> |Web server| |
+|Attacker| <---SSH Tunnel---- | |SSH Server| <-RDP-> |Web server| |
                               |                 |                 |
                               |-----------------|-----------------|
 ```
