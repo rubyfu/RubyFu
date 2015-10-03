@@ -56,7 +56,7 @@ Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
 
   ssh.forward.local('0.0.0.0', 3333, "WebServer", 3389)
 
-  puts "[+] Starting SSH port forward tunnel"
+  puts "[+] Starting SSH forward tunnel"
   ssh.loop { true }
 end
 ```
