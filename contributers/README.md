@@ -9,9 +9,11 @@ Big love to those people who support this book by any meaning.
 ## Founder
 - KING SABRI | @KINGSABRI
 
-## Contributors
+## Authors 
 - KING SABRI | @KINGSABRI
 - Bashar | @b_free2
+
+## Contributors
 - William Coppola | @SubINacls
 
 ## Sponsors
