@@ -132,7 +132,7 @@ Net::SCP.download!(
                  "root",
                  "/root/", "/home/rubyfu/file.txt",, 
                  :ssh => { :password => "123123" }
-                )
+                  )
 ```
 
 
