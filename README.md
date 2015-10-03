@@ -9,7 +9,7 @@ This book is a collection of ideas, tricks and skills that could be useful for H
 
 
 ### Who should read this book?
-Ideally, Hackers!
+Hackers, and anybody else.
 
 ### Organization of the book
 ##### Module 0x1 | Basic Ruby KungFu
