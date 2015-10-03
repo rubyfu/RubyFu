@@ -102,6 +102,31 @@ rdesktop localhost:3333
 
 ## Copy files via SSH (SCP)
 
+- To install scp gem
+```
+gem install net-scp
+```
+
+- Upload file 
+
+```ruby
+require 'net/scp'
+
+
+Net::SCP.upload!(
+		 "1.1.1.3", 
+                 "root",
+                 "/home/KING/cuneiform-out.txt", "/root/", 
+                 :ssh => { :password => "123123" }
+                )
+```
+
+- Download file 
+
+```ruby
+```
+
+
 
 
 <br><br><br>
