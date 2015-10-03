@@ -70,7 +70,7 @@ ssh SshServer -p 2222
 ```
 
 
-**ssh-fw-tunnel.rb**
+**ssh-rtunnel.rb**
 ```
 #!/usr/bin/env ruby 
 require 'net/ssh/gateway'
