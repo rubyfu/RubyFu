@@ -79,7 +79,7 @@ rdesktop WebServer:3333
 Run ssh-rtnnel.rb on the **SSH Server** 
 
 **ssh-rtunnel.rb**
-```
+```ruby
 #!/usr/bin/evn ruby
 require 'net/ssh'
 
