@@ -149,7 +149,6 @@ else
 end
 sid  = ARGV[2] || 'PLSExtProc'
 
-
 #
 # Build TNS Packet
 #
