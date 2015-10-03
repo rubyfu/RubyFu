@@ -36,6 +36,7 @@
    * [Databases](module_0x4__web_kungfu/databases.md)
    * [Extending BurpSuite](module_0x4__web_kungfu/extending_burpsuite.md)
    * [Browser Manipulation](module_0x4__web_kungfu/browser_manipulation.md)
+   * Ruby2JavaScript
 * [Module 0x5 | Exploitation KungFu](module_0x5__exploitation_kungfu/README.md)
    * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
