@@ -124,6 +124,15 @@ Net::SCP.upload!(
 - Download file 
 
 ```ruby
+require 'net/scp'
+
+
+Net::SCP.download!(
+		 "SSHServer", 
+                 "root",
+                 "/home/KING/file.txt", "/root/", 
+                 :ssh => { :password => "123123" }
+                )
 ```
 
 
