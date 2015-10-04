@@ -25,7 +25,7 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 
 1. Create a [Github][5] account.
 2. Fork [RubyFu repository][4].
-3. Clone github Forked RubyFu repository (`git clone https://github.com/[YOURGITBUBACCOUNT]/RubyFu`) 
+3. Clone github Forked RubyFu repository (`git clone https://github.com/[YOURGITHUBACCOUNT]/RubyFu`) 
 4. Create a [Gitbook][6] account.
 4. Go to [**Gitbook editor**][3] and Sign-in with your Gitbook account
 5. Press **Import** button to import the cloned repository. Then, you'll find it in **LOCAL LIBRARY** tab
