@@ -1,10 +1,10 @@
 # Contributors
 
-Big love to those people who support this book by any meaning.
 
 <center>![](../images/other/Ruby_Loves_Us.jpg)
 
 
+<center>**Big love to those people who support this book by any meaning.**
 
 ## Founder
 - KING SABRI | @KINGSABRI
