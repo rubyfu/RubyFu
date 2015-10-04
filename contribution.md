@@ -13,7 +13,7 @@ There are several kind of contributions could help this book to get the best res
     * Design enhancements
     * Ideas and requests
     * Any other
-* Contribution by spread the book in social media and information security communities.
+* Contribution by spread the book in social media and IS communities.
 * Contribution by adding more resources and references.
 * Contribution by donation.
 
