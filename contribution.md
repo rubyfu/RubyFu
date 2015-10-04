@@ -9,11 +9,11 @@ There are several kind of contributions could help this book to get the best res
 * Contribution by enhancing the code quality or alternatives.
 * Contribution by enhancing the book quality:
     * Structure enhancements
-    * Spelling enhancements
+    * Spelling, proofreading enhancements
     * Design enhancements
     * Ideas and requests
     * Any other
-* Contribution by spread the book in social media and information security communities.
+* Contribution by spread the book in social media and IS communities. (use hashtag `#Rubyfu`)
 * Contribution by adding more resources and references.
 * Contribution by donation.
 
@@ -25,13 +25,14 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 
 1. Create a [Github][5] account.
 2. Fork [RubyFu repository][4].
-3. Clone github Forked RubyFu repository (`git clone https://github.com/[YOURGITBUBACCOUNT]/RubyFu`) 
+3. Clone github Forked RubyFu repository (`git clone https://github.com/[YourGithubAccount]/RubyFu`) 
 4. Create a [Gitbook][6] account.
-4. Go to **Gitbook editor** and Sign-in with your Gitbook account
-3. Add forked RubyFu repository to [Gitbook Editor][3] **Toolbar** >> **File** >> **Preferences** >> **GIT**.
+4. Go to [**Gitbook editor**][3] and Sign-in with your Gitbook account
+5. Press **Import** button to import the cloned repository. Then, you'll find it in **LOCAL LIBRARY** tab
+3. Add forked RubyFu repository Github URL to Gitbook Editor **Toolbar** >> **File** >> **Preferences** >> **GIT**.
 4. Start your awesome contribution.
 5. From Gitbook editor, **Sync** your changes to forked repository.
-6. From Github, send a **Pull Request(PR)**
+6. From Github, send a **Pull Request(PR)** to **Contributions** branch.
 
 
 ### Contributing with Code

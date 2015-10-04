@@ -1,6 +1,5 @@
 # Module 0x3 | Network KungFu
 
-http://www.evilsocket.net/2015/02/12/rubertooth-a-complete-ruby-porting-of-the-ubertooth-libraries-and-utilities/#sthash.sNhWFzor.dpbs?utm_source=rubyweekly&utm_medium=email
 
 ## IP Address Operation
 In network programming, we always perform some operations on IP addresses. Following are some examples.
@@ -16,7 +15,7 @@ Ruby provides class(IPAddr) for basic operations on IP address that can be used 
 ```ruby
 require 'ipaddr'
 ip = IPAddr.new("192.34.56.54/24")
-````
+```
 
 
 ### Calculating network prefix of an IP address from IP address and subnet mask.
@@ -143,7 +142,7 @@ false
 
 ### Converting subnet mask from dot-decimal notation to integer.
 
-We treated subnet mask as ip address and converted it into an integer by using `to_i` then used `to_s(2)` to convert the integer into binary form. Once we had the binary we counted the number of occurrence of digit 1 with `count(“1″)`.
+We treated subnet mask as ip address and converted it into an integer by using `to_i` then used `to_s(2)` to convert the integer into binary form. Once we had the binary we counted the number of occurrence of digit 1 with `count("1")`.
 ```
 1
 2

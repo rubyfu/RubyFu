@@ -1,4 +1,7 @@
 {
-    "plugins": [],
+    "plugins": [
+        "expandable-chapters",
+        "anchors"
+    ],
     "pluginsConfig": {}
 }

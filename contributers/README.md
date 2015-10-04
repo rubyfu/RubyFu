@@ -1,21 +1,23 @@
 # Contributors
 
-Big love to those people who support this book by any meaning.
 
 <center>![](../images/other/Ruby_Loves_Us.jpg)
 
 
-
+<center>**Big love to those people who support this book by any meaning.**
+<br><br><br>
 ## Founder
 - KING SABRI | @KINGSABRI
 
-## Contributors
+## Authors 
 - KING SABRI | @KINGSABRI
 - Bashar | @b_free2
+
+## Contributors
 - William Coppola | @SubINacls
 
 ## Sponsors
-- [Security4arabs Community][1]
+- [Arab Security Community (Security4arabs)][1]
 
 
 <br><br><br>
