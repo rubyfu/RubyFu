@@ -9,7 +9,7 @@ There are several kind of contributions could help this book to get the best res
 * Contribution by enhancing the code quality or alternatives.
 * Contribution by enhancing the book quality:
     * Structure enhancements
-    * Spelling enhancements
+    * Spellchecking, proofreading enhancements
     * Design enhancements
     * Ideas and requests
     * Any other
