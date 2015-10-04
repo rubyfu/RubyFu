@@ -17,7 +17,7 @@ Ok, if you believe you're a beginner and need to worm-up, here's a list of tasks
     - Create simple TCP server listening on port 3211. This server prints `date and time` .
     - Create simple TCP client to connect to previous server and print what server send.
 
-Good list of [References][1] under Biggener part.
+Good list of [References][1] under Beginners part.
 
 
 <br><br><br>
