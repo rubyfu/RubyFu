@@ -8,9 +8,13 @@ Ruby CoffeeScript is a bridge to the official CoffeeScript compiler. CoffeeScrip
 ### Quick CoffeeScript Review 
 
 
+- To install CoffeScript 
+```
+npm install -g coffee-script
+```
 
 
-- To install CofeeScript 
+- To install CoffeeScript gem
 ```
 gem install coffee-script
 ```
