@@ -28,6 +28,16 @@ coffee --watch --compile script.coffee
 gem install coffee-script
 ```
 
+- Convert CoffeeScript file to Javascript 
+
+```ruby
+#!/usr/bin/env ruby
+require 'coffee-script'
+if ARGF
+  file = File.open("#{ARGV[0]}.js", 'a')
+  file.write CoffeeScript.compile(ARGF.read)
+end
+```
 
 
 
