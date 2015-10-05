@@ -51,7 +51,7 @@ end
 
 puts lm_hash "P@ssw0rd"
 ```
-[Source: RubyNTLM][1]
+[Source | RubyNTLM][1]
 
 ### Windows NTLMv1 Password hash
 ```ruby
