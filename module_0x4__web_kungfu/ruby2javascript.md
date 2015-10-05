@@ -31,7 +31,6 @@ gem install coffee-script
 
 
 
-> **Personal Opinion:** CoffeeScript is great but still forces me to write code with CoffeeScript code style not Ruby style
 
 
 
