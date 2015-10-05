@@ -34,11 +34,11 @@ To under stand this codes let's to explain it
 \033  [0;  30m
  ^     ^    ^    
  |     |    |
- |     |    |-------------------------------------------------- [The color number]
- |     |---------------------- [The modifier]                    (ends with "m")
- |                                 | 0 - normal                     
- |-- [Escaped character]           | 1 - bold
-    (you can use "\e")             | 2 - normal again
+ |     |    |--------------------------------------- [The color number]
+ |     |-------------------- [The modifier]            (ends with "m")
+ |-- [Escaped character]           | 0 - normal                     
+ |   (you can use "\e")            | 1 - bold
+                                   | 2 - normal again
                                    | 3 - background color
                                    | 4 - underline
                                    | 5 - blinking
