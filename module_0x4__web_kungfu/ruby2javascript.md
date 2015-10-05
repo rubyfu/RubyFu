@@ -39,7 +39,10 @@ if ARGF
 end
 ```
 
-
+Run it
+```
+ruby exploit.coffee 
+```
 
 
 
