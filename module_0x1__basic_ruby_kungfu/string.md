@@ -37,7 +37,7 @@ To under stand this codes let's to explain it
  |     |    |---------------------------------------------------------------- The color number 
  |     |--------------------------- The modifier                                (ends with "m")
  |                                        | 0 - normal                     
- |-- Escaped char.                        | 1 - bold
+ |-- Escaped chararacter                        | 1 - bold
     (you can use "\e")                    | 2 - normal again
                                           | 3 - background color
                                           | 4 - underline
