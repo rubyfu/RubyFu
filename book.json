@@ -1,8 +1,7 @@
 {
     "plugins": [
         "expandable-chapters",
-        "anchors",
-        "highlight"
+        "anchors"
     ],
     "pluginsConfig": {}
 }
