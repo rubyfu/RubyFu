@@ -2,7 +2,7 @@
     "plugins": [
         "expandable-chapters",
         "anchors",
-        "highlight.js"
+        "highlight"
     ],
     "pluginsConfig": {}
 }
