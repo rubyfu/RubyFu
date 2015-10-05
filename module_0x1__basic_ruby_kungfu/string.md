@@ -32,15 +32,16 @@ To under stand this codes let's to explain it
 ```
 
 \033  [0;  30m
- ^     ^
- |     |
- |     |
- |     |--------------------------- The modifier -| 0 - normal 
- |-- Escaped char. you can use \e                 | 1 - bold
-                                                  | 2 - normal again
-                                                  | 3 - background color
-                                                  | 4 - underline
-                                                  | 5 - blinking
+ ^     ^    ^    
+ |     |    |
+ |     |    |---------------------------------------------------------------- The color number 
+ |     |--------------------------- The modifier                                (ends with "m")
+ |                                        | 0 - normal                     
+ |-- Escaped char.                        | 1 - bold
+    (you can use "\e")                    | 2 - normal again
+                                          | 3 - background color
+                                          | 4 - underline
+                                          | 5 - blinking
 ```
 
 or you can use external gem called [colorized] for more fancy options
