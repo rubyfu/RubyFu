@@ -48,4 +48,4 @@ gem install opal opal-jquery
 
 <br><br><br>
 ---
-[1] http://coffeescript.org
+[1]: http://coffeescript.org
