@@ -3,7 +3,7 @@
 
 
 ## CoffeeScript
-Ruby CoffeeScript is a bridge to the official CoffeeScript compiler. CoffeeScript combines the awesomeness of Ruby and Python syntax 
+Ruby CoffeeScript is a bridge to the official CoffeeScript compiler. CoffeeScript combines the awesomeness of Ruby and Python syntax.
 
 - To install CofeeScript 
 ```
