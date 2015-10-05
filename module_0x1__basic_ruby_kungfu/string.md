@@ -27,7 +27,10 @@ puts "RubyFu".green
 puts "RubyFu".yellow.bold
 ```
 
-or you can use external gem called [colorized] for more fanzy options
+To under stand this codes let's to explain the main 
+
+
+or you can use external gem called [colorized] for more fancy options
 ```
 gem install colorize
 ```
