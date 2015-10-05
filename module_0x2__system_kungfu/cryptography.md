@@ -65,7 +65,7 @@ puts ntlmv1
 require 'openssl'
 ntlmv1 = OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
 userdomain = "administrator".encode('UTF-16LE')
-ntlmv2 OpenSSL::HMAC.digest(OpenSSL::Digest::MD5.new, ntlmv1, userdomain)
+ntlmv2 = OpenSSL::HMAC.digest(OpenSSL::Digest::MD5.new, ntlmv1, userdomain)
 puts ntlmv2
 ```
 
