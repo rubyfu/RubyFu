@@ -3,7 +3,7 @@
 
 
 ## CoffeeScript
- is a programming language that transcompiles to JavaScript. It adds syntactic sugar inspired by Ruby, Python and Haskell in an effort to enhance JavaScript's brevity and readability.
+[CoffeeScript][1] is a programming language that transcompiles to JavaScript. It adds syntactic sugar inspired by Ruby, Python and Haskell in an effort to enhance JavaScript's brevity and readability.
  
 **Ruby** CoffeeScript gem is a bridge to the official CoffeeScript compiler. 
 
@@ -41,3 +41,11 @@ Opal is a Ruby to JavaScript source-to-source compiler. It also has an implement
 ```
 gem install opal opal-jquery
 ```
+
+
+
+
+
+<br><br><br>
+---
+[1] http://coffeescript.org
