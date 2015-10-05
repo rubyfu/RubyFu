@@ -7,7 +7,6 @@
  
 **Ruby** CoffeeScript gem is a bridge to the official CoffeeScript compiler. 
 
-
 ### Quick CoffeeScript Review 
 
 
