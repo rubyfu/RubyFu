@@ -5,7 +5,6 @@
 ## CoffeeScript
 [CoffeeScript][1] is a programming language that transcompiles to JavaScript. It adds syntactic sugar inspired by Ruby, Python and Haskell in an effort to enhance JavaScript's brevity and readability.
  
-**Ruby** CoffeeScript gem is a bridge to the official CoffeeScript compiler. 
 
 ### Quick CoffeeScript Review 
 
@@ -21,6 +20,8 @@ npm install -g coffee-script
 coffee --watch --compile script.coffee 
 ```
 
+### Ruby CoffeScript gem 
+**Ruby** CoffeeScript gem is a bridge to the official CoffeeScript compiler. 
 
 - To install CoffeeScript gem
 ```
