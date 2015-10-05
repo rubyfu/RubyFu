@@ -41,7 +41,7 @@ end
 
 Run it
 ```
-ruby exploit.coffee 
+ruby cofee2js.rb exploit.coffee 
 ```
 
 
