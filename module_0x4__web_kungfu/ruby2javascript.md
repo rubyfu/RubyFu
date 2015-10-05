@@ -9,10 +9,16 @@
 
 ### Quick CoffeeScript Review 
 
+Here a quick how to if CoffeeScript in general 
 
 - To install CoffeScript 
 ```
 npm install -g coffee-script
+```
+
+
+```
+coffee --watch --compile script.coffee 
 ```
 
 
