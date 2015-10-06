@@ -17,7 +17,7 @@ gem install selenium-webdriver
 ### GET Request 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require "selenium-webdriver"
 
