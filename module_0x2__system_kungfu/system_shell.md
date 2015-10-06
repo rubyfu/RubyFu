@@ -31,6 +31,7 @@ If you what it as more flixable script file
 
 ```ruby
 #!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
 require 'socket'
 if ARGV[0].nil? || ARGV[1].nil?
     puts "ruby #{__FILE__}.rb [HACKER_IP HACKER_PORT]\n\n"
