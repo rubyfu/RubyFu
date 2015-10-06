@@ -186,8 +186,13 @@ Sometime you'll need to send XSS GET request from URL like `http://app/search?q=
 require 'watir-webdriver'
 
 browser = Watir::Browser.new :firefox
-browser.goto "http://www.altoromutual.com/search.aspx?"
-browser.text_field(name: 'txtSearch').set("<img src=x onerror='alert(1)'>")
+begin 
+    browser.goto("http://www.altoromutual.com/search.aspx?txtSearch=<img src=x onerror=alert(1)>")
+rescue Selenium::WebDriver::Error::UnhandledAlertError
+    browser.refresh
+    wait.until {browser.alert.exists?}
+end
+
 btn = browser.button(value: 'Go')
 puts btn.exists?
 btn.click
