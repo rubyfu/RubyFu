@@ -198,7 +198,7 @@ if @browser.alert.exists?
     puts "[+] Exploit found!
     browser.close
 end
-    ```
+```
 
 ### POST Request 
 
