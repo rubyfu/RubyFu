@@ -197,7 +197,7 @@ end
 
 if browser.alert.exists? 
   browser.alert.ok
-  puts "[+] Exploit found!
+  puts "[+] Exploit found!"
   browser.close
 end
 ```
