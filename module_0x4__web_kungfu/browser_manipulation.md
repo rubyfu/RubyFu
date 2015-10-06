@@ -181,7 +181,7 @@ Sometime you'll need to send XSS GET request from URL like `http://app/search?q=
 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'watir-webdriver'
 
