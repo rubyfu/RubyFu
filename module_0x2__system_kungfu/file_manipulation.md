@@ -5,6 +5,8 @@ Simple script to hide a file `file.pdf` in an image `image.png` then write it in
 Then, it recovers the `file.pdf` from `steg.png` to `hola.pdf`.
 
 ```ruby
+#!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
 sec_file = File.read 'file.pdf'
 nor_file = File.read 'image.png'
 sep = '*------------------------*'
@@ -28,6 +30,7 @@ File.open('hola.pdf', 'wb') {|file| file.print recov_file}
 **hex-simple.rb**
 ```ruby
 #!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
 # Simple file to hex converter script
 #
 file_name = ARGV[0]
