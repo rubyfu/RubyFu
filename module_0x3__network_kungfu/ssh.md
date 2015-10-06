@@ -9,6 +9,8 @@ gem install net-ssh
 ## Simple SSH client
 This is a very basic ssh client which sends and executes commands on a remote system 
 ```ruby
+#!/usr/bin/evn ruby
+# KING SABRI | @KINGSABRI
 require 'net/ssh'
 
 @hostname = "localhost"
