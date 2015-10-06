@@ -85,7 +85,7 @@ I've read a how-to about [bash Prompt cursor movement][2] and I found it it's co
 So to test that I did the following PoC 
 ```ruby
 #!/usr/bin/env ruby
-
+# KING SABRI | @KINGSABRI
 (1..3).map do |num|
   print "\rNumber: #{num}"
   sleep 0.5
