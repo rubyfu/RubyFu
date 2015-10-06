@@ -195,10 +195,10 @@ rescue Selenium::WebDriver::Error::UnhandledAlertError
     wait.until {browser.alert.exists?}
 end
 
-if @browser.alert.exists? 
-    @browser.alert.ok
-    puts "[+] Exploit found!
-    browser.close
+if browser.alert.exists? 
+  browser.alert.ok
+  puts "[+] Exploit found!
+  browser.close
 end
 ```
 
