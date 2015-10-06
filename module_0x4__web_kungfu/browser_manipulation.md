@@ -177,7 +177,7 @@ btn.click
 # browser.close
 ```
 
-Sometime you'll need to send XSS GET request from URL like `http://app/search?q=<script>alert</script>`. You'll face a known error `Selenium::WebDriver::Error::UnhandledAlertError: Unexpected modal dialog` if the alert box popped up but it you do refresh page for the sent payload it'll work so the fix for this issue is the following
+Sometime you'll need to send XSS GET request from URL like `http://app/search?q=<script>alert</script>`. You'll face a known error `Selenium::WebDriver::Error::UnhandledAlertError: Unexpected modal dialog` if the alert box popped up but it you do refresh page for the sent payload it'll work so the fix for this issue is the following.
 
 ```ruby
 #!/usr/bin/env ruby
