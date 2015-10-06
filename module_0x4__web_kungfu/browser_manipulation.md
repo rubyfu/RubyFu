@@ -91,7 +91,7 @@ Let's test the page against XSS vulnerability. First I'll list what kind of acti
 **selenium-xss.rb**
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'selenium-webdriver'
 
@@ -163,7 +163,7 @@ gem install watir-webdriver
 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'watir-webdriver'
 
