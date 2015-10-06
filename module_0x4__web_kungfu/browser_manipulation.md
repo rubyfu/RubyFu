@@ -206,7 +206,7 @@ end
 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'watir-webdriver'
 
