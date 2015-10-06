@@ -193,9 +193,12 @@ rescue Selenium::WebDriver::Error::UnhandledAlertError
     wait.until {browser.alert.exists?}
 end
 
-btn = browser.button(value: 'Go')
-puts btn.exists?
-btn.click
+if @browser.alert.exists? 
+    @browser.alert.ok
+    puts "[+] Exploit found!
+    browser.close
+end
+    
 
 # browser.close
 ```
