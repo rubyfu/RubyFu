@@ -116,6 +116,7 @@ puts ""
 
 So far so good, but why don't we make it as ruby methods for more elegant usage? so I came up with the following
 ```ruby
+# KING SABRI | @KINGSABRI
 class String
   def mv_up(n=1)
     cursor(self, "\033[#{n}A")
@@ -159,6 +160,7 @@ end
 Then as PoC, I've used the same previous one (after updating String class on-the-fly in the same script)
 ```ruby
 #!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
 # Level 1
 (1..3).map do |num|
   print "\rNumber: #{num}"
