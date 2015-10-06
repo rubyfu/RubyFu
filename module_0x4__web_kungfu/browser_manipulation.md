@@ -186,6 +186,8 @@ Sometime you'll need to send XSS GET request from URL like `http://app/search?q=
 require 'watir-webdriver'
 
 browser = Watir::Browser.new :firefox
+wait = Selenium::WebDriver::Wait.new(:timeout => 20)
+
 begin 
     browser.goto("http://www.altoromutual.com/search.aspx?txtSearch=<img src=x onerror=alert(1)>")
 rescue Selenium::WebDriver::Error::UnhandledAlertError
