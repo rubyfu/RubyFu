@@ -62,7 +62,7 @@ Here a very basic and simple SQL-injection solid scanner, develop it as far as y
 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 # Very basic SQLi scanner!
 #
 require 'net/http'
