@@ -177,6 +177,24 @@ btn.click
 # browser.close
 ```
 
+Sometime you'll need to send XSS GET request from URL like `http://app/search?q=<script>alert</script>`. You'll face a known error `Selenium::WebDriver::Error::UnhandledAlertError: Unexpected modal dialog` if the alert box popped up but it you do refresh page for the sent payload it'll work so the fix for this issue is the following
+
+```ruby
+#!/usr/bin/env ruby
+#
+#
+require 'watir-webdriver'
+
+browser = Watir::Browser.new :firefox
+browser.goto "http://www.altoromutual.com/search.aspx?"
+browser.text_field(name: 'txtSearch').set("<img src=x onerror='alert(1)'>")
+btn = browser.button(value: 'Go')
+puts btn.exists?
+btn.click
+
+# browser.close
+```
+
 ### POST Request 
 
 ```ruby
