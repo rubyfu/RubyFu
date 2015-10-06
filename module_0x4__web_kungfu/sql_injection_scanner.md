@@ -7,7 +7,7 @@ The is a very basic script take your given payload and send it to the vulnerable
 
 ```ruby
 #!/usr/bin/evn ruby
-#
+# KING SABRI | @KINGSABRI
 # Send your payload from command line
 #
 require "net/http"
