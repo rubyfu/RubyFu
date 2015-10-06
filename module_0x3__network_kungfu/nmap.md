@@ -41,6 +41,8 @@ each option like `nmap.syn_scan` or `nmap.xml` is considered as a *Task*. [Docum
 #### **`TO BE COMPLETED`**
 
 ```ruby
+#!/usr/bin/evn ruby
+# KING SABRI | @KINGSABRI
 require 'nmap/program'
 
 Nmap::Program.scan do |nmap|
