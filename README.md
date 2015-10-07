@@ -12,7 +12,7 @@ This book is a collection of ideas, tricks and skills that could be useful for H
 Ideally, Hackers!
 
 ### Organization of the book
-##### Module 0x1 | Basic Ruby KungFu
+##### Module 0x1 | [Basic Ruby KungFu][1]
 ##### Module 0x2 | System KungFu
 ##### Module 0x3 | Network KungFu
 ##### Module 0x4 | Web KungFu
