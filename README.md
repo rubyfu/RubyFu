@@ -13,7 +13,7 @@ Ideally, Hackers!
 
 ### Organization of the book
 ##### Module 0x1 | [Basic Ruby KungFu][1]
-##### Module 0x2 | System KungFu
+##### Module 0x2 | [System KungFu][2]
 ##### Module 0x3 | Network KungFu
 ##### Module 0x4 | Web KungFu
 ##### Module 0x5 | Exploitation KungFu
@@ -23,7 +23,7 @@ Ideally, Hackers!
 <br><br><br>
 ---
 [1]: module_0x1__basic_ruby_kungfu/README.md
-[2]: 
+[2]: module_0x2__system_kungfu/README.md
 [3]: 
 [4]: 
 [5]: 
