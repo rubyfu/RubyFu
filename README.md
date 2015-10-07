@@ -22,7 +22,7 @@ Ideally, Hackers!
 
 <br><br><br>
 ---
-[1]: 
+[1]: module_0x1__basic_ruby_kungfu/README.md
 [2]: 
 [3]: 
 [4]: 
