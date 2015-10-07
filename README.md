@@ -19,3 +19,12 @@ Ideally, Hackers!
 ##### Module 0x5 | Exploitation KungFu
 ##### Module 0x6 | Reverse Engineering KungFu
 
+
+<br><br><br>
+---
+[1]: 
+[2]: 
+[3]: 
+[4]: 
+[5]: 
+[6]: 
