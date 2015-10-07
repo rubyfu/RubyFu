@@ -24,7 +24,7 @@ Ideally, Hackers!
 ---
 [1]: module_0x1__basic_ruby_kungfu/README.md
 [2]: module_0x2__system_kungfu/README.md
-[3]: 
-[4]: 
-[5]: 
-[6]: 
+[3]: module_0x3__network_kungfu/README.md
+[4]: module_0x4__web_kungfu/README.md
+[5]: module_0x5__exploitation_kungfu/README.md
+[6]: module_0x6__reverse_engineering/README.md
