@@ -14,10 +14,10 @@ Ideally, Hackers!
 ### Organization of the book
 ##### Module 0x1 | [Basic Ruby KungFu][1]
 ##### Module 0x2 | [System KungFu][2]
-##### Module 0x3 | Network KungFu
-##### Module 0x4 | Web KungFu
-##### Module 0x5 | Exploitation KungFu
-##### Module 0x6 | Reverse Engineering KungFu
+##### Module 0x3 | [Network KungFu][3]
+##### Module 0x4 | [Web KungFu][4]
+##### Module 0x5 | [Exploitation KungFu][5]
+##### Module 0x6 | [Reverse Engineering KungFu][6]
 
 
 <br><br><br>
