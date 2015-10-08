@@ -11,9 +11,9 @@
 
 ## Authors 
 - KING SABRI | @KINGSABRI
-- Bashar | @b_free2
 
 ## Contributors
+- Bashar | @b_free2
 - William Coppola | @SubINacls
 
 ## Sponsors
