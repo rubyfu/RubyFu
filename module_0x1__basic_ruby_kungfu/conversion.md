@@ -86,6 +86,26 @@ or
 
 
 ## En/Decode URL String
+URL encoding/decoding is something known to most people. From hacker's point of view, we need it a lot in client-side vulnerability the most. 
+
+**Encoding string**
+```ruby
+require 'uri'
+puts URI.encode 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
+```
+**Decoding string**
+```ruby
+require 'uri'
+puts URI.decode "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E"
+```
+You can encode/decode and none URL string, of-course.
+
+The above way will encode any string *after* the URL base string if it contains a url string, however it you want to encode the full string use `URI.encode_www_form_component`
+
+
+
+
+
 
 
 
