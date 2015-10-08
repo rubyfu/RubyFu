@@ -100,9 +100,11 @@ puts URI.decode "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(
 ```
 You can encode/decode and none URL string, of-course.
 
-The above way will encode any string *after* the URL base string if it contains a url string, however it you want to encode the full string use `URI.encode_www_form_component`
+The above way will encode any non URL standard strings only(ex. `<>"{}`) however it you want to encode the full string use `URI.encode_www_form_component`
 
-
+```
+puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
+```
 
 
 
