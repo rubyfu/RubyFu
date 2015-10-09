@@ -315,7 +315,7 @@ One of scenarios I've faced is to exploit XSS a user profile fields and check th
 **xss_tab.rb**
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'watir-webdriver'
 require 'uri'
