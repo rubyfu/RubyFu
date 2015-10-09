@@ -309,6 +309,24 @@ payloads.each do |payload|
 end
 ```
 
+## Dealing with tabs
+One of scenarios I've faced is to exploit XSS a user profile fields and check the result in another page which present the public user's profile. Instead of revisiting the urls again and again I open new tab and refresh the public user's profile page then return back to send the exploit and so on.
+
+**xss_tab.rb**
+```ruby
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br><br><br>
