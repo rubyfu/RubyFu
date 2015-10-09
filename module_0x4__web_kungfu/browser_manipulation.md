@@ -320,7 +320,6 @@ One of scenarios I've faced is to exploit XSS a user profile fields and check th
 require 'watir-webdriver'
 require 'uri'
 
-# @url = URI.parse ARGV[0]
 @url = URI.parse "http://example.com/Users/User_Edit.aspx?userid=68&objectid=68"
 
 @browser = Watir::Browser.new :firefox
@@ -328,7 +327,7 @@ require 'uri'
 # @browser.window.move_to(540, 165)
 @wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
-@browser.goto "#{@url.scheme}://#{@url.host}/Kentico82/CMSPages/logon.aspx"
+@browser.goto "http://example.com/logon.aspx"
 
 # Login 
 @browser.text_field(name: 'Login1$UserName').set("administrator")
