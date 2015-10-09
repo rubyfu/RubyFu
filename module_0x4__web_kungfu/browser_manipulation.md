@@ -321,16 +321,16 @@ require 'watir-webdriver'
 require 'uri'
 
 # @url = URI.parse ARGV[0]
-@url = URI.parse "http://172.16.16.136/Kentico82/CMSModules/Membership/Pages/Users/User_Edit_General.aspx?userid=68&objectid=68"
+@url = URI.parse "http://example.com/Pages/Users/User_Edit_General.aspx?userid=68&objectid=68"
 
 @browser = Watir::Browser.new :firefox
 @browser.window.resize_to(800, 600)
 # @browser.window.move_to(540, 165)
 @wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
-# @browser.goto "http://172.16.16.136/Kentico82/CMSPages/logon.aspx"
 @browser.goto "#{@url.scheme}://#{@url.host}/Kentico82/CMSPages/logon.aspx"
 
+# Login 
 @browser.text_field(name: 'Login1$UserName').set("administrator")
 @browser.text_field(name: 'Login1$Password').set("")
 sleep 0.5
