@@ -109,7 +109,7 @@ browser = Selenium::WebDriver.for :firefox                  # You can use :ff to
 browser.manage.window.resize_to(500, 400)                   # Set browser size
 browser.get "http://www.altoromutual.com/search.aspx?"
 
-wait = Selenium::WebDriver::Wait.new(:timeout => 20)
+wait = Selenium::WebDriver::Wait.new(:timeout => 20)        # Timeout to wait 
 
 payloads.each do |payload|
   input = wait.until do
