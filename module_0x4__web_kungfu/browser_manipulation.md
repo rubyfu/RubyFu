@@ -331,7 +331,7 @@ require 'uri'
 
 # Login 
 @browser.text_field(name: 'Login1$UserName').set("admin")
-@browser.text_field(name: 'Login1$Password').set("")
+@browser.text_field(name: 'Login1$Password').set("P@ssword")
 sleep 0.5
 @browser.button(name: 'Login1$LoginButton').click 
 
