@@ -274,8 +274,8 @@ field1=""&field2=""&field3=""&field4=""
 require 'watir-webdriver'
 
 @browser = Watir::Browser.new :firefox
-@browser.window.resize_to(800, 600)
-@browser.window.move_to(400, 300)
+@browser.window.resize_to(800, 600)     # Set browser size
+@browser.window.move_to(400, 300)       # Alocate browser possition 
 
 def sendpost(payload)
   @browser.goto "file:///home/KING/Code/example.html"
