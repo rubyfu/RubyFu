@@ -105,7 +105,7 @@ payloads =
     "alert(/6/.source)"
   ]
 
-browser = Selenium::WebDriver.for :firefox
+browser = Selenium::WebDriver.for :firefox                  # You can use :ff too
 browser.manage.window.resize_to(500, 400)                   # Set browser size
 browser.get "http://www.altoromutual.com/search.aspx?"
 
