@@ -330,7 +330,7 @@ require 'uri'
 @browser.goto "http://example.com/logon.aspx"
 
 # Login 
-@browser.text_field(name: 'Login1$UserName').set("administrator")
+@browser.text_field(name: 'Login1$UserName').set("admin")
 @browser.text_field(name: 'Login1$Password').set("")
 sleep 0.5
 @browser.button(name: 'Login1$LoginButton').click 
