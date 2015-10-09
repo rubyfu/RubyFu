@@ -15,7 +15,7 @@ Here a quick how to if CoffeeScript in general
 npm install -g coffee-script
 ```
 
-
+- For live conversion 
 ```
 coffee --watch --compile script.coffee 
 ```
