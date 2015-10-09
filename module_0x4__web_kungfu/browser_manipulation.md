@@ -347,8 +347,8 @@ def sendpost(payload)
     @browser.button(name: '$actionsElem$save').click                            # Click Save button 
     
   rescue Selenium::WebDriver::Error::UnhandledAlertError
-    @browser.refresh
-    @wait.until {@browser.alert.exists?}
+    @browser.refresh                            # Refresh the current page
+    @wait.until {@browser.alert.exists?}        # Check if alert box appear
   end
 end
 
