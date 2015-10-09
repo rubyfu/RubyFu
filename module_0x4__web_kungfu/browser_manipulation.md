@@ -339,13 +339,13 @@ sleep 0.5
 def sendpost(payload)
   begin 
 
-    @browser.switch 
-    @browser.goto "#{@url.scheme}://#{@url.host}/#{@url.path}?#{@url.query}"
-    @wait.until {@browser.text_field(id: 'm_c_txtFullName').exists?}
-    @browser.text_field(id: 'm_c_txtFullName').set(payload)
-    @browser.text_field(id: 'm_c_txtFirstName').set(payload)
-    @browser.text_field(id: 'm_c_txtMiddleName').set(payload)
-    @browser.text_field(id: 'm_c_txtLastName').set(payload)
+    @browser.switch                                                             # Make sure to focus on current tab/window
+    @browser.goto "#{@url.scheme}://#{@url.host}/#{@url.path}?#{@url.query}"    # Goto the URL
+    @wait.until {@browser.text_field(id: 'txtFullName').exists?}                # Wait until wanted text area appear 
+    @browser.text_field(id: 'txtFullName').set(payload)                         # Set payload to the text area
+    @browser.text_field(id: 'txtFirstName').set(payload)                        # Set payload to the text area
+    @browser.text_field(id: 'txtMiddleName').set(payload)                       # Set payload to the text area
+    @browser.text_field(id: 'txtLastName').set(payload)                         # Set payload to the text area
     @browser.button(name: 'm$actionsElem$editMenuElem$menu$menu_HA_0').click
     
   rescue Selenium::WebDriver::Error::UnhandledAlertError
