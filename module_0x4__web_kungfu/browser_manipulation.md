@@ -367,7 +367,7 @@ puts "[*] Exploitation start"
 puts "[*] Number of payloads: #{payloads.size} payloads" 
 
 @browser.send_keys(:control, 't')
-@browser.goto "http://172.16.16.136/Kentico82/specialpages/user/silver.aspx"
+@browser.goto "http://example.com/public_profiles/user/silver.aspx"
 @browser.switch 
 
 payloads.each do |payload|
