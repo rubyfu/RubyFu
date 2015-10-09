@@ -344,9 +344,7 @@ def sendpost(payload)
     @wait.until {@browser.text_field(id: 'txtFullName').exists?}                # Wait until wanted text area appear 
     @browser.text_field(id: 'txtFullName').set(payload)                         # Set payload to the text area
     @browser.text_field(id: 'txtFirstName').set(payload)                        # Set payload to the text area
-    @browser.text_field(id: 'txtMiddleName').set(payload)                       # Set payload to the text area
-    @browser.text_field(id: 'txtLastName').set(payload)                         # Set payload to the text area
-    @browser.button(name: 'm$actionsElem$editMenuElem$menu$menu_HA_0').click
+    @browser.button(name: '$actionsElem$save').click                            # Click Save button 
     
   rescue Selenium::WebDriver::Error::UnhandledAlertError
     @browser.refresh
