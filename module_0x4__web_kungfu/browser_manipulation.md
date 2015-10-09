@@ -321,7 +321,7 @@ require 'watir-webdriver'
 require 'uri'
 
 # @url = URI.parse ARGV[0]
-@url = URI.parse "http://example.com/Pages/Users/User_Edit.aspx?userid=68&objectid=68"
+@url = URI.parse "http://example.com/Users/User_Edit.aspx?userid=68&objectid=68"
 
 @browser = Watir::Browser.new :firefox
 @browser.window.resize_to(800, 600)
