@@ -4,8 +4,7 @@
         "anchors",
         "splitter",
         "book-summary-scroll-position-saver",
-        "-search",
-        "printlinks"
+        "-search"
     ],
     "pluginsConfig": {}
 }
