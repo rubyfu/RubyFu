@@ -3,7 +3,8 @@
         "expandable-chapters",
         "anchors",
         "splitter",
-        "book-summary-scroll-position-saver"
+        "book-summary-scroll-position-saver",
+        "-search"
     ],
     "pluginsConfig": {}
 }
