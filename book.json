@@ -2,7 +2,8 @@
     "plugins": [
         "expandable-chapters",
         "anchors",
-        "splitter"
+        "splitter",
+        "book-summary-scroll-position-saver"
     ],
     "pluginsConfig": {}
 }
