@@ -7,5 +7,9 @@
         "-search",
         "sitemap"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "sitemap": {
+            "hostname": "http://Rubyfu.net/"
+        }
+    }
 }
