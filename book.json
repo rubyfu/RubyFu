@@ -5,7 +5,6 @@
         "splitter",
         "book-summary-scroll-position-saver",
         "-search",
-        "sitemap",
         "todo"
     ],
     "pluginsConfig": {}
