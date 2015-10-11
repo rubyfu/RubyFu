@@ -1,6 +1,7 @@
 # TODO
 
 - [ ] Proofreading enhancement
+- [ ] Proofreading enhancement
 - [x] Network ping sweeping
 - [ ] SMB scanner
 - [ ] Add enumeration
