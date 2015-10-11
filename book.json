@@ -2,7 +2,6 @@
     "plugins": [
         "expandable-chapters",
         "anchors",
-        "splitter",
         "book-summary-scroll-position-saver",
         "-search",
         "todo"
