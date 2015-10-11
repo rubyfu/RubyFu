@@ -5,11 +5,8 @@
         "splitter",
         "book-summary-scroll-position-saver",
         "-search",
-        "sitemap"
+        "sitemap",
+        "todo"
     ],
-    "pluginsConfig": {
-        "sitemap": {
-            "hostname": "http://Rubyfu.net/"
-        }
-    }
+    "pluginsConfig": {}
 }
