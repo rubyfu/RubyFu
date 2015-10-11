@@ -75,7 +75,7 @@ puts ntlmv2
 puts "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest('P@ssw0rd')).upcase
 ```
 
-### PostgreSQL Password has
+### PostgreSQL Password hash
 PostgreSQL hashes combined password and username then adds **md5** in front of the hash
 ```ruby
 require 'digest/md5'
