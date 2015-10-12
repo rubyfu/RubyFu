@@ -97,7 +97,9 @@ There alternative for sending and receiving too, figure it out, [RubyDoc](http:/
 
 
 ## GServer
-
+GServer standard library implements a generic server, featuring thread pool management, simple logging, and multi-server management. Any kind of application-level server can be implemented using this class:
+- It accepts multiple simultaneous connections from clients
+- Several services (i.e. one service per TCP port)
 
 
 <br><br><br>
