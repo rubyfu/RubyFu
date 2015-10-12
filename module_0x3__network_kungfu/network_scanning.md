@@ -18,11 +18,11 @@ IO
 ```
 IO
 └── BasicSocket                 # Abstract base class for all socket classes
-    ├── IPSocket                # 
+    ├── IPSocket                # Base class for protocols using the Internet Protocol (AF_INET)
     │   ├── TCPSocket           # 
     │   │   ├── SOCKSSocket     # 
-    │   │   └── TCPServer       # 
-    │   └── UDPSocket           # 
+    │   │   └── TCPServer       # Class for Transmission Control Protocol (TCP) sockets
+    │   └── UDPSocket           # Class for User Datagram Protocol (UDP) sockets
     ├── Socket                  # 
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
