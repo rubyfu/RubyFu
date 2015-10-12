@@ -26,7 +26,7 @@ require 'socket'
 server = TCPServer.new('0.0.0.0', 9911) # Server, binds/listens all interfaces on port 9911
 client = server.accept                  # Wait for client to connect
 rhost  = client.peeraddr.last           # peeraddr, returns remote [address_family, port, hostname, numeric_address(ip)]
-client.puts "Welcome client! #{rhost}"  # Send a message to the client once it connect
+client.puts "Hi TCP Client! #{rhost}"  # Send a message to the client once it connect
 client.gets.chomp                       # Read incomming message from client
 client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
@@ -40,7 +40,7 @@ require 'socket'
 client = TCPSocket.new('127.0.0.1', 9911)   # Client, connects to server on port 9911
 rhost  = client.peeraddr.last               # Get the remote server's IP address 
 client.gets.chomp
-client.puts "Hi, thanks server #{rhost}"
+client.puts "Hi, TCP Server #{rhost}"
 client.close
 ```
 
@@ -75,12 +75,17 @@ There are some alternatives for `puts` and `gets` methods.You can see the differ
 ```ruby
 require 'socket'
 
+server = UDPSocket.new
+server.bind('0.0.0.0', 9911)
+mesg, addr = server.recvfrom(1024)
+
 ```
 
 ### UDP Clinet
 ```ruby
 require 'socket'
-
+client = = UDPSocket.new
+client.puts "Hi UDP Server!"
 ```
 
 
