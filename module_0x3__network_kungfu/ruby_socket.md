@@ -120,9 +120,9 @@ class HelloServer < GServer                 # Inherit GServer class
   end
 end
 
-server = HelloServer.new(1234, '0.0.0.0')
-server.audit = true
-server.start
+server = HelloServer.new(1234, '0.0.0.0')   # Start the server on port 1234
+server.audit = true     # Enable logging
+server.start            # Start the service 
 server.join
 ```
 
