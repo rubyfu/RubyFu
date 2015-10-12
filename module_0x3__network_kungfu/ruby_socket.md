@@ -24,7 +24,7 @@ Here we'll represent an absolute TCP server. This server will access connect fro
 require 'socket'
 
 server = TCPServer.new('0.0.0.0', 9911) # Server, binds/listens all interfaces on port 9911
-client = server.accept                  # Wait for client to connect
+gclient = server.accept                 # Wait for client to connect
 rhost  = client.peeraddr.last           # peeraddr, returns remote [address_family, port, hostname, numeric_address(ip)]
 client.puts "Hi TCP Client! #{rhost}"   # Send a message to the client once it connect
 client.gets.chomp                       # Read incomming message from client
@@ -75,20 +75,20 @@ There are some alternatives for `puts` and `gets` methods.You can see the differ
 ```ruby
 require 'socket'
 
-server = UDPSocket.new
-server.bind('0.0.0.0', 9911)
-mesg, addr = server.recvfrom(1024)
-server puts "Hi, UDP Client #{addr}", addr[3], addr[1]
-server.recv(1024)
+server = UDPSocket.new                                  # Start UDP socket
+server.bind('0.0.0.0', 9911)                            # Bind all interfaces to port 9911
+mesg, addr = server.recvfrom(1024)                      # Recive 1024 bytes of the message and the sender IP
+server puts "Hi, UDP Client #{addr}", addr[3], addr[1]  # Send a message to the client 
+server.recv(1024)                                       # Recive 1024 bytes of the message 
 ```
 
 ### UDP Client
 ```ruby
 require 'socket'
 client = UDPSocket.new
-client.connect('localhost', 9911)
-client.puts "Hi, UDP Server!", 0
-server.recv(1024)
+client.connect('localhost', 9911)       # Connect to server on port 991
+client.puts "Hi, UDP Server!", 0        # Send message 
+server.recv(1024)                       # Recive 1024 bytes of the server message
 ```
 
 There alternative for sending and receiving too, figure it out, [RubyDoc](http://ruby-doc.org/stdlib-2.0.0/libdoc/socket/rdoc/UDPSocket.html).
@@ -106,8 +106,25 @@ GServer standard library implements a generic server, featuring thread pool mana
 - All events are optionally logged
 
 
+- Very basic GServer
 
+```ruby
+require 'gserver'
 
+class HelloServer < GServer                 # Inherit GServer class
+  def serve(io)
+    io.puts("What's your name?")
+    line = io.gets.chomp
+    io.puts "Hi, #{line}!"
+    self.stop if io.gets =~ /shutdown/      # Stop the server if you get shutdown string
+  end
+end
+
+server = HelloServer.new(1234, '0.0.0.0')   # Start the server on port 1234
+server.audit = true     # Enable logging
+server.start            # Start the service 
+server.join
+```
 
 
 
