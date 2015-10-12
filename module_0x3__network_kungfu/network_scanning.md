@@ -23,7 +23,7 @@ IO
     │   │   ├── SOCKSSocket     # Helper class for building TCP socket servers applications
     │   │   └── TCPServer       # Helper class for building TCP socket servers
     │   └── UDPSocket           # Class for User Datagram Protocol (UDP) sockets
-    ├── Socket                  # 
+    ├── Socket                  # Base socket class that mimics that BSD Sockets API
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
