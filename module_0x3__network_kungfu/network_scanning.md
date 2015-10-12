@@ -20,7 +20,7 @@ IO
 └── BasicSocket                 # Abstract base class for all socket classes
     ├── IPSocket                # Base class for protocols using the Internet Protocol (AF_INET)
     │   ├── TCPSocket           # Class for Transmission Control Protocol (TCP) sockets
-    │   │   ├── SOCKSSocket     # 
+    │   │   ├── SOCKSSocket     # Helper class for building TCP socket servers applications
     │   │   └── TCPServer       # Helper class for building TCP socket servers
     │   └── UDPSocket           # Class for User Datagram Protocol (UDP) sockets
     ├── Socket                  # 
