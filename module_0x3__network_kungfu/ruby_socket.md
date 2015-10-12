@@ -15,7 +15,6 @@ IO                              # The basis for all input and output in Ruby
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
 
-
 ## TCP Socket
 
 ### TCP Server
