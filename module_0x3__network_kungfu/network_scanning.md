@@ -14,7 +14,24 @@ IO
         └── UNIXServer
 ```
 
-|    Class    	|  Description  	|
+
+```
+IO
+└── BasicSocket                 # Abstract base class for all socket classes
+    ├── IPSocket                # Class providing IPC using the UNIX domain protocol (AF_UNIX)
+    │   ├── TCPSocket           # 
+    │   │   ├── SOCKSSocket
+    │   │   └── TCPServer
+    │   └── UDPSocket
+    ├── Socket
+    └── UNIXSocket
+        └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
+```
+
+
+
+
+|    Class    	|  Description |
 |:-----------:	|:-------------:	|
 | BasicSocket 	|  left-aligned 	|
 | IPSocket    	|    centered   	|
