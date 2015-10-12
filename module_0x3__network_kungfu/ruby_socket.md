@@ -43,7 +43,7 @@ client = TCPSocket.new('127.0.0.1', 9911)   # Client, connects to server on port
 rhost  = client.peeraddr.last
 client.gets.chomp
 client.puts "Hi, thanks server #{rhost}"
-# client.close
+client.close
 ```
 
 ## UDP Socket
