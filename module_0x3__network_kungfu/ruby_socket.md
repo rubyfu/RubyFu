@@ -106,8 +106,23 @@ GServer standard library implements a generic server, featuring thread pool mana
 - All events are optionally logged
 
 
+- Very basic GServer
 
-sssdfdf
+```ruby
+require 'gserver'
+
+class HelloServer < GServer
+  def serve(io)
+    io.puts("What's your name?")
+    line = io.gets
+    io.puts "Hi, #{line}"
+  end
+end
+
+server = HelloServer.new(1234)
+server.start
+server.join
+```
 
 
 
