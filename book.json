@@ -3,7 +3,6 @@
         "expandable-chapters",
         "anchors",
         "book-summary-scroll-position-saver",
-        "-search",
         "todo",
         "splitter"
     ],
