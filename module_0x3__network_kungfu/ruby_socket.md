@@ -85,11 +85,13 @@ server.recv(1024)
 ### UDP Client
 ```ruby
 require 'socket'
-client = = UDPSocket.new
-client.puts "Hi, UDP Server!", 0, 'localhost', 9911
+client = UDPSocket.new
+client.connect('localhost', 9911)
+client.puts "Hi, UDP Server!", 0
 server.recv(1024)
 ```
 
+There alternative for sending and receiving too, figure it out, [RubyDoc](http://ruby-doc.org/stdlib-2.0.0/libdoc/socket/rdoc/UDPSocket.html)
 
 
 
