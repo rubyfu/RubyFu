@@ -44,7 +44,7 @@ client.puts "Hi, thanks server #{rhost}"
 client.close
 ```
 
-There are some alternatives for `puts` and `gets` methods.You can check the difference and its classes using method method
+There are some alternatives for `puts` and `gets` methods.You can see the difference and its classes using method method in Pry interpreter console
 
 ```ruby
 >> s = TCPSocket.new('0.0.0.0', 9911)
