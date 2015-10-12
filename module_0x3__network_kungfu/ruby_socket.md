@@ -24,7 +24,7 @@ We can represent an absolute TCP server. This server will access connect from on
 ```ruby
 require 'socket'
 
-server = TCPServer.new('0.0.0.0', 9911) # Server, binds all interfaces on port 9911
+server = TCPServer.new('0.0.0.0', 9911) # Server, binds/listens all interfaces on port 9911
 client = server.accept                  # Wait for client to connect
 client.puts "Welcome!"                  # Send a message to the client once it connect
 client.close                            # Close the client's connection
