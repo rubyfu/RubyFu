@@ -91,7 +91,7 @@ client.puts "Hi, UDP Server!", 0
 server.recv(1024)
 ```
 
-There alternative for sending and receiving too, figure it out, [RubyDoc](http://ruby-doc.org/stdlib-2.0.0/libdoc/socket/rdoc/UDPSocket.html)
+There alternative for sending and receiving too, figure it out, [RubyDoc](http://ruby-doc.org/stdlib-2.0.0/libdoc/socket/rdoc/UDPSocket.html).
 
 
 
