@@ -24,6 +24,8 @@ IO                              # The basis for all input and output in Ruby
 ```ruby
 require 'socket'
 
+server = TCPServer.new('0.0.0.0', 9911)     # Server, binds all interfaces on port 9911
+client = server.accept
 ```
 
 ### TCP Client 
