@@ -1,6 +1,6 @@
 # Network Scanning
 
-Ruby Socket class hierarchy 
+Ruby Socket Class Hierarchy 
 ```
 IO
 └── BasicSocket
