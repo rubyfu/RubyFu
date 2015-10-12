@@ -43,7 +43,7 @@ end
 
 Run ssh-ltnnel.rb on the **SSH Server** 
 
-**ssh-ltunnel.rb**
+**ssh-ftunnel.rb**
 ```ruby
 #!/usr/bin/evn ruby
 # KING SABRI | @KINGSABRI
