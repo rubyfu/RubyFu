@@ -18,7 +18,7 @@ IO                              # The basis for all input and output in Ruby
 ```
 
 
-S
+
 
 
 
