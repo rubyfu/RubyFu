@@ -26,7 +26,8 @@ require 'socket'
 
 server = TCPServer.new('0.0.0.0', 9911) # Server, binds/listens all interfaces on port 9911
 client = server.accept                  # Wait for client to connect
-client.puts "Welcome!"                  # Send a message to the client once it connect
+rhost  = client.peeraddr.last           # peeraddr, returns [address_family, port, hostname, ip_address]
+client.puts "Welcome! #{rhost}"         # Send a message to the client once it connect
 client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
 ```
