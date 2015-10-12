@@ -5,7 +5,7 @@
 ```
 IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
-    ├── IPSocket                # Base class for protocols using the Internet Protocol (AF_INET)
+    ├── IPSocket                # Super class for protocols using the Internet Protocol (AF_INET)
     │   ├── TCPSocket           # Class for Transmission Control Protocol (TCP) sockets
     │   │   ├── SOCKSSocket     # Helper class for building TCP socket servers applications
     │   │   └── TCPServer       # Helper class for building TCP socket servers
@@ -26,7 +26,7 @@ require 'socket'
 
 server = TCPServer.new('0.0.0.0', 9911) # Server, binds/listens all interfaces on port 9911
 client = server.accept                  # Wait for client to connect
-rhost  = client.peeraddr.last           # peeraddr, returns [address_family, port, hostname, ip_address]
+rhost  = client.peeraddr.last           # peeraddr, returns [address_family, port, hostname, numeric_address(ip)]
 client.puts "Welcome! #{rhost}"         # Send a message to the client once it connect
 client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
