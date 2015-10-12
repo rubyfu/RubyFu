@@ -40,7 +40,7 @@ server.close                            # Close the TCP Server
 require 'socket'
 
 client = TCPSocket.new('127.0.0.1', 9911)   # Client, connects to server on port 9911
-rhost  = client.peeraddr.last
+rhost  = client.peeraddr.last               # Get the remote server's IP address 
 client.gets.chomp
 client.puts "Hi, thanks server #{rhost}"
 client.close
