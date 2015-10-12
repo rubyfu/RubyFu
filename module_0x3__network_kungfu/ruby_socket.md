@@ -78,14 +78,16 @@ require 'socket'
 server = UDPSocket.new
 server.bind('0.0.0.0', 9911)
 mesg, addr = server.recvfrom(1024)
-
+server puts "Hi, UDP Client #{addr}", addr[3], addr[1]
+server.recv(1024)
 ```
 
 ### UDP Client
 ```ruby
 require 'socket'
 client = = UDPSocket.new
-client.puts "Hi, UDP Server!"
+client.puts "Hi, UDP Server!", 0, 'localhost', 9911
+server.recv(1024)
 ```
 
 
