@@ -1,5 +1,20 @@
 # Network Scanning
 
+Ruby Socket class hierarchy 
+```
+IO
+└── BasicSocket
+    ├── IPSocket
+    │   ├── TCPSocket
+    │   │   ├── SOCKSSocket
+    │   │   └── TCPServer
+    │   └── UDPSocket
+    ├── Socket
+    └── UNIXSocket
+        └── UNIXServer
+```
+
+
 ## Network ping sweeping
 required gem
 ```
