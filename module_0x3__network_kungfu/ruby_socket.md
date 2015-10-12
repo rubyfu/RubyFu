@@ -26,7 +26,7 @@ require 'socket'
 
 ```
 
-### TCP Clinet
+### TCP Client 
 
 ```ruby
 require 'socket'
