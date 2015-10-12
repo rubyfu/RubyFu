@@ -86,9 +86,9 @@ server.recv(1024)                                       # Recive 1024 bytes of t
 ```ruby
 require 'socket'
 client = UDPSocket.new
-client.connect('localhost', 9911)
-client.puts "Hi, UDP Server!", 0
-server.recv(1024)
+client.connect('localhost', 9911)       # Connect to server on port 991
+client.puts "Hi, UDP Server!", 0        # Send message 
+server.recv(1024)                       # Recive 1024 bytes of the server message
 ```
 
 There alternative for sending and receiving too, figure it out, [RubyDoc](http://ruby-doc.org/stdlib-2.0.0/libdoc/socket/rdoc/UDPSocket.html).
