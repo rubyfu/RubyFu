@@ -16,9 +16,36 @@ IO                              # The basis for all input and output in Ruby
 ```
 
 
+## TCP Socket
+
+### TCP Server
 
 
+```ruby
+require 'socket'
 
+```
+
+### TCP Clinet
+
+```ruby
+require 'socket'
+
+```
+
+## UDP Socket
+
+### UDP Server
+```ruby
+require 'socket'
+
+```
+
+### UDP Clinet
+```ruby
+require 'socket'
+
+```
 
 
 
