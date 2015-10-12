@@ -44,11 +44,12 @@ client.puts "Hi, thanks server #{rhost}"
 client.close
 ```
 
-There are some alternatives for `puts` and `gets` methods.You can check the difference and its classes using method method 
+There are some alternatives for `puts` and `gets` methods.You can check the difference and its classes using method method
 
 ```ruby
 >> s = TCPSocket.new('0.0.0.0', 9911)
 => #<TCPSocket:fd 11>
+
 >> s.method :puts
 => #<Method: TCPSocket(IO)#puts>
 >> s.method :write
@@ -59,6 +60,8 @@ There are some alternatives for `puts` and `gets` methods.You can check the diff
 
 ```ruby
 >> s = TCPSocket.new('0.0.0.0', 9911)
+=> #<TCPSocket:fd 11>
+
 >> s.method :gets
 => #<Method: TCPSocket(IO)#gets>
 >> s.method :read
