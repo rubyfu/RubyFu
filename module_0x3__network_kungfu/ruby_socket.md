@@ -24,7 +24,7 @@ Here we'll represent an absolute TCP server. This server will access connect fro
 require 'socket'
 
 server = TCPServer.new('0.0.0.0', 9911) # Server, binds/listens all interfaces on port 9911
-gclient = server.accept                  # Wait for client to connect
+gclient = server.accept                 # Wait for client to connect
 rhost  = client.peeraddr.last           # peeraddr, returns remote [address_family, port, hostname, numeric_address(ip)]
 client.puts "Hi TCP Client! #{rhost}"   # Send a message to the client once it connect
 client.gets.chomp                       # Read incomming message from client
@@ -75,11 +75,11 @@ There are some alternatives for `puts` and `gets` methods.You can see the differ
 ```ruby
 require 'socket'
 
-server = UDPSocket.new
-server.bind('0.0.0.0', 9911)
-mesg, addr = server.recvfrom(1024)
-server puts "Hi, UDP Client #{addr}", addr[3], addr[1]
-server.recv(1024)
+server = UDPSocket.new                                  # Start UDP socket
+server.bind('0.0.0.0', 9911)                            # Bind all interfaces to port 9911
+mesg, addr = server.recvfrom(1024)                      # Recive 1024 bytes of the message and the sender IP
+server puts "Hi, UDP Client #{addr}", addr[3], addr[1]  # Send  message to the client 
+server.recv(1024)                                       # Recive 1024 bytes of the message 
 ```
 
 ### UDP Client
@@ -116,10 +116,12 @@ class HelloServer < GServer
     io.puts("What's your name?")
     line = io.gets.chomp
     io.puts "Hi, #{line}!"
+    self.stop if io.gets =~ /shutdown/
   end
 end
 
-server = HelloServer.new(1234)
+server = HelloServer.new(1234, '0.0.0.0')
+server.audit = true
 server.start
 server.join
 ```
