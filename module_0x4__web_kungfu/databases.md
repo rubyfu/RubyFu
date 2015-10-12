@@ -129,7 +129,7 @@ Attackers.find(2).destroy
 So to write a complete script, 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 # ActiveRecord with MySQL
 #
 require 'active_record'  

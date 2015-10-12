@@ -5,7 +5,7 @@
 **sendmail.rb**
 ```ruby
 #!/usr/bin/env ruby
-# 
+# KING SABRI | @KINGSABRI
 #
 require 'net/smtp'
 
@@ -49,7 +49,7 @@ send_mail smtpsrv, username, password, frmemail, dstemail
 **readmail.rb**
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 # 
 require 'net/imap'
 

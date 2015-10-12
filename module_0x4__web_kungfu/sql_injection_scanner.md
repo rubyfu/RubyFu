@@ -7,7 +7,7 @@ The is a very basic script take your given payload and send it to the vulnerable
 
 ```ruby
 #!/usr/bin/evn ruby
-#
+# KING SABRI | @KINGSABRI
 # Send your payload from command line
 #
 require "net/http"
@@ -62,7 +62,7 @@ Here a very basic and simple SQL-injection solid scanner, develop it as far as y
 
 ```ruby
 #!/usr/bin/env ruby
-#
+# KING SABRI | @KINGSABRI
 # Very basic SQLi scanner!
 #
 require 'net/http'

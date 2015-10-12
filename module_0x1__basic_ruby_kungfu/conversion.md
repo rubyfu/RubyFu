@@ -81,11 +81,34 @@ or
 ```ruby
  Base64.decode64 "UnVieUZ1"
 ```
-
-
-
 > **TIP**
 >The string unpack method is incredibly useful for converting data we read as strings back to their original form. To read more, visit the String class reference at www.ruby-doc.org/core/classes/String.html.
+
+
+## En/Decode URL String
+URL encoding/decoding is something known to most people. From hacker's point of view, we need it a lot in client-side vulnerability the most. 
+
+**Encoding string**
+```ruby
+require 'uri'
+puts URI.encode 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
+```
+**Decoding string**
+```ruby
+require 'uri'
+puts URI.decode "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E"
+```
+You can encode/decode and none URL string, of-course.
+
+The above way will encode any non URL standard strings only(ex. `<>"{}`) however if you want to encode the full string use `URI.encode_www_form_component`
+
+```ruby
+puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
+```
+
+
+
+
 
 
 <br><br><br>

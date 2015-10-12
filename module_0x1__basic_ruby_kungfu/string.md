@@ -27,7 +27,24 @@ puts "RubyFu".green
 puts "RubyFu".yellow.bold
 ```
 
-or you can use external gem called [colorized] for more fanzy options
+To under stand this codes let's to explain it
+
+```
+
+\033  [0;  31m
+ ^     ^    ^    
+ |     |    |
+ |     |    |--------------------------------------- [The color number]
+ |     |-------------------- [The modifier]            (ends with "m")
+ |-- [Escaped character]           | 0 - normal                     
+     (you can use "\e")            | 1 - bold
+                                   | 2 - normal again
+                                   | 3 - background color
+                                   | 4 - underline
+                                   | 5 - blinking
+```
+
+or you can use external gem called [colorized] for more fancy options
 ```
 gem install colorize
 ```
@@ -68,7 +85,7 @@ I've read a how-to about [bash Prompt cursor movement][2] and I found it it's co
 So to test that I did the following PoC 
 ```ruby
 #!/usr/bin/env ruby
-
+# KING SABRI | @KINGSABRI
 (1..3).map do |num|
   print "\rNumber: #{num}"
   sleep 0.5
@@ -99,6 +116,7 @@ puts ""
 
 So far so good, but why don't we make it as ruby methods for more elegant usage? so I came up with the following
 ```ruby
+# KING SABRI | @KINGSABRI
 class String
   def mv_up(n=1)
     cursor(self, "\033[#{n}A")
@@ -142,6 +160,7 @@ end
 Then as PoC, I've used the same previous one (after updating String class on-the-fly in the same script)
 ```ruby
 #!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
 # Level 1
 (1..3).map do |num|
   print "\rNumber: #{num}"

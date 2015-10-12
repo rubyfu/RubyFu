@@ -12,10 +12,20 @@ This book is a collection of ideas, tricks and skills that could be useful for H
 Ideally, Hackers!
 
 ### Organization of the book
-##### Module 0x1 | Basic Ruby KungFu
-##### Module 0x2 | System KungFu
-##### Module 0x3 | Network KungFu
-##### Module 0x4 | Web KungFu
-##### Module 0x5 | Exploitation KungFu
-##### Module 0x6 | Reverse Engineering KungFu
+##### Module 0x1 | [Basic Ruby KungFu][1]
+##### Module 0x2 | [System KungFu][2]
+##### Module 0x3 | [Network KungFu][3]
+##### Module 0x4 | [Web KungFu][4]
+##### Module 0x5 | [Exploitation KungFu][5]
+##### Module 0x6 | [Reverse Engineering KungFu][6]
+
+
+<br><br><br>
+---
+[1]: module_0x1__basic_ruby_kungfu/README.md
+[2]: module_0x2__system_kungfu/README.md
+[3]: module_0x3__network_kungfu/README.md
+[4]: module_0x4__web_kungfu/README.md
+[5]: module_0x5__exploitation_kungfu/README.md
+[6]: module_0x6__reverse_engineering/README.md
 

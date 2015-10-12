@@ -6,6 +6,7 @@ gem install snmp
 
 ## Get Request
 ```ruby
+# KING SABRI | @KINGSABRI
 require 'snmp'
 
 # Connect to SNMP server
