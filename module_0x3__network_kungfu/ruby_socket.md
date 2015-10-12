@@ -111,7 +111,7 @@ GServer standard library implements a generic server, featuring thread pool mana
 ```ruby
 require 'gserver'
 
-class HelloServer < GServer
+class HelloServer < GServer                 # Inherit GServer class
   def serve(io)
     io.puts("What's your name?")
     line = io.gets.chomp
