@@ -32,8 +32,6 @@ client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
 ```
 
-
-
 ### TCP Client 
 
 ```ruby
@@ -45,6 +43,29 @@ client.gets.chomp
 client.puts "Hi, thanks server #{rhost}"
 client.close
 ```
+
+There are some alternatives for `puts` and `gets` methods.You can check the difference and its classes using method method 
+
+```ruby
+>> s = TCPSocket.new('0.0.0.0', 9911)
+=> #<TCPSocket:fd 11>
+>> s.method :puts
+=> #<Method: TCPSocket(IO)#puts>
+>> s.method :write
+=> #<Method: TCPSocket(IO)#write>
+>> s.method :send
+=> #<Method: TCPSocket(BasicSocket)#send>
+```
+
+```ruby
+>> s.method :gets
+=> #<Method: TCPSocket(IO)#gets>
+>> s.method :read
+=> #<Method: TCPSocket(IO)#read>
+>> s.method :recv
+=> #<Method: TCPSocket(BasicSocket)#recv>
+```
+
 
 ## UDP Socket
 
