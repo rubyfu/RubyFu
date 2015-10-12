@@ -81,7 +81,7 @@ mesg, addr = server.recvfrom(1024)
 
 ```
 
-### UDP Clinet
+### UDP Client
 ```ruby
 require 'socket'
 client = = UDPSocket.new
