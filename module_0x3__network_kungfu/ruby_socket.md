@@ -2,7 +2,6 @@
 
 ## Ruby Socket Class Hierarchy 
 
-
 ```
 IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
