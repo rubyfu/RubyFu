@@ -16,7 +16,7 @@ IO
 
 
 ```
-IO
+IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
     ├── IPSocket                # Base class for protocols using the Internet Protocol (AF_INET)
     │   ├── TCPSocket           # Class for Transmission Control Protocol (TCP) sockets
