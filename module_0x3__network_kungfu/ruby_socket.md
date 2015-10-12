@@ -20,7 +20,7 @@ IO                              # The basis for all input and output in Ruby
 
 ### TCP Server
 
-
+We can represent an absolute TCP server. This server will access connect from one client and send a message to it once connected then close the client and server connection 
 ```ruby
 require 'socket'
 
@@ -30,6 +30,8 @@ client.puts "Welcome!"                  # Send a message to the client once it c
 client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
 ```
+
+
 
 ### TCP Client 
 
