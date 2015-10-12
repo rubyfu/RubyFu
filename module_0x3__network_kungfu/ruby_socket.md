@@ -85,7 +85,7 @@ mesg, addr = server.recvfrom(1024)
 ```ruby
 require 'socket'
 client = = UDPSocket.new
-client.puts "Hi UDP Server!"
+client.puts "Hi, UDP Server!"
 ```
 
 
