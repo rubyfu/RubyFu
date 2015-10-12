@@ -31,20 +31,6 @@ IO                              # The basis for all input and output in Ruby
 
 
 
-|    Class    	|  Description |
-|:-----------:	|:-------------:	|
-| BasicSocket 	|  left-aligned 	|
-| IPSocket    	|    centered   	|
-| TCPSocket   	| right-aligned 	|
-| SOCKSSocket 	|               	|
-| TCPServer   	|               	|
-| UDPSocket   	|               	|
-| Socket      	|               	|
-| UNIXSocket  	|               	|
-| UNIXServer  	|               	|
-|             	|               	|
-|             	|               	|
-
 
 ## Network ping sweeping
 required gem
