@@ -41,7 +41,7 @@ require 'socket'
 client = TCPSocket.new('127.0.0.1', 9911)   # Client, connects to server on port 9911
 rhost  = client.peeraddr.last
 client.gets.chomp
-client.puts ""
+client.puts "Hi, "
 ```
 
 ## UDP Socket
