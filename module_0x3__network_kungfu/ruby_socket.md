@@ -1,7 +1,6 @@
 # Ruby Socket
 
-Ruby Socket Class Hierarchy 
-
+## Ruby Socket Class Hierarchy 
 
 
 ```
