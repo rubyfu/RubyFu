@@ -116,7 +116,7 @@ class HelloServer < GServer
     io.puts("What's your name?")
     line = io.gets.chomp
     io.puts "Hi, #{line}!"
-    self.stop if io.gets =~ /shutdown/
+    self.stop if io.gets =~ /shutdown/      # Stop the server if you get shutdown string
   end
 end
 
