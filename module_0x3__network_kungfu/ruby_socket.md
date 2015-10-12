@@ -114,8 +114,8 @@ require 'gserver'
 class HelloServer < GServer
   def serve(io)
     io.puts("What's your name?")
-    line = io.gets
-    io.puts "Hi, #{line}"
+    line = io.gets.chomp
+    io.puts "Hi, #{line}!"
   end
 end
 
