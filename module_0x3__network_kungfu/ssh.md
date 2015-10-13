@@ -78,7 +78,7 @@ Net::SSH.start(@hostname, @username, :password => @password, :auth_methods => ["
     
     session.loop
   end  
-end    
+end
 ```
 
 
