@@ -28,6 +28,60 @@ rescue
 end
 ```
 
+## SSH Client  
+Here a simple ssh client which give you an interactive PTY
+
+```ruby
+#!/usr/bin/evn ruby
+# KING SABRI | @KINGSABRI
+require 'net/ssh'
+
+@hostname = "localhost"
+@username = "root"
+@password = "password"
+@cmd = ARGV[0]
+
+Net::SSH.start('localhost', 'fish', :password => "123123", :auth_methods => ["password"]) do |session|
+
+  # Open SSH channel 
+  session.open_channel do |channel|
+    
+    # Requests that a pseudo-tty (or "pty") for interactive application-like (e.g vim, sudo, etc)
+    channel.request_pty do |ch, success| 
+      raise "Error requesting pty" unless success 
+
+      # Request channel type shell
+      ch.send_channel_request("shell") do |ch, success| 
+        raise "Error opening shell" unless success
+	STDOUT.puts "[+] Getting Remote Shell\n\n" if success
+	sleep 0.5
+      end  
+    end
+
+    # Print STDERR of the remote host to my STDOUT
+    channel.on_extended_data do |ch, type, data|
+      STDOUT.puts "Error: #{data}\n"
+    end
+
+    # When data packets are received by the channel
+    channel.on_data do |ch, data|
+      STDOUT.print data 
+      cmd = gets
+      channel.send_data( "#{cmd}" ) #unless cmd.empty?
+      channel.send_data "\n" if data.chomp.empty?
+      trap("INT") {STDOUT.puts "Use 'exit' or 'logout' command to exit the session"}
+    end 
+    
+    channel.on_eof do |ch|
+      puts "Exiting SSH Session.."
+    end
+    
+    session.loop
+  end  
+end    
+
+```
+
 
 ## SSH Tunneling
 
