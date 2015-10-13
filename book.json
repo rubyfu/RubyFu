@@ -3,7 +3,8 @@
         "expandable-chapters",
         "anchors",
         "todo",
-        "splitter"
+        "splitter",
+        "book-summary-scroll-position-saver"
     ],
     "pluginsConfig": {}
 }
