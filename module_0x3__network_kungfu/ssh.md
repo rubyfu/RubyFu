@@ -6,7 +6,7 @@ we'll need to install net-ssh gem for that
 gem install net-ssh
 ```
 
-## Simple SSH client
+## Simple SSH command execution 
 This is a very basic ssh client which sends and executes commands on a remote system 
 ```ruby
 #!/usr/bin/evn ruby
