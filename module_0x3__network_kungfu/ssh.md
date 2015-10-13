@@ -53,9 +53,9 @@ Net::SSH.start(@hostname, @username, :password => @password, :auth_methods => ["
       # Request channel type shell
       ch.send_channel_request("shell") do |ch, success| 
         raise "Error opening shell" unless success
-	STDOUT.puts "[+] Getting Remote Shell\n\n" if success
-	sleep 0.5
-      end  
+    	STDOUT.puts "[+] Getting Remote Shell\n\n" if success
+    	sleep 0.5
+      end
     end
 
     # Print STDERR of the remote host to my STDOUT
@@ -65,19 +65,19 @@ Net::SSH.start(@hostname, @username, :password => @password, :auth_methods => ["
 
     # When data packets are received by the channel
     channel.on_data do |ch, data|
-      STDOUT.print data 
+      STDOUT.print data
       cmd = gets
       channel.send_data( "#{cmd}" ) #unless cmd.empty?
       channel.send_data "\n" if data.chomp.empty?
       trap("INT") {STDOUT.puts "Use 'exit' or 'logout' command to exit the session"}
-    end 
+    end
     
     channel.on_eof do |ch|
       puts "Exiting SSH Session.."
     end
     
     session.loop
-  end  
+  end
 end
 ```
 
