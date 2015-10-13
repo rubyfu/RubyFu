@@ -1,5 +1,5 @@
 # SSH
-Here we'll show some SSH using ruby. However, we'll need to install net-ssh gem for that
+Here we'll show some SSH using ruby. However, we'll need to install net-ssh gem for that.
 
 - To install net-ssh
 ```
