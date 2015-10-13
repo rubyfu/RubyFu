@@ -11,5 +11,5 @@ Ruby has awesome abilities and tricks for dealing with all strings and arrays sc
 require 'io/console'
 rows, columns = $stdin.winsize
 
-print "-" * (columns/2) + "\n|" + " " * (columns/2 -2) + "|\n" + "-" * (columns/2) + "\n"
+print "-" * (columns/2) + "\n" + ("|" + " " * (columns/2 -2) + "|\n")* (rows / 2) + "-" * (columns/2) + "\n"
 ```
