@@ -54,7 +54,6 @@ Net::SSH.start(@hostname, @username, :password => @password, :auth_methods => ["
       ch.send_channel_request("shell") do |ch, success| 
         raise "Error opening shell" unless success
     	STDOUT.puts "[+] Getting Remote Shell\n\n" if success
-    	sleep 0.5
       end
     end
 
