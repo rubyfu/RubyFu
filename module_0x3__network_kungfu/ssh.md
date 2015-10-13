@@ -28,7 +28,7 @@ rescue
 end
 ```
 
-## SSH Client  
+## SSH Client with PTY shell
 Here a simple ssh client which give you an interactive PTY
 
 ```ruby
