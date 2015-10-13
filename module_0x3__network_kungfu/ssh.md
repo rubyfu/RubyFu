@@ -66,8 +66,7 @@ Net::SSH.start(@hostname, @username, :password => @password, :auth_methods => ["
     channel.on_data do |ch, data|
       STDOUT.print data
       cmd = gets
-      channel.send_data( "#{cmd}" ) #unless cmd.empty?
-      channel.send_data "\n" if data.chomp.empty?
+      channel.send_data( "#{cmd}" ) 
       trap("INT") {STDOUT.puts "Use 'exit' or 'logout' command to exit the session"}
     end
     
