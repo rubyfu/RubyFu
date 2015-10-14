@@ -11,11 +11,11 @@
 You can find Firefox profile databases in 
 - Linux 
 ```
-~/.mozilla/firefox/[PROFILE]
+/home/$USER/.mozilla/firefox/[PROFILE]
 ```
 - Windows 
 ```
-C:\Users\<USERNAME>\[PROFILE]
+C:\Users\%USERNAME%\[PROFILE]
 ```
 
 ```ruby
@@ -44,7 +44,11 @@ db.execute  "SELECT fieldname, value FROM moz_formhistory"
 
 - Linux
 ```
-~/.config/google-chrome/Default
+/home/$USER/.config/google-chrome/Default
+```
+- Windows 
+```
+C:\Users\%USERNAME%\AppData\Local\Google\Chrome\User Data\Default\
 ```
 
 ```ruby
