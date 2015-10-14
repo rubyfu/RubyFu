@@ -1,4 +1,4 @@
-# Module 0x6 | Reverse Engineering KungFu
+# Module 0x6 | Forensic KungFu
 
 
 ## This Chapter is under development, if you can help, please don't hesitate to contact me or pull a request on the [official github repository](https://github.com/KINGSABRI/RubyFu)
