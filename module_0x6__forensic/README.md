@@ -8,6 +8,12 @@
 
 ## Firefox Investigation
 
+You can find Firefox profile databases in 
+- Linux 
+```
+~/.mozilla/firefox/[PROFILE]
+```
+- 
 
 ```ruby
 require 'sqlite3'
@@ -22,10 +28,13 @@ db.execute  "SELECT url FROM moz_places"
 # List all bookmarks
 db.execute  "SELECT title FROM moz_bookmarks"
 
-# Cookies
+# List all Cookies
 db = SQLite3::Database.new "cookies.sqlite"
 db.execute  "SELECT baseDomain, name, path, value, host FROM moz_cookies"
 
+# List all form history
+db = SQLite3::Database.new "formhistory.sqlite"
+db.execute  "SELECT fieldname, value FROM moz_formhistory"
 ```
 
 
