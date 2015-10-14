@@ -39,6 +39,9 @@ db.execute("INSERT INTO students (name, email, grade, blog)
 db.execute( "select * from numbers" ) do |row|
   p row
 end
+
+# List all tables
+db.execute  "SELECT * FROM sqlite_master where type='table'"
 ```
 
 
