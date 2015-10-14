@@ -27,5 +27,5 @@ Ideally, Hackers!
 [3]: module_0x3__network_kungfu/README.md
 [4]: module_0x4__web_kungfu/README.md
 [5]: module_0x5__exploitation_kungfu/README.md
-[6]: module_0x6__reverse_engineering/README.md
+[6]: module_0x6__forensic/windows_forensic.md
 
