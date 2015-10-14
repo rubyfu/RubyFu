@@ -6,7 +6,7 @@
 
 
 
-## Invistigation  
+## Investigation  
 
 
 ```ruby
