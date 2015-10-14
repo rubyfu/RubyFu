@@ -39,6 +39,7 @@ db.execute  "SELECT baseDomain, name, host, path, value FROM moz_cookies"
 db = SQLite3::Database.new "formhistory.sqlite"
 db.execute  "SELECT fieldname, value FROM moz_formhistory"
 ```
+More about [Firefox forensic](http://www.forensicswiki.org/wiki/Mozilla_Firefox_3_History_File_Format)
 
 ## Google Chrome Investigation
 
@@ -59,8 +60,7 @@ require 'sqlite3'
 db = SQLite3::Database.new "Cookies"
 db.execute  "SELECT host_key, path, name, value FROM cookies"
 ```
-
-
+More about [Chrome forensic](http://www.forensicswiki.org/wiki/Google_Chrome)
 
 
 
