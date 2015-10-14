@@ -41,7 +41,7 @@ Output:
 ```
 
 ```
-prashantk@ubuntu:~$ ruby ip_example.rb 192.168.5.130 24
+ruby ip_example.rb 192.168.5.130 24
 192.168.5.0
 ```
 
@@ -77,7 +77,7 @@ Output:
 ```
 
 ```
-prashantk@ubuntu:~$ ruby ip_example.rb 192.168.5.130 24
+ruby ip_example.rb 192.168.5.130 24
 0.0.0.130
 ```
 
@@ -103,7 +103,7 @@ Output:
 ```
 
 ```
-prashantk@ubuntu:~$ ruby ip_example.rb 24
+ruby ip_example.rb 24
 254
 ```
 
@@ -131,12 +131,12 @@ Output:
 ```
 
 ```
-prashantk@ubuntu:~$ ruby ip_example.rb 192.168.5.128 24 192.168.5.93
+ruby ip_example.rb 192.168.5.128 24 192.168.5.93
 true
 ```
 
 ```
-prashantk@ubuntu:~$ ruby ip_example.rb 192.168.5.128 24 192.168.6.93
+ruby ip_example.rb 192.168.5.128 24 192.168.6.93
 false
 ```
 
@@ -162,7 +162,7 @@ Output:
 ```
 
 ```
-prashantk@ubuntu:~$ ruby ip_example.rb 255.255.255.0
+ruby ip_example.rb 255.255.255.0
 24
 ```
 
