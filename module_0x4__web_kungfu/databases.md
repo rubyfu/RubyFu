@@ -1,6 +1,11 @@
 # Databases
 
+## SQLite 
 
+- To install sqlite3 gem 
+```
+gem install sqlite3
+```
 
 ## Active Record
 - To install ActiveRecord 
