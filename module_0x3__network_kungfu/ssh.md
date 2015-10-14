@@ -122,9 +122,6 @@ hosts.each do |host|
       attack_ssh host, user, password
   
 end end end
-
-
-
 ```
 
 ## SSH Tunneling
