@@ -40,9 +40,21 @@ db = SQLite3::Database.new "formhistory.sqlite"
 db.execute  "SELECT fieldname, value FROM moz_formhistory"
 ```
 
+## Google Chrome Investigation
+
+- Linux
+```
+~/.config/google-chrome/Default
+```
+
+```ruby
+require 'sqlite3'
 
 
-
+# List all Cookies
+db = SQLite3::Database.new "Cookies"
+db.execute  "SELECT host_key, path, name, value FROM cookies"
+```
 
 
 
