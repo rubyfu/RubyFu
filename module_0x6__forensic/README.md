@@ -3,6 +3,33 @@
 
 ## This Chapter is under development, if you can help, please don't hesitate to contact me or pull a request on the [official github repository](https://github.com/KINGSABRI/RubyFu)
 
+
+
+
+## Invistigation  
+
+
+```ruby
+
+db.execute  "SELECT url FROM moz_places"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 gem install rbkb --source http://gemcutter.org
 ```
