@@ -17,7 +17,7 @@ Ideally, Hackers!
 ##### Module 0x3 | [Network KungFu][3]
 ##### Module 0x4 | [Web KungFu][4]
 ##### Module 0x5 | [Exploitation KungFu][5]
-##### Module 0x6 | [Reverse Engineering KungFu][6]
+##### Module 0x6 | [Forensic KungFu][6]
 
 
 <br><br><br>
