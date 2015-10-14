@@ -13,7 +13,10 @@ You can find Firefox profile databases in
 ```
 ~/.mozilla/firefox/[PROFILE]
 ```
-- 
+- Windows 
+```
+C:\Users\<USERNAME>\[PROFILE]
+```
 
 ```ruby
 require 'sqlite3'
