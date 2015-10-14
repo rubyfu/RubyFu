@@ -42,7 +42,7 @@
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
    * [metasm](module_0x5__exploitation_kungfu/metasm.md)
 * [Module 0x6 | Forensic KungFu](module_0x6__forensic/README.md)
-   * Windows Forensic
+   * [Windows Forensic](module_0x6__forensic/windows_forensic.md)
 * [References](references/README.md)
 * [FAQs](faqs/README.md)
 * [Contributors](contributers/README.md)
