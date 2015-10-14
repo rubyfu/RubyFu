@@ -6,7 +6,7 @@
 
 
 
-## Firefox Investigation  
+## Firefox Investigation
 
 
 ```ruby
