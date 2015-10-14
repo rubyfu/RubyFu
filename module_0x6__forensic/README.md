@@ -15,6 +15,8 @@ require 'sqlite3'
 # List all vitied URLs (History)
 db = SQLite3::Database.new "places.sqlite"
 db.execute  "SELECT url FROM moz_places"
+
+
 ```
 
 
