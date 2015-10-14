@@ -96,7 +96,6 @@ def attack_ssh(host, user, password, port=22, timeout = 5)
       puts "Password Found: " + "#{host} | #{user}:#{password}" 
     end
 
-
   rescue Net::SSH::ConnectionTimeout
     puts "[!] The host '#{host}' not alive!"
   rescue Net::SSH::Timeout

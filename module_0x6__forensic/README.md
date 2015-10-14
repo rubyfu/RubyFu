@@ -1,11 +1,5 @@
 # Module 0x6 | Forensic KungFu
 
-
-## This Chapter is under development, if you can help, please don't hesitate to contact me or pull a request on the [official github repository](https://github.com/KINGSABRI/RubyFu)
-
-
-
-
 ## Firefox Investigation
 
 You can find Firefox profile databases in 
@@ -18,6 +12,7 @@ You can find Firefox profile databases in
 C:\Users\%USERNAME%\[PROFILE]
 ```
 
+In above directories, there are many sqlite database files, so let's to import these databases and see what we get
 ```ruby
 require 'sqlite3'
 
