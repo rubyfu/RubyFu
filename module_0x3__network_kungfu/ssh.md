@@ -91,8 +91,8 @@ require 'net/ssh'
 def attack_ssh(host, user, password, port=22, timeout = 5)
   begin
     Net::SSH.start(host, user, :password => password, 
-		   :auth_methods => ["password"], :port => port, 
-		   :paranoid => false, :non_interactive => true, :timeout => timeout ) do |session|
+        		   :auth_methods => ["password"], :port => port, 
+        		   :paranoid => false, :non_interactive => true, :timeout => timeout ) do |session|
       puts "Password Found: " + "#{host} | #{user}:#{password}" 
     end
 
