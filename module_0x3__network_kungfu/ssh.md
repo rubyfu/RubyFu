@@ -113,7 +113,7 @@ end
 
 hosts = ['192.168.0.1', '192.168.0.4', '192.168.0.50']
 users = ['root', 'admin', 'rubyfu']
-passs = ['admin1234', 'P@ssw0rd', '123456', 'AdminAdmin']
+passs = ['admin1234', 'P@ssw0rd', '123456', 'AdminAdmin', 'secret', coffee]
 
 hosts.each do |host|
   users.each do |user|     
