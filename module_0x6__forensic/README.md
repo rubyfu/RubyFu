@@ -70,7 +70,7 @@ More about [Chrome forensic](http://www.forensicswiki.org/wiki/Google_Chrome)
 
 
 
-
+<!--- 
 
 ```
 gem install rbkb --source http://gemcutter.org
@@ -80,7 +80,7 @@ gem install rbkb --source http://gemcutter.org
 gem install metasm
 ```
 
-<!--- 
+
 # TO BE CHECKED 
 
 https://media.blackhat.com/bh-us-12/Briefings/Scott/BH_US_12_Scott_ruby_for_pentesters_the_workshop_Slides.pdf
