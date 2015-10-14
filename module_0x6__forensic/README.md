@@ -30,7 +30,7 @@ db.execute  "SELECT title FROM moz_bookmarks"
 
 # List all Cookies
 db = SQLite3::Database.new "cookies.sqlite"
-db.execute  "SELECT baseDomain, name, path, value, host FROM moz_cookies"
+db.execute  "SELECT baseDomain, name, host, path, value FROM moz_cookies"
 
 # List all form history
 db = SQLite3::Database.new "formhistory.sqlite"
