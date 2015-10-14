@@ -12,10 +12,19 @@
 ```ruby
 require 'sqlite3'
 
-# List all vitied URLs (History)
-db = SQLite3::Database.new "places.sqlite"
-db.execute  "SELECT url FROM moz_places"
+# List all tables 
+db.execute  "SELECT * FROM sqlite_master where type='table'"
 
+# Browser Histroy 
+db = SQLite3::Database.new "places.sqlite"
+# List all vitied URLs (History)
+db.execute  "SELECT url FROM moz_places"
+# List all bookmarks
+db.execute  "SELECT title FROM moz_bookmarks"
+
+# Cookies
+db = SQLite3::Database.new "cookies.sqlite"
+db.execute  "SELECT baseDomain, name, path, value, host FROM moz_cookies"
 
 ```
 
