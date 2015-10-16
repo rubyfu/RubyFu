@@ -1,7 +1,7 @@
 # RubyFu
 
 ![](images/other/rubyfu.png)
-***RubyFu is where Ruby goes evil!*** 
+***RubyFu is where Ruby goes evil!***
 
 This book is a collection of ideas, tricks and skills that could be useful for Hackers. It's a unique reference summarizes a lot of re-search and experience in order to achieve your **w00t** in shortest and smartest way.
 
