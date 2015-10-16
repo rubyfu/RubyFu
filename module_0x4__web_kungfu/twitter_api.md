@@ -25,7 +25,7 @@ client.status(649235138585366528)   # Fetch a particular Tweet by ID
 ```
 
 ## Building Stolen Credentials bot
-Here's the idea, We'll make a CGI script
+Here's the idea, We'll make a [CGI script][1]
 ```ruby
 #!/usr/bin/ruby -w                                                                 
 
