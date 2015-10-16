@@ -112,7 +112,6 @@ Returns
 ```
 
 
-s
 
 https://github.com/ronin-ruby/ronin-scanners
 
