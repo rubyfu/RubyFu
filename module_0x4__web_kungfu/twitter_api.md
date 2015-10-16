@@ -26,7 +26,7 @@ client.direct_message_create("KINGSABRI", "Hi, I'm #Rubyfu")    # Send direct me
 ```
 
 ## Building Stolen Credentials notification bot
-Here's the idea, We'll make a [CGI script][1] that takes sent stolen credentials then tweet these credentials to as notification or log function
+We're exploiting an XSS/HTML injection vulnerability and tricking users to enter there Username and Password. The idea is, We'll make a [CGI script][1] that takes that stolen credentials then tweet these credentials to us as notification or log system
 ```ruby
 #!/usr/bin/ruby -w                                                                 
 
