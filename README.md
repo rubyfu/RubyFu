@@ -13,12 +13,15 @@ Ideally, Hackers!
 
 ### Organization of the book
 ##### Module 0x1 | [Basic Ruby KungFu][1]
-**Module 0x1** is an awesome 
-##### Module 0x2 | [System KungFu][2]
-##### Module 0x3 | [Network KungFu][3]
-##### Module 0x4 | [Web KungFu][4]
-##### Module 0x5 | [Exploitation KungFu][5]
-##### Module 0x6 | [Forensic KungFu][6]
+Module 0x1 is an awesome collection of the most common needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack.
+
+#### Module 0x2 | [System KungFu][2]
+
+
+#### Module 0x3 | [Network KungFu][3]
+#### Module 0x4 | [Web KungFu][4]
+#### Module 0x5 | [Exploitation KungFu][5]
+#### Module 0x6 | [Forensic KungFu][6]
 
 
 <br><br><br>
