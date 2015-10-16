@@ -11,6 +11,8 @@ This book is a collection of ideas, tricks and skills that could be useful for H
 Ideally, Hackers!
 
 ### Organization of the book
+#### Module 0x0 | [Introduction][0]
+
 #### Module 0x1 | [Basic Ruby KungFu][1]
 Module 0x1 is an awesome collection of the most common needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack. Dealing with encoding and data conversion could be trivial or complex topic and here we don't care, we'll solve it.
 
@@ -32,6 +34,7 @@ Module 0x6 whoever you're, good or bad guy you'll need forensic skills your hack
 
 <br><br><br>
 ---
+[0]: README.md
 [1]: module_0x1__basic_ruby_kungfu/README.md
 [2]: module_0x2__system_kungfu/README.md
 [3]: module_0x3__network_kungfu/README.md
