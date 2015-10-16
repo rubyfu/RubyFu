@@ -22,7 +22,7 @@ Module 0x2 digs more in system hacking, where the system command, file manipulat
 Module 0x3 dives more deeper in the network sockets, protocols, packet manipulation more service enumeration ways and gives us more hacky and awesome code to get the job done.
 
 #### Module 0x4 | [Web KungFu][4]
-Module 0x4 web is most common place to share information, however, it's most delicious place to hack. Dealing with web known with its uniqueness for dealing with many and many technologies in one page only. Here we'll know how to deal with GET, POST requests, web services, databases and manipulating the browser and make it our slave. 
+Module 0x4 web is most common place to share information, however, it's most delicious place to hack. Dealing with web known with its uniqueness for dealing with many and many technologies in one page only. Here we'll know how to deal with GET, POST requests, web services, databases and manipulating the browser and make it our soldier. 
 
 #### Module 0x5 | [Exploitation KungFu][5]
 Module 0x
