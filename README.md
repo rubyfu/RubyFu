@@ -12,7 +12,7 @@ Ideally, Hackers!
 
 ### Organization of the book
 #### Module 0x1 | [Basic Ruby KungFu][1]
-Module 0x1 is an awesome collection of the most common needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack.
+Module 0x1 is an awesome collection of the most common needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack. Dealing with encoding and data conversion could be trivial or complex topic and here we don't care, we'll solve it.
 
 #### Module 0x2 | [System KungFu][2]
 Module 0x2 digs more in system hacking, where the system command, file manipulation, cryptography and more are needed. Almost all Linux systems are shipped-up with ruby and if it doesn't?, no problem we'll get raid of it.
