@@ -25,7 +25,7 @@ client.status(649235138585366528)   # Fetch a particular Tweet by ID
 client.direct_message_create("KINGSABRI", "Hi, I'm #Rubyfu")    # Send direct message to a particular user
 ```
 
-## Building Stolen Credentials bot
+## Building Stolen Credentials notification bot
 Here's the idea, We'll make a [CGI script][1] that takes sent stolen credentials then tweet these credentials to as notification or log function
 ```ruby
 #!/usr/bin/ruby -w                                                                 
