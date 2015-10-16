@@ -34,7 +34,7 @@
    * [SQL Injection Scanner](module_0x4__web_kungfu/sql_injection_scanner.md)
    * [Web Services](module_0x4__web_kungfu/web_services.md)
    * [Databases](module_0x4__web_kungfu/databases.md)
-   * Interacting with APIs
+   * [Interacting with APIs](module_0x4__web_kungfu/interacting_with_apis.md)
    * [Extending BurpSuite](module_0x4__web_kungfu/extending_burpsuite.md)
    * [Browser Manipulation](module_0x4__web_kungfu/browser_manipulation.md)
    * [Ruby 2 JavaScript](module_0x4__web_kungfu/ruby2javascript.md)
