@@ -40,6 +40,7 @@
     * Roini - Vulnerability research and exploit development framework
     * Idb - is a tool to simplify some common tasks for iOS pentesting and research
     * Bettercap - Extensible MITM tool and framework
+    * WATOBO - THE Web Application Security Toolbox
     * [ADD YOUR RUBY HACKING TOOL HERE!]
 
 
