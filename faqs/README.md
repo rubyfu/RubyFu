@@ -3,6 +3,9 @@
 ###### Q \ What is Rubyfu? 
 Rubyfu is a book to use not to read!. It's a clean, clear ruby book for hackers. As we need a periodical small/big tasks in our daily hacking, this book comes to reduce the number of wasting time in googling "*How to do X in ruby*" let's focus on hacking our target and find the *how* here.
 
+###### Q \ Why Ruby language?
+Why not?!
+
 ###### Q \ Why there is no explanation for beginners?
 We respect all beginners and newcomers from all levels and all programming languages; But, this book helps certain type of people (hackers) to find a common challenged code in their journey. So with our love, we add good references to help you to start and we can't wait to see you writing to this book.
 
@@ -19,9 +22,6 @@ Here are some main reasons:
 * Easy to contribute - using gitbook or github
 * Easy to manage - contributions, views, etc
 * And you can download the book with many formats - pdf, epub, etc
-
-###### Q \ Why Ruby language?
-Why not?!
 
 ###### Q \ When this book get finished?
 Well, it shouldn't. This book is an experience base book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
