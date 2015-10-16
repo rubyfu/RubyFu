@@ -70,7 +70,7 @@ require 'uri'
 URI.extract(string, ["http" , "https"])
 ```
 
-### Extracting URLs from web site
+### Extracting URLs from web page
 Using above tricks
 
 ```ruby
@@ -83,6 +83,7 @@ require 'net/http'
 Net::HTTP.get(URI.parse("http://rubyfu.net")).scan(/https?:\/\/[\S]+/)
 ```
 
+### Extracting email addresses from URL
 
 ### Extracting Strings from HTML tags 
 
