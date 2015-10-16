@@ -83,7 +83,7 @@ require 'net/http'
 Net::HTTP.get(URI.parse("http://rubyfu.net")).scan(/https?:\/\/[\S]+/)
 ```
 
-### Extracting email addresses from URL
+### Extracting email addresses from web page
 
 ### Extracting Strings from HTML tags 
 
