@@ -4,7 +4,8 @@
         "anchors",
         "todo",
         "splitter",
-        "book-summary-scroll-position-saver"
+        "book-summary-scroll-position-saver",
+        "easyheightlight"
     ],
     "pluginsConfig": {}
 }
