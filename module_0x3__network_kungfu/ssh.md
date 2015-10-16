@@ -164,8 +164,8 @@ rdesktop WebServer:3333
                               |--------DMZ------|---Local Farm----|
                               |                 |                 |
 |Attacker| <---SSH Tunnel---- | |SSH Server| <-RDP-> |Web server| |
-  |->-|                       |                 |                 |
-                              |-----------------|-----------------|
+  |   |                       |                 |                 |
+  `->-'                       |-----------------|-----------------|
 ```
 Run ssh-rtnnel.rb on the **SSH Server** 
 
