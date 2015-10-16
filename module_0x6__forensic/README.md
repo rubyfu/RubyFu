@@ -12,6 +12,7 @@ You can find Firefox profile databases in
 C:\Users\%USERNAME%\[PROFILE]
 ```
 
+In above directories, there are many sqlite database files, so let's to import these databases and see what we get
 ```ruby
 require 'sqlite3'
 
