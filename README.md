@@ -19,10 +19,10 @@ Module 0x1 is an awesome collection of the most common needed String manipulatio
 Module 0x2 digs more in system hacking, where the system command, file manipulation, cryptography and more are needed. Almost all Linux systems are shipped-up with ruby and if it doesn't?, no problem we'll get raid of it.
 
 #### Module 0x3 | [Network KungFu][3]
-Module 0x dives more deeper in the network sockets, protocols, packet manipulation more service enumeration ways and gives us more hacky and awesome code to get the job done.
+Module 0x3 dives more deeper in the network sockets, protocols, packet manipulation more service enumeration ways and gives us more hacky and awesome code to get the job done.
 
 #### Module 0x4 | [Web KungFu][4]
-Module 0x
+Module 0x4
 
 #### Module 0x5 | [Exploitation KungFu][5]
 Module 0x
