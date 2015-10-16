@@ -63,7 +63,7 @@ username = ARGV[1] || "admin@attacker.zone"
 password = ARGV[2] || "P@ssw0rd"
 
 imap = Net::IMAP.new(host, 993, true, nil, false)
-imap.login(username, password)
+imap.login(username, password)      # imap.authenticate('LOGIN', username, password)
 imap.select('INBOX')
 
 mail_ids = imap.search(['ALL'])
