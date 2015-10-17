@@ -48,7 +48,7 @@ Server/Client lifecycle
 - SOCK_RAW
 - SOCK_DRAM   
 - SOCK_STREAM (TCP)
- 
+
 ### Socket Protocol
 - IPPROTO_SCTP
 - IPPROTO_TCP
