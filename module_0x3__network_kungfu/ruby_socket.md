@@ -10,7 +10,7 @@ IO                              # The basis for all input and output in Ruby
     │   │   ├── SOCKSSocket     # Helper class for building TCP socket servers applications
     │   │   └── TCPServer       # Helper class for building TCP socket servers
     │   └── UDPSocket           # Class for User Datagram Protocol (UDP) sockets
-    ├── Socket                  # Base socket class that mimics that BSD Sockets API
+    ├── Socket                  # Base socket class that mimics that BSD Sockets API. It provides more operating system specific functionality
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
