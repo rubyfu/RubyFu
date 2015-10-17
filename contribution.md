@@ -34,6 +34,7 @@ Please find all you need to know about gitbook and markdown editing in [Referenc
 5. From Gitbook editor, **Sync** your changes to forked repository.
 6. From Github, send a **Pull Request(PR)** to **Contributions** branch.
 
+Not sure where to start helping? Go to [TODO list](contributers/todo.md) and check the unchecked items.
 
 ### Contributing with Code
 
