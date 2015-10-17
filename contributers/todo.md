@@ -22,6 +22,7 @@
 - [ ] Interacting with APIs, add more examples 
 - [x] Twitter API
 - [ ] Google API
+- [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation KungFu**
 - [ ] Metasploit 
