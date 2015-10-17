@@ -1,6 +1,6 @@
 # Ruby Socket
 
-## Introduction 
+## Lightweight Introduction 
 ### Ruby Socket Class Hierarchy 
 
 To know the socket hierarchy in ruby here a simple tree explains it.
