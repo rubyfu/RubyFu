@@ -12,4 +12,4 @@
 - [ ] Add Hardware Hacking
 - [ ] Proofreading enhancement
 - [ ] Add more Network traffic analysis 
-- 
+- [ ] Add HTML,XML,Json file parsing - under file manipulation 
