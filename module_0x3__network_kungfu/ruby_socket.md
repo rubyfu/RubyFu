@@ -17,28 +17,6 @@ IO                              # The basis for all input and output in Ruby
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
 
-
-```
-Server/Client lifecycle 
-
-            Client        Server
-              |             |                  
-   socket     +             +      socket
-              |             |
-   connect    +--------,    +      bind
-              |         |   |
-   write ,--> +------,  |   +      listen
-         |    |      |  |   |
-   read  `----+ <--, |  `-> +      accept
-              |    | |      |
-   close      +--, | `----> + <--, read <--,
-                 | |        |    |         |
-                 | `--------+----' write   ٨
-                 |                         |
-                 |                         |
-                 `----->------>------->----`
-```
-
 ### Socket Domains 
 - AF_LOCAL	(UNIX)
 - AF_INET(IPv4)  
@@ -56,6 +34,27 @@ Server/Client lifecycle
 
 
 ## TCP Socket
+
+
+**Server/Client lifecycle **
+```
+            Client        Server
+              |             |                  
+   socket     +             +      socket
+              |             |
+   connect    +--------,    +      bind
+              |         |   |
+   write ,--> +------,  |   +      listen
+         |    |      |  |   |
+   read  `----+ <--, |  `-> +      accept
+              |    | |      |
+   close      +--, | `----> + <--, read <--,
+                 | |        |    |         |
+                 | `--------+----' write   ٨
+                 |                         |
+                 |                         |
+                 `----->------>------->----`
+```
 
 ### TCP Server
 
