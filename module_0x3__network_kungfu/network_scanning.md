@@ -59,7 +59,7 @@ def scan(host)
         # puts "[!] #{host} | Port #{port} closed"
         next
       rescue Timeout::Error
-    	puts "[!] #{host} | Port #{port} timeout"
+    	puts "[!] #{host} | Port #{port} timeout/filtered"
     	next
       end
     }.join
