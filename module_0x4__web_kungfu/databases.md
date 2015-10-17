@@ -24,7 +24,6 @@ rows = db.execute <<-SQL
 );
 SQL
 
-
 # Execute a few inserts
 {
   'Anonymous'    => "192.168.0.7",
@@ -34,7 +33,6 @@ SQL
   db.execute("INSERT INTO attackers (name, ip) 
 	          VALUES (?, ?)", [attacker, ip])
 end
-
 
 # Find a few rows
 db.execute "SELECT id,name,ip FROM attackers"
