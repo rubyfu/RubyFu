@@ -33,7 +33,7 @@ puts "#{pingfails} packets were droped"
 ```
 
 ## Port Scanner 
-
+If you got what we've represented in [Ruby Socket](module_0x3__network_kungfu/ruby_socket.md) section, then here we wrapping up and do some application depends on it. 
 **scanner.rb**
 ```ruby
 #!/usr/bin/env ruby
@@ -50,11 +50,11 @@ def scan(host)
   (0..1024).each do |port|
     Thread.new {
       begin
-	  timeout(3) do					# timeout of running operation 
-    	  s = TCPSocket.new(host, port)			# Create new socket
-    	  puts "[+] #{host} | Port #{port} open"
-    	  s.close
-	  end
+    	timeout(3) do					# timeout of running operation 
+          s = TCPSocket.new(host, port)			# Create new socket
+          puts "[+] #{host} | Port #{port} open"
+          s.close
+    	end
       rescue Errno::ECONNREFUSED
         # puts "[!] #{host} | Port #{port} closed"
         next
