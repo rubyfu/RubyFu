@@ -19,7 +19,9 @@
 - [ ] Add more Network traffic analysis 
 
 **Module 0x4 | Web KungFu**
-- []
+- [ ] Interacting with APIs, add more examples 
+- [x] Twitter API
+- [ ] Google API
 
 **Module 0x5 | Exploitation KungFu**
 - [ ] Metasploit 
