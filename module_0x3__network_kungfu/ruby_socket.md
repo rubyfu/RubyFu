@@ -2,6 +2,7 @@
 
 ## Ruby Socket Class Hierarchy 
 
+To know the socket hairarchy in ruby 
 ```
 IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
@@ -14,6 +15,30 @@ IO                              # The basis for all input and output in Ruby
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
+
+```
+Server/Client lifecycle 
+
+            Client        Server
+              |             |                  
+   socket     +             +      socket
+              |             |
+   connect    +--------,    +      bind
+              |         |   |
+   write ,--> +------,  |   +      listen
+         |    |      |  |   |
+   read  `----+ <--, |  `-> +      accept
+              |    | |      |
+   close      +--, | `----> + <--, read <--,
+                 | |        |    |         |
+                 | `--------+----' write   ٨
+                 |                         |
+                 |                         |
+                 `----->------>------->----`
+
+
+```
+
 
 ## TCP Socket
 
