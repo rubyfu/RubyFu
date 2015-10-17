@@ -50,11 +50,11 @@ def scan(host)
   (0..1024).each do |port|
     Thread.new {
       begin
-	timeout(3) do					# timeout of running operation 
-	  s = TCPSocket.new(host, port)			# Create new socket
-	  puts "[+] #{host} | Port #{port} open"
-	  s.close
-	end
+	  timeout(3) do					# timeout of running operation 
+    	  s = TCPSocket.new(host, port)			# Create new socket
+    	  puts "[+] #{host} | Port #{port} open"
+    	  s.close
+	  end
       rescue Errno::ECONNREFUSED
         # puts "[!] #{host} | Port #{port} closed"
         next
