@@ -5,7 +5,8 @@
 - [ ] Enhance contribution section
 
 **Module 0x1 | Basic Ruby KungFu**
-- [ ] 
+- [ ] Add Building Interactive console 
+- [x] Add dealing with Terminal 
 
 **Module 0x2 | System KungFu**
 - [ ] Fix Remote Shell >> Pseudo Terminal (PTY)
