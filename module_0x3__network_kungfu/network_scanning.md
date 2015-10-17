@@ -59,7 +59,7 @@ def scan(host)
         # puts "[!] #{host} | Port #{port} closed"
       rescue Timeout::Error
 	puts "[!] #{host} | Port #{port} timeout"
-	nextcp 
+	next
       end
     }.join
   end
@@ -70,7 +70,13 @@ scan host
 ```
 Run it
 ```bash 
-scan host 
+ruby scanner.rb 45.33.32.156    # scanme.nmap.com
+
+[+] 45.33.32.156 | Port 22 open
+[+] 45.33.32.156 | Port 80 open
+[!] 45.33.32.156 | Port 81 timeout
+[!] 45.33.32.156 | Port 85 timeout
+[!] 45.33.32.156 | Port 119 timeout
 
 ```
 
