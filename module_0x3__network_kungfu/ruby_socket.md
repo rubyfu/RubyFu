@@ -1,8 +1,9 @@
 # Ruby Socket
 
-## Ruby Socket Class Hierarchy 
+## Introduction 
+### Ruby Socket Class Hierarchy 
 
-To know the socket hairarchy in ruby 
+To know the socket hierarchy in ruby here a simple tree explains it.
 ```
 IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
@@ -15,6 +16,7 @@ IO                              # The basis for all input and output in Ruby
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
+
 
 ```
 Server/Client lifecycle 
@@ -35,9 +37,22 @@ Server/Client lifecycle
                  |                         |
                  |                         |
                  `----->------>------->----`
-
-
 ```
+
+### Socket Domains 
+- AF_LOCAL	(UNIX)
+- AF_INET(IPv4)  
+- AF_INET6(IPv6)
+
+### Socket Types
+- SOCK_RAW
+- SOCK_DRAM   
+- SOCK_STREAM (TCP)
+ 
+### Socket Protocol
+- IPPROTO_SCTP
+- IPPROTO_TCP
+- IPPROTO_UDP
 
 
 ## TCP Socket
