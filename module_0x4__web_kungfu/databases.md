@@ -27,8 +27,8 @@ SQL
 
 # Execute a few inserts
 {
-  'Anonymous' => "192.168.0.7",
-  'LulzSec' => "192.168.0.14",
+  'Anonymous'    => "192.168.0.7",
+  'LulzSec'      => "192.168.0.14",
   'Lizard Squad' => "192.168.0.253"
 }.each do |attacker, ip|
   db.execute("INSERT INTO attackers (name, ip) 
