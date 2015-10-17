@@ -12,7 +12,7 @@ gem install sqlite3
 ```ruby
 require "sqlite3"
 
-# Open a database
+# Open/Create a database
 db = SQLite3::Database.new "rubyfu.db"
 
 # Create a table
