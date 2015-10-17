@@ -11,3 +11,5 @@
 - [ ] Add [ubertooth](http://www.evilsocket.net/2015/02/12/rubertooth-a-complete-ruby-porting-of-the-ubertooth-libraries-and-utilities/) 
 - [ ] Add Hardware Hacking
 - [ ] Proofreading enhancement
+- [ ] Add more Network traffic analysis 
+- 
