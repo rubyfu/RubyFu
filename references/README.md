@@ -24,7 +24,7 @@
     * [Working with Ruby Threads][17]
     * [Ruby Cookbook][18]
     * [Learn Ruby The Hard Way][19]
-* **Sites, Topics and Articls**
+* **Sites, Topics and Articles**
     * [Rubymonk.com][20]
     * [Byte manipulation in ruby][21]
     * [Ruby Format][22]

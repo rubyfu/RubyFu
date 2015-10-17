@@ -5,7 +5,8 @@
 - [ ] Enhance contribution section
 
 **Module 0x1 | Basic Ruby KungFu**
-- [ ] 
+- [ ] Add Building Interactive console 
+- [x] Add dealing with Terminal 
 
 **Module 0x2 | System KungFu**
 - [ ] Fix Remote Shell >> Pseudo Terminal (PTY)
@@ -19,10 +20,13 @@
 - [ ] Add more Network traffic analysis 
 
 **Module 0x4 | Web KungFu**
-- []
+- [ ] Interacting with APIs, add more examples 
+- [x] Twitter API
+- [ ] Google API
+- [ ] Ruby 2 JavaScript 
 
-Module 0x5 | Exploitation KungFu
-- []
+**Module 0x5 | Exploitation KungFu**
+- [ ] Metasploit 
 
 **Module 0x6 | Forensic KungFu**
 - [x] Moved Reverse Engineering to Forensic  
