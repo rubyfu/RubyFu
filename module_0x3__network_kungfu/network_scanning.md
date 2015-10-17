@@ -78,7 +78,8 @@ ruby scanner.rb 45.33.32.156    # scanme.nmap.com
 [!] 45.33.32.156 | Port 81 timeout
 [!] 45.33.32.156 | Port 85 timeout
 [!] 45.33.32.156 | Port 119 timeout
-
+[!] 45.33.32.156 | Port 655 timeout
+[!] 45.33.32.156 | Port 959 timeout
 ```
 
 
