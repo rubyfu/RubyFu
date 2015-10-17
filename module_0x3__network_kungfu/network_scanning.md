@@ -34,9 +34,45 @@ puts "#{pingfails} packets were droped"
 
 ## Port Scanner 
 
+**scanner.rb**
+```ruby
+#!/usr/bin/env ruby
+#
+# KING SABRI | @KINGSABRI
+#
+require 'socket'
+require 'thread'
+require 'timeout'
 
+host = ARGV[0]
 
+def scan(host)
+  (0..1024).each do |port|
+    Thread.new {
+      begin
+	timeout(3) do					# timeout of running operation 
+	  s = TCPSocket.new(host, port)			# Create new socket
+	  puts "[+] #{host} | Port #{port} open"
+	  s.close
+	end
+      rescue Errno::ECONNREFUSED
+        # puts "[!] #{host} | Port #{port} closed"
+      rescue Timeout::Error
+	puts "[!] #{host} | Port #{port} timeout"
+	nextcp 
+      end
+    }.join
+  end
+end
 
+scan host 
+
+```
+Run it
+```bash 
+scan host 
+
+```
 
 
 
