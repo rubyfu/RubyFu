@@ -6,6 +6,7 @@
 
 **Module 0x1 | Basic Ruby KungFu**
 - [ ] Add Building Interactive console 
+- [x] Get terminal size 
 - [x] Add dealing with Terminal 
 
 **Module 0x2 | System KungFu**
