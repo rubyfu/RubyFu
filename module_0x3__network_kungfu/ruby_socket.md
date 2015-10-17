@@ -44,7 +44,7 @@ client.puts "Hi, TCP Server #{rhost}"
 client.close
 ```
 
-You can put timeout/time interval for current connection incase server response get delayed
+You can put timeout/time interval for current connection in-case the server response get delayed
 
 ```ruby
 timeval = [3, 0].pack("l_2")        # Time interval 3 seconds 
