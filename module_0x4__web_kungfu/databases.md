@@ -37,9 +37,7 @@ end
 
 
 # Find a few rows
-db.execute( "select * from numbers" ) do |row|
-  p row
-end
+db.execute "SELECT id,name,ip FROM attackers"
 
 # List all tables
 db.execute  "SELECT * FROM sqlite_master where type='table'"
