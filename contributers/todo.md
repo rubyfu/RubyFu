@@ -31,7 +31,7 @@
 
 **Module 0x6 | Forensic KungFu**
 - [x] Moved Reverse Engineering to Forensic  
-- [x] Add more to Reverse Engineering 
+- [x] ~~Add more to Reverse Engineering~~ 
 
 **Other TODOs**
 - [ ] Proofreading enhancement
