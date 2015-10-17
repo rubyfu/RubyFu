@@ -46,7 +46,7 @@ client.close
 
 You can put timeout/time interval for currernt connection incase server response get delayed
 
-```
+```ruby
 timeval = [3, 0].pack("l_2")        # Time interval 3 seconds 
 client.setsockopt Socket::SOL_SOCKET, Socket::SO_RCVTIMEO, timeval      # Set socket revceiving time interval 
 client.setsockopt Socket::SOL_SOCKET, Socket::SO_SNDTIMEO, timeval      # Set socket sending time interval 
