@@ -22,7 +22,7 @@
 - []
 
 **Module 0x5 | Exploitation KungFu**
-- []
+- [ ] Metasploit 
 
 **Module 0x6 | Forensic KungFu**
 - [x] Moved Reverse Engineering to Forensic  
