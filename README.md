@@ -12,7 +12,7 @@ Ideally, Hackers!
 
 ### Organization of the book
 #### Module 0x0 | [Introduction][0]
-Module 0x0 is just a smooth start for you, where you're reader hacker, writer hacker or someone came to say hi. In this mode you'll find a great start for your as contributor where all kind of contribution is welcome starting from proofreading ending to topic writer.
+Module 0x0 is just a smooth start for you, whether you're a reader, writer hacker or someone came to say hi. In this module you'll find a great start for you as contributor where all kind of contributions are welcome starting from proofreading ending to topic writing.
 
 #### Module 0x1 | [Basic Ruby KungFu][1]
 Module 0x1 is an awesome collection of the most common needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack. Dealing with encoding and data conversion could be trivial or complex topic and here we don't care, we'll solve it.
@@ -30,7 +30,7 @@ Module 0x4 web is most common place to share information, however, it's most del
 Module 0x5 whatsoever the vulnerability was, remote(ftp, imap, smtp, etc) or local(file format, local system) you'll need to know how to build fuzzers and skeleton exploit for that. If get there you'll need simple clean stable way to build your exploit. Here you'll know how to build your fuzzer, exploit and Porting your exploit to Metasploit and how to write metasploit module too.
 
 #### Module 0x6 | [Forensic KungFu][6]
-Module 0x6 whoever you're, good or bad guy you'll need forensic skills your hack and/or investigation. Here you'll learn more how to deal with registry extracting browsers information and more.
+Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your hack and/or investigation. Here you'll learn more how to deal with registry extracting browsers information and much more.
 
 
 <br><br><br>
