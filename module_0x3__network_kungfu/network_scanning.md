@@ -57,9 +57,10 @@ def scan(host)
 	end
       rescue Errno::ECONNREFUSED
         # puts "[!] #{host} | Port #{port} closed"
+        next
       rescue Timeout::Error
-	puts "[!] #{host} | Port #{port} timeout"
-	next
+    	puts "[!] #{host} | Port #{port} timeout"
+    	next
       end
     }.join
   end
