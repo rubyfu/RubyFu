@@ -52,7 +52,6 @@ client.setsockopt Socket::SOL_SOCKET, Socket::SO_RCVTIMEO, timeval      # Set so
 client.setsockopt Socket::SOL_SOCKET, Socket::SO_SNDTIMEO, timeval      # Set socket sending time interval
 client.getsockopt(Socket::SOL_SOCKET, Socket::SO_RCVTIMEO).inspect      # Optional, Check if socket option has been set
 client.getsockopt(Socket::SOL_SOCKET, Socket::SO_SNDTIMEO).inspect      # Optional, Check if socket option has been set
-
 ```
 
 There are some alternatives for `puts` and `gets` methods.You can see the difference and its classes using method method in Pry interpreter console
