@@ -32,7 +32,7 @@ SQL
   'Lizard Squad' => "192.168.0.253"
 }.each do |attacker, ip|
   db.execute("INSERT INTO attackers (name, ip) 
-	      VALUES (?, ?)", [attacker, ip])
+	          VALUES (?, ?)", [attacker, ip])
 end
 
 
