@@ -13,27 +13,28 @@ gem install sqlite3
 require "sqlite3"
 
 # Open a database
-db = SQLite3::Database.new "test.db"
+db = SQLite3::Database.new "rubyfu.db"
 
 # Create a database
-rows = db.execute <<-SQL
-  create table numbers (
-    name varchar(30),
-    val int
-  );
+rows = db.execute <<-SQL 
+  CREATE TABLE attackers (
+   id   INTEGER PRIMARY KEY   AUTOINCREMENT,
+   name TEXT    NOT NULL,
+   ip   CHAR(50)
+);
 SQL
+
 
 # Execute a few inserts
 {
-  "one" => 1,
-  "two" => 2,
-}.each do |pair|
-  db.execute "insert into numbers values ( ?, ? )", pair
+  'Anonymous' => "192.168.0.7",
+  'LulzSec' => "192.168.0.14",
+  'Lizard Squad' => "192.168.0.253"
+}.each do |attacker, ip|
+  db.execute("INSERT INTO attackers (name, ip) 
+	      VALUES (?, ?)", [attacker, ip])
 end
 
-# Execute inserts with parameter markers
-db.execute("INSERT INTO students (name, email, grade, blog) 
-            VALUES (?, ?, ?, ?)", [@name, @email, @grade, @blog])
 
 # Find a few rows
 db.execute( "select * from numbers" ) do |row|
