@@ -1,7 +1,9 @@
 # Ruby Socket
 
-## Ruby Socket Class Hierarchy 
+## Lightweight Introduction 
+### Ruby Socket Class Hierarchy 
 
+To know the socket hierarchy in ruby here a simple tree explains it.
 ```
 IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
@@ -10,12 +12,49 @@ IO                              # The basis for all input and output in Ruby
     │   │   ├── SOCKSSocket     # Helper class for building TCP socket servers applications
     │   │   └── TCPServer       # Helper class for building TCP socket servers
     │   └── UDPSocket           # Class for User Datagram Protocol (UDP) sockets
-    ├── Socket                  # Base socket class that mimics that BSD Sockets API
+    ├── Socket                  # Base socket class that mimics that BSD Sockets API. It provides more operating system specific functionality
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
 
+### Socket Domains 
+- AF_LOCAL	(UNIX)
+- AF_INET(IPv4)  
+- AF_INET6(IPv6)
+
+### Socket Types
+- SOCK_RAW
+- SOCK_DRAM   
+- SOCK_STREAM (TCP)
+
+### Socket Protocol
+- IPPROTO_SCTP
+- IPPROTO_TCP
+- IPPROTO_UDP
+
+
 ## TCP Socket
+
+
+**Server/Client lifecycle **
+```
+            Client        Server
+              |             |                  
+   socket     +             +      socket
+              |             |
+   connect    +--------,    +      bind
+              |         |   |
+   write ,--> +------,  |   +      listen
+         |    |      |  |   |
+   read  `----+ <--, |  `-> +      accept
+              |    | |      |
+   close      +--, | `----> + <--, read <--,
+                 | |        |    |         |
+                 | `--------+----' write   ٨
+                 |                         |
+                 |                         |
+                 `----->------>------->----`
+```
 
 ### TCP Server
 
@@ -42,6 +81,16 @@ rhost  = client.peeraddr.last               # Get the remote server's IP address
 client.gets.chomp
 client.puts "Hi, TCP Server #{rhost}"
 client.close
+```
+
+You can put timeout/timeinterval for current connection in-case the server's response get delayed and the socket is still open.
+
+```ruby
+timeval = [3, 0].pack("l_2")        # Time interval 3 seconds 
+client.setsockopt Socket::SOL_SOCKET, Socket::SO_RCVTIMEO, timeval      # Set socket revceiving time interval 
+client.setsockopt Socket::SOL_SOCKET, Socket::SO_SNDTIMEO, timeval      # Set socket sending time interval
+client.getsockopt(Socket::SOL_SOCKET, Socket::SO_RCVTIMEO).inspect      # Optional, Check if socket option has been set
+client.getsockopt(Socket::SOL_SOCKET, Socket::SO_SNDTIMEO).inspect      # Optional, Check if socket option has been set
 ```
 
 There are some alternatives for `puts` and `gets` methods.You can see the difference and its classes using method method in Pry interpreter console
