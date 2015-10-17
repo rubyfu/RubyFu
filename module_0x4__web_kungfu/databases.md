@@ -15,7 +15,7 @@ require "sqlite3"
 # Open a database
 db = SQLite3::Database.new "rubyfu.db"
 
-# Create a database
+# Create a table
 rows = db.execute <<-SQL 
   CREATE TABLE attackers (
    id   INTEGER PRIMARY KEY   AUTOINCREMENT,
