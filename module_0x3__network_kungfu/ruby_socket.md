@@ -44,6 +44,14 @@ client.puts "Hi, TCP Server #{rhost}"
 client.close
 ```
 
+You can put timeout/time interval for currernt connection incase server response get delayed
+
+```
+timeval = [3, 0].pack("l_2")        # Time interval 3 seconds 
+client.setsockopt Socket::SOL_SOCKET, Socket::SO_RCVTIMEO, timeval      # Set socket revceiving time interval 
+client.setsockopt Socket::SOL_SOCKET, Socket::SO_SNDTIMEO, timeval      # Set socket sending time interval 
+```
+
 There are some alternatives for `puts` and `gets` methods.You can see the difference and its classes using method method in Pry interpreter console
 
 ```ruby
