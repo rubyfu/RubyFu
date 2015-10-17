@@ -166,7 +166,7 @@ ruby ip_example.rb 255.255.255.0
 24
 ```
 
-This part has been pretty quoted from *IP address Operations in Ruby* [^1] topic
+This part has been pretty quoted from [IP address Operations in Ruby][1] topic
 
 
 ## IP Geolocation
@@ -220,6 +220,6 @@ Time zone:      America/Chicago
 
 <br><br><br>
 ---
-[^1]: Source: - [The original topic](http://www.brownfort.com/2014/09/ip-operations-ruby/)
+[1]: http://www.brownfort.com/2014/09/ip-operations-ruby/
 
 - [RubyDoc | IPAddr](http://ruby-doc.org/stdlib-1.9.3/libdoc/ipaddr/rdoc/IPAddr.html)
