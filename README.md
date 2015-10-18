@@ -30,7 +30,7 @@ Module 0x4 web is most common place to share information, however, it's most del
 Module 0x5 whatsoever the vulnerability was, remote(ftp, imap, smtp, etc) or local(file format, local system) you'll need to know how to build fuzzers and skeleton exploit for that. If get there you'll need simple clean stable way to build your exploit. Here you'll know how to build your fuzzer, exploit and Porting your exploit to Metasploit and how to write metasploit module too.
 
 #### Module 0x6 | [Forensic KungFu][6]
-Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your hack and/or investigation. Here you'll learn more how to deal with registry extracting browsers information and more.
+Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your hack and/or investigation. Here you'll learn more how to deal with registry extracting browsers information and much more.
 
 
 <br><br><br>
