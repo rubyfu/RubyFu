@@ -23,5 +23,5 @@ Here are some main reasons:
 * Easy to manage - contributions, views, etc
 * And you can download the book with many formats - pdf, epub, etc
 
-###### Q \ When this book get finished?
+###### Q \ When this book get completed?
 Well, it shouldn't. This book is an experience base book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
