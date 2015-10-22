@@ -28,7 +28,7 @@ def send_sqli(query)
                                    "var3"=> "val3"})
 
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
+  http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
 
   request = Net::HTTP::Get.new(uri.request_uri)
   request["User-Agent"] = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0"
@@ -67,6 +67,7 @@ headers =
  }
 post = File.read post_file   # Raw Post Body's Data
 http    = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
 request = Net::HTTP::Post.new(uri.path, headers)
 request.body = post
 response = http.request request
@@ -118,6 +119,7 @@ require "uri"
 # Parsing the URL and instantiate http
 uri = URI.parse("http://wwwx.cs.unc.edu/~jbs/aw-wwwp/docs/resources/perl/perl-cgi/programs/cgi_stdin.cgi")
 http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
 
 # Instantiate HTTP Post request
 request = Net::HTTP::Post.new(uri.request_uri)
@@ -165,6 +167,7 @@ uri1 = URI.parse("http://host/login.aspx")
 uri2 = URI.parse("http://host/report.aspx")
 
 Net::HTTP.start(uri1.host, uri1.port) do |http|
+  http.use_ssl = true if uri1.scheme == 'https'    # Enable HTTPS support if it's HTTPS
   puts "[*] Logging in"
   p_request  = Net::HTTP::Post.new(uri1)
   p_request.set_form_data({"loginName"=>"admin", "password"=>"P@ssw0rd"})
@@ -230,7 +233,7 @@ system(cgi['cmd'])
 ```
 Now you can simply use browser, netcat or WebShellConsole[^1] to execute your commands.
 ex.
-**Brwoser**
+**Browser**
 ```
 http://host/cgi/shell.rb?cmd=ls -la
 ```
