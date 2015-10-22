@@ -69,7 +69,7 @@ Not sure where to start helping? Go to [TODO list](contributers/todo.md) and che
 
 
 ##### Command-line
-Use triple ticks to highlight your commandline. ex. 
+Use triple ticks to highlight your command-line. ex. 
     ```
     ls
     ``` 
@@ -84,7 +84,7 @@ Use triple ticks to highlight your commandline. ex.
 [1]: references/README.md
 [2]: https://github.com/GitbookIO/gitbook
 [3]: https://www.gitbook.com/editor
-[4]: https://github.com/KINGSABRI/RubyFu
+[4]: https://github.com/rubyfu/RubyFu
 [5]: https://github.com
 [6]: http://gitbook.com
 
