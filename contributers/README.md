@@ -15,6 +15,7 @@
 ## Contributors
 - Bashar | @b_free2
 - William Coppola | @SubINacls
+- Brendan Baldwin | @usergenic
 
 ## Sponsors
 - [Arab Security Community (Security4arabs)][1]
