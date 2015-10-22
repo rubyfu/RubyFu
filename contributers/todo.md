@@ -6,7 +6,7 @@
 
 **Module 0x1 | Basic Ruby KungFu**
 - Non-Alphanumeric Ruby (https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/)
-- [ ] Add Building Interactive console 
+- [ ] Add Building Interactive console (Readline)
 - [x] Get terminal size 
 - [x] Add dealing with Terminal 
 
@@ -38,6 +38,7 @@
 - [ ] Proofreading enhancement
 - [ ] Add Hardware Hacking
 - [ ] Add [ubertooth](http://www.evilsocket.net/2015/02/12/rubertooth-a-complete-ruby-porting-of-the-ubertooth-libraries-and-utilities/) 
+- [ ] Add Dealing with SSL/TLS (web and socket)
 
 
 
