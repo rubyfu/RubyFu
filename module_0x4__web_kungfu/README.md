@@ -28,7 +28,7 @@ def send_sqli(query)
                                    "var3"=> "val3"})
 
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
+  http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
 
   request = Net::HTTP::Get.new(uri.request_uri)
   request["User-Agent"] = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0"
@@ -67,6 +67,7 @@ headers =
  }
 post = File.read post_file   # Raw Post Body's Data
 http    = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
 request = Net::HTTP::Post.new(uri.path, headers)
 request.body = post
 response = http.request request
