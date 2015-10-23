@@ -40,7 +40,7 @@ we can't stopping being jealous of Metasploit console(msfconsole) where we take 
 
 - Readline 
 
-**rubyfu-console-basic.rb**
+**console-basic.rb**
 
 ```ruby
 #!/usr/bin/evn ruby
@@ -68,7 +68,11 @@ end
 ```
 Now run it and try the tab completion!
 
-Well, The man idea in known the tab completion is make to do things easier not just pressing tab.  
+Well, The man idea in known the tab completion is make to do things easier not just pressing tab. Here a simple thought
+
+****
+```
+```
 
 
 
