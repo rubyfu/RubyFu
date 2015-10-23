@@ -40,7 +40,7 @@ we can't stopping being jealous of Metasploit console(msfconsole). Fortunantely,
 
 - Readline 
 
-rubyfu-console-basic.rb
+**rubyfu-console-basic.rb**
 
 ```ruby
 #!/usr/bin/evn ruby
