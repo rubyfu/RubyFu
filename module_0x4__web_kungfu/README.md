@@ -167,6 +167,7 @@ uri1 = URI.parse("http://host/login.aspx")
 uri2 = URI.parse("http://host/report.aspx")
 
 Net::HTTP.start(uri1.host, uri1.port) do |http|
+  http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
   puts "[*] Logging in"
   p_request  = Net::HTTP::Post.new(uri1)
   p_request.set_form_data({"loginName"=>"admin", "password"=>"P@ssw0rd"})
