@@ -39,6 +39,7 @@ Readline.get_screen_size
 we can't stopping being jealous of Metasploit console(msfconsole) where we take a rest from command line switches. Fortunately, here is the main idea of tab completion console in ruby
 
 - Readline 
+The Readline module provides interface for GNU Readline. This module defines a number of methods to facilitate completion and accesses input history from the Ruby interpreter.
 
 **console-basic1.rb**
 
