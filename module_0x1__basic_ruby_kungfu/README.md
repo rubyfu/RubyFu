@@ -95,7 +95,7 @@ completion =
 	puts 'Exiting..'
 	exit 0
       else
-	CMDS.grep( /^#{Regexp.escape(str)}/i )
+	CMDS.grep( /^#{Regexp.escape(str)}/i ) unless str.nil?
       end
     end
 
@@ -104,10 +104,10 @@ Readline.completion_proc = completion		# Set completion process
 Readline.completion_append_character = ' '	# Make sure to add a space after completion
 
 while line = Readline.readline('-> ', true)
-  puts completion.call unless line.nil? or line.squeeze.empty?
-#   p line
+  puts completion.call
   break if line =~ /^quit.*/i or line =~ /^exit.*/i
 end
+
 ```
 
 Things can go much father, *msfconsole*! 
