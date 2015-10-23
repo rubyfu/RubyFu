@@ -34,3 +34,11 @@ Readline.get_screen_size
 ```ruby
 [`tput cols`.to_i , `tput lines`.to_i]
 ```
+
+## Console with tab completion 
+we can't stopping being jealous of Metasploit console(msfconsole). Fortunantely, here is the main idea of tab completion console in ruby
+
+- Readline 
+
+```ruby
+```
