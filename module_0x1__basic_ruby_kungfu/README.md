@@ -36,7 +36,7 @@ Readline.get_screen_size
 ```
 
 ## Console with tab completion 
-we can't stopping being jealous of Metasploit console(msfconsole). Fortunately, here is the main idea of tab completion console in ruby
+we can't stopping being jealous of Metasploit console(msfconsole) where we take a rest from command line switches . Fortunately, here is the main idea of tab completion console in ruby
 
 - Readline 
 
@@ -66,4 +66,11 @@ while line = Readline.readline('-> ', true)
   break if line =~ /^quit.*/i or line =~ /^exit.*/i
 end
 ```
+Now run it and try the tab completion!
+
+Well, The man idea in known the tab completion is make to do things easer than 
+
+
+
+
 
