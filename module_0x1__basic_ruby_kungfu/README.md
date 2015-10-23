@@ -43,4 +43,5 @@ we can't stopping being jealous of Metasploit console(msfconsole). Fortunantely,
 **Basic**
 
 ```ruby
+
 ```
