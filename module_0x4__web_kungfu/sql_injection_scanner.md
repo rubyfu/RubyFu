@@ -22,6 +22,7 @@ end
 uri = URI.parse("http://#{host}/artists.php?")
 uri.query = URI.encode_www_form({"artist" => "#{payload}"})
 http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
 # http.set_debug_output($stdout)
 
 request = Net::HTTP::Get.new(uri.request_uri)
