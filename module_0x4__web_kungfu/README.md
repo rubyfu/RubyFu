@@ -119,6 +119,7 @@ require "uri"
 # Parsing the URL and instantiate http
 uri = URI.parse("http://wwwx.cs.unc.edu/~jbs/aw-wwwp/docs/resources/perl/perl-cgi/programs/cgi_stdin.cgi")
 http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true if uri.scheme == 'https'    # Enable HTTPS support if it's HTTPS
 
 # Instantiate HTTP Post request
 request = Net::HTTP::Post.new(uri.request_uri)
