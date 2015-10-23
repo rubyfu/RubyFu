@@ -110,6 +110,9 @@ while line = Readline.readline('-> ', true)
 end
 ```
 
+Things can go much father, *msfconsole*! 
+
+
 
 
 
