@@ -68,7 +68,7 @@ end
 ```
 Now run it and try the tab completion!
 
-Well, The man idea in known the tab completion is make to do things easier  than 
+Well, The man idea in known the tab completion is make to do things easier not just pressing tab.  
 
 
 
