@@ -103,7 +103,7 @@ completion =
 Readline.completion_proc = completion		# Set completion process
 Readline.completion_append_character = ' '	# Make sure to add a space after completion
 
-while line = Readline.readline('-> ', true)
+while line = Readline.readline('-> ', true)	# Start console with charcter -> and make add_hist = true
   puts completion.call
   break if line =~ /^quit.*/i or line =~ /^exit.*/i
 end
