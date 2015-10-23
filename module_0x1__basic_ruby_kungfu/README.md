@@ -40,7 +40,7 @@ we can't stopping being jealous of Metasploit console(msfconsole) where we take 
 
 - Readline 
 
-**console-basic.rb**
+**console-basic1.rb**
 
 ```ruby
 #!/usr/bin/evn ruby
@@ -70,9 +70,44 @@ Now run it and try the tab completion!
 
 Well, The man idea in known the tab completion is make to do things easier not just pressing tab. Here a simple thought
 
-**console-basic.rb**
+**console-basic2.rb**
 
-```
+```ruby
+require 'readline'
+
+# Prevent Ctrl+C for exiting
+trap('INT', 'SIG_IGN')
+
+# List of commands
+CMDS = [ 'help', 'rubyfu', 'ls', 'exit' ].sort
+
+
+completion = 
+    proc do |str|
+      case 
+      when Readline.line_buffer =~ /help.*/i
+	puts "Available commands:\n" + "#{CMDS.join("\t")}"
+      when Readline.line_buffer =~ /rubyfu.*/i
+	puts "Rubyfu, where Ruby goes evil!"
+      when Readline.line_buffer =~ /ls.*/i
+	puts `ls`
+      when Readline.line_buffer =~ /exit.*/i
+	puts 'Exiting..'
+	exit 0
+      else
+	CMDS.grep( /^#{Regexp.escape(str)}/i )
+      end
+    end
+
+
+Readline.completion_proc = completion		# Set completion process
+Readline.completion_append_character = ' '	# Make sure to add a space after completion
+
+while line = Readline.readline('-> ', true)
+  puts completion.call unless line.nil? or line.squeeze.empty?
+#   p line
+  break if line =~ /^quit.*/i or line =~ /^exit.*/i
+end
 ```
 
 
