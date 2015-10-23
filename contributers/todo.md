@@ -1,17 +1,17 @@
 # TODO
 
 **Module 0x0 | Introduction**
-- [ ] Review the introduction 
+- [x] Review the introduction 
 - [ ] Enhance contribution section
 
 **Module 0x1 | Basic Ruby KungFu**
 - Non-Alphanumeric Ruby (https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/)
-- [ ] Add Building Interactive console (Readline)
+- [x] Add Building Interactive console (Readline)
 - [x] Get terminal size 
 - [x] Add dealing with Terminal 
 
 **Module 0x2 | System KungFu**
-- [ ] Fix Remote Shell >> Pseudo Terminal (PTY)
+- [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 
 **Module 0x3 | Network KungFu**
