@@ -22,7 +22,7 @@ gem install selenium-webdriver
 require "selenium-webdriver"
 
 # Profile Setup and Tweak 
-proxy = Selenium::WebDriver::Proxy.newproxy = Selenium::WebDriver::Proxy.new(
+proxy = Selenium::WebDriver::Proxy.new(
   :http     => PROXY,
   :ftp      => PROXY,
   :ssl      => PROXY
