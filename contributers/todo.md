@@ -1,7 +1,7 @@
 # TODO
 
 **Module 0x0 | Introduction**
-- [ ] Review the introduction 
+- [x] Review the introduction 
 - [ ] Enhance contribution section
 
 **Module 0x1 | Basic Ruby KungFu**
