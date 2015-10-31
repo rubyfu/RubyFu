@@ -11,7 +11,7 @@
 - [x] Add dealing with Terminal 
 
 **Module 0x2 | System KungFu**
-- [ ] Fix Remote Shell >> Pseudo Terminal (PTY)
+- [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 
 **Module 0x3 | Network KungFu**
