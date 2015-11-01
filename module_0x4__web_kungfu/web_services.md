@@ -56,14 +56,23 @@ Looking for really known application that support XMLRPC then of course Wordpres
 
 So what do we want to do?
 - Say hello to wordpress 
-- List all Available methods
-- 
+- List all available methods
+- List all available users
+- List all available post
+- Create a new post!
 
 
 ```ruby
 
 ```
 
+Results 
+
+```
+```
+
+and here is the new post
+![](webfu__xmlrpc1.png)
 
 
 
