@@ -1,6 +1,6 @@
 # Web Servcies and APIs
 
-Web Services and APIs are getting popular and used in many known websites we use in daily basis.
+Web Services and APIs are getting popular and used in many known websites we use in daily basis. For that matter, I'd like to put some general definitions that may make it clear to deal with
 
 ## Technical Definitions
 
@@ -26,6 +26,14 @@ A Web service (also Web Service) is defined by the W3C as "a software system des
 
 
 
+
+
+
+<br><br><br>
+---
+- [Difference Between API And Web Service](http://microsoft-techies.blogspot.com/2014/03/difference-between-api-and-web-service.html)
+- [Application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface)
+- [Web service](https://en.wikipedia.org/wiki/Web_service)
 
 
 
