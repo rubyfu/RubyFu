@@ -39,8 +39,8 @@
    * [Web Servcies and APIs](module_0x4__web_kungfu/web_servcies_and_apis.md)
        * [Interacting with Web Services](module_0x4__web_kungfu/web_services.md)
        * [Interacting with APIs](module_0x4__web_kungfu/interacting_with_apis.md)
-           * [Twitter API](module_0x4__web_kungfu/twitter_api.md)
            * Wordpress API
+           * [Twitter API](module_0x4__web_kungfu/twitter_api.md)
    * [Ruby 2 JavaScript](module_0x4__web_kungfu/ruby2javascript.md)
 * [Module 0x5 | Exploitation KungFu](module_0x5__exploitation_kungfu/README.md)
    * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
