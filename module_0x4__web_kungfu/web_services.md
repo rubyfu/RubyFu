@@ -1,7 +1,7 @@
 # Interacting with Web Services
 
 ### SOAP - WSDL
-Dealing with SOAP means dealing with XMLs that which WSDL describes how to use that SOAP. Ruby has really elegant way to do so and let's to get our hand dirty with an exploit
+Generally speaking, dealing with SOAP means dealing with XMLs that which WSDL describes how to use that SOAP. Ruby has really elegant way to do so and let's to get our hand dirty with an exploit
 
 ```
 gem install savon httpclient
