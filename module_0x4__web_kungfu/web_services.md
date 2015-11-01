@@ -50,7 +50,10 @@ puts "[+] PHP Shell on:  http://#{URI.parse(url).host}/vtigercrm/soap/#{shell_na
 
 
 ### XML-RPC
-Ruby has a standard library called `xmlrpc` which take care of all xmlrpc stuff you can even create an xmlrpc server using it
+Ruby has a standard library called `xmlrpc` which take care of all xmlrpc stuff you can even create an xmlrpc server using it. Let's  to get  Some real word example 
+
+Looking for really known application that support XMLRPC then of course Wordpress was the first attendee. 
+
 
 
 
