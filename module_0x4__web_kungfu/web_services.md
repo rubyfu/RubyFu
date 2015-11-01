@@ -50,9 +50,26 @@ puts "[+] PHP Shell on:  http://#{URI.parse(url).host}/vtigercrm/soap/#{shell_na
 
 
 ### XML-RPC
-Ruby has a standard library called `xmlrpc` which take care of all xmlrpc stuff you can even create an xmlrpc server using it. Let's  to get  Some real word example 
+Ruby has a [standard library][2] called `xmlrpc` which take care of all xmlrpc stuff you can even create an xmlrpc server using it. Let's  to get  Some real word example 
 
 Looking for really known application that support XMLRPC then of course Wordpress was the first attendee. 
+
+So what do we want to do?
+
+
+
+```ruby
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -60,3 +77,5 @@ Looking for really known application that support XMLRPC then of course Wordpres
 
 <br><br><br>
 ---
+[1]:
+[2]: http://ruby-doc.org/stdlib-2.2.3/libdoc/xmlrpc/rdoc/XMLRPC/Client.html
