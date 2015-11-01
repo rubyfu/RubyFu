@@ -17,6 +17,7 @@ There are several kind of contributions could help this book to get the best res
     * Any other
 * Contribution by spread the book in social media and IS communities.
     * Twitter: `@Rubyfu` , hashtag `#Rubyfu`
+    * Google+: [Rubyfu page][8]
 * Contribution by adding more resources and references.
 * Contribution by donation.
 
@@ -96,7 +97,7 @@ General contribution might be topic requests, proofreading, spilling, book organ
 [5]: https://github.com
 [6]: http://gitbook.com
 [7]: https://github.com/rubyfu/RubyFu/issues
-
+[8]: https://plus.google.com/114358908164154763697
 
 
 
