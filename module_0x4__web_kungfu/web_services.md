@@ -344,6 +344,9 @@ Results
 and here is the new post
 ![](webfu__xmlrpc1.png)
 
+Source: [HOW TO PROGRAMATICALLY CONTROL WORDPRESS WITH RUBY USING XML-RPC][3]
+
+More about [wordpress XMLRPC][3]
 
 
 
@@ -356,3 +359,5 @@ and here is the new post
 ---
 [1]:
 [2]: http://ruby-doc.org/stdlib-2.2.3/libdoc/xmlrpc/rdoc/XMLRPC/Client.html
+[3]: http://notes.jerzygangi.com/how-to-programatically-control-wordpress-with-ruby-using-xml-rpc/
+[4]: https://codex.wordpress.org/XML-RPC_WordPress_API
