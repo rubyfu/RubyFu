@@ -123,7 +123,222 @@ response =  server.call('wp.getComments', 0, opts[:user], opts[:password], {"pos
 
 Results 
 
-```
+```ruby
+>> # Say hello to wordpress
+>> response = server.call("demo.sayHello")
+=> "Hello!"
+>> 
+>> # List all available methods
+>> server.call('system.listMethods', 0)
+=> ["system.multicall",
+ "system.listMethods",
+ "system.getCapabilities",
+ "demo.addTwoNumbers",
+ "demo.sayHello",
+ "pingback.extensions.getPingbacks",
+ "pingback.ping",
+ "mt.publishPost",
+ "mt.getTrackbackPings",
+ "mt.supportedTextFilters",
+ "mt.supportedMethods",
+ "mt.setPostCategories",
+ "mt.getPostCategories",
+ "mt.getRecentPostTitles",
+ "mt.getCategoryList",
+ "metaWeblog.getUsersBlogs",
+ "metaWeblog.deletePost",
+ "metaWeblog.newMediaObject",
+ "metaWeblog.getCategories",
+ "metaWeblog.getRecentPosts",
+ "metaWeblog.getPost",
+ "metaWeblog.editPost",
+ "metaWeblog.newPost",
+ ...skipping...
+ "blogger.deletePost",
+ "blogger.editPost",
+ "blogger.newPost",
+ "blogger.getRecentPosts",
+ "blogger.getPost",
+ "blogger.getUserInfo",
+ "blogger.getUsersBlogs",
+ "wp.restoreRevision",
+ "wp.getRevisions",
+ "wp.getPostTypes",
+ "wp.getPostType",
+ "wp.getPostFormats",
+ "wp.getMediaLibrary",
+ "wp.getMediaItem",
+ "wp.getCommentStatusList",
+ "wp.newComment",
+ "wp.editComment",
+ "wp.deleteComment",
+ "wp.getPost",
+ "wp.deletePost",
+ "wp.editPost",
+ "wp.newPost",
+ "wp.getUsersBlogs"]
+>> 
+>> # List all available users
+>> server.call('wp.getAuthors', 0, opts[:user], opts[:password])
+=> [{"user_id"=>"1", "user_login"=>"admin", "display_name"=>"admin"}, {"user_id"=>"3", "user_login"=>"galaxy", "display_name"=>"Galaxy"}, {"user_id"=>"2", "user_login"=>"Rubyfu", "display_name"=>"Rubyfu"}]
+>> 
+>> # List all available post
+>> response = server.call('wp.getPosts', 0, opts[:user], opts[:password])
+=> [{"post_id"=>"4",
+  "post_title"=>"Rubyfu vs WP XMLRPC",
+  "post_date"=>#<XMLRPC::DateTime:0x0000000227f3b0 @day=1, @hour=19, @min=44, @month=11, @sec=31, @year=2015>,
+  "post_date_gmt"=>#<XMLRPC::DateTime:0x0000000227d178 @day=1, @hour=19, @min=44, @month=11, @sec=31, @year=2015>,
+  "post_modified"=>#<XMLRPC::DateTime:0x000000021d6ee0 @day=1, @hour=19, @min=52, @month=11, @sec=25, @year=2015>,
+  "post_modified_gmt"=>#<XMLRPC::DateTime:0x000000021d4ca8 @day=1, @hour=19, @min=52, @month=11, @sec=25, @year=2015>,
+  "post_status"=>"publish",
+  "post_type"=>"post",
+  "post_name"=>"rubyfu-vs-wordpres-xmlrpc",
+  "post_author"=>"2",
+  "post_password"=>"",
+  "post_excerpt"=>"",
+  "post_content"=>"This is Pragmatic Rubyfu Post. Thanks for reading",
+  "post_parent"=>"0",
+  "post_mime_type"=>"",
+  "link"=>"http://172.17.0.2/2015/11/01/rubyfu-vs-wordpres-xmlrpc/",
+  "guid"=>"http://172.17.0.2/?p=4",
+  "menu_order"=>0,
+  "comment_status"=>"open",
+  "ping_status"=>"open",
+  "sticky"=>false,
+  "post_thumbnail"=>[],
+  "post_format"=>"standard",
+  "terms"=>
+   [{"term_id"=>"1", "name"=>"Uncategorized", "slug"=>"uncategorized", "term_group"=>"0", "term_taxonomy_id"=>"1", "taxonomy"=>"category", "description"=>"", "parent"=>"0", "count"=>2, "filter"=>"raw"}],
+  "custom_fields"=>[]},
+ {"post_id"=>"1",
+  "post_title"=>"Hello world!",
+  "post_date"=>#<XMLRPC::DateTime:0x00000002735580 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_date_gmt"=>#<XMLRPC::DateTime:0x0000000226b130 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_modified"=>#<XMLRPC::DateTime:0x00000002268de0 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_modified_gmt"=>#<XMLRPC::DateTime:0x000000021aea58 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_status"=>"publish",
+  "post_type"=>"post",
+  "post_name"=>"hello-world",
+  "post_author"=>"1",
+  "post_password"=>"",
+  "post_excerpt"=>"",
+  "post_content"=>"Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
+  "post_parent"=>"0",
+  "post_mime_type"=>"",
+  "link"=>"http://172.17.0.2/2015/11/01/hello-world/",
+  "guid"=>"http://172.17.0.2/?p=1",
+  "menu_order"=>0,
+  "comment_status"=>"open",
+  "ping_status"=>"open",
+  "sticky"=>false,
+  "post_thumbnail"=>[],
+  "post_format"=>"standard",
+  "terms"=>
+   [{"term_id"=>"1", "name"=>"Uncategorized", "slug"=>"uncategorized", "term_group"=>"0", "term_taxonomy_id"=>"1", "taxonomy"=>"category", "description"=>"", "parent"=>"0", "count"=>2, "filter"=>"raw"}],
+  "custom_fields"=>[]}]
+>> 
+>> # Create a new post!
+>> post =
+ | {    
+ |   "post_title"     => 'Rubyfu vs WP XMLRPC',        
+ |   "post_name"      => 'Rubyfu vs Wordpres XMLRPC',        
+ |   "post_content"   => 'This is Pragmatic Rubyfu Post. Thanks for reading',        
+ |   "post_author"    => 2,        
+ |   "post_status"    => 'publish',        
+ |   "comment_status" => 'open'        
+ | }      
+=> {"post_title"=>"Rubyfu vs WP XMLRPC",
+ "post_name"=>"Rubyfu vs Wordpres XMLRPC",
+ "post_content"=>"This is Pragmatic Rubyfu Post. Thanks for reading",
+ "post_author"=>2,
+ "post_status"=>"publish",
+ "comment_status"=>"open"}
+>> response = server.call("wp.newPost", 0, opts[:user], opts[:password], post)
+=> "7"
+>> # Retrieve created post
+>> response =  server.call('wp.getPosts', 0, opts[:user], opts[:password], {"post_type" => "post", "post_status" => "published", "number" => "2", "offset" => "2"})
+=> [{"post_id"=>"3",
+  "post_title"=>"Auto Draft",
+  "post_date"=>#<XMLRPC::DateTime:0x0000000225bcd0 @day=1, @hour=19, @min=22, @month=11, @sec=29, @year=2015>,
+  "post_date_gmt"=>#<XMLRPC::DateTime:0x00000002259a98 @day=1, @hour=19, @min=22, @month=11, @sec=29, @year=2015>,
+  "post_modified"=>#<XMLRPC::DateTime:0x0000000256b808 @day=1, @hour=19, @min=22, @month=11, @sec=29, @year=2015>,
+  "post_modified_gmt"=>#<XMLRPC::DateTime:0x000000025695d0 @day=1, @hour=19, @min=22, @month=11, @sec=29, @year=2015>,
+  "post_status"=>"auto-draft",
+  "post_type"=>"post",
+  "post_name"=>"",
+  "post_author"=>"1",
+  "post_password"=>"",
+  "post_excerpt"=>"",
+  "post_content"=>"",
+  "post_parent"=>"0",
+  "post_mime_type"=>"",
+  "link"=>"http://172.17.0.2/?p=3",
+  "guid"=>"http://172.17.0.2/?p=3",
+  "menu_order"=>0,
+  "comment_status"=>"open",
+  "ping_status"=>"open",
+  "sticky"=>false,
+  "post_thumbnail"=>[],
+  "post_format"=>"standard",
+  "terms"=>[],
+  "custom_fields"=>[]},
+ {"post_id"=>"1",
+  "post_title"=>"Hello world!",
+  "post_date"=>#<XMLRPC::DateTime:0x00000002617298 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_date_gmt"=>#<XMLRPC::DateTime:0x00000002615038 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_modified"=>#<XMLRPC::DateTime:0x000000025e6d28 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_modified_gmt"=>#<XMLRPC::DateTime:0x000000025e4aa0 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_status"=>"publish",
+  "post_type"=>"post",
+  "post_name"=>"hello-world",
+  "post_author"=>"1",
+  "post_password"=>"",
+  "post_excerpt"=>"",
+  "post_content"=>"Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
+  "post_parent"=>"0",
+  "post_mime_type"=>"",
+  "link"=>"http://172.17.0.2/2015/11/01/hello-world/",
+  "guid"=>"http://172.17.0.2/?p=1",
+  "menu_order"=>0,
+  "comment_status"=>"open",
+  "ping_status"=>"open",
+  "sticky"=>false,
+  "post_thumbnail"=>[],
+  "post_format"=>"standard",
+  "terms"=>
+   [{"term_id"=>"1", "name"=>"Uncategorized", "slug"=>"uncategorized", "term_group"=>"0", "term_taxonomy_id"=>"1", "taxonomy"=>"category", "description"=>"", "parent"=>"0", "count"=>3, "filter"=>"raw"}],
+  "custom_fields"=>[]}]
+...skipping...
+  "post_format"=>"standard",
+  "terms"=>[],
+  "custom_fields"=>[]},
+ {"post_id"=>"1",
+  "post_title"=>"Hello world!",
+  "post_date"=>#<XMLRPC::DateTime:0x00000002617298 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_date_gmt"=>#<XMLRPC::DateTime:0x00000002615038 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_modified"=>#<XMLRPC::DateTime:0x000000025e6d28 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_modified_gmt"=>#<XMLRPC::DateTime:0x000000025e4aa0 @day=1, @hour=17, @min=54, @month=11, @sec=14, @year=2015>,
+  "post_status"=>"publish",
+  "post_type"=>"post",
+  "post_name"=>"hello-world",
+  "post_author"=>"1",
+  "post_password"=>"",
+  "post_excerpt"=>"",
+  "post_content"=>"Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
+  "post_parent"=>"0",
+  "post_mime_type"=>"",
+  "link"=>"http://172.17.0.2/2015/11/01/hello-world/",
+  "guid"=>"http://172.17.0.2/?p=1",
+  "menu_order"=>0,
+  "comment_status"=>"open",
+  "ping_status"=>"open",
+  "sticky"=>false,
+  "post_thumbnail"=>[],
+  "post_format"=>"standard",
+  "terms"=>
+   [{"term_id"=>"1", "name"=>"Uncategorized", "slug"=>"uncategorized", "term_group"=>"0", "term_taxonomy_id"=>"1", "taxonomy"=>"category", "description"=>"", "parent"=>"0", "count"=>3, "filter"=>"raw"}],
+  "custom_fields"=>[]}]
+
 ```
 
 and here is the new post
