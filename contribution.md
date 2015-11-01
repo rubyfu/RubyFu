@@ -74,6 +74,11 @@ Use triple ticks to highlight your command-line. ex.
     ls
     ``` 
 
+
+### General Contribution
+General contribution might be proofreading, spilling, book organization and style. All these contributions are welcome however has to be discussed on 
+
+
 > **Note:** Since this book is dynamically and un-ordered enhanced, it's hard to make the footer notes with order series of numbers for the whole book so -until I find better solution- I'll make the number order separated for each page separately. 
 
 
