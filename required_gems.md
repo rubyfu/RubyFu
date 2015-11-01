@@ -50,7 +50,7 @@ pry --simple-prompt
 - selenium-webdriver 
 - watir-webdriver
 - coffee-script
-- Opal
+- opal
 
 #### Module 0x5 | Exploitation KungFu
 - metasm
