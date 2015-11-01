@@ -1,6 +1,8 @@
 # Contribution
 This book is under GPLv3[^1] License so we appreciate all kind of contributions.
 
+Note: The code in this book is tested on Ruby version > 2.2.0
+
 ## Contribution methods
 There are several kind of contributions could help this book to get the best result
 
