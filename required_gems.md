@@ -49,6 +49,8 @@ pry --simple-prompt
 - twitter
 - selenium-webdriver 
 - watir-webdriver
+- coffee-script
+- Opal
 
 #### Module 0x5 | Exploitation KungFu
 - metasm
