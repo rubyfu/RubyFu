@@ -82,6 +82,7 @@ opts =
         timeout: 30
     }
 
+# Create a new instance 
 server = XMLRPC::Client.new(
     opts[:host], opts[:path], opts[:port],
     opts[:proxy_host], opts[:proxy_port],
@@ -89,6 +90,7 @@ server = XMLRPC::Client.new(
     opts[:use_ssl], opts[:timeout]
 )
 
+# Create a new instance takes a hash
 server = XMLRPC::Client.new3(opts)
 
 # Say hello to wordpress
