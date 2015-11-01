@@ -72,7 +72,6 @@ Results
 ```
 
 and here is the new post
-![](webfu__xmlrpc1.png)
 
 
 
