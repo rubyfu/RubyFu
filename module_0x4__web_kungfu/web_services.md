@@ -49,5 +49,9 @@ puts "[+] PHP Shell on:  http://#{URI.parse(url).host}/vtigercrm/soap/#{shell_na
 
 
 
+### XML-RPC
+Ruby has a standard library called `xmlrpc` which take care of all xmlrpc stuff you can even create an xmlrpc server using it
+
+
 <br><br><br>
 ---
