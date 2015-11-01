@@ -15,7 +15,8 @@ There are several kind of contributions could help this book to get the best res
     * Design enhancements
     * Ideas and requests
     * Any other
-* Contribution by spread the book in social media and IS communities. (use hashtag `#Rubyfu`)
+* Contribution by spread the book in social media and IS communities.
+    * Twitter: `@Rubyfu` , hashtag `#Rubyfu`
 * Contribution by adding more resources and references.
 * Contribution by donation.
 
