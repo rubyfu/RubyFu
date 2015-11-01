@@ -5,10 +5,10 @@ Web Services and APIs are getting popular and used in many known websites we use
 ## Technical Definitions
 
 ### API
-
+An application programming interface (API) is a set of routines, data structures, object classes and/or protocols provided by libraries and/or operating system services in order to support the building of applications.
 
 ### Web Service
-
+A Web service (also Web Service) is defined by the W3C as "a software system designed to support interoperable machine-to-machine interaction over a network"
 
 
 
