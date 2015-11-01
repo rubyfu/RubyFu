@@ -20,7 +20,7 @@ pry --simple-prompt
 
 
 #### Module 0x1 | Basic Ruby KungFu
-- None
+- colorize
 
 #### Module 0x2 | System KungFu
 - virustotal
