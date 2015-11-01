@@ -38,12 +38,13 @@ pry --simple-prompt
 - packetfu
 
 #### Module 0x4 | Web KungFu
-- savon 
-- httpclient
 - activerecord
 - tiny_tds 
 - activerecord-sqlserver-adapter 
 - activerecord-oracle_enhanced-adapter
+- savon 
+- httpclient
+- nokogiri
 - buby
 - selenium-webdriver 
 - watir-webdriver
