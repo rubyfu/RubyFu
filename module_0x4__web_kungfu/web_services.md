@@ -1,4 +1,4 @@
-# Interacting Web Services
+# Interacting with Web Services
 
 ### SOAP - WSDL
 
