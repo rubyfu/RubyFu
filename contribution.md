@@ -50,7 +50,7 @@ Not sure where to start helping? Go to [TODO list](contributers/todo.md) and che
 * Choose the correct Module.
 * Make your title clear.
 * Use Text editor/ide for code identification before pasting your code
-* Mention the source, if you copied or developed a code that created by others please mention the souce in the footer. eg.
+* Mention the source, if you copied or developed a code that created by others please mention the source in the footer. eg.
 
         ```ruby
         puts "Your good code"
