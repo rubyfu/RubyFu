@@ -45,6 +45,7 @@ pry --simple-prompt
 - savon 
 - httpclient
 - nokogiri
+- twitter
 - buby
 - selenium-webdriver 
 - watir-webdriver
