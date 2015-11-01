@@ -76,7 +76,7 @@ Use triple ticks to highlight your command-line. ex.
 
 
 ### General Contribution
-General contribution might be topic requests, proofreading, spilling, book organization and style. All these contributions are welcome however has to be discussed on [Rubyfu issues][7] especially things regarding to topics and/or book organization and styling. At the same time don't hisitate to report even single word observation about the book, it's for you at the end of the day
+General contribution might be topic requests, proofreading, spilling, book organization and style. All these contributions are welcome however has to be discussed on [Rubyfu issues][7] especially things regarding to topics and/or book organization and styling. At the same time don't hesitate to report even single word observation about the book, it's for you at the end of the day.
 
 
 > **Note:** Since this book is dynamically and un-ordered enhanced, it's hard to make the footer notes with order series of numbers for the whole book so -until I find better solution- I'll make the number order separated for each page separately. 
