@@ -55,10 +55,13 @@ Ruby has a [standard library][2] called `xmlrpc` which take care of all xmlrpc s
 Looking for really known application that support XMLRPC then of course Wordpress was the first attendee. 
 
 So what do we want to do?
-
+- Say hello to wordpress 
+- List all Available methods
+- 
 
 
 ```ruby
+
 ```
 
 
