@@ -103,11 +103,11 @@ response = server.call('wp.getPosts', 0, opts[:user], opts[:password])
 # Create a new post!
 post =
     {
-        "post_title"    => 'Rubyfu vs WP XMLRPC',
-        "post_name"     => 'Rubyfu vs Wordpres XMLRPC',
-        "post_content"  => 'This is Pragmatic Rubyfu Post. Thanks for reading',
-        "post_author"   => 2,
-        "post_status"   => 'publish',
+        "post_title"     => 'Rubyfu vs WP XMLRPC',
+        "post_name"      => 'Rubyfu vs Wordpres XMLRPC',
+        "post_content"   => 'This is Pragmatic Rubyfu Post. Thanks for reading',
+        "post_author"    => 2,
+        "post_status"    => 'publish',
         "comment_status" => 'open'
     }
 response = server.call("wp.newPost", 0, opts[:user], opts[:password], post)
