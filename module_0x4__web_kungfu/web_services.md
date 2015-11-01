@@ -60,9 +60,63 @@ So what do we want to do?
 - List all available users
 - List all available post
 - Create a new post!
+- Retrieve created post 
 
 
 ```ruby
+require 'xmlrpc/client'
+
+opts =
+    {
+        host: '172.17.0.2',
+        path: '/xmlrpc.php',
+        port: 80,
+        proxy_host: nil,
+        proxy_port: nil,
+        user: 'admin',
+        password: '123123',
+        use_ssl: false,
+        timeout: 30
+    }
+
+server = XMLRPC::Client.new(
+    opts[:host], opts[:path], opts[:port],
+    opts[:proxy_host], opts[:proxy_port],
+    opts[:user], opts[:password],
+    opts[:use_ssl], opts[:timeout]
+)
+
+server = XMLRPC::Client.new3(opts)
+
+# Say hello to wordpress
+response = server.call("demo.sayHello")
+
+# List all available methods
+server.call('system.listMethods', 0)
+
+# List all available users
+server.call('wp.getAuthors', 0, opts[:user], opts[:password])
+
+# List all available post
+response = server.call('wp.getPosts', 0, opts[:user], opts[:password])
+
+# Create a new post!
+post =
+    {
+        "post_title"    => 'Rubyfu vs WP XMLRPC',
+        "post_name"     => 'Rubyfu vs Wordpres XMLRPC',
+        "post_content"  => 'This is Pragmatic Rubyfu Post. Thanks for reading',
+        "post_author"   => 2,
+        "post_status"   => 'publish',
+        "comment_status" => 'open'
+    }
+response = server.call("wp.newPost", 0, opts[:user], opts[:password], post)
+
+# Retrieve created post
+response =  server.call('wp.getPosts', 0, opts[:user], opts[:password], {"post_type" => "post", "post_status" => "published", "number" => "2", "offset" => "2"})
+
+# List all comments on a specific post
+response =  server.call('wp.getComments', 0, opts[:user], opts[:password], {"post_id" => 4})
 
 ```
 
@@ -72,7 +126,7 @@ Results
 ```
 
 and here is the new post
-
+![](webfu__xmlrpc1.png)
 
 
 
