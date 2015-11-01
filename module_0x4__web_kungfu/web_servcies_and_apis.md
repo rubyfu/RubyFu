@@ -4,7 +4,7 @@ Web Services and APIs are getting popular and used in many known websites we use
 
 ## Technical Definitions
 
-### Web API
+### API
 
 
 ### Web Service
