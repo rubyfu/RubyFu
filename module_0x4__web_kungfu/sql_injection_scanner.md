@@ -108,7 +108,7 @@ puts "[+] The #{URL.decode(uri.to_s)} is vulnerable!" unless response.match(/#{e
 
 ```
 
-Try this url (http://testasp.vulnweb.com/showforum.asp?id=0)
+Try it on this url (http://testasp.vulnweb.com/showforum.asp?id=0)
 
 Results
 ```
