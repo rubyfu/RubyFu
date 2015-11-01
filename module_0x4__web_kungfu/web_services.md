@@ -60,7 +60,8 @@ So what do we want to do?
 - List all available users
 - List all available post
 - Create a new post!
-- Retrieve created post 
+- Retrieve our created post
+- List all comments on our created post
 
 
 ```ruby
