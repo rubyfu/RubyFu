@@ -47,6 +47,8 @@ puts "[+] PHP Shell on:  http://#{URI.parse(url).host}/vtigercrm/soap/#{shell_na
 
 ```
 
+More about [Savon][1]
+
 
 
 ### XML-RPC
@@ -357,7 +359,7 @@ More about [wordpress XMLRPC][3]
 
 <br><br><br>
 ---
-[1]:
+[1]: http://savonrb.com/
 [2]: http://ruby-doc.org/stdlib-2.2.3/libdoc/xmlrpc/rdoc/XMLRPC/Client.html
 [3]: http://notes.jerzygangi.com/how-to-programatically-control-wordpress-with-ruby-using-xml-rpc/
 [4]: https://codex.wordpress.org/XML-RPC_WordPress_API
