@@ -43,6 +43,7 @@ pry --simple-prompt
 - activerecord-sqlserver-adapter 
 - activerecord-oracle_enhanced-adapter
 - buby
+- wasabi
 - savon 
 - httpclient
 - nokogiri
