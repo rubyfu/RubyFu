@@ -4,7 +4,7 @@
 Generally speaking, dealing with SOAP means dealing with XMLs that which WSDL describes how to use that SOAP. Ruby has really elegant way to do so and let's to get our hand dirty with an exploit
 
 ```
-gem install savon httpclient
+gem install savon httpclient wasabi
 ```
 
 This is a working exploit for Vtiger CRM SOAP from Auth-bypass to Shell upload 
