@@ -1,6 +1,8 @@
 # Contribution
 This book is under GPLv3[^1] License so we appreciate all kind of contributions.
 
+Note: The code in this book is tested on Ruby version > 2.2.0
+
 ## Contribution methods
 There are several kind of contributions could help this book to get the best result
 
@@ -13,7 +15,9 @@ There are several kind of contributions could help this book to get the best res
     * Design enhancements
     * Ideas and requests
     * Any other
-* Contribution by spread the book in social media and IS communities. (use hashtag `#Rubyfu`)
+* Contribution by spread the book in social media and IS communities.
+    * Twitter: [@Rubyfu][8] and hashtag `#Rubyfu`
+    * Google+: [Rubyfu page][9]
 * Contribution by adding more resources and references.
 * Contribution by donation.
 
@@ -48,7 +52,7 @@ Not sure where to start helping? Go to [TODO list](contributers/todo.md) and che
 * Choose the correct Module.
 * Make your title clear.
 * Use Text editor/ide for code identification before pasting your code
-* Mention the source, if you copied or developed a code that created by others please mention the souce in the footer. eg.
+* Mention the source, if you copied or developed a code that created by others please mention the source in the footer. eg.
 
         ```ruby
         puts "Your good code"
@@ -74,6 +78,11 @@ Use triple ticks to highlight your command-line. ex.
     ls
     ``` 
 
+
+### General Contribution
+General contribution might be topic requests, proofreading, spilling, book organization and style. All these contributions are welcome however has to be discussed on [Rubyfu issues][7] especially things regarding to topics and/or book organization and styling. At the same time don't hesitate to report even single word observation about the book, it's for you at the end of the day.
+
+
 > **Note:** Since this book is dynamically and un-ordered enhanced, it's hard to make the footer notes with order series of numbers for the whole book so -until I find better solution- I'll make the number order separated for each page separately. 
 
 
@@ -87,7 +96,9 @@ Use triple ticks to highlight your command-line. ex.
 [4]: https://github.com/rubyfu/RubyFu
 [5]: https://github.com
 [6]: http://gitbook.com
-
+[7]: https://github.com/rubyfu/RubyFu/issues
+[8]: https://twitter.com/Rubyfu
+[9]: https://plus.google.com/114358908164154763697
 
 
 

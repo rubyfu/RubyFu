@@ -20,7 +20,7 @@ pry --simple-prompt
 
 
 #### Module 0x1 | Basic Ruby KungFu
-- None
+- colorize
 
 #### Module 0x2 | System KungFu
 - virustotal
@@ -38,18 +38,23 @@ pry --simple-prompt
 - packetfu
 
 #### Module 0x4 | Web KungFu
-- savon 
-- httpclient
 - activerecord
 - tiny_tds 
 - activerecord-sqlserver-adapter 
 - activerecord-oracle_enhanced-adapter
 - buby
+- wasabi
+- savon 
+- httpclient
+- nokogiri
+- twitter
 - selenium-webdriver 
 - watir-webdriver
+- coffee-script
+- opal
 
 #### Module 0x5 | Exploitation KungFu
 - metasm
 
-#### Module 0x6 | Reverse Engineering KungFu
+#### Module 0x6 | Forensic KungFu
 - metasm
