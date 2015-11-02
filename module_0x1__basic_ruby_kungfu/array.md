@@ -16,11 +16,11 @@ pattern_create = pattern_create  * (30000 / 20280.to_f).ceil
 
 #### Pattern offset
 
-I’ll assume the pattern was equal or less than “20280” and we are looking for “9Ak0” pattern characters. The pattern_create should be initialized from above
+I'll assume the pattern was equal or less than “20280” and we are looking for “9Ak0” pattern characters. The pattern_create should be initialized from above
 ```ruby
 pattern_offset = pattern_create.enum_for(:scan , '9Ak0').map {Regexp.last_match.begin(0)}
 ```
-Note: This does not consider the little indean format, for that there is extra code should be written. For more info, please take a look on the following [code][1].
+Note: This does not consider the little endian format, for that there is extra code should be written. For more info, please take a look on the following [code][1].
 
 
 #### Generate all hexdecimal values from `\x00` to `\xff`

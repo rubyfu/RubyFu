@@ -59,7 +59,7 @@ return
 ```
 
 
-> Note if want to change the hex prefex from \x to anything, just change `'\x%x'` to whatever you want, or remove it!.
+> Note if want to change the hex prefix from \x to anything, just change `'\x%x'` to whatever you want, or remove it!.
 
 ## Simple Hexdump
 
