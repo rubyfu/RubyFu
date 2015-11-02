@@ -38,12 +38,6 @@ document.operation_input_parameters :conversion_rate
 Results
 
 ```ruby
-
-```
-
-#### Interaction 
-
-```ruby
 >> url = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
 => "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
 >> document = Wasabi.document url
@@ -80,6 +74,12 @@ Results
 >> # Enumerate input parameters for particular operation
 >> document.operation_input_parameters :conversion_rate
 => {:FromCurrency=>{:name=>"FromCurrency", :type=>"Currency"}, :ToCurrency=>{:name=>"ToCurrency", :type=>"Currency"}}
+```
+
+#### Interaction 
+
+```ruby
+
 
 ```
 
