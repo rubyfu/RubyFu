@@ -7,10 +7,38 @@ Generally speaking, dealing with SOAP means dealing with XMLs that which WSDL de
 gem install wasabi savon httpclient 
 ```
 
+#### Enumeration
+
+```ruby
+require 'wasabi'
+
+url = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
+
+document = Wasabi.document url
+
+# Getting the endpoint 
+document.endpoint
+# Getting the target namespace
+document.namespace
+
+# Enumerate all the SOAP operations/actions
+document.operations
+
+# Enumerate input parameters for particular operation
+document.operation_input_parameters :conversion_rate
+
+```
+
+#### Interaction 
+
+```ruby
+
+```
 
 
 
 
+#### Hacking via SOAP vulnerabilities 
 
 This is a working exploit for Vtiger CRM SOAP from Auth-bypass to Shell upload 
 ```ruby
