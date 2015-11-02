@@ -28,9 +28,10 @@ puts client.followers("Rubyfu")              # Fetch followers of a user
 puts client.followers                        # Fetch followers of current user 
 puts client.status(649235138585366528)       # Fetch a particular Tweet by ID
 puts client.create_direct_message("Rubyfu", "Hi, I'm KINGSABRI")    # Send direct message to a particular user
-
-
 ```
+
+
+
 Your turn, tweet to @Rubyfu using above example.
 
 ## Building Stolen Credentials notification bot
