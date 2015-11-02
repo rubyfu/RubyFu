@@ -16,13 +16,15 @@ client = Twitter::REST::Client.new do |config|
 end
 
 
-client.user("Rubyfu")                   # Fetch a user
-client.update("@Rubyfu w00t! #Rubyfu")  # Tweet (as the authenticated user)
-client.follow("Rubyfu")                 # Follow User (as the authenticated user)
-client.followers("Rubyfu")              # Fetch followers of a user
-client.followers                        # Fetch followers of current user 
-client.status(649235138585366528)       # Fetch a particular Tweet by ID
-client.direct_message_create("Rubyfu", "Hi, I'm KINGSABRI")    # Send direct message to a particular user
+puts client.user("Rubyfu")                   # Fetch a user
+puts client.update("@Rubyfu w00t! #Rubyfu")  # Tweet (as the authenticated user)
+puts client.follow("Rubyfu")                 # Follow User (as the authenticated user)
+puts client.followers("Rubyfu")              # Fetch followers of a user
+puts client.followers                        # Fetch followers of current user 
+puts client.status(649235138585366528)       # Fetch a particular Tweet by ID
+puts client.create_direct_message("Rubyfu", "Hi, I'm KINGSABRI")    # Send direct message to a particular user
+
+
 ```
 Your turn, tweet to @Rubyfu using above example.
 
