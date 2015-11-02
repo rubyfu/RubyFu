@@ -20,7 +20,6 @@ client = Twitter::REST::Client.new do |config|
         config.access_token_secret = "YOUR_ACCESS_SECRET"
 end
 
-
 puts client.user("Rubyfu")                   # Fetch a user
 puts client.update("@Rubyfu w00t! #Rubyfu")  # Tweet (as the authenticated user)
 puts client.follow("Rubyfu")                 # Follow User (as the authenticated user)
