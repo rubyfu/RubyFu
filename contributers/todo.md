@@ -2,7 +2,7 @@
 
 **Module 0x0 | Introduction**
 - [x] Review the introduction 
-- [ ] Enhance contribution section
+- [x] Enhance contribution section
 
 **Module 0x1 | Basic Ruby KungFu**
 - Non-Alphanumeric Ruby (https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/)
@@ -15,7 +15,7 @@
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 
 **Module 0x3 | Network KungFu**
-- [ ] Check the IP address operation in Network Fu part
+- [x] Check the IP address operation in Network Fu part
 - [ ] SMTP users enumeration
 - [ ] SMB scanner
 - [x] Network ping sweeping

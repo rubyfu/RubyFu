@@ -206,7 +206,7 @@ end
 ```
 
 Using our elegant way(after updating String class on-the-fly)
-```
+```ruby
 (1..5).to_a.reverse.each do |c|
   print "I'll exit after #{c} second".cls_upline
   sleep 1
