@@ -79,8 +79,26 @@ Results
 #### Interaction 
 
 ```ruby
+require 'savon'
 
+url = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
+client = Savon.client(wsdl: url)
 
+message = {'FromCurrency' => 'EUR', 'ToCurrency' => 'CAD'}
+response = client.call(:conversion_rate, message: message).body
+
+response[:conversion_rate_response][:conversion_rate_result]
+```
+
+Results
+
+```ruby
+>> message = {'FromCurrency' => 'EUR', 'ToCurrency' => 'CAD'}
+=> {"FromCurrency"=>"EUR", "ToCurrency"=>"CAD"}
+>> response = client.call(:conversion_rate, message: message).body
+=> {:conversion_rate_response=>{:conversion_rate_result=>"1.4417", :@xmlns=>"http://www.webserviceX.NET/"}}
+
+1.4415
 ```
 
 
