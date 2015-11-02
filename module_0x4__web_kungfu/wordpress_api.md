@@ -1,6 +1,6 @@
 # Wordpress API
 
-Ruby has a [standard library][2] called `xmlrpc` which take care of all xmlrpc stuff you can even create an xmlrpc server using it. Let's  to get  Some real word example 
+Ruby has a [standard library][2] called `xmlrpc` which take care of all xmlrpc stuff, you can even create an xmlrpc server using it. Let's to get some real word example 
 
 Looking for really known application that support XMLRPC then of course Wordpress was the first attendee. 
 
