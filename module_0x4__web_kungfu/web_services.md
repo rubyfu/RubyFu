@@ -33,6 +33,10 @@ document.operations
 
 # Enumerate input parameters for particular operation
 document.operation_input_parameters :conversion_rate
+
+# Enumerate all available currencies 
+document.parser.document.element_children.children[1].children[1].children[3].children[1].children.map {|c| c.attributes.values[0].to_s}
+
 ```
 
 Results
