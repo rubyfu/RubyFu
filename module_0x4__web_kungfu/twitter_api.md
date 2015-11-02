@@ -7,7 +7,12 @@ gem install twitter
 
 ## Basic Usage
 ```ruby
+#!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
+#
 require 'twitter'
+require 'pp'
+
 client = Twitter::REST::Client.new do |config|
         config.consumer_key        = "YOUR_CONSUMER_KEY"
         config.consumer_secret     = "YOUR_CONSUMER_SECRET"
