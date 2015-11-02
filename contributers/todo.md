@@ -15,7 +15,7 @@
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 
 **Module 0x3 | Network KungFu**
-- [ ] Check the IP address operation in Network Fu part
+- [x] Check the IP address operation in Network Fu part
 - [ ] SMTP users enumeration
 - [ ] SMB scanner
 - [x] Network ping sweeping
