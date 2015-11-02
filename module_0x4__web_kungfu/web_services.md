@@ -153,11 +153,6 @@ More about [Savon][1]
 
 
 
-document.parser.document.element_children.children[1].children[1].children[3].children[1].children[1].attributes.values[0].to_s
-
-
-
-
 <br><br><br>
 ---
 [1]: http://savonrb.com/
