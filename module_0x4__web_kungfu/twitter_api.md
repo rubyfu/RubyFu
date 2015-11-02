@@ -1,4 +1,7 @@
 # Twitter API
+Dealing with twitter API's s really useful due information gathering, taxonomy and social enigneering 
+
+https://dev.twitter.com/oauth/overview
 
 - To install twitter API
 ```
