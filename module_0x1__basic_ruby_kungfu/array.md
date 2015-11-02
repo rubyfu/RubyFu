@@ -30,13 +30,9 @@ puts (0..255).map {|b| ('\x%X' % b)}
 ```
 > **Notes:**
 
-> - To change value presentiation from `\xea` to `0xea`, change `\x%x` to `0x%x`
+> - To change value presentation from `\xea` to `0xea`, change `\x%x` to `0x%x`
 > - To Make all letters capital (`\xea` to `\xEA`) , change `\x%x` to `\x%X`
 
-short and unclean
-```ruby
-256.times.map &:chr
-```
 #### Generate all Printable Characters 
 
 ```ruby
