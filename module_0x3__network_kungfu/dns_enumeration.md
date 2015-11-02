@@ -16,7 +16,7 @@ The main usage is
 require 'net/dns'
 resolver = Net::DNS::Resolver.start("google.com")
 ```
-Retruns
+Returns
 ```
 ;; Answer received from 127.0.1.1:53 (260 bytes)
 ;;
