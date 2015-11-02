@@ -102,8 +102,6 @@ Results
 ```
 
 
-
-
 #### Hacking via SOAP vulnerabilities 
 
 This is a working exploit for Vtiger CRM SOAP from Auth-bypass to Shell upload 
