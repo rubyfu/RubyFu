@@ -37,7 +37,16 @@ short and unclean
 ```ruby
 256.times.map &:chr
 ```
+#### Generate all Printable Characters 
 
+```ruby
+(32..126).map {|c| c.chr}
+```
+short and unclean
+
+```ruby
+(32..126).map &:chr
+```
 
 <br><br><br>
 ---
