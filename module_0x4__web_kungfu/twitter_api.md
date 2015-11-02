@@ -1,8 +1,6 @@
 # Twitter API
 Dealing with twitter API's s really useful due information gathering, taxonomy and social engineering. However, you have to have some keys and tokens in-order to interact with twitter APIs. To do so, please refer to the official [twitter development page][1].
 
-
-
 - To install twitter API
 ```
 gem install twitter
