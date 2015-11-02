@@ -35,10 +35,51 @@ document.operations
 document.operation_input_parameters :conversion_rate
 
 ```
+Results
+
+```ruby
+
+```
 
 #### Interaction 
 
 ```ruby
+>> url = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
+=> "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
+>> document = Wasabi.document url
+=> #<Wasabi::Document:0x00000002c79a50 @adapter=nil, @document="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL">
+>> # Parsing the document 
+>> document.parser
+=> #<Wasabi::Parser:0x0000000281ebb8
+ @deferred_types=[],
+ @document=
+  #(Document:0x140fa3c {
+    name = "document",
+    children = [
+      #(Element:0x140f294 {
+        name = "definitions",
+        namespace = #(Namespace:0x14017e8 { prefix = "wsdl", href = "http://schemas.xmlsoap.org/wsdl/" }),
+        attributes = [ #(Attr:0x1a507d4 { name = "targetNamespace", value = "http://www.webserviceX.NET/" })],
+        children = [
+          #(Text "\n  "),
+---kipped---
+>> # Getting the endpoint 
+>> document.endpoint
+=> #<URI::HTTP http://www.webservicex.net/CurrencyConvertor.asmx>
+>> # Getting the target namespace
+>> document.namespace
+=> "http://www.webserviceX.NET/"
+>> # Enumerate all the SOAP operations/actions
+>> document.operations
+=> {:conversion_rate=>
+  {:action=>"http://www.webserviceX.NET/ConversionRate",
+   :input=>"ConversionRate",
+   :output=>"ConversionRateResponse",
+   :namespace_identifier=>"tns",
+   :parameters=>{:FromCurrency=>{:name=>"FromCurrency", :type=>"Currency"}, :ToCurrency=>{:name=>"ToCurrency", :type=>"Currency"}}}}
+>> # Enumerate input parameters for particular operation
+>> document.operation_input_parameters :conversion_rate
+=> {:FromCurrency=>{:name=>"FromCurrency", :type=>"Currency"}, :ToCurrency=>{:name=>"ToCurrency", :type=>"Currency"}}
 
 ```
 
