@@ -29,10 +29,10 @@ puts client.followers                        # Fetch followers of current user
 puts client.status(649235138585366528)       # Fetch a particular Tweet by ID
 puts client.create_direct_message("Rubyfu", "Hi, I'm KINGSABRI")    # Send direct message to a particular user
 ```
+![](webfu__twitterAPI1.png)
 
 
-
-Your turn, tweet to @Rubyfu using above example.
+**Your turn**, tweet to @Rubyfu using above example.
 
 ## Building Stolen Credentials notification bot
 We're exploiting an XSS/HTML injection vulnerability and tricking users to enter there Username and Password. The idea is, We'll make a [CGI script][1] that takes that stolen credentials then tweet these credentials to us as notification or log system
