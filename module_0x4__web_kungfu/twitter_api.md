@@ -1,7 +1,7 @@
 # Twitter API
-Dealing with twitter API's s really useful due information gathering, taxonomy and social enigneering 
+Dealing with twitter API's s really useful due information gathering, taxonomy and social engineering. However, you have to have some keys and tokens in-order to interact with twitter APIs. To do so, please refer to the official [twitter development page][1].
 
-https://dev.twitter.com/oauth/overview
+
 
 - To install twitter API
 ```
@@ -37,7 +37,7 @@ puts client.create_direct_message("Rubyfu", "Hi, I'm KINGSABRI")    # Send direc
 **Your turn**, tweet to @Rubyfu using above example, no cheating ;).
 
 ## Building Stolen Credentials notification bot
-We're exploiting an XSS/HTML injection vulnerability and tricking users to enter there Username and Password. The idea is, We'll make a [CGI script][1] that takes that stolen credentials then tweet these credentials to us as notification or log system
+We're exploiting an XSS/HTML injection vulnerability and tricking users to enter there Username and Password. The idea is, We'll make a [CGI script][2] that takes that stolen credentials then tweet these credentials to us as notification or log system
 ```ruby
 #!/usr/bin/ruby -w                                                                 
 
@@ -75,4 +75,5 @@ puts ""
 
 
 
-[1]: http://rubyfu.net/content/module_0x4__web_kungfu/index.html#cgi
+[1]: https://dev.twitter.com/oauth/overview
+[2]: http://rubyfu.net/content/module_0x4__web_kungfu/index.html#cgi
