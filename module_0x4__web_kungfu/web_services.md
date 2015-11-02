@@ -33,8 +33,8 @@ document.operations
 
 # Enumerate input parameters for particular operation
 document.operation_input_parameters :conversion_rate
-
 ```
+
 Results
 
 ```ruby
