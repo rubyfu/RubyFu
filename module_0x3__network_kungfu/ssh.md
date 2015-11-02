@@ -39,7 +39,6 @@ require 'net/ssh'
 @hostname = "localhost"
 @username = "root"
 @password = "password"
-@cmd = ARGV[0]
 
 Net::SSH.start(@hostname, @username, :password => @password, :auth_methods => ["password"]) do |session|
 
