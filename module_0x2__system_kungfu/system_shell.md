@@ -1,5 +1,7 @@
 # Remote Shell
 
+Remote shell means s forward or reverse connection to the target system command-line(shell). 
+
 > **Note:** For windows systems, replace the "/bin/sh" to "cmd.exe"
 
 ## Connect to Bind shell
