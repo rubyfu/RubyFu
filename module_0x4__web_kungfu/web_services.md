@@ -16,8 +16,15 @@ url = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
 
 document = Wasabi.document url
 
+# Parsing the document 
+document.parser
+
+# SOAP XML
+document.xml
+
 # Getting the endpoint 
 document.endpoint
+
 # Getting the target namespace
 document.namespace
 
