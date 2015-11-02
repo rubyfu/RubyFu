@@ -7,6 +7,7 @@ gem install twitter
 ```
 
 ## Basic Usage
+**rubyfu-tweet.rb**
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
