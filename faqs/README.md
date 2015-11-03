@@ -33,7 +33,7 @@ No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
 The concept of this book is the need to know, so
 - Read the code and code comments.
 - Run it in Ruby interpreter irb/pry to see each line's execution.
-- Ruby the whole code in a script
+- Run the whole code in a script
 - enhance the code to fit your needs
 - and yeah, tweet the code and its output to @Rubyfu
 
