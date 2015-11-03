@@ -20,6 +20,7 @@
    * [Ruby Socket](module_0x3__network_kungfu/ruby_socket.md)
    * [SSH](module_0x3__network_kungfu/ssh.md)
    * [Email](module_0x2__system_kungfu/email.md)
+       * SMTP Enumeration
    * [Network Scanning](module_0x3__network_kungfu/network_scanning.md)
        * [Nmap](module_0x3__network_kungfu/nmap.md)
    * [DNS](module_0x3__network_kungfu/dns.md)
