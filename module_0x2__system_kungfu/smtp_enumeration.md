@@ -48,7 +48,7 @@ postgres
 ```
 
 
-**Your turn**, there are other commands that can be used such as `EXPN`, `RCPT`. Enhance the above script to include all these commands to avoid restricted commands that might you face. Tweet your code and outputs to **@Rubyfu**.
+**Your turn**, there are other commands that can be used such as `EXPN`, `RCPT`. Enhance the above script to include all these commands to avoid restricted commands that might you face. Tweet your code and output to **@Rubyfu**.
 
 
 
