@@ -25,3 +25,19 @@ Here are some main reasons:
 
 ###### Q \ When this book get completed?
 Well, it shouldn't; This book is an experience base book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
+
+###### Q \ What if I didn't understand some code in Rubyfu?
+No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
+
+
+
+
+
+
+
+
+
+
+
+
+[1]: https://github.com/rubyfu/RubyFu/issues
