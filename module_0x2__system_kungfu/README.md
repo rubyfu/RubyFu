@@ -9,7 +9,7 @@ Many questions about building a standalone application that doesn't require Ruby
 From official site[^1] "*Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems.*"
 
 
-> Note: The following script is taken from the official docs.
+Note: The following script has been taken from the official docs.
 
 #### Preparation 
 ```
