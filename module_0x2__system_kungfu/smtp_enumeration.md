@@ -24,9 +24,32 @@ users.each do |user|
 end
 @s.close
 
-puts "[*] Result"
+puts "[*] Result:-"
 puts "[+] Banner: " + @banner
 puts "[+] Found users: \n#{found.join("\n")}"
 ```
+Results
 
-**Your turn**, there are other commands that can be used such as `EXPN`, `RCPT`. Enhance the above script to include all these commands to avoid restricted commands that might you face.
+```
+[*] Result:-
+[+] Banner: 220 VulnApps.localdomain ESMTP Postfix
+[+] Found users: 
+root
+rubyfu
+www
+bin
+daemon
+sshd
+gdm
+nobody
+ftp
+operator
+postgres
+```
+
+
+**Your turn**, there are other commands that can be used such as `EXPN`, `RCPT`. Enhance the above script to include all these commands to avoid restricted commands that might you face. Tweet your code and outputs to @Rubyfu 
+
+
+
+
