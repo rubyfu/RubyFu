@@ -33,7 +33,7 @@ puts client.create_direct_message("Rubyfu", "Hi, I'm KINGSABRI")    # Send direc
 ![](webfu__twitterAPI1.png)
 
 
-**Your turn**, tweet to @Rubyfu using above example. Tweet your code and outputs to **@Rubyfu**.
+**Your turn**, tweet to @Rubyfu using above example. Tweet your code and output to **@Rubyfu**.
 
 ## Building Stolen Credentials notification bot
 We're exploiting an XSS/HTML injection vulnerability and tricking users to enter there Username and Password. The idea is, We'll make a [CGI script][2] that takes that stolen credentials then tweet these credentials to us as notification or log system
