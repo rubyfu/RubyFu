@@ -3,7 +3,7 @@
 ![](images/other/rubyfu.png)
 ***Rubyfu, where Ruby goes evil!***
 
-This book is a collection of ideas, tricks and skills that could be useful for Hackers. It's a unique extraction reference summarizes a lot of research and experience in order to achieve your **w00t** in shortest and smartest way. Rubyfu is where you'll find plug-n-hack code, Rubyfu is a book to use not to read, it's where ruby goes evil.
+This book is a collection of ideas, tricks and skills that could be useful for Hackers. It's a unique extraction reference, summarizes a lot of research and experience in order to achieve your **w00t** in shortest and smartest way. Rubyfu is where you'll find plug-n-hack code, Rubyfu is a book to use not to read, it's where ruby goes evil.
 
 
 
@@ -12,7 +12,7 @@ Ideally, Hackers!
 
 ### Organization of the book
 #### Module 0x0 | [Introduction][0]
-Module 0x0 is just a smooth start for you, whether you're a reader, writer hacker or someone came to say hi. In this module you'll find a great start for you as contributor where all kind of contributions are welcome starting from proofreading ending to topic writing.
+Module 0x0 is just a smooth start for you, whether you're a reader, writer hacker or someone came to say hi. In this module you'll find a great start for you as contributor, where all kind of contributions are welcome starting from proofreading ending to topic writing.
 
 #### Module 0x1 | [Basic Ruby KungFu][1]
 Module 0x1 is an awesome collection of the most common needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack. Dealing with encoding and data conversion could be trivial or complex topic and here we don't care, we'll solve it.
