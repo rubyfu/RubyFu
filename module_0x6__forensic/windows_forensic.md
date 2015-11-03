@@ -2,6 +2,8 @@
 
 ## Windows Registry
 
+![](win-foren__winreg1.png)
+
 ### Enumeration
 
 
@@ -19,7 +21,6 @@ keyname= 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Un
 access = Win32::Registry::KEY_ALL_ACCESS
 Win32::Registry::HKEY_LOCAL_MACHINE.open(ketname, access).keys
 
-
 keyname= 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged' 
 access = Win32::Registry::KEY_ALL_ACCESS
 Win32::Registry::HKEY_LOCAL_MACHINE.open(keyname, access) do |reg|; 
@@ -28,5 +29,5 @@ end
 
 
 ```
-
 Note: `KEY_ALL_ACCESS` enables you to write and deleted. The default access is `KEY_READ` if you specify nothing.
+

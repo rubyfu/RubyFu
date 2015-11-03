@@ -1,12 +1,5 @@
 # Chapter 0x4 | Web KungFu
 
-## Web Server
-You can run Ruby as web server for any folder/file 
-
-```ruby
-ruby -run -e httpd /var/www/ -p 8000
-```
-
 ## Send Get request
 
 Humbly detailed send GET script
@@ -181,7 +174,6 @@ Net::HTTP.start(uri1.host, uri1.port) do |http|
   g_response = http.request(g_request)
 end
 ```
-
 
 
 ## CGI

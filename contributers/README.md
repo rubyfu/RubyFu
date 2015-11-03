@@ -12,10 +12,13 @@
 ## Authors 
 - KING SABRI | @KINGSABRI
 
+## Technical Editors
+- Bashar
+
 ## Contributors
-- Bashar | @b_free2
-- William Coppola | @SubINacls
-- Brendan Baldwin | @usergenic - *Awesome contribution!*
+- William Coppola | @SubINacls - *Spreading & advising*
+- Brendan Baldwin | @usergenic - *Gave away Rubyfu github organization & twitter*
+- Ahmed Aboul-Ela | @aboul3la - *Book web design*
 
 ## Sponsors
 - [Arab Security Community (Security4arabs)][1]

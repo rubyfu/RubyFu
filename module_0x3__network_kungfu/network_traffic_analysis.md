@@ -1,7 +1,8 @@
 # Network Traffic Analysis
 
 Pacap file  [Download pcap file](../files/packets.rb)
-```
+
+```ruby
 require 'packetfu'
 packets = PacketFu::PcapFile.read_packets 'packets.pcap'
 

@@ -1,6 +1,5 @@
 # Conversion
 
-
 ## Convert String to Hex
 for a single character
 ```ruby
@@ -58,6 +57,7 @@ Return
 ABCD
 ```
 
+**Note about hex:** Sometimes you might face a none pritable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at very top of your file to fix any interpretation issue.
 
 ## En/Decode base-64 String
 We'll present it by many ways
@@ -81,7 +81,7 @@ or
 ```ruby
  Base64.decode64 "UnVieUZ1"
 ```
-> **TIP**
+> **TIP: **
 >The string unpack method is incredibly useful for converting data we read as strings back to their original form. To read more, visit the String class reference at www.ruby-doc.org/core/classes/String.html.
 
 
