@@ -16,7 +16,7 @@
 
 **Module 0x3 | Network KungFu**
 - [x] Check the IP address operation in Network Fu part
-- [ ] SMTP users enumeration
+- [x] SMTP users enumeration
 - [ ] SMB scanner
 - [x] Network ping sweeping
 - [ ] Add more Network traffic analysis 
