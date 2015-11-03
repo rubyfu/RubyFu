@@ -1,5 +1,6 @@
 # SMTP Enumeration
 
+Interacting with SMTP is easy and since the protocol is straight forward.
 
 ```ruby
 #!/usr/bin/evn ruby
