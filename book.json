@@ -6,5 +6,8 @@
         "splitter",
         "book-summary-scroll-position-saver"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {},
+    style: {
+        website: styles/website.css
+    }
 }
