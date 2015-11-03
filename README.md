@@ -21,7 +21,7 @@ Module 0x1 is an awesome collection of the most common needed String manipulatio
 Module 0x2 digs more in system hacking, where the system command, file manipulation, cryptography and generating the common hashes are needed. Getting bind and reverse shell with really simple ways are required skill you need no doubt. Almost all Linux systems are shipped-up with ruby and if it doesn't?, no problem we'll get raid of it.
 
 #### Module 0x3 | [Network KungFu][3]
-Module 0x3 dives more deeper in the network sockets, protocols, packet manipulation more service enumeration ways and gives us more hacky and awesome code to get the job done. Working with network protocols need a deeper knowledge of how this protocol works in order to exchange understandable data and yeah we'll figure it out right here.
+Module 0x3 dives more deeper in the network sockets, protocols, packet manipulation, more service enumeration ways and gives us more hacky and awesome code to get the job done. Working with network protocols need a deeper knowledge of how this protocol works in order to exchange understandable data and yeah we'll figure it out right here.
 
 #### Module 0x4 | [Web KungFu][4]
 Module 0x4 web is most common place to share information, however, it's most delicious place to hack. Dealing with web known with its uniqueness for dealing with many and many technologies in one page only. Here we'll know how to deal with GET, POST requests, web services, databases and manipulating the browser to make it our soldier. 
