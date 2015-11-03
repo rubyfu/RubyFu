@@ -149,7 +149,7 @@ capture.stream.each do |pkt|
   end
 end
 ```
-Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS cupturing but still we need to replace/spoof the original response to our domain. eg. attacker.zone
+Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS capturing but still we need to replace/spoof the original response to our domain. eg. attacker.zone
 Great, now we have to build a DNS response instead of spoofed to be sent. So what we need?
 
 * taking the IP we are going to redirect the user to (the spoofing_ip)
