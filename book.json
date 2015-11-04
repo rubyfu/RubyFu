@@ -7,8 +7,7 @@
         "book-summary-scroll-position-saver",
         "addcssjs"
     ],
-    "pluginsConfig": {
-    },
+    "pluginsConfig": {},
     "styles": {
         "website": "styles/website.css"
     }
