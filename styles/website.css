@@ -11,7 +11,7 @@ div.example_show_button {
 
 .book .book-summary ul.summary li.active>a,.book .book-summary ul.summary li a:hover {
   color: #fff !important;
-  background: #80A54D !important;
+  background: #444444 !important;
   text-decoration: none;
 }
 
