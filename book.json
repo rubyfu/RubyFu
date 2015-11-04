@@ -9,7 +9,7 @@
     ],
     "pluginsConfig": {
         "addcssjs": {
-          "js": ["styles/header.js"],
+          "js":  ["styles/header.js"],
           "css": ["styles/header.css"] 
       }
     },
