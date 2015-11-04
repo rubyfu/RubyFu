@@ -1,4 +1,4 @@
-# Rubyfu
+# RubyFu
 
 ![](images/other/rubyfu.png)
 ***Rubyfu, where Ruby goes evil!***
