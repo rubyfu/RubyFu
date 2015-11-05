@@ -15,6 +15,22 @@ server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => '/var/www/'
 server.start
 ```
 
+To make HTTPS server
+```ruby
+require 'webrick'
+require 'webrick/https'
+
+cert = [
+  %w[CN localhost],
+]
+
+server = WEBrick::HTTPServer.new(:Port => 8000,
+                                 :SSLEnable => true,
+                                 :SSLCertName => cert,
+                                 :DocumentRoot => '/var/www/')
+server.start
+```
+
 
 
 ## Send Get request
