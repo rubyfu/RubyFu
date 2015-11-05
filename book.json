@@ -1,19 +1,13 @@
 {
     "plugins": [
-        "expandable-chapters",
         "anchors",
         "todo",
         "splitter",
         "book-summary-scroll-position-saver",
         "addcssjs"
     ],
-    "pluginsConfig": {
-        "addcssjs": {
-           "js": ["styles/header.js"],
-          "css": ["styles/header.css"]
-        }
-    },
+    "pluginsConfig": {},
     "styles": {
-    "website": "styles/website.css"
-  }
+        "website": "styles/website.css"
+    }
 }
