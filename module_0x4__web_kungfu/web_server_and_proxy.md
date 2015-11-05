@@ -2,7 +2,7 @@
 
 
 ## Web Server
-You can run Ruby as web server for any folder/file 
+You can run Ruby as web server for any folder/file on any un-used port 
 
 ```ruby
 ruby -run -e httpd /var/www/ -p 8000
