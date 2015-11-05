@@ -4,7 +4,8 @@
         "todo",
         "splitter",
         "book-summary-scroll-position-saver",
-        "addcssjs"
+        "addcssjs",
+        "toggle-chapters"
     ],
     "pluginsConfig": {},
     "styles": {
