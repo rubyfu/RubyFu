@@ -7,7 +7,12 @@
         "addcssjs",
         "toggle-chapters"
     ],
-    "pluginsConfig": {},
+    "pluginsConfig": {
+        "addcssjs": {
+          "js": ["styles/header.js"],
+          "css": ["styles/header.css"] 
+      }
+    },
     "styles": {
         "website": "styles/website.css"
     }
