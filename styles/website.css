@@ -1,0 +1,5 @@
+.book .book-summary ul.summary li a:hover, .book .book-summary ul.summary li.active > a {
+    background: #444444;
+    color: white;
+    text-decoration: none;
+}
