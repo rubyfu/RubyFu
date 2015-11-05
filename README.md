@@ -1,6 +1,6 @@
 # RubyFu
 ---
-# The web site is under maintanance, please come in few days. Thank you!
+# The web site is under maintanance, please comeback in few days. Thank you!
 ---
 
 ![](images/other/rubyfu.png)
