@@ -4,3 +4,32 @@
     color: white;
     text-decoration: none;
 }
+
+/* Change Header */
+ #logo {
+  display: block;
+  float: left;
+  color: #fff;
+  width: 12%;
+  line-height: 40px;
+}
+
+#logo img {
+  width: 150px;
+  margin-top: 0px;
+  margin-left: 114px;
+}
+
+.wrap {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+#header {
+  display: block;
+  width: 100%;
+  height: 48px;
+  background: #444;
+}
