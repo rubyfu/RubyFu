@@ -1,38 +1,5 @@
 # Chapter 0x4 | Web KungFu
 
-## Web Server
-You can run Ruby as web server for any folder/file 
-
-```ruby
-ruby -run -e httpd /var/www/ -p 8000
-```
-
-or 
-
-```ruby
-require 'webrick'
-server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => '/var/www/'
-server.start
-```
-
-To make HTTPS server
-```ruby
-require 'webrick'
-require 'webrick/https'
-
-cert = [
-  %w[CN localhost],
-]
-
-server = WEBrick::HTTPServer.new(:Port => 8000,
-                                 :SSLEnable => true,
-                                 :SSLCertName => cert,
-                                 :DocumentRoot => '/var/www/')
-server.start
-```
-
-
-
 ## Send Get request
 
 Humbly detailed send GET script
