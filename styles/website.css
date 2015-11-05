@@ -1,10 +1,3 @@
-div.example_show_button {
-  border: medium solid lightgray;
-  text-align: center;
-  position: relative;
-  top: -10px;
-}
-
 .book .book-body .navigation.navigation-next {
   right: 10px !important;
 }
