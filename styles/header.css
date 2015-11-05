@@ -69,28 +69,3 @@ body {
   top: 0;
 }
 
-#navmenu {
-  display: block;
-  float: right;
-  margin: 0px;
-}
-
-
-.arangodb_version {
-  float: left;
-  padding-left: 500px;
-  padding-top: 4px;
-  padding-right: 0px;
-  line-height: 70px;
-  font-weight:;
-  color: #fff;
-  text-decoration: none;
-}
-
-/** simple responsive updates **/
-
-#navmenu {
-  display: block;
-  float: right;
-  margin: 0px;
-}
