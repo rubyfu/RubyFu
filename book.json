@@ -8,8 +8,10 @@
         "expandable-chapters"
     ],
     "pluginsConfig": {
+        
         "addcssjs": {
           "js": ["styles/header.js"]
+        }
     },
     "styles": {
         "website": "styles/website.css"
