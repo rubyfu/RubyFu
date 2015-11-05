@@ -7,6 +7,16 @@ You can run Ruby as web server for any folder/file
 ruby -run -e httpd /var/www/ -p 8000
 ```
 
+or 
+
+```ruby
+require 'webrick'
+server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => '/var/www/'
+server.start
+```
+
+
+
 ## Send Get request
 
 Humbly detailed send GET script
