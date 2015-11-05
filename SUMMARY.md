@@ -41,7 +41,7 @@
        * [Interacting with APIs](module_0x4__web_kungfu/interacting_with_apis.md)
            * [Wordpress API](module_0x4__web_kungfu/wordpress_api.md)
            * [Twitter API](module_0x4__web_kungfu/twitter_api.md)
-   * Web Proxy
+   * [Web Proxy](module_0x4__web_kungfu/web_proxy.md)
    * [Ruby 2 JavaScript](module_0x4__web_kungfu/ruby2javascript.md)
 * [Module 0x5 | Exploitation KungFu](module_0x5__exploitation_kungfu/README.md)
    * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
