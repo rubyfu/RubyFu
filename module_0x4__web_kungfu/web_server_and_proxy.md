@@ -36,7 +36,6 @@ server.start
 
 ## Web Proxy
 
-
 ```ruby
 require 'webrick'
 require 'webrick/httpproxy'
