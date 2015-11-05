@@ -1,116 +1,24 @@
-/// <reference path="../typings/tsd.d.ts" />
+window.onload = function(){
+window.localStorage.removeItem(":keyword");
 
-require(['gitbook', 'jQuery'], function (gitbook, $) {
+$(document).ready(function() {
 
-	gitbook.events.bind('start', function () {
-	});
+function appendHeader() {
 
-	gitbook.events.bind('page.change', function () {
+  var div = document.createElement('div');
+  div.innerHTML = '<header id="header" class="header absolute"><div class="wrap"><div class="clearfix" style="width:100%;"><div id="logo"><a href="http://rubyfu.net/"><img src="http://rubyfu.net/content/images/other/logo.png"></a></div></div></div></header>';
 
-		var KEY_SPLIT_STATE = 'plugin_gitbook_split';
+    $('.book').before(div.innerHTML);
 
-		var dividerWidth = null;
-		var isDraggable = false;
-		var dividerCenterOffsetLeft = null;
-		var splitState = null;
-		var grabPointWidth = null;
+  };
 
-		var $body = $('body');
-		var $book = $('.book');
-		var $summary = $('.book-summary');
-		var $bookBody = $('.book-body');
-		var $toggleSummary = $('.toggle-summary');
-		var $divider = $('<div class="divider-content-summary">' +
-			               '<div class="divider-content-summary__icon">' +
-			                 '<i class="fa fa-ellipsis-v"></i>' +
-			               '</div>' +
-			             '</div>');
+  function rerenderNavbar() {
+    $('#header').remove();
+    appendHeader();
+  };
 
-		$summary.append($divider);
+  rerenderNavbar();
 
-		dividerWidth = $divider.outerWidth();
-		dividerCenterOffsetLeft = $divider.outerWidth() / 2;
-
-		// restore split state from localStrage
-		splitState = getSplitState();
-		setSplitState(
-			splitState.summaryWidth,
-			splitState.summaryOffset,
-			splitState.bookBodyOffset
-		);
-		
-		$toggleSummary.on('click', function () {
-
-			var summaryOffset  = null;
-			var bookBodyOffset = null;
-	
-			if ($book.hasClass('with-summary')) {
-				summaryOffset  = -($summary.outerWidth());
-				bookBodyOffset = 0;
-			} else {
-				summaryOffset  = 0;
-				bookBodyOffset = $summary.outerWidth();
-			}
-
-			setSplitState($summary.outerWidth(), summaryOffset, bookBodyOffset);
-			saveSplitState($summary.outerWidth(), summaryOffset, bookBodyOffset);
-		});
-
-		$divider.on('mousedown', function (event) {
-			event.stopPropagation();
-			isDraggable = true;
-			grabPointWidth = $summary.outerWidth() - event.pageX;
-		});
-
-		$body.on('mouseup', function (event) {
-			event.stopPropagation();
-			isDraggable = false;
-			saveSplitState(
-				$summary.outerWidth(),
-				/*$summary.position().left,*/
-				$bookBody.position().left
-			);
-		});
-
-		$body.on('mousemove', function (event) {
-			if (!isDraggable) {
-				return;
-			}
-			event.stopPropagation();
-			event.preventDefault();
-			$summary.outerWidth(event.pageX + grabPointWidth);
-			$bookBody.offset({ left: event.pageX + grabPointWidth });
-		});
-
-		function getSplitState() {
-			var splitState = JSON.parse(localStorage.getItem(KEY_SPLIT_STATE));
-			splitState || (splitState = {});
-			splitState.summaryWidth || (splitState.summaryWidth = $summary.outerWidth());
-			splitState.summaryOffset || (splitState.summaryOffset = $summary.position().left);
-			splitState.bookBodyOffset || (splitState.bookBodyOffset = $bookBody.position().left);
-			return splitState;
-		}
-
-		function saveSplitState(summaryWidth, summaryWidthOffset, bookBodyOffset) {
-			localStorage.setItem(KEY_SPLIT_STATE, JSON.stringify({
-				summaryWidth: summaryWidth,
-				summaryOffset: summaryWidthOffset,
-				bookBodyOffset: bookBodyOffset,
-			}));
-		}
-
-		function setSplitState(summaryWidth, summaryOffset, bookBodyOffset) {
-			$summary.outerWidth(summaryWidth);
-			/*$summary.offset({ left: summaryOffset });*/
-			/*IF CODE NOT WORK JUST CHANGE IT LIKE THIS
-			$summary.offset({ left: 0 });
-			*/
-			$bookBody.offset({ left: bookBodyOffset });
-			// improved broken layout in windows chrome.
-			//   "$(x).offset" automatically add to "position:relative".
-			//   but it cause layout broken.. 
-			$summary.css({ position: 'absolute' });
-			$bookBody.css({ position: 'absolute' });
-		}
-	});
 });
+
+};
