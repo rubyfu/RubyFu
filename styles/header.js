@@ -1,5 +1,4 @@
 window.onload = function(){
-window.localStorage.removeItem(":keyword");
 
 $(document).ready(function() {
 
@@ -13,7 +12,6 @@ function appendHeader() {
   };
 
   function rerenderNavbar() {
-    $('#header').remove();
     appendHeader();
   };
 
