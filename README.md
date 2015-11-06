@@ -1,7 +1,4 @@
 # RubyFu
----
-# The web site is under maintanance, please comeback in few days. Thank you!
----
 
 ![](images/other/rubyfu.png)
 ***Rubyfu, where Ruby goes evil!***
