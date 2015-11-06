@@ -34,8 +34,8 @@ server.start
 
 
 ## Web Proxy
-Hear is a humbly detailed simple transparent web proxy
 
+### Transparent Web Proxy
 ```ruby
 require 'webrick'
 require 'webrick/httpproxy'
@@ -77,5 +77,18 @@ trap 'INT'  do proxy.shutdown end
 proxy.start
 
 ```
+
+
+### Transparent Web Proxy with Authentication 
+Well, it was great to know that building a proxy server is that easy. Now we need to Force authentication to connect to the proxy server 
+
+To enable authentication for requests in WEBrick you will need a user database and an authenticator. To start, here’s an Htpasswd database for use with a DigestAuth authenticator:
+
+
+
+
+
+
+
 
 http://docs.ruby-lang.org/en/2.2.0/WEBrick.html
