@@ -35,6 +35,7 @@ server.start
 
 ## Web Proxy
 Hear is a humbly detailed simple transparent web proxy
+
 ```ruby
 require 'webrick'
 require 'webrick/httpproxy'
@@ -45,6 +46,7 @@ handler = proc do |req, res|
   request = req.request_line.split
   puts "METHOD: "      + "#{request[0]}"
   puts "Request URL: " + "#{request[1]}"
+  puts "Request path: "+ "#{req.path}"
   puts "HTTP: "        + "#{request[2]}"
   puts "Referer: "     + "#{req['Referer']}"
   puts "User-Agent: "  + "#{req['User-Agent']}"
@@ -73,6 +75,7 @@ proxy = WEBrick::HTTPProxyServer.new Port: 8000,
 trap 'INT'  do proxy.shutdown end
 
 proxy.start
+
 ```
 
 http://docs.ruby-lang.org/en/2.2.0/WEBrick.html
