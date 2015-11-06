@@ -93,7 +93,7 @@ require 'webrick/httpproxy'
 
 # Start creating the config
 config = { :Realm => 'RubyFuSecureProxy' }
-# Create an htpasswd database file
+# Create an htpasswd database file in the same script path
 htpasswd = WEBrick::HTTPAuth::Htpasswd.new 'rubyfuhtpasswd'
 # Set authentication type
 htpasswd.auth_type = WEBrick::HTTPAuth::DigestAuth
