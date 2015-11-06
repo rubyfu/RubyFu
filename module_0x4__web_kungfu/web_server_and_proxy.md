@@ -86,10 +86,43 @@ To enable authentication for requests in WEBrick you will need a user database a
 
 The `:Realm` is used to provide different access to different groups across several resources on a server. Typically you'll need only one realm for a server.
 
+```ruby
+#!/usr/bin/env ruby
+require 'webrick'
+require 'webrick/httpproxy'
+
+# Start creating the config
+config = { :Realm => 'RubyFuSecureProxy' }
+# Create an htpasswd database file
+htpasswd = WEBrick::HTTPAuth::Htpasswd.new 'rubyfuhtpasswd'
+# Set authentication type
+htpasswd.auth_type = WEBrick::HTTPAuth::DigestAuth
+# Add user to the password config
+htpasswd.set_passwd config[:Realm], 'rubyfu', 'P@ssw0rd'
+# Flush the database (Save changes)
+htpasswd.flush
+# Add the database to the config
+config[:UserDB] = htpasswd
+# Create a global DigestAuth based on the config
+@digest_auth = WEBrick::HTTPAuth::DigestAuth.new config
+
+# Authenticate requests and responses
+handler = proc do |request, response|
+  @digest_auth.authenticate request, response
+end
 
 
+proxy = WEBrick::HTTPProxyServer.new Port: 8000,
+                                     ServerName: "RubyFuSecureProxy",
+                                     ServerSoftware: "RubyFu Proxy",
+                                     ProxyContentHandler: handler
 
+trap 'INT'  do proxy.shutdown end
 
+proxy.start
+```
 
+If you do it right, you'll get an authentication pop-up in your browser
 
-http://docs.ruby-lang.org/en/2.2.0/WEBrick.html
+![](webfu__proxy2.png)
+
