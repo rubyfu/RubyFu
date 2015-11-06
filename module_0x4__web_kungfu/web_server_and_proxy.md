@@ -33,7 +33,6 @@ server.start
 ```
 
 
-
 ## Web Proxy
 
 ```ruby
