@@ -16,7 +16,7 @@
 - Bashar | @b_free2
 - William Coppola | @SubINacls - *Spreading & advising*
 - Brendan Baldwin | @usergenic - *Gave away Rubyfu github organization & twitter*
-- Ahmed Aboul-Ela | @aboul3la - *Book web web design*
+- Ahmed Aboul-Ela | @aboul3la - *Book web design*
 
 ## Sponsors
 - [Arab Security Community (Security4arabs)][1]
