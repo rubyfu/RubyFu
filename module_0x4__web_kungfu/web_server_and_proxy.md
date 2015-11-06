@@ -50,6 +50,7 @@ proxy = WEBrick::HTTPProxyServer.new Port: 8000,
                                      ServerName: "RubyfuProxyServer", 
                                      ServerSoftware: "RubyFuProxy", 
                                      ProxyContentHandler: handler
+                                     
 trap 'INT'  do proxy.shutdown end
 trap 'TERM' do proxy.shutdown end
 
