@@ -11,7 +11,7 @@ ftp.system                                              # Get system information
 ftp.login                                               # Login
 ftp.chdir 'go/to/another/path'                          # Change directory
 file.pwd                                                # Get the currect directory
-files = ftp.list('*')                                   # List all files and folders
+files = ftp.list('*')                                   # or ftp.ls, List all files and folders
 ftp.mkdir 'rubyfu_backup'                               # Create dierctory
 ftp.size 'src.png'                                      # Get file size
 ftp.get 'src.png', 'dst.png', 1024                      # Download file
