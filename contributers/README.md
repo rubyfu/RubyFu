@@ -14,9 +14,9 @@
 
 ## Contributors
 - Bashar | @b_free2
-- William Coppola | @SubINacls
-- Brendan Baldwin | @usergenic - *Awesome contribution!*
-- Ahmed Aboul-Ela | @aboul3la
+- William Coppola | @SubINacls - *Spreading & advising*
+- Brendan Baldwin | @usergenic - *Gave away Rubyfu github organization & @Rubyfu twitter*
+- Ahmed Aboul-Ela | @aboul3la - *Book web web design*
 
 ## Sponsors
 - [Arab Security Community (Security4arabs)][1]
