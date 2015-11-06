@@ -23,4 +23,5 @@ ftp.closed?                                             # Is the connection clos
 ftp.close                                               # close the connection
 ```
 
+Yep, it's simple as that, easy and familiar.
 
