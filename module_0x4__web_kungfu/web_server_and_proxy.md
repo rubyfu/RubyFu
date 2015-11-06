@@ -122,7 +122,7 @@ trap 'INT'  do proxy.shutdown end
 proxy.start
 ```
 
-If you do it right, you'll get an authentication pop-up in your browser
+If you do it right, you'll get an authentication pop-up in your browser just like below.
 
 ![](webfu__proxy2.png)
 
