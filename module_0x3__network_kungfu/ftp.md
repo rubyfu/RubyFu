@@ -3,7 +3,7 @@ Dealing with FTP is something is needed in many cases, Let's to see how easy is 
 
 
 ```ruby
-require 'net-ftp'
+require 'net/ftp'
 
 ftp = Net::FTP.new('rubyfu.net', 'admin', 'P@ssw0rd')   # Create New FTP connection
 ftp.welcome                                             # The server's welcome message
