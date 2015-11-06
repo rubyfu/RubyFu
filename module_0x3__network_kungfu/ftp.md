@@ -19,7 +19,7 @@ ftp.rename 'file1.pdf', 'file2.pdf'                     # Rename file
 ftp.delete 'file3.pdf'                                  # Delete file 
 ftp.quit                                                # Exit the FTP session
 ftp.closed?                                             # Is the connection closed?
-ftp.close                                               # close the connection
+ftp.close                                               # Close the connection
 ```
 
 Yep, it's simple as that, easy and familiar.
