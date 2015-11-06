@@ -1,6 +1,6 @@
 # Oracle TNS Enumeration
 
-The practical way to understand how to a specifc protocol works is to use it's clinet tools and monitor its packets. 
+The practical way to understand how to a specific protocol works is to use it's client tools and monitor its packets. 
 
 If you take a look to pure connection of SQL*plus client to a TNS listener from wireshark, you'll find the first connect packet as bellow 
 
