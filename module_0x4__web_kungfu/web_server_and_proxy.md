@@ -34,7 +34,7 @@ server.start
 
 
 ## Web Proxy
-
+Hear is a humbly detailed simple transparent web proxy
 ```ruby
 require 'webrick'
 require 'webrick/httpproxy'
@@ -42,17 +42,35 @@ require 'webrick/httpproxy'
 handler = proc do |req, res|
   puts "[*] Request"
   puts req.inspect
+  request = req.request_line.split
+  puts "METHOD: "      + "#{request[0]}"
+  puts "Request URL: " + "#{request[1]}"
+  puts "HTTP: "        + "#{request[2]}"
+  puts "Referer: "     + "#{req['Referer']}"
+  puts "User-Agent: "  + "#{req['User-Agent']}"
+  puts "Host: "        + "#{req['Host']}"
+  puts "Cookie: "      + "#{req['Cookie']}"
+  puts "Connection: "  + "#{req['Connection']}"
+  puts "Accept: "      + "#{req['accept']}"
+  puts "Full header: " + "#{req.header}"
+  puts "Body: "        + "#{req.body}"
+  puts "----------[END OF REQUEST]----------"
+  puts "\n\n"
+
   puts "[*] Response"
   puts res.inspect
+  puts "Full header: " + "#{res.header}"
+  puts "Body: " + "#{res.body}"
+  puts "----------[END OF RESPONSE]----------"
+  puts "\n\n\n"
 end
 
 proxy = WEBrick::HTTPProxyServer.new Port: 8000, 
                                      ServerName: "RubyfuProxyServer", 
-                                     ServerSoftware: "RubyFuProxy", 
+                                     ServerSoftware: "RubyFu Proxy", 
                                      ProxyContentHandler: handler
-                                     
+
 trap 'INT'  do proxy.shutdown end
-trap 'TERM' do proxy.shutdown end
 
 proxy.start
 ```
