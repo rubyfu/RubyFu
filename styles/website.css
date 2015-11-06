@@ -20,6 +20,11 @@
   margin-left: 114px;
 }
 
+.logo_rubyfu {
+height: 50px;
+width: 67px;"
+}
+
 .wrap {
   display: block;
   margin: 0 auto;
@@ -33,3 +38,5 @@
   height: 50px;
   background: #444;
 }
+
+
