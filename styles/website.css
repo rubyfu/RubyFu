@@ -6,12 +6,12 @@
 }
 
 /* Header */
- #logo {
-  display: block;
-  float: left;
-  color: #fff;
-  width: 12%;
-  line-height: 40px;
+#logo {
+    color: #fff;
+    display: block;
+    line-height: 40px;
+    margin-left: 50%;
+    width: 12%;
 }
 
 #logo img {
