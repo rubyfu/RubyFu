@@ -157,7 +157,7 @@ Great, now we have to build a DNS response instead of spoofed to be sent. So wha
 * From there we create a new UDP packet using the data contained in @ourInfo (IP and MAC) and fill in the normal UDP fields.
     * I take most of this information straight from the DNS Query packet.
 * The next step is to create the DNS Response.
-    * he best way to understand the code here is to look at a DNS header and then
+    * the best way to understand the code here is to look at a DNS header and then
     * take the bit map of the HEX values and apply them to the header.
     * This will let you see what flags are being set.
 * From here, we just calculate the checksum for the UDP packet and send it out to the target’s machine.
