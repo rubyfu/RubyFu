@@ -152,8 +152,8 @@ end
 Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS capturing but still we need to replace/spoof the original response to our domain. eg. attacker.zone, now we have to build a DNS response instead of spoofed to be sent. So what we need?
 
 * taking the IP we are going to redirect the user to (the spoofing_ip)
-    * converting it into hex using the to_i and pack functions.
-* From there we create a new UDP packet using the data contained in @ourInfo (IP and MAC) and fill in the normal UDP fields.
+    * converting it into hex using the `to_i` and `pack` methods.
+* From there we create a new UDP packet using the data contained in `@ourInfo` (IP and MAC) and fill in the normal UDP fields.
     * I take most of this information straight from the DNS Query packet.
 * The next step is to create the DNS Response.
     * the best way to understand the code here is to look at a DNS header and then
