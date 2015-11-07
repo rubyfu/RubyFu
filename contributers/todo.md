@@ -12,6 +12,7 @@
 
 
 **Module 0x3 | Network KungFu**
+- [ ] Complete the DNS spoofing last part
 - [ ] SMB scanner
 - [ ] Add more Network traffic analysis 
 
