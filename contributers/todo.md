@@ -21,7 +21,7 @@
 - [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation KungFu**
-- [ ] Metasploit 
+- [ ] Metasploit, need better presentation for this chapter
 
 **Module 0x6 | Forensic KungFu**
 - [ ] Add more forensic stuff 
