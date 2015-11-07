@@ -11,7 +11,6 @@
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 - [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
 
-
 **Module 0x3 | Network KungFu**
 - [ ] Complete the DNS spoofing last part
 - [ ] SMB scanner
