@@ -123,7 +123,7 @@ def readable(raw_domain)
   return fqdn.chomp!('.')
 end
 
-# * We need parse/analize the valide UDP packets only
+# * We need parse/analyze the valide UDP packets only
 # * We need to make sure this packet is a DNS query
 #
 # Find the DNS packets
