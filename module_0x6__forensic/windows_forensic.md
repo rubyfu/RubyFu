@@ -29,5 +29,7 @@ end
 
 
 ```
-
 Note: `KEY_ALL_ACCESS` enables you to write and deleted. The default access is `KEY_READ` if you specify nothing.
+
+
+### Case Study
