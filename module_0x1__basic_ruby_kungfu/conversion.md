@@ -57,7 +57,7 @@ Return
 ABCD
 ```
 
-**Note about hex:** Sometimes you might face a none pritable characters especially due dealing with binary raw. In this case append **(**`# -*- coding: binary -*-`**)** at very top of your file to fix any interpretation issue.
+**Note about hex:** Sometimes you might face a none pritable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at very top of your file to fix any interpretation issue.
 
 ## En/Decode base-64 String
 We'll present it by many ways
