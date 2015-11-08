@@ -12,7 +12,7 @@
 - [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
 
 **Module 0x3 | Network KungFu**
-- [ ] Complete the DNS spoofing last part
+- [ ] Complete/Fix the DNS spoofing last part
 - [ ] SMB scanner
 - [ ] Add more Network traffic analysis 
 
