@@ -159,7 +159,7 @@ Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_
     * the best way to understand the code here is to look at a DNS header and then
     * take the bit map of the HEX values and apply them to the header.
     * This will let you see what flags are being set.
-* From here, we just calculate the checksum for the UDP packet and send it out to the target’s machine.
+* From here, we just calculate the checksum for the UDP packet and send it out to the target's machine.
 
 | ![Wireshark](dns_spoofing_wireshark2.png) |
 |:---------------:|
