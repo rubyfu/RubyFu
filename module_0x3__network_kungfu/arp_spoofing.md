@@ -79,7 +79,7 @@ end
 ```
 Source[^2]
 
-putting all together and run as `root`
+Wrapping all together and run as `root`
 
 ```ruby
 #
