@@ -38,7 +38,6 @@ each option like `nmap.syn_scan` or `nmap.xml` is considered as a *Task*. [Docum
 
 
 ### Comprehensive scan
-#### **`TO BE COMPLETED`**
 
 ```ruby
 #!/usr/bin/evn ruby
