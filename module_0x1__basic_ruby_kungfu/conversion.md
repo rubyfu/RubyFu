@@ -81,7 +81,7 @@ or
 ```ruby
  Base64.decode64 "UnVieUZ1"
 ```
-> **TIP**
+> **TIP: **
 >The string unpack method is incredibly useful for converting data we read as strings back to their original form. To read more, visit the String class reference at www.ruby-doc.org/core/classes/String.html.
 
 
