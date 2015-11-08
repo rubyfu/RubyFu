@@ -13,7 +13,7 @@
 - KING SABRI | @KINGSABRI
 
 ## Technical Editors
-- Bashar 
+- Bashar
 
 ## Contributors
 - William Coppola | @SubINacls - *Spreading & advising*
