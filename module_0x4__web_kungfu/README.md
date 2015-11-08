@@ -176,7 +176,6 @@ end
 ```
 
 
-
 ## CGI
 ### Get info - from XSS/HTMLi exploitation
 When you exploit XSS or HTML injection you may need to receive the grepped data from exploited user to your external server. Here a simple example of CGI script take sent get request from fake login from that asks users to enter log-in with username and password then will store the data to `hacked_login.txt` text file and fix its permissions to assure that nobody can access that file from public.
