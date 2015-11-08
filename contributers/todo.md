@@ -6,7 +6,6 @@
 **Module 0x1 | Basic Ruby KungFu**
 - [ ] Non-Alphanumeric Ruby (https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/)
 
-
 **Module 0x2 | System KungFu**
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 - [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
@@ -14,7 +13,8 @@
 **Module 0x3 | Network KungFu**
 - [ ] Complete/Fix the DNS spoofing last part
 - [ ] SMB scanner
-- [ ] Add more Network traffic analysis 
+- [ ] Add more Network traffic analysis
+- [ ] Check nmap comprehensive scan 
 
 **Module 0x4 | Web KungFu**
 - [ ] Google API
