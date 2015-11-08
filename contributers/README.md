@@ -12,7 +12,7 @@
 ## Authors 
 - KING SABRI | @KINGSABRI
 
-## Technical Editor
+## Technical Editors
 - Bashar 
 
 ## Contributors
