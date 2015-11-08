@@ -2,6 +2,8 @@
 
 ## Windows Registry
 
+![](win-foren__winreg1.png)
+
 ### Enumeration
 
 
