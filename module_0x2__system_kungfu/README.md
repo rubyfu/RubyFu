@@ -8,7 +8,7 @@ Many questions about building a standalone application that doesn't require Ruby
 ### One-Click Ruby Application(OCRA) Builder
 OCRA (One-Click Ruby Application) builds Windows executables from Ruby source code. The executable is a self-extracting, self-running executable that contains the Ruby interpreter, your source code and any additionally needed ruby libraries or DLL.
 
-it's Windows support only
+**It's Windows support only**, not really ;)
 
 - Features
 > - LZMA Compression (optional, default on)
@@ -21,6 +21,7 @@ it's Windows support only
 gem install ocra
 ```
 
+So all what to need is
 
 
 ### Traveling-ruby
