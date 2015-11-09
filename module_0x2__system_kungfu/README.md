@@ -90,6 +90,7 @@ nc -lvp 9911
 ![](packaging__ocra1.png)
 
 
+
 ### Traveling-ruby
 From official site[^1] "*Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems.*"
 
