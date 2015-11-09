@@ -87,7 +87,7 @@ from our attacking machine we already listening on 9911
 ```
 nc -lvp 9911
 ```
-
+![](packaging__ocra1.png)
 
 
 ### Traveling-ruby
