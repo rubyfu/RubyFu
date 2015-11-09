@@ -5,6 +5,24 @@
 Many questions about building a standalone application that doesn't require Ruby to be pre-installed on the system. Of-course, due attacking machine you cant grantee that ruby is installed on the target system. So here we will demonstrate some ways to do that.
 
 
+### One-Click Ruby Application(OCRA) Builder
+OCRA (One-Click Ruby Application) builds Windows executables from Ruby source code. The executable is a self-extracting, self-running executable that contains the Ruby interpreter, your source code and any additionally needed ruby libraries or DLL.
+
+it's Windows support only
+
+- Features
+> - LZMA Compression (optional, default on)
+> - Ruby 1.8.7, 1.9.3, 2.0.0 and 2.1.5 support
+> - Both windowed/console mode supported
+> - Includes gems based on usage, or from a Bundler Gemfile
+
+- To install Ocra
+```
+gem install ocra
+```
+
+
+
 ### Traveling-ruby
 From official site[^1] "*Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems.*"
 
