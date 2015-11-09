@@ -4,7 +4,7 @@
 - [ ] Add more test for beginners? 
 
 **Module 0x1 | Basic Ruby KungFu**
-- [ ] Non-Alphanumeric Ruby (https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/)
+- [ ] Non-Alphanumeric Ruby (https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/), http://techny.tumblr.com/post/43893712330/ruby-brainfuck-interpreter
 
 **Module 0x2 | System KungFu**
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
