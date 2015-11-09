@@ -8,6 +8,7 @@
 
 ![](webfu__burp_setenv1.png)
 
+- https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-I/
 - http://human.versus.computer/buby/
 - http://human.versus.computer/buby/rdoc/index.html
 - https://github.com/null--/what-the-waf/blob/master/what-the-waf.rb
@@ -16,6 +17,21 @@
 - http://www.gotohack.org/2011/05/cktricky-appsec-buby-script-basics-part.html
 - https://portswigger.net/burp/extender/
 
+
+Import the Burpsuite Extender Core API `IBurpExtender`
+
+```ruby
+require 'java'
+java_import 'burp.IBurpExtender'
+
+class BurpExtender
+  include IBurpExtender
+
+  def registerExtenderCallbacks(callbacks)
+    callbacks.setExtensionName("Rubyfu")
+  end
+end
+```
 
 ## Buby
 Buby is a mashup of JRuby with the popular commercial web security testing tool Burp Suite from PortSwigger. Burp is driven from and tied to JRuby with a Java extension using the BurpExtender API. This extension aims to add Ruby scriptability to Burp Suite with an interface comparable to the Burp's pure Java extension interface.
