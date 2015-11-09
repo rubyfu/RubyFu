@@ -23,7 +23,7 @@ gem install ocra
 
 So all what to need is to have your application.
 
-Suppose we have the following script
+Suppose we have the following script, a reverse shell of course ;)
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
