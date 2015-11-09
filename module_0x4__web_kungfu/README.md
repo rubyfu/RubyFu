@@ -248,12 +248,25 @@ Now prompt your commands
 Shell -> ls -la
 ```
 
+## Mechanize
+Since we're talking about dealing with we in ruby, we can't forget **Mechanize** gem, the most known library for dealing wit web.
+
+**The Official description says**, the Mechanize library is used for automating interaction with websites. Mechanize automatically stores and sends cookies, follows redirects, and can follow links and submit forms. Form fields can be populated and submitted. Mechanize also keeps track of the sites that you have visited as a history.
+
+More about Mechanize library
+- [Getting Started With Mechanize][3]
+- [Mechanize examples][4]
+- [RailCasts | Mechanize tutorial][5]
+
+Since you know the hard way, you'll find Mechanize as simple as mouse clicks! give it a try!
+
 <br><br><br>
 ---
 [^1]: [WebShellConsole](https://github.com/KINGSABRI/WebShellConsole) is simple interactive console, interacts with simple web shells using HTTP GET rather than using browser. wsc will work with any shell use GET method. It takes care of all URL encoding too.
 - [CGI Examples](http://www.java2s.com/Code/Ruby/CGI/CatalogCGI.htm)
-
-
+[3]: http://docs.seattlerb.org/mechanize/GUIDE_rdoc.html
+[4]: http://docs.seattlerb.org/mechanize/EXAMPLES_rdoc.html
+[5]: http://railscasts.com/episodes/191-mechanize
 
 
 
