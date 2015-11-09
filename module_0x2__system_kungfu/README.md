@@ -21,7 +21,12 @@ OCRA (One-Click Ruby Application) builds Windows executables from Ruby source co
 gem install ocra
 ```
 
-So all what to need is
+So all what to need is to have your application.
+
+Suppose we have the following script
+```ruby
+
+```
 
 
 ### Traveling-ruby
