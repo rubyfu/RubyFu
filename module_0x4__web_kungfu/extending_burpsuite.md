@@ -26,7 +26,7 @@ class BurpExtender
   include IBurpExtender
 
   def registerExtenderCallbacks(callbacks)
-    callbacks.setExtensionName("Rubyfu")
+    callbacks.setExtensionName("Rubyfu Alert!")
     callbacks.issueAlert("Alert: Ruby goes evil!")
   end
 end
