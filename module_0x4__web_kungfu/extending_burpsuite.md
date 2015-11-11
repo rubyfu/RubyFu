@@ -27,10 +27,15 @@ class BurpExtender
 
   def registerExtenderCallbacks(callbacks)
     callbacks.setExtensionName("Rubyfu")
+    callbacks.issueAlert("Alert: Ruby goes evil!")
   end
 end
 ```
+Load the plugin alert.rb
+![](webfu__burp-ext1.png)
 
+Check Alert tab
+![](webfu__burp-ext2.png)
 
 ## Buby
 Buby is a mashup of JRuby with the popular commercial web security testing tool Burp Suite from PortSwigger. Burp is driven from and tied to JRuby with a Java extension using the BurpExtender API. This extension aims to add Ruby scriptability to Burp Suite with an interface comparable to the Burp's pure Java extension interface.
