@@ -122,7 +122,7 @@ end
 
 - SID Request 
 
-There is a data structure for interacting with the TNS which looks like the following `(DESCRIPTION=(CONNECT_DATA=(SID=#{sid})(CID=(PROGRAM=)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=#{host})(PORT=#{port})))`
+There is a data structure for interacting with the TNS which is similar to the following `(DESCRIPTION=(CONNECT_DATA=(SID=#{sid})(CID=(PROGRAM=)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=#{host})(PORT=#{port})))`
 ```ruby
 def sid_request(sid,host, port)
   connect_data = "(DESCRIPTION=(CONNECT_DATA=(SID=#{sid})(CID=(PROGRAM=)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=#{host})(PORT=#{port})))"
