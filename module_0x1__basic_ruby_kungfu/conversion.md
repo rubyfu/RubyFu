@@ -57,7 +57,7 @@ Return
 ABCD
 ```
 
-**Note about hex:** Sometimes you might face a none pritable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at top of your file to fix any interpretation issue.
+**Note about hex:** Sometimes you might face a none pritble characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at top of your file to fix any interpretation issue.
 
 
 
