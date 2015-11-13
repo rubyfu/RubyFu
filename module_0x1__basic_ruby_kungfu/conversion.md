@@ -57,7 +57,33 @@ Return
 ABCD
 ```
 
-**Note about hex:** Sometimes you might face a none pritable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at very top of your file to fix any interpretation issue.
+**Note about hex:** Sometimes you might face a none pritable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at top of your file to fix any interpretation issue.
+
+
+
+## Convert Hex(Return address) to Little-Endian format
+Little-Endian format is simply reversing the string such as reversing/backwarding "Rubyfu" to "ufybuR" which can be done by calling `reverse` method of `String` class
+```ruby
+"Rubyfu".reverse
+```
+In exploitation, this is not as simple as that since we're dealing with hex values that may not represent printable characters.
+
+So assume we have `0x77d6b141` return address which we've to convert it to Little-Endian format to allow CPU to read it correctly. 
+
+Generally speaking, it's really a travial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's one time process but this is not the case of you have ROP chain that has to be staged in your exploit. To do so simply `packe` it as array
+
+```ruby
+[0x77d6b141].pack('V')
+```
+
+It happens that sometime you get an error because because of none unicode string issue. To solve this issue, just force encoding to UTF-8 but most of the time you will not face this issue
+
+```ruby
+[0x77d6b141].pack('V').force_encoding("UTF-8")
+```
+
+If you have ROP chain then it's not decent to apply this each time so you can use the first way and append **(**`# -*- coding: binary -*-`**)** at top of your exploit file.
+
 
 ## En/Decode base-64 String
 We'll present it by many ways
@@ -71,7 +97,6 @@ or
 require 'base64'
 Base64.encode64 "RubyFu"
 ```
-
 
 **Decode**
 ```ruby
