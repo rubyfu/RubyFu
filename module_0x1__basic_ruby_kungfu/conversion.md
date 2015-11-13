@@ -70,7 +70,7 @@ In exploitation, this is not as simple as that since we're dealing with hex valu
 
 So assume we have `0x77d6b141` return address which we've to convert it to Little-Endian format to allow CPU to read it correctly. 
 
-Generally speaking, it's really a travial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's one time process but this is not the case of you have ROP chain that has to be staged in your exploit. To do so simply `packe` it as array
+Generally speaking, it's really a trivial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's one time process but this is not the case of you have ROP chain that has to be staged in your exploit. To do so simply `packe` it as array
 
 ```ruby
 [0x77d6b141].pack('V')
