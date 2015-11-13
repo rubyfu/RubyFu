@@ -15,7 +15,7 @@ Ideally, Hackers!
 Module 0x0 is just a smooth start for you, whether you're a reader, writer hacker or someone came to say hi. In this module you'll find a great start for you as a contributor, where all kinds of contributions are welcome starting from proofreading ending to topic writing.
 
 #### Module 0x1 | [Basic Ruby KungFu][1]
-Module 0x1 is an awesome collection of the most common needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack. Dealing with encoding and data conversion could be trivial or complex topic and here we don't care, we'll solve it.
+Module 0x1 is an awesome collection of the most commonly needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack. Dealing with encoding and data conversion could be trivial or complex topic and here we don't care, we'll solve it.
 
 #### Module 0x2 | [System KungFu][2]
 Module 0x2 digs more in system hacking, where the system command, file manipulation, cryptography and generating the common hashes are needed. Getting bind and reverse shell with really simple ways are required skill you need no doubt. Almost all Linux systems are shipped-up with ruby and if it doesn't?, no problem we'll get raid of it.
