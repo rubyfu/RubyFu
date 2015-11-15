@@ -11,6 +11,14 @@ gem install nokogiri
 
 
 ## XML
+There are 2 ways we'd like to show her, the standard library `rexml` and `nokogiri` external library 
+
+
+
+- **REXML**
+
+
+- **Nokogiri**
 
 
 ## JSON
