@@ -102,9 +102,11 @@ We've the following XML file
 </catalog>
 ```
 
-
 ### REXML
 
+```ruby
+
+```
 
 ### Nokogiri
 
