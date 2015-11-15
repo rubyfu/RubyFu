@@ -248,6 +248,9 @@ Now prompt your commands
 Shell -> ls -la
 ```
 
+## Mechanize
+Since we're talking about dealing with we in ruby, we can't forget **Mechanize** library 
+
 <br><br><br>
 ---
 [^1]: [WebShellConsole](https://github.com/KINGSABRI/WebShellConsole) is simple interactive console, interacts with simple web shells using HTTP GET rather than using browser. wsc will work with any shell use GET method. It takes care of all URL encoding too.
