@@ -251,7 +251,7 @@ Shell -> ls -la
 ## Mechanize
 Since we're talking about dealing with we in ruby, we can't forget **Mechanize** gem, the most known library for dealing wit web.
 
-The Official description says, the Mechanize library is used for automating interaction with websites. Mechanize automatically stores and sends cookies, follows redirects, and can follow links and submit forms. Form fields can be populated and submitted. Mechanize also keeps track of the sites that you have visited as a history.
+**The Official description says**, the Mechanize library is used for automating interaction with websites. Mechanize automatically stores and sends cookies, follows redirects, and can follow links and submit forms. Form fields can be populated and submitted. Mechanize also keeps track of the sites that you have visited as a history.
 
 <br><br><br>
 ---
