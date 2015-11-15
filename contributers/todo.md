@@ -15,7 +15,7 @@
 - [ ] Complete/Fix the DNS spoofing last part
 - [ ] SMB scanner
 - [ ] Add more Network traffic analysis
-- [ ] Check nmap comprehensive scan http://rubyfu.net/content/module_0x3__network_kungfu/nmap.html#comprehensive-scan
+- [x] Check nmap comprehensive scan http://rubyfu.net/content/module_0x3__network_kungfu/nmap.html#comprehensive-scan
 
 **Module 0x4 | Web KungFu**
 - [ ] Google API
