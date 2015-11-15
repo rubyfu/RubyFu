@@ -22,7 +22,34 @@ page.css(".book .book-summary ul.summary li a, .book .book-summary ul.summary li
 
 Returns 
 ```
-
+RubyFu
+Module 0x0 | Introduction
+0.1.  Contribution
+0.2.  Beginers
+0.3.  Required Gems
+1.  Module 0x1 | Basic Ruby KungFu
+1.1.  String
+1.1.1.  Conversion
+1.1.2.  Extraction
+1.2.  Aray
+2.  Module 0x2 | System KungFu
+2.1.  Comand Execution
+2.2.  File manipulation
+2.2.1.  Parsing HTML, XML, JSON
+2.3.  Cryptography
+2.4.  Remote Shel
+2.4.1.  Ncat.rb
+2.5.  Virustotal
+3.  Module 0x3 | Network KungFu
+3.1.  Ruby Socket
+3.2.  FTP
+3.3.  SSH
+3.4.  Email
+3.4.1.  SMTP Enumeration
+3.5.  Network Scaning
+.
+.
+..snippet..
 ```
 
 ## XML
