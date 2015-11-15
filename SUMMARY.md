@@ -12,6 +12,7 @@
 * [Module 0x2 | System KungFu](module_0x2__system_kungfu/README.md)
    * [Command Execution](module_0x2__system_kungfu/command_execution.md)
    * [File manipulation](module_0x2__system_kungfu/file_manipulation.md)
+       * Parsing HTML, XML, JSON
    * [Cryptography](module_0x2__system_kungfu/cryptography.md)
    * [Remote Shell](module_0x2__system_kungfu/system_shell.md)
        * [Ncat.rb](module_0x2__system_kungfu/ncatrb.md)
