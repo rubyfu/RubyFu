@@ -256,6 +256,7 @@ Since we're talking about dealing with we in ruby, we can't forget **Mechanize**
 More about Mechanize library
 - [Getting Started With Mechanize][3]
 - [Mechanize examples][4]
+- [RailCasts | Mechanize tutorial][5]
 
 <br><br><br>
 ---
@@ -263,7 +264,7 @@ More about Mechanize library
 - [CGI Examples](http://www.java2s.com/Code/Ruby/CGI/CatalogCGI.htm)
 [3]: http://docs.seattlerb.org/mechanize/GUIDE_rdoc.html
 [4]: http://docs.seattlerb.org/mechanize/EXAMPLES_rdoc.html
-
+[5]: http://railscasts.com/episodes/191-mechanize
 
 
 
