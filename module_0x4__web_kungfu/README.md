@@ -258,6 +258,8 @@ More about Mechanize library
 - [Mechanize examples][4]
 - [RailCasts | Mechanize tutorial][5]
 
+Since you know the hard way, you'll find Mechanize as simple as mouse clicks! give it a try!
+
 <br><br><br>
 ---
 [^1]: [WebShellConsole](https://github.com/KINGSABRI/WebShellConsole) is simple interactive console, interacts with simple web shells using HTTP GET rather than using browser. wsc will work with any shell use GET method. It takes care of all URL encoding too.
