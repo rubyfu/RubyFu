@@ -59,8 +59,6 @@ There are 2 ways we'd like to show her, the standard library `rexml` and `nokogi
 ### REXML
 
 
-
-
 ### Nokogiri
 
 
