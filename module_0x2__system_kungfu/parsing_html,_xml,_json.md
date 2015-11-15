@@ -104,7 +104,7 @@ require 'rexml/document'
 ### Nokogiri
 ```ruby
 require 'nokogiri'
-
+doc = Nokogiri::XML file
 
 ```
 
