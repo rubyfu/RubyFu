@@ -102,10 +102,19 @@ require 'rexml/document'
 ```
 
 ### Nokogiri
+
+
+#### Slop
 ```ruby
 require 'nokogiri'
-doc = Nokogiri::XML file
+# Parse XML file
+doc = Nokogiri::Slop file
 
+doc.collection.movie.map do |m|
+  puts m.attribute('title').value
+  puts 
+  puts 
+end
 ```
 
 
