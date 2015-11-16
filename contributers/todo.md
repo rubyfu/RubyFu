@@ -17,7 +17,6 @@
 
 
 **Module 0x4 | Web KungFu**
-- [ ] Google API
 - [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation KungFu**
