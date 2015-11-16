@@ -112,8 +112,11 @@ doc = Nokogiri::Slop file
 
 doc.collection.movie.map do |m|
   puts m.attribute('title').value
-  puts 
-  puts 
+  
+  puts m.children[1].text       # List of Types
+  puts m.children[3].text       # List of Formats
+  puts m.children[5].text       # List of Year
+  puts m.children[7].text       # List of Rating
 end
 ```
 
