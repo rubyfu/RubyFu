@@ -24,7 +24,7 @@ Module 0x2 digs more in system hacking, where the system command, file manipulat
 Module 0x3 dives deeper in the network sockets, protocols, packet manipulation, more service enumeration ways and gives us more hacky and awesome code to get the job done. Working with network protocols need a deeper knowledge of how these protocols work in order to exchange understandable data and yeah, we'll figure it out right here.
 
 #### Module 0x4 | [Web KungFu][4]
-Module 0x4 web is the most common place to share information, however, it's a most delicious place to hack. Dealing with web known with its uniqueness for dealing with many and many technologies in one page only. Here we'll know how to deal with GET, POST requests, web services, databases and manipulating the browser to make it our soldier.
+Module 0x4 web is the most common place to share information, however, it's a most delicious place to hack. Dealing with web known with its uniqueness for dealing with many and many technologies in one page only. Here we'll know how to deal with GET, POST requests, web services, databases, APIs and manipulating the browser to make it our soldier.
 
 #### Module 0x5 | [Exploitation KungFu][5]
 Module 0x5 whatsoever the vulnerability was, remote (FTP, IMAP, SMTP, etc.) or local (file format, local system) you'll need to know how to build fuzzers and skeleton exploit for that. If you get there you'll need a simple, clean and stable way to build your exploit. Here you'll know how to build your fuzzer, exploit and porting your exploit to Metasploit and how to write your own Metasploit modules too.
