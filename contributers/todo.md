@@ -9,7 +9,7 @@
 **Module 0x2 | System KungFu**
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 - [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
-- [ ] Check https://www.veil-framework.com/ for ruby
+- [x] Check https://www.veil-framework.com/ for ruby
 
 **Module 0x3 | Network KungFu**
 - [ ] Complete/Fix the DNS spoofing last part
