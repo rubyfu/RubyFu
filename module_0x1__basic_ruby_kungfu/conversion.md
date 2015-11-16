@@ -131,9 +131,27 @@ The above way will encode any non URL standard strings only(ex. `<>"{}`) however
 puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
 ```
 
+## HTML En/Decod
 
+**Encoding HTML**
+```ruby
+require 'cgi'
+CGI.escapeHTML('"><script>alert("Rubyfu!")</script>')
+```
+Returns 
+```
+&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;
+```
 
-
+**Decoding HTML**
+```ruby
+require 'cgi'
+CGI.unescapeHTML("&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;")
+```
+Returns 
+```
+"><script>alert("Rubyfu!")</script>
+```
 
 
 <br><br><br>
