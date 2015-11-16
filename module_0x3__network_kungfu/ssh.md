@@ -134,7 +134,7 @@ end end end
                               |-----------------|-----------------|
 ```
 
-Run ssh-ltnnel.rb on the **SSH Server** 
+Run ssh-ftunnel.rb on the **SSH Server** 
 
 **ssh-ftunnel.rb**
 ```ruby

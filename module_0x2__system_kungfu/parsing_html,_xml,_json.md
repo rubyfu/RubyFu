@@ -109,4 +109,19 @@ require 'nokogiri'
 ```
 
 
+#### Slop
+```ruby
+require 'nokogiri'
+# Parse XML file
+doc = Nokogiri::Slop file
+
+puts doc.search("type").map {|f| t.text}        # List of Types
+puts doc.search("format").map {|f| f.text}      # List of Formats
+puts doc.search("year").map {|y| y.text}        # List of Year
+puts doc.search("rating").map {|r| r.text}      # List of Rating
+puts doc.search("stars").map {|s| s.text}       # List of Stars
+doc.search("description").map {|d| d.text}      # List of Descriptions
+```
+
+
 ## JSON
