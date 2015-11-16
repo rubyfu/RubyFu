@@ -110,14 +110,12 @@ require 'nokogiri'
 # Parse XML file
 doc = Nokogiri::Slop file
 
-doc.collection.movie.map do |m|
-  puts m.attribute('title').value
-  
-  puts m.children[1].text       # List of Types
-  puts m.children[3].text       # List of Formats
-  puts m.children[5].text       # List of Year
-  puts m.children[7].text       # List of Rating
-end
+puts doc.search("type").map {|f| t.text}        # List of Types
+puts doc.search("format").map {|f| f.text}      # List of Formats
+puts doc.search("year").map {|y| y.text}        # List of Year
+puts doc.search("rating").map {|r| r.text}      # List of Rating
+puts doc.search("stars").map {|s| s.text}       # List of Stars
+doc.search("description").map {|d| d.text}      # List of Descriptions
 ```
 
 
