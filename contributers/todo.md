@@ -17,6 +17,7 @@
 
 
 **Module 0x4 | Web KungFu**
+- [ ] Add example for open-uri 
 - [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation KungFu**
