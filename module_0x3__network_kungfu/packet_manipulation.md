@@ -13,7 +13,7 @@ In this chapter, we'll try to do variant implementations using the awesome lib, 
 
 
 ### Installing PacketFu
-Before installing packetfu gem you'll need to install ruby-dev and libpcap-dev
+Before installing packetfu gem you'll need to install `ruby-dev` and `libpcap-dev`
 ```
 apt-get -y install libpcap-dev
 ```
