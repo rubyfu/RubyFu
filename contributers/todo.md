@@ -9,15 +9,16 @@
 **Module 0x2 | System KungFu**
 - [ ] Add HTML,XML,Json file parsing - under file manipulation 
 - [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
+- [x] Check https://www.veil-framework.com/ for ruby
 
 **Module 0x3 | Network KungFu**
 - [ ] Complete/Fix the DNS spoofing last part
 - [ ] SMB scanner
 - [ ] Add more Network traffic analysis
-
+- [x] Check nmap comprehensive scan http://rubyfu.net/content/module_0x3__network_kungfu/nmap.html#comprehensive-scan
 
 **Module 0x4 | Web KungFu**
-- [ ] Add example for open-uri 
+- [ ] Google API
 - [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation KungFu**
