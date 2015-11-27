@@ -50,6 +50,7 @@
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
        * [Auxiliary module](module_0x5__exploitation_kungfu/auxiliary_module.md)
        * [Exploit module](module_0x5__exploitation_kungfu/exploit_module.md)
+           * Meterpreter
        * [Meterpreter API](module_0x5__exploitation_kungfu/meterpreter_api.md)
        * [Extensions](module_0x5__exploitation_kungfu/extensions.md)
        * [Meterpreter Scripting](module_0x5__exploitation_kungfu/meterpreter_scripting.md)
