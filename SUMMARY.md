@@ -48,11 +48,11 @@
 * [Module 0x5 | Exploitation KungFu](module_0x5__exploitation_kungfu/README.md)
    * [Fuzzer](module_0x5__exploitation_kungfu/fuzzer.md)
    * [Metasploit](module_0x5__exploitation_kungfu/metasploit.md)
-       * Meterpreter
        * [Auxiliary module](module_0x5__exploitation_kungfu/auxiliary_module.md)
        * [Exploit module](module_0x5__exploitation_kungfu/exploit_module.md)
            * Meterpreter
        * [Meterpreter API](module_0x5__exploitation_kungfu/meterpreter_api.md)
+       * Meterpreter
        * [Extensions](module_0x5__exploitation_kungfu/extensions.md)
        * [Meterpreter Scripting](module_0x5__exploitation_kungfu/meterpreter_scripting.md)
    * [metasm](module_0x5__exploitation_kungfu/metasm.md)
