@@ -51,7 +51,6 @@
        * [Auxiliary module](module_0x5__exploitation_kungfu/auxiliary_module.md)
        * [Exploit module](module_0x5__exploitation_kungfu/exploit_module.md)
        * [Meterpreter Scripting](module_0x5__exploitation_kungfu/meterpreter_scripting.md)
-           * [Commands and Extentions](module_0x5__exploitation_kungfu/commands_and_extentions.md)
            * [Extentions](module_0x5__exploitation_kungfu/extentions.md)
            * [Extensions](module_0x5__exploitation_kungfu/extensions.md)
    * [metasm](module_0x5__exploitation_kungfu/metasm.md)
