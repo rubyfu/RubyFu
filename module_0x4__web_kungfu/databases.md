@@ -6,6 +6,10 @@
 ```
 gem install sqlite3
 ```
+You've have to have sqlite3 dev libs installed on your system
+```
+apt-get install libsqlite3-dev
+```
 
 - Basic operations
 
