@@ -52,6 +52,7 @@
        * [Exploit module](module_0x5__exploitation_kungfu/exploit_module.md)
        * [Meterpreter Scripting](module_0x5__exploitation_kungfu/meterpreter_scripting.md)
            * [Extensions](module_0x5__exploitation_kungfu/extensions.md)
+       * Meterpreter API
    * [metasm](module_0x5__exploitation_kungfu/metasm.md)
 * [Module 0x6 | Forensic KungFu](module_0x6__forensic/README.md)
    * [Windows Forensic](module_0x6__forensic/windows_forensic.md)
