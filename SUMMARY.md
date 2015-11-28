@@ -53,6 +53,7 @@
        * [Meterpreter](module_0x5__exploitation_kungfu/meterpreter.md)
            * [API and Extensions](module_0x5__exploitation_kungfu/extensions.md)
            * [Meterpreter Scripting](module_0x5__exploitation_kungfu/meterpreter_scripting.md)
+           * Railgun API Extension
    * [metasm](module_0x5__exploitation_kungfu/metasm.md)
 * [Module 0x6 | Forensic KungFu](module_0x6__forensic/README.md)
    * [Windows Forensic](module_0x6__forensic/windows_forensic.md)
