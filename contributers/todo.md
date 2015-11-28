@@ -24,6 +24,7 @@
 - [x] Metasploit, need better presentation for this chapter
 - [ ] Metasploit, more explanations
 - [x] Metasploit, Meterpreter
+- [ ] Metasploit, Railgun
 
 **Module 0x6 | Forensic KungFu**
 - [ ] Add more forensic stuff 
