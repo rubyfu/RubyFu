@@ -117,7 +117,6 @@ Things can go much father, *msfconsole*!
 
 
 
-
 <br><br><br>
 ---
 - [Ruby Readline Documentation and Tutorial](http://bogojoker.com/readline/)
