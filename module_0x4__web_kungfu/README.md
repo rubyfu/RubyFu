@@ -32,7 +32,7 @@ def send_sqli(query)
   request["PHPSESSID"] = session_id
 
   begin
-    puts "Sendinging "
+    puts "Sending.. "
     response = http.request(request).body
   rescue Exception => e
     puts "[!] Failed!"
