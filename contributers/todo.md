@@ -22,9 +22,9 @@
 
 **Module 0x5 | Exploitation KungFu**
 - [x] Metasploit, need better presentation for this chapter
-- [ ] Metasploit, more explanations
+- [x] Metasploit, more explanations
 - [x] Metasploit, Meterpreter
-- [ ] Metasploit, Railgun
+- [x] Metasploit, Railgun
 
 **Module 0x6 | Forensic KungFu**
 - [ ] Add more forensic stuff 
