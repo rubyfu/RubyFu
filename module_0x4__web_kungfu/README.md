@@ -175,6 +175,7 @@ puts "Response body: " + response.body
 
 ## Dealing with Cookies
 Some times you need to deal with some actions after authentication. Ideally, it's all about cookies.
+
 Notes: 
 - To Read cookies you need to get **set-cookie** from **response**
 - To Set cookies you need to set **Cookie** to **request** 
