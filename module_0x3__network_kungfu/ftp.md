@@ -24,4 +24,4 @@ ftp.close                                               # Close the connection
 
 Yep, it's simple as that, easy and familiar.
 
-**Note:** You can do it all above way using pure socket library, it's really easy. You may try to do it.
+**TIP:** You can do it all above way using pure socket library, it's really easy. You may try to do it.
