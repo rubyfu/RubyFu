@@ -1,5 +1,5 @@
 # FTP
-Dealing with FTP is something is needed in many cases, Let's to see how easy is that in Ruby with AIO example.
+Dealing with FTP is something needed in many cases, Let's to see how easy is that in Ruby with AIO example.
 
 
 ```ruby
