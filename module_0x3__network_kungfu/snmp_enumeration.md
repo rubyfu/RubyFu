@@ -5,6 +5,8 @@ gem install snmp
 ```
 
 ## Get Request
+Miss configure an SNMP service would gives an attacker a huge mount of information. Let's to see you we can interact with the server to retrieve some info.
+
 ```ruby
 # KING SABRI | @KINGSABRI
 require 'snmp'
@@ -35,6 +37,8 @@ end
 
 
 ## Set Request
+Sometimes we get luck and we get the private/management string of SNMP. At this moment we might be able to apply changes on the system, router, switches configurations.
+
 ```ruby
 require 'snmp'
 include SNMP
