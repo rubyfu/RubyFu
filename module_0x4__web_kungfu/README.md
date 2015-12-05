@@ -43,6 +43,7 @@ end
 ```
 
 ### Using Open-uri
+Here another way to do the same thing 
 ```ruby
 #!/usr/bin/env ruby
 require 'open-uri'
