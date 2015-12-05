@@ -47,8 +47,6 @@ end
 Here the post body from a file
 ```ruby
 require 'net/http'
-require 'uri'
-
 
 uri = URI.parse "http://example.com/Pages/PostPage.aspx"
 headers =
