@@ -2,7 +2,7 @@
 
 
 ## Simple Ncat.rb
-I found [this][1] simple ncat so I did some enhancements on it and add some comments on it as well. 
+I found [these][1] simple ncat so I did some enhancements on it and add some comments on it as well. 
 
 
 ```ruby
