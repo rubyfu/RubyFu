@@ -42,8 +42,8 @@ No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
 You can contact us on one on the following channels
 
 - Twitter: [@Rubyfu][3]
-- Google+: [Rubyfu][4]
-- Facebook: [Rubyfu][5]
+- Google+: [Rubyfu page][4]
+- Facebook: [Rubyfu page][5]
 - Github: [Rubyfu Repository][6]
 
 
