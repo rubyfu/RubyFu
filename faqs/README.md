@@ -39,7 +39,7 @@ Well, it shouldn't; This book is an experience base book, so as far as we learn 
 No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
 
 ###### Q \ What's the communication channel of Rubyfu book
-You can contact us on one on the following channels
+You can contact us on one of the following channels
 
 - Twitter: [@Rubyfu][3]
 - Google+: [Rubyfu page][4]
