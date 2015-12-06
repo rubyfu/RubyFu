@@ -41,7 +41,7 @@
     * Idb - is a tool to simplify some common tasks for iOS pentesting and research
     * Bettercap - Extensible MITM tool and framework
     * WATOBO - THE Web Application Security Toolbox
-    * [ADD YOUR RUBY HACKING TOOL HERE!]
+    * **[**ADD YOUR RUBY HACKING TOOL HERE!**]**
 
 
 
