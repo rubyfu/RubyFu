@@ -13,7 +13,7 @@ We respect all beginners and newcomers from all levels and all programming langu
 In this stage we're really focusing on the core, the *How*. however, if you have really **valuable and complete** contents to add, we may add a complete chapter for beginners in this book and we may  add you to the authors list as well. Till that moment, you can do a spelling, grammar, etc review.
 
 ###### Q \ Do you add contributors name even it was small contribution?
-Yes, in a make sense mount of course ;)
+Yes, in a make sense amount of contribution, of course ;)
 
 ###### Q \ Why did you choose Gitbook?
 Here are some main reasons:
