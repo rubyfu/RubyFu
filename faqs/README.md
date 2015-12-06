@@ -3,6 +3,15 @@
 ###### Q \ What is Rubyfu? 
 Rubyfu is a book to use not to read!. It's a clean, clear ruby book for hackers. As we need a periodical small/big tasks in our daily hacking, this book comes to reduce the number of wasting time in googling "*How to do X in ruby*" let's focus on hacking our target and find the *how* here.
 
+###### Q \ How to get the best benifets of Rubyfu?
+The concept of this book is the need to know, so
+- open [Rubyfu.net][2], right-click, "Pin-tab" 
+- read the code and code comments.
+- run it in Ruby interpreter irb/pry to see each line's execution.
+- run the whole code in a script
+- enhance the code to fit your needs
+- and yeah, tweet the code and its output to @Rubyfu
+
 ###### Q \ Why Ruby language?
 Why not?!
 
@@ -29,17 +38,13 @@ Well, it shouldn't; This book is an experience base book, so as far as we learn 
 ###### Q \ What if I didn't understand some code in Rubyfu?
 No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
 
-###### Q \ How to get the best benifets of Rubyfu?
-The concept of this book is the need to know, so
-- open [Rubyfu.net][2], right-click, "Pin-tab" 
-- read the code and code comments.
-- run it in Ruby interpreter irb/pry to see each line's execution.
-- run the whole code in a script
-- enhance the code to fit your needs
-- and yeah, tweet the code and its output to @Rubyfu
+###### Q \ What's the communication channel of Rubyfu book
+You can contact us on one on the following channels
 
-
-
+- Twitter: [@Rubyfu][3]
+- Google+: [Rubyfu][4]
+- Facebook: [Rubyfu][5]
+- Github: [Rubyfu][6]
 
 
 
@@ -51,3 +56,6 @@ The concept of this book is the need to know, so
 
 [1]: https://github.com/rubyfu/RubyFu/issues
 [2]: http://rubyfu.net
+[3]: https://twitter.com/Rubyfu
+[4]: https://plus.google.com/114358908164154763697
+[5]: https://www.facebook.com/Rubyfu-600728320066710/
