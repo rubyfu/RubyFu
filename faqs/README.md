@@ -31,6 +31,7 @@ No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
 
 ###### Q \ How to get the best benifets of Rubyfu?
 The concept of this book is the need to know, so
+- open [Rubyfu.net][2], right-click, "Pin-tab" 
 - read the code and code comments.
 - run it in Ruby interpreter irb/pry to see each line's execution.
 - run the whole code in a script
@@ -49,3 +50,4 @@ The concept of this book is the need to know, so
 
 
 [1]: https://github.com/rubyfu/RubyFu/issues
+[2]: http://rubyfu.net
