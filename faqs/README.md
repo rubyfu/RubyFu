@@ -44,7 +44,7 @@ You can contact us on one on the following channels
 - Twitter: [@Rubyfu][3]
 - Google+: [Rubyfu][4]
 - Facebook: [Rubyfu][5]
-- Github: [Rubyfu][6]
+- Github: [Rubyfu Repository][6]
 
 
 
