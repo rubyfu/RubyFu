@@ -17,20 +17,19 @@
 
 
 **Module 0x4 | Web KungFu**
-- [ ] Add example for open-uri 
+- [x] Add example for open-uri 
 - [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation KungFu**
 - [x] Metasploit, need better presentation for this chapter
-- [ ] Metasploit, more explanations
+- [x] Metasploit, more explanations
 - [x] Metasploit, Meterpreter
-- [ ] Metasploit, Railgun
+- [x] Metasploit, Railgun
 
 **Module 0x6 | Forensic KungFu**
 - [ ] Add more forensic stuff 
 
 **Other TODOs**
-- [ ] Proofreading enhancement
 - [ ] Add Hardware Hacking
 - [ ] Add [ubertooth](http://www.evilsocket.net/2015/02/12/rubertooth-a-complete-ruby-porting-of-the-ubertooth-libraries-and-utilities/) 
 - [ ] Add Dealing with SSL/TLS (web and socket)

@@ -1,4 +1,5 @@
 # Databases
+Dealing with database is a required knowledge in web testing and here we will go though most known databases and how to deal with it in ruby.
 
 ## SQLite 
 

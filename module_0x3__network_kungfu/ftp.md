@@ -1,5 +1,5 @@
 # FTP
-Dealing with FTP is something is needed in many cases, Let's to see how easy is that in Ruby with AIO example.
+Dealing with FTP is something needed in many cases, Let's to see how easy is that in Ruby with AIO example.
 
 
 ```ruby
@@ -24,3 +24,4 @@ ftp.close                                               # Close the connection
 
 Yep, it's simple as that, easy and familiar.
 
+**TIP:** You can do it all above way using pure socket library, it's really easy. You may try to do it.

@@ -2,7 +2,7 @@
 
 ## Send Get request
 
-Humbly detailed send GET script
+### Using Net::HTTP
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI
@@ -32,7 +32,7 @@ def send_sqli(query)
   request["PHPSESSID"] = session_id
 
   begin
-    puts "Sendinging "
+    puts "Sending.. "
     response = http.request(request).body
   rescue Exception => e
     puts "[!] Failed!"
@@ -42,13 +42,39 @@ def send_sqli(query)
 end
 ```
 
+### Using Open-uri
+Here another way to do the same thing 
+```ruby
+#!/usr/bin/env ruby
+require 'open-uri'
+require 'openssl'
+
+host       = ARGV[0] || "172.16.50.139"
+session_id = ARGV[1] || "3c0e9a7edfa6682cb891f1c3df8a33ad"
+
+
+def send_sqli
+  uri = URI.parse("https://#{host}/script/path/file.php?var1=val1&var2=val2&var3=val3")
+  headers = 
+      {
+        "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0",
+        "Connection" => "keep-alive",
+        "Accept-Language" => "en-US,en;q=0.5",
+        "Accept-Encoding" => "gzip, deflate",
+        "Accept" => "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Cookie" => "PHPSESSID=#{session_id}"
+      }
+  request = open(uri, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE, headers)
+  puts "Sending.. "
+  response = request.read
+  puts response
+end
+```
 
 ## Send HTTP Post request with custom headers
 Here the post body from a file
 ```ruby
 require 'net/http'
-require 'uri'
-
 
 uri = URI.parse "http://example.com/Pages/PostPage.aspx"
 headers =
@@ -149,6 +175,7 @@ puts "Response body: " + response.body
 
 ## Dealing with Cookies
 Some times you need to deal with some actions after authentication. Ideally, it's all about cookies.
+
 Notes: 
 - To Read cookies you need to get **set-cookie** from **response**
 - To Set cookies you need to set **Cookie** to **request** 
