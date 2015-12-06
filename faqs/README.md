@@ -59,3 +59,4 @@ You can contact us on one on the following channels
 [3]: https://twitter.com/Rubyfu
 [4]: https://plus.google.com/114358908164154763697
 [5]: https://www.facebook.com/Rubyfu-600728320066710/
+[6]: https://github.com/Rubyfu/RubyFu
