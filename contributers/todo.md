@@ -7,8 +7,7 @@
 - [ ] Non-Alphanumeric Ruby (https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/), http://techny.tumblr.com/post/43893712330/ruby-brainfuck-interpreter, https://github.com/mattaereal/hieroglyphy-py/blob/master/hieroglyphy.py
 
 **Module 0x2 | System KungFu**
-- [ ] Add HTML,XML,Json file parsing - under file manipulation 
-- [x] ~~Fix Remote Shell >> Pseudo Terminal (PTY)~~ removed 
+
 
 **Module 0x3 | Network KungFu**
 - [ ] Complete/Fix the DNS spoofing last part
@@ -17,14 +16,10 @@
 
 
 **Module 0x4 | Web KungFu**
-- [x] Add example for open-uri 
 - [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation KungFu**
-- [x] Metasploit, need better presentation for this chapter
-- [x] Metasploit, more explanations
-- [x] Metasploit, Meterpreter
-- [x] Metasploit, Railgun
+
 
 **Module 0x6 | Forensic KungFu**
 - [ ] Add more forensic stuff 

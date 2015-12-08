@@ -17,6 +17,7 @@
     * [Lynda: Ruby Essential Training - Commercial Training][11]
     * [Ruby from InfiniteSkills - Commercial Training][12]
     * [Qick Ruby syntax Cheat sheet][13]
+    * [4Programmer.com - Ruby][23]
 * **Books**
     * [Ruby Learning][14]
     * [Working with TCP Sockets][15]
@@ -41,6 +42,7 @@
     * Idb - is a tool to simplify some common tasks for iOS pentesting and research
     * Bettercap - Extensible MITM tool and framework
     * WATOBO - THE Web Application Security Toolbox
+    * Intrigue.io - Open Source project, discovering attack surface through OSINT
     * **[**ADD YOUR RUBY HACKING TOOL HERE!**]**
 
 
@@ -73,3 +75,4 @@
 [20]: https://rubymonk.com/
 [21]: http://www.happybearsoftware.com/byte-manipulation-in-ruby.html
 [22]: http://www.dotnetperls.com/format
+[23]: http://4programmer.com/ruby

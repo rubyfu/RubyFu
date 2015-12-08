@@ -5,8 +5,9 @@ Rubyfu is a book to use not to read!. It's a clean, clear ruby book for hackers.
 
 ###### Q \ How to get the best benifets of Rubyfu?
 The concept of this book is the need to know, so
-- open [Rubyfu.net][2], right-click, "Pin-tab" 
-- read the code and code comments.
+- open [Rubyfu.net][2], click read button.
+- on the browser tab, right-click, "Pin-tab" 
+- read the code and code's comments.
 - run it in Ruby interpreter irb/pry to see each line's execution.
 - run the whole code in a script
 - enhance the code to fit your needs
@@ -28,7 +29,7 @@ Yes, in a make sense amount of contribution, of course ;)
 Here are some main reasons:
 * Easy to read
 * Easy to write - using markdown
-* Easy to contribute - using gitbook or github
+* Easy to contribute - using github
 * Easy to manage - contributions, views, etc
 * And you can download the book with many formats - pdf, epub, etc
 
@@ -36,7 +37,7 @@ Here are some main reasons:
 Well, it shouldn't; This book is an experience base book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
 
 ###### Q \ What if I didn't understand some code in Rubyfu?
-No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
+No problem, DON'T HESITATE to open an [issue][1] and ask us anything, anytime.
 
 ###### Q \ What's the communication channel of Rubyfu book
 You can contact us on one of the following channels
