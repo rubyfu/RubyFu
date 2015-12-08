@@ -36,7 +36,7 @@ packets.each_with_index do |packet, i|
   end
 end
 ```
-Retruns
+Returns
 ```
 192.168.2.127 => 192.168.2.128
 USER ayoi
