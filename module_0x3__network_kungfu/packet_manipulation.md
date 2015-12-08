@@ -18,9 +18,9 @@ Before installing packetfu gem you'll need to install `ruby-dev` and `libpcap-de
 apt-get -y install libpcap-dev
 ```
 
-then install packetfu pcaprub
+then install packetfu 
 ```
-gem install packetfu
+gem install packetfu pcaprub
 ```
 
 ### Basic Usage
