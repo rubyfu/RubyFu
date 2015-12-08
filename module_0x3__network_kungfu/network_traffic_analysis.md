@@ -14,6 +14,8 @@ http://jarmoc.com/blog/2013/05/22/bsjtf-ctf-writeup-what-in-the-name-of-zeus/
 
 http://hamsa.cs.northwestern.edu/readings/password-cracking2/
 
+http://hamsa.cs.northwestern.edu/readings/password-cracking2/
+
 
 
 <!---
