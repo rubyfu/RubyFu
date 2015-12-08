@@ -174,9 +174,7 @@ ruby ip_example.rb 255.255.255.0
 ```ruby
 IPAddr.new(3232236159, Socket::AF_INET).to_s
 ```
-
 or
-
 
 ```ruby
 [3232236159].pack('N').unpack('C4').join('.')
