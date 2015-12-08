@@ -1,7 +1,7 @@
 # Network Traffic Analysis
 
 ## Basic Reading PCAP File
-Pacap file  [Download pcap file](../files/packets.rb)
+Pacap file  [Download pcap file](../files/packets.pcap)
 
 ```ruby
 require 'packetfu'
@@ -12,7 +12,7 @@ packets = PacketFu::PcapFile.read_packets 'packets.pcap'
 
 ## Find FTP Credentials 
 
-Download [ **ftp.pcap**](../files/packets.rb) file
+Download [ **ftp.pcap**](../files/ftp.pcap) file
 
 ```ruby
 #!/usr/bin/env ruby
