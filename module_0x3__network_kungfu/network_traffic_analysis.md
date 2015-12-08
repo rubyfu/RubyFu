@@ -13,8 +13,6 @@ Download [packets.pcap](https://github.com/rubyfu/RubyFu/blob/master/files/modul
 
 ## Find FTP Credentials 
 
-Download [ftp.pcap](https://github.com/rubyfu/RubyFu/blob/master/files/module06/ftp.pcap) file
-
 ```ruby
 #!/usr/bin/env ruby
 require 'packetfu'
@@ -40,6 +38,7 @@ USER ayoi
 192.168.2.127 => 192.168.2.128
 PASS kambingakuilang
 ```
+Download [ftp.pcap](https://github.com/rubyfu/RubyFu/blob/master/files/module06/ftp.pcap) file
 
 
 <!--
