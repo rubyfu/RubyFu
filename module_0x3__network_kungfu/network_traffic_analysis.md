@@ -1,7 +1,7 @@
 # Network Traffic Analysis
 
 ## Basic Reading PCAP File
-Pacap file  [Download pcap file](https://github.com/rubyfu/RubyFu/blob/Contributions/files/module06/packets.pcap)
+Pacap file  [Download pcap file](https://github.com/rubyfu/RubyFu/blob/master/files/module06/packets.pcap)
 
 ```ruby
 require 'packetfu'
