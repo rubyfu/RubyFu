@@ -172,6 +172,7 @@ ruby ip_example.rb 255.255.255.0
 #### IP Decimal to Dotted notation
 
 ```ruby
+require 'ipaddr'
 IPAddr.new(3232236159, Socket::AF_INET).to_s
 ```
 or
@@ -181,6 +182,11 @@ or
 ```
 
 #### IP Dotted notation to Decimal
+
+```ruby
+require 'ipaddr'
+IPAddr.new('192.168.2.127').to_i
+```
 
 
 This part has been pretty quoted from [IP address Operations in Ruby][1] topic
