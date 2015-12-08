@@ -16,7 +16,26 @@ http://hamsa.cs.northwestern.edu/readings/password-cracking2/
 
 
 
-## Find FTP request packets
+## Find FTP Credentials 
+
+```ruby
+#!/usr/bin/env ruby
+require 'packetfu'
+
+pcap_file = "ftp.pcap"
+packets = PacketFu::PcapFile.read_packets pcap_file
+
+packets.each_with_index do |packet, i|
+  if packet.tcp_dport == 21
+    if packet.payload.match(/(USER|PASS)/)
+      src = [packet.ip_src].pack('N').unpack('C4').join('.')
+      dst = [packet.ip_dst].pack('N').unpack('C4').join('.')
+      puts "#{src} => #{dst}"
+      print packet.payload
+    end
+  end
+end
+```
 
 
 
