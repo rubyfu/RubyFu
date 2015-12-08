@@ -12,6 +12,8 @@ packets = PacketFu::PcapFile.read_packets 'packets.pcap'
 
 ## Find FTP Credentials 
 
+Download [ **ftp.pcap**](../files/packets.rb) file
+
 ```ruby
 #!/usr/bin/env ruby
 require 'packetfu'
