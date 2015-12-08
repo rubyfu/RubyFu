@@ -1,6 +1,6 @@
 # Network Traffic Analysis
 
-## Basic Reading PCAP File
+## Basic PCAP File Parsing
 Pacap file  [Download pcap file](https://github.com/rubyfu/RubyFu/blob/master/files/module06/packets.pcap)
 
 ```ruby
