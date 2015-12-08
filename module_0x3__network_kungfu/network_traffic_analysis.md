@@ -13,7 +13,6 @@ Download [packets.pcap](https://github.com/rubyfu/RubyFu/blob/master/files/modul
 
 ## Find FTP Credentials 
 
-
 ```ruby
 #!/usr/bin/env ruby
 require 'packetfu'
