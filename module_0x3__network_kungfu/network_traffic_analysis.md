@@ -12,7 +12,7 @@ packets = PacketFu::PcapFile.read_packets 'packets.pcap'
 
 ## Find FTP Credentials 
 
-Download [ **ftp.pcap**](https://github.com/rubyfu/RubyFu/blob/Contributions/files/module06/ftp.pcap) file
+Download [ **ftp.pcap**](https://github.com/rubyfu/RubyFu/blob/master/files/module06/ftp.pcap) file
 
 ```ruby
 #!/usr/bin/env ruby
