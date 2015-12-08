@@ -1,12 +1,11 @@
 # Network Traffic Analysis
 
+## Basic Reading PCAP File
 Pacap file  [Download pcap file](../files/packets.rb)
 
 ```ruby
 require 'packetfu'
 packets = PacketFu::PcapFile.read_packets 'packets.pcap'
-
-puts packets[452].payload       # Read pkt payload
 ```
 
 
