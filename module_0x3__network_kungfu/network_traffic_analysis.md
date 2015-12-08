@@ -8,11 +8,6 @@ packets = PacketFu::PcapFile.read_packets 'packets.pcap'
 
 puts packets[452].payload       # Read pkt payload
 ```
-http://www.behindthefirewalls.com/2014/01/extracting-files-from-network-traffic-pcap.html
-
-http://jarmoc.com/blog/2013/05/22/bsjtf-ctf-writeup-what-in-the-name-of-zeus/
-
-http://hamsa.cs.northwestern.edu/readings/password-cracking2/
 
 
 
@@ -45,7 +40,13 @@ PASS kambingakuilang
 ```
 
 
+<!--
+http://www.behindthefirewalls.com/2014/01/extracting-files-from-network-traffic-pcap.html
 
+http://jarmoc.com/blog/2013/05/22/bsjtf-ctf-writeup-what-in-the-name-of-zeus/
+
+http://hamsa.cs.northwestern.edu/readings/password-cracking2/
+-->
 
 <!---
 #!/usr/bin/env ruby
