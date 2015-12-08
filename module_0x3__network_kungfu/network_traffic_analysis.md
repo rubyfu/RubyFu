@@ -22,7 +22,7 @@ http://hamsa.cs.northwestern.edu/readings/password-cracking2/
 #!/usr/bin/env ruby
 require 'packetfu'
 
-pcap_file = "ftp.pcap"
+pcap_file = ARGV[0]
 packets = PacketFu::PcapFile.read_packets pcap_file
 
 packets.each_with_index do |packet, i|
