@@ -24,6 +24,7 @@ recov_file = File.read('steg.png').force_encoding("BINARY").split(sep).last
 # Write sec_file to hola.pdf
 File.open('hola.pdf', 'wb') {|file| file.print recov_file}
 ```
+**Note:** This has nothing to do with bypassing AV.
 
 ## Simple Binary file to Hex
 
