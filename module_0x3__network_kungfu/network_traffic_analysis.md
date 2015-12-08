@@ -1,12 +1,13 @@
 # Network Traffic Analysis
 
 ## Basic PCAP File Parsing
-Pacap file  [Download pcap file](https://github.com/rubyfu/RubyFu/blob/master/files/module06/packets.pcap)
 
 ```ruby
 require 'packetfu'
 packets = PacketFu::PcapFile.read_packets 'packets.pcap'
 ```
+Download [**packets.pcap**](https://github.com/rubyfu/RubyFu/blob/master/files/module06/packets.pcap) file.
+
 
 
 
