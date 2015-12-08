@@ -36,7 +36,13 @@ packets.each_with_index do |packet, i|
   end
 end
 ```
-
+Retruns
+```
+192.168.2.127 => 192.168.2.128
+USER ayoi
+192.168.2.127 => 192.168.2.128
+PASS kambingakuilang
+```
 
 
 
