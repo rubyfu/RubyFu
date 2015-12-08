@@ -166,6 +166,23 @@ ruby ip_example.rb 255.255.255.0
 24
 ```
 
+
+### Converting IP to another format 
+
+#### IP Dotted notation to Decimal
+
+```ruby
+IPAddr.new(3232236159, Socket::AF_INET).to_s
+```
+
+or
+
+
+```ruby
+[3232236159].pack('N').unpack('C4').join('.')
+```
+
+
 This part has been pretty quoted from [IP address Operations in Ruby][1] topic
 
 
