@@ -167,7 +167,7 @@ ruby ip_example.rb 255.255.255.0
 ```
 
 
-### Converting IP to another format 
+### Converting IP to another formats
 
 #### IP Decimal to Dotted notation
 
