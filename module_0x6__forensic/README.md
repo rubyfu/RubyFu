@@ -16,11 +16,12 @@ In above directories, there are many sqlite database files, so let's to import t
 ```ruby
 require 'sqlite3'
 
+# Browser Histroy 
+db = SQLite3::Database.new "places.sqlite"
+
 # List all tables 
 db.execute  "SELECT * FROM sqlite_master where type='table'"
 
-# Browser Histroy 
-db = SQLite3::Database.new "places.sqlite"
 # List all vitied URLs (History)
 db.execute  "SELECT url FROM moz_places"
 # List all bookmarks
