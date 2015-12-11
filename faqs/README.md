@@ -29,7 +29,7 @@ Yes, in a make sense amount of contribution, of course ;)
 Here are some main reasons:
 * Easy to read
 * Easy to write - using markdown
-* Easy to contribute - using gitbook or github
+* Easy to contribute - using github
 * Easy to manage - contributions, views, etc
 * And you can download the book with many formats - pdf, epub, etc
 
