@@ -5,8 +5,9 @@ Rubyfu is a book to use not to read!. It's a clean, clear ruby book for hackers.
 
 ###### Q \ How to get the best benifets of Rubyfu?
 The concept of this book is the need to know, so
-- open [Rubyfu.net][2], right-click, "Pin-tab" 
-- read the code and code comments.
+- open [Rubyfu.net][2], click read button.
+- on the browser tab, right-click, "Pin-tab" 
+- read the code and code's comments.
 - run it in Ruby interpreter irb/pry to see each line's execution.
 - run the whole code in a script
 - enhance the code to fit your needs
