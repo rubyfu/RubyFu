@@ -37,7 +37,7 @@ Here are some main reasons:
 Well, it shouldn't; This book is an experience base book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
 
 ###### Q \ What if I didn't understand some code in Rubyfu?
-No problem, DON'T HESITATE to open an [issue][1] and ask us anything anytime.
+No problem, DON'T HESITATE to open an [issue][1] and ask us anything, anytime.
 
 ###### Q \ What's the communication channel of Rubyfu book
 You can contact us on one of the following channels
