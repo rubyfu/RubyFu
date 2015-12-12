@@ -18,7 +18,8 @@ The regex should supports windows and Linux mac address formats.
 
 lets to find our mac
 ```ruby
-mac.scan /(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]/i
+mac_regex = /(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]/i
+mac.scan mac_regex
 ```
 Returns
 ```
