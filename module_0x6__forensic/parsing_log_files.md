@@ -13,6 +13,7 @@ Let's first list the important information we may need fro apache logs
 
 
 http://stackoverflow.com/questions/4846394/how-to-efficiently-parse-large-text-files-in-ruby
+
 To read a log file, I prefer to read it as lines 
 
 ```ruby
