@@ -29,7 +29,6 @@ So I came up with this small method which parses and converts apache "access.log
 #!/usr/bin/evn ruby
 # KING SABRI | @KINGSABRI
 
-
 apache_logs = File.readlines "/var/log/apache2/access.log"
 
 def parse(apache_logs) 
