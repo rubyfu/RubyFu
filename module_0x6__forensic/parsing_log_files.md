@@ -37,7 +37,7 @@ def parse(apache_logs)
   result_parse = []
   apache_logs.each do |log|
     parser = log.scan(apache_regex)
-    parse = 
+    _parse = 
         {
           :ip         => parser[0],
           :time       => parser[1],
@@ -47,7 +47,7 @@ def parse(apache_logs)
           :code       => parser[6],
           :user_agent => parser[8]
         }
-    result_parse << parse
+    result_parse << _parse
   end
   
   return result_parse
