@@ -14,8 +14,6 @@ mac = "ads fs:ad fa:fs:fe: Wind00-0C-29-38-1D-61ows 1100:50:7F:E6:96:20dsfsad fa
 
 The regex should supports windows and Linux mac address formats.
 
-`(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]`
-
 lets to find our mac
 ```ruby
 mac_regex = /(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]/i
