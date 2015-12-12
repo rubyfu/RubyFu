@@ -23,7 +23,7 @@ I was looking for a simple regex for apache logs. I found one [here](http://stac
 apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) "-" "(.*)"/
 ```
 
-The result is 
+So I came up with this small method which parses and converts apache "access.log" file to an array contains list of hashes with our needed information.
 
 ```ruby
 #!/usr/bin/evn ruby
