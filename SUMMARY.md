@@ -57,6 +57,7 @@
 * [Module 0x6 | Forensic KungFu](module_0x6__forensic/README.md)
    * [Windows Forensic](module_0x6__forensic/windows_forensic.md)
    * [Network Traffic Analysis](module_0x3__network_kungfu/network_traffic_analysis.md)
+   * Parsing Log files
 * [References](references/README.md)
 * [FAQs](faqs/README.md)
 * [Contributors](contributers/README.md)
