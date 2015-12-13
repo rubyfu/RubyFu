@@ -103,3 +103,16 @@ Can't parse: 127.0.0.1 - - [12/Dec/2015:20:09:05 +0300] "GET /favicon.ico HTTP/1
    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"}]
 ```
 
+Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" combined`
+
+- %h is the remote host (ie the client IP)
+- %l is the identity of the user determined by identd (not usually used since not reliable)
+- %u is the user name determined by HTTP authentication
+- %t is the time the request was received.
+- %r is the request line from the client. ("GET / HTTP/1.0")
+- %>s is the status code sent from the server to the client (200, 404 etc.)
+- %b is the size of the response to the client (in bytes)
+- Referer is the page that linked to this URL.
+- User-agent is the browser identification string.
+
+
