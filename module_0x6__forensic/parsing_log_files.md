@@ -103,7 +103,7 @@ Can't parse: 127.0.0.1 - - [12/Dec/2015:20:09:05 +0300] "GET /favicon.ico HTTP/1
    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"}]
 ```
 
-Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" combined`
+Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" combined` which is the default configurations.
 
 - %h is the remote host (ie the client IP)
 - %l is the identity of the user determined by identd (not usually used since not reliable)
