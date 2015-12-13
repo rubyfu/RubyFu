@@ -17,7 +17,7 @@ To read a log file, I prefer to read it as lines
 apache_logs = File.readlines "/var/log/apache2/access.log"
 ```
 
-I was looking for a simple regex for apache logs. I found one [here](http://stackoverflow.com/questions/4846394/how-to-efficiently-parse-large-text-files-in-ruby).
+I was looking for a simple regex for apache logs. I found one [here](http://stackoverflow.com/questions/4846394/how-to-efficiently-parse-large-text-files-in-ruby) with small tweak.
 
 ```ruby
 apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) "-" "(.*)"/
@@ -29,10 +29,13 @@ So I came up with this small method which parses and converts apache "access.log
 #!/usr/bin/evn ruby
 # KING SABRI | @KINGSABRI
 
+
 apache_logs = File.readlines "/var/log/apache2/access.log"
 
 def parse(apache_logs) 
-  apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) "-" "(.*)"/
+
+  apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) ([^\s]+?) "(.*)"/
+  
   result_parse = []
   apache_logs.each do |log|
     parser = log.scan(apache_regex)[0]
@@ -46,12 +49,15 @@ def parse(apache_logs)
     parse = 
         {
           :ip         => parser[0],
-          :time       => parser[1],
+          :user       => parser[1],
+          :time       => parser[2],
           :method     => parser[3],
           :uri_path   => parser[4],
           :protocol   => parser[5],
           :code       => parser[6],
-          :user_agent => parser[8]
+          :res_size   => parser[7],
+          :referer    => parser[8],
+          :user_agent => parser[9]
         }
     result_parse << parse
   end
