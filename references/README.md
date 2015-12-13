@@ -17,7 +17,7 @@
     * [Lynda: Ruby Essential Training - Commercial Training][11]
     * [Ruby from InfiniteSkills - Commercial Training][12]
     * [Qick Ruby syntax Cheat sheet][13]
-    * [4Programmer.com][23]
+    * [4Programmer.com - Ruby][23]
 * **Books**
     * [Ruby Learning][14]
     * [Working with TCP Sockets][15]
