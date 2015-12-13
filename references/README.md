@@ -42,6 +42,7 @@
     * Idb - is a tool to simplify some common tasks for iOS pentesting and research
     * Bettercap - Extensible MITM tool and framework
     * WATOBO - THE Web Application Security Toolbox
+    * Intrigue.io - Open Source project, discovering attack surface through OSINT
     * **[**ADD YOUR RUBY HACKING TOOL HERE!**]**
 
 
