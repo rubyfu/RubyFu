@@ -71,35 +71,38 @@ pp parse(apache_logs)
 
 Returns 
 ```
-Can't parse: 127.0.0.1 - - [12/Dec/2015:20:09:05 +0300] "GET /icons/ubuntu-logo.png HTTP/1.1" 200 3689 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"
-
-
-Can't parse: 127.0.0.1 - - [12/Dec/2015:20:09:05 +0300] "GET /favicon.ico HTTP/1.1" 404 500 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"
-
-
 [{:ip=>"127.0.0.1",
-  :time=>"",
+  :user=>"",
+  :time=>"12/Dec/2015:20:09:05 +0300",
   :method=>"GET",
   :uri_path=>"/",
   :protocol=>"HTTP/1.1",
   :code=>"200",
+  :res_size=>"3525",
+  :referer=>"\"-\"",
   :user_agent=>
    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"},
  {:ip=>"127.0.0.1",
-  :time=>"",
+  :user=>"",
+  :time=>"12/Dec/2015:20:09:05 +0300",
   :method=>"GET",
-  :uri_path=>"/etc/passwd",
+  :uri_path=>"/icons/ubuntu-logo.png",
   :protocol=>"HTTP/1.1",
-  :code=>"404",
-  :user_agent=>
-   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"},
- {:ip=>"127.0.0.1",
-  :time=>"",
-  :method=>"GET",
-  :uri_path=>"/etc/passwd",
-  :protocol=>"HTTP/1.1",
-  :code=>"404",
-  :user_agent=>
+  :code=>"200",                                                                                                                                                          
+  :res_size=>"3689",                                                                                                                                                     
+  :referer=>"\"http://localhost/\"",                                                                                                                                     
+  :user_agent=>                                                                                                                                                          
+   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"},                                                          
+ {:ip=>"127.0.0.1",                                                                                                                                                      
+  :user=>"",                                                                                                                                                             
+  :time=>"12/Dec/2015:20:09:05 +0300",                                                                                                                                   
+  :method=>"GET",                                                                                                                                                        
+  :uri_path=>"/favicon.ico",                                                                                                                                             
+  :protocol=>"HTTP/1.1",                                                                                                                                                 
+  :code=>"404",                                                                                                                                                          
+  :res_size=>"500",                                                                                                                                                      
+  :referer=>"\"http://localhost/\"",                                                                                                                                     
+  :user_agent=>                                                                                                                                                          
    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"}]
 ```
 
