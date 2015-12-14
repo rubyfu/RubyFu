@@ -37,7 +37,7 @@ def parse(logs)
   apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) ([^\s]+?) "(.*)"/
   
   result_parse = []
-  apache_logs.each do |log|
+  logs.each do |log|
     parser = log.scan(apache_regex)[0]
     
     # If can't parse the log line for any reason.
