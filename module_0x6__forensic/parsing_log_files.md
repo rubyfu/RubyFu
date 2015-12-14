@@ -1,7 +1,7 @@
 # Parsing Log Files
 
 
-## Apache log file
+## Apache Log File
 Let's first list the important information we may need fro apache logs 
 
 - [x] IP address
@@ -23,7 +23,7 @@ I was looking for a simple regex for apache logs. I found one [here](http://stac
 apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) "-" "(.*)"/
 ```
 
-So I came up with this small method which parses and converts apache "access.log" file to an array contains list of hashes with our needed information.
+So I came up with this small method which parses and converts apache "access.log" file to an array contains a list of hashes with our needed information.
 
 ```ruby
 #!/usr/bin/evn ruby
@@ -32,12 +32,12 @@ So I came up with this small method which parses and converts apache "access.log
 
 apache_logs = File.readlines "/var/log/apache2/access.log"
 
-def parse(apache_logs) 
+def parse(logs) 
 
   apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) ([^\s]+?) "(.*)"/
   
   result_parse = []
-  apache_logs.each do |log|
+  logs.each do |log|
     parser = log.scan(apache_regex)[0]
     
     # If can't parse the log line for any reason.
@@ -117,5 +117,14 @@ Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %
 - %b is the size of the response to the client (in bytes)
 - Referer is the page that linked to this URL.
 - User-agent is the browser identification string.
+
+
+## IIS Log File
+
+Here is a basic IIS log regex 
+```ruby
+iis_regex = /(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) ([^\s]++?) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) (\d{2}) (GET|POST|PUT|DELETE) ([^\s]++?) - (\d+) (\d+) (\d+) (\d+) ([^\s]++?) (.*)/
+```
+
 
 
