@@ -121,8 +121,10 @@ Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %
 
 ## IIS Log File
 
-```
+Here is a basic IIS log regex 
+```ruby
 iis_regex = /(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) ([^\s]++?) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) (\d{2}) (GET|POST|PUT|DELETE) ([^\s]++?) - (\d+) (\d+) (\d+) (\d+) ([^\s]++?) (.*)/
 ```
+
 
 
