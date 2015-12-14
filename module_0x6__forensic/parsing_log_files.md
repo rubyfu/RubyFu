@@ -32,7 +32,7 @@ So I came up with this small method which parses and converts apache "access.log
 
 apache_logs = File.readlines "/var/log/apache2/access.log"
 
-def parse(apache_logs) 
+def parse(logs) 
 
   apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) ([^\s]+?) "(.*)"/
   
