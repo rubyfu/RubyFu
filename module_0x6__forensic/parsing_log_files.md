@@ -1,7 +1,7 @@
 # Parsing Log Files
 
 
-## Apache log file
+## Apache Log File
 Let's first list the important information we may need fro apache logs 
 
 - [x] IP address
@@ -117,5 +117,12 @@ Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %
 - %b is the size of the response to the client (in bytes)
 - Referer is the page that linked to this URL.
 - User-agent is the browser identification string.
+
+
+## IIS Log File
+
+```
+/(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) ([^\s]++?) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) (\d{2}) (GET|POST|PUT|DELETE) ([^\s]++?) - (\d+) (\d+) (\d+) (\d+) ([^\s]++?) (.*)/
+```
 
 
