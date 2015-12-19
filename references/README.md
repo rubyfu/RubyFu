@@ -43,7 +43,6 @@
     * Bettercap - Extensible MITM tool and framework
     * WATOBO - THE Web Application Security Toolbox
     * Intrigue.io - Open Source project, discovering attack surface through OSINT
-    * OhNo - The Evil Image Builder & Meta Manipulator
     * **[**ADD YOUR RUBY HACKING TOOL HERE!**]**
 
 
