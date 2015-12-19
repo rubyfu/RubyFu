@@ -26,6 +26,17 @@ pry --simple-prompt
 - virustotal
 - uirusu
 
+**Extra gems**
+
+Useful gems to build command line applications
+  - tty-prompt - A beautiful and powerful interactive command line prompt.
+  - Thor - Create a command-suite app simply and easily, as well as Rails generators
+  - GLI - Create awesome, polished command suites without a lot of code
+  - Slop - Create simple command-line apps with a syntax similar to trollop.
+  - Highline - handle user input and output via a “Q&A” style API, including type conversions and validation
+  - Escort - A library that makes building command-line apps in ruby so easy, you’ll feel like an expert is guiding you through it
+  - commander - The complete solution for Ruby command-line executables
+
 #### Module 0x3 | Network KungFu
 - geoip
 - net-ping
@@ -52,6 +63,12 @@ pry --simple-prompt
 - watir-webdriver
 - coffee-script
 - opal
+
+**Extra gems**
+Useful gem to deal with web 
+- Mechanize - a ruby library that makes automated web interaction easy.
+- HTTP.rb - Fast, Elegant HTTP client for ruby
+
 
 #### Module 0x5 | Exploitation KungFu
 - metasm
