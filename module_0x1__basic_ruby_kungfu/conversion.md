@@ -1,9 +1,18 @@
 # Conversion
 
 ## Convert String to Hex
+
+If no prefex is needed, you just do the following 
+
+```ruby
+"Rubyfu".unpack("H*")
+```
+
+Otherwise, see the below ways 
+
 for a single character
 ```ruby
-'\x'+("A".unpack('H*')[0])
+'\x%02x' % "A".ord
 ```
 **Note:** the symbols ```*""``` are equal of ```.join```
 
@@ -12,7 +21,7 @@ for a single character
 ```
 or
 ```ruby
-"ABCD".unpack('C*').map { |c| '\\x%02x' % c }.join
+"ABCD".unpack('C*').map { |c| '\x%02x' % c }.join
 ```
 or
 ```ruby
