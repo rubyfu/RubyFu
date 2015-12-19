@@ -18,6 +18,7 @@
     * [Ruby from InfiniteSkills - Commercial Training][12]
     * [Qick Ruby syntax Cheat sheet][13]
     * [4Programmer.com - Ruby][23]
+    * [Ruby Programming Tutorials - Free Video series][24]
 * **Books**
     * [Ruby Learning][14]
     * [Working with TCP Sockets][15]
@@ -77,3 +78,4 @@
 [21]: http://www.happybearsoftware.com/byte-manipulation-in-ruby.html
 [22]: http://www.dotnetperls.com/format
 [23]: http://4programmer.com/ruby
+[24]: https://www.youtube.com/playlist?list=PLMK2xMz5H5Zv8eC8b4K6tMaE1-Z9FgSOp
