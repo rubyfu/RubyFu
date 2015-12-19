@@ -276,16 +276,26 @@ Shell -> ls -la
 ```
 
 ## Mechanize
-Since we're talking about dealing with we in ruby, we can't forget **Mechanize** gem, the most known library for dealing wit web.
+Since we're talking about dealing with web in ruby, we can't forget **Mechanize** gem, the most known library for dealing wit web.
 
 **The Official description says**, the Mechanize library is used for automating interaction with websites. Mechanize automatically stores and sends cookies, follows redirects, and can follow links and submit forms. Form fields can be populated and submitted. Mechanize also keeps track of the sites that you have visited as a history.
 
-More about Mechanize library
+More about Mechanize gem
 - [Getting Started With Mechanize][3]
 - [Mechanize examples][4]
 - [RailCasts | Mechanize tutorial][5]
 
 Since you know the hard way, you'll find Mechanize as simple as mouse clicks! give it a try!
+
+
+## HTTP.rb
+HTTP (The Gem! a.k.a. http.rb) is an easy-to-use client library for making requests from Ruby. It uses a simple method chaining system for building requests, similar to Python's Requests.
+
+Under the hood, http.rb uses http_parser.rb, a fast HTTP parsing native extension based on the Node.js parser and a Java port thereof. This library isn't just yet another wrapper around Net::HTTP. It implements the HTTP protocol natively and outsources the parsing to native extensions.
+
+More about http.rb gem
+- [The Official repository][6]
+- [The official wiki][7]
 
 <br><br><br>
 ---
@@ -294,7 +304,8 @@ Since you know the hard way, you'll find Mechanize as simple as mouse clicks! gi
 [3]: http://docs.seattlerb.org/mechanize/GUIDE_rdoc.html
 [4]: http://docs.seattlerb.org/mechanize/EXAMPLES_rdoc.html
 [5]: http://railscasts.com/episodes/191-mechanize
-
+[6]: https://github.com/httprb/http
+[7]: https://github.com/httprb/http/wiki
 
 
 

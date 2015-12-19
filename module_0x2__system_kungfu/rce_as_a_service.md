@@ -15,6 +15,7 @@ end
 DRb.start_service("druby://0.0.0.0:8080", RShell.new)
 DRb.thread.join
 ```
+Note: It works on all OS platforms 
 
 The `drb` lib supports ACL to prevent/allow particular IP addresses. ex.
 
@@ -85,4 +86,4 @@ DRb.start_service("druby://0.0.0.0:8080", []).thread.join
 
 I recommend to use the first code in case metasploit is not available.
 
-Read more [technical details](http://blog.recurity-labs.com/archives/2011/05/12/druby_for_penetration_testers/)about the metasploit module "drb_remote_codeexe"
+Read more [technical details](http://blog.recurity-labs.com/archives/2011/05/12/druby_for_penetration_testers/) about the metasploit module "drb_remote_codeexe"

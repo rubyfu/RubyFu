@@ -2,7 +2,6 @@
 
 ![](images/other/rubyfu.png)
 ***Rubyfu, where Ruby goes evil!***
-So I came up with this small method which parses and converts apache "access.log" file to an array contains a list of hashes with our needed information.
 
 This book is a collection of ideas, tricks and skills that could be useful for Hackers. It's a unique extraction reference, summarizes a lot of research and experience in order to achieve your **w00t** in shortest and smartest way. Rubyfu is where you'll find plug-n-hack code, Rubyfu is a book to use not to read, it's where ruby goes evil.
 
