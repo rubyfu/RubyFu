@@ -19,6 +19,7 @@
     * [Qick Ruby syntax Cheat sheet][13]
     * [4Programmer.com - Ruby][23]
     * [Ruby Programming Tutorials - Free Video series][24]
+    * [Ruby3arabi - Arabic Ruby community][29]
 * **Books**
     * [Ruby Learning][14]
     * [Working with TCP Sockets][15]
@@ -30,6 +31,10 @@
     * [Rubymonk.com][20]
     * [Byte manipulation in ruby][21]
     * [Ruby Format][22]
+    * [Codewars][25]
+    * [rubeque][26]
+    * [Hackerrank][27]
+    * [RubySec - Ruby Security Advisory][28]
 * **Hacking Tools built with ruby**
     * Metasploit framework - Exploitation framework
     * Beef framework - XSS framework
@@ -79,3 +84,9 @@
 [22]: http://www.dotnetperls.com/format
 [23]: http://4programmer.com/ruby
 [24]: https://www.youtube.com/playlist?list=PLMK2xMz5H5Zv8eC8b4K6tMaE1-Z9FgSOp
+[25]: http://www.codewars.com/?language=ruby
+[26]: http://www.rubeque.com/
+[27]: https://www.hackerrank.com/
+[28]: http://rubysec.com/
+[29]: http://ruby3arabi.com/
+

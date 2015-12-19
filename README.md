@@ -7,7 +7,7 @@ This book is a collection of ideas, tricks and skills that could be useful for H
 
 
 ### Who should read this book?
-Ideally, Hackers!; Those who have enough experience to hack our world and have *at least* basics in Ruby programming language. To get the best benefits of the book, open Rubyfu.net and pin it's browser tab; Use irb/pry as intertpreter to run the code or run it as script; Enhance the code to fit your needs and yeah, tweet the code and it's output to @Rubyfu to share it with our awesome community.
+Ideally, Hackers!; Those who have enough experience to hack our world and have *at least* basics in Ruby programming language. To get the best benefits of the book, open Rubyfu.net and pin it's browser tab; Use irb/pry as interpreter to run the code or run it as script; Enhance the code to fit your needs and yeah, tweet the code and it's output to [@Rubyfu][7] to share it with our awesome community.
 
 
 ### Organization of the book
@@ -34,6 +34,7 @@ Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your h
 
 
 <br><br><br>
+![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 ---
 [0]: README.md
 [1]: module_0x1__basic_ruby_kungfu/README.md
@@ -42,4 +43,4 @@ Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your h
 [4]: module_0x4__web_kungfu/README.md
 [5]: module_0x5__exploitation_kungfu/README.md
 [6]: module_0x6__forensic/README.md
-
+[7]: https://twitter.com/rubyfu
