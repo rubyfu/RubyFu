@@ -75,7 +75,7 @@ uid=0(root) gid=0(root) groups=0(root)
 As you can see, even you loose the session you can connect again and again; it's a service, remember? 
 
 
-Note: For using metasploit module *only*, you don't need even the RShell class. You'll need the following on the target side.
+Note: For using metasploit module *only*, you don't need even the RShell class. You just need the following on the target side.
 
 ```ruby
 #!/usr/bin/env ruby
