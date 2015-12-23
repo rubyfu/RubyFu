@@ -1,6 +1,13 @@
 # Conversion
 
 ## Convert String to Hex
+
+If no prefex is needed, you just do the following 
+
+```ruby
+"Rubyfu".unpack("H*")
+```
+
 for a single character
 ```ruby
 '\x'+("A".unpack('H*')[0])
