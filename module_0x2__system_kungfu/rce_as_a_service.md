@@ -72,3 +72,4 @@ pwd
 id
 uid=0(root) gid=0(root) groups=0(root)
 ```
+As you can see, even you loose the session you can connect again and again; it's a service, remember? 
