@@ -1,5 +1,5 @@
 # RCE as a Service
-Distributed Ruby (DRb) allows inter-process communication between Ruby programs by implementing remote procedure calling. Distributed Ruby enables remote method calling for Ruby. It is part of the standard library and therefore you can expect it to be installed on most systems using MRI Ruby. Because the underlying object serialization depends on Marshal, which is implemented in C, good speeds are expectable. *– https://en.wikibooks.org*
+DRb allows Ruby programs to communicate with each other on the same machine or over a network. DRb uses remote method invocation (RMI) to pass commands and data between processes.
 
 ## RCE Service 
 ```ruby
