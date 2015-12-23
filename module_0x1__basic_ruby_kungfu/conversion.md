@@ -12,7 +12,7 @@ Otherwise, see the below ways
 
 for a single character
 ```ruby
-'\x'+("A".unpack('H*')[0])
+'\x%02x' % "A".ord
 ```
 **Note:** the symbols ```*""``` are equal of ```.join```
 
