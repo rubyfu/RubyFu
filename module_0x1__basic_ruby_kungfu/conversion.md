@@ -21,7 +21,7 @@ for a single character
 ```
 or
 ```ruby
-"ABCD".unpack('C*').map { |c| '\\x%02x' % c }.join
+"ABCD".unpack('C*').map { |c| '\x%02x' % c }.join
 ```
 or
 ```ruby
