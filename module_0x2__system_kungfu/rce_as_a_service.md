@@ -12,7 +12,6 @@ class RShell
    end
 end
 
-puts "Starting.."
 DRb.start_service("druby://0.0.0.0:8080", RShell.new)
 DRb.thread.join
 ```
@@ -22,5 +21,5 @@ DRb.thread.join
 
 ```ruby
 rshell = DRbObject.new_with_uri("druby://192.168.0.13:8080")
-puts rshell.exec "ped"
+puts rshell.exec "id"
 ```
