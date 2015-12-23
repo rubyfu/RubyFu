@@ -16,7 +16,7 @@ DRb.start_service("druby://0.0.0.0:8080", RShell.new)
 DRb.thread.join
 ```
 
-The `brb` lib supports ACL to prevent/allow particular IP addresses. ex.
+The `drb` lib supports ACL to prevent/allow particular IP addresses. ex.
 
 ```ruby
 #!/usr/bin/env ruby
