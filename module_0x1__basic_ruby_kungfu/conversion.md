@@ -8,6 +8,8 @@ If no prefex is needed, you just do the following
 "Rubyfu".unpack("H*")
 ```
 
+Otherwise, see the below ways 
+
 for a single character
 ```ruby
 '\x'+("A".unpack('H*')[0])
