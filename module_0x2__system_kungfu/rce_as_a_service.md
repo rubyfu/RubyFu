@@ -15,6 +15,7 @@ end
 DRb.start_service("druby://0.0.0.0:8080", RShell.new)
 DRb.thread.join
 ```
+Note: Works on all OS platforms 
 
 The `drb` lib supports ACL to prevent/allow particular IP addresses. ex.
 
