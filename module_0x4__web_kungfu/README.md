@@ -280,7 +280,7 @@ Since we're talking about dealing with web in ruby, we can't forget **Mechanize*
 
 **The Official description says**, the Mechanize library is used for automating interaction with websites. Mechanize automatically stores and sends cookies, follows redirects, and can follow links and submit forms. Form fields can be populated and submitted. Mechanize also keeps track of the sites that you have visited as a history.
 
-More about Mechanize library
+More about Mechanize gem
 - [Getting Started With Mechanize][3]
 - [Mechanize examples][4]
 - [RailCasts | Mechanize tutorial][5]
@@ -293,7 +293,7 @@ HTTP (The Gem! a.k.a. http.rb) is an easy-to-use client library for making reque
 
 Under the hood, http.rb uses http_parser.rb, a fast HTTP parsing native extension based on the Node.js parser and a Java port thereof. This library isn't just yet another wrapper around Net::HTTP. It implements the HTTP protocol natively and outsources the parsing to native extensions.
 
-More about http.rb library
+More about http.rb gem
 - [The Official repository][6]
 - [The official wiki][7]
 
