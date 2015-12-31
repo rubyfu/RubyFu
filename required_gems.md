@@ -64,6 +64,12 @@ Useful gems to build command line applications
 - coffee-script
 - opal
 
+**Extra gems**
+Useful gem to deal with web 
+- Mechanize - 
+- HTTP.rb - Fast, Elegant HTTP client for ruby
+
+
 #### Module 0x5 | Exploitation KungFu
 - metasm
 
