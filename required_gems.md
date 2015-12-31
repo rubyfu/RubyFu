@@ -66,7 +66,7 @@ Useful gems to build command line applications
 
 **Extra gems**
 Useful gem to deal with web 
-- Mechanize - 
+- Mechanize - a ruby library that makes automated web interaction easy.
 - HTTP.rb - Fast, Elegant HTTP client for ruby
 
 
