@@ -17,7 +17,7 @@ The concept of this book is the need to know, so
 Why not?!
 
 ###### Q \ Why there is no explanation for beginners?
-We respect all beginners and newcomers from all levels and all programming languages; But, this book helps certain type of people (hackers) to find a common challenged code in their journey. So with our love, we add good references to help you to start and we can't wait to see you writing to this book.
+We respect all beginners and newcomers from all levels and all programming languages; But, this book helps certain type of people (hackers) to find a common challenging code in their journey. So with our love, we add good references to help you to start and we can't wait to see you writing to this book.
 
 ###### Q \ If I can add valuable contents to beginners section, shall I?
 In this stage we're really focusing on the core, the *How*. however, if you have really **valuable and complete** contents to add, we may add a complete chapter for beginners in this book and we may  add you to the authors list as well. Till that moment, you can do a spelling, grammar, etc review.
