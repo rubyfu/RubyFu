@@ -3,7 +3,7 @@
 ###### Q \ What is Rubyfu? 
 Rubyfu is a book to use not to read!. It's a clean, clear ruby book for hackers. As we need a periodical small/big tasks in our daily hacking, this book comes to reduce the number of wasting time in googling "*How to do X in ruby*" let's focus on hacking our target and find the *how* here.
 
-###### Q \ How to get the best benifets of Rubyfu?
+###### Q \ How to get the best benefits of Rubyfu?
 The concept of this book is the need to know, so
 - open [Rubyfu.net][2], click read button.
 - on the browser tab, right-click, "Pin-tab" 
