@@ -7,11 +7,11 @@ Rubyfu is a book to use not to read!. It's a clean, clear ruby book for hackers.
 The concept of this book is the need to know, so
 - open [Rubyfu.net][2], click read button.
 - on the browser tab, right-click, "Pin-tab" 
-- read the code and code's comments.
+- read the code and the code's comments.
 - run it in Ruby interpreter irb/pry to see each line's execution.
 - run the whole code in a script
 - enhance the code to fit your needs
-- and yeah, tweet the code and its output to @Rubyfu
+- and yeah, tweet the code and its output to @Rubyfu, we'd love that!
 
 ###### Q \ Why Ruby language?
 Why not?!
