@@ -20,7 +20,7 @@ A good list of [References][1] under Beginners part.
 
 
 ## Challenge Your Self!
-There are some awesome website that push your programming skills via interactive way and I really advise you to go through one or more of them
+There are some awesome website that push your programming skills via interactive way and I really encourage you to go through one or more of them
 * [Codewars][5]
 * [rubeque][6]
 * [Hackerrank][7]
