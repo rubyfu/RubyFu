@@ -32,41 +32,5 @@
 
 
 
-<i class="octicon octicon-book"> SSSSS</i>
-
-
-
-<button class="btn btn-lg" type="button">Large Button</button>
-
-<button class="btn btn-primary" type="button">Primary button</button>
-
-<button class="btn btn-text-primary" type="button">Primary button</button>
-
-<button class="btn btn-count" type="button">Default button</button>
-
-<button class="btn btn-primary btn-outline" type="button">Primary button</button>
-
-<button class="btn btn-primary btn-plain" type="button">Primary button</button>
-
-<div class="btn-toolbar">
-    <button class="btn" type="button">Default</button>
-    <button class="btn active" type="button">:active or .active</button>
-    <button class="btn" disabled type="button">:disabled or .disabled</button>
-</div>
-
-<div class="btn-toolbar">
-    <button class="btn btn-primary" type="button">Default</button>
-    <button class="btn btn-primary active" type="button">:active or .active</button>
-    <button class="btn btn-primary" disabled type="button">:disabled or .disabled</button>
-</div>
-
-<button class="btn btn-primary btn-block" type="button">
-    Download for OS X
-    <span class="btn-label">OS X 10.9 or later</span>
-</button>
-
-
-
-
 
 
