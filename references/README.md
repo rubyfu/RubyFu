@@ -33,6 +33,7 @@
     * [Codewars][25]
     * [rubeque][26]
     * [Hackerrank][27]
+    * [RubySec - Ruby Security Advisory][28]
 * **Hacking Tools built with ruby**
     * Metasploit framework - Exploitation framework
     * Beef framework - XSS framework
@@ -85,6 +86,6 @@
 [25]: http://www.codewars.com/?language=ruby
 [26]: http://www.rubeque.com/
 [27]: https://www.hackerrank.com/
-
+[28]: http://rubysec.com/
 
 
