@@ -19,6 +19,7 @@
     * [Qick Ruby syntax Cheat sheet][13]
     * [4Programmer.com - Ruby][23]
     * [Ruby Programming Tutorials - Free Video series][24]
+    * [Ruby3arabi - Arabic Ruby community][29]
 * **Books**
     * [Ruby Learning][14]
     * [Working with TCP Sockets][15]
@@ -87,5 +88,5 @@
 [26]: http://www.rubeque.com/
 [27]: https://www.hackerrank.com/
 [28]: http://rubysec.com/
-
+[29]: http://ruby3arabi.com/
 
