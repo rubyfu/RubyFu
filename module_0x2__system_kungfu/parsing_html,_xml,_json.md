@@ -92,7 +92,7 @@ We've the following XML file
 </movie>
 </collection>
 ```
-
+<!--
 ### REXML
 
 ```ruby
@@ -100,6 +100,7 @@ require 'rexml/document'
 
 
 ```
+-->
 
 ### Nokogiri
 
