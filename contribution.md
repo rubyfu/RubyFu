@@ -1,5 +1,5 @@
 # Contribution
-This book is under [CC BY-SA License][0] so we appreciate all kind of contributions, distribution and we reserve our contributors efforts, forever.
+This book is under [CC BY-NC-SA License][0] so we appreciate all kind of contributions, distribution and we reserve our contributors efforts, forever.
 
 Note: The code in this book is tested on Ruby version > 2.2.0
 
