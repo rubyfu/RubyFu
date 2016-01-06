@@ -1,5 +1,5 @@
 # Contribution
-This book is under GPLv3[^1] License so we appreciate all kind of contributions.
+This book is under [CC BY-SA License][0] so we appreciate all kind of contributions, distribution and we reserve our contributors efforts, forever.
 
 Note: The code in this book is tested on Ruby version > 2.2.0
 
@@ -88,7 +88,7 @@ General contribution might be topic requests, proofreading, spilling, book organ
 
 <br><br><br>
 ---
-[^1]: [More about GPL](http://www.gnu.org/copyleft/gpl.html)
+[0]: https://creativecommons.org/licenses/by-sa/3.0/
 
 [1]: references/README.md
 [2]: https://github.com/GitbookIO/gitbook
