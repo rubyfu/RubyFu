@@ -88,7 +88,7 @@ General contribution might be topic requests, proofreading, spilling, book organ
 
 <br><br><br>
 ---
-[0]: https://creativecommons.org/licenses/by-sa/3.0/
+[0]: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 [1]: references/README.md
 [2]: https://github.com/GitbookIO/gitbook
