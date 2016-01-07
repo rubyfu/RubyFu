@@ -12,17 +12,17 @@ You can find Firefox profile databases in
 C:\Users\%USERNAME%\[PROFILE]
 ```
 
-In above directories, there are many sqlite database files, so let's to import these databases and see what we get
+In above directories, there are many SQLite database files, so let's to import these databases and see what we get
 ```ruby
 require 'sqlite3'
 
-# Browser Histroy 
+# Browser history 
 db = SQLite3::Database.new "places.sqlite"
 
 # List all tables 
 db.execute  "SELECT * FROM sqlite_master where type='table'"
 
-# List all vitied URLs (History)
+# List all visited URLs (History)
 db.execute  "SELECT url FROM moz_places"
 # List all bookmarks
 db.execute  "SELECT title FROM moz_bookmarks"
