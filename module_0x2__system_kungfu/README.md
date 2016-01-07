@@ -1,4 +1,4 @@
-# Module 0x2 | System KungFu
+# Module 0x2 | System Kung Fu
 
 ## Packaging
 
@@ -16,7 +16,7 @@ OCRA (One-Click Ruby Application) builds Windows executables from Ruby source co
 > - Both windowed/console mode supported
 > - Includes gems based on usage, or from a Bundler Gemfile
 
-- To install Ocra
+- To install OCRA
 ```
 gem install ocra
 ```

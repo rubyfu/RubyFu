@@ -1,4 +1,4 @@
-# Pure Ruby NetCat
+# Pure Ruby Netcat
 
 
 ## Simple Ncat.rb

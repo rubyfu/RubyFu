@@ -1,4 +1,4 @@
-# Module 0x6 | Forensic KungFu
+# Module 0x6 | Forensic Kung Fu
 
 ## Firefox Investigation
 

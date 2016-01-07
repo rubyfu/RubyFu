@@ -1,4 +1,4 @@
-# Chapter 0x4 | Web KungFu
+# Chapter 0x4 | Web Kung Fu
 
 ## Send Get request
 

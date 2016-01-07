@@ -12,7 +12,7 @@ nor_file = File.read 'image.png'
 sep = '*------------------------*'
 one_file = [nor_file, sep, sec_file]
 
-# Wirte sec_file, sep, nor_file into steg.png
+# Write sec_file, sep, nor_file into steg.png
 File.open("steg.png", 'wb') do |stg|
   one_file.each do |f|
     stg.puts f

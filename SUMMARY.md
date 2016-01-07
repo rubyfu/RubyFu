@@ -17,7 +17,7 @@
    * [Remote Shell](module_0x2__system_kungfu/system_shell.md)
        * [Ncat.rb](module_0x2__system_kungfu/ncatrb.md)
        * [RCE as a Service](module_0x2__system_kungfu/rce_as_a_service.md)
-   * [Virustotal](module_0x2__system_kungfu/virustotal.md)
+   * [VirusTotal](module_0x2__system_kungfu/virustotal.md)
 * [Module 0x3 | Network Kung Fu](module_0x3__network_kungfu/README.md)
    * [Ruby Socket](module_0x3__network_kungfu/ruby_socket.md)
    * [FTP](module_0x3__network_kungfu/ftp.md)
