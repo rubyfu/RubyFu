@@ -1,8 +1,8 @@
 # WordPress API
 
-Ruby has a [standard library][2] called `xmlrpc` which takes care of all xmlrpc stuff, you can even create an xmlrpc server using it. Let's to get some real word example 
+Ruby has a [standard library][2] called `xmlrpc` which takes care of all xmlrpc stuff, you can even create an XML-RPC server using it. Let's to get some real word example 
 
-Looking for really known application that support XMLRPC then of course WordPress was the first attendee. 
+Looking for really known application that support XML-RPC then of course WordPress was the first attendee. 
 
 So what do we want to do?
 - Say hello to WordPress 
@@ -56,8 +56,8 @@ response = server.call('wp.getPosts', 0, opts[:user], opts[:password])
 # Create a new post!
 post =
     {
-        "post_title"     => 'Rubyfu vs WP XMLRPC',
-        "post_name"      => 'Rubyfu vs Word pres XMLRPC',
+        "post_title"     => 'Rubyfu vs WP XML-RPC',
+        "post_name"      => 'Rubyfu vs WordPress XML-RPC',
         "post_content"   => 'This is Pragmatic Rubyfu Post. Thanks for reading',
         "post_author"    => 2,
         "post_status"    => 'publish',
@@ -180,15 +180,15 @@ Results
 >> # Create a new post!
 >> post =
  | {    
- |   "post_title"     => 'Rubyfu vs WP XMLRPC',        
- |   "post_name"      => 'Rubyfu vs Word pres XMLRPC',        
+ |   "post_title"     => 'Rubyfu vs WP XML-RPC',        
+ |   "post_name"      => 'Rubyfu vs WordPress XML-RPC',        
  |   "post_content"   => 'This is Pragmatic Rubyfu Post. Thanks for reading',        
  |   "post_author"    => 2,        
  |   "post_status"    => 'publish',        
  |   "comment_status" => 'open'        
  | }      
-=> {"post_title"=>"Rubyfu vs WP XMLRPC",
- "post_name"=>"Rubyfu vs Word pres XMLRPC",
+=> {"post_title"=>"Rubyfu vs WP XML-RPC",
+ "post_name"=>"Rubyfu vs WordPress XML-RPC",
  "post_content"=>"This is Pragmatic Rubyfu Post. Thanks for reading",
  "post_author"=>2,
  "post_status"=>"publish",
@@ -286,7 +286,7 @@ and here is the new post
 
 Source: [HOW TO PROGRAMATICALLY CONTROL WORDPRESS WITH RUBY USING XML-RPC][3]
 
-More about [WordPress XMLRPC][3]
+More about [WordPress XML-RPC][3]
 
 
 
