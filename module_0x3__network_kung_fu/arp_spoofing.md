@@ -1,15 +1,15 @@
 # ARP Spoofing
-As you know, ARP Spoofing attack in the core of MiTM attacks. In this part we'll know how to wirte simple and effective arp spoofer tool to use it in later spoofing attacks.
+As you know, ARP Spoofing attack in the core of MitM attacks. In this part we'll know how to write simple and effective ARP spoofer tool to use it in later spoofing attacks.
 
 #### Scenario
-We have 3 machines in this senario as showen below.
+We have 3 machines in this scenario as shown below.
 ```
              |Attacker|
                  |
                  ٧
 |Victim| -----------------> |Router| ---> Internet
 ```
-Here the list of IP and MAC addresses of each of theme in the follwing table[^1]
+Here the list of IP and MAC addresses of each of theme in the following table[^1]
 
 | Host/Info |   IP Address  |    MAC Address    |
 |-----------|:-------------:|:-----------------:|
@@ -154,6 +154,6 @@ Returns, time to wiresharking ;)
 
 <br><br><br>
 ---
-[^1]: Creat table the easy way - [Table Generator](http://www.tablesgenerator.com/markdown_tables)
+[^1]: Create table the easy way - [Table Generator](http://www.tablesgenerator.com/markdown_tables)
 
 [^2]: Source: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)

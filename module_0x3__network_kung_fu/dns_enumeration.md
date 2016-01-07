@@ -52,8 +52,8 @@ ns1.google.com.         345090  IN      A       216.239.32.10
 
 As you can see from response above, there are 5 sections
 
-* ** Header section:** DNS lookp headers
-* **Question section:** DNS quuestion,
+* ** Header section:** DNS lookup headers
+* **Question section:** DNS question,
 * **Answer section:** Array of the exact lookup answer (base on lookup type. ex. A, NS, MX , etc)
 * **Authority section:** Array of authority nameserver
 * **Additional section:** Array array of nameserver lookup

@@ -29,11 +29,11 @@ puts 'starting to ping'
 end
 avg = rtary.inject(0) {|sum, i| sum + i}/(repeat - pingfails)
 puts "Average round-trip is #{avg}\n"
-puts "#{pingfails} packets were droped"
+puts "#{pingfails} packets were dropped"
 ```
 
 ## Port Scanner 
-If you got what we've represented in [Ruby Socket](module_0x3__network_kungfu/ruby_socket.md) section, then here we wrapping up and do some application depends on it. 
+If you got what we've represented in [Ruby Socket](module_0x3__network_kung_fu/ruby_socket.md) section, then here we wrapping up and do some application depends on it. 
 **scanner.rb**
 ```ruby
 #!/usr/bin/env ruby

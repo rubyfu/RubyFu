@@ -62,7 +62,7 @@ ruby ip_example.rb 192.168.5.130 24
 
 ### Calculating the number of hosts in a subnet.
 
-We used to_range method to create a range of all the ips then count method to count the ips in range. We reduced the number by two to exclude the gateway and broadcast IP address.
+We used to_range method to create a range of all the IPs then count method to count the IPs in range. We reduced the number by two to exclude the gateway and broadcast IP address.
 
 
 ```ruby
@@ -143,8 +143,8 @@ This part has been pretty quoted from [IP address Operations in Ruby][1] topic
 ## IP Geolocation
 you may need to know more information about IP location due attack investigation or any other reason. 
 
-### Geoip
-The special thing about geoip lib is that it's an API for offline database you download from [www.maxmind.com](http://www.maxmind.com). There are few free databases from maxmind whoever you can have a subscription database version though. 
+### GeoIP
+The special thing about geoip lib is that it's an API for offline database you download from [www.maxmind.com](http://www.maxmind.com). There are few free databases from MaxMind whoever you can have a subscription database version though. 
 
 - Download one of the free GeoLite country, city or ASN databases
     - [GeoLiteCountry](geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz)

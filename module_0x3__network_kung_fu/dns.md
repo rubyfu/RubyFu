@@ -13,7 +13,7 @@ DNS out-band connection is usually allowed in local networks, which is the major
 require 'socket'
 
 if ARGV.size < 1
-  puts "[+] sudp ruby #{__FILE__} <FILENAME>"
+  puts "[+] sudo ruby #{__FILE__} <FILENAME>"
   exit
 else
   file = ARGV[0]

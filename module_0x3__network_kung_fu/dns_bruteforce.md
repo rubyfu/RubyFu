@@ -1,11 +1,11 @@
-# DNS bruteforce
+# DNS brute force
 
 
 
 ```ruby
 require 'net/dns'
 
-# Small list of known subdoamins, so can add like  '+ ('aaa'..'zzz').to_a'
+# Small list of known subdomains, so can add like  '+ ('aaa'..'zzz').to_a'
 subdomains = 
     [
         "access",  "accounting", "accounts", "active", "ad", "admin", "administracion", "administrador","administrator",

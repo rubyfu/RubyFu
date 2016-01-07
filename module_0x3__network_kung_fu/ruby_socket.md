@@ -36,7 +36,7 @@ IO                              # The basis for all input and output in Ruby
 ## TCP Socket
 
 
-**Server/Client lifecycle **
+**Server/Client life cycle **
 ```
             Client        Server
               |             |                  
@@ -65,7 +65,7 @@ server = TCPServer.new('0.0.0.0', 9911) # Server, binds/listens all interfaces o
 client = server.accept                  # Wait for client to connect
 rhost  = client.peeraddr.last           # peeraddr, returns remote [address_family, port, hostname, numeric_address(ip)]
 client.puts "Hi TCP Client! #{rhost}"   # Send a message to the client once it connect
-client.gets.chomp                       # Read incomming message from client
+client.gets.chomp                       # Read incoming message from client
 client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
 ```
@@ -82,11 +82,11 @@ client.puts "Hi, TCP Server #{rhost}"
 client.close
 ```
 
-You can put timeout/timeinterval for current connection in-case the server's response get delayed and the socket is still open.
+You can put timeout/time interval for current connection in-case the server's response get delayed and the socket is still open.
 
 ```ruby
 timeval = [3, 0].pack("l_2")        # Time interval 3 seconds 
-client.setsockopt Socket::SOL_SOCKET, Socket::SO_RCVTIMEO, timeval      # Set socket revceiving time interval 
+client.setsockopt Socket::SOL_SOCKET, Socket::SO_RCVTIMEO, timeval      # Set socket receiving time interval 
 client.setsockopt Socket::SOL_SOCKET, Socket::SO_SNDTIMEO, timeval      # Set socket sending time interval
 client.getsockopt(Socket::SOL_SOCKET, Socket::SO_RCVTIMEO).inspect      # Optional, Check if socket option has been set
 client.getsockopt(Socket::SOL_SOCKET, Socket::SO_SNDTIMEO).inspect      # Optional, Check if socket option has been set
@@ -125,9 +125,9 @@ require 'socket'
 
 server = UDPSocket.new                                  # Start UDP socket
 server.bind('0.0.0.0', 9911)                            # Bind all interfaces to port 9911
-mesg, addr = server.recvfrom(1024)                      # Recive 1024 bytes of the message and the sender IP
+mesg, addr = server.recvfrom(1024)                      # Receive 1024 bytes of the message and the sender IP
 server puts "Hi, UDP Client #{addr}", addr[3], addr[1]  # Send a message to the client 
-server.recv(1024)                                       # Recive 1024 bytes of the message 
+server.recv(1024)                                       # Receive 1024 bytes of the message 
 ```
 
 ### UDP Client
@@ -136,7 +136,7 @@ require 'socket'
 client = UDPSocket.new
 client.connect('localhost', 9911)       # Connect to server on port 991
 client.puts "Hi, UDP Server!", 0        # Send message 
-server.recv(1024)                       # Recive 1024 bytes of the server message
+server.recv(1024)                       # Receive 1024 bytes of the server message
 ```
 
 There alternative for sending and receiving too, figure it out, [RubyDoc](http://ruby-doc.org/stdlib-2.0.0/libdoc/socket/rdoc/UDPSocket.html).

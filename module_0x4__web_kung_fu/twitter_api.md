@@ -75,4 +75,4 @@ puts ""
 
 
 [1]: https://dev.twitter.com/oauth/overview
-[2]: http://rubyfu.net/content/module_0x4__web_kungfu/index.html#cgi
+[2]: http://rubyfu.net/content/module_0x4__web_kung_fu/index.html#cgi

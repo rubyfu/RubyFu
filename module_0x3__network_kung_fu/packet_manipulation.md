@@ -133,7 +133,7 @@ loop do
   end
 end
 ```
-Now try to netcat any open port then send hacked
+Now try to Netcat any open port then send hacked
 ```
 echo "Hacked" | nc -nv 192.168.0.15 4444
 ```
