@@ -25,25 +25,25 @@ There are several kind of contributions could help this book to get the best res
 ## How to?
 
 ### Start contributing
-Please find all you need to know about gitbook and markdown editing in [References][1] section. As good start, you can refer to [how to use it from official readme][2]. You can easily use Gitbook [Desktop editor][3].
+Please find all you need to know about GitBook and markdown editing in [References][1] section. As good start, you can refer to [how to use it from official readme][2]. You can easily use GitBook [Desktop editor][3].
 
-1. Create a [Github][5] account.
+1. Create a [GitHub][5] account.
 2. Fork [RubyFu repository][4].
-3. Clone github Forked RubyFu repository (`git clone https://github.com/[YourGithubAccount]/RubyFu`) 
-4. Create a [Gitbook][6] account.
-4. Go to [**Gitbook editor**][3] and Sign-in with your Gitbook account
+3. Clone GitHub forked RubyFu repository (`git clone https://github.com/[YourGithubAccount]/RubyFu`) 
+4. Create a [GitBook][6] account.
+4. Go to [**GitBook editor**][3] and Sign-in with your GitBook account
 5. Press **Import** button to import the cloned repository. Then, you'll find it in **LOCAL LIBRARY** tab
-3. Add forked RubyFu repository Github URL to Gitbook Editor **Toolbar** >> **File** >> **Preferences** >> **GIT**.
+3. Add forked RubyFu repository GitHub URL to GitBook Editor **Toolbar** >> **File** >> **Preferences** >> **GIT**.
 4. Start your awesome contribution.
-5. From Gitbook editor, **Sync** your changes to forked repository.
-6. From Github, send a **Pull Request(PR)** to **Master** branch.
+5. From GitBook editor, **Sync** your changes to forked repository.
+6. From GitHub, send a **Pull Request(PR)** to **Master** branch.
 
-Not sure where to start helping? Go to [TODO list](contributers/todo.md) and check the unchecked items.
+Not sure where to start helping? Go to [TODO list](contributors/todo.md) and check the unchecked items.
 
 ### Contributing with Code
 
 ##### Ruby code
-* Use the triple ticks ` ``` `  followed by `ruby` then your code in between then ` ``` ` to get ruby code highlighted. eg.
+* Use the triple ticks ` ``` `  followed by `ruby` then your code in between then ` ``` ` to get ruby code highlighted. e.g.
 
         ```ruby
         puts "Ruby Code here"
@@ -52,7 +52,7 @@ Not sure where to start helping? Go to [TODO list](contributers/todo.md) and che
 * Choose the correct Module.
 * Make your title clear.
 * Use Text editor/ide for code identification before pasting your code
-* Mention the source, if you copied or developed a code that created by others please mention the source in the footer. eg.
+* Mention the source, if you copied or developed a code that created by others please mention the source in the footer. e.g.
 
         ```ruby
         puts "Your good code"
@@ -62,7 +62,7 @@ Not sure where to start helping? Go to [TODO list](contributers/todo.md) and che
 
         [1]: http://TheSouceCodeURL
 
-    Your notes should be under footer's line, Add the following to initiate the footer if not exist
+    Your notes should be under the footer's line. Add the following to initiate the footer if it does not yet exist
 
         <br><br><br>
         ---
@@ -83,7 +83,7 @@ Use triple ticks to highlight your command-line. ex.
 General contribution might be topic requests, proofreading, spilling, book organization and style. All these contributions are welcome however has to be discussed on [Rubyfu issues][7] especially things regarding to topics and/or book organization and styling. At the same time don't hesitate to report even single word observation about the book, it's for you at the end of the day.
 
 
-> **Note:** Since this book is dynamically and un-ordered enhanced, it's hard to make the footer notes with order series of numbers for the whole book so -until I find better solution- I'll make the number order separated for each page separately. 
+> **Note:** Since this book is enhanced dynamically and unordered, it's hard to make the footer notes with order series of numbers for the whole book so -until I find better solution- I'll make the number order separated for each page separately. 
 
 
 <br><br><br>

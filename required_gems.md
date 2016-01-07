@@ -19,10 +19,10 @@ pry --simple-prompt
 ## Modules gems 
 
 
-#### Module 0x1 | Basic Ruby KungFu
+#### Module 0x1 | Basic Ruby Kung Fu
 - colorize
 
-#### Module 0x2 | System KungFu
+#### Module 0x2 | System Kung Fu
 - virustotal
 - uirusu
 
@@ -37,7 +37,7 @@ Useful gems to build command line applications
   - Escort - A library that makes building command-line apps in ruby so easy, you’ll feel like an expert is guiding you through it
   - commander - The complete solution for Ruby command-line executables
 
-#### Module 0x3 | Network KungFu
+#### Module 0x3 | Network Kung Fu
 - geoip
 - net-ping
 - ruby-nmap 
@@ -48,7 +48,7 @@ Useful gems to build command line applications
 - net-scp
 - packetfu
 
-#### Module 0x4 | Web KungFu
+#### Module 0x4 | Web Kung Fu
 - activerecord
 - tiny_tds 
 - activerecord-sqlserver-adapter 
@@ -70,8 +70,8 @@ Useful gem to deal with web
 - HTTP.rb - Fast, Elegant HTTP client for ruby
 
 
-#### Module 0x5 | Exploitation KungFu
+#### Module 0x5 | Exploitation Kung Fu
 - metasm
 
-#### Module 0x6 | Forensic KungFu
+#### Module 0x6 | Forensic Kung Fu
 - metasm
