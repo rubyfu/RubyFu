@@ -10,9 +10,9 @@ We need to extract all MAC address from an arbitrary string
 mac = "ads fs:ad fa:fs:fe: Wind00-0C-29-38-1D-61ows 1100:50:7F:E6:96:20dsfsad fas fa1 3c:77:e6:68:66:e9 f2"
 ```
 
-**Using Regex**
+**Using Regular Expressions**
 
-The regex should supports windows and Linux mac address formats.
+The regular expression should supports windows and Linux mac address formats.
 
 lets to find our mac
 ```ruby
@@ -58,7 +58,7 @@ Assume we have the following string
 string = "text here http://foo1.example.org/bla1 and http://foo2.example.org/bla2 and here mailto:test@example.com and here also."
 ```
 <br>
-**Using Regex**
+**Using Regular Expressions**
 ```ruby
 string.scan(/https?:\/\/[\S]+/)
 ```
@@ -77,7 +77,7 @@ Using above tricks
 require 'net/http'
 URI.extract(Net::HTTP.get(URI.parse("http://rubyfu.net")), ["http", "https"])
 ```
-or using Regex 
+or using a regular expression
 ```ruby
 require 'net/http'
 Net::HTTP.get(URI.parse("http://rubyfu.net")).scan(/https?:\/\/[\S]+/)

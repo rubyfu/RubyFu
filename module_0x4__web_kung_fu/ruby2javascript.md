@@ -28,7 +28,7 @@ coffee --watch --compile script.coffee
 gem install coffee-script
 ```
 
-- Convert CoffeeScript file to Javascript 
+- Convert CoffeeScript file to JavaScript 
 
 ```ruby
 #!/usr/bin/env ruby
@@ -41,7 +41,7 @@ end
 
 Run it
 ```
-ruby cofee2js.rb exploit.coffee 
+ruby coffee2js.rb exploit.coffee 
 ```
 
 

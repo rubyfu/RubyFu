@@ -1,10 +1,10 @@
-# Extending BurpSuite
+# Extending Burp Suite
 
 ## Setting up the Ruby environment for Burp Extensions 
 
 1. Download a stable version of JRuby from [JRuby Downloads](http://jruby.org/download)
 2. Select the jar for Linux (JRuby x.x.x Complete .jar) or Executable for Windows.
-3. Import the environment from **BrupSuite** >> **Extender** >> **Options** >> **Ruby Environment**.
+3. Import the environment from **Burp Suite** >> **Extender** >> **Options** >> **Ruby Environment**.
 
 ![](webfu__burp_setenv1.png)
 
@@ -16,7 +16,7 @@
 - http://www.gotohack.org/2011/05/cktricky-appsec-buby-script-basics-part.html
 - https://portswigger.net/burp/extender/
 
-Import the Burpsuite Extender Core API `IBurpExtender`
+Import the Burp Suite Extender Core API `IBurpExtender`
 
 **alert.rb**
 ```ruby

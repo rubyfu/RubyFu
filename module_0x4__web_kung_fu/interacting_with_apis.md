@@ -1,6 +1,6 @@
 # Interacting with APIs
 
-API's has variety of structure to interact with its peers.  
+APIs have a variety of structures to interact with their peers.  
 
 
 ```ruby

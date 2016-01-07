@@ -7,7 +7,7 @@ Dealing with database is a required knowledge in web testing and here we will go
 ```
 gem install sqlite3
 ```
-You've have to have sqlite3 dev libs installed on your system
+You've have to have sqlite3 development libraries installed on your system
 ```
 apt-get install libsqlite3-dev
 ```

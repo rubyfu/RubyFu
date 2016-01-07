@@ -1,11 +1,11 @@
-# Wordpress API
+# WordPress API
 
 Ruby has a [standard library][2] called `xmlrpc` which takes care of all xmlrpc stuff, you can even create an xmlrpc server using it. Let's to get some real word example 
 
-Looking for really known application that support XMLRPC then of course Wordpress was the first attendee. 
+Looking for really known application that support XMLRPC then of course WordPress was the first attendee. 
 
 So what do we want to do?
-- Say hello to wordpress 
+- Say hello to WordPress 
 - List all available methods
 - List all available users
 - List all available post
@@ -41,7 +41,7 @@ server = XMLRPC::Client.new(
 # Create a new instance takes a hash
 server = XMLRPC::Client.new3(opts)
 
-# Say hello to wordpress
+# Say hello to WordPress
 response = server.call("demo.sayHello")
 
 # List all available methods
@@ -57,7 +57,7 @@ response = server.call('wp.getPosts', 0, opts[:user], opts[:password])
 post =
     {
         "post_title"     => 'Rubyfu vs WP XMLRPC',
-        "post_name"      => 'Rubyfu vs Wordpres XMLRPC',
+        "post_name"      => 'Rubyfu vs Word pres XMLRPC',
         "post_content"   => 'This is Pragmatic Rubyfu Post. Thanks for reading',
         "post_author"    => 2,
         "post_status"    => 'publish',
@@ -76,7 +76,7 @@ response =  server.call('wp.getComments', 0, opts[:user], opts[:password], {"pos
 Results 
 
 ```ruby
->> # Say hello to wordpress
+>> # Say hello to WordPress
 >> response = server.call("demo.sayHello")
 => "Hello!"
 >> 
@@ -132,14 +132,14 @@ Results
   "post_modified_gmt"=>#<XMLRPC::DateTime:0x000000021d4ca8 @day=1, @hour=19, @min=52, @month=11, @sec=25, @year=2015>,
   "post_status"=>"publish",
   "post_type"=>"post",
-  "post_name"=>"rubyfu-vs-wordpres-xmlrpc",
+  "post_name"=>"rubyfu-vs-wordpress-xmlrpc",
   "post_author"=>"2",
   "post_password"=>"",
   "post_excerpt"=>"",
   "post_content"=>"This is Pragmatic Rubyfu Post. Thanks for reading",
   "post_parent"=>"0",
   "post_mime_type"=>"",
-  "link"=>"http://172.17.0.2/2015/11/01/rubyfu-vs-wordpres-xmlrpc/",
+  "link"=>"http://172.17.0.2/2015/11/01/rubyfu-vs-wordpress-xmlrpc/",
   "guid"=>"http://172.17.0.2/?p=4",
   "menu_order"=>0,
   "comment_status"=>"open",
@@ -181,14 +181,14 @@ Results
 >> post =
  | {    
  |   "post_title"     => 'Rubyfu vs WP XMLRPC',        
- |   "post_name"      => 'Rubyfu vs Wordpres XMLRPC',        
+ |   "post_name"      => 'Rubyfu vs Word pres XMLRPC',        
  |   "post_content"   => 'This is Pragmatic Rubyfu Post. Thanks for reading',        
  |   "post_author"    => 2,        
  |   "post_status"    => 'publish',        
  |   "comment_status" => 'open'        
  | }      
 => {"post_title"=>"Rubyfu vs WP XMLRPC",
- "post_name"=>"Rubyfu vs Wordpres XMLRPC",
+ "post_name"=>"Rubyfu vs Word pres XMLRPC",
  "post_content"=>"This is Pragmatic Rubyfu Post. Thanks for reading",
  "post_author"=>2,
  "post_status"=>"publish",
@@ -286,7 +286,7 @@ and here is the new post
 
 Source: [HOW TO PROGRAMATICALLY CONTROL WORDPRESS WITH RUBY USING XML-RPC][3]
 
-More about [wordpress XMLRPC][3]
+More about [WordPress XMLRPC][3]
 
 
 

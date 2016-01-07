@@ -17,7 +17,7 @@ To read a log file, I prefer to read it as lines
 apache_logs = File.readlines "/var/log/apache2/access.log"
 ```
 
-I was looking for a simple regex for apache logs. I found one [here](http://stackoverflow.com/questions/4846394/how-to-efficiently-parse-large-text-files-in-ruby) with small tweak.
+I was looking for a simple regular expression for apache logs. I found one [here](http://stackoverflow.com/questions/4846394/how-to-efficiently-parse-large-text-files-in-ruby) with small tweak.
 
 ```ruby
 apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) "-" "(.*)"/
@@ -121,7 +121,7 @@ Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %
 
 ## IIS Log File
 
-Here is a basic IIS log regex 
+Here is a basic IIS log regular expression 
 ```ruby
 iis_regex = /(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) ([^\s]++?) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) (\d{2}) (GET|POST|PUT|DELETE) ([^\s]++?) - (\d+) (\d+) (\d+) (\d+) ([^\s]++?) (.*)/
 ```

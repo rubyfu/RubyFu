@@ -30,7 +30,8 @@ proxy = Selenium::WebDriver::Proxy.new(
 profile = Selenium::WebDriver::Firefox::Profile.from_name "default"     # Use an existing profile name 
 profile['general.useragent.override'] = "Mozilla/5.0 (compatible; MSIE 9.0; " + 
                                         "Windows Phone OS 7.5; Trident/5.0; " + 
-					                    "IEMobile/9.0)"                 # Set User Agentprofile.proxy = proxy                                                   # Set Proxy
+					                    "IEMobile/9.0)"                 # Set User Agent
+profile.proxy = proxy                                                   # Set Proxy
 profile.assume_untrusted_certificate_issuer = false                     # Accept untrusted SSL certificates 
 
 # Start Driver 
@@ -227,7 +228,7 @@ btn = browser.button(name: 'btnSubmit').click
 
 
 ## Selenium, Watir Arbitrary POST request
-Here another scenario I've faced, I was against POST request without submit button, in another word, the test was against intercepted request generated from jquery function, in my case was a drop menu. So The work round wad quite simple, Just create an HTML file contains POST form with the original parameters plus a **Submit button**(***just like creating CSRF exploit from a POST form***) then call that html file to the browser and deal with it as normal form. Let's to see an example here.
+Here another scenario I've faced, I was against POST request without submit button, in another word, the test was against intercepted request generated from jQuery function, in my case was a drop menu. So The work round wad quite simple, Just create an HTML file contains POST form with the original parameters plus a **Submit button**(***just like creating CSRF exploit from a POST form***) then call that html file to the browser and deal with it as normal form. Let's to see an example here.
 
 **POST request**
 ```
@@ -275,7 +276,7 @@ require 'watir-webdriver'
 
 @browser = Watir::Browser.new :firefox
 @browser.window.resize_to(800, 600)     # Set browser size
-@browser.window.move_to(400, 300)       # Alocate browser possition 
+@browser.window.move_to(400, 300)       # Allocate browser position 
 
 def sendpost(payload)
   @browser.goto "file:///home/KING/Code/example.html"
@@ -310,7 +311,7 @@ end
 ```
 
 ### Dealing with tabs
-One of scenarios I've faced is to exploit XSS a user profile fields and check the result in another page which present the public user's profile. Instead of revisiting the urls again and again I open new tab and refresh the public user's profile page then return back to send the exploit and so on.
+One of scenarios I've faced is to exploit XSS a user profile fields and check the result in another page which present the public user's profile. Instead of revisiting the URLs again and again I open new tab and refresh the public user's profile page then return back to send the exploit and so on.
 
 **xss_tab.rb**
 ```ruby
@@ -364,7 +365,7 @@ payloads =
 puts "[*] Exploitation start"
 puts "[*] Number of payloads: #{payloads.size} payloads" 
 
-@browser.send_keys(:control, 't')                               # Sent ctrl+T to open new tab
+@browser.send_keys(:control, 't')                               # Sent Ctrl+T to open new tab
 @browser.goto "http://example.com/pub_prof/user/silver.aspx"    # Goto the use's public profile
 @browser.switch                                                 # Make sure to focus on current tab/window
 
@@ -376,7 +377,7 @@ payloads.each do |payload|
   @browser.send_keys(:alt, '2')                                     # Send Alt+2 to go to second tab
   @browser.switch 
   @browser.refresh
-  puts "[*] Checking Payload Resutl on #{@browser.title}"
+  puts "[*] Checking Payload Result on #{@browser.title}"
   
   if @browser.alert.exists? 
     @browser.alert.ok

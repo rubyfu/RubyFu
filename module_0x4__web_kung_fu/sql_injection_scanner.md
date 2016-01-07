@@ -35,7 +35,7 @@ puts ""
 ```
 
 
-> I've commented the line `puts response.body.gsub(/<.*?>/, '').strip` and added a custom RegEx to fix our target outputs.
+> I've commented the line `puts response.body.gsub(/<.*?>/, '').strip` and added a custom regular expression to fix our target outputs.
 
 
 
@@ -108,7 +108,7 @@ puts "[+] The #{URL.decode(uri.to_s)} is vulnerable!" unless response.match(/#{e
 
 ```
 
-Try it on this url (http://testasp.vulnweb.com/showforum.asp?id=0)
+Try it on this URL (http://testasp.vulnweb.com/showforum.asp?id=0)
 
 Results
 ```
@@ -175,7 +175,7 @@ extracted = []
            puts "[+] Found character: ".bold + "#{char.to_s(16)} hex".green
            
            extracted <<  char.chr
-           puts "[+] Extracted chracters: ".bold + "#{extracted.join}".green
+           puts "[+] Extracted characters: ".bold + "#{extracted.join}".green
            break 
          end
    end
@@ -244,7 +244,7 @@ extracted = []
            puts "[+] Found character: ".bold + "#{char.to_s(16)} hex".green
            
            extracted <<  char.chr
-           puts "[+] Extracted chracters: ".bold + "#{extracted.join}".green
+           puts "[+] Extracted characters: ".bold + "#{extracted.join}".green
            break 
          end
    end

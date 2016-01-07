@@ -1,4 +1,4 @@
-# Web Servcies and APIs
+# Web Services and APIs
 
 Web Services and APIs are getting popular and used in many known websites we use in daily basis. For that matter, I'd like to put some general definitions that may make it clear to deal with
 
@@ -18,7 +18,7 @@ A Web service (also Web Service) is defined by the W3C as "a software system des
 3. A Web service uses only three styles of use: SOAP, REST and XML-RPC for communication whereas API may use any style for communication.
 4. A Web service always needs a network for its operation whereas an API doesn't need a network for its operation.
 5. An API facilitates interfacing directly with an application whereas a Web service interacts with two machines over a network.
-6. Web service is like advanced Urls and API is Programmed Interface.
+6. Web service is like advanced URLs and API is Programmed Interface.
 7. API contains classes and Interfaces just like a program.
 8. A web service is a form of API (Application Programming Interface).
 9. An API is used by a computer programmer to establish a link between software applications. This interface can take several forms, a web service is just one of these.
