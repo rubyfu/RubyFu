@@ -19,7 +19,7 @@
 - [ ] Ruby 2 JavaScript 
 
 **Module 0x5 | Exploitation Kung Fu**
-- [ ] Enhance metasm 
+- [ ] Enhance Metasm 
 
 **Module 0x6 | Forensic Kung Fu**
 - [ ] Add more forensic stuff 
