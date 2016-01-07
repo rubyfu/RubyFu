@@ -9,7 +9,7 @@ gem install net-ssh
 ## Simple SSH command execution 
 This is a very basic ssh client which sends and executes commands on a remote system 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 require 'net/ssh'
 
@@ -32,7 +32,7 @@ end
 Here a simple ssh client which give you an interactive PTY
 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 require 'net/ssh'
 
@@ -138,7 +138,7 @@ Run ssh-ftunnel.rb on the **SSH Server**
 
 **ssh-ftunnel.rb**
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 require 'net/ssh'
 
@@ -170,7 +170,7 @@ Run ssh-rtnnel.rb on the **SSH Server**
 
 **ssh-rtunnel.rb**
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 require 'net/ssh'
 

@@ -1,4 +1,4 @@
-# Module 0x1 | Basic Ruby KungFu
+# Module 0x1 | Basic Ruby Kung Fu
 
 Ruby has awesome abilities and tricks for dealing with all strings and arrays scenarios. In this chapter we'll present most known tricks we may need in our hacking life.
 
@@ -29,7 +29,7 @@ Readline.get_screen_size
 [ENV['LINES'].to_i, ENV['COLUMNS'].to_i]
 ```
 
-- By tput commandline 
+- By tput command line 
 
 ```ruby
 [`tput cols`.to_i , `tput lines`.to_i]
@@ -45,7 +45,7 @@ The Readline module provides interface for GNU Readline. This module defines a n
 **console-basic1.rb**
 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 # 
 require 'readline'
@@ -105,7 +105,7 @@ completion =
 Readline.completion_proc = completion        # Set completion process
 Readline.completion_append_character = ' '   # Make sure to add a space after completion
 
-while line = Readline.readline('-> ', true)  # Start console with charcter -> and make add_hist = true
+while line = Readline.readline('-> ', true)  # Start console with character -> and make add_hist = true
   puts completion.call
   break if line =~ /^quit.*/i or line =~ /^exit.*/i
 end

@@ -26,7 +26,7 @@ apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(G
 So I came up with this small method which parses and converts apache "access.log" file to an array contains a list of hashes with our needed information.
 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 
 

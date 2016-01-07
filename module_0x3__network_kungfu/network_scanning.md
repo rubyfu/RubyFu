@@ -8,7 +8,7 @@ gem install net-ping
 
 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 require 'net/ping'
 

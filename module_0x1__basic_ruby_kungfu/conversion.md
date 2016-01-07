@@ -2,7 +2,7 @@
 
 ## Convert String to Hex
 
-If no prefex is needed, you just do the following 
+If no prefix is needed, you just do the following 
 
 ```ruby
 "Rubyfu".unpack("H*")
@@ -66,7 +66,7 @@ Return
 ABCD
 ```
 
-**Note about hex:** Sometimes you might face a none pritable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at top of your file to fix any interpretation issue.
+**Note about hex:** Sometimes you might face a none printable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at top of your file to fix any interpretation issue.
 
 
 
@@ -79,13 +79,13 @@ In exploitation, this is not as simple as that since we're dealing with hex valu
 
 So assume we have `0x77d6b141` return address which we've to convert it to Little-Endian format to allow CPU to read it correctly. 
 
-Generally speaking, it's really a trivial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's one time process but this is not the case of you have ROP chain that has to be staged in your exploit. To do so simply `packe` it as array
+Generally speaking, it's really a trivial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's one time process but this is not the case of you have ROP chain that has to be staged in your exploit. To do so simply `pack` it as array
 
 ```ruby
 [0x77d6b141].pack('V')
 ```
 
-It happens that sometime you get an error because because of none unicode string issue. To solve this issue, just force encoding to UTF-8 but most of the time you will not face this issue
+It happens that sometime you get an error because because of none Unicode string issue. To solve this issue, just force encoding to UTF-8 but most of the time you will not face this issue
 
 ```ruby
 [0x77d6b141].pack('V').force_encoding("UTF-8")
@@ -140,7 +140,7 @@ The above way will encode any non URL standard strings only(ex. `<>"{}`) however
 puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
 ```
 
-## HTML En/Decod
+## HTML En/Decode
 
 **Encoding HTML**
 ```ruby
@@ -176,7 +176,7 @@ require 'base64'
 require 'zlib'
 
 inflated = Base64::decode64(CGI::unescape(saml))
-# You don't need below code if it's not defalted/compressed
+# You don't need below code if it's not deflated/compressed
 zlib = Zlib::Inflate.new(-Zlib::MAX_WBITS)
 zlib.inflate(inflated)
 

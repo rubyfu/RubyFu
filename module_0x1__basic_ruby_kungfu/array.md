@@ -23,7 +23,7 @@ pattern_offset = pattern_create.enum_for(:scan , '9Ak0').map {Regexp.last_match.
 Note: This does not consider the little endian format, for that there is extra code should be written. For more info, please take a look on the following [code][1].
 
 
-#### Generate all hexdecimal values from `\x00` to `\xff`
+#### Generate all hexadecimal values from `\x00` to `\xff`
 
 ```ruby
 puts (0..255).map {|b| ('\x%X' % b)}

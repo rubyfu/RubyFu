@@ -3,7 +3,7 @@
 Interacting with SMTP is easy and since the protocol is straight forward.
 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 #
 require 'socket'

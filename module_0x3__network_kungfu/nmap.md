@@ -40,7 +40,7 @@ each option like `nmap.syn_scan` or `nmap.xml` is considered as a *Task*. [Docum
 ### Comprehensive scan
 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 require 'nmap/program'
 

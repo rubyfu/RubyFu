@@ -110,7 +110,7 @@ Results
 
 This is a working exploit for Vtiger CRM SOAP from Auth-bypass to Shell upload 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 # gem install savon httpclient
 #

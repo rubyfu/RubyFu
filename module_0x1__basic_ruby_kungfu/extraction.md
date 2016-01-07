@@ -64,7 +64,7 @@ string.scan(/https?:\/\/[\S]+/)
 ```
 
 **Using standard URI module**
-This returns an array of URL's
+This returns an array of URLs
 ```ruby
 require 'uri'
 URI.extract(string, ["http" , "https"])
