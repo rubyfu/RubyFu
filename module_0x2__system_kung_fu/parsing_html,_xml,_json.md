@@ -53,7 +53,7 @@ Module 0x0 | Introduction
 ```
 
 ## XML
-There are 2 ways we'd like to show her, the standard library `rexml` and `nokogiri` external library 
+There are 2 ways we'd like to show here, the standard library `rexml` and `nokogiri` external library 
 
 We've the following XML file
 ```xml
@@ -92,15 +92,42 @@ We've the following XML file
 </movie>
 </collection>
 ```
-<!--
+
 ### REXML
 
 ```ruby
 require 'rexml/document'
+include REXML
+
+file = File.read "file.xml"
+xmldoc = Document.new(xmlfile)
+
+# Get the root element
+root = xmldoc.root
+puts "Root element : " + root.attributes["shelf"]
 
 
+# List of movie titles.
+xmldoc.elements.each("collection/movie") do |e|
+  puts "Movie Title : " + e.attributes["title"] 
+end
+
+# List of movie types.
+xmldoc.elements.each("collection/movie/type") do |e|
+  puts "Movie Type : " + e.text 
+end
+
+# List of movie description.
+xmldoc.elements.each("collection/movie/description") do |e|
+  puts "Movie Description : " + e.text
+end
+
+# List of movie stars
+xmldoc.elements.each("collection/movie/stars") do |e|
+  puts "Movie Stars : " + e.text
+end
 ```
--->
+
 
 ### Nokogiri
 ```ruby
