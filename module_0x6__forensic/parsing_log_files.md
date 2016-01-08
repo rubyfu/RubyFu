@@ -2,7 +2,7 @@
 
 
 ## Apache Log File
-Let's first list the important information we may need fro apache logs 
+Let's first list the important information that we may need from the Apache logs 
 
 - [x] IP address
 - [x] Time stamp 
@@ -17,16 +17,16 @@ To read a log file, I prefer to read it as lines
 apache_logs = File.readlines "/var/log/apache2/access.log"
 ```
 
-I was looking for a simple regex for apache logs. I found one [here](http://stackoverflow.com/questions/4846394/how-to-efficiently-parse-large-text-files-in-ruby) with small tweak.
+I was looking for a simple regular expression for Apache logs. I found one [here](http://stackoverflow.com/questions/4846394/how-to-efficiently-parse-large-text-files-in-ruby) with small tweak.
 
 ```ruby
 apache_regex = /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - (.{0})- \[([^\]]+?)\] "(GET|POST|PUT|DELETE) ([^\s]+?) (HTTP\/1\.1)" (\d+) (\d+) "-" "(.*)"/
 ```
 
-So I came up with this small method which parses and converts apache "access.log" file to an array contains a list of hashes with our needed information.
+So I came up with this small method which parses and converts Apache "access.log" file to an array contains a list of hashes with our needed information.
 
 ```ruby
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 
 
@@ -106,9 +106,9 @@ Returns
    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"}]
 ```
 
-Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" combined` which is the default configurations.
+Note: The Apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" combined` which is the default configurations.
 
-- %h is the remote host (ie the client IP)
+- %h is the remote host (i.e. the client IP address)
 - %l is the identity of the user determined by identd (not usually used since not reliable)
 - %u is the user name determined by HTTP authentication
 - %t is the time the request was received.
@@ -121,7 +121,7 @@ Note: The apache LogFormat is configured as `LogFormat "%h %l %u %t \"%r\" %>s %
 
 ## IIS Log File
 
-Here is a basic IIS log regex 
+Here is a basic IIS log regular expression 
 ```ruby
 iis_regex = /(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) ([^\s]++?) (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) (\d{2}) (GET|POST|PUT|DELETE) ([^\s]++?) - (\d+) (\d+) (\d+) (\d+) ([^\s]++?) (.*)/
 ```

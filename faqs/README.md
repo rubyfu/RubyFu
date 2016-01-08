@@ -8,7 +8,7 @@ The concept of this book is the need to know, so
 - open [Rubyfu.net][2], click read button.
 - on the browser tab, right-click, "Pin-tab" 
 - read the code and the code's comments.
-- run it in Ruby interpreter irb/pry to see each line's execution.
+- run it in Ruby interpreter IRB/pry to see each line's execution.
 - run the whole code in a script
 - enhance the code to fit your needs
 - and yeah, tweet the code and its output to @Rubyfu, we'd love that!
@@ -25,13 +25,13 @@ In this stage we're really focusing on the core, the *How*. however, if you have
 ###### Q \ Do you add contributors name even it was small contribution?
 Yes, in a make sense amount of contribution, of course ;)
 
-###### Q \ Why did you choose Gitbook?
+###### Q \ Why did you choose GitBook?
 Here are some main reasons:
 * Easy to read
 * Easy to write - using markdown
-* Easy to contribute - using github
+* Easy to contribute - using GitHub
 * Easy to manage - contributions, views, etc
-* And you can download the book with many formats - pdf, epub, etc
+* And you can download the book with many formats - PDF, EPUB, etc
 
 ###### Q \ When this book get completed?
 Well, it shouldn't; This book is an experience base book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
@@ -45,7 +45,7 @@ You can contact us on one of the following channels
 - Twitter: [@Rubyfu][3]
 - Google+: [Rubyfu page][4]
 - Facebook: [Rubyfu page][5]
-- Github: [Rubyfu Repository][6]
+- GitHub: [Rubyfu Repository][6]
 
 
 

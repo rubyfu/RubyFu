@@ -16,7 +16,7 @@ keyname = 'SOFTWARE\Clients'
 access  = Win32::Registry::KEY_ALL_ACCESS
 Win32::Registry::HKEY_LOCAL_MACHINE.open(keyname,  access).keys
 
-# List all MAC address kyes
+# List all MAC address keys
 keyname= 'SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged' 
 access = Win32::Registry::KEY_ALL_ACCESS
 Win32::Registry::HKEY_LOCAL_MACHINE.open(ketname, access).keys
