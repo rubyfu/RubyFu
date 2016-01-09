@@ -57,7 +57,7 @@
    * [metasm](module_0x5__exploitation_kung_fu/metasm.md)
 * [Module 0x6 | Forensic Kung Fu](module_0x6__forensic/README.md)
    * [Windows Forensic](module_0x6__forensic/windows_forensic.md)
-   * Android Forensic
+   * [Android Forensic](module_0x6__forensic/android_forensic.md)
    * [Network Traffic Analysis](module_0x3__network_kung_fu/network_traffic_analysis.md)
    * [Parsing Log Files](module_0x6__forensic/parsing_log_files.md)
 * [References](references/README.md)
