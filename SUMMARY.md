@@ -59,6 +59,7 @@
    * [Windows Forensic](module_0x6__forensic/windows_forensic.md)
    * [Network Traffic Analysis](module_0x3__network_kung_fu/network_traffic_analysis.md)
    * [Parsing Log Files](module_0x6__forensic/parsing_log_files.md)
+   * Android Forensic
 * [References](references/README.md)
 * [FAQs](faqs/README.md)
 * [Contributors](contributors/README.md)
