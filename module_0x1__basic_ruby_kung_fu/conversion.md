@@ -175,7 +175,7 @@ require 'cgi'
 require 'base64'
 require 'zlib'
 
-inflated = Base64::decode64(CGI::unescape(saml))
+inflated = Base64::decode64(CGI.unescape(saml))
 # You don't need below code if it's not deflated/compressed
 zlib = Zlib::Inflate.new(-Zlib::MAX_WBITS)
 zlib.inflate(inflated)
