@@ -16,7 +16,7 @@ IO                              # The basis for all input and output in Ruby
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
-I'll verbosely mention `Socket::Constants` here since I didn't find an obvious reference listing it except [Programming Ruby1.9(The Pragmatic Programmers' Guide)](http://media.pragprog.com/titles/ruby3/app_socket.pdf).
+I'll verbosely mention some of `Socket::Constants` here since I didn't find an obvious reference listing it except [Programming Ruby1.9 *The Pragmatic Programmers' Guide*](http://media.pragprog.com/titles/ruby3/app_socket.pdf); Otherwise you've to `ri Socket::Constants` from commandline 
 
 
 ### Socket Types
@@ -26,7 +26,6 @@ I'll verbosely mention `Socket::Constants` here since I didn't find an obvious r
 - SOCK_DRAM
 - SOCK_RDM
 - SOCK_SEQPACKET
-
 
 ### Address Families(Socket Domains)
 - AF_APPLETALK
@@ -117,6 +116,51 @@ I'll verbosely mention `Socket::Constants` here since I didn't find an obvious r
 - PF_XTP
 
 ### Socket options
+- SO_ACCEPTCONN
+- SO_ACCEPTFILTER
+- SO_ALLZONES
+- SO_ATTACH_FILTER
+- SO_BINDTODEVICE
+- SO_BINTIME
+- SO_BROADCAST
+- SO_DEBUG
+- SO_DETACH_FILTER
+- SO_DONTROUTE
+- SO_DONTTRUNC
+- SO_ERROR
+- SO_KEEPALIVE
+- SO_LINGER
+- SO_MAC_EXEMPT
+- SO_NKE
+- SO_NOSIGPIPE
+- SO_NO_CHECK
+- SO_NREAD
+- SO_OOBINLINE
+- SO_PASSCRED
+- SO_PEERCRED
+- SO_PEERNAME
+- SO_PRIORITY
+- SO_RCVBUF
+- SO_RCVLOWAT
+- SO_RCVTIMEO
+- SO_RECVUCRED
+- SO_REUSEADDR
+- SO_REUSEPORT
+- SO_SECURITY_AUTHENTICATION
+- SO_SECURITY_ENCRYPTION_NETWORK
+- SO_SECURITY_ENCRYPTION_TRANSPORT
+- SO_SNDBUF
+- SO_SNDLOWAT
+- SO_SNDTIMEO
+- SO_TIMESTAMP
+- SO_TIMESTAMPNS
+- SO_TYPE
+- SO_USELOOPBACK
+- SO_WANTMORE
+- SO_WANTOOBFLAG
+
+
+
 
 ## TCP Socket
 
