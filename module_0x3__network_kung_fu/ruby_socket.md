@@ -16,6 +16,8 @@ IO                              # The basis for all input and output in Ruby
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
+I'll verbosely mention `Socket::Constants` here since I didn't find an obvious reference listing it except [Programming Ruby1.9(The Pragmatic Programmers' Guide)](http://media.pragprog.com/titles/ruby3/app_socket.pdf).
+
 
 ### Socket Types
 - SOCK_RAW
@@ -114,7 +116,7 @@ IO                              # The basis for all input and output in Ruby
 - PF_UNSPEC
 - PF_XTP
 
-
+### Socket options
 
 ## TCP Socket
 
