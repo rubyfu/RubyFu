@@ -195,6 +195,22 @@ Socket.new(domain, socktype [, protocol])
                  `----->------>------->----`
 ```
 
+### General Socket usage
+
+#### Get List of local IPaddreses 
+
+```ruby
+require 'socket'
+Socket.ip_address_list
+```
+
+#### Get Hostname
+```ruby
+Socket.gethostname
+```
+
+
+
 ### TCP Server
 
 Here we'll represent an absolute TCP server. This server will access connect from one client and send a message to it once connected then close the client and server connection 
