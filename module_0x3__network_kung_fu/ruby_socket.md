@@ -17,20 +17,103 @@ IO                              # The basis for all input and output in Ruby
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
 
-### Socket Domains 
-- AF_LOCAL	(UNIX)
-- AF_INET(IPv4)  
-- AF_INET6(IPv6)
-
 ### Socket Types
 - SOCK_RAW
-- SOCK_DRAM   
-- SOCK_STREAM (TCP)
+- SOCK_PACKET
+- SOCK_STREAM
+- SOCK_DRAM
+- SOCK_RDM
+- SOCK_SEQPACKET
+
+
+### Address Families(Socket Domains)
+- AF_APPLETALK
+- AF_ATM
+- AF_AX25
+- AF_CCITT
+- AF_CHAOS
+- AF_CNT
+- AF_COIP
+- AF_DATAKIT
+- AF_DEC
+- AF_DLI
+- AF_E164
+- AF_ECMA
+- AF_HYLINK
+- AF_IMPLINK
+- AF_INET(IPv4)  
+- AF_INET6(IPv6)
+- AF_IPX
+- AF_ISDN
+- AF_ISO
+- AF_LAT
+- AF_LINK
+- AF_LOCAL(UNIX)
+- AF_MAX
+- AF_NATM
+- AF_NDRV
+- AF_NETBIOS
+- AF_NETGRAPH
+- AF_NS
+- AF_OSI
+- AF_PACKET
+- AF_PPP
+- AF_PUP
+- AF_ROUTE
+- AF_SIP
+- AF_SNA
+- AF_SYSTEM
+- AF_UNIX
+- AF_UNSPEC
 
 ### Socket Protocol
 - IPPROTO_SCTP
 - IPPROTO_TCP
 - IPPROTO_UDP
+
+### Protocol families
+- PF_APPLETALK
+- PF_ATM
+- PF_AX25
+- PF_CCITT
+- PF_CHAOS
+- PF_CNT
+- PF_COIP
+- PF_DATAKIT
+- PF_DEC
+- PF_DLI
+- PF_ECMA
+- PF_HYLINK
+- PF_IMPLINK
+- PF_INET
+- PF_INET6
+- PF_IPX
+- PF_ISDN
+- PF_ISO
+- PF_KEY
+- PF_LAT
+- PF_LINK
+- PF_LOCAL
+- PF_MAX
+- PF_NATM
+- PF_NDRV
+- PF_NETBIOS
+- PF_NETGRAPH
+- PF_NS
+- PF_OSI
+- PF_PACKET
+- PF_PIP
+- PF_PPP
+- PF_PUP
+- PF_ROUTE
+- PF_RTIP
+- PF_SIP
+- PF_SNA
+- PF_SYSTEM
+- PF_UNIX
+- PF_UNSPEC
+- PF_XTP
+
 
 
 ## TCP Socket
