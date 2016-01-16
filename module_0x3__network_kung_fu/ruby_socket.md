@@ -167,7 +167,9 @@ Socket.new(domain, socktype [, protocol])
 ```
 
 **domain(Address/Protocol Families):** like AF_INET, PF_PACKET, etc
+
 **socktype:** like SOCK_RAW, SOCK_STREAM
+
 **protocol: ** by default, it's `0`m it should be a protocol defined (we'll manipulate that later)
 
 
