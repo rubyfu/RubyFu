@@ -71,7 +71,7 @@ IO                              # The basis for all input and output in Ruby
 - IPPROTO_TCP
 - IPPROTO_UDP
 
-### Protocol families
+### Protocol Families
 - PF_APPLETALK
 - PF_ATM
 - PF_AX25
