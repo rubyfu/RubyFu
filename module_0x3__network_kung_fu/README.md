@@ -76,7 +76,7 @@ ruby ip_example.rb 24
 254
 ```
 
-### Check weather an IP address belong to a subnet or not.
+### Check whether an IP address belong to a subnet or not.
 
 `===` is an alias of include? which returns true if ip address belongs to the range otherwise it returns false.
 
