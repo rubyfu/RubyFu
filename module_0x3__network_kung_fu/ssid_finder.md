@@ -12,7 +12,7 @@ The main task was
 ```ruby
 require 'socket'
 
-# Open a Soccket as (very low level), (receive as a Raw), (for every packet)
+# Open a Soccket as (very low level), (receive as a Raw), (for every packet(ETH_P_ALL))
 socket = Socket.new(Socket::PF_PACKET, Socket::SOCK_RAW, 0x03_00)
 
 puts "\n\n"
