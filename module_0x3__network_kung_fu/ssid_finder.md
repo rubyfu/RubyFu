@@ -9,7 +9,7 @@ The main task was
 
 I went through all mentioned references below and also I had a look at `/usr/include/linux/if_ether.h` which gave me an idea about `ETH_P_ALL` meaning and more. I addition, `man socket` was really helpful to me.
 
-Note: Network interface must be set on monitoring mode, to do so (using airmon-ng)
+**Note:** Network interface must be set on monitoring mode, to do so (using airmon-ng)
 
 ```bash
 # Run you network car on monitoring mode
