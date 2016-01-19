@@ -7,7 +7,7 @@ The main task was
 - Receive every single packet no matter what protocol is it
 - Receive packets as raw to process it as far as I learn from wireshark 
 
-I went through all mentioned references below and also I had a look at `/usr/include/linux/if_ether.h` which gave me an idea about `ETH_P_ALL` meaning and more. I addition, `man socket` was really helpful to me.
+I went through all mentioned references below and also I had a look at `/usr/include/linux/if_ether.h` which gave me an idea about `ETH_P_ALL` meaning and more. In addition, `man socket` was really helpful to me.
 
 **Note: **The Network card interface must be set in monitoring mode, to do so (using airmon-ng)
 
