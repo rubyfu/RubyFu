@@ -33,6 +33,7 @@
    * [Packet manipulation](module_0x3__network_kung_fu/packet_manipulation.md)
        * [ARP Spoofing](module_0x3__network_kung_fu/arp_spoofing.md)
        * [DNS Spoofing](module_0x3__network_kung_fu/dns_spoofing.md)
+   * SSID Finder
 * [Module 0x4 | Web Kung Fu](module_0x4__web_kung_fu/README.md)
    * [SQL Injection Scanner](module_0x4__web_kung_fu/sql_injection_scanner.md)
    * [Databases](module_0x4__web_kung_fu/databases.md)
