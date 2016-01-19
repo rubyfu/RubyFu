@@ -41,7 +41,7 @@ end
 ```
 
 
-Here are useful references
+Here are **useful** references
 - [raw_socket.rb](https://gist.github.com/k-sone/8036832#file-raw_sock-rb)
 - [wifi_sniffer.rb](https://gist.github.com/amejiarosario/5420854)
 - [packetter.rb](https://github.com/lrks/packetter/blob/master/ruby/packetter.rb)
