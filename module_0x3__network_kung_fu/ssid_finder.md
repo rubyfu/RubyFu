@@ -7,7 +7,7 @@ The main task was
 - Receive every single packet no matter what protocol is it
 - Receive packets as raw to process it as far as I learn from wireshark 
 
-I went through all mentioned references below and also I had a look at `/usr/include/linux/if_ether.h` which gave me an idea about `ETH_P_ALL` meaning and more.
+I went through all mentioned references below and also I had a look at `/usr/include/linux/if_ether.h` which gave me an idea about `ETH_P_ALL` meaning and more. I addition, `man socket` was really helpful to me.
 
 ```ruby
 require 'socket'
@@ -40,6 +40,7 @@ while true
 end
 ```
 
+
 <br>
 **References** - *very useful!*
 - [raw_socket.rb](https://gist.github.com/k-sone/8036832#file-raw_sock-rb)
@@ -51,4 +52,3 @@ end
 - [Linux Kernel Networking – advanced topics (5)](http://www.haifux.org/lectures/217/netLec5.pdf)
 - [PF_PACKET Protocol Family](http://curioushq.blogspot.com/2011/05/pfpacket-protocol-family.html)
 - [Ruby Raw Socket for Windows](http://curioushq.blogspot.com/2011/05/ruby-raw-socket-for-windows.html)
-- man socket
