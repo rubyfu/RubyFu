@@ -1,10 +1,18 @@
 # SSID Finder
 
+It's good to know how you to play with lower level of Ruby socket and see how powerful it's. As I've experienced, it's matter of your knowledge about the protocol you're about to play with. I've tried to achieve this mission using `Packetfu` gem, but it's not protocol aware, yet. So I fired-up my wireshark and start inspect the wireless beacon structure and checked how to go even deeper with Ruby socket to more low level socket not just playing with TCP and UDP sockets. 
+
+The main task was 
+- Go very low level socket(Layer 2)
+- Receive every single packet no matter what protocol is it
+- Receive packets as raw to process it as far as I learn from wireshark 
+
+
 
 ```ruby
 require 'socket'
 
-# Open a Soccket as   (low level),   (receive as a Raw), (for every packet)
+# Open a Soccket as (very low level), (receive as a Raw), (for every packet)
 socket = Socket.new(Socket::PF_PACKET, Socket::SOCK_RAW, 0x03_00)
 
 puts "\n\n"
@@ -31,3 +39,13 @@ while true
   
 end
 ```
+
+
+Here are useful references
+- [raw_socket.rb](https://gist.github.com/k-sone/8036832#file-raw_sock-rb)
+- [wifi_sniffer.rb](https://gist.github.com/amejiarosario/5420854)
+- [Another git](https://gist.github.com/sam113101/aad031bcc50746956a29)
+- [Linux Kernel Networking – advanced topics (5)](http://www.haifux.org/lectures/217/netLec5.pdf)
+- [PF_PACKET Protocol Family](http://curioushq.blogspot.com/2011/05/pfpacket-protocol-family.html)
+- [Ruby Raw Socket for Windows](http://curioushq.blogspot.com/2011/05/ruby-raw-socket-for-windows.html)
+- man socket
