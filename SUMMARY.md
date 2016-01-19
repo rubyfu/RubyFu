@@ -20,7 +20,7 @@
    * [VirusTotal](module_0x2__system_kung_fu/virustotal.md)
 * [Module 0x3 | Network Kung Fu](module_0x3__network_kung_fu/README.md)
    * [Ruby Socket](module_0x3__network_kung_fu/ruby_socket.md)
-   * SSID Finder
+   * [SSID Finder](module_0x3__network_kung_fu/ssid_finder.md)
    * [FTP](module_0x3__network_kung_fu/ftp.md)
    * [SSH](module_0x3__network_kung_fu/ssh.md)
    * [Email](module_0x2__system_kung_fu/email.md)
