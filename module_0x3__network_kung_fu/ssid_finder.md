@@ -44,6 +44,7 @@ end
 Here are useful references
 - [raw_socket.rb](https://gist.github.com/k-sone/8036832#file-raw_sock-rb)
 - [wifi_sniffer.rb](https://gist.github.com/amejiarosario/5420854)
+- [packetter.rb](https://github.com/lrks/packetter/blob/master/ruby/packetter.rb)
 - [Another git](https://gist.github.com/sam113101/aad031bcc50746956a29)
 - [Linux Kernel Networking – advanced topics (5)](http://www.haifux.org/lectures/217/netLec5.pdf)
 - [PF_PACKET Protocol Family](http://curioushq.blogspot.com/2011/05/pfpacket-protocol-family.html)
