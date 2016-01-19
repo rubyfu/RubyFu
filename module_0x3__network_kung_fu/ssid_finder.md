@@ -10,6 +10,7 @@ The main task was
 I went through all mentioned references below and also I had a look at `/usr/include/linux/if_ether.h` which gave me an idea about `ETH_P_ALL` meaning and more. I addition, `man socket` was really helpful to me.
 
 ```ruby
+#!/usr/bin/env ruby
 require 'socket'
 
 # Open a Soccket as (very low level), (receive as a Raw), (for every packet(ETH_P_ALL))
