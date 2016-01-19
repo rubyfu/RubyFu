@@ -20,6 +20,7 @@
    * [VirusTotal](module_0x2__system_kung_fu/virustotal.md)
 * [Module 0x3 | Network Kung Fu](module_0x3__network_kung_fu/README.md)
    * [Ruby Socket](module_0x3__network_kung_fu/ruby_socket.md)
+   * SSID Finder
    * [FTP](module_0x3__network_kung_fu/ftp.md)
    * [SSH](module_0x3__network_kung_fu/ssh.md)
    * [Email](module_0x2__system_kung_fu/email.md)
@@ -33,7 +34,6 @@
    * [Packet manipulation](module_0x3__network_kung_fu/packet_manipulation.md)
        * [ARP Spoofing](module_0x3__network_kung_fu/arp_spoofing.md)
        * [DNS Spoofing](module_0x3__network_kung_fu/dns_spoofing.md)
-   * SSID Finder
 * [Module 0x4 | Web Kung Fu](module_0x4__web_kung_fu/README.md)
    * [SQL Injection Scanner](module_0x4__web_kung_fu/sql_injection_scanner.md)
    * [Databases](module_0x4__web_kung_fu/databases.md)
