@@ -10,10 +10,7 @@
 
 
 **Module 0x3 | Network Kung Fu**
-- [ ] Complete/Fix the DNS spoofing last part
 - [ ] SMB scanner
-- [ ] Add more Network traffic analysis
-
 
 **Module 0x4 | Web Kung Fu**
 - [ ] Ruby 2 JavaScript 
