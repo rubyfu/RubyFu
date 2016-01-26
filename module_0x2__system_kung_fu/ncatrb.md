@@ -152,7 +152,15 @@ ncat = NetCat.new
 ncat.run(ARGV)
 ```
 
+- To listen 
+```
+ruby ncat.rb -lvp 443 
+```
 
+- To connect 
+```
+ruby ncat.rb -cv -r RHOST -p 443
+```
 
 
 
