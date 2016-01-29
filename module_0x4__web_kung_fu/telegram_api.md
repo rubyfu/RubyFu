@@ -30,6 +30,7 @@ end
 ```
 
 - Inline bots
+
 If you got that evil smile from above example, you may thinking about interacting with your bots [inline](https://core.telegram.org/bots/inline) to call/@mention your bots and request more action from the bot(s).
 
 ```ruby
