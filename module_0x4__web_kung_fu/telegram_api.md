@@ -51,3 +51,6 @@ bot.listen do |message|
 end
 ```
 
+There are more usage and documentation for the [gem](https://github.com/atipugin/telegram-bot-ruby) and the [API](https://core.telegram.org/bots), and you can show us your evil code, and you can pull it in Rubyfu! 
+
+
