@@ -1,8 +1,6 @@
 # Telegram API
 
-As we know that Telegram is a messaging app identifies users by their mobile number. Fortunately, Telegram has its own API -*Ruby has wrapper gem for* [*Telegram's Bot API*](https://core.telegram.org/bots/api)- to which allows you to Integrate with other services, create custom tools, build single- and multiplayer games, build social services, do virtually anything else; Do you smell any thing evil here? 
-
-Ruby has wrapper gem for [Telegram's Bot API](https://core.telegram.org/bots/api).
+As we know that Telegram is a messaging app identifies users by their mobile number. Fortunately, Telegram has its own API -*Ruby has wrapper gem for* [*Telegram's Bot API*](https://core.telegram.org/bots/api)- which allows you to Integrate with other services, create custom tools, build single- and multiplayer games, build social services, do virtually anything else; Do you smell any thing evil here? 
 
 - To install telegram-bot gem 
 ```
