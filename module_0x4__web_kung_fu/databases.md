@@ -113,8 +113,6 @@ mysql> exit
 ```
 
 
-
-
 Now, let's to connect to *rubyfu_db* database 
 ```ruby
 require 'active_record'  
@@ -323,8 +321,22 @@ end
 ```
 gem install tiny_tds activerecord-sqlserver-adapter
 ```
+<!--
+Let's connect
+```ruby
+require 'tiny_tds'
+require 'activerecord-sqlserver-adapter' 
 
-
+development:
+  adapter: sqlserver
+  mode: dblib
+  host: localhost
+  port: 1433
+  username: sa
+  password: P@ssw0rd
+  database: sharepoint_dev
+```
+-->
 
 
 
