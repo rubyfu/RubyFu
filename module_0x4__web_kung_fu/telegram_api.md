@@ -4,7 +4,7 @@ As we know that Telegram is a messaging app identifies users by their mobile num
 
 - To install telegram-bot gem 
 ```
-gem 'telegram-bot-ruby'
+gem install telegram-bot-ruby
 ```
 
 
