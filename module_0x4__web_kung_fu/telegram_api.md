@@ -28,3 +28,25 @@ Telegram::Bot::Client.run(token) do |bot|
   end
 end
 ```
+
+- Inline bots
+If you got that evil smile from above example, you may thinking about interacting with your bots [inline](https://core.telegram.org/bots/inline) to call/@mention your bots and request more action from the bot(s).
+
+```ruby
+require 'telegram/bot'
+
+bot.listen do |message|
+  case message
+  when Telegram::Bot::Types::InlineQuery
+    results = [
+      Telegram::Bot::Types::InlineQueryResultArticle
+        .new(id: 1, title: 'First article', message_text: 'Very interesting text goes here.'),
+      Telegram::Bot::Types::InlineQueryResultArticle
+        .new(id: 2, title: 'Second article', message_text: 'Another interesting text here.')
+    ]
+    bot.api.answer_inline_query(inline_query_id: message.id, results: results)
+  when Telegram::Bot::Types::Message
+    bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}!")
+  end
+end
+```
