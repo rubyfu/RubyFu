@@ -27,6 +27,7 @@
     * [Working with Ruby Threads][17]
     * [Ruby Cookbook][18]
     * [Learn Ruby The Hard Way][19]
+    * [AllRubyBooks][33]
 * **Sites, Topics and Articles**
     * [Rubymonk.com][20]
     * [Byte manipulation in ruby][21]
@@ -93,3 +94,4 @@
 [30]: https://devver.wordpress.com/2009/06/30/a-dozen-or-so-ways-to-start-sub-processes-in-ruby-part-1/
 [31]: https://devver.wordpress.com/2009/07/13/a-dozen-or-so-ways-to-start-sub-processes-in-ruby-part-2/
 [32]: https://devver.wordpress.com/2009/10/12/ruby-subprocesses-part_3/
+[33]: http://www.allrubybooks.com/
