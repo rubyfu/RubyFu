@@ -42,7 +42,7 @@
    * [Web Services and APIs](module_0x4__web_kung_fu/web_servcies_and_apis.md)
        * [Interacting with Web Services](module_0x4__web_kung_fu/web_services.md)
        * [Interacting with APIs](module_0x4__web_kung_fu/interacting_with_apis.md)
-           * Telegram API
+           * [Telegram API](module_0x4__web_kung_fu/telegram_api.md)
            * [WordPress API](module_0x4__web_kung_fu/wordpress_api.md)
            * [Twitter API](module_0x4__web_kung_fu/twitter_api.md)
    * [Ruby 2 JavaScript](module_0x4__web_kung_fu/ruby2javascript.md)
