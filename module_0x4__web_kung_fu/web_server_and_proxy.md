@@ -13,6 +13,7 @@ or
 ```ruby
 require 'webrick'
 server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => '/var/www/'
+# WEBrick::Daemon.start   # Stating WEBRick as a daemon
 server.start
 ```
 
