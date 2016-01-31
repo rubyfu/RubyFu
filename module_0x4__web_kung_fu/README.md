@@ -42,6 +42,32 @@ def send_sqli(query)
 end
 ```
 
+#### Simple Shorten URL extractor 
+
+**urlextractor.rb**
+```ruby
+#!/usr/bin/env ruby 
+require 'net/http'
+uri = ARGV[0]
+loop do 
+  puts uri
+  res = Net::HTTP.get_response URI uri
+  if !res['location'].nil?
+    uri = res['location']
+  else
+    break
+  end
+end
+```
+Run it
+```bash
+$ruby redirect.rb http://bit.ly/1JSs7vj
+http://bit.ly/1JSs7vj
+http://ow.ly/XLGfi
+https://tinyurl.com/hg69vgm
+http://rubyfu.net
+```
+
 ### Using Open-uri
 Here another way to do the same thing 
 ```ruby
