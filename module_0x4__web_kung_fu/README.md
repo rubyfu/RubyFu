@@ -42,7 +42,7 @@ def send_sqli(query)
 end
 ```
 
-#### Simple Shorten URL extractor 
+#### Simple Shortened URL extractor 
 
 **urlextractor.rb**
 ```ruby
@@ -67,6 +67,9 @@ http://ow.ly/XLGfi
 https://tinyurl.com/hg69vgm
 http://rubyfu.net
 ```
+
+Ok, what if I gave you this shortened url(`http://short-url.link/f2a`)? try the above script and tell me what's going-on
+
 
 ### Using Open-uri
 Here another way to do the same thing 
