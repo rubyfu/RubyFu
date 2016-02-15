@@ -85,7 +85,7 @@ Generally speaking, it's really a trivial task to convert `0x77d6b141` to `\x41\
 [0x77d6b141].pack('V')
 ```
 
-It happens that sometime you get an error because because of none Unicode string issue. To solve this issue, just force encoding to UTF-8 but most of the time you will not face this issue
+It happens that sometime you get an error because of none Unicode string issue. To solve this issue, just force encoding to UTF-8 but most of the time you will not face this issue
 
 ```ruby
 [0x77d6b141].pack('V').force_encoding("UTF-8")
