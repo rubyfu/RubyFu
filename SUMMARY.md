@@ -50,6 +50,7 @@
 * [Module 0x5 | Exploitation Kung Fu](module_0x5__exploitation_kung_fu/README.md)
    * [Fuzzer](module_0x5__exploitation_kung_fu/fuzzer.md)
    * [Calling Windows APIs from ruby](module_0x5__exploitation_kung_fu/calling_windows_apis_from_ruby.md)
+   * Call Windows APIs
    * [Metasploit](module_0x5__exploitation_kung_fu/metasploit.md)
        * [Auxiliary module](module_0x5__exploitation_kung_fu/auxiliary_module.md)
        * [Exploit module](module_0x5__exploitation_kung_fu/exploit_module.md)
@@ -58,7 +59,6 @@
            * [Meterpreter Scripting](module_0x5__exploitation_kung_fu/meterpreter_scripting.md)
            * [Railgun API Extension](module_0x5__exploitation_kung_fu/railgun_api_extension.md)
    * [metasm](module_0x5__exploitation_kung_fu/metasm.md)
-   * Call Windows APIs
 * [Module 0x6 | Forensic Kung Fu](module_0x6__forensic/README.md)
    * [Windows Forensic](module_0x6__forensic/windows_forensic.md)
    * [Android Forensic](module_0x6__forensic/android_forensic.md)
