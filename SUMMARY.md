@@ -49,7 +49,7 @@
    * [Web Server and Proxy](module_0x4__web_kung_fu/web_server_and_proxy.md)
 * [Module 0x5 | Exploitation Kung Fu](module_0x5__exploitation_kung_fu/README.md)
    * [Fuzzer](module_0x5__exploitation_kung_fu/fuzzer.md)
-   * [Call Windows APIs](module_0x5__exploitation_kung_fu/call_windows_apis.md)
+   * [Calling Windows APIs](module_0x5__exploitation_kung_fu/call_windows_apis.md)
    * [Metasploit](module_0x5__exploitation_kung_fu/metasploit.md)
        * [Auxiliary module](module_0x5__exploitation_kung_fu/auxiliary_module.md)
        * [Exploit module](module_0x5__exploitation_kung_fu/exploit_module.md)
