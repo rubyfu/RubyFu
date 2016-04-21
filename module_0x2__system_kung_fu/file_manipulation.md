@@ -133,7 +133,7 @@ return
 
 
 ## Finding weak file permissions 
-One of the important task to do post exploitation is find weak executable file permissions which might be executed buy root/administrator user trying to elevate our privileges on the system. 
+One of the important task to do post exploitation is find weak executable file permissions which might be executed buy root/administrator user trying to elevate our privileges on the system. At the same time, our scripts must be applicable for all systems 
 
 **find777.rb**
 ```ruby
@@ -143,19 +143,25 @@ One of the important task to do post exploitation is find weak executable file p
 require 'find'
 
 path = ARGV[0]
-search = Find.find(path)    # Finds all directories, sub-directories, files and hidden
+
+
+search = Find.find(path)
 
 def wx_file(search)
-  # Select all files that are executable and writable
   search.select do |file|
-    file if File.file?(file) && File.executable?(file) && File.writable?(file)
+    File.file?(file) && File.executable?(file) && File.writable?(file)
   end  
 end
 
 puts wx_file search
 ```
 
-
+You can search for read, write, execute permissions, so your iteration block will be like
+```ruby
+  search.select do |file|
+    File.stat(file).mode.to_s(8)[-3..-1].to_i == 777
+  end  
+```
 
 
 
