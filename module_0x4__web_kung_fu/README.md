@@ -200,7 +200,10 @@ puts "Status code: " + response.code
 puts "Response body: " + response.body
 
 ```
-
+You can use `body` method instead of `set_form_data` to avoid auto-encoding for any reason
+```ruby
+request.body = "name=My title is here&textarea=My grate message here.&radiobutton=middleun&checkedbox=pizza&checkedboxhamburgers&checkedbox=mashed potatoes&selectitem=hamburgers&submitbutton=Do it!"
+```
 
 ## Dealing with Cookies
 Some times you need to deal with some actions after authentication. Ideally, it's all about cookies.
