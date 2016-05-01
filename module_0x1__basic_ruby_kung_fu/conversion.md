@@ -164,6 +164,7 @@ Returns
 
 ## En/Decode Unicode Escape
 
+**Hexdecimal unicode escape**
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
 ```
@@ -171,6 +172,13 @@ Or using unpack
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
 ```
+
+**Octal unicode escape**
+For octal escape is exact the same except we convert the string to octal instead of hex
+```ruby
+"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
+```
+
 
 
 ## En/Decode SAML String
