@@ -109,6 +109,7 @@ shorter way
 ```
 
 **Octal unicode escape**
+
 For octal escape is exact the same except we convert the string to octal instead of hexadecimal
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
