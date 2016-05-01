@@ -1,5 +1,5 @@
 # Conversion
-
+String conversion and/or encoding is an important part of exploitation and firewall bypass
 ## Convert String to Hex
 
 If no prefix is needed, you just do the following 
