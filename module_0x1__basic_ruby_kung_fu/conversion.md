@@ -162,6 +162,17 @@ Returns
 "><script>alert("Rubyfu!")</script>
 ```
 
+## En/Decode Unicode Escape
+
+```ruby
+"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
+```
+Or using unpack 
+```ruby
+"Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
+```
+
+
 ## En/Decode SAML String
 
 
