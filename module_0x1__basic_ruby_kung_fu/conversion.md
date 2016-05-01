@@ -176,7 +176,7 @@ Or using unpack
 **Octal unicode escape**
 For octal escape is exact the same except we convert the string to octal instead of hex
 ```ruby
-"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
+"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
 ```
 
 
