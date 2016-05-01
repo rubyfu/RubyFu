@@ -172,6 +172,10 @@ Or using unpack
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
 ```
+shorter way
+```ruby
+"Rubyfu".unpack('U*').map{ |i| "\\u00%x" % i }.join
+```
 
 **Octal unicode escape**
 For octal escape is exact the same except we convert the string to octal instead of hex
