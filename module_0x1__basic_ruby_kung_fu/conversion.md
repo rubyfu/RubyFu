@@ -95,7 +95,7 @@ If you have ROP chain then it's not decent to apply this each time so you can us
 
 ## Convert to Unicode Escape
 
-**Hexdecimal unicode escape**
+**Hexadecimal unicode escape**
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
 ```
@@ -109,7 +109,7 @@ shorter way
 ```
 
 **Octal unicode escape**
-For octal escape is exact the same except we convert the string to octal instead of hex
+For octal escape is exact the same except we convert the string to octal instead of hexadecimal
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
 ```
