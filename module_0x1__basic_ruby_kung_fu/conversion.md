@@ -93,6 +93,27 @@ It happens that sometime you get an error because of none Unicode string issue. 
 
 If you have ROP chain then it's not decent to apply this each time so you can use the first way and append **(**`# -*- coding: binary -*-`**)** at top of your exploit file.
 
+## Convert to Unicode Escape
+
+**Hexdecimal unicode escape**
+```ruby
+"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
+```
+Or using unpack 
+```ruby
+"Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
+```
+shorter way
+```ruby
+"Rubyfu".unpack('U*').map{ |i| "\\u00%x" % i }.join
+```
+
+**Octal unicode escape**
+For octal escape is exact the same except we convert the string to octal instead of hex
+```ruby
+"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
+```
+
 
 ## En/Decode base-64 String
 We'll present it by many ways
@@ -161,29 +182,6 @@ Returns
 ```
 "><script>alert("Rubyfu!")</script>
 ```
-
-## En/Decode Unicode Escape
-
-**Hexdecimal unicode escape**
-```ruby
-"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
-```
-Or using unpack 
-```ruby
-"Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
-```
-shorter way
-```ruby
-"Rubyfu".unpack('U*').map{ |i| "\\u00%x" % i }.join
-```
-
-**Octal unicode escape**
-For octal escape is exact the same except we convert the string to octal instead of hex
-```ruby
-"Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
-```
-
-
 
 ## En/Decode SAML String
 
