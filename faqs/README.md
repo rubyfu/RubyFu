@@ -55,6 +55,9 @@ You can contact us on one of the following channels
 
 
 
+
+
+
 [1]: https://github.com/rubyfu/RubyFu/issues
 [2]: http://rubyfu.net
 [3]: https://twitter.com/Rubyfu
