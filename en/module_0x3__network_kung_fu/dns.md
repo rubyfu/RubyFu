@@ -1,6 +1,16 @@
 # DNS 
 
-## DNS 
+## DNS lookup 
+### Forward DNS lookup (Host to IP)
+```ruby
+
+```
+
+### Reverse DNS lookup (IP to Host)
+```ruby
+
+```
+
 
 ## DNS Data Exfiltration 
 DNS out-band connection is usually allowed in local networks, which is the major benefits of using DNS to transfer data to external server. 
