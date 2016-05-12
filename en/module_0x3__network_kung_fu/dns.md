@@ -3,12 +3,14 @@
 ## DNS lookup 
 ### Forward DNS lookup (Host to IP)
 ```ruby
-
+require 'resolv'
+Resolv.getaddresses "rubyfu.net"
 ```
 
 ### Reverse DNS lookup (IP to Host)
 ```ruby
-
+require 'resolv'
+Resolv.getnames "23.23.122.48"
 ```
 
 
