@@ -1,5 +1,33 @@
 # DNS 
 
+## DNS lookup 
+### Forward DNS lookup (Host to IP)
+```ruby
+require 'resolv'
+Resolv.getaddresses "rubyfu.net"
+```
+
+Returns array of all IPs
+```
+["23.23.122.48", "107.20.161.48", "174.129.41.187"]
+```
+
+or use `Resolv.getaddress` to get one address only
+
+
+### Reverse DNS lookup (IP to Host)
+```ruby
+require 'resolv'
+Resolv.getnames "23.23.122.48"
+```
+
+Returns array of all hostnames, if PTR is assigned 
+```
+["ec2-174-129-41-187.compute-1.amazonaws.com"]
+```
+
+or use `Resolv.name` to get one name only
+
 
 ## DNS Data Exfiltration 
 DNS out-band connection is usually allowed in local networks, which is the major benefits of using DNS to transfer data to external server. 
