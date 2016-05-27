@@ -1,0 +1,6 @@
+logs
+*.log
+pids
+*.pid
+*.seed
+node_modules
