@@ -1,6 +1,6 @@
 # Conversion
 String conversion and/or encoding is an important part of exploitation and firewall bypass
-## Convert String to Hex
+## Convert String/Binary to Hex
 
 If no prefix is needed, you just do the following 
 
@@ -41,6 +41,10 @@ or
 ```
 or
 ```ruby
+"ABCD".each_byte.map {|b| b.to_s(16)}.join
+```
+or
+```ruby
 "ABCD".each_char.map {|c| '\x'+(c.unpack('H*')[0])}.join
 ```
 or
@@ -57,10 +61,15 @@ Returns
 
 
 
-## Convert Hex to String
+## Convert Hex to String/Binary
 ```ruby
 ["41424344"].pack('H*')
 ```
+or
+```ruby
+"41424344".map { |x| x.hex.chr }.join
+```
+
 Return
 ```
 ABCD
