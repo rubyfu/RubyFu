@@ -87,7 +87,7 @@ in-case of binary that out of `.chr` range. For example you may need to convert 
 >> ip.split(".").map {|c| '\x%02x' % c.to_i}.join 
 => "\\xc0\\xa8\\x64\\x0a"
 ```
-As you can see, Ruby reads returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to inter this value(with double-quotes) `"\\xc0\\xa8\\x64\\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which was should pass to the raw socket not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is ruby escapes the backslash(`\`). 
+As you can see, Ruby reads returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to inter this value(with double-quotes) `"\xc0\xa8\x64\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which what should be passed to the raw socket not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is ruby escapes the backslash(`\`). 
 
 To solve this issue, use pack to convert integers to  8-bit unsigned (unsigned char)
 ```ruby
