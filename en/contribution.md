@@ -78,6 +78,15 @@ Use triple ticks to highlight your command-line. ex.
     ls
     ``` 
 
+### Contributing with Translation 
+To translate Rubyfu, make sure to 
+- Create a new brach for your translation 
+- add a sub-directory under Rubyfu's root directory with the name of the language will translate to. 
+- Update `LANGS.md` file 
+- Copy and paste the content of `en/` folder to your language folder, then translate it.
+- Create a Pull Request (PR)
+
+Please make sure that mark the repository as **Watch** to make your translated efforts uptodate 
 
 ### General Contribution
 General contribution might be topic requests, proofreading, spilling, book organization and style. All these contributions are welcome however has to be discussed on [Rubyfu issues][7] especially things regarding to topics and/or book organization and styling. At the same time don't hesitate to report even single word observation about the book, it's for you at the end of the day.
