@@ -161,7 +161,7 @@ Till now we successfully finished [ARP Spoofing](module_0x3__network_kung_fu/arp
     * This will let you see what flags are being set.
 * From here, we just calculate the checksum for the UDP packet and send it out to the target's machine.
 
-| ![Wireshark](dns_spoofing_Wireshark2.png) |
+| ![Wireshark](dns_spoofing_wireshark1.png) |
 |:---------------:|
 | **Figure 2.** DNS Response Payload  |
 
