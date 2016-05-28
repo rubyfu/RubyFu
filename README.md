@@ -1,5 +1,5 @@
-# Test Muli-language book
+# Rubyfu 
 
-This is a test for building a multi-language book for Rubyfu soon
 ![](rubyfu.png)
+***Rubyfu, where Ruby goes evil!***
 
