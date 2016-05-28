@@ -1,7 +1,7 @@
 # Contributors
 
 
-<center>![](../images/other/Ruby_Loves_Us.jpg)
+<center>![](Ruby_Loves_Us.jpg)
 
 
 <center>**Big love to those people who support this book by any meaning.**
