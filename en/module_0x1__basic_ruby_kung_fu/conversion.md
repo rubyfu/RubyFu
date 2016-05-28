@@ -67,13 +67,34 @@ Returns
 ```
 or
 ```ruby
-"41424344".map { |x| x.hex.chr }.join
+"41424344".scan(/../).map { |x| x.hex.chr }.join
+```
+or for raw socket
+```ruby
+"41424344".scan(/../).map(&:hex).pack("C*")
 ```
 
 Return
 ```
 ABCD
 ```
+
+in-case of binary that out of `.chr` range. For example you may need to convert IP-address to hex raw then send it through socket. The case of just converting it to hex would not work for your 
+
+```ruby
+>> ip
+=> "192.168.100.10"
+>> ip.split(".").map {|c| '\x%02x' % c.to_i}.join 
+=> "\\xc0\\xa8\\x64\\x0a"
+```
+As you can see, Ruby reads returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to inter this value(with double-quotes) `"\\xc0\\xa8\\x64\\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which was should pass to the raw socket not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is ruby escapes the backslash(`\`). 
+
+To solve this issue, use pack to convert integers to  8-bit unsigned (unsigned char)
+```ruby
+ip.split(".").map(&:to_i).pack("C*")
+
+```
+
 
 **Note about hex:** Sometimes you might face a none printable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at top of your file to fix any interpretation issue.
 
