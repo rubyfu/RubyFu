@@ -1,6 +1,6 @@
 # RubyFu
 
-## <cneter>If you see this page that means that Rubyfu is not begein translated to this language yet!</cneter>
+## <cneter>Rubyfu is not begein translated to this language yet!</cneter>
 
 Please consider to translate it to your language or spread Rubyfu to friends that might be interested to translate.
 
