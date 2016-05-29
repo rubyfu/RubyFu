@@ -14,9 +14,9 @@ Please consider to translate it to your language or spread Rubyfu to friends tha
 7. Update `LANGS.md` file to add your Language name and it's directoy 
 8. Translate!
 9. Commit your changes 
-9.1. `git commit add *`
-9.2. `git commit -m "My translation to french"`
-9.3. `git push origin rubyfu2french`
+   9.1. `git commit add *`
+   9.2. `git commit -m "My translation to french"`
+   9.3. `git push origin rubyfu2french`
 10. Create a new Pull Request (PR)
 
 
