@@ -20,4 +20,4 @@ Please consider to translate it to your language or spread Rubyfu to friends tha
 10. Create a new Pull Request (PR)
 
 
-## <cneter>Than you for translating Rubyfu to your awesome language!</cneter>
+## <cneter>Thank you for translating Rubyfu to your awesome language!
