@@ -11,7 +11,7 @@ Please consider to translate it to your language or spread Rubyfu to friends tha
 4. Create a new branch (`git checkout -b rubyfu2french`)
 5. Create a new directory in Rubyfu root directory with your language shortname (eg. `mkdir fr`)
 6. Copy all `en/` content and paste it in your new directory.
-7. Update `LANGS.md` file to add your Language name and it's directoy.
+7. Update `LANGS.md` file to add your Language name and it's directoy. (eg. `* [English](en)`)
 8. Translate!
 9. Commit your changes 
       - `git commit add *`
