@@ -13,7 +13,6 @@
 * **Beginner**
     * [Ruby Tutorials - Tutorialspoint][8]
     * [Ruby programming Tutorials - Simple Free videos][9]
-    * [Ruby Programming - Commercial Training][10]
     * [Lynda: Ruby Essential Training - Commercial Training][11]
     * [Ruby from InfiniteSkills - Commercial Training][12]
     * [Quick Ruby syntax Cheat sheet][13]
