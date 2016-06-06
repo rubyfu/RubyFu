@@ -37,20 +37,21 @@
     * [RubySec - Ruby Security Advisory][28]
     * A dozen (or so) ways to start sub-processes in Ruby: [Part 1][30], [Part 2][31], [Part 3][32]
 * **Hacking Tools built with ruby**
-    * Metasploit framework - Exploitation framework
-    * Beef framework - XSS framework
-    * Arachni - Web Application scanner framework
-    * Metasm - Assembly manipulation suite
-    * WPscan - WordPress vulnerability scanner
-    * BufferOverflow kit - Exploitation tool Kit
-    * HTTP Traceroute
-    * CeWL - Custom Word List generator
-    * Roini - Vulnerability research and exploit development framework
-    * Idb - is a tool to simplify some common tasks for iOS pentesting and research
-    * Bettercap - Extensible MitM tool and framework
-    * WATOBO - THE Web Application Security Toolbox
-    * Intrigue.io - Open Source project, discovering attack surface through OSINT
-    * OhNo - The Evil Image Builder & Meta Manipulator
+    * Metasploit framework - Exploitation framework [ [link](https://github.com/rapid7/metasploit-framework) ]
+    * Beef framework - XSS framework [ [link](http://beefproject.com/) ]
+    * Arachni - Web Application scanner framework [ [link](http://www.arachni-scanner.com/) ]
+    * Metasm - Assembly manipulation suite [ [link](https://github.com/jjyg/metasm) ]
+    * WPscan - WordPress vulnerability scanner [ [link](http://wpscan.org) ]
+    * WPXF - Wordpress Exploit Framework [ [link](http://www.getwpxf.com/) ]
+    * BufferOverflow kit - Exploitation tool Kit [ [link](https://github.com/KINGSABRI/BufferOverflow-Kit) ]
+    * HTTP Traceroute [ [link](https://digi.ninja/projects/http_traceroute.php) ]
+    * CeWL - Custom Word List generator [ [link](https://digi.ninja/projects/cewl.php) ]
+    * Roini - Vulnerability research and exploit development framework [ link ]
+    * Idb - Simplifys some common tasks for iOS pentesting & research [ [link](https://github.com/dmayer/idb) ]
+    * Bettercap - Extensible MitM tool and framework [ [link](https://www.bettercap.org/) ]
+    * WATOBO - The Web Application Security Toolbox [ [link](http://watobo.sourceforge.net/) ]
+    * Intrigue.io - Open Source project, discovering attack surface through OSINT [ [link](https://intrigue.io/) ]
+    * OhNo - The Evil Image Builder & Meta Manipulator [ [link](https://github.com/Hood3dRob1n/OhNo) ]
     * **[**ADD YOUR RUBY HACKING TOOL HERE!**]**
 
 
