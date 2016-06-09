@@ -26,7 +26,7 @@ Note: This does not consider the little endian format, for that there is extra c
 #### Generate all hexadecimal values from `\x00` to `\xff`
 
 ```ruby
-puts (0..255).map {|b| ('\x%X' % b)}
+puts (0..255).map {|b| ('\x%02X' % b)}
 ```
 > **Notes:**
 
