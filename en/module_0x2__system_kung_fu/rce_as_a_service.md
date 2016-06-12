@@ -86,4 +86,6 @@ DRb.start_service("druby://0.0.0.0:8080", []).thread.join
 
 I recommend to use the first code in case Metasploit is not available.
 
-Read more [technical details](http://blog.recurity-labs.com/archives/2011/05/12/druby_for_penetration_testers/) about the Metasploit module "drb_remote_codeexe"
+**References** 
+- [Metasploit technical details](http://blog.recurity-labs.com/archives/2011/05/12/druby_for_penetration_testers/)
+- [dRuby book](https://pragprog.com/book/sidruby/the-druby-book)
