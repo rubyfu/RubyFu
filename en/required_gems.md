@@ -7,6 +7,8 @@ Note that you don't need to install it all unless you need it.
 - Pry
 ```
 gem install pry
+gem install pry-doc
+gem install pry-byebug
 ```
 To run pry with best appearance
 ```bash
