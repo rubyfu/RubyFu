@@ -34,7 +34,7 @@ gem install ftpd
 
 ```ruby
 #
-# CVE-2016-4971 | The Evil FTPd server
+# Pure Ruby FTP server
 # KING SABRI | @KINGSABRI
 # 
 require 'ftpd'
@@ -65,12 +65,13 @@ class FTPevil
   end
   
   def configure_server
-    @server.server_name = "Wget Exploit"
+    @server.server_name = "Rubyfu FTP Server"
     @server.interface = "0.0.0.0"
     @server.port = 21
   end
   
   def print_connection_info
+    puts "Servername: #{@server.server_name}"
     puts "Interface: #{@server.interface}"
     puts "Port: #{@server.port}"
     puts "Directory: #{@driver.path}"
