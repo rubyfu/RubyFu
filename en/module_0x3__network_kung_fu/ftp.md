@@ -107,7 +107,7 @@ ruby ftpd.rb .
 
 Interface: 0.0.0.0
 Port: 21
-Directory: /home/pentest/exploitation/CVE-in-Ruby/CVE-2016-4971
+Directory: /tmp/ftp-share
 User: 
 Pass: 
 PID: 2366
