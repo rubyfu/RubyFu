@@ -1,5 +1,5 @@
 # SNMP Enumeration
-- Install [ruby-snmp][1]
+- Install ruby-snmp
 ```
 gem install snmp
 ```
@@ -14,7 +14,7 @@ require 'snmp'
 # Connect to SNMP server
 manager = SNMP::Manager.new(:host => '192.168.0.17')
 
-# General info 
+# General info
 puts "SNMP Version: " + manager.config[:version]
 puts "Community: " + manager.config[:community]
 puts "Write Community: " + manager.config[:WriteCommunity]
@@ -33,7 +33,7 @@ end
 
 ```
 
-> Note: the OID names are case sensitive 
+> Note: the OID names are case sensitive
 
 
 ## Set Request
@@ -49,7 +49,7 @@ manager = SNMP::Manager.new(:host => '192.168.0.17')
 varbind = VarBind.new("1.3.6.1.2.1.1.5.0", OctetString.new("Your System Got Hacked"))
 # Send your request with varbind our settings
 manager.set(varbind)
-# Check our changes 
+# Check our changes
 manager.get("sysName.0").each_varbind.map {|vb| vb.value.to_s}
 manager.close
 ```
