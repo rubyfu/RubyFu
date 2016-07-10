@@ -1,8 +1,8 @@
 # Telegram API
 
-As we know that Telegram is a messaging app identifies users by their mobile number. Fortunately, Telegram has its own API -*Ruby has a wrapper gem for* [*Telegram's Bot API*](https://core.telegram.org/bots/api) called [*telegram-bot-ruby*](https://github.com/atipugin/telegram-bot-ruby) - which allows you to Integrate with other services, create custom tools, build single- and multiplayer games, build social services, do virtually anything else; Do you smell anything evil here? 
+As we know that Telegram is a messaging app identifies users by their mobile number. Fortunately, Telegram has its own API -*Ruby has a wrapper gem for* [*Telegram's Bot API*](https://core.telegram.org/bots/api) called [*telegram-bot-ruby*](https://github.com/atipugin/telegram-bot-ruby) - which allows you to Integrate with other services, create custom tools, build single- and multiplayer games, build social services, do virtually anything else; Do you smell anything evil here?
 
-- To install telegram-bot gem 
+- Install telegram-bot gem 
 ```
 gem install telegram-bot-ruby
 ```
@@ -10,7 +10,7 @@ gem install telegram-bot-ruby
 
 - Basic usage
 
-As many APIs, you have to get a [token](https://core.telegram.org/bots#botfather) to deal with your bot. Here a basic usage 
+As many APIs, you have to get a [token](https://core.telegram.org/bots#botfather) to deal with your bot. Here a basic usage
 
 ```ruby
 require 'telegram/bot'
@@ -54,6 +54,6 @@ end
 
 A good topic about Quickly Create a Telegram Bot in Ruby can be found [here](http://www.sitepoint.com/quickly-create-a-telegram-bot-in-ruby/).
 
-There are more usage and documentation for the [gem](https://github.com/atipugin/telegram-bot-ruby) and the [API](https://core.telegram.org/bots), and you can show us your evil code, and you can pull it in Rubyfu! 
+There are more usage and documentation for the [gem](https://github.com/atipugin/telegram-bot-ruby) and the [API](https://core.telegram.org/bots), and you can show us your evil code, and you can pull it in Rubyfu!
 
 

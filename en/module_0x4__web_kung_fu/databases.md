@@ -1,9 +1,9 @@
 # Databases
 Dealing with database is a required knowledge in web testing and here we will go though most known databases and how to deal with it in ruby.
 
-## SQLite 
+## SQLite
 
-- To install sqlite3 gem 
+- Install sqlite3 gem
 ```
 gem install sqlite3
 ```
@@ -21,7 +21,7 @@ require "sqlite3"
 db = SQLite3::Database.new "rubyfu.db"
 
 # Create a table
-rows = db.execute <<-SQL 
+rows = db.execute <<-SQL
   CREATE TABLE attackers (
    id   INTEGER PRIMARY KEY   AUTOINCREMENT,
    name TEXT    NOT NULL,
@@ -35,7 +35,7 @@ SQL
   'LulzSec'      => "192.168.0.14",
   'Lizard Squad' => "192.168.0.253"
 }.each do |attacker, ip|
-  db.execute("INSERT INTO attackers (name, ip) 
+  db.execute("INSERT INTO attackers (name, ip)
 	          VALUES (?, ?)", [attacker, ip])
 end
 
@@ -48,15 +48,15 @@ db.execute  "SELECT * FROM sqlite_master where type='table'"
 
 
 ## Active Record
-- To install ActiveRecord 
+- Install ActiveRecord gem
 ```
-gem install activerecord 
+gem install activerecord
 ```
 
 ### MySQL database
-- To install MySQL adapter
+- Install MySQL adapter gem
 ```
-gem install mysql 
+gem install mysql
 ```
 
 Login to mysql console and create database *rubyfu_db* and table *attackers*
@@ -68,18 +68,18 @@ grant all on rubyfu_db.* to 'root'@'localhost';
 
 create table attackers (
   id int not null auto_increment,
-  name varchar(100) not null, 
-  ip text not null,  
-  primary key (id)  
-);  
+  name varchar(100) not null,
+  ip text not null,
+  primary key (id)
+);
 
 exit
 ```
 
-The outputs look like following 
+The outputs look like following
 ```
 mysql -u root -p
-Enter password: 
+Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 41
 Server version: 5.5.44-0ubuntu0.14.04.1 (Ubuntu)
@@ -96,36 +96,36 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql> create database rubyfu_db;
 Query OK, 1 row affected (0.00 sec)
 
-mysql> grant all on rubyfu_db.* to 'root'@'localhost'; 
+mysql> grant all on rubyfu_db.* to 'root'@'localhost';
 Query OK, 0 rows affected (0.00 sec)
 
 mysql> use rubyfu_db;
 Database changed
 mysql> create table attackers (
     ->   id int not null auto_increment,
-    ->   name varchar(100) not null, 
-    ->   ip text not null,  
-    ->   primary key (id)  
-    -> );  
+    ->   name varchar(100) not null,
+    ->   ip text not null,
+    ->   primary key (id)
+    -> );
 Query OK, 0 rows affected (0.01 sec)
 
 mysql> exit
 ```
 
 
-Now, let's to connect to *rubyfu_db* database 
+Now, let's to connect to *rubyfu_db* database
 ```ruby
-require 'active_record'  
-ActiveRecord::Base.establish_connection(  
+require 'active_record'
+ActiveRecord::Base.establish_connection(
 :adapter  => "mysql",
 :username => "root",
 :password => "root",
-:host     => "localhost",  
-:database => "rubyfu_db"  
-)  
-  
-class Attackers < ActiveRecord::Base  
-end  
+:host     => "localhost",
+:database => "rubyfu_db"
+)
+
+class Attackers < ActiveRecord::Base
+end
 ```
 - Using the ActiveRecord library, available as the activerecord gem.
 - Using the ActiveRecord adapter namely *mysql*
@@ -133,13 +133,13 @@ end
 - Creating a class called *Attackers* following the conventions mentioned above (attacker)
 
 ```ruby
-Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
-Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
-Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")  
+Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")
+Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")
+Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")
 ```
 You will observe that ActiveRecord examines the database tables themselves to find out which columns are available. This is how we were able to use accessor methods for participant.name without explicitly defining them: we defined them in the database, and ActiveRecord picked them up.
 
-You can find the item 
+You can find the item
 - by id
 ```
 Attackers.find(1)
@@ -148,7 +148,7 @@ Attackers.find(1)
 ```
 Attackers.find_by(name: "Anonymous")
 ```
-Result 
+Result
 ```ruby
 #<Attackers:0x000000010a6ad0 id: 1, name: "Anonymous", ip: "192.168.0.7">
 ```
@@ -166,36 +166,36 @@ If you want to delete an item from the database, you can use the destroy (Delete
 
 
 ```ruby
-Attackers.find(2).destroy  
+Attackers.find(2).destroy
 ```
 
-So to write a complete script, 
+So to write a complete script,
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 # ActiveRecord with MySQL
 #
-require 'active_record'  
+require 'active_record'
 
 # Connect to database
 ActiveRecord::Base.establish_connection(
                                         :adapter  => "mysql",
                                         :username => "root",
                                         :password => "root",
-                                        :host     => "localhost",  
-                                        :database => "rubyfu_db"  
-                                       )  
+                                        :host     => "localhost",
+                                        :database => "rubyfu_db"
+                                       )
 
-# Create Active Record Model for the table 
-class Attackers < ActiveRecord::Base  
+# Create Active Record Model for the table
+class Attackers < ActiveRecord::Base
 end
 
-# Create New Entries to the table 
-Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")  
-Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")  
+# Create New Entries to the table
+Attackers.create(:name => 'Anonymous',    :ip => "192.168.0.7")
+Attackers.create(:name => 'LulzSec',      :ip => "192.168.0.14")
 Attackers.create(:name => 'Lizard Squad', :ip => "192.168.0.253")
 
-# Interact with table items 
+# Interact with table items
 attacker = Attackers.find(3)
 attacker.id
 attacker.name
@@ -210,14 +210,14 @@ Attackers.find(2).destroy
 
 - Prerequisites
 
-in order to make [ruby-oci8](http://www.rubydoc.info/gems/ruby-oci8/file/docs/install-full-client.md) -which is the main dependency for oracle driver- works you've to do some extra steps: 
-- Download links for [Linux](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) | [Windows](http://www.oracle.com/technetwork/topics/winsoft-085727.html) | [Mac](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html) 
+in order to make [ruby-oci8](http://www.rubydoc.info/gems/ruby-oci8/file/docs/install-full-client.md) -which is the main dependency for oracle driver- works you've to do some extra steps:
+- Download links for [Linux](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html) | [Windows](http://www.oracle.com/technetwork/topics/winsoft-085727.html) | [Mac](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html)
  - instantclient-basic-[OS].[Arch]-[VERSION].zip
  - instantclient-sqlplus-[OS].[Arch]-[VERSION].zip
  - instantclient-sdk-[OS].[Arch]-[VERSION].zip
 
 
-- Unzip downloaded files 
+- Unzip downloaded files
 
 ```
 unzip -qq instantclient-basic-linux.x64-12.1.0.2.0.zip
@@ -226,13 +226,13 @@ unzip -qq instantclient-sqlplus-linux.x64-12.1.0.2.0.zip
 ```
 
 - Create system directories
-as root / sudo 
+as root / sudo
 
 ```
 mkdir -p /usr/local/oracle/{network,product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/}}
 ```
 
-The file structure should be 
+The file structure should be
 ```
 /usr/local/oracle/
 ├── admin
@@ -250,7 +250,7 @@ The file structure should be
                 └── admin
 ```
 
-- Move files 
+- Move files
 
 ```
 cd instantclient_12_1
@@ -269,13 +269,13 @@ ln -s ../lib/sdk sdk
 cd -
 ```
 
-- Setup environment 
+- Setup environment
 
 
 Append oracle environment variables in to `~/.bashrc` Then add the following:
 
 ```
-# Oracle Environment 
+# Oracle Environment
 export ORACLE_BASE=/usr/local/oracle
 export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
 export PATH=$ORACLE_HOME/bin:$PATH
@@ -289,12 +289,12 @@ Then run:
 source ~/.bashrc
 ```
 
-- To install Oracle adapter
+- Install Oracle adapter gem
 ```
 gem install ruby-oci8 activerecord-oracle_enhanced-adapter
 ```
 
-Now let's to connect 
+Now let's to connect
 ```
 require 'active_record'
 
@@ -316,7 +316,7 @@ end
 ### MSSQL database
 
 
-- To install MSSQL adapter
+- Install MSSQL adapter gem
 
 ```
 gem install tiny_tds activerecord-sqlserver-adapter
@@ -325,7 +325,7 @@ gem install tiny_tds activerecord-sqlserver-adapter
 Let's connect
 ```ruby
 require 'tiny_tds'
-require 'activerecord-sqlserver-adapter' 
+require 'activerecord-sqlserver-adapter'
 
 development:
   adapter: sqlserver

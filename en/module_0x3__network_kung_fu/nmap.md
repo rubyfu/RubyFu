@@ -1,9 +1,9 @@
 # Nmap
 
 ```
-gem install ruby-nmap ronin-scanners
+gem install ruby-nmap ronin-scanners gems
 ```
-As far as you understand how to use nmap and how basically it works, you'll find this lib is easy to use. You can do most of nmap functionality 
+As far as you understand how to use nmap and how basically it works, you'll find this lib is easy to use. You can do most of nmap functionality
 
 
 ### Basic Scan

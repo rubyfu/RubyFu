@@ -7,14 +7,14 @@ Our example will be on DIVA (Damn insecure and vulnerable App) APK file. You can
 
 Note: Some methods may not return the expected output because the missing information in the apk, e.g. the suggested apk doesn't have icon and signs but you can download some known apk like twitter apk or so and test it, it works.
 
-We'll use ruby_apk gem to do that 
+We'll use ruby_apk gem to do that
 
-- To install ruby_apk gem
+- Install ruby_apk gem
 ```
 gem install ruby_apk
 ```
 
-Now, lets start parsing 
+Now, lets start parsing
 
 ```ruby
 require 'ruby_apk'
@@ -35,7 +35,7 @@ end
 # Extract signature and certificate information from Apk
 signs = apk.signs                   # retrun Hash(key: signature file path, value: OpenSSL::PKCS7)
 signs.each do |path, sign|
-  puts path 
+  puts path
   puts sign
 end
 
@@ -46,7 +46,7 @@ puts manifest.to_xml
 
 ## Listing components and permissions
 manifest.components.each do |c|     # 'c' is Android::Manifest::Component object
-  puts "#{c.type}: #{c.name}" 
+  puts "#{c.type}: #{c.name}"
   c.intent_filters.each do |filter|
     puts "\t#{filter.type}"
   end

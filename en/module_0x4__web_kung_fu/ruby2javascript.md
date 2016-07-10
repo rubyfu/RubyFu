@@ -4,31 +4,31 @@
 
 ## CoffeeScript
 [CoffeeScript][1] is a programming language that transcompiles to JavaScript. It adds syntactic sugar inspired by Ruby, Python and Haskell in an effort to enhance JavaScript's brevity and readability.
- 
 
-### Quick CoffeeScript Review 
 
-Here a quick how to if CoffeeScript in general 
+### Quick CoffeeScript Review
 
-- To install CoffeScript 
+Here a quick how to if CoffeeScript in general
+
+- Install CoffeScript lib
 ```
 npm install -g coffee-script
 ```
 
-- For live conversion 
+- For live conversion
 ```
-coffee --watch --compile script.coffee 
+coffee --watch --compile script.coffee
 ```
 
-### Ruby CoffeScript gem 
-**Ruby** CoffeeScript gem is a bridge to the official CoffeeScript compiler. 
+### Ruby CoffeScript gem
+**Ruby** CoffeeScript gem is a bridge to the official CoffeeScript compiler.
 
-- To install CoffeeScript gem
+- Install CoffeeScript gem
 ```
 gem install coffee-script
 ```
 
-- Convert CoffeeScript file to JavaScript 
+- Convert CoffeeScript file to JavaScript
 
 ```ruby
 #!/usr/bin/env ruby
@@ -41,16 +41,16 @@ end
 
 Run it
 ```
-ruby coffee2js.rb exploit.coffee 
+ruby coffee2js.rb exploit.coffee
 ```
 
 
 
 
-## Opal 
+## Opal
 Opal is a Ruby to JavaScript source-to-source compiler. It also has an implementation of the Ruby corelib.
 
-- To install Opal
+- Install Opal gem
 ```
 gem install opal opal-jquery
 ```

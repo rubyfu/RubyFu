@@ -19,6 +19,7 @@ apt-get -y install libpcap-dev
 ```
 
 then install packetfu and pcaprub(required for packet reading and writing from network interfaces)
+- Install packetfu & pcaprub gems
 ```
 gem install packetfu pcaprub
 ```

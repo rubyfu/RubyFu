@@ -1,7 +1,7 @@
 # Network Scanning
 
 ## Network ping sweeping
-required gem
+required net-ping gem
 ```
 gem install net-ping
 ```
@@ -32,8 +32,8 @@ puts "Average round-trip is #{avg}\n"
 puts "#{pingfails} packets were dropped"
 ```
 
-## Port Scanner 
-If you got what we've represented in [Ruby Socket](module_0x3__network_kung_fu/ruby_socket.md) section, then here we wrapping up and do some application depends on it. 
+## Port Scanner
+If you got what we've represented in [Ruby Socket](module_0x3__network_kung_fu/ruby_socket.md) section, then here we wrapping up and do some application depends on it.
 **scanner.rb**
 ```ruby
 #!/usr/bin/env ruby
@@ -50,7 +50,7 @@ def scan(host)
   (0..1024).each do |port|
     Thread.new {
       begin
-    	timeout(3) do					# timeout of running operation 
+    	timeout(3) do					# timeout of running operation
           s = TCPSocket.new(host, port)			# Create new socket
           puts "[+] #{host} | Port #{port} open"
           s.close
@@ -66,11 +66,11 @@ def scan(host)
   end
 end
 
-scan host 
+scan host
 
 ```
 Run it
-```bash 
+```bash
 ruby scanner.rb 45.33.32.156    # scanme.nmap.com
 
 [+] 45.33.32.156 | Port 22 open
