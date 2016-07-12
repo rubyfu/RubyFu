@@ -2,13 +2,13 @@
 
 
 ## Web Server
-You can run Ruby as web server for any folder/file on any unused port 
+You can run Ruby as web server for any folder/file on any unused port
 
 ```ruby
 ruby -run -e httpd /var/www/ -p 8000
 ```
 
-or 
+or
 
 ```ruby
 require 'webrick'
@@ -17,7 +17,7 @@ server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => '/var/www/'
 server.start
 ```
 
-To make HTTPS server
+**HTTPS server**
 ```ruby
 require 'webrick'
 require 'webrick/https'
@@ -33,6 +33,17 @@ server = WEBrick::HTTPServer.new(:Port         => 8000,
 server.start
 ```
 
+**Advanced HTTP Server**
+During working on [CVE-2016-4971(Wget)](https://github.com/KINGSABRI/CVE-in-Ruby/tree/master/CVE-2016-4971) exploit, more advanced thing needed. Here the exploit with exploit on the comments
+
+```ruby
+puts ""
+```
+**References**
+- http://ruby-doc.org/stdlib-2.0.0/libdoc/webrick/rdoc/WEBrick.html
+- https://www.igvita.com/2007/02/13/building-dynamic-webrick-servers-in-ruby/
+- https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/
+- https://gist.github.com/Integralist/2862917
 
 ## Web Proxy
 
@@ -68,9 +79,9 @@ handler = proc do |req, res|
   puts "\n\n\n"
 end
 
-proxy = WEBrick::HTTPProxyServer.new Port: 8000, 
-                                     ServerName: "RubyFuProxyServer", 
-                                     ServerSoftware: "RubyFu Proxy", 
+proxy = WEBrick::HTTPProxyServer.new Port: 8000,
+                                     ServerName: "RubyFuProxyServer",
+                                     ServerSoftware: "RubyFu Proxy",
                                      ProxyContentHandler: handler
 
 trap 'INT'  do proxy.shutdown end
@@ -80,8 +91,8 @@ proxy.start
 ```
 
 
-### Transparent Web Proxy with Authentication 
-Well, it was great to know that building a proxy server is that easy. Now we need to Force authentication to connect to the proxy server 
+### Transparent Web Proxy with Authentication
+Well, it was great to know that building a proxy server is that easy. Now we need to Force authentication to connect to the proxy server
 
 To enable authentication for requests in WEBrick you will need a user database and an authenticator. To start, here's a htpasswd database for use with a DigestAuth authenticator:
 
