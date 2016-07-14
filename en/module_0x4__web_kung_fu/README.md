@@ -42,14 +42,14 @@ def send_sqli(query)
 end
 ```
 
-#### Simple Shortened URL extractor 
+#### Simple Shortened URL extractor
 
 **urlextractor.rb**
 ```ruby
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 require 'net/http'
 uri = ARGV[0]
-loop do 
+loop do
   puts uri
   res = Net::HTTP.get_response URI uri
   if !res['location'].nil?
@@ -72,7 +72,7 @@ Ok, what if I gave you this shortened url(`http://short-url.link/f2a`)? try the 
 
 
 ### Using Open-uri
-Here another way to do the same thing 
+Here another way to do the same thing
 ```ruby
 #!/usr/bin/env ruby
 require 'open-uri'
@@ -84,7 +84,7 @@ session_id = ARGV[1] || "3c0e9a7edfa6682cb891f1c3df8a33ad"
 
 def send_sqli
   uri = URI.parse("https://#{host}/script/path/file.php?var1=val1&var2=val2&var3=val3")
-  headers = 
+  headers =
       {
         "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0",
         "Connection" => "keep-alive",
@@ -208,9 +208,9 @@ request.body = "name=My title is here&textarea=My grate message here.&radiobutto
 ## Dealing with Cookies
 Some times you need to deal with some actions after authentication. Ideally, it's all about cookies.
 
-Notes: 
+Notes:
 - To Read cookies you need to get **set-cookie** from **response**
-- To Set cookies you need to set **Cookie** to **request** 
+- To Set cookies you need to set **Cookie** to **request**
 
 
 ```ruby
@@ -225,7 +225,7 @@ Net::HTTP.start(uri1.host, uri1.port) do |http|
   p_request.set_form_data({"loginName"=>"admin", "password"=>"P@ssw0rd"})
   p_response = http.request(p_request)
   cookies    = p_response.response['set-cookie']	# Save Cookies
-  
+
   puts "[*] Do Post-authentication actions"
   Net::HTTP::Get.new(uri2)
   g_request  = Net::HTTP::Get.new(uri2)
@@ -233,6 +233,72 @@ Net::HTTP.start(uri1.host, uri1.port) do |http|
   g_response = http.request(g_request)
 end
 ```
+
+## HTTP authentication (Basic, Digest, NTLM)
+### Basic authentication
+```ruby
+require 'net/http'
+
+username = "Admin"
+password = "P@ssw0rd"
+uri      = URI("http://rubyfu.net/login")
+
+http = http = Net::HTTP.new(uri.host, uri.port)
+req  = Net::HTTP::Get.new(uri)
+req.basic_auth usernamen, password
+res  = http.request(request)
+
+puts res.body
+```
+
+### Digest authentication
+- Install net-http-digest_auth gem
+```
+gem install net-http-digest_auth
+```
+
+```ruby
+require 'ntlm/http'
+require 'net/http/digest_auth'
+
+uri          = URI("http://rubyfu.net/login")
+uri.user     = "Admin"
+uri.password = "P@ssw0rd"
+
+http = Net::HTTP.new(uri.host, uri.port)
+digest_auth = Net::HTTP::DigestAuth.new
+req  = Net::HTTP::Get.new(uri)
+auth = digest_auth.auth_header uri, res['www-authenticate'], 'GET'
+req.add_field 'Authorization', auth
+res  = http.request(request)
+
+puts res.body
+```
+Here is an [example](https://gist.github.com/KINGSABRI/a1df06eb48cbc52660577df6c7947ed5) to build it without external gem
+
+### NTLM authentication
+- Install ntlm gem
+```
+gem install ruby-ntlm
+```
+Note: ntlm gem works with http, imap, smtp protocols. [Read more](https://github.com/macks/ruby-ntlm).
+
+```ruby
+require 'ntlm/http'
+
+username = "Admin"
+password = "P@ssw0rd"
+uri      = URI("http://rubyfu.net/login")
+
+http = http = Net::HTTP.new(uri.host, uri.port)
+req  = Net::HTTP::Get.new(uri)
+req.ntlm_auth usernamen, password
+res  = http.request(request)
+
+puts res.body
+```
+
+
 
 
 ## CGI
