@@ -54,6 +54,8 @@ Useful gems to build command line applications
 - packetfu - A mid-level packet manipulation library for Ruby.
 
 #### Module 0x4 | Web Kung Fu
+- net-http-digest_auth - An implementation of RFC 2617 - Digest Access Authentication.
+- ruby-ntlm - NTLM implementation for Ruby
 - activerecord - Databases on Rails. Build a persistent domain model by mapping database tables to Ruby
 - tiny_tds - TinyTDS - A modern, simple and fast FreeTDS library for Ruby using DB-Library.
 - activerecord-sqlserver-adapter
