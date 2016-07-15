@@ -25,7 +25,7 @@ Now we cant intercept DNS Query packet coming from victim's machine. Since Packe
 
 From Wireshark, if we take a deeper look at the DNS query payload in `Domain Name System (query)`, we can see its been presented in hexadecimal format.
 
-| ![](../../images/module03/dns_spoofing_wireshark2.png) |
+| ![](../../images/module03/dns_spoofing_wireshark1.png) |
 |:---------------:|
 | **Figure 1.** DNS query Payload  |
 
@@ -161,7 +161,7 @@ Till now we successfully finished [ARP Spoofing](module_0x3__network_kung_fu/arp
     * This will let you see what flags are being set.
 * From here, we just calculate the checksum for the UDP packet and send it out to the target's machine.
 
-| ![Wireshark](../../images/module03/dns_spoofing_wireshark1.png) |
+| ![Wireshark](../../images/module03/dns_spoofing_wireshark2.png) |
 |:---------------:|
 | **Figure 2.** DNS Response Payload  |
 
