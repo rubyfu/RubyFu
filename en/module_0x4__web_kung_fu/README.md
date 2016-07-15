@@ -126,7 +126,7 @@ puts response.body
 ## More control on Post variables
 Let's to take the following form as a simple post form to mimic in our script
 
-| ![PostForm](../images/module04/webfu__post_form1.png) |
+| ![PostForm](../../images/module04/webfu__post_form1.png) |
 |:---------------:|
 | **Figure 1.** Simple Post form |
 
