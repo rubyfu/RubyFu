@@ -21,17 +21,16 @@ ip = IPAddr.new("192.34.56.54/24")
 ### Calculating network prefix of an IP address from IP address and subnet mask.
 A simple mask method call will give us the network prefix part of IP address. It is simply a bitwise mask of IP address with subnet mask.
 
-
 ```ruby
 require 'ipaddr'
 ip = IPAddr.new(ARGV[0])
 network_prefix = ip.mask(ARGV[1])
 puts network_prefix
 ```
-
+Run it
 ```
 ruby ip_example.rb 192.168.5.130 24
-# Returns 
+# Returns
 192.168.5.0
 ```
 
@@ -56,7 +55,7 @@ puts host
 Run it
 ```
 ruby ip_example.rb 192.168.5.130 24
-# Returns 
+# Returns
 0.0.0.130
 ```
 
@@ -141,10 +140,10 @@ This part has been pretty quoted from [IP address Operations in Ruby][1] topic
 
 
 ## IP Geolocation
-you may need to know more information about IP location due attack investigation or any other reason. 
+you may need to know more information about IP location due attack investigation or any other reason.
 
 ### GeoIP
-The special thing about geoip lib is that it's an API for offline database you download from [www.maxmind.com](http://www.maxmind.com). There are few free databases from MaxMind whoever you can have a subscription database version though. 
+The special thing about geoip lib is that it's an API for offline database you download from [www.maxmind.com](http://www.maxmind.com). There are few free databases from MaxMind whoever you can have a subscription database version though.
 
 - Download one of the free GeoLite country, city or ASN databases
     - [GeoLiteCountry](geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz)
