@@ -27,7 +27,7 @@ Yep, it's simple as that, easy and familiar.
 **TIP:** You can do it all above way using pure socket library, it's really easy. You may try to do it.
 
 ## FTP Server
-- Install ftpd gem 
+- Install ftpd gem
 ```
 gem install ftpd
 ```
@@ -71,13 +71,13 @@ class FTPevil
   end
 
   def print_connection_info
-    puts "Servername: #{@server.server_name}"
-    puts "Interface: #{@server.interface}"
-    puts "Port: #{@server.port}"
-    puts "Directory: #{@driver.path}"
-    puts "User: #{@driver.user}"
-    puts "Pass: #{@driver.pass}"
-    puts "PID: #{$$}"
+    puts "[+] Servername: #{@server.server_name}"
+    puts "[+] Interface: #{@server.interface}"
+    puts "[+] Port: #{@server.port}"
+    puts "[+] Directory: #{@driver.path}"
+    puts "[+] User: #{@driver.user}"
+    puts "[+] Pass: #{@driver.pass}"
+    puts "[+] PID: #{$$}"
   end
 
   def start
