@@ -34,6 +34,7 @@ server.start
 ```
 
 **Advanced HTTP Server**
+
 During working on [CVE-2016-4971(Wget)](https://github.com/KINGSABRI/CVE-in-Ruby/tree/master/CVE-2016-4971) exploit, more advanced & custom behavior needed. Here is a web server with a fake login form that saves the collected credentials to a text file. This comes in handy when you don't need to make customizations on apache config or you don't have enough privileges to do so. It require no knowledge for web frameworks like Rails or Senatra.
 
 ```ruby
