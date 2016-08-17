@@ -113,7 +113,7 @@ begin
 
   # Start Web Server
   puts "[+] Starting HTTP server on port: #{port}\n"
-  server = WEBrick::HTTPServer.new(ServerName: "Wget Web Server",
+  server = WEBrick::HTTPServer.new(ServerName: "Rubyfu HTTP Server",
                                    Port: port,
                                    BindAddress: '0.0.0.0',
                                    AccessLog: [],
@@ -153,7 +153,7 @@ ruby webrick-server.rb 8080
 [+] user1:12345678
 -----[ END OF POST ]-----
 ```
-You'll find credentials have been saved in 'credentials.txt' 
+You'll find credentials have been saved in 'credentials.txt'
 
 **References**
 - http://ruby-doc.org/stdlib-2.0.0/libdoc/webrick/rdoc/WEBrick.html
