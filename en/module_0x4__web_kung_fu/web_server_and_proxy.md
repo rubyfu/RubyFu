@@ -96,7 +96,7 @@ class Login < WEBrick::HTTPServlet::AbstractServlet
       puts "[+] #{username}:#{password}"
       puts "-----[ END OF POST ]-----\n\n"
       # Write Credentials to file
-      File.write("credentials.txt", "#{username}:#{password}")
+      File.open("credentials.txt", '+a') {|f| f.puts "#{username}:#{password}"}
       return 200, 'text/plain', 'Success! Thank you.'
     else
       puts "[!] Empty username and password."
@@ -131,6 +131,30 @@ rescue Exception => e
 end
 
 ```
+
+Run it
+
+```
+ruby webrick-server.rb 8080
+[+] Starting HTTP server on port: 8080
+
+-----[ START OF POST ]-----
+[+] admin:AdminPassw0rd@!
+-----[ END OF POST ]-----
+
+
+-----[ START OF POST ]-----
+[+] support:Puppies
+-----[ END OF POST ]-----
+
+[!] Empty username and password.
+
+-----[ START OF POST ]-----
+[+] user1:12345678
+-----[ END OF POST ]-----
+```
+You'll find credentials have been saved in 'credentials.txt' 
+
 **References**
 - http://ruby-doc.org/stdlib-2.0.0/libdoc/webrick/rdoc/WEBrick.html
 - https://www.igvita.com/2007/02/13/building-dynamic-webrick-servers-in-ruby/
