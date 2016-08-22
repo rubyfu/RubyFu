@@ -21,6 +21,7 @@
 - Brendan Baldwin | @usergenic - *Gave away Rubyfu github org. name & twitter account*
 - Ahmed Aboul-Ela | @aboul3la - *Enhancing Book web design*
 - Sven Vetsch | @disenchant - *PR proofreading*
+- Christian Fernandez | @b1naryFreed0m - Code
 
 ## Sponsors
 - [Arab Security Community (Security4arabs)][1]
