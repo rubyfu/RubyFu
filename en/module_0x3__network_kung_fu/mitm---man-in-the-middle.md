@@ -1,3 +1,7 @@
+#Man in the Middle Attack
+
+Example of MITM attack using ARP Poisoning with PacketFU and socket
+
 ```ruby
 require 'packetfu'
 require 'socket'
@@ -61,3 +65,4 @@ else
 end
 ```
 
+Original code at [Ruby-MiTM](https://github.com/ChrisFernandez/ruby-mitm "Ruby-mitm")
