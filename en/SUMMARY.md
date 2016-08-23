@@ -33,7 +33,7 @@
     * [Oracle TNS Enumeration](module_0x3__network_kung_fu/tns_enumeration.md)
     * [Packet manipulation](module_0x3__network_kung_fu/packet_manipulation.md)
         * [ARP Spoofing](module_0x3__network_kung_fu/arp_spoofing.md)
-            * [Mitm man in the middle](module_0x3__network_kung_fu/mitm---man-in-the-middle.md)
+            * [Mitm man in the middle](module_0x3__network_kung_fu/mitm_man-in-the-middle.md)
         * [DNS Spoofing](module_0x3__network_kung_fu/dns_spoofing.md)
 * [Module 0x4 | Web Kung Fu](module_0x4__web_kung_fu/README.md)
     * [SQL Injection Scanner](module_0x4__web_kung_fu/sql_injection_scanner.md)
