@@ -152,11 +152,12 @@ The main idea is to remove repeated keys and assing it to one key with an array 
 #
 
 file = File.read(ARGV[0]).split("\n")
-def parser(file) hash = {} # Datastore
- splitter = file.map { |line| line.split(':', 2) }
+def parser(file) 
+  hash = {} # Datastore
+  splitter = file.map { |line| line.split(':', 2) }
   splitter.each do |k, v|
-   k.strip! # remove leading and trailing whitespaces
-   v.strip! # remove leading and trailing whitespaces
+    k.strip! # remove leading and trailing whitespaces
+    v.strip! # remove leading and trailing whitespaces
 
     if hash[k]      # if this key exists
       hash[k] << v  # add this value to the key's array
