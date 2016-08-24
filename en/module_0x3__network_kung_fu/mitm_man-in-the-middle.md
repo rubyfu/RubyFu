@@ -27,7 +27,7 @@ def get_ifconfig(int_name)
     return int_config[:ip_saddr], int_config[:eth_saddr]
 end
 
-def get_victim_info()
+def get_victim_info
    puts "enter victim ip"
    vip = gets
    puts "enter victim MAC"
