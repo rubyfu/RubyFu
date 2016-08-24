@@ -1,4 +1,4 @@
-# Man in the Middle Attack
+# Man in the Middle Attack \(MiTM\)
 
 Example of a more elaborate MITM attack using ARP Poisoning with PacketFU and socket using source code in this book as base.
 
@@ -62,8 +62,6 @@ else
   puts "Selected interface does not exists"
 end
 ```
-
-
 
 Source: [Ruby-MiTM](https://github.com/ChrisFernandez/ruby-mitm "Ruby-mitm") and Rubyfu [ARP Spoofing topic](/module_0x3__network_kung_fu/arp_spoofing.md).
 
