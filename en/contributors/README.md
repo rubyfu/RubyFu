@@ -13,10 +13,8 @@
 - KING SABRI | @KINGSABRI
 - [WRITE MORE AND PLACE YOUR NAME HERE]
 
-## Technical Editors
-- Bashar
-
 ## Contributors
+- Bashar - *Technical Editor*
 - William Coppola | @SubINacls - *Spreading & advising*
 - Brendan Baldwin | @usergenic - *Gave away Rubyfu github org. name & twitter account*
 - Ahmed Aboul-Ela | @aboul3la - *Enhancing Book web design*
