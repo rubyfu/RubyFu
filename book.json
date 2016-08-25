@@ -5,13 +5,13 @@
         "splitter",
         "book-summary-scroll-position-saver",
         "addcssjs",
-        "expandable-chapters",
-        "language-picker"
+        "expandable-chapters"
     ],
     "pluginsConfig": {
-        
         "addcssjs": {
-          "js": ["styles/header.js"]
+            "js": [
+                "styles/header.js"
+            ]
         }
     },
     "styles": {

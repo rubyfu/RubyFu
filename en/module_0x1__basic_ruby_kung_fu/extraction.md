@@ -125,8 +125,59 @@ This is a Heading
 This is another contents.
 ```
 
+### Parsing comma seperated data from a file
+During pentest, you may need to parse a text that has a very common format as follows
+
+```
+description : AAAA
+info : BBBB
+info : CCCC
+info : DDDD
+solution : EEEE
+solution : FFFF
+reference : GGGG
+reference : HHHH
+see_also : IIII
+see_also : JJJJ
+```
+
+The main idea is to remove repeated keys and assing it to one key with an array of values.
+
+```ruby
+#!/usr/bin/env ruby
+#
+# KING SABRI | @KINGSABRI
+# Usage:
+#   ruby noawk.rb file.txt
+#
+
+file = File.read(ARGV[0]).split("\n")
+def parser(file) 
+  hash = {} # Datastore
+  splitter = file.map { |line| line.split(':', 2) }
+  splitter.each do |k, v|
+    k.strip! # remove leading and trailing whitespaces
+    v.strip! # remove leading and trailing whitespaces
+
+    if hash[k]      # if this key exists
+      hash[k] << v  # add this value to the key's array
+    else            # if not
+      hash[k] = [v] # create the new key and add an array contains this value
+    end
+  end 
+ 
+  hash # return the hash
+end
+
+parser(file).each {|k, v| puts "#{k}:\t#{v.join(', ')}"}
 
 
+```
+
+For one liner lover
+```
+ruby -e 'h={};File.read("text.txt").split("\n").map{|l|l.split(":", 2)}.map{|k, v|k.strip!;v.strip!; h[k] ? h[k] << v : h[k] = [v]};h.each {|k, v| puts "#{k}:\t#{v.join(", ")}"}'
+```
 
 
 
