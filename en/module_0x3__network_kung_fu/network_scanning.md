@@ -10,6 +10,7 @@ gem install net-ping
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
+#
 require 'net/ping'
 
 @icmp = Net::Ping::ICMP.new(ARGV[0])
