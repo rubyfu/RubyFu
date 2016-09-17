@@ -17,7 +17,7 @@ for a single character
 **Note:** the symbols ```*""``` are equal of ```.join```
 
 ```ruby
-"ABCD".unpack('H*')[0].scan(/.{2}/).map {|h| '\x'+h }.join
+"ABCD".unpack('H*')[0].scan(/../).map {|h| '\x'+h }.join
 ```
 or
 ```ruby
