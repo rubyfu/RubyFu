@@ -50,7 +50,7 @@ Returns
  ipv6_regex = /^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/
 ```
 - [Source](https://github.com/rapid7/rex-socket/blob/master/lib/rex/socket.rb)
-- See also 
+- See also
  - https://gist.github.com/cpetschnig/294476
  - http://snipplr.com/view/43003/regex--match-ipv6-address/
 
@@ -94,7 +94,7 @@ Net::HTTP.get(URI.parse("http://pastebin.com/khAmnhsZ")).scan(/\b[A-Z0-9._%+-]+@
 ```
 
 
-### Extracting Strings from HTML tags 
+### Extracting Strings from HTML tags
 
 Assume we have the following HTML contents and we need to get strings only and eliminate all HTML tags.
 
@@ -156,7 +156,7 @@ The main idea is to remove repeated keys and passing it to one key with an array
 #
 
 file = File.read(ARGV[0]).split("\n")
-def parser(file) 
+def parser(file)
   hash = {} # Datastore
   splitter = file.map { |line| line.split(':', 2) }
   splitter.each do |k, v|
@@ -168,8 +168,8 @@ def parser(file)
     else            # if not
       hash[k] = [v] # create the new key and add an array contains this value
     end
-  end 
- 
+  end
+
   hash # return the hash
 end
 
