@@ -145,7 +145,7 @@ see_also : IIII
 see_also : JJJJ
 ```
 
-The main idea is to remove repeated keys and assing it to one key with an array of values.
+The main idea is to remove repeated keys and passing it to one key with an array of values.
 
 ```ruby
 #!/usr/bin/env ruby
