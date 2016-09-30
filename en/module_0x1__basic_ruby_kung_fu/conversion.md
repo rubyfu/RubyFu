@@ -145,6 +145,10 @@ For octal escape is exact the same except we convert the string to octal instead
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
 ```
 
+**Escape Sequences in Double-Quoted Strings**
+```ruby
+"\u{52 75 62 79 66 75}"
+```
 
 ## En/Decode base-64 String
 We'll present it by many ways
