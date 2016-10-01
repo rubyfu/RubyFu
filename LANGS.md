@@ -1,3 +1,3 @@
-* [English](en)
-* [عربي](ar)
-* [français](fr)
+* [English](en/)
+* [عربي](ar/)
+* [français](fr/)
