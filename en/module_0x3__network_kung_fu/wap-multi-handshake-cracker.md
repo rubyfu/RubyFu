@@ -1,7 +1,8 @@
 # WPA multi handshake cracker
 
 When you have a bunch of _handshakes_ from your pentesting wifi scans and want to just leave it running all night here is a small script that will get all handshakes produced by lets say [wifite](https://github.com/derv82/wifite2 "Wifite"). The code will get the SSID from the filename and use aircrack with a given dictionary.
-In this image below shows us a succesfull handshake grab(I have paint over the MAC and SSID, for privacy matters).<p>
+In this image below shows us a succesfull handshake grab(I have paint over the MAC and SSID, for privacy matters).
+
 As you can see in the image it collects the handshake inside the folder **_hs_**.
 
 This is just a POC in how to manipulate other software stdout or results with ruby, in this particular case we are using wifite and aircrack to make our task easier, but this can be used with any combination of tools and dictionaries, is up to your imagination and needs.
