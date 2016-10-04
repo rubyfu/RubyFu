@@ -13,7 +13,7 @@ as you can see in the image it collects the handshake inside the folder **_hs_**
 
 require 'open3'
 
-@dictionary='wapcracker.txt'
+@dictionary='wpacracker.txt'
 
 def success(line, ssid)
   filename = 'rek2.pot'
