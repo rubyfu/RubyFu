@@ -22,7 +22,6 @@ def success(line, ssid)
   end
 end
 
-
 def crack(file, ssid)
   cmd = "/usr/bin/aircrack-ng #{file} -q -e #{ssid} -w #{@dictionary}"
   Open3.popen3(cmd) do |stdin, stdout, stderr, wait_thr|
@@ -32,7 +31,6 @@ def crack(file, ssid)
     end
   end
 end
-
 
 Dir["hs/*.cap"].each do |file|
   ssid = /(?<=\/)[^\_]*/.match(file)
