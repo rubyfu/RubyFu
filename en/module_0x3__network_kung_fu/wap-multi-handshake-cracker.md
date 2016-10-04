@@ -28,9 +28,7 @@ def crack(file, ssid)
   Open3.popen3(cmd) do |stdin, stdout, stderr, wait_thr|
     while line = stdout.gets
       puts line
-      if line.include? "KEY FOUND"
-              success(line, ssid)
-      end
+      success(line, ssid) if line.include? "KEY FOUND"
     end
   end
 end
