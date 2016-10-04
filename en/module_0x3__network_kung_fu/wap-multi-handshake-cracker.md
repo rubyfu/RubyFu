@@ -35,9 +35,9 @@ end
 
 
 Dir["hs/*.cap"].each do |file|
-        ssid = /(?<=\/)[^\_]*/.match(file)
-        puts "ssid: #{ssid}\n".strip
-        puts "will do #{file}\n".strip
-        crack(file, ssid)
+  ssid = /(?<=\/)[^\_]*/.match(file)
+  puts "ssid: #{ssid}\n".strip
+  puts "will do #{file}\n".strip
+  crack(file, ssid)
 end
 ```
