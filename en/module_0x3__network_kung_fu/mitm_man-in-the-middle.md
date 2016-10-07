@@ -1,6 +1,6 @@
-# Man in the Middle Attack \(MiTM\)
+# Man in the Middle Attack (MiTM)
 
-Example of a more elaborate MITM attack using ARP Poisoning with PacketFU and socket using source code in this book as base.
+Example of a more elaborate MiTM attack using ARP Poisoning with PacketFU and socket using source code in this book as base.
 
 ```ruby
 require 'packetfu'
@@ -38,14 +38,12 @@ def get_victim_info
 end
 
 # need to be root to run this
-
 unless Process.uid.zero?
   puts "you need to run this script as root!"
   exit 0
 end
 
 #select interface to use and start setup
-
 interfaces = Socket.getifaddrs.map { |i| i.name }.compact.uniq
 list = Hash[(0...interfaces.size).zip interfaces]
 list.each do |l, v|
