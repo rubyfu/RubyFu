@@ -1,164 +1,170 @@
 # Ruby Socket
 
-## Lightweight Introduction 
-### Ruby Socket Class Hierarchy 
+## Lightweight Introduction
+
+### Ruby Socket Class Hierarchy
 
 To know the socket hierarchy in ruby here a simple tree explains it.
+
 ```
 IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
     ├── IPSocket                # Super class for protocols using the Internet Protocol (AF_INET)
-    │   ├── TCPSocket           # Class for Transmission Control Protocol (TCP) sockets
-    │   │   ├── SOCKSSocket     # Helper class for building TCP socket servers applications
-    │   │   └── TCPServer       # Helper class for building TCP socket servers
-    │   └── UDPSocket           # Class for User Datagram Protocol (UDP) sockets
+    │   ├── TCPSocket           # Class for Transmission Control Protocol (TCP) sockets
+    │   │   ├── SOCKSSocket     # Helper class for building TCP socket servers applications
+    │   │   └── TCPServer       # Helper class for building TCP socket servers
+    │   └── UDPSocket           # Class for User Datagram Protocol (UDP) sockets
     ├── Socket                  # Base socket class that mimics that BSD Sockets API. It provides more operating system specific functionality
     └── UNIXSocket              # Class providing IPC using the UNIX domain protocol (AF_UNIX)
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
-I'll verbosely mention some of `Socket::Constants` here since I didn't find an obvious reference listing it except [Programming Ruby1.9 *The Pragmatic Programmers' Guide*](http://media.pragprog.com/titles/ruby3/app_socket.pdf); Otherwise you've to `ri Socket::Constants` from command line which is a good way to get the description of each constant.
 
+I'll verbosely mention some of `Socket::Constants` here since I didn't find an obvious reference listing it except [Programming Ruby1.9 _The Pragmatic Programmers' Guide_](http://media.pragprog.com/titles/ruby3/app_socket.pdf); Otherwise you've to `ri Socket::Constants` from command line which is a good way to get the description of each constant.
 
 ### Socket Types
-- SOCK_RAW
-- SOCK_PACKET
-- SOCK_STREAM
-- SOCK_DRAM
-- SOCK_RDM
-- SOCK_SEQPACKET
 
-### Address Families(Socket Domains)
-- AF_APPLETALK
-- AF_ATM
-- AF_AX25
-- AF_CCITT
-- AF_CHAOS
-- AF_CNT
-- AF_COIP
-- AF_DATAKIT
-- AF_DEC
-- AF_DLI
-- AF_E164
-- AF_ECMA
-- AF_HYLINK
-- AF_IMPLINK
-- AF_INET(IPv4)  
-- AF_INET6(IPv6)
-- AF_IPX
-- AF_ISDN
-- AF_ISO
-- AF_LAT
-- AF_LINK
-- AF_LOCAL(UNIX)
-- AF_MAX
-- AF_NATM
-- AF_NDRV
-- AF_NETBIOS
-- AF_NETGRAPH
-- AF_NS
-- AF_OSI
-- AF_PACKET
-- AF_PPP
-- AF_PUP
-- AF_ROUTE
-- AF_SIP
-- AF_SNA
-- AF_SYSTEM
-- AF_UNIX
-- AF_UNSPEC
+* SOCK\_RAW
+* SOCK\_PACKET
+* SOCK\_STREAM
+* SOCK\_DRAM
+* SOCK\_RDM
+* SOCK\_SEQPACKET
+
+### Address Families\(Socket Domains\)
+
+* AF\_APPLETALK
+* AF\_ATM
+* AF\_AX25
+* AF\_CCITT
+* AF\_CHAOS
+* AF\_CNT
+* AF\_COIP
+* AF\_DATAKIT
+* AF\_DEC
+* AF\_DLI
+* AF\_E164
+* AF\_ECMA
+* AF\_HYLINK
+* AF\_IMPLINK
+* AF\_INET\(IPv4\)  
+* AF\_INET6\(IPv6\)
+* AF\_IPX
+* AF\_ISDN
+* AF\_ISO
+* AF\_LAT
+* AF\_LINK
+* AF\_LOCAL\(UNIX\)
+* AF\_MAX
+* AF\_NATM
+* AF\_NDRV
+* AF\_NETBIOS
+* AF\_NETGRAPH
+* AF\_NS
+* AF\_OSI
+* AF\_PACKET
+* AF\_PPP
+* AF\_PUP
+* AF\_ROUTE
+* AF\_SIP
+* AF\_SNA
+* AF\_SYSTEM
+* AF\_UNIX
+* AF\_UNSPEC
 
 ### Socket Protocol
-- IPPROTO_SCTP
-- IPPROTO_TCP
-- IPPROTO_UDP
+
+* IPPROTO\_SCTP
+* IPPROTO\_TCP
+* IPPROTO\_UDP
 
 ### Protocol Families
-- PF_APPLETALK
-- PF_ATM
-- PF_AX25
-- PF_CCITT
-- PF_CHAOS
-- PF_CNT
-- PF_COIP
-- PF_DATAKIT
-- PF_DEC
-- PF_DLI
-- PF_ECMA
-- PF_HYLINK
-- PF_IMPLINK
-- PF_INET
-- PF_INET6
-- PF_IPX
-- PF_ISDN
-- PF_ISO
-- PF_KEY
-- PF_LAT
-- PF_LINK
-- PF_LOCAL
-- PF_MAX
-- PF_NATM
-- PF_NDRV
-- PF_NETBIOS
-- PF_NETGRAPH
-- PF_NS
-- PF_OSI
-- PF_PACKET
-- PF_PIP
-- PF_PPP
-- PF_PUP
-- PF_ROUTE
-- PF_RTIP
-- PF_SIP
-- PF_SNA
-- PF_SYSTEM
-- PF_UNIX
-- PF_UNSPEC
-- PF_XTP
+
+* PF\_APPLETALK
+* PF\_ATM
+* PF\_AX25
+* PF\_CCITT
+* PF\_CHAOS
+* PF\_CNT
+* PF\_COIP
+* PF\_DATAKIT
+* PF\_DEC
+* PF\_DLI
+* PF\_ECMA
+* PF\_HYLINK
+* PF\_IMPLINK
+* PF\_INET
+* PF\_INET6
+* PF\_IPX
+* PF\_ISDN
+* PF\_ISO
+* PF\_KEY
+* PF\_LAT
+* PF\_LINK
+* PF\_LOCAL
+* PF\_MAX
+* PF\_NATM
+* PF\_NDRV
+* PF\_NETBIOS
+* PF\_NETGRAPH
+* PF\_NS
+* PF\_OSI
+* PF\_PACKET
+* PF\_PIP
+* PF\_PPP
+* PF\_PUP
+* PF\_ROUTE
+* PF\_RTIP
+* PF\_SIP
+* PF\_SNA
+* PF\_SYSTEM
+* PF\_UNIX
+* PF\_UNSPEC
+* PF\_XTP
 
 ### Socket options
-- SO_ACCEPTCONN
-- SO_ACCEPTFILTER
-- SO_ALLZONES
-- SO_ATTACH_FILTER
-- SO_BINDTODEVICE
-- SO_BINTIME
-- SO_BROADCAST
-- SO_DEBUG
-- SO_DETACH_FILTER
-- SO_DONTROUTE
-- SO_DONTTRUNC
-- SO_ERROR
-- SO_KEEPALIVE
-- SO_LINGER
-- SO_MAC_EXEMPT
-- SO_NKE
-- SO_NOSIGPIPE
-- SO_NO_CHECK
-- SO_NREAD
-- SO_OOBINLINE
-- SO_PASSCRED
-- SO_PEERCRED
-- SO_PEERNAME
-- SO_PRIORITY
-- SO_RCVBUF
-- SO_RCVLOWAT
-- SO_RCVTIMEO
-- SO_RECVUCRED
-- SO_REUSEADDR
-- SO_REUSEPORT
-- SO_SECURITY_AUTHENTICATION
-- SO_SECURITY_ENCRYPTION_NETWORK
-- SO_SECURITY_ENCRYPTION_TRANSPORT
-- SO_SNDBUF
-- SO_SNDLOWAT
-- SO_SNDTIMEO
-- SO_TIMESTAMP
-- SO_TIMESTAMPNS
-- SO_TYPE
-- SO_USELOOPBACK
-- SO_WANTMORE
-- SO_WANTOOBFLAG
 
+* SO\_ACCEPTCONN
+* SO\_ACCEPTFILTER
+* SO\_ALLZONES
+* SO\_ATTACH\_FILTER
+* SO\_BINDTODEVICE
+* SO\_BINTIME
+* SO\_BROADCAST
+* SO\_DEBUG
+* SO\_DETACH\_FILTER
+* SO\_DONTROUTE
+* SO\_DONTTRUNC
+* SO\_ERROR
+* SO\_KEEPALIVE
+* SO\_LINGER
+* SO\_MAC\_EXEMPT
+* SO\_NKE
+* SO\_NOSIGPIPE
+* SO\_NO\_CHECK
+* SO\_NREAD
+* SO\_OOBINLINE
+* SO\_PASSCRED
+* SO\_PEERCRED
+* SO\_PEERNAME
+* SO\_PRIORITY
+* SO\_RCVBUF
+* SO\_RCVLOWAT
+* SO\_RCVTIMEO
+* SO\_RECVUCRED
+* SO\_REUSEADDR
+* SO\_REUSEPORT
+* SO\_SECURITY\_AUTHENTICATION
+* SO\_SECURITY\_ENCRYPTION\_NETWORK
+* SO\_SECURITY\_ENCRYPTION\_TRANSPORT
+* SO\_SNDBUF
+* SO\_SNDLOWAT
+* SO\_SNDTIMEO
+* SO\_TIMESTAMP
+* SO\_TIMESTAMPNS
+* SO\_TYPE
+* SO\_USELOOPBACK
+* SO\_WANTMORE
+* SO\_WANTOOBFLAG
 
 ## Creating Socket Template
 
@@ -166,38 +172,35 @@ I'll verbosely mention some of `Socket::Constants` here since I didn't find an o
 Socket.new(domain, socktype [, protocol])
 ```
 
-**domain(Address/Protocol Families):** like AF_INET, PF_PACKET, etc
+**domain\(Address\/Protocol Families\):** like AF\_INET, PF\_PACKET, etc
 
-**socktype:** like SOCK_RAW, SOCK_STREAM
+**socktype:** like SOCK\_RAW, SOCK\_STREAM
 
-**protocol: ** by default, it's `0`m it should be a protocol defined (we'll manipulate that later)
-
+**protocol: ** by default, it's `0`m it should be a protocol defined \(we'll manipulate that later\)
 
 ## TCP Socket
 
+**Server\/Client life cycle **
 
-**Server/Client life cycle **
-```
-            Client        Server
-              |             |                  
-   socket     +             +      socket
-              |             |
-   connect    +--------,    +      bind
-              |         |   |
-   write ,--> +------,  |   +      listen
-         |    |      |  |   |
-   read  `----+ <--, |  `-> +      accept
-              |    | |      |
-   close      +--, | `----> + <--, read <--,
-                 | |        |    |         |
-                 | `--------+----' write   ٨
-                 |                         |
-                 `----->------>------->----`
-```
+                Client        Server
+                  |             |                  
+       socket     +             +      socket
+                  |             |
+       connect    +--------,    +      bind
+                  |         |   |
+       write ,--> +------,  |   +      listen
+             |    |      |  |   |
+       read  `----+ <--, |  `-> +      accept
+                  |    | |      |
+       close      +--, | `----> + <--, read <--,
+                     | |        |    |         |
+                     | `--------+----' write   ٨
+                     |                         |
+                     `----->------>------->----`
 
 ### General Socket usage
 
-#### Get List of local IPaddreses 
+#### Get List of local IPaddreses
 
 ```ruby
 require 'socket'
@@ -205,15 +208,15 @@ Socket.ip_address_list
 ```
 
 #### Get Hostname
+
 ```ruby
 Socket.gethostname
 ```
 
-
-
 ### TCP Server
 
-Here we'll represent an absolute TCP server. This server will access connect from one client and send a message to it once connected then close the client and server connection 
+Here we'll represent an absolute TCP server. This server will access connect from one client and send a message to it once connected then close the client and server connection
+
 ```ruby
 require 'socket'
 
@@ -226,7 +229,9 @@ client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
 ```
 
-### TCP Client 
+&gt;Note: if you want to list on unused and random port, use port 0, ruby will find vacancy port then use use it. 
+
+### TCP Client
 
 ```ruby
 require 'socket'
@@ -238,7 +243,7 @@ client.puts "Hi, TCP Server #{rhost}"
 client.close
 ```
 
-You can put timeout/time interval for current connection in-case the server's response get delayed and the socket is still open.
+You can put timeout\/time interval for current connection in-case the server's response get delayed and the socket is still open.
 
 ```ruby
 timeval = [3, 0].pack("l_2")        # Time interval 3 seconds 
@@ -272,10 +277,10 @@ There are some alternatives for `puts` and `gets` methods.You can see the differ
 => #<Method: TCPSocket(BasicSocket)#recv>
 ```
 
-
 ## UDP Socket
 
 ### UDP Server
+
 ```ruby
 require 'socket'
 
@@ -287,6 +292,7 @@ server.recv(1024)                                       # Receive 1024 bytes of 
 ```
 
 ### UDP Client
+
 ```ruby
 require 'socket'
 client = UDPSocket.new
@@ -297,20 +303,19 @@ server.recv(1024)                       # Receive 1024 bytes of the server messa
 
 There alternative for sending and receiving too, figure it out, [RubyDoc](http://ruby-doc.org/stdlib-2.0.0/libdoc/socket/rdoc/UDPSocket.html).
 
-
-
-
 ## GServer
+
 GServer standard library implements a generic server, featuring thread pool management, simple logging, and multi-server management. Any kind of application-level server can be implemented using this class:
-- It accepts multiple simultaneous connections from clients
-- Several services (i.e. one service per TCP port)
-    - can be run simultaneously, 
-    - can be stopped at any time through the class method `GServer.stop(port)`
-- All the threading issues are handled
-- All events are optionally logged
 
+* It accepts multiple simultaneous connections from clients
+* Several services \(i.e. one service per TCP port\)
+  * can be run simultaneously, 
+  * can be stopped at any time through the class method `GServer.stop(port)`
 
-- Very basic GServer
+* All the threading issues are handled
+* All events are optionally logged
+
+* Very basic GServer
 
 ```ruby
 require 'gserver'
@@ -330,16 +335,7 @@ server.start            # Start the service
 server.join
 ```
 
+## 
 
 
 
-
-
-
-
-
-
-
-
-<br><br><br>
----
