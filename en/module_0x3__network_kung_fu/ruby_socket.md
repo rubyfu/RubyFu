@@ -229,7 +229,13 @@ client.close                            # Close the client's connection
 server.close                            # Close the TCP Server
 ```
 
-&gt;Note: if you want to list on unused and random port, use port 0, ruby will find vacancy port then use use it. 
+**Note:** if you want to list on unused and random port, set to port 0, ruby will find vacancy port then use it. 
+ ex.
+```ruby
+require 'socket'
+server = TCPServer.new('0.0.0.0', 0)
+server.addr[1]    # Shows the picked port
+```
 
 ### TCP Client
 
