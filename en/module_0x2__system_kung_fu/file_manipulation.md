@@ -144,7 +144,6 @@ require 'find'
 
 path = ARGV[0]
 
-
 search = Find.find(path)
 
 def wx_file(search)
