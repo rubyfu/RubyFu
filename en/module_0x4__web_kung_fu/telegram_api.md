@@ -28,6 +28,10 @@ Telegram::Bot::Client.run(token) do |bot|
   end
 end
 ```
+Once your run it, go to your telegram and find the bot and start chat with `'/start'`, try to send `'/rubyfu'`.
+
+
+
 
 - Inline bots
 
