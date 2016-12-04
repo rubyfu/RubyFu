@@ -24,13 +24,15 @@ Telegram::Bot::Client.run(token) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}")
     when '/stop'
       bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}")
+    when '/rubyfu'
+      bot.api.send_message(chat_id: message.chat.id, text: "Rubyfu, where Ruby goes eveil!")
     end
   end
 end
 ```
 Once your run it, go to your telegram and find the bot and start chat with `'/start'`, try to send `'/rubyfu'`.
 
-
+![](rubyfubot.png)
 
 
 - Inline bots
