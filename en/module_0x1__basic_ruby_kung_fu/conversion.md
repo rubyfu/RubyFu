@@ -96,7 +96,7 @@ ip.split(".").map(&:to_i).pack("C*")
 ```
 
 
-**Note about hex:** Sometimes you might face a none printable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at top of your file to fix any interpretation issue.
+**Note about hex:** Sometimes you might face a none printable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at the top of your file to fix any interpretation issue.
 
 
 
