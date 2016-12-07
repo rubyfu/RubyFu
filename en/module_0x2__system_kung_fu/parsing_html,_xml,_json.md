@@ -156,7 +156,7 @@ doc.search("description").map {|d| d.text}      # List of Descriptions
 
 ## JSON
 
-Assume you have a small vulnerability database in a json file like follows 
+Assume you have a small vulnerability database in a json file like follows
 
 ```json
 {
@@ -181,17 +181,15 @@ Assume you have a small vulnerability database in a json file like follows
 
 To parse it
 
-
-
 ```ruby
 require 'json'
 vuln_json = JSON.parse(File.read('vulnerabilities.json'))
 ```
 
-Returns a hash 
+Returns a hash
 
 ```ruby
-{"Vulnerability"=>
+{"Vulnerability"=>`
   [{"name"=>"SQLi",
     "details:"=>
      {"full_name"=>"SQL injection",
@@ -200,7 +198,23 @@ Returns a hash
       "type"=>"web"}}]}
 ```
 
+Now you can retrieve and data as you do with hash
 
+```ruby
+vuln_json["Vulnerability"].each {|vuln| puts vuln['name']}
+```
+
+If you want to add to this database, just create a hash with the same struction.
+
+```
+xss = {"name"=>"XSS", "details:"=>{"full_name"=>"Corss Site Scripting", "description"=>" is a type of computer security vulnerability typically found in web applications", "references"=>["https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)", "https://cwe.mitre.org/data/definitions/79.html"], "type"=>"web"}}
+```
+
+You can convert it to json just by using \`.to\_json\` method
+
+```ruby
+xss.to_json
+```
 
 
 
