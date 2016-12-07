@@ -2,16 +2,18 @@
 
 Generally speaking the best and easiest way for parsing HTML and XML is using **Nokogiri** library
 
-- To install Nokogiri
-```
-gem install nokogiri
-```
+* To install Nokogiri
+  ```
+  gem install nokogiri
+  ```
+
 
 ## HTML
 
 Here we'll use nokogiri to list our contents list from `http://rubyfu.net/content/`
 
 ### Using CSS selectors
+
 ```ruby
 require 'nokogiri'
 require 'open-uri'
@@ -20,7 +22,8 @@ page = Nokogiri::HTML(open("http://rubyfu.net/content/"))
 page.css(".book .book-summary ul.summary li a, .book .book-summary ul.summary li span").each { |css| puts css.text.strip.squeeze.gsub("\n", '')}
 ```
 
-Returns 
+Returns
+
 ```
 RubyFu
 Module 0x0 | Introduction
@@ -53,9 +56,11 @@ Module 0x0 | Introduction
 ```
 
 ## XML
-There are 2 ways we'd like to show here, the standard library `rexml` and `nokogiri` external library 
+
+There are 2 ways we'd like to show here, the standard library `rexml and nokogiri external library`
 
 We've the following XML file
+
 ```xml
 <?xml version="1.0"?>
 <collection shelf="New Arrivals">
@@ -128,16 +133,14 @@ xmldoc.elements.each("collection/movie/stars") do |e|
 end
 ```
 
-
 ### Nokogiri
+
 ```ruby
 require 'nokogiri'
-
-
 ```
 
-
 #### Slop
+
 ```ruby
 require 'nokogiri'
 # Parse XML file
@@ -151,5 +154,59 @@ puts doc.search("stars").map {|s| s.text}       # List of Stars
 doc.search("description").map {|d| d.text}      # List of Descriptions
 ```
 
-
 ## JSON
+
+Assume you have a small vulnerability database in a json file like follows 
+
+```json
+{
+  "Vulnerability": 
+  [
+    {
+      "name": "SQLi",
+      "details:": 
+        {
+          "full_name": "SQL injection",
+          "description": "An injection attack wherein an attacker can execute malicious SQL statements",
+          "references": [
+            "https://www.owasp.org/index.php/SQL_Injection", 
+            "https://cwe.mitre.org/data/definitions/89.html"
+            ],
+          "type": "web"
+        }
+    }
+  ]
+}
+```
+
+To parse it
+
+
+
+```ruby
+require 'json'
+vuln_json = JSON.parse(File.read('vulnerabilities.json'))
+```
+
+Returns a hash 
+
+```ruby
+{"Vulnerability"=>
+  [{"name"=>"SQLi",
+    "details:"=>
+     {"full_name"=>"SQL injection",
+      "description"=>"An injection attack wherein an attacker can execute malicious SQL statements",
+      "references"=>["https://www.owasp.org/index.php/SQL_Injection", "https://cwe.mitre.org/data/definitions/89.html"],
+      "type"=>"web"}}]}
+```
+
+
+
+
+
+
+
+
+
+
+
