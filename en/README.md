@@ -4,7 +4,7 @@
 ![](rubyfu.png)
 ***Rubyfu, where Ruby goes evil!***
 
-This book is a collection of ideas, tricks and skills that could be useful for Hackers. It's a unique extraction reference, summarizes a lot of research and experience in order to achieve your **w00t** in shortest and smartest way. Rubyfu is where you'll find plug-n-hack code, Rubyfu is a book to use not to read, it's where ruby goes evil.
+This book is a great collection of ideas, tricks and skills that could be useful for Hackers. It's a unique extraction reference, summarizes a lot of research and experience in order to achieve your **w00t** in shortest and smartest way. Rubyfu is where you'll find plug-n-hack code, Rubyfu is a book to use not only to read, it's where ruby goes evil.
 
 
 ### Who should read this book?
