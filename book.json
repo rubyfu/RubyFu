@@ -16,7 +16,7 @@
             ]
         },
         "sitemap": {
-            "hostname": "rubyfu.net"
+            "hostname": "https://rubyfu.net"
         }
     },
     "styles": {
