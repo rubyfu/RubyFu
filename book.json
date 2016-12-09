@@ -6,13 +6,17 @@
         "book-summary-scroll-position-saver",
         "addcssjs",
         "expandable-chapters",
-        "language-picker"
+        "language-picker",
+        "sitemap"
     ],
     "pluginsConfig": {
         "addcssjs": {
             "js": [
                 "styles/header.js"
             ]
+        },
+        "sitemap": {
+            "hostname": "rubyfu.net"
         }
     },
     "styles": {
