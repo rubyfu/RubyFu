@@ -86,7 +86,7 @@ puts 'md5' + Digest::MD5.hexdigest('P@ssw0rd' + 'admin')
 
 ## Enigma script
 
-| ![Wireshark](../images/module02/Cryptography__wiringdiagram.png) |
+| ![](/images/module02/Cryptography__wiringdiagram.png) |
 |:---------------:|
 | **Figure 1.** Enigma machine diagram  |
 
