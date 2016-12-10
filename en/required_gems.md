@@ -46,6 +46,7 @@ sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev
 
 * virustotal - A script for automating virustotal.com queries
 * uirusu - A tool and REST library for interacting with Virustotal.org
+* clipboard - Lets you access the clipboard on Linux, MacOS, Windows and Cygwin.
 
 **Extra gems**
 
@@ -58,7 +59,6 @@ Useful gems to build command line applications
 * Highline - handle user input and output via a “Q&A” style API, including type conversions and validation.
 * Escort - A library that makes building command-line apps in ruby so easy, you’ll feel like an expert is guiding you through it.
 * commander - The complete solution for Ruby command-line executables.
-* clipboard - Lets you access the clipboard on Linux, MacOS, Windows and Cygwin.
 
 #### Module 0x3 | Network Kung Fu
 
