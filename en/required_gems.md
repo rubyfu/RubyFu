@@ -9,7 +9,7 @@ Note that you don't need to install it all unless you need it.
 * Pry - An IRB alternative and runtime developer console.
 * pry-doc - Pry Doc is a Pry REPL plugin. Extending documentation support for the REPL by improving the `show-doc & show-source commands.`
 * pry-byebug - Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution.
-  -
+
   ```
   gem install pry
   gem install pry-doc
@@ -38,8 +38,6 @@ You might need to install some packages before to avoid any error of missing lib
 sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl zlib1g-dev nmap
 ```
 
-
-
 #### Module 0x1 | Basic Ruby Kung Fu
 
 * colorize - Extends String class or add a ColorizedString with methods to set text color, backgroun.
@@ -64,11 +62,11 @@ Useful gems to build command line applications
 #### Module 0x3 | Network Kung Fu
 
 * geoip - searches a GeoIP database host or IP address, returns the country, city, ISP and location.
-* net-ping - A ping interface. Includes TCP, HTTP, LDAP, ICMP, UDP, WMI \(for Windows\).
+* net-ping - A ping interface. Includes TCP, HTTP, LDAP, ICMP, UDP, WMI (for Windows).
 * ruby-nmap - A Ruby interface to Nmap, the exploration tool and security / port scanner.
 * ronin-scanners - A library for Ronin that provides Ruby interfaces to various third-party security scanners.
 * net-dns - A pure Ruby DNS library, with a clean OO interface and an extensible API.
-* snmp - A Ruby implementation of SNMP \(the Simple Network Management Protocol\).
+* snmp - A Ruby implementation of SNMP (the Simple Network Management Protocol).
 * net-ssh - A pure-Ruby implementation of the SSH2 client protocol.
 * net-scp - A pure Ruby implementation of the SCP client protocol
 * ftpd - A pure Ruby FTP server library. It supports implicit and explicit TLS, IPV6, passive and active mode.
