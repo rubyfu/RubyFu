@@ -95,7 +95,7 @@ Symmetric encrption algorithms modes need 3 import data in order to work
 
 1. Key (Password)
 2. Initial Vector (iv)
-3. Data to encrypt (plan text) 
+3. Data to encrypt (plain text) 
 
 
 ### AES encryption 
