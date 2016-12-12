@@ -93,7 +93,7 @@ To unserdatand the cipher naming (eg. `AES-128-CBC`), it devided to 3 parts sepe
 
 Symmetric encrption algorithms modes need 3 import data in order to work
 
-1. Key (Password)
+1. Key (password)
 2. Initial Vector (iv)
 3. Data to encrypt (plain text) 
 
