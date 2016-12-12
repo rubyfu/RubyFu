@@ -69,7 +69,6 @@ ntlmv2 = OpenSSL::HMAC.digest(OpenSSL::Digest::MD5.new, ntlmv1, userdomain)
 puts ntlmv2
 ```
 
-
 ### MySQL Password hash
 ```ruby
 puts "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest('P@ssw0rd')).upcase
@@ -82,7 +81,53 @@ require 'digest/md5'
 puts 'md5' + Digest::MD5.hexdigest('P@ssw0rd' + 'admin')
 ```
 
+## Symmetric Encryptions  
 
+To list all supported algorithms
+```ruby
+require 'openssl'
+puts OpenSSL::Cipher.ciphers
+```
+
+To unserdatand the cipher naming (eg. `AES-128-CBC`), it devided to 3 parts seperated by hyphen `<Name>-<Key_length>-<Mode>`
+
+Symmetric encrption algorithms modes need 3 import data in order to work
+
+1. Key (Password)
+2. Initial Vector (iv)
+3. Data to encrypt (plan text) 
+
+
+### AES encryption 
+
+#### Encrypt
+```ruby
+require "openssl"
+
+data = 'Rubyfu Secret Mission: Go Hack The World!'
+
+# Setup the cipher
+cipher = OpenSSL::Cipher::AES.new('256-CBC')    # Or use: OpenSSL::Cipher.new('AES-256-CBC')
+cipher.encrypt                                  # Initializes the Cipher for encryption. (Must be called before key, iv, random_key, random_iv)
+key = cipher.random_key                         # If hard coded key, it must be 265-bits length
+iv = cipher.random_iv                           # Generate iv
+encrypted = cipher.update(data) + cipher.final  # Finalize the encryption
+
+```
+
+#### Dencrypt
+```ruby
+decipher = OpenSSL::Cipher::AES.new('256-CBC')  # Or use: OpenSSL::Cipher::Cipher.new('AES-256-CBC')
+decipher.decrypt                                # Initializes the Cipher for dencryption. (Must be called before key, iv, random_key, random_iv)
+decipher.key = key                              # Or generate secure random key: cipher.random_key
+decipher.iv = iv                                # Generate iv
+plain = decipher.update(encrypted) + decipher.final  # Finalize the dencryption
+
+```
+
+**Resources**
+- [OpenSSL::Cipher docs](https://ruby-doc.org/stdlib-2.3.3/libdoc/openssl/rdoc/OpenSSL/Cipher.html)
+- [(Symmetric) Encryption With Ruby (and Rails)](http://stuff-things.net/2015/02/12/symmetric-encryption-with-ruby-and-rails/)
 
 ## Enigma script
 
