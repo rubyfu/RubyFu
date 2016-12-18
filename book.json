@@ -7,8 +7,7 @@
         "addcssjs",
         "expandable-chapters",
         "language-picker",
-        "sitemap",
-        "navigator"
+        "sitemap"
     ],
     "pluginsConfig": {
         "addcssjs": {
