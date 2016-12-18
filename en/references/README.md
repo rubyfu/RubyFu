@@ -4,9 +4,8 @@
         * [Download and installation][1]
     * How to GitBook [Videos]
         * [Create GitBook online][2]
-        * [Install GitBook Editor (on Linux Ubuntu)][3]
+        * [Download and Install Gitbook package][3]
         * [Create GitBook with Editor][4]
-        * [Install the Rgitbook package][5]
     * Markdown [Documentations]
         * [Markdown docs - GitBook | Official docs][6]
         * [Mastering Markdown - GitHub | Mastering Markdown][7]
@@ -65,7 +64,7 @@
 ---
 [1]: https://www.gitbook.com/editor
 [2]: https://www.youtube.com/watch?v=kdpfRLpu0FQ
-[3]: https://www.youtube.com/watch?v=2e21bHRqG9M
+[3]: https://www.gitbook.com/editor
 [4]: https://www.youtube.com/watch?v=IkV2HQLAKHY
 [5]: https://www.youtube.com/watch?v=V23NKHiHWg4
 [6]: http://help.gitbook.com/format/markdown.html
