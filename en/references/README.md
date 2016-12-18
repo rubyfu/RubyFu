@@ -35,7 +35,7 @@
     * [Hackerrank][27]
     * [RubySec - Ruby Security Advisory][28]
     * [/r/ruby_infosec](https://www.reddit.com/r/ruby_infosec "/r/ruby_infosec")
-    * A dozen (or so) ways to start sub-processes in Ruby: [Part 1][30], [Part 2][31], [Part 3][32]
+    * A dozen (or so) ways to start sub-processes in Ruby: [[Part 1][30], [Part 2][31], [Part 3][32]]
 * **Hacking Tools built with ruby**
     * Metasploit framework - Exploitation framework [ [link](https://github.com/rapid7/metasploit-framework) ]
     * Beef framework - XSS framework [ [link](http://beefproject.com/) ]
