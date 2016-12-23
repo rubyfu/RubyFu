@@ -112,7 +112,7 @@ end
 
 ```
 
-Things can go much father, *msfconsole*! 
+Things can go much frather, *msfconsole*, maybe? 
 
 
 
