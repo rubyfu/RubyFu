@@ -134,7 +134,7 @@ This is a Heading
 This is another contents.
 ```
 
-### Parsing comma seperated data from a file
+### Parsing comma separated data from a file
 During pentest, you may need to parse a text that has a very common format as follows
 
 ```
