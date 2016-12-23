@@ -51,7 +51,6 @@ C:\Users\%USERNAME%\AppData\Local\Google\Chrome\User Data\Default\
 ```ruby
 require 'sqlite3'
 
-
 # List all Cookies
 db = SQLite3::Database.new "Cookies"
 db.execute  "SELECT host_key, path, name, value FROM cookies"
