@@ -1,7 +1,10 @@
+html {
+    overflow: hidden;
+}
 /* Highlight Summery */
 .book .book-summary ul.summary li a:hover, .book .book-summary ul.summary li.active > a {
-    background: #444444;
-    color: white;
+    background: #b21818;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -21,7 +24,7 @@
 
 .logo_rubyfu {
 height: 50px;
-width: 67px;
+width: 67px;"
 }
 
 .wrap {
@@ -35,7 +38,49 @@ width: 67px;
   display: block;
   width: 100%;
   height: 55px;
-  background: #444;
+  background: #444; 
+  position: fixed;
+  top: 0;
+  z-index: 9;
 }
-
-
+#goTop, #anchors-navbar {
+    display: none !important;
+}
+.book-summary {
+    background: #444444 !important;
+}
+.book .book-summary .chapter.expanded > .articles {
+    background: #555;
+}
+.book-summary ul.summary li a, .book-summary ul.summary li span {
+    color: #fff;
+}
+.navigation, .book-header .btn {
+    color: #b21818;
+}
+.markdown-section a {
+    color: #b21818;
+}
+body {
+    padding-top: 55px;
+}
+.book .book-body .page-wrapper .page-inner section.normal pre, .book .book-body .page-wrapper .page-inner section.normal code {
+    background: #272822;
+    color: #fff;
+}
+#book-search-input {
+    background: #444;
+    color: #fff;
+}
+.markdown-section pre {
+    border: 3px solid #999;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .book-body {
+        left: 0 !important;
+    }
+    #logo img {
+        margin-left: 0;
+    }
+}
