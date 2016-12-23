@@ -83,7 +83,7 @@ Use triple ticks to highlight your command-line. ex.
 
 ### Contributing with Translation 
 To translate Rubyfu, make sure to 
-- Create a new brach for your translation 
+- Create a new branch for your translation 
 - add a sub-directory under Rubyfu's root directory with the name of the language will translate to. 
 - Update `LANGS.md` file 
 - Copy and paste the content of `en/` folder to your language folder, then translate it.
