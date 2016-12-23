@@ -26,7 +26,7 @@ Note that you don't need to install it all unless you need it.
 
 ## Modules gems
 
-Due the demanding of warpping all required gems in a one gem, we've created [hacker-gems](https://rubygems.org/gems/hacker-gems) which installs all below gems at one time.
+Due the demanding of wrapping all required gems in a one gem, we've created [hacker-gems](https://rubygems.org/gems/hacker-gems) which installs all below gems at one time.
 
 ```
 gem install hacker-gems
