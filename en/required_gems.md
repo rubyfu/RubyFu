@@ -17,12 +17,12 @@ Note that you don't need to install it all unless you need it.
   ```
 
   To run pry with best appearance
+
   ```bash
   pry --simple-prompt
   ```
 
-
-> **Note:** Most of our example will be executed on **pry** so please consider it as main part of our environment. Otherwise (when you see `#!/usr/bin/env ruby) then it means a file script to execute.`
+> **Note:** Most of our example will be executed on **pry** so please consider it as main part of our environment. Otherwise \(when you see `#!/usr/bin/env ruby) then it means a file script to execute.`
 
 ## Modules gems
 
@@ -32,17 +32,17 @@ Due the demanding of warpping all required gems in a one gem, we've created [hac
 gem install hacker-gems
 ```
 
-You might need to install some packages before to avoid any error of missing libraries 
+You might need to install some packages before to avoid any error of missing libraries
 
 ```
 sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl zlib1g-dev nmap
 ```
 
-#### Module 0x1 | Basic Ruby Kung Fu
+#### Module 0x1 \| Basic Ruby Kung Fu
 
 * colorize - Extends String class or add a ColorizedString with methods to set text color, backgroun.
 
-#### Module 0x2 | System Kung Fu
+#### Module 0x2 \| System Kung Fu
 
 * virustotal - A script for automating virustotal.com queries
 * uirusu - A tool and REST library for interacting with Virustotal.org
@@ -60,20 +60,21 @@ Useful gems to build command line applications
 * Escort - A library that makes building command-line apps in ruby so easy, you’ll feel like an expert is guiding you through it.
 * commander - The complete solution for Ruby command-line executables.
 
-#### Module 0x3 | Network Kung Fu
+#### Module 0x3 \| Network Kung Fu
 
 * geoip - searches a GeoIP database host or IP address, returns the country, city, ISP and location.
-* net-ping - A ping interface. Includes TCP, HTTP, LDAP, ICMP, UDP, WMI (for Windows).
+* net-ping - A ping interface. Includes TCP, HTTP, LDAP, ICMP, UDP, WMI \(for Windows\).
 * ruby-nmap - A Ruby interface to Nmap, the exploration tool and security / port scanner.
 * ronin-scanners - A library for Ronin that provides Ruby interfaces to various third-party security scanners.
 * net-dns - A pure Ruby DNS library, with a clean OO interface and an extensible API.
-* snmp - A Ruby implementation of SNMP (the Simple Network Management Protocol).
+* snmp - A Ruby implementation of SNMP \(the Simple Network Management Protocol\).
 * net-ssh - A pure-Ruby implementation of the SSH2 client protocol.
 * net-scp - A pure Ruby implementation of the SCP client protocol
 * ftpd - A pure Ruby FTP server library. It supports implicit and explicit TLS, IPV6, passive and active mode.
 * packetfu - A mid-level packet manipulation library for Ruby.
+* packetgen - Ruby library to easily generate and capture network packets
 
-#### Module 0x4 | Web Kung Fu
+#### Module 0x4 \| Web Kung Fu
 
 * net-http-digest\_auth - An implementation of RFC 2617 - Digest Access Authentication.
 * ruby-ntlm - NTLM implementation for Ruby
@@ -101,11 +102,11 @@ Useful gem to deal with web
 * httparty - Makes http fun! Also, makes consuming restful web services dead easy.
 * websocket - Universal Ruby library to handle WebSocket protocol.
 
-#### Module 0x5 | Exploitation Kung Fu
+#### Module 0x5 \| Exploitation Kung Fu
 
 * metasm - A cross-architecture assembler, disassembler, linker, and debugger.
 
-#### Module 0x6 | Forensic Kung Fu
+#### Module 0x6 \| Forensic Kung Fu
 
 * metasm - A cross-architecture assembler, disassembler, linker, and debugger.
 
