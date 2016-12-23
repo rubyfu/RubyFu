@@ -44,8 +44,8 @@ sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev
 
 #### Module 0x2 \| System Kung Fu
 
-* virustotal - A script for automating virustotal.com queries
-* uirusu - A tool and REST library for interacting with Virustotal.org
+* virustotal - A script for automating virustotal.com queries.
+* uirusu - A tool and REST library for interacting with Virustotal.org.
 * clipboard - Lets you access the clipboard on Linux, MacOS, Windows and Cygwin.
 
 **Extra gems**
@@ -69,26 +69,26 @@ Useful gems to build command line applications
 * net-dns - A pure Ruby DNS library, with a clean OO interface and an extensible API.
 * snmp - A Ruby implementation of SNMP \(the Simple Network Management Protocol\).
 * net-ssh - A pure-Ruby implementation of the SSH2 client protocol.
-* net-scp - A pure Ruby implementation of the SCP client protocol
+* net-scp - A pure Ruby implementation of the SCP client protocol.
 * ftpd - A pure Ruby FTP server library. It supports implicit and explicit TLS, IPV6, passive and active mode.
 * packetfu - A mid-level packet manipulation library for Ruby.
-* packetgen - Ruby library to easily generate and capture network packets
+* packetgen - Ruby library to easily generate and capture network packets.
 
 #### Module 0x4 \| Web Kung Fu
 
 * net-http-digest\_auth - An implementation of RFC 2617 - Digest Access Authentication.
-* ruby-ntlm - NTLM implementation for Ruby
-* activerecord - Databases on Rails. Build a persistent domain model by mapping database tables to Ruby
+* ruby-ntlm - NTLM implementation for Ruby.
+* activerecord - Databases on Rails. Build a persistent domain model by mapping database tables to Ruby.
 * tiny\_tds - TinyTDS - A modern, simple and fast FreeTDS library for Ruby using DB-Library.
-* activerecord-sqlserver-adapter
-* activerecord-oracle\_enhanced-adapter
+* activerecord-sqlserver-adapter.
+* activerecord-oracle\_enhanced-adapter.
 * buby - a mashup of JRuby with the popular commercial web security testing tool Burp Suite from PortSwigger.
 * wasabi - A simple WSDL parser.
 * savon - Heavy metal SOAP client.
-* httpclient - gives something like the functionality of libwww-perl \(LWP\) in Ruby
+* httpclient - gives something like the functionality of libwww-perl \(LWP\) in Ruby.
 * nokogiri -  An HTML, XML, SAX, and Reader parser.
 * twitter - A Ruby interface to the Twitter API.
-* selenium-webdriver - A tool for writing automated tests of websites. It aims to mimic the behaviour of a real user
+* selenium-webdriver - A tool for writing automated tests of websites. It aims to mimic the behaviour of a real user.
 * watir-webdriver - WebDriver-backed Watir.
 * coffee-script - Ruby CoffeeScript is a bridge to the JS CoffeeScript compiler.
 * opal - Ruby runtime and core library for JavaScript.
@@ -97,7 +97,7 @@ Useful gems to build command line applications
 Useful gem to deal with web
 
 * Mechanize - a ruby library that makes automated web interaction easy.
-* HTTP.rb - Fast, Elegant HTTP client for ruby
+* HTTP.rb - Fast, Elegant HTTP client for ruby.
 * RestClient - A class and executable for interacting with RESTful web services.
 * httparty - Makes http fun! Also, makes consuming restful web services dead easy.
 * websocket - Universal Ruby library to handle WebSocket protocol.
