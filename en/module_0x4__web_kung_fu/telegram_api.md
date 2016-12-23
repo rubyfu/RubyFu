@@ -1,14 +1,13 @@
 # Telegram API
 
-As we know that Telegram is a messaging app identifies users by their mobile number. Fortunately, Telegram has its own API -*Ruby has a wrapper gem for* [*Telegram's Bot API*](https://core.telegram.org/bots/api) called [*telegram-bot-ruby*](https://github.com/atipugin/telegram-bot-ruby) - which allows you to Integrate with other services, create custom tools, build single- and multiplayer games, build social services, do virtually anything else; Do you smell anything evil here?
+As we know that Telegram is a messaging app identifies users by their mobile number. Fortunately, Telegram has its own API -_Ruby has a wrapper gem for_ [_Telegram's Bot API_](https://core.telegram.org/bots/api) called [_telegram-bot-ruby_](https://github.com/atipugin/telegram-bot-ruby) - which allows you to Integrate with other services, create custom tools, build single- and multiplayer games, build social services, do virtually anything else; Do you smell anything evil here?
 
-- Install telegram-bot gem 
-```
-gem install telegram-bot-ruby
-```
+* Install telegram-bot gem 
+  ```
+  gem install telegram-bot-ruby
+  ```
 
-
-- Basic usage
+* Basic usage
 
 As many APIs, you have to get a [token](https://core.telegram.org/bots#botfather) to deal with your bot. Here a basic usage
 
@@ -30,14 +29,14 @@ Telegram::Bot::Client.run(token) do |bot|
   end
 end
 ```
+
 Once your run it, go to your telegram and find the bot and start chat with `/start`, try to send `/rubyfu`.
 
 ![](rubyfubot.png)
 
+* Inline bots
 
-- Inline bots
-
-If you got that evil smile from above example, you may thinking about interacting with your bots [inline](https://core.telegram.org/bots/inline) to call/@mention your bots and request more action from the bot(s).
+If you got that evil smile from above example, you may thinking about interacting with your bots [inline](https://core.telegram.org/bots/inline) to call/@mention your bots and request more action from the bot\(s\).
 
 ```ruby
 require 'telegram/bot'
@@ -58,8 +57,11 @@ bot.listen do |message|
 end
 ```
 
-A good topic about Quickly Create a Telegram Bot in Ruby can be found [here](http://www.sitepoint.com/quickly-create-a-telegram-bot-in-ruby/).
+**Resources**
 
-There are more usage and documentation for the [gem](https://github.com/atipugin/telegram-bot-ruby) and the [API](https://core.telegram.org/bots), and you can show us your evil code, and you can pull it in Rubyfu!
+* A good topic about Quickly Create a Telegram Bot in Ruby can be found [here](http://www.sitepoint.com/quickly-create-a-telegram-bot-in-ruby/).
+* There are more usage and documentation for the [gem](https://github.com/atipugin/telegram-bot-ruby) and the [API](https://core.telegram.org/bots), and you can show us your evil code, and you can pull it in Rubyfu!
+* [Bot Revolution. Know your API or die hard.](http://web.neurotiko.com/bots/2015/08/03/bots-know-your-api/)
+
 
 
