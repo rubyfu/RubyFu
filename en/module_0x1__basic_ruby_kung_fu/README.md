@@ -112,7 +112,7 @@ end
 
 ```
 
-Things can go much frather, *msfconsole*, maybe? 
+Things can go much farther, *msfconsole*, maybe? 
 
 
 
