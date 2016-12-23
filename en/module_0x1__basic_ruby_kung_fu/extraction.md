@@ -134,7 +134,7 @@ This is a Heading
 This is another contents.
 ```
 
-### Parsing comma separated data from a file
+### Parsing colon separated data from a file
 During pentest, you may need to parse a text that has a very common format as follows
 
 ```
@@ -150,7 +150,7 @@ see_also : IIII
 see_also : JJJJ
 ```
 
-The main idea is to remove repeated keys and passing it to one key with an array of values.
+The main idea is to remove _repeated_ keys and passing it to one key with an array of values.
 
 ```ruby
 #!/usr/bin/env ruby
