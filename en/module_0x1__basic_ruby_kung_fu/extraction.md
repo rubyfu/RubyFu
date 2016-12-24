@@ -179,8 +179,6 @@ def parser(file)
 end
 
 parser(file).each {|k, v| puts "#{k}:\t#{v.join(', ')}"}
-
-
 ```
 
 For one liner lover
