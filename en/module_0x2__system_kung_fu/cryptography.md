@@ -8,7 +8,30 @@
 require 'digest'
 puts Digest::MD5.hexdigest 'P@ssw0rd'
 ```
-### SHA1,2 hash
+### SHA1 hash
+
+```ruby
+require 'digest'
+puts Digest::SHA1.hexdigest 'P@ssw0rd'
+```
+
+### SHA2 hash
+In SHA2 you have 2 ways to do it
+
+**Way #1:** By creating a new SHA2 hash object with a given bit length.
+
+```ruby
+require 'digest'
+
+# 1
+sha2_256 = Digest::SHA2.new(bitlen = 256) # bitlen could be 256, 384, 512
+sha2_256.hexdigest 'P@ssw0rd'
+
+# 2
+Digest::SHA2.new(bitlen = 256).hexdigest 'P@ssw0rd'
+```
+
+**Way #2:** By Using the class directly 
 ```ruby
 require 'digest'
 puts Digest::SHA256.hexdigest 'P@ssw0rd'
