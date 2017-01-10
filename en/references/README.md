@@ -52,6 +52,7 @@
     * WATOBO - The Web Application Security Toolbox [ [link](http://watobo.sourceforge.net/) ]
     * Intrigue.io - Open Source project, discovering attack surface through OSINT [ [link](https://intrigue.io/) ]
     * OhNo - The Evil Image Builder & Meta Manipulator [ [link](https://github.com/Hood3dRob1n/OhNo) ]
+    * WhatWeb - Website Fingerprinter [ [link](https://github.com/urbanadventurer/WhatWeb) ]
     * **[**ADD YOUR RUBY HACKING TOOL HERE!**]**
 
 
