@@ -88,8 +88,6 @@ Sun Sep 27 00:59:05 AST 2015
 #=> true
 ```
 
-
-
 ### Extra
 To check the status of the backtick operation you can execute $?.success?
 #### $?
@@ -100,7 +98,9 @@ To check the status of the backtick operation you can execute $?.success?
 => true
 ```
 
-
+#### How to chose?
+a great flow chart has been made on [stackoverflow](http://stackoverflow.com/a/37329716/967283) 
+![](/images/module02/cmd_exec_chart.png)
 
 
 
