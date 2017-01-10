@@ -100,7 +100,7 @@ To check the status of the backtick operation you can execute $?.success?
 
 #### How to chose?
 a great flow chart has been made on [stackoverflow](http://stackoverflow.com/a/37329716/967283) 
-![](/images/module02/cmd_exec_chart.png)
+![](../images/module02/cmd_exec_chart.png)
 
 
 
