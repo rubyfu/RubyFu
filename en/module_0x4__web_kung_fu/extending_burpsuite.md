@@ -8,16 +8,6 @@
 
 ![](webfu__burp_setenv1.png)
 
-- JSON Crypto Helper a Ruby-based Burp Extension for JSON Encryption/Decryption [ [Part 1](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-I/) | [Part 2](http://blog.spiderlabs.com/2015/01/json-crypto-helper-a-ruby-based-burp-extension-for-json-encryptiondecryption-part-ii.html) ]
-- http://human.versus.computer/buby/
-- http://human.versus.computer/buby/rdoc/index.html
-- https://github.com/null--/what-the-waf/blob/master/what-the-waf.rb
-- https://www.pentestgeek.com/web-applications/burp-suite-tutorial-web-application-penetration-testing-part-2/
-- http://blog.opensecurityresearch.com/2014/03/extending-burp.html
-- http://www.gotohack.org/2011/05/cktricky-appsec-buby-script-basics-part.html
-- https://portswigger.net/burp/extender/
-- Burp Suite Extender API Documentations [ [link](https://portswigger.net/burp/extender/api/) ]
-- JSON Crypto Helper a Ruby-based Burp Extension for JSON Encryption/Decryption - [ [Part I](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-I/) , [Part II](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-II/) ]
 
 Import the Burp Suite Extender Core API `IBurpExtender`
 
@@ -38,7 +28,7 @@ end
 Load the plugin alert.rb
 ![](webfu__burp-ext1.png)
 
-Check Alert tab
+Check Alerts tab
 ![](webfu__burp-ext2.png)
 
 ## Buby
@@ -47,6 +37,17 @@ Buby is a mashup of JRuby with the popular commercial web security testing tool 
 
 
 
+
+**Resources**
+- JSON Crypto Helper a Ruby-based Burp Extension for JSON Encryption/Decryption [ [Part 1](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-I/) | [Part 2](http://blog.spiderlabs.com/2015/01/json-crypto-helper-a-ruby-based-burp-extension-for-json-encryptiondecryption-part-ii.html) ]
+- http://human.versus.computer/buby/
+- http://human.versus.computer/buby/rdoc/index.html
+- https://github.com/null--/what-the-waf/blob/master/what-the-waf.rb
+- https://www.pentestgeek.com/web-applications/burp-suite-tutorial-web-application-penetration-testing-part-2/
+- http://blog.opensecurityresearch.com/2014/03/extending-burp.html
+- http://www.gotohack.org/2011/05/cktricky-appsec-buby-script-basics-part.html
+- https://portswigger.net/burp/extender/
+- Burp Suite Extender API Documentations [ [link](https://portswigger.net/burp/extender/api/) ]
 
 
 
