@@ -17,6 +17,7 @@
 - http://www.gotohack.org/2011/05/cktricky-appsec-buby-script-basics-part.html
 - https://portswigger.net/burp/extender/
 - Burp Suite Extender API Documentations [ [link](https://portswigger.net/burp/extender/api/) ]
+- JSON Crypto Helper a Ruby-based Burp Extension for JSON Encryption/Decryption - [ [Part I](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-I/) , [Part II](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-II/) ]
 
 Import the Burp Suite Extender Core API `IBurpExtender`
 
