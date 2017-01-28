@@ -156,7 +156,7 @@ False Positive: alert(/6/.source)
 
 - install watir gem
 ```
-gem install watir-webdriver
+gem install watir
 ```
 
 ### GET Request
@@ -165,7 +165,7 @@ gem install watir-webdriver
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 #
-require 'watir-webdriver'
+require 'watir'
 
 browser = Watir::Browser.new :firefox
 browser.goto "http://www.altoromutual.com/search.aspx?"
@@ -183,7 +183,7 @@ Sometime you'll need to send XSS GET request from URL like `http://app/search?q=
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 #
-require 'watir-webdriver'
+require 'watir'
 
 browser = Watir::Browser.new :firefox
 wait = Selenium::WebDriver::Wait.new(:timeout => 15)
@@ -208,7 +208,7 @@ end
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 #
-require 'watir-webdriver'
+require 'watir'
 
 browser = Watir::Browser.new :firefox
 browser.window.resize_to(800, 600)
@@ -271,7 +271,7 @@ field1=""&field2=""&field3=""&field4=""
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 #
-require 'watir-webdriver'
+require 'watir'
 
 @browser = Watir::Browser.new :firefox
 @browser.window.resize_to(800, 600)     # Set browser size
@@ -317,7 +317,7 @@ One of scenarios I've faced is to exploit XSS a user profile fields and check th
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 #
-require 'watir-webdriver'
+require 'watir'
 require 'uri'
 
 @url = URI.parse "http://example.com/Users/User_Edit.aspx?userid=68"
