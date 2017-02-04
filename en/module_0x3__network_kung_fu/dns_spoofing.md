@@ -293,7 +293,7 @@ https://github.com/SilverFoxx/Spoofa/blob/master/spoofa
 
 Sources[^1] [^2] - The code has been modified and fixed
 
-<br><br><br>
+
 ---
 [1]: ../files/module03/dns_spoofing_dns-req_res.pcap.pcapng
 [^1]: [DNS Spoofing Using PacketFu](http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/)
