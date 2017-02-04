@@ -25,7 +25,7 @@ There are some awesomes website that push your programming skills via interactiv
 * [rubeque][6]
 * [Hackerrank][7]
 
-<br><br><br>
+
 ---
 [1]: references/README.md
 [5]: http://www.codewars.com/?language=ruby
