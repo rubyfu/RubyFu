@@ -295,7 +295,6 @@ More about [WordPress XML-RPC][3]
 
 
 
-<br><br><br>
 ---
 [2]: http://ruby-doc.org/stdlib-2.2.3/libdoc/xmlrpc/rdoc/XMLRPC/Client.html
 [3]: http://notes.jerzygangi.com/how-to-programatically-control-wordpress-with-ruby-using-xml-rpc/
