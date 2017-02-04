@@ -44,9 +44,6 @@ Run it
 ruby coffee2js.rb exploit.coffee
 ```
 
-
-
-
 ## Opal
 Opal is a Ruby to JavaScript source-to-source compiler. It also has an implementation of the Ruby corelib.
 
@@ -59,7 +56,7 @@ gem install opal opal-jquery
 
 
 
-<br><br><br>
+
 ---
 [1]: http://coffeescript.org
 [5]: http://js2.coffee/
