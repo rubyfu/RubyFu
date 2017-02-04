@@ -1,5 +1,9 @@
-# Rubyfu 
+---
+description: ruby for pentesters
+---
 
-![](rubyfu.png)
-***Rubyfu, where Ruby goes evil!***
+# Rubyfu
+
+![](rubyfu.png)  
+_**Rubyfu, where Ruby goes evil!**_
 
