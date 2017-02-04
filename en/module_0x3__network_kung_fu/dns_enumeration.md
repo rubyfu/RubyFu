@@ -141,7 +141,7 @@ resolver.nameservers = ["8.8.4.4" , "8.8.8.8"]
 ```
 
 
-<br><br><br>
+
 ---
 http://searchsignals.com/tutorials/reverse-dns-lookup/
 
