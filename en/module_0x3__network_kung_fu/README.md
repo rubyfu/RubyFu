@@ -188,7 +188,7 @@ Time zone:      America/Chicago
 
 
 
-<br><br><br>
+
 ---
 [1]: http://www.brownfort.com/2014/09/ip-operations-ruby/
 
