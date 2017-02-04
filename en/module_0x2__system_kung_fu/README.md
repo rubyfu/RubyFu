@@ -387,7 +387,7 @@ Sometimes we don't want to disclose our source code for whatever reason, but we 
 
 
 
-<br><br><br>
+
 ---
 [^1]: Traveling-ruby: [Official website](http://phusion.github.io/traveling-ruby/)
 [^2]: mruby CLI: [Official website](https://github.com/hone/mruby-cli)
