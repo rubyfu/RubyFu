@@ -79,6 +79,5 @@ ruby dnsteal.rb image.jpg
 
 
 
-<br><br><br>
 ---
 - [dnsteal.py](https://github.com/m57/dnsteal)
