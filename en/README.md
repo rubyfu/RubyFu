@@ -34,7 +34,7 @@ Module 0x5 whatsoever the vulnerability was, remote (FTP, IMAP, SMTP, etc.) or l
 Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your hack and/or investigation. Here you'll learn more how to deal with registry extracting browsers' information and much more.
 
 
-<br><br><br>
+
 ![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 ---
 [0]: README.md
