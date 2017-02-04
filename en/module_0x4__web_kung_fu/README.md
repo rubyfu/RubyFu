@@ -395,7 +395,7 @@ More about http.rb gem
 - [The Official repository][6]
 - [The official wiki][7]
 
-<br><br><br>
+
 ---
 [^1]: [WebShellConsole](https://github.com/KINGSABRI/WebShellConsole) is simple interactive console, interacts with simple web shells using HTTP GET rather than using browser. wsc will work with any shell use GET method. It takes care of all URL encoding too.
 - [CGI Examples](http://www.java2s.com/Code/Ruby/CGI/CatalogCGI.htm)
