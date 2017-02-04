@@ -119,7 +119,7 @@ a great flow chart has been made on [stackoverflow](http://stackoverflow.com/a/3
 
 
 
-<br><br><br>
+
 ---
 - [Ruby | Execute system commands](http://king-sabri.net/?p=2553)
 - [5 ways to run commands from Ruby](http://mentalized.net/journal/2010/03/08/5-ways-to-run-commands-from-ruby/)
