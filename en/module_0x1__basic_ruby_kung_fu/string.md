@@ -214,7 +214,7 @@ end
 puts 
 ```
 
-<br><br><br>
+
 ---
 [1]: https://github.com/fazibear/colorize
 [2]: http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html
