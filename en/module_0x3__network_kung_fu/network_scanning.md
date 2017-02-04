@@ -88,5 +88,5 @@ ruby scanner.rb 45.33.32.156    # scanme.nmap.com
 
 
 
-<br><br><br>
+
 ---

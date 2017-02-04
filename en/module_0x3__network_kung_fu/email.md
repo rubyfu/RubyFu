@@ -89,6 +89,6 @@ imap.disconnect
 
 
 
-<br><br><br>
+
 ---
 - [More useful mail operation example | alvinalexander.com](http://alvinalexander.com/search/node/ruby%20mail)
