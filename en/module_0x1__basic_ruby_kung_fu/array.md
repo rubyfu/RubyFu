@@ -44,6 +44,6 @@ short and unclean
 (32..126).map &:chr
 ```
 
-<br><br><br>
+
 ---
 [1]: https://github.com/KINGSABRI/BufferOverflow-Kit/blob/master/lib/pattern.rb
