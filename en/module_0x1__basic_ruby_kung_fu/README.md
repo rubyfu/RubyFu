@@ -117,7 +117,7 @@ Things can go much farther, *msfconsole*, maybe?
 
 
 
-<br><br><br>
+
 ---
 - [Ruby Readline Documentation and Tutorial](http://bogojoker.com/readline/)
 
