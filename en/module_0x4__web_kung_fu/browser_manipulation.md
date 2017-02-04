@@ -400,12 +400,6 @@ puts
 
 
 
-
-
-
-
-
-<br><br><br>
 ---
 - [Selenium official documentations](http://docs.seleniumhq.org/docs/)
 - [Selenium Cheat Sheet](https://gist.github.com/kenrett/7553278)
