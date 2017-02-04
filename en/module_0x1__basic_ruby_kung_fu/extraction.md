@@ -61,7 +61,8 @@ Assume we have the following string
 ```ruby
 string = "text here http://foo1.example.org/bla1 and http://foo2.example.org/bla2 and here mailto:test@example.com and here also."
 ```
-<br>
+
+
 **Using Regular Expressions**
 ```ruby
 string.scan(/https?:\/\/[\S]+/)
