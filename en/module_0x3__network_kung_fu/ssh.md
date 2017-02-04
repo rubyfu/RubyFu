@@ -229,7 +229,7 @@ Net::SCP.download!(
 
 
 
-<br><br><br>
+
 ---
 - [More SSH examples](http://ruby.about.com/sitesearch.htm?q=ruby+ssh&boost=3&SUName=ruby)
 - [Capistranorb.com](http://capistranorb.com/)
