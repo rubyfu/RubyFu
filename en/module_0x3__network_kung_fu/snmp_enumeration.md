@@ -56,6 +56,5 @@ manager.close
 
 
 
-<br><br><br>
 ---
 [1]: https://github.com/hallidave/ruby-snmp/
