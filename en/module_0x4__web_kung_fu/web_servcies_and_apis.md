@@ -29,7 +29,7 @@ A Web service (also Web Service) is defined by the W3C as "a software system des
 
 
 
-<br><br><br>
+
 ---
 - [Difference Between API And Web Service](http://microsoft-techies.blogspot.com/2014/03/difference-between-api-and-web-service.html)
 - [Application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface)
