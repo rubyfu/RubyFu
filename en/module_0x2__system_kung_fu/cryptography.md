@@ -209,9 +209,6 @@ puts 'Success!' if plain_text == decrypted
 
 
 
-
-
-<br><br><br>
 ---
 [1]: https://github.com/wimm/rubyntlm/blob/master/lib/net/ntlm.rb
 [2]: http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game
