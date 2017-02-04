@@ -154,7 +154,7 @@ More about [Savon][1]
 
 
 
-<br><br><br>
+
 ---
 [1]: http://savonrb.com/
 
