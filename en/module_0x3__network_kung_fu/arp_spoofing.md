@@ -152,7 +152,7 @@ Returns, time to wiresharking ;)
 
 
 
-<br><br><br>
+
 ---
 [^1]: Create table the easy way - [Table Generator](http://www.tablesgenerator.com/markdown_tables)
 

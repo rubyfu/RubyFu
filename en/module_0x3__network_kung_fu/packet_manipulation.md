@@ -143,7 +143,7 @@ return
 2015-03-04 23:20:38 +0300: Source IP: 192.168.0.13 --> Destination IP: 192.168.0.15
 ```
 
-<br><br><br>
+
 ---
 [^1]: [PacketFu Homepage](https://github.com/packetfu/packetfu)
 [^2]: [TCPdump Cheat sheet](http://packetlife.net/media/library/12/tcpdump.pdf)
