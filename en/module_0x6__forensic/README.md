@@ -89,7 +89,4 @@ https://www.pentestgeek.com/penetration-testing/using-metasm-to-avoid-antivirus-
 
 
 
-
-
-<br><br><br>
 ---

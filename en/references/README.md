@@ -61,7 +61,7 @@
 
 
 
-<br><br><br>
+
 ---
 [1]: https://www.gitbook.com/editor
 [2]: https://www.youtube.com/watch?v=kdpfRLpu0FQ
