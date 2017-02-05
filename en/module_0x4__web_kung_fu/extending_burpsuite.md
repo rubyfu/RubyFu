@@ -32,11 +32,9 @@ Load the plugin alert.rb
 Check Alerts tab  
 ![](webfu__burp-ext2.png)
 
-### Burp Suite Extension in Ruby template initiative 
+### Burp Suite Extension in Ruby template initiative
 
-As Rubyfu project keeps groing, we've decided to develope our vesion of make a solid place for Ruby in the information security community. We've deceided to build a repository that makes building a Burp Suite extension in Ruby is very easy and understandable. [**Repository link**](https://github.com/KINGSABRI/BurpSuite_Extension_Ruby_Template) 
-
-
+As Rubyfu project keeps groing, we've decided to develope our vesion of make a solid place for Ruby in the information security community. We've deceided to build a repository that makes building a Burp Suite extension in Ruby is very easy and understandable. [**Repository link**](https://github.com/KINGSABRI/BurpSuite_Extension_Ruby_Template)
 
 ## Buby
 
@@ -44,7 +42,7 @@ Buby is a mashup of JRuby with the popular commercial web security testing tool 
 
 **Resources**
 
-* JSON Crypto Helper a Ruby-based Burp Extension for JSON Encryption/Decryption \[ [Part 1](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-I/) \| [Part 2](http://blog.spiderlabs.com/2015/01/json-crypto-helper-a-ruby-based-burp-extension-for-json-encryptiondecryption-part-ii.html) \]
+* JSON Crypto a Ruby-based Burp Extension for JSON Encryption/Decryption \[ [Part 1](https://www.trustwave.com/Resources/SpiderLabs-Blog/JSON-Crypto-Helper-a-Ruby-based-Burp-Extension-for-JSON-Encryption/Decryption---Part-I/) \| [Part 2](http://blog.spiderlabs.com/2015/01/json-crypto-helper-a-ruby-based-burp-extension-for-json-encryptiondecryption-part-ii.html) \]
 * [http://human.versus.computer/buby/](http://human.versus.computer/buby/)
 * [http://human.versus.computer/buby/rdoc/index.html](http://human.versus.computer/buby/rdoc/index.html)
 * [https://github.com/null--/what-the-waf/blob/master/what-the-waf.rb](https://github.com/null--/what-the-waf/blob/master/what-the-waf.rb)
