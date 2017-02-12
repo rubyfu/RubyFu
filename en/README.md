@@ -5,7 +5,8 @@ description: ruby for pentesters
 # RubyFu
 
 ![](rubyfu.png)  
-_**Rubyfu, where Ruby goes evil!**_
+_**Rubyfu, where Ruby goes evil!**_  
+[![Twitter Follow](https://img.shields.io/twitter/follow/Rubyfu.svg?style=social&label=Follow&style=plastic)](https://twitter.com/intent/follow?screen_name=Rubyfu)
 
 This book is a great collection of ideas, tricks and skills that could be useful for Hackers. It's a unique extraction reference, summarizes a lot of research and experience in order to achieve your **w00t** in shortest and smartest way. Rubyfu is where you'll find plug-n-hack code, Rubyfu is a book to use not only to read, it's where ruby goes evil.
 
@@ -44,4 +45,6 @@ Module 0x5 whatsoever the vulnerability was, remote \(FTP, IMAP, SMTP, etc.\) or
 Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your hack and/or investigation. Here you'll learn more how to deal with registry extracting browsers' information and much more.
 
 ## ![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+
 
