@@ -1,14 +1,18 @@
 # File manipulation
 
 ## Simple Steganography
-Simple script to hide a file `file.pdf` in an image `image.png` then write it into `steg.png` image which is originally the `image.png`
+
+Simple script to hide a file `file.pdf` in an image `image.png` then write it into `steg.png` image which is originally the `image.png`  
 Then, it recovers the `file.pdf` from `steg.png` to `hola.pdf`.
 
+
+{% label %}stegano.rb{% endlabel %}
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
-sec_file = File.read 'file.pdf'
-nor_file = File.read 'image.png'
+file1, file2 = ARGV
+sec_file = File.read file1 'file.pdf'
+nor_file = File.read file2 'image.png'
 sep = '*------------------------*'
 one_file = [nor_file, sep, sec_file]
 
@@ -24,11 +28,13 @@ recov_file = File.read('steg.png').force_encoding("BINARY").split(sep).last
 # Write sec_file to hola.pdf
 File.open('hola.pdf', 'wb') {|file| file.print recov_file}
 ```
+
 **Note:** This has nothing to do with bypassing AV.
 
 ## Simple Binary file to Hex
 
 **hex-simple.rb**
+
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
@@ -53,16 +59,17 @@ ruby -e "puts  File.open('hellolinux').read.each_byte.map { |b| '\x%02X' % b }.j
 ```
 
 return
+
 ```
 \x7F\x45\x4C\x46\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x80\x80\x04\x08\x34\x00\x00\x00\xCC\x00\x00\x00\x00\x00\x00\x00\x34\x00\x20\x00\x02\x00\x28\x00\x04\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x80\x04\x08\x00\x80\x04\x08\xA2\x00\x00\x00\xA2\x00\x00\x00\x05\x00\x00\x00\x00\x10\x00\x00\x01\x00\x00\x00\xA4\x00\x00\x00\xA4\x90\x04\x08\xA4\x90\x04\x08\x0E\x00\x00\x00\x0E\x00\x00\x00\x06\x00\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xB8\x04\x00\x00\x00\xBB\x01\x00\x00\x00\xB9\xA4\x90\x04\x08\xBA\x0D\x00\x00\x00\xCD\x80\xB8\x01\x00\x00\x00\xBB\x00\x00\x00\x00\xCD\x80\x00\x00\x48\x65\x6C\x6C\x6F\x2C\x20\x57\x6F\x72\x6C\x64\x21\x0A\x00\x2E\x73\x68\x73\x74\x72\x74\x61\x62\x00\x2E\x74\x65\x78\x74\x00\x2E\x64\x61\x74\x61\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0B\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00\x80\x80\x04\x08\x80\x00\x00\x00\x22\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\xA4\x90\x04\x08\xA4\x00\x00\x00\x0E\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xB2\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00
 ```
-
 
 > Note if want to change the hex prefix from \x to anything, just change `'\x%x'` to whatever you want, or remove it!.
 
 ## Simple Hexdump
 
 **hexdump.rb**
+
 ```ruby
 #!/usr/bin/env ruby
 #
@@ -77,9 +84,9 @@ def hexdump(filename, start = 0, finish = nil, width = 16)
       print '%02x ' % c
       ascii << (c.between?(32, 126) ? c : ?.)
       if ascii.length >= width
-	puts ascii
-	ascii = ''
-	print '%06x  ' % (counter + 1)
+    puts ascii
+    ascii = ''
+    print '%06x  ' % (counter + 1)
       end
     end
     throw :done if finish && finish <= counter
@@ -96,7 +103,6 @@ if $0 == __FILE__
     hexdump filename, *(ARGV.map {|arg| arg.to_i })
   end
 end
-
 ```
 
 ```
@@ -104,6 +110,7 @@ ruby hexdump.rb hellolinux
 ```
 
 return
+
 ```
 000000  7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 .ELF............
 000010  02 00 03 00 01 00 00 00 80 80 04 08 34 00 00 00 ............4...
@@ -130,12 +137,12 @@ return
 000160  00 00 00 00 01 00 00 00 00 00 00 00             ............
 ```
 
+## Finding weak file permissions
 
-
-## Finding weak file permissions 
-One of the important task to do post exploitation is find weak executable file permissions which might be executed buy root/administrator user trying to elevate our privileges on the system. At the same time, our scripts must be applicable for all systems 
+One of the important task to do post exploitation is find weak executable file permissions which might be executed buy root/administrator user trying to elevate our privileges on the system. At the same time, our scripts must be applicable for all systems
 
 **find777.rb**
+
 ```ruby
 # KING SABRI | @KINGSABRI
 # Find all executable, writable files in the path
@@ -156,19 +163,12 @@ puts wx_file search
 ```
 
 You can search for read, write, execute permissions, so your iteration block will be like
+
 ```ruby
   search.select do |file|
     File.stat(file).mode.to_s(8)[-3..-1].to_i == 777
   end  
 ```
-
-
-
-
-
-
-
-
 
 
 
