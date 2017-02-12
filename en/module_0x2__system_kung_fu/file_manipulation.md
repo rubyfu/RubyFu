@@ -11,8 +11,8 @@ Then, it recovers the `file.pdf` from `steg.png` to `hola.pdf`.
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 file1, file2 = ARGV
-sec_file = File.read file1 'file.pdf'
-nor_file = File.read file2 'image.png'
+sec_file = File.read file1 #'file.pdf'
+nor_file = File.read file2 #'image.png'
 sep = '*------------------------*'
 one_file = [nor_file, sep, sec_file]
 
