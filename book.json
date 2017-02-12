@@ -8,7 +8,7 @@
         "expandable-chapters",
         "language-picker",
         "sitemap",
-        "codeblock-label"
+        "-copy-code"
     ],
     "pluginsConfig": {
         "addcssjs": {
