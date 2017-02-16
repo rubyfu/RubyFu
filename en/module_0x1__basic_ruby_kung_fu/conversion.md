@@ -1,113 +1,125 @@
 # Conversion
+
 String conversion and/or encoding is an important part of exploitation and firewall bypass
+
 ## Convert String/Binary to Hex
 
-If no prefix is needed, you just do the following 
+If no prefix is needed, you just do the following
 
 ```ruby
-"Rubyfu".unpack("H*")
+"Rubyfu".unpack("H*")    #=> ["527562796675"]
 ```
 
-Otherwise, see the below ways 
+Otherwise, see the below ways
 
 for a single character
-```ruby
-'\x%02x' % "A".ord
-```
-**Note:** the symbols ```*""``` are equal of ```.join```
 
 ```ruby
-"ABCD".unpack('H*')[0].scan(/../).map {|h| '\x'+h }.join
-```
-or
-```ruby
-"ABCD".unpack('C*').map { |c| '\x%02x' % c }.join
-```
-or
-```ruby
-"ABCD".split("").map {|h| '\x'+h.unpack('H*')[0] }*""
-```
-or
-```ruby
-"ABCD".split("").map {|c|'\x' + c.ord.to_s(16)}.join
-```
-or
-```ruby
-"ABCD".split("").map {|c|'\x' + c.ord.to_s(16)}*""
-```
-or
-```ruby
-"ABCD".chars.map {|c| '\x' + c.ord.to_s(16)}*""
-```
-or
-```ruby
-"ABCD".each_byte.map {|b| b.to_s(16)}.join
-```
-or
-```ruby
-"ABCD".each_char.map {|c| '\x'+(c.unpack('H*')[0])}.join
-```
-or
-```ruby
-"ABCD".chars.map {|c| '\x%x' % c.ord}.join
-```
-[Source: Ruby | Convert ASCII to HEX][1]
-
-
-Returns
-```
-\x41\x42\x43\x44
+'\x%02x' % "A".ord    #=> "\\x41"
 ```
 
+**Note:** the symbols `*""` are equal of `.join`
 
+```ruby
+"ABCD".unpack('H*')[0].scan(/../).map {|h| '\x'+h }.join    #=> "\\x41\\x42\\x43\\x44"
+```
+
+or
+
+```ruby
+"ABCD".unpack('C*').map { |c| '\x%02x' % c }.join    #=> "\\x41\\x42\\x43\\x44"
+```
+
+or
+
+```ruby
+"ABCD".split("").map {|h| '\x'+h.unpack('H*')[0] }*""    #=> "\\x41\\x42\\x43\\x44"
+```
+
+or
+
+```ruby
+"ABCD".split("").map {|c|'\x' + c.ord.to_s(16)}.join    #=> "\\x41\\x42\\x43\\x44"
+```
+
+or
+
+```ruby
+"ABCD".split("").map {|c|'\x' + c.ord.to_s(16)}*""    #=> "\\x41\\x42\\x43\\x44"
+```
+
+or
+
+```ruby
+"ABCD".chars.map {|c| '\x' + c.ord.to_s(16)}*""    #=> "\\x41\\x42\\x43\\x44"
+```
+
+or
+
+```ruby
+"ABCD".each_byte.map {|b| b.to_s(16)}.join    #=> "41424344"
+```
+
+or
+
+```ruby
+"ABCD".each_char.map {|c| '\x'+(c.unpack('H*')[0])}.join    #=> "\\x41\\x42\\x43\\x44"
+```
+
+or
+
+```ruby
+"ABCD".chars.map {|c| '\x%x' % c.ord}.join    #=> "\\x41\\x42\\x43\\x44"
+```
 
 ## Convert Hex to String/Binary
+
 ```ruby
-["41424344"].pack('H*')
+["41424344"].pack('H*')    #=> ABCD
 ```
+
 or
+
 ```ruby
-"41424344".scan(/../).map { |x| x.hex.chr }.join
+"41424344".scan(/../).map { |x| x.hex.chr }.join    #=> ABCD
 ```
+
 or for raw socket
-```ruby
-"41424344".scan(/../).map(&:hex).pack("C*")
-```
-
-Return
-```
-ABCD
-```
-
-in-case of binary that out of `.chr` range. For example you may need to convert IP-address to hex raw then send it through socket. The case of just converting it to hex would not work for your 
 
 ```ruby
->> ip
+"41424344".scan(/../).map(&:hex).pack("C*")    #=> ABCD
+```
+
+in-case of binary that out of `.chr` range. For example you may need to convert IP-address to hex raw then send it through socket. The case of just converting it to hex would not work for your
+
+```ruby
+>> ip = "192.168.100.10"
 => "192.168.100.10"
 >> ip.split(".").map {|c| '\x%02x' % c.to_i}.join 
 => "\\xc0\\xa8\\x64\\x0a"
 ```
-As you can see, Ruby reads returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to inter this value(with double-quotes) `"\xc0\xa8\x64\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which what should be passed to the raw socket not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is ruby escapes the backslash(`\`). 
 
-To solve this issue, use pack to convert integers to  8-bit unsigned (unsigned char)
+As you can see, Ruby reads returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to inter this value\(with double-quotes\) `"\xc0\xa8\x64\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which what should be passed to the raw socket not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is ruby escapes the backslash\(`\`\).
+
+To solve this issue, use pack to convert integers to  8-bit unsigned \(unsigned char\)
+
 ```ruby
-ip.split(".").map(&:to_i).pack("C*")
-
+ip.split(".").map(&:to_i).pack("C*")    #=> "\xC0\xA8d\n"
 ```
 
+**Note about hex:** Sometimes you might face a none printable characters especially due dealing with binary raw. In this case, append **\(**`# -*- coding: binary -*-`**\)** at the top of your file to fix any interpretation issue.
 
-**Note about hex:** Sometimes you might face a none printable characters especially due dealing with binary raw. In this case, append **(**`# -*- coding: binary -*-`**)** at the top of your file to fix any interpretation issue.
+## Convert Hex\(Return address\) to Little-Endian format
 
-
-
-## Convert Hex(Return address) to Little-Endian format
 Little-Endian format is simply reversing the string such as reversing/backwarding "Rubyfu" to "ufybuR" which can be done by calling `reverse` method of `String` class
+
 ```ruby
 "Rubyfu".reverse
 ```
+
 In exploitation, this is not as simple as that since we're dealing with hex values that may not represent printable characters.
 
-So assume we have `0x77d6b141` return address which we've to convert it to Little-Endian format to allow CPU to read it correctly. 
+So assume we have `0x77d6b141` return address which we've to convert it to Little-Endian format to allow CPU to read it correctly.
 
 Generally speaking, it's really a trivial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's one time process but this is not the case of you have ROP chain that has to be staged in your exploit. To do so simply `pack` it as array
 
@@ -121,19 +133,24 @@ It happens that sometime you get an error because of none Unicode string issue. 
 [0x77d6b141].pack('V').force_encoding("UTF-8")
 ```
 
-If you have ROP chain then it's not decent to apply this each time so you can use the first way and append **(**`# -*- coding: binary -*-`**)** at top of your exploit file.
+If you have ROP chain then it's not decent to apply this each time so you can use the first way and append **\(**`# -*- coding: binary -*-`**\)** at top of your exploit file.
 
 ## Convert to Unicode Escape
 
 **Hexadecimal unicode escape**
+
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
 ```
-Or using unpack 
+
+Or using unpack
+
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
 ```
+
 shorter way
+
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| "\\u00%x" % i }.join
 ```
@@ -141,56 +158,70 @@ shorter way
 **Octal unicode escape**
 
 For octal escape is exact the same except we convert the string to octal instead of hexadecimal
+
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
 ```
 
 **Escape Sequences in Double-Quoted Strings**
+
 ```ruby
 "\u{52 75 62 79 66 75}"
 ```
 
 ## En/Decode base-64 String
+
 We'll present it by many ways
 
 **Encode string**
+
 ```ruby
 ["RubyFu"].pack('m0')
 ```
+
 or
+
 ```ruby
 require 'base64'
 Base64.encode64 "RubyFu"
 ```
 
 **Decode**
+
 ```ruby
 "UnVieUZ1".unpack('m0')
 ```
+
 or
+
 ```ruby
  Base64.decode64 "UnVieUZ1"
 ```
-> **TIP: **
->The string unpack method is incredibly useful for converting data we read as strings back to their original form. To read more, visit the String class reference at www.ruby-doc.org/core/classes/String.html.
 
+> **TIP: **  
+> The string unpack method is incredibly useful for converting data we read as strings back to their original form. To read more, visit the String class reference at www.ruby-doc.org/core/classes/String.html.
 
 ## En/Decode URL String
-URL encoding/decoding is something known to most people. From hacker's point of view, we need it a lot in client-side vulnerability the most. 
+
+URL encoding/decoding is something known to most people. From hacker's point of view, we need it a lot in client-side vulnerability the most.
 
 **Encoding string**
+
 ```ruby
 require 'uri'
 puts URI.encode 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
 ```
+
 **Decoding string**
+
 ```ruby
 require 'uri'
 puts URI.decode "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E"
 ```
+
 You can encode/decode and none URL string, of-course.
 
-The above way will encode any non URL standard strings only(ex. `<>"{}`) however if you want to encode the full string use `URI.encode_www_form_component`
+The above way will encode any non URL standard strings only\(ex. `<>"{}`\) however if you want to encode the full string use `URI.encode_www_form_component`
 
 ```ruby
 puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
@@ -199,27 +230,32 @@ puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><sc
 ## HTML En/Decode
 
 **Encoding HTML**
+
 ```ruby
 require 'cgi'
 CGI.escapeHTML('"><script>alert("Rubyfu!")</script>')
 ```
-Returns 
+
+Returns
+
 ```
 &quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;
 ```
 
 **Decoding HTML**
+
 ```ruby
 require 'cgi'
 CGI.unescapeHTML("&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;")
 ```
-Returns 
+
+Returns
+
 ```
 "><script>alert("Rubyfu!")</script>
 ```
 
 ## En/Decode SAML String
-
 
 **Decoding SAML**
 
@@ -235,17 +271,18 @@ inflated = Base64::decode64(CGI.unescape(saml))
 # You don't need below code if it's not deflated/compressed
 zlib = Zlib::Inflate.new(-Zlib::MAX_WBITS)
 zlib.inflate(inflated)
-
 ```
+
 Returns
+
 ```ruby
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" ID=\"agdobjcfikneommfjamdclenjcpcjmgdgbmpgjmo\" Version=\"2.0\" IssueInstant=\"2007-04-26T13:51:56Z\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" ProviderName=\"google.com\" AssertionConsumerServiceURL=\"https://www.google.com/a/solweb.no/acs\" IsPassive=\"true\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">google.com</saml:Issuer><samlp:NameIDPolicy AllowCreate=\"true\" Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified\" /></samlp:AuthnRequest>\r\n"
 ```
-[Source][2]
-[More about SAML][3]
 
+[Source](http://stackoverflow.com/questions/3253298/base64-decode64-in-ruby-returning-strange-results)  
+\[More about SAML\]\[3\]
 
 ---
-[1]: http://king-sabri.net/?p=2613
-[2]: http://stackoverflow.com/questions/3253298/base64-decode64-in-ruby-returning-strange-results
-[3]: http://dev.gettinderbox.com/2013/12/16/introduction-to-saml/
+
+\[3\]: [http://dev.gettinderbox.com/2013/12/16/introduction-to-saml/](http://dev.gettinderbox.com/2013/12/16/introduction-to-saml/)
+
