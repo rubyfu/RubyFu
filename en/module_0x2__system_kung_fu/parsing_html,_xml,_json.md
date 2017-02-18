@@ -1,3 +1,7 @@
+---
+Description: Parsing HTML XML JSOM in Ruby
+---
+
 # Parsing HTML, XML, JSON
 
 Generally speaking the best and easiest way for parsing HTML and XML is using **Nokogiri** library
@@ -6,7 +10,6 @@ Generally speaking the best and easiest way for parsing HTML and XML is using **
   ```
   gem install nokogiri
   ```
-
 
 ## HTML
 
@@ -215,12 +218,4 @@ You can convert it to json just by using \`.to\_json\` method
 ```ruby
 xss.to_json
 ```
-
-
-
-
-
-
-
-
 
