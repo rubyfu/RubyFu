@@ -5,20 +5,15 @@ description: Ruby System Shell Command Execution
 # Command Execution
 
 Some things to think about when choosing between these ways are:  
-1. Do you just want stdout or do you need stderr as well? or even separated out?  
-2. How big is your output? Do you want to hold the entire result in memory?  
-3. Do you want to read some of your output while the subprocess is still running?  
-4. Do you need result codes?  
-5. Do you need a ruby object that represents the process and lets you kill it on demand?
+1. Are you going to interact with none interactive shell, like `ncat` ? 
+2. Do you just want stdout or do you need stderr as well? or even separated out?  
+3. How big is your output? Do you want to hold the entire result in memory?  
+4. Do you want to read some of your output while the subprocess is still running?  
+5. Do you need result codes?  
+6. Do you need a ruby object that represents the process and lets you kill it on demand?
+
 
 The following ways are applicable on all operating systems.
-
-### Kernel\#\` \(backticks\)
-
-```ruby
->> `date`
-#=> "Sun Sep 27 00:38:54 AST 2015\n"
-```
 
 ### Kernel\#exec
 
@@ -28,12 +23,34 @@ Sun Sep 27 00:39:22 AST 2015
 RubyFu( ~ )-> 
 ```
 
+
 ### Kernel\#system
 
 ```ruby
 >> system 'date'
 Sun Sep 27 00:38:01 AST 2015
 #=> true
+```
+
+#### Dealing with `ncat` session? 
+If you ever wondered how to do deal with interactive command like `passwd` due `ncat` session in Ruby?. You must propuly was using `python -c 'import pty; pty.spawn("/bin/sh")'`
+Well, in Ruby it's really easy using `exec` or `system`. The main trick is to forward STDERR to STDOUT so you can see system errors.
+
+**exec**
+```ruby
+ruby -e 'exec("/bin/sh 2>&1")'
+```
+**system** 
+```ruby
+ruby -e 'system("/bin/sh 2>&1")'
+```
+
+
+### Kernel\#\` \(backticks\)
+
+```ruby
+>> `date`
+#=> "Sun Sep 27 00:38:54 AST 2015\n"
 ```
 
 ### IO\#popen
