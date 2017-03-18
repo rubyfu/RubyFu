@@ -56,7 +56,7 @@ class Pcap
 
   def initialize(pcap_file)
     @pcap_file = open(pcap_file, 'wb')
-    # Pcap Global Header: https://wiki.wireshark.org/Development/LibpcapFileFormat
+    # Pcap Global https://wiki.wireshark.org/Development/LibpcapFileFormat#Global_Header
     global_header = [
         0xa1b2c3d4,   # magic_number: used to identify pcap files
         2,            # version_major
@@ -72,7 +72,7 @@ class Pcap
   def write(data)
     time_stamp  = Time.now.to_f.round(2).to_s.split('.').map(&:to_i)
     data_length = data.length
-    # Pcap Record (Packet) Header
+    # Pcap Record (Packet) Header: https://wiki.wireshark.org/Development/LibpcapFileFormat#Record_.28Packet.29_Header
     packet_header = [
         time_stamp[0],   # ts_sec timestamp seconds
         time_stamp[1],   # ts_usec timestamp microseconds
