@@ -43,7 +43,7 @@ Download [ftp.pcap](https://github.com/rubyfu/RubyFu/blob/master/files/module06/
 
 ## Capturing and building PCAP file
 
-Sometime we don't have the time or option to install external liberaries on our environment. Let's work capture all packets on all interfaces then see how to build a [**pcap**](https://wiki.wireshark.org/Development/LibpcapFileFormat) file to write in it.
+Sometime we don't have the time or option to install external libraries on our environment. Let's work capture all packets on all interfaces then see how to build a [**pcap**](https://wiki.wireshark.org/Development/LibpcapFileFormat) file to write in it.
 
 ```ruby
 #!/usr/bin/env ruby
