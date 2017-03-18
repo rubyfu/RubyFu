@@ -89,7 +89,7 @@ end
 pcap   = Pcap.new(ARGV[0])
 socket = Socket.new(Socket::PF_PACKET, Socket::SOCK_RAW, 0x03_00)
 loop do
-  raw_data = socket.recvfrom(2048)[0]
+  raw_data = socket.recvfrom(65535)[0]
   pcap.write raw_data
 end
 ```
