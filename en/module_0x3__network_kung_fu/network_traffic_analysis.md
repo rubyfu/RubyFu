@@ -84,7 +84,7 @@ class Pcap
   rescue
     @pcap_file.close
   end
-end
+end 
 
 pcap   = Pcap.new(ARGV[0])
 socket = Socket.new(Socket::PF_PACKET, Socket::SOCK_RAW, 0x03_00)
@@ -121,7 +121,7 @@ pkt = PacketFu::Packet.parse p
   pp pkt  
 end
 
-###### \#
+###### \
 
 # array 56
 
@@ -131,7 +131,7 @@ packets = PcapFile.file\_to\_array '/home/KING/wireless.pcap'
 packets.each_with\_index do \|packet , ref\|  
   puts "_" _ 75  
   puts "Reference:  \#{ref}"  
-  puts "\_" _ 75
+  puts "\_" \_ 75
 
 pkt = Packet.parse\(packet\)  
   puts pkt.dissect  
@@ -139,7 +139,7 @@ pkt = Packet.parse\(packet\)
 
 end
 
-###### \#
+###### \
 
 packets = PcapFile.read\_packets '/home/KING/wireless.pcap'  
 packet = packets\[56\]  
