@@ -35,12 +35,12 @@ gem install hacker-gems
 You might need to install some packages before to avoid any error of missing libraries
 
 ```
-sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl zlib1g-dev nmap
+sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl nmap
 ```
 
 #### Module 0x1 \| Basic Ruby Kung Fu
 
-* colorize - Extends String class or add a ColorizedString with methods to set text color, backgroun.
+* colorize - Extends String class or add a ColorizedString with methods to set text color, background.
 
 #### Module 0x2 \| System Kung Fu
 
