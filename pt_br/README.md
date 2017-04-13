@@ -1,48 +1,48 @@
 ---
-description: ruby for pentesters
+Descrição: Ruby para Pentesters
 ---
 
 # RubyFu
 
 ![](rubyfu.png)  
-_**Rubyfu, where Ruby goes evil!**_  
+_**RubyFu, Onde Ruby se torna Mal!**_  
 [![Twitter Follow](https://img.shields.io/twitter/follow/Rubyfu.svg?style=social&label=Follow&style=plastic)](https://twitter.com/intent/follow?screen_name=Rubyfu)
 
-This book is a great collection of ideas, tricks and skills that could be useful for Hackers. It's a unique extraction reference, summarizes a lot of research and experience in order to achieve your **w00t** in shortest and smartest way. Rubyfu is where you'll find plug-n-hack code, Rubyfu is a book to use not only to read, it's where ruby goes evil.
+Esse livro é uma grande coleção de ideias, macetes e habilidades que podem ser úteis para Hackers. É uma referência de extração única, resume muita pesquisa e experiência para alcançar seu **estado da arte** de maneira interessante. Rubyfu é onde você vai encontrar códigos únicos, Rubyfu é um livro para usar e não somente ler, é onde Ruby se torna mal(BlackHat). 
 
-### Who should read this book?
+### A quem se destina esse livro?
 
-Ideally, Hackers!; Those who have enough experience to hack our world and have _at least_ basics in Ruby programming language. To get the best benefits of the book, open Rubyfu.net and pin its browser tab; Use irb/pry as interpreter to run the code or run it as script; Enhance the code to fit your needs and yeah, tweet the code and its output to [@Rubyfu](https://twitter.com/rubyfu) to share it with our awesome community.
+Idealmente, Hackers!; Aqueles quem tem experiência suficiente para hackear nosso mundo e tem pelo  menos conhecimentos básicos na linguagem Ruby. Para obter o melhor do livro, Abra Rubyfu.net e salve como favorito; Use irb/pry com interpretador para rodar os códigos ou scripts; Melhore o código para que o mesmo se adeque as suas necessidades, tweet os códigos e suas saídas para [@rubyfu](https://twitter.com/rubyfu) para compartilhar com nossa maravilhosa comunidade.
 
-### Organization of the book
+### Organização do livro
 
-#### Module 0x0 \| [Introduction](README.md)
+#### Módulo 0x0 \| [Introdução](README.md)
 
-Module 0x0 is just a smooth start for you, whether you're a reader, writer, hacker or someone came to say hi. In this module you'll find a great start for you as a contributor, where all kinds of contributions are welcome starting from proofreading ending to topic writing.
+Módulo 0x0 é apenas um início suave para você que é um leitor, escritor, hacker ou apenas alguém que veio para dizer oi. Nesse módulo você irá econtrar um começo bacana, terá explicações de como contribuir. Onde todos os tipos de contribuições são bem vindas, iniciando pela revisão e terminando com o tópico para escritores.
 
-#### Module 0x1 \| [Basic Ruby Kung Fu](module_0x1__basic_ruby_kung_fu/README.md)
+#### Módulo 0x1 \| [Kung Fu básico de Ruby](module_0x1__basic_ruby_kung_fu/README.md)
 
-Module 0x1 is an awesome collection of the most commonly needed String manipulation, extraction and conversion. Dealing with real cases that you might face during your hack. Dealing with encoding and data conversion could be trivial or complex topic and here we don't care, we'll solve it.
+Módulo 0x1 é uma coleção fantástica da maior parte de manipulações de String, extração e conversão. Lidando com casos reais que você verá durante seus hacks. Lidando também com conversão de dados que podem ser triviais ou complexos, mas, aqui nós não nos importamos, nós vamos soluciona-los.
 
-#### Module 0x2 \| [System Kung Fu](module_0x2__system_kung_fu/README.md)
+#### Módulo 0x2 \| [Kung Fu para Sistemas](module_0x2__system_kung_fu/README.md)
 
-Module 0x2 digs more in system hacking, where the system command, file manipulation, cryptography and generating the common hashes are needed. Getting bind and reverse shell with really simple ways requires skill you need no doubt. Almost all Linux systems are shipped-up with ruby and if it doesn't?, no problem we'll get rid of it.
+Módulo 0x2 canvando mais fundo dentro do hacking. Onde são necessários comandos de sistema, manipulação de arquivo, criptografia e geração de hashes comuns. Obtendo shell reverso e bind de maneiras realmente simples que exigem habilidades que você necessita sem dúvidas.
 
-#### Module 0x3 \| [Network Kung Fu](module_0x3__network_kung_fu/README.md)
+#### Módulo 0x3 \| [Kung Fu para Rede](module_0x3__network_kung_fu/README.md)
 
-Module 0x3 dives deeper in the network sockets, protocols, packet manipulation, more service enumeration ways and gives us more hacky and awesome code to get the job done. Working with network protocols need a deeper knowledge of how these protocols work in order to exchange understandable data and yeah, we'll figure it out right here.
+Módulo 0x3 mergulha ainda mais sobre sockets de rede, protocolos, manipulação de pacotes, enumeração de serviços e códigos incríveis  para fazer o todo o trabalho. Trabalhar com protocolos de rede precisam de um conhecimento profundo de como os mesmos funcionam para trocar dados. Nós vamos descobrir isso aqui.
 
-#### Module 0x4 \| [Web Kung Fu](module_0x4__web_kung_fu/README.md)
+#### Módulo 0x4 \| [Kung Fu para Web](module_0x4__web_kung_fu/README.md)
 
-Module 0x4 web is the most common place to share information, however, it's a more delicious place to hack. Dealing with web known with its uniqueness for dealing with many and many technologies in one page only. Here we'll know how to deal with GET, POST requests, web services, databases, APIs and manipulating the browser to make it our soldier.
+Módulo 0x4 web é o lugar mais comum para compartilhar informação, contudo, é o lugar mais delicioso para hackear. Lidando com a web que é conhecida por sua singularidade de lidar com muitas tecnologias em uma única página. Aqui nós vamos saber como lidar com os verbos HTTP como GET, POST e serviços web, banco de dados, API's e manipulação de navegadores para torna-los nossos soldados.
 
-#### Module 0x5 \| [Exploitation Kung Fu](module_0x5__exploitation_kung_fu/README.md)
+#### Módulo 0x5 \| [Kung Fu para Exploitação](module_0x5__exploitation_kung_fu/README.md)
 
-Module 0x5 whatsoever the vulnerability was, remote \(FTP, IMAP, SMTP, etc.\) or local \(file format, local system\) you'll need to know how to build fuzzers and skeleton exploit for that. If you get there you'll need a simple, clean and stable way to build your exploit. Here you'll know how to build your fuzzer, exploit and porting your exploit to Metasploit and how to write your own Metasploit modules too.
+Módulo 0x5 Seja qual for a vulnerabilidade, remota \(FTP, IMAP, SMPT, etc.\) ou local \(formato de arquivo, sistema local\) você precisar saber como construir fuzzers e exploits para tal, Se você chegar lá, você precisará de um simples, limpo e estável jeito de construir seus exploits. Aqui você vai aprender como construí-los e portar os mesmos  para o Metasploit e como escrever seus próprios módulos do Metasploit também.
 
-#### Module 0x6 \| [Forensic Kung Fu](module_0x6__forensic/README.md)
+#### Módulo 0x6 \| [Kung Fu para Forense](module_0x6__forensic/README.md)
 
-Module 0x6 whoever you're, good or bad guy you'll need forensic skills in your hack and/or investigation. Here you'll learn more how to deal with registry extracting browsers' information and much more.
+Módulo 0x6 Quem quer que você seja, uma pessoa boa ou ruim, você precisa de habilidades em seus hacks e/ou investigação. Aqui você vai aprender como lidar com registros de extrações de informações do navegador e muito mais.
 
 ## ![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
