@@ -1,7 +1,7 @@
 # Contribuição
-Esse livro está sob a licença [CC BY-NC-SA License][0] Nós apreciamos todo tipo de contribuição, distribuição e agradeçemos pelo empenho dos contribuidores, para sempre. 
+Esse livro está sob a licença [CC BY-NC-SA License][0] Nós apreciamos todo tipo de contribuição, distribuição e agradecemos pelo empenho dos contribuidores, para sempre! 
 
-Nota: Os códigos nesse livro são testados em versões maiores que 'Ruby 2.2.0
+Nota: Os códigos nesse livro são testados em versões maiores que 'Ruby 2.2.0'
 
 ## Metódos de Contribuição
 Existem muitos tipos de contribuição que podem ajudar a tornar esse licro cada vez melhor.
@@ -45,37 +45,36 @@ Por favor, procure tudo que precisa saber sobre GitBook e a linguagem markdown n
 Ainda não sabe por onde começar a contribuir? Vá para [TODO_list](contributors/todo.md) e cheque o itens que ainda não foram resolvidos.
 ### Contributing with Code
 
-##### Ruby code
-* Use the triple ticks ` ``` `  followed by `ruby` then your code in between then ` ``` ` to get ruby code highlighted. e.g.
+##### Código Ruby
+* Use tripla crase ` ``` ` seguido de `ruby` e mantenha seu código entre ` ``` ` para realçar seu código ruby. Exemplo:
 
         ```ruby
-        puts "Ruby Code here"
+        puts "Código Ruby Aqui"
         ```
-* Explain the main idea -with some details- of the code, if you explain every line that would be great but it's not a must.
-* Choose the correct Module.
-* Make your title clear.
-* Use Text editor/ide for code identification before pasting your code
-* Mention the source, if you copied or developed a code that created by others please mention the source in the footer. e.g.
+* Explique a ideia principal -Com alguns detalhes- do código, Será muito bom se você puder explicar cada linha, mas, não é uma obrigação.
+* Escolha o Módulo correto.
+* Faça um título limpo.
+* Use um Editor de texto/IDE  para identar seu código antes de colar seu código.
+* Mecione a fonte, Se você copiou ou melhorou um código criado por outros. Por favor mencione a fonte no rodapé. Exemplo:
 
         ```ruby
-        puts "Your good code"
+        puts "Seu código!"
         ```
-        [Source][1]
-    Then add the following to the footer
+        [Fonte][1]
+    E adicione-o no rodapé.
 
-        [1]: http://TheSouceCodeURL
+        [1]: http://AURLdaFontedoCódigo
 
-    Your notes should be under the footer's line. Add the following to initiate the footer if it does not yet exist
-
+    Suas notas devem estar abaixo da linha do rodapé. Adicione o seguinte para iniciar o rodapé se ele ainda não existir:
         <br><br><br>
         ---
-        YOUR NOTES SHALL BE HERE
+        SUAS NOTAS DEVEM FICAR AQUI
 
-* Try to use readable code, if you have to add more tricky/skilled code then explain it well
-    > **Remember!** Hacker's code **=!** Cryptic code
+* Tente usar códigos legíveis, Se você tiver que adcionar mais códigos Habilidosos explique-os.
+    > **Lembre-se!** Códigos Hacker **=!** códigos criptografados.
 
 
-##### Command-line
+##### Linha de Comando
 Use triplas crases para realçar suas linhas de código. exemplo.
     ```
     ls
