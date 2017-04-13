@@ -1,14 +1,13 @@
-# Required Gems
+# Gems
 
-I'd like to list all external gems that might be used in this book. This list will be updated once new gem required.
+Eu gostaria de listar todas a gems externas que podem ser usadas nesse livro. Essa lista será atualizada sempre que aparecer uma nova.
 
-Note that you don't need to install it all unless you need it.
+Observe que você não precisa instalar todas elas, ao menos que que precise delas.
 
-## Main Gems
-
-* Pry - An IRB alternative and runtime developer console.
-* pry-doc - Pry Doc is a Pry REPL plugin. Extending documentation support for the REPL by improving the `show-doc & show-source commands.`
-* pry-byebug - Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution.
+## Gems Principais
+* Pry - Uma alternativa ao IRB e console de desenvolvimento em tempo de execução.
+* pry-doc - Pry Doc é um plugin. Amplia a documentação e suporte.
+* pry-byebug - Combina 'pry' com 'byebug'. Adiciona os comandos 'step(passo)', 'next(passo)', 'finish(termine)', 'continue' e 'break(pare)' para controlar a execução. 
 
   ```
   gem install pry
@@ -16,15 +15,15 @@ Note that you don't need to install it all unless you need it.
   gem install pry-byebug
   ```
 
-  To run pry with best appearance
+  Para rodar o pry com a melhor aparência
 
   ```bash
   pry --simple-prompt
   ```
 
-> **Note:** Most of our example will be executed on **pry** so please consider it as main part of our environment. Otherwise \(when you see `#!/usr/bin/env ruby) then it means a file script to execute.`
+> **Nota:** A maiot parte dos nossos exemplos vão ser executados no **pry**  então, considere ele como parte do nosso ambiente. De outra forma \(quando você ver `#!usr/bin/env ruby)` significa que é um arquivo de script para executar.
 
-## Modules gems
+## Módulos gems
 
 Due the demanding of wrapping all required gems in a one gem, we've created [hacker-gems](https://rubygems.org/gems/hacker-gems) which installs all below gems at one time.
 
