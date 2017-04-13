@@ -4,10 +4,9 @@ Esse livro está sob a licença [CC BY-NC-SA License][0] Nós apreciamos todo ti
 Nota: Os códigos nesse livro são testados em versões maiores que 'Ruby 2.2.0'
 
 ## Metódos de Contribuição
-Existem muitos tipos de contribuição que podem ajudar a tornar esse licro cada vez melhor.
+Existem muitos tipos de contribuição que podem ajudar a tornar esse livro cada vez melhor.
 
 * Adicionando códigos (mostre seu kung-fu).
-* Contribution by adding more explanation for existing code.
 * Adicionando mais explicações para o código existente.
 * Melhorando a qualidade dos códigos ou alternativas ao mesmo.
 * Melhorando a qualidade do livro:
@@ -29,7 +28,7 @@ Existem muitos tipos de contribuição que podem ajudar a tornar esse licro cada
 Por favor, procure tudo que precisa saber sobre GitBook e a linguagem markdown na seção [References][1]. Um bom começo pode ser consultado em [how to use it from official              readme][2]. Você pode usar facilmente a ferramenta de edição do GitBook[Desktop_editor][3].
 
 1. Crie uma conta no [GitHub][5].
-2. Fork [RubyFu repository][4].
+2. Fork [Repositório_RubyFu][4].
 3. Clone o seu repositório RubyFy em sua máquina 
    
    `git clone https://github.com/[YourGithubAccount]/RubyFu` 
@@ -43,7 +42,7 @@ Por favor, procure tudo que precisa saber sobre GitBook e a linguagem markdown n
 
 
 Ainda não sabe por onde começar a contribuir? Vá para [TODO_list](contributors/todo.md) e cheque o itens que ainda não foram resolvidos.
-### Contributing with Code
+### Contribuindo com Códigos
 
 ##### Código Ruby
 * Use tripla crase ` ``` ` seguido de `ruby` e mantenha seu código entre ` ``` ` para realçar seu código ruby. Exemplo:
@@ -66,6 +65,7 @@ Ainda não sabe por onde começar a contribuir? Vá para [TODO_list](contributor
         [1]: http://AURLdaFontedoCódigo
 
     Suas notas devem estar abaixo da linha do rodapé. Adicione o seguinte para iniciar o rodapé se ele ainda não existir:
+       
         <br><br><br>
         ---
         SUAS NOTAS DEVEM FICAR AQUI
@@ -80,7 +80,7 @@ Use triplas crases para realçar suas linhas de código. exemplo.
     ls
     ``` 
 
-### Contribuição com Tradução 
+### Contribuindo com Tradução 
 Para traduzir RubyFu, tenha certeza de
 - Criar um novo branch para sua tradução
 - Adicionar um sub-diretório na pasta raiz do RubyFu com o nome do idioma para qual deseja traduzir.
@@ -91,7 +91,7 @@ Para traduzir RubyFu, tenha certeza de
 Por favor! Não esqueça de marcar o repositório como **Watch** para fazer suas traduções atualizadas!
 
 ### Contribuições Gerais
-General contribution might be topic requests, proofreading, spilling, book organization and style. All these contributions are welcome however has to be discussed on [Rubyfu issues][7] especially things regarding to topics and/or book organization and styling. At the same time don't hesitate to report even single word observation about the book, it's for you at the end of the day.
+Contribuições gerais podem ser requisições, revisões, organização do livro e estilo do memso. Todas essas cotribuições são bem vindas, contudo tem que ser discutidas em [Rubyfu_issues][7] especialmente as coisasa respeito do tópicos e/ou organização do livro e estilo. Ao mesmo tempo não hesite de reportar cada palavra observada sobre o livro. Afinal de contas é pra você. 
 
 
 > **Nota:** Como esse livro é implementado dinamicamente e sem ordem de capítulo especifica, é difícil fazer notas de rodapé de maneira ordenada com números de todo o livro, então, até que eu encotre uma solução melhor, Irei organizar por cada página separadamente.
