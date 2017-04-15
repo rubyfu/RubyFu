@@ -1,13 +1,14 @@
 # Cryptography
 
+## Generating Hashes
 
-## Generating Hashes 
+### MD5 hash
 
-###  MD5 hash
 ```ruby
 require 'digest'
 puts Digest::MD5.hexdigest 'P@ssw0rd'
 ```
+
 ### SHA1 hash
 
 ```ruby
@@ -16,9 +17,10 @@ puts Digest::SHA1.hexdigest 'P@ssw0rd'
 ```
 
 ### SHA2 hash
+
 In SHA2 you have 2 ways to do it
 
-**Way #1:** By creating a new SHA2 hash object with a given bit length.
+**Way \#1:** By creating a new SHA2 hash object with a given bit length.
 
 ```ruby
 require 'digest'
@@ -31,7 +33,8 @@ sha2_256.hexdigest 'P@ssw0rd'
 Digest::SHA2.new(bitlen = 256).hexdigest 'P@ssw0rd'
 ```
 
-**Way #2:** By Using the class directly 
+**Way \#2:** By Using the class directly
+
 ```ruby
 require 'digest'
 puts Digest::SHA256.hexdigest 'P@ssw0rd'
@@ -39,7 +42,17 @@ puts Digest::SHA384.hexdigest 'P@ssw0rd'
 puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ```
 
+Way \#3: Generate Linux-like Shadow password
+
+```ruby
+require 'digest/sha2'
+password = 'P@ssw0rd'
+salt = rand(36**8).to_s(36)
+shadow_hash = password.crypt("$6$" + salt)
+```
+
 ### Windows LM Password hash
+
 ```ruby
 require 'openssl'
 
@@ -49,11 +62,11 @@ end
 
 def gen_keys(str)
   split7(str).map do |str7| 
-    
+
     bits = split7(str7.unpack("B*")[0]).inject('') do |ret, tkn| 
       ret += tkn + (tkn.gsub('1', '').size % 2).to_s 
     end
-    
+
     [bits].pack("B*")
   end
 end
@@ -74,9 +87,11 @@ end
 
 puts lm_hash "P@ssw0rd"
 ```
-[Source | RubyNTLM][1]
+
+[Source \| RubyNTLM](https://github.com/wimm/rubyntlm/blob/master/lib/net/ntlm.rb)
 
 ### Windows NTLMv1 Password hash
+
 ```ruby
 require 'openssl'
 ntlmv1 = OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
@@ -84,6 +99,7 @@ puts ntlmv1
 ```
 
 ### Windows NTLMv2 Password hash
+
 ```ruby
 require 'openssl'
 ntlmv1 = OpenSSL::Digest::MD4.hexdigest "P@ssw0rd".encode('UTF-16LE')
@@ -93,37 +109,41 @@ puts ntlmv2
 ```
 
 ### MySQL Password hash
+
 ```ruby
 puts "*" + Digest::SHA1.hexdigest(Digest::SHA1.digest('P@ssw0rd')).upcase
 ```
 
 ### PostgreSQL Password hash
+
 PostgreSQL hashes combined password and username then adds **md5** in front of the hash
+
 ```ruby
 require 'digest/md5'
 puts 'md5' + Digest::MD5.hexdigest('P@ssw0rd' + 'admin')
 ```
 
-## Symmetric Encryptions  
+## Symmetric Encryptions
 
 To list all supported algorithms
+
 ```ruby
 require 'openssl'
 puts OpenSSL::Cipher.ciphers
 ```
 
-To unserdatand the cipher naming (eg. `AES-128-CBC`), it devided to 3 parts seperated by hyphen `<Name>-<Key_length>-<Mode>`
+To unserdatand the cipher naming \(eg. `AES-128-CBC`\), it devided to 3 parts seperated by hyphen `<Name>-<Key_length>-<Mode>`
 
 Symmetric encrption algorithms modes need 3 import data in order to work
 
-1. Key (password)
-2. Initial Vector (iv)
-3. Data to encrypt (plain text) 
+1. Key \(password\)
+2. Initial Vector \(iv\)
+3. Data to encrypt \(plain text\) 
 
-
-### AES encryption 
+### AES encryption
 
 #### Encrypt
+
 ```ruby
 require "openssl"
 
@@ -135,28 +155,28 @@ cipher.encrypt                                  # Initializes the Cipher for enc
 key = cipher.random_key                         # If hard coded key, it must be 265-bits length
 iv = cipher.random_iv                           # Generate iv
 encrypted = cipher.update(data) + cipher.final  # Finalize the encryption
-
 ```
 
 #### Dencrypt
+
 ```ruby
 decipher = OpenSSL::Cipher::AES.new('256-CBC')  # Or use: OpenSSL::Cipher::Cipher.new('AES-256-CBC')
 decipher.decrypt                                # Initializes the Cipher for dencryption. (Must be called before key, iv, random_key, random_iv)
 decipher.key = key                              # Or generate secure random key: cipher.random_key
 decipher.iv = iv                                # Generate iv
 plain = decipher.update(encrypted) + decipher.final  # Finalize the dencryption
-
 ```
 
 **Resources**
-- [OpenSSL::Cipher docs](https://ruby-doc.org/stdlib-2.3.3/libdoc/openssl/rdoc/OpenSSL/Cipher.html)
-- [(Symmetric) Encryption With Ruby (and Rails)](http://stuff-things.net/2015/02/12/symmetric-encryption-with-ruby-and-rails/)
+
+* [OpenSSL::Cipher docs](https://ruby-doc.org/stdlib-2.3.3/libdoc/openssl/rdoc/OpenSSL/Cipher.html)
+* [\(Symmetric\) Encryption With Ruby \(and Rails\)](http://stuff-things.net/2015/02/12/symmetric-encryption-with-ruby-and-rails/)
 
 ## Enigma script
 
 | ![](../../images/module02/Cryptography__wiringdiagram.png) |
-|:---------------:|
-| **Figure 1.** Enigma machine diagram  |
+| :---: |
+| **Figure 1.** Enigma machine diagram |
 
 ```ruby
 Plugboard = Hash[*('A'..'Z').to_a.shuffle.first(20)]
@@ -205,11 +225,10 @@ puts "Encrypted '#{plain_text}' to '#{encrypted = input(plain_text)}'"
 puts "Decrypted '#{encrypted}' to '#{decrypted = input(encrypted)}'"
 puts 'Success!' if plain_text == decrypted
 ```
-[Source | Understanding the Enigma machine with 30 lines of Ruby][2]
 
-
+[Source \| Understanding the Enigma machine with 30 lines of Ruby](http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game)
 
 ---
-[1]: https://github.com/wimm/rubyntlm/blob/master/lib/net/ntlm.rb
-[2]: http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game
+
+
 
