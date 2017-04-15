@@ -42,7 +42,7 @@ puts Digest::SHA384.hexdigest 'P@ssw0rd'
 puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ```
 
-Way \#3: Generate Linux-like Shadow password
+**Way \#3:** Generate Linux-like Shadow password
 
 ```ruby
 require 'digest/sha2'
