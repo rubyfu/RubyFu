@@ -18,7 +18,7 @@ puts Digest::SHA1.hexdigest 'P@ssw0rd'
 
 ### SHA2 hash
 
-In SHA2 you have 2 ways to do it
+In SHA2 you have 2 ways to do it. 
 
 **Way \#1:** By creating a new SHA2 hash object with a given bit length.
 
@@ -42,7 +42,7 @@ puts Digest::SHA384.hexdigest 'P@ssw0rd'
 puts Digest::SHA512.hexdigest 'P@ssw0rd'
 ```
 
-**Way \#3:** Generate Linux-like Shadow password
+**Bonus: Generate Linux-like Shadow password**
 
 ```ruby
 require 'digest/sha2'
