@@ -25,10 +25,10 @@ Existem muitos tipos de contribuição que podem ajudar a tornar esse livro cada
 ## Como?
 
 ### Começando a Contribuir
-Por favor, procure tudo que precisa saber sobre GitBook e a linguagem markdown na seção [References][1]. Um bom começo pode ser consultado em [how to use it from official              readme][2]. Você pode usar facilmente a ferramenta de edição do GitBook[Desktop_editor][3].
+Por favor, procure tudo que precisa saber sobre GitBook e a linguagem markdown na seção [Referências][1]. Um bom começo pode ser consultado em [Como usar isso a partir do README][2]. Você pode usar facilmente a ferramenta de edição do GitBook[Desktop editor][3].
 
 1. Crie uma conta no [GitHub][5].
-2. Fork [Repositório_RubyFu][4].
+2. Fork [Repositório do RubyFu][4].
 3. Clone o seu repositório RubyFy em sua máquina 
    
    `git clone https://github.com/[YourGithubAccount]/RubyFu` 
@@ -91,7 +91,7 @@ Para traduzir RubyFu, tenha certeza de
 Por favor! Não esqueça de marcar o repositório como **Watch** para fazer suas traduções atualizadas!
 
 ### Contribuições Gerais
-Contribuições gerais podem ser requisições, revisões, organização do livro e estilo do memso. Todas essas cotribuições são bem vindas, contudo tem que ser discutidas em [Rubyfu_issues][7] especialmente as coisasa respeito do tópicos e/ou organização do livro e estilo. Ao mesmo tempo não hesite de reportar cada palavra observada sobre o livro. Afinal de contas é pra você. 
+Contribuições gerais podem ser requisições, revisões, organização do livro e estilo do memso. Todas essas cotribuições são bem vindas, contudo tem que ser discutidas em [Rubyfu issues][7] especialmente as coisasa respeito do tópicos e/ou organização do livro e estilo. Ao mesmo tempo não hesite de reportar cada palavra observada sobre o livro. Afinal de contas é pra você. 
 
 
 > **Nota:** Como esse livro é implementado dinamicamente e sem ordem de capítulo especifica, é difícil fazer notas de rodapé de maneira ordenada com números de todo o livro, então, até que eu encotre uma solução melhor, Irei organizar por cada página separadamente.

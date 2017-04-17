@@ -21,59 +21,60 @@ Observe que você não precisa instalar todas elas, ao menos que que precise del
   pry --simple-prompt
   ```
 
-> **Nota:** A maiot parte dos nossos exemplos vão ser executados no **pry**  então, considere ele como parte do nosso ambiente. De outra forma \(quando você ver `#!usr/bin/env ruby)` significa que é um arquivo de script para executar.
+> **Nota:** A maior parte dos nossos exemplos vão ser executados no **pry**  então, considere ele como parte do nosso ambiente. De outra forma \(quando você ver `#!usr/bin/env ruby)` significa que é um arquivo de script para executar.
 
 ## Módulos gems
 
-Due the demanding of wrapping all required gems in a one gem, we've created [hacker-gems](https://rubygems.org/gems/hacker-gems) which installs all below gems at one time.
+Pela demanda de ter todas as gems requeridas em apenas um gem, nós criamos [hacker-gems](https://rubygems.org/gems/hacker-gems) que instala todas as gems acima de uma só vez.
 
 ```
 gem install hacker-gems
 ```
 
-You might need to install some packages before to avoid any error of missing libraries
+You might need to install some packages before to avoid any error of missing libraries(REVISAR ESSA PARTE)
+Você precisa instalar alguns pacotes antes, para não ver mensagens de erros e bibliotecas que faltam.
 
 ```
 sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl nmap
 ```
 
-#### Module 0x1 \| Basic Ruby Kung Fu
+#### Módulo 0x1 \| Ruby Kung Fu Básico
 
-* colorize - Extends String class or add a ColorizedString with methods to set text color, background.
+* colorize - Extende a classe string ou adiciona uma string colorida com metódos para deixa-las coloridas, plano de fundo(background).
 
-#### Module 0x2 \| System Kung Fu
+#### Módulo 0x2 \| Kung Fu para Sistema
 
-* virustotal - A script for automating virustotal.com queries.
+* Um script para automatizar pesquisas ao virustotal.com.
 * uirusu - A tool and REST library for interacting with Virustotal.org.
-* clipboard - Lets you access the clipboard on Linux, MacOS, Windows and Cygwin.
+* clipboard - Deixa acessar o clipboard em Linux, MacOS, Windows e Cygwin.
 
-**Extra gems**
+**Gems extras**
 
-Useful gems to build command line applications
+Gems úteis para construir aplicações de linha de comando.
 
-* tty-prompt - A beautiful and powerful interactive command line prompt.
-* Thor - Create a command-suite app simply and easily, as well as Rails generators.
-* GLI - Create awesome, polished command suites without a lot of code.
-* Slop - Create simple command-line apps with a syntax similar to trollop.
-* Highline - handle user input and output via a “Q&A” style API, including type conversions and validation.
-* Escort - A library that makes building command-line apps in ruby so easy, you’ll feel like an expert is guiding you through it.
-* commander - The complete solution for Ruby command-line executables.
+* tty-prompt - Um prompt de comando bonito, poderoso e interativo.
+* Thor - Cria app com uma suíte de comandos simples e fácil, assim como os geradores de Rails
+* GLI - Cria suítes de comandos limpos sem precisão de muitos códigos.
+* Slop - Cria aplicações de linha de comando simples com syntax parecida com a do trollop.
+* Highline - Manuseia entrada e saída de usúarios via uma "Q&A" API , incluído tipos de conversões e validações.
+* Escort - Uma biblíoteca que que constrói aplicativos de linha de comando em ruby muito fácil, você vai se sentir como um ninja enquanto passa por esse módulo.
+* commander - Uma solução completa para executaveis de linha de comando em Ruby.
 
-#### Module 0x3 \| Network Kung Fu
+#### Módulo 0x3 \| Kung Fu para Redes
 
-* geoip - searches a GeoIP database host or IP address, returns the country, city, ISP and location.
-* net-ping - A ping interface. Includes TCP, HTTP, LDAP, ICMP, UDP, WMI \(for Windows\).
-* ruby-nmap - A Ruby interface to Nmap, the exploration tool and security / port scanner.
-* ronin-scanners - A library for Ronin that provides Ruby interfaces to various third-party security scanners.
-* net-dns - A pure Ruby DNS library, with a clean OO interface and an extensible API.
-* snmp - A Ruby implementation of SNMP \(the Simple Network Management Protocol\).
-* net-ssh - A pure-Ruby implementation of the SSH2 client protocol.
-* net-scp - A pure Ruby implementation of the SCP client protocol.
-* ftpd - A pure Ruby FTP server library. It supports implicit and explicit TLS, IPV6, passive and active mode.
+* geoip - Procura por localização de endereços IP, retorna país, cidade, ISP e localização.
+* net-ping - Um interface de ping. Inclúi TCP, HTTP, LDAP, ICMP, UDP, WMI \(para Windows\).
+* ruby-nmap - Uma interface em ruby para o Nmap, a ferramenta de exploração e scanner de porta / segurança.
+* ronin-scanners - Uma biblíoteca para  Ronin que que prover  várias interfaces para scanners.
+* net-dns - Uma biblíoteca pura de DNS, com uma interface limpa e extensível API.
+* snmp - Uma implementação Ruby para o SNMP \(Simple Network Management Protocol\).
+* net-ssh - A pure-Ruby implementation of the SSH2 client protocol. Uma implementação pura de cliente do protocolo SSH2.
+* net-scp - Uma implementação pura para cliente SCP do protocolo SCP.
+* ftpd - Uma biblíoteca de servidores FTP puro em Ruby. Suporta TLS, IPV6, modos ativos e passivos.
 * packetfu - A mid-level packet manipulation library for Ruby.
-* packetgen - Ruby library to easily generate and capture network packets.
+* packetgen - Biblíoteca Ruby para gerar e capturar pacotes de rede facilmente.
 
-#### Module 0x4 \| Web Kung Fu
+#### Módulo 0x4 \| Kung Fu para WEB
 
 * net-http-digest\_auth - An implementation of RFC 2617 - Digest Access Authentication.
 * ruby-ntlm - NTLM implementation for Ruby.
@@ -85,29 +86,29 @@ Useful gems to build command line applications
 * wasabi - A simple WSDL parser.
 * savon - Heavy metal SOAP client.
 * httpclient - gives something like the functionality of libwww-perl \(LWP\) in Ruby.
-* nokogiri -  An HTML, XML, SAX, and Reader parser.
-* twitter - A Ruby interface to the Twitter API.
-* selenium-webdriver - A tool for writing automated tests of websites. It aims to mimic the behaviour of a real user.
+* nokogiri -   HTML, XML, SAX, and Reader parser.
+* twitter - Uma interface Ruby  para a API do Twitter.
+* selenium-webdriver - Ferramenta para escrever testes de sites. Ela também imita o comportamento de um usuário real.
 * watir-webdriver - WebDriver-backed Watir.
-* coffee-script - Ruby CoffeeScript is a bridge to the JS CoffeeScript compiler.
-* opal - Ruby runtime and core library for JavaScript.
+* coffee-script - Ruby CoffeeScript é uma ponte para compiladores JS.
+* opal - Biblíoteca de tempo de execução  para JavaScript.
 
 **Extra gems**  
-Useful gem to deal with web
+Gems úteis para web
 
-* Mechanize - a ruby library that makes automated web interaction easy.
-* HTTP.rb - Fast, Elegant HTTP client for ruby.
-* RestClient - A class and executable for interacting with RESTful web services.
-* httparty - Makes http fun! Also, makes consuming restful web services dead easy.
-* websocket - Universal Ruby library to handle WebSocket protocol.
+* Mechanize - Biblíoteca  para automatizar interação web.
+* HTTP.rb - Fast, Elegant HTTP client for ruby. Cliente HTTP rápido e elegante para ruby.
+* RestClient - Uma classe e executável para intereção com serviços WEB RESTful.
+* httparty - Faz com que o  HTTP se torne divertido!
+* websocket - Biblíoteca universal para manuseiar protocolos websocket.
 
-#### Module 0x5 \| Exploitation Kung Fu
+#### Módulo 0x5 \| Kung Fu para Exploitação
 
-* metasm - A cross-architecture assembler, disassembler, linker, and debugger.
+* metasm - Ferramenta para  assembler, disassembler, linker, e debugger.
 
-#### Module 0x6 \| Forensic Kung Fu
+#### Módulo 0x6 \| Forensic Kung Fu
 
-* metasm - A cross-architecture assembler, disassembler, linker, and debugger.
+* metasm - Ferramenta  assembler, disassembler, linker, e debugger.
 
 
 
