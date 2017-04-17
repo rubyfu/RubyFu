@@ -1,96 +1,95 @@
-# Conversion
+# Conversão
 
-String conversion and/or encoding is an important part of exploitation and firewall bypass
+Conversão de string e/ou encoding é uma parte importante de exploração e firewall bypass
 
-## Convert String/Binary to Hex
+## Convertendo String/binário para Hexadecimal
 
-If no prefix is needed, you just do the following
+Se nenhum prefixo é necessário, basta fazer o seguinte. 
 
 ```ruby
 "Rubyfu".unpack("H*")    #=> ["527562796675"]
 ```
 
-Otherwise, see the below ways
+De outra forma, Veja as formas abaixo
 
-for a single character
+for a single character Para apenas um caractere
 
 ```ruby
 '\x%02x' % "A".ord    #=> "\\x41"
 ```
 
-**Note:** the symbols `*""` are equal of `.join`
+**Nota:** Os símbolos `*""` são iguais a `.join`
 
 ```ruby
 "ABCD".unpack('H*')[0].scan(/../).map {|h| '\x'+h }.join    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".unpack('C*').map { |c| '\x%02x' % c }.join    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".split("").map {|h| '\x'+h.unpack('H*')[0] }*""    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".split("").map {|c|'\x' + c.ord.to_s(16)}.join    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".split("").map {|c|'\x' + c.ord.to_s(16)}*""    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".chars.map {|c| '\x' + c.ord.to_s(16)}*""    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".each_byte.map {|b| b.to_s(16)}.join    #=> "41424344"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".each_char.map {|c| '\x'+(c.unpack('H*')[0])}.join    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or
+ou
 
 ```ruby
 "ABCD".chars.map {|c| '\x%x' % c.ord}.join    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-## Convert Hex to String/Binary
+## Convertendo Hexadecimal para String/Binário
 
 ```ruby
 ["41424344"].pack('H*')    #=> ABCD
 ```
 
-or
+ou
 
 ```ruby
 "41424344".scan(/../).map { |x| x.hex.chr }.join    #=> ABCD
 ```
 
-or for raw socket
+Para sockets
 
 ```ruby
 "41424344".scan(/../).map(&:hex).pack("C*")    #=> ABCD
 ```
-
-in-case of binary that out of `.chr` range. For example you may need to convert IP-address to hex raw then send it through socket. The case of just converting it to hex would not work for your
+Em caso de binário que estão fora do range `.chr`. Por exemplo: você pode precisar converter endereços IP's para hex e enviar isso atráves de socket. Apenas converter ele para hex não vai funcionar para você.
 
 ```ruby
 >> ip = "192.168.100.10"
@@ -98,72 +97,74 @@ in-case of binary that out of `.chr` range. For example you may need to convert 
 >> ip.split(".").map {|c| '\x%02x' % c.to_i}.join 
 => "\\xc0\\xa8\\x64\\x0a"
 ```
+Como pode ver, Ruby lê e retorna `"\\xc0\\xa8\\x64\\x0a"` qual não é igual à `"\xc0\xa8\x64\x0a"`. Tente colocar esse valor \(Entre aspas duplas\)
+`"\xc0\xa8\x64\x0a"` no seu interpretador IRB diretamente e você notará que o retorno é `"\xC0\xA8d\n"` no qual pode ser passado via socket não o `"\\xc0\\xa8\\x64\\x0a"`. A causa principal é que ruby escapa as barras invertidas \(`\`\).
 
-As you can see, Ruby reads returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to inter this value\(with double-quotes\) `"\xc0\xa8\x64\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which what should be passed to the raw socket not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is ruby escapes the backslash\(`\`\).
 
-To solve this issue, use pack to convert integers to  8-bit unsigned \(unsigned char\)
+Para resolver esse problema, use pack para converter inteiros para unsigned(Não assinados ou somente números pósitivos) de 8-bit \(unsigned char\)
 
 ```ruby
 ip.split(".").map(&:to_i).pack("C*")    #=> "\xC0\xA8d\n"
 ```
 
-**Note about hex:** Sometimes you might face a none printable characters especially due dealing with binary raw. In this case, append **\(**`# -*- coding: binary -*-`**\)** at the top of your file to fix any interpretation issue.
+**Nota sobre HEX:** Algumas vezes você irá se deparar com caracteres não imprimíveis, especialmente quando lidar com binários crus. Nesse caso, acrescente **\(**`# -*- coding: binário -*-`**\)** no início de seu arquivo para reparar interpretações erradas.
 
-## Convert Hex\(Return address\) to Little-Endian format
+## Convertendo Hex\(Endereço de retorno\) para o formato Little_Endian
 
-Little-Endian format is simply reversing the string such as reversing/backwarding "Rubyfu" to "ufybuR" which can be done by calling `reverse` method of `String` class
+O formato Little-Endian  é simplesmente inverter a string, exemplo: "Rubyfy" para "ufybuR" que pode ser feito chamando o metódo `reverse` da classe `String`
 
 ```ruby
 "Rubyfu".reverse
 ```
 
-In exploitation, this is not as simple as that since we're dealing with hex values that may not represent printable characters.
+Na Exploração, não é tão simples quanto parece, já que estamos lidando com valores hexadecimais que podem não representar caracteres imprimíveis.
 
-So assume we have `0x77d6b141` return address which we've to convert it to Little-Endian format to allow CPU to read it correctly.
 
-Generally speaking, it's really a trivial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's one time process but this is not the case of you have ROP chain that has to be staged in your exploit. To do so simply `pack` it as array
+Então, assuma que nós temos o endereço de retorno `0x77d6b141` que nós devemos converter para o formato Little-Endian para permitir que o CPU leia corretamente.
+
+De maneira geral, essa é realmente uma tarefa trivial já que é simplemente converter `0x77d6b141` para `\x41\xb1\xd6\x77`, desde que seja apenas essa tarefa, mas, esse não seja o caso de você ter uma cadeia de ROP que tem que estar dentro do seu exploit. para fazer isso de forma simples `pack` como um array.
 
 ```ruby
 [0x77d6b141].pack('V')
 ```
 
-It happens that sometime you get an error because of none Unicode string issue. To solve this issue, just force encoding to UTF-8 but most of the time you will not face this issue
+Acontece de que em algumas horas você obtenha erros por causa de strings Unicode. Para resolver esse problema, apenas force o encoding de UTF-8. Mas, na maioria das vezes você não verá esse tipo de erro.
 
 ```ruby
 [0x77d6b141].pack('V').force_encoding("UTF-8")
 ```
 
-If you have ROP chain then it's not decent to apply this each time so you can use the first way and append **\(**`# -*- coding: binary -*-`**\)** at top of your exploit file.
+Se você tem uma cadeia de ROP então não é elegante aplicar isso todas as vezes, então você pode usar a primeira maneira e acrescentar **\(**`# -*- coding: binary -*-`**\)** no topo do seu exploit.
 
-## Convert to Unicode Escape
+## Convertendo para escapes Uicode
 
-**Hexadecimal unicode escape**
+**Escapes de Hexadecimal unicode**
 
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
 ```
 
-Or using unpack
+Ou usar o unpack
 
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
 ```
 
-shorter way
+de uma maneira menor
 
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| "\\u00%x" % i }.join
 ```
 
-**Octal unicode escape**
+**Escapes de Octal unicode**
 
-For octal escape is exact the same except we convert the string to octal instead of hexadecimal
+Para escapes octal é exatamente do mesmo modo execeto que convertemos a string para octal ao invés de hexadecimal
 
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
 ```
 
-**Escape Sequences in Double-Quoted Strings**
+**Escape sequências em string de aspas duplas**
 
 ```ruby
 "\u{52 75 62 79 66 75}"
@@ -171,7 +172,7 @@ For octal escape is exact the same except we convert the string to octal instead
 
 ## En/Decode base-64 String
 
-We'll present it by many ways
+Nós vamos mostrar isso de vários jeitos
 
 **Encode string**
 
@@ -179,7 +180,7 @@ We'll present it by many ways
 ["RubyFu"].pack('m0')
 ```
 
-or
+ou
 
 ```ruby
 require 'base64'
@@ -192,18 +193,18 @@ Base64.encode64 "RubyFu"
 "UnVieUZ1".unpack('m0')
 ```
 
-or
+ou
 
 ```ruby
  Base64.decode64 "UnVieUZ1"
 ```
 
-> **TIP: **  
-> The string unpack method is incredibly useful for converting data we read as strings back to their original form. To read more, visit the String class reference at www.ruby-doc.org/core/classes/String.html.
+> **Dica:**  
+> O metódo de unpack nas string é incrivelmente útil para converter dados que lemos como strings para suas formas orifinais. Para ler mais, veja a referência da classe String em www.ruby-doc.org/core/classes/String.html.
 
 ## En/Decode URL String
 
-URL encoding/decoding is something known to most people. From hacker's point of view, we need it a lot in client-side vulnerability the most.
+URL encoding/decoding é algo que a maioria das pessoas já conhecem. De ponto de vista dos hackers, nós precisamos de muito disso para a maioria das vulnerabilidades em client-side(do lado cliente)
 
 **Encoding string**
 
@@ -221,7 +222,7 @@ puts URI.decode "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(
 
 You can encode/decode and none URL string, of-course.
 
-The above way will encode any non URL standard strings only\(ex. `<>"{}`\) however if you want to encode the full string use `URI.encode_www_form_component`
+O código acima irá encodar qualquer não URL padrão de string \(ex. `<>"{}`\) de qualquer modo se você quiser encodar toda a string use `URI.encode_www_form_component`
 
 ```ruby
 puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
@@ -236,7 +237,7 @@ require 'cgi'
 CGI.escapeHTML('"><script>alert("Rubyfu!")</script>')
 ```
 
-Returns
+Retorna
 
 ```
 &quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;
@@ -249,7 +250,7 @@ require 'cgi'
 CGI.unescapeHTML("&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;")
 ```
 
-Returns
+Retorna
 
 ```
 "><script>alert("Rubyfu!")</script>
@@ -273,7 +274,7 @@ zlib = Zlib::Inflate.new(-Zlib::MAX_WBITS)
 zlib.inflate(inflated)
 ```
 
-Returns
+Retorna
 
 ```ruby
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" ID=\"agdobjcfikneommfjamdclenjcpcjmgdgbmpgjmo\" Version=\"2.0\" IssueInstant=\"2007-04-26T13:51:56Z\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" ProviderName=\"google.com\" AssertionConsumerServiceURL=\"https://www.google.com/a/solweb.no/acs\" IsPassive=\"true\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">google.com</saml:Issuer><samlp:NameIDPolicy AllowCreate=\"true\" Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified\" /></samlp:AuthnRequest>\r\n"
