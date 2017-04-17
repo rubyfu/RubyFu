@@ -1,31 +1,32 @@
-# Extraction
-String extraction is one of the main tasks that all programmers need. Sometimes it's getting even harder because we don't get an easy string presentation to extract useful data/information. Here some,
+# Extração
+Extração de string é uma das principais tarefas que todos programadores precisam realizar. Às vezes, torna-se mais difícil pois não obtemos um apresentação de string fácil para extrair dados/informações úteis. Aqui algumas.
 
-## Extracting Network Strings
+## Extraindo strings de Rede
 
 
-### Extracting MAC address from string
-We need to extract all MAC address from an arbitrary string
+### Extracting MAC address from string Extraindo Endereço MAC de strings
+Nós precisamos extrair todos os endereços MAC'S de uma string arbitrária.
+
 ```ruby
 mac = "ads fs:ad fa:fs:fe: Wind00-0C-29-38-1D-61ows 1100:50:7F:E6:96:20dsfsad fas fa1 3c:77:e6:68:66:e9 f2"
 ```
 
-**Using Regular Expressions**
+**Usando Expressão Regular**
 
-The regular expression should supports windows and Linux mac address formats.
+A expressão regular deve suportar formatos de endereços mac tanto de Windows quanto de Linux.
 
-lets to find our mac
+Vamos procurar nosso mac
 ```ruby
 mac_regex = /(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]/i
 mac.scan mac_regex
 ```
-Returns
+Retorna
 ```
 ["00-0C-29-38-1D-61", "00:50:7F:E6:96:20", "3c:77:e6:68:66:e9"]
 ```
 
-### Extracting IPv4 address from string
-We need to extract all IPv4 address from an arbitrary string
+### Extraindo endereço IPv4 de strings
+Precisamos extrair todos os endereços IPv4 de yma string arbitrária.
 
 ```ruby
 ip = "ads fs:ad fa:fs:fe: Wind10.0.4.5ows 11192.168.0.15dsfsad fas fa1 20.555.1.700 f2"
@@ -34,61 +35,63 @@ ip = "ads fs:ad fa:fs:fe: Wind10.0.4.5ows 11192.168.0.15dsfsad fas fa1 20.555.1.
 ```
 ipv4_regex = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/
 ```
-Let's to find our IPs
+Vamos achar nossos IP's
 
 ```ruby
 ip.scan ipv4_regex
 
 ```
-Returns
+Retorna
 ```
 [["10", "0", "4", "5"], ["192", "168", "0", "15"]]
 ```
 
-### Extracting IPv6 address from string
+### Extraindo endereços IPv6 de strings
 ```ruby
  ipv6_regex = /^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/
 ```
-- [Source](https://github.com/rapid7/rex-socket/blob/master/lib/rex/socket.rb)
-- See also
+- [Fonte](https://github.com/rapid7/rex-socket/blob/master/lib/rex/socket.rb)
+- Veja também
  - https://gist.github.com/cpetschnig/294476
  - http://snipplr.com/view/43003/regex--match-ipv6-address/
 
-## Extracting Web Strings
-### Extracting URLs from file
-Assume we have the following string
+## Extraindo Strings web
+### Extraindo URL's de arquivos
+Assuma que temos a seguinte string
 
 ```ruby
 string = "text here http://foo1.example.org/bla1 and http://foo2.example.org/bla2 and here mailto:test@example.com and here also."
 ```
 
 
-**Using Regular Expressions**
+**Usando Expressões Regulares**
 ```ruby
 string.scan(/https?:\/\/[\S]+/)
 ```
 
-**Using standard URI module**
-This returns an array of URLs
+**Usando o módulo 'standard URI'**
+
+Isso retorna um array de URL's
+
 ```ruby
 require 'uri'
 URI.extract(string, ["http" , "https"])
 ```
 
-### Extracting URLs from web page
-Using above tricks
+### Extraindo URLs de págins web
+Usando macetes
 
 ```ruby
 require 'net/http'
 URI.extract(Net::HTTP.get(URI.parse("http://rubyfu.net")), ["http", "https"])
 ```
-or using a regular expression
+ou usando expressão regular
 ```ruby
 require 'net/http'
 Net::HTTP.get(URI.parse("http://rubyfu.net")).scan(/https?:\/\/[\S]+/)
 ```
 
-### Extracting Email Addresses from Web Page
+### Extraindo Endereços de Email de páginas web
 
 ```ruby
 email_regex = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i
@@ -100,10 +103,10 @@ Net::HTTP.get(URI.parse("http://isemail.info/_system/is_email/test/?all")).scan(
 ```
 
 
-### Extracting Strings from HTML tags
+### Extraindo Strings de tags HTML
 
 Assume we have the following HTML contents and we need to get strings only and eliminate all HTML tags.
-
+Assuma que temos o conteúdo HTML seguinte, e precisamos pegar apenas as strings, eliminando todas as tags HTML.
 
 ```ruby
 
@@ -125,7 +128,7 @@ puts string.gsub(/<.*?>/,'').strip
 
 ```
 
-Returns
+Retorna
 ```
 Page Title
 
@@ -136,8 +139,7 @@ This is another contents.
 ```
 
 ### Parsing colon separated data from a file
-During pentest, you may need to parse a text that has a very common format as follows
-
+Durante o pentest, você pode precisar analisar textos com formatos comuns como o seguinte
 ```
 description : AAAA
 info : BBBB
@@ -151,7 +153,7 @@ see_also : IIII
 see_also : JJJJ
 ```
 
-The main idea is to remove _repeated_ keys and passing it to one key with an array of values.
+A ideia principal é remover chaves _repetidas e passa-las para uma chave com um array de valores.
 
 ```ruby
 #!/usr/bin/env ruby
@@ -166,23 +168,23 @@ def parser(file)
   hash = {} # Datastore
   splitter = file.map { |line| line.split(':', 2) }
   splitter.each do |k, v|
-    k.strip! # remove leading and trailing whitespaces
-    v.strip! # remove leading and trailing whitespaces
+    k.strip! # removendo espaços em brancos
+    v.strip! # removendo espalos em brancos
 
-    if hash[k]      # if this key exists
-      hash[k] << v  # add this value to the key's array
-    else            # if not
-      hash[k] = [v] # create the new key and add an array contains this value
+    if hash[k]      # Se essa chave existe
+      hash[k] << v  # Adicione eses valor para o array de chaves
+    else            # se não
+      hash[k] = [v] # Crie uma nova chave e adicione um array contendo esse valor
     end
   end
 
-  hash # return the hash
+  hash # retorna o hash
 end
 
 parser(file).each {|k, v| puts "#{k}:\t#{v.join(', ')}"}
 ```
 
-For one liner lover
+Para os amantes de uma linha.
 ```
 ruby -e 'h={};File.read("text.txt").split("\n").map{|l|l.split(":", 2)}.map{|k, v|k.strip!;v.strip!; h[k] ? h[k] << v : h[k] = [v]};h.each {|k, v| puts "#{k}:\t#{v.join(", ")}"}'
 ```
