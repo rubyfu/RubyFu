@@ -4,7 +4,7 @@ Extração de string é uma das principais tarefas que todos programadores preci
 ## Extraindo strings de Rede
 
 
-### Extracting MAC address from string Extraindo Endereço MAC de strings
+### Extraindo Endereço MAC de strings
 Nós precisamos extrair todos os endereços MAC'S de uma string arbitrária.
 
 ```ruby
@@ -26,7 +26,7 @@ Retorna
 ```
 
 ### Extraindo endereço IPv4 de strings
-Precisamos extrair todos os endereços IPv4 de yma string arbitrária.
+Precisamos extrair todos os endereços IPv4 de uma string arbitrária.
 
 ```ruby
 ip = "ads fs:ad fa:fs:fe: Wind10.0.4.5ows 11192.168.0.15dsfsad fas fa1 20.555.1.700 f2"
@@ -50,8 +50,8 @@ Retorna
 ```ruby
  ipv6_regex = /^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$/
 ```
-- [Fonte](https://github.com/rapid7/rex-socket/blob/master/lib/rex/socket.rb)
-- Veja também
+ - [Fonte](https://github.com/rapid7/rex-socket/blob/master/lib/rex/socket.rb)
+ - Veja também
  - https://gist.github.com/cpetschnig/294476
  - http://snipplr.com/view/43003/regex--match-ipv6-address/
 
@@ -105,8 +105,7 @@ Net::HTTP.get(URI.parse("http://isemail.info/_system/is_email/test/?all")).scan(
 
 ### Extraindo Strings de tags HTML
 
-Assume we have the following HTML contents and we need to get strings only and eliminate all HTML tags.
-Assuma que temos o conteúdo HTML seguinte, e precisamos pegar apenas as strings, eliminando todas as tags HTML.
+Assuma que temos o seguinte conteúdo HTML, e precisamos pegar apenas as strings, eliminando todas as tags HTML.
 
 ```ruby
 

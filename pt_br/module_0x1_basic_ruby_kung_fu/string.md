@@ -20,7 +20,7 @@ class String
   def colorize(text, color_code) "#{color_code}#{text}\e[0m" end
 end
 ```
-Tudo que você precisa é chamar a cor qunado você usa ```puts```
+Tudo que você precisa é chamar a cor quando você usar ```puts```
 
 ```ruby
 puts "RubyFu".red
@@ -44,7 +44,7 @@ Agora vamos explicar isso melhor.
                                    | 5 - piscando
 ```
 
-Você també pode usar uma gem externa chamada [colorized] para mais extravagantes
+Você també pode usar uma gem externa chamada [colorized] para formas mais extravagantes
 
 ```
 gem install colorize
@@ -60,7 +60,8 @@ require 'colorize'
 
 Sobrescrever nossás saídas torna mais elegantes as nossas aplicações e menos barulhenta para saídas repetidas como barras de progresso e contas.
 
-Eu li um 'Como fazer' sobre [movimentos do curso do bash][2] e acho que é conveniente termos em nossos scripts. Aqui o que foi dito até agora
+Eu li um 'Como fazer' sobre [movimentos do cursor do bash][2] e acho que é conveniente termos em nossos scripts.
+Aqui o que foi dito até agora:
 
 ```
 - Posicionando o Cursor:
@@ -189,7 +190,7 @@ It's much more elegant, isn't it?, Say yes plz
 Agora está muito mais elegante, não é? Diga sim por favor! :)
 
 Uma aplicação
-### Crie uma barra de progresso de
+### Crie uma barra de progresso
 
 ```ruby
 (1..10).each do |percent|
@@ -208,7 +209,7 @@ Um outro exemplo
   sleep 1
 end
 ```
-Usando nossa meio elegante(Após atualizar a classe String on-the-fly)
+Usando nosso meio elegante(Após atualizar a classe String on-the-fly)
 
 ```ruby
 (1..5).to_a.reverse.each do |c|

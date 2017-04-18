@@ -22,7 +22,7 @@ Irei assumir que o padrão foi igual ou menor que "20280" e nós estamos procura
 ```ruby
 pattern_offset = pattern_create.enum_for(:scan , '9Ak0').map {Regexp.last_match.begin(0)}
 ```
-Nota: Isso não considera o formato little endian, Para que exista esse código extra deve ser escrito. Para mais informações, por favor dê uma olhada aqui [code][1].
+Nota: Isso não considera o formato Little-endian. Para mais informações, por favor dê uma olhada aqui [code][1].
 
 #### Gerando todos os valores hexadecimais de `\x00` até `\xff`
 
@@ -39,7 +39,7 @@ puts (0..255).map {|b| ('\x%02X' % b)}
 ```ruby
 (32..126).map {|c| c.chr}
 ```
-De maneira melhor porém menos limpa
+De maneira mais curta porém menos limpa
 
 ```ruby
 (32..126).map &:chr

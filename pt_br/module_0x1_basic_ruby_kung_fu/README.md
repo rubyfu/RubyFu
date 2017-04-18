@@ -1,19 +1,19 @@
 # Módulo 0x1 \| Kung Fu Básico de Ruby
 
-Ruby tem habilidades maravilosa para lidar com todos os cenários de strings e arrays. Nesse cápitulo nós vamos apresentar os macetes mais conhecidos que podemos precisasr em nossa vida cheia de hacking.
+Ruby tem habilidades maravilhosas para lidar com todos os cenários de strings e arrays. Nesse cápitulo nós vamos apresentar os macetes mais conhecidos que podemos precisar em nossa vida cheia de hacking.
 
 ## Terminal
 
 ### Tamanho do Terminal
 
-Aqui tem muitas maneiras de pegar o tamanho do terminar em ruby
+Aqui tem muitas maneiras de pegar o tamanho do terminal em ruby
 
 * Pela biblíoteca padrão de IO/console
 
 ```ruby
 require 'io/console'
 rows, columns = $stdin.winsize
-# Try this now
+# Tente isso agora
 print "-" * (columns/2) + "\n" + ("|" + " " * (columns/2 -2) + "|\n")* (rows / 2) + "-" * (columns/2) + "\n"
 ```
 
@@ -38,11 +38,11 @@ Readline.get_screen_size
 
 ## Consoles que completam com tabs
 
-Nós não podemos parar de ser ciúmentos com o console do Metasploit \(msfconsole\) onde nós não precisamos ter que digitar todos o parametros da linha de comando, aqui está a ideia principal do complemento por tab nos consoles ruby.
+Nós não podemos parar de ser invejosos com o console do Metasploit \(msfconsole\) onde nós não precisamos ter que digitar todos o parâmetros da linha de comando, aqui está a ideia principal do complemento por tab nos consoles ruby.
 
 * Readline 
 
-O módulo Readline prover uma intereface para GNU Readline. Esse módulo define um número de metódos que facilitam o complemento e acessa as entradas que já foram feira no interpretador do ruby.
+O módulo Readline prover uma intereface para GNU Readline. Esse módulo define um número de metódos que facilitam o complemento e acessa as entradas que já foram feitas no interpretador do ruby.
 
 **console-basic1.rb**
 
@@ -71,7 +71,7 @@ while line = Readline.readline('-> ', true)
 end
 ```
 
-Agora rode isso e tente complementar com tab!
+Agora rode isso e tente completar com tab!
 
 Bem, a ideia principal do complemento com tab é tornar mais fácil a nossa vida apenas apertando tab. Aqui está um exemplo simples
 

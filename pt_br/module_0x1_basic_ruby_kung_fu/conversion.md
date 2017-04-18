@@ -12,7 +12,7 @@ Se nenhum prefixo é necessário, basta fazer o seguinte.
 
 De outra forma, Veja as formas abaixo
 
-for a single character Para apenas um caractere
+Para apenas um caractere
 
 ```ruby
 '\x%02x' % "A".ord    #=> "\\x41"
@@ -89,7 +89,8 @@ Para sockets
 ```ruby
 "41424344".scan(/../).map(&:hex).pack("C*")    #=> ABCD
 ```
-Em caso de binário que estão fora do range `.chr`. Por exemplo: você pode precisar converter endereços IP's para hex e enviar isso atráves de socket. Apenas converter ele para hex não vai funcionar para você.
+Em caso de binário que estão fora do range `.chr`.
+Por exemplo: você pode precisar converter endereços IP's para hex e enviar isso atráves de socket. Apenas converter ele para hex não vai funcionar para você.
 
 ```ruby
 >> ip = "192.168.100.10"
@@ -107,9 +108,9 @@ Para resolver esse problema, use pack para converter inteiros para unsigned(Não
 ip.split(".").map(&:to_i).pack("C*")    #=> "\xC0\xA8d\n"
 ```
 
-**Nota sobre HEX:** Algumas vezes você irá se deparar com caracteres não imprimíveis, especialmente quando lidar com binários crus. Nesse caso, acrescente **\(**`# -*- coding: binário -*-`**\)** no início de seu arquivo para reparar interpretações erradas.
+**Nota sobre HEX:** As vezes você irá se deparar com caracteres não imprimíveis, especialmente quando lidar com binários crus. Nesse caso, acrescente **\(**`# -*- coding: binary -*-`**\)** no início de seu arquivo para reparar interpretações erradas.
 
-## Convertendo Hex\(Endereço de retorno\) para o formato Little_Endian
+## Convertendo Hex\(Endereço de retorno\) para o formato Little-Endian
 
 O formato Little-Endian  é simplesmente inverter a string, exemplo: "Rubyfy" para "ufybuR" que pode ser feito chamando o metódo `reverse` da classe `String`
 
@@ -122,7 +123,7 @@ Na Exploração, não é tão simples quanto parece, já que estamos lidando com
 
 Então, assuma que nós temos o endereço de retorno `0x77d6b141` que nós devemos converter para o formato Little-Endian para permitir que o CPU leia corretamente.
 
-De maneira geral, essa é realmente uma tarefa trivial já que é simplemente converter `0x77d6b141` para `\x41\xb1\xd6\x77`, desde que seja apenas essa tarefa, mas, esse não seja o caso de você ter uma cadeia de ROP que tem que estar dentro do seu exploit. para fazer isso de forma simples `pack` como um array.
+De maneira geral, essa é realmente uma tarefa trivial já que é simplemente converter `0x77d6b141` para `\x41\xb1\xd6\x77`, desde que seja apenas essa tarefa, mas, se  esse não for o caso de você ter uma cadeia de ROP que tem que estar dentro do seu exploit. para fazer isso de forma simples `pack` como um array.
 
 ```ruby
 [0x77d6b141].pack('V')
@@ -136,7 +137,7 @@ Acontece de que em algumas horas você obtenha erros por causa de strings Unicod
 
 Se você tem uma cadeia de ROP então não é elegante aplicar isso todas as vezes, então você pode usar a primeira maneira e acrescentar **\(**`# -*- coding: binary -*-`**\)** no topo do seu exploit.
 
-## Convertendo para escapes Uicode
+## Convertendo para escapes Unicode
 
 **Escapes de Hexadecimal unicode**
 
@@ -280,7 +281,8 @@ Retorna
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" ID=\"agdobjcfikneommfjamdclenjcpcjmgdgbmpgjmo\" Version=\"2.0\" IssueInstant=\"2007-04-26T13:51:56Z\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" ProviderName=\"google.com\" AssertionConsumerServiceURL=\"https://www.google.com/a/solweb.no/acs\" IsPassive=\"true\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">google.com</saml:Issuer><samlp:NameIDPolicy AllowCreate=\"true\" Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified\" /></samlp:AuthnRequest>\r\n"
 ```
 
-[Source](http://stackoverflow.com/questions/3253298/base64-decode64-in-ruby-returning-strange-results)  
+[Fonte](http://stackoverflow.com/questions/3253298/base64-decode64-in-ruby-returning-strange-results)  
+
 \[More about SAML\]\[3\]
 
 ---
