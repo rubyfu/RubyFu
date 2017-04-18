@@ -1,14 +1,14 @@
-# Module 0x1 \| Basic Ruby Kung Fu
+# Módulo 0x1 \| Kung Fu Básico de Ruby
 
-Ruby has awesome abilities and tricks for dealing with all strings and arrays scenarios. In this chapter we'll present most known tricks we may need in our hacking life.
+Ruby tem habilidades maravilosa para lidar com todos os cenários de strings e arrays. Nesse cápitulo nós vamos apresentar os macetes mais conhecidos que podemos precisasr em nossa vida cheia de hacking.
 
 ## Terminal
 
-### Terminal size
+### Tamanho do Terminal
 
-Here are many ways to get terminal size from ruby
+Aqui tem muitas maneiras de pegar o tamanho do terminar em ruby
 
-* By IO/console standard library
+* Pela biblíoteca padrão de IO/console
 
 ```ruby
 require 'io/console'
@@ -17,32 +17,32 @@ rows, columns = $stdin.winsize
 print "-" * (columns/2) + "\n" + ("|" + " " * (columns/2 -2) + "|\n")* (rows / 2) + "-" * (columns/2) + "\n"
 ```
 
-* By readline standard library
+* Pela biblíoteca padrão readline
 
 ```ruby
 require 'readline'
 Readline.get_screen_size
 ```
 
-* Get terminal size in Environment like IRB or Pry
+* Pegando o tamanho do terminal em ambientes como IRB ou Pry
 
 ```ruby
 [ENV['LINES'].to_i, ENV['COLUMNS'].to_i]
 ```
 
-* By tput command line 
+* Pelo comando tput
 
 ```ruby
 [`tput cols`.to_i , `tput lines`.to_i]
 ```
 
-## Console with tab completion
+## Consoles que completam com tabs
 
-we can't stopping being jealous of Metasploit console\(msfconsole\) where we take a rest from command line switches. Fortunately, here is the main idea of tab completion console in ruby
+Nós não podemos parar de ser ciúmentos com o console do Metasploit \(msfconsole\) onde nós não precisamos ter que digitar todos o parametros da linha de comando, aqui está a ideia principal do complemento por tab nos consoles ruby.
 
 * Readline 
 
-The Readline module provides interface for GNU Readline. This module defines a number of methods to facilitate completion and accesses input history from the Ruby interpreter.
+O módulo Readline prover uma intereface para GNU Readline. Esse módulo define um número de metódos que facilitam o complemento e acessa as entradas que já foram feira no interpretador do ruby.
 
 **console-basic1.rb**
 
@@ -52,18 +52,18 @@ The Readline module provides interface for GNU Readline. This module defines a n
 # 
 require 'readline'
 
-# Prevent Ctrl+C for exiting
+# Evita Ctrl+C para saída
 trap('INT', 'SIG_IGN')
 
-# List of commands
+# Lista de commandos
 CMDS = [ 'help', 'rubyfu', 'ls', 'pwd', 'exit' ].sort
 
 
 completion = proc { |line| CMDS.grep( /^#{Regexp.escape( line )}/ ) }
 
-# Console Settings
-Readline.completion_proc = completion        # Set completion process
-Readline.completion_append_character = ' '   # Make sure to add a space after completion
+# Configurações do console
+Readline.completion_proc = completion        # seta o processo de complementar
+Readline.completion_append_character = ' '   # Adiciona um espaço após complementar
 
 while line = Readline.readline('-> ', true)
   puts line unless line.nil? or line.squeeze.empty?
@@ -71,9 +71,9 @@ while line = Readline.readline('-> ', true)
 end
 ```
 
-Now run it and try the tab completion!
+Agora rode isso e tente complementar com tab!
 
-Well, The man idea in known the tab completion is make to do things easier not just pressing tab. Here a simple thought
+Bem, a ideia principal do complemento com tab é tornar mais fácil a nossa vida apenas apertando tab. Aqui está um exemplo simples
 
 **console-basic2.rb**
 
@@ -83,7 +83,7 @@ require 'readline'
 # Prevent Ctrl+C for exiting
 trap('INT', 'SIG_IGN')
 
-# List of commands
+# Lista de comandos
 CMDS = [ 'help', 'rubyfu', 'ls', 'exit' ].sort
 
 
@@ -114,11 +114,10 @@ while line = Readline.readline('-> ', true)  # Start console with character -> a
 end
 ```
 
-Things can go much farther, like _msfconsole_, maybe?
+As coisas podem ser muitos melhores, como no _msfconsole_, também?
 
 ---
 
 * [Ruby Readline Documentation and Tutorial](http://bogojoker.com/readline/)
-
 
 

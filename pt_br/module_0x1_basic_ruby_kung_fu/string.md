@@ -1,7 +1,7 @@
 # String
 
-## Colorize your outputs
-Since we mostly working with command-line, we need our output to be more elegant. Here main colors you may need to do so far. you can add these set.
+## Colorindo suas saídas
+Como trabalhamos principalmente com a linha de comando, precisamos de sáidas mais elegantes. Aqui tem as principais cores que você pode precisar. Você pode adicionar esse conjunto.
 
 ```ruby
 class String
@@ -20,101 +20,105 @@ class String
   def colorize(text, color_code) "#{color_code}#{text}\e[0m" end
 end
 ```
-All you need is to call the color when you ```puts``` it
+Tudo que você precisa é chamar a cor qunado você usa ```puts```
+
 ```ruby
 puts "RubyFu".red
 puts "RubyFu".green
 puts "RubyFu".yellow.bold
 ```
-
-To under stand this codes let's to explain it
+Agora vamos explicar isso melhor.
 
 ```
 
 \033  [0;  31m
  ^     ^    ^    
  |     |    |
- |     |    |--------------------------------------- [The color number]
- |     |-------------------- [The modifier]            (ends with "m")
- |-- [Escaped character]           | 0 - normal                     
-     (you can use "\e")            | 1 - bold
-                                   | 2 - normal again
-                                   | 3 - background color
-                                   | 4 - underline
-                                   | 5 - blinking
+ |     |    |--------------------------------------- [A número da cor]
+ |     |-------------------- [o Modificador]            (termina com um "m")
+ |-- [Caractere escapado]          | 0 - normal                     
+     (você pode usar "\e")         | 1 - negrito
+                                   | 2 - normal novamente
+                                   | 3 - cor de fundo
+                                   | 4 - sublhinhado
+                                   | 5 - piscando
 ```
 
-or you can use external gem called [colorized] for more fancy options
+Você també pode usar uma gem externa chamada [colorized] para mais extravagantes
+
 ```
 gem install colorize
 ```
-then just require it in your script
+Então, apenas adicione um require em seu script
+
 ```ruby
 require 'colorize'
 ```
 
-## Overwriting Console Output
-It's awesome to have more flexibility  in your terminal and sometimes we need to do more and with our scripts.
+## Sobrescrendo a saída do console
+É incrível ter mais flexibilidade no seu terminal e às vezes precisamos fazer mais com nossos scripts.
 
-Overwriting console outputs makes our applications elegant and less noisy for repeated outputs like counting and loading progress bars.
+Sobrescrever nossás saídas torna mais elegantes as nossas aplicações e menos barulhenta para saídas repetidas como barras de progresso e contas.
 
-I've read a how-to about [bash Prompt cursor movement][2] and I found it it's convenient to have it in our scripts. Here what have been said so far
+Eu li um 'Como fazer' sobre [movimentos do curso do bash][2] e acho que é conveniente termos em nossos scripts. Aqui o que foi dito até agora
+
 ```
-- Position the Cursor:
+- Posicionando o Cursor:
   \033[<L>;<C>H
-     Or
+     ou
   \033[<L>;<C>f
-  puts the cursor at line L and column C.
-- Move the cursor up N lines:
+  Coloca o curso na linha L e na coluna C.
+- Move o curso sobre N linhas:
   \033[<N>A
-- Move the cursor down N lines:
+- Move o curso abaixo de N linhas:
   \033[<N>B
-- Move the cursor forward N columns:
+- Move o curso para frente de N colunas:
   \033[<N>C
-- Move the cursor backward N columns:
+- Move o curso para trás de N colunas:
   \033[<N>D
-- Clear the screen, move to (0,0):
+- Limpa a tela, move para posição (0,0):
   \033[2J
-- Erase to end of line:
+- Limpa até o final da linha:
   \033[K
-- Save cursor position:
+- Salva a posição do cursor:
   \033[s
-- Restore cursor position:
+- Restaura a posição do cursor:
   \033[u
 ```
-So to test that I did the following PoC 
+Então, para testar eu fiz o seguinte PoC(Prova de Conceito)
+
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 (1..3).map do |num|
   print "\rNumber: #{num}"
   sleep 0.5
-  print ("\033[1B")	# Move cursor down 1 line 
+  print ("\033[1B")	# Move o cursor uma 1 linha abaixo
   
   ('a'..'c').map do |char|
     print "\rCharacter: #{char}"
     print  ("\e[K")
     sleep 0.5
-    print ("\033[1B")	# Move cursor down 1 lines
+    print ("\033[1B")	# Move o cursor uma linha  abaixo
     
     ('A'..'C').map do |char1|
       print "\rCapital letters: #{char1}"
       print  ("\e[K")
       sleep 0.3
     end
-    print ("\033[1A")	# Move curse up 1 line
+    print ("\033[1A")	# Move o cursor uma linha acima
     
   end
 
-  print ("\033[1A")	# Move curse up 1 line
+  print ("\033[1A")	# Move o cursor uma linha acima
 end
 
-print ("\033[2B")	# Move cursor down 2 lines
+print ("\033[2B")	# Move cursor para duas linhas abaixo
 
 puts ""
 ```
+Por enquanto tudo bem, mas porque não fazemos isso como metódos ruby para ficar mais elegante? Vamos fazer o seguinte.
 
-So far so good, but why don't we make it as ruby methods for more elegant usage? so I came up with the following
 ```ruby
 # KING SABRI | @KINGSABRI
 class String
@@ -156,8 +160,8 @@ class String
   end
 end
 ```
+Assim como no PoC, Eu usei a mesma ideia anterior (Após atualização da classe String on-the-fly no mesmo script)
 
-Then as PoC, I've used the same previous one (after updating String class on-the-fly in the same script)
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
@@ -182,20 +186,20 @@ end
 print "".mv_down 3
 ```
 It's much more elegant, isn't it?, Say yes plz
+Agora está muito mais elegante, não é? Diga sim por favor! :)
 
-
-Some application
-### Create Progress percent
+Uma aplicação
+### Crie uma barra de progresso de
 
 ```ruby
 (1..10).each do |percent|
   print "#{percent*10}% complete\r"
   sleep(0.5)
-  print  ("\e[K") # Delete current line
+  print  ("\e[K") # Deleta a linha atual
 end
 puts "Done!"
 ```
-another example
+Um outro exemplo
 
 ```ruby
 (1..5).to_a.reverse.each do |c|
@@ -204,8 +208,8 @@ another example
   sleep 1
 end
 ```
+Usando nossa meio elegante(Após atualizar a classe String on-the-fly)
 
-Using our elegant way(after updating String class on-the-fly)
 ```ruby
 (1..5).to_a.reverse.each do |c|
   print "I'll exit after #{c} second".cls_upline
