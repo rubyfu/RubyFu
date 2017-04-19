@@ -21,7 +21,7 @@
 - Sven Vetsch | @disenchant - *PR proofreading*
 - Christian Fernandez | @b1naryFreed0m - *Code and PR*
 - Arron Crawford | @SquirrelsNabrrl - *Social media, background, advices and more*
-- Fernando Pinheiro | @n3k00n3 - *Translate to portuguese and more*
+
 ## Sponsors
 - [Arab Security Community (Security4arabs)][1]
 
