@@ -22,6 +22,7 @@
     * [Ruby Socket](module_0x3__network_kung_fu/ruby_socket.md)
     * [SSL/TLS](module_0x3__network_kung_fu/ssl_tls.md)
     * [SSID Finder](module_0x3__network_kung_fu/ssid_finder.md)
+    * [WPA multi handshake cracker](module_0x3__network_kung_fu/wap-multi-handshake-cracker.md)
     * [FTP](module_0x3__network_kung_fu/ftp.md)
     * [SSH](module_0x3__network_kung_fu/ssh.md)
     * [Email](module_0x3__network_kung_fu/email.md)
