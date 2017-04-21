@@ -1,6 +1,6 @@
 # Resumo
 
-* [Módulo 0x0 | Introduction](README.md)
+* [Módulo 0x0 | Introdução](README.md)
     * [Contribuição](contribution.md)
     * [Iniciante](beginners.md)
     * [Gems Principais](required_gems.md)
