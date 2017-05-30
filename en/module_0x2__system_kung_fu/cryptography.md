@@ -172,8 +172,6 @@ plain = decipher.update(encrypted) + decipher.final  # Finalize the dencryption
 * [OpenSSL::Cipher docs](https://ruby-doc.org/stdlib-2.3.3/libdoc/openssl/rdoc/OpenSSL/Cipher.html)
 * [\(Symmetric\) Encryption With Ruby \(and Rails\)](http://stuff-things.net/2015/02/12/symmetric-encryption-with-ruby-and-rails/)
 
-
-
 ## Caesar cipher
 
 **Caesar cipher **is one of the oldest known encryption methods. It is very simple - it is just shifting an alphabet. Transformation is termed ROTN, where N is shift value and ROT is from "ROTATE" because this is a cyclic shift.
@@ -202,10 +200,9 @@ string = ARGV[0]
 1.upto(30) do |r|
   puts "ROT#{r}) " + caesar_cipher(string, r).join
 end
-
 ```
 
-result 
+result
 
 ```
 $-> ruby caesar-cypher.rb Fipmti
@@ -241,7 +238,11 @@ ROT29) Ilspwl
 ROT30) Jmtqxm
 ```
 
+**Sources:**
 
+* http://www.blackbytes.info/2015/03/caesar-cipher-in-ruby/
+* https://gist.github.com/matugm/db363c7131e6af27716c
+* https://planetcalc.com/1434/
 
 ## Enigma script
 
