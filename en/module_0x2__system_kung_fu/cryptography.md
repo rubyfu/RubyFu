@@ -18,7 +18,7 @@ puts Digest::SHA1.hexdigest 'P@ssw0rd'
 
 ### SHA2 hash
 
-In SHA2 you have 2 ways to do it. 
+In SHA2 you have 2 ways to do it.
 
 **Way \#1:** By creating a new SHA2 hash object with a given bit length.
 
@@ -171,6 +171,77 @@ plain = decipher.update(encrypted) + decipher.final  # Finalize the dencryption
 
 * [OpenSSL::Cipher docs](https://ruby-doc.org/stdlib-2.3.3/libdoc/openssl/rdoc/OpenSSL/Cipher.html)
 * [\(Symmetric\) Encryption With Ruby \(and Rails\)](http://stuff-things.net/2015/02/12/symmetric-encryption-with-ruby-and-rails/)
+
+
+
+## Caesar cipher
+
+**Caesar cipher **is one of the oldest known encryption methods. It is very simple - it is just shifting an alphabet. Transformation is termed ROTN, where N is shift value and ROT is from "ROTATE" because this is a cyclic shift.
+
+In Ruby, array rotation is mutter of using rotate\(\) method. So all what we need is to have array of all alphabets rotate it and map it with the original given string.
+
+```ruby
+#!/usb/bin/env ruby
+#
+# Caesar cipher
+#
+
+def caesar_cipher(string, shift=1)
+  alphabet = ('a'..'z').to_a
+  none_caps = alphabet.zip(alphabet.rotate(shift)).to_h
+  alphabet  = ('A'..'Z').to_a
+  with_caps = alphabet.zip(alphabet.rotate(shift)).to_h
+  encrypter = none_caps.merge(with_caps)
+
+  string.chars.map{|c| encrypter.fetch(c, c)}
+end
+
+
+string = ARGV[0]
+# print rotation from 1 to 30 
+1.upto(30) do |r|
+  puts "ROT#{r}) " + caesar_cipher(string, r).join
+end
+
+```
+
+result 
+
+```
+$-> ruby caesar-cypher.rb Fipmti
+ROT1) Gjqnuj
+ROT2) Hkrovk
+ROT3) Ilspwl
+ROT4) Jmtqxm
+ROT5) Knuryn
+ROT6) Lovszo
+ROT7) Mpwtap
+ROT8) Nqxubq
+ROT9) Oryvcr
+ROT10) Pszwds
+ROT11) Qtaxet
+ROT12) Rubyfu   <--
+ROT13) Svczgv
+ROT14) Twdahw
+ROT15) Uxebix
+ROT16) Vyfcjy
+ROT17) Wzgdkz
+ROT18) Xahela
+ROT19) Ybifmb
+ROT20) Zcjgnc
+ROT21) Adkhod
+ROT22) Belipe
+ROT23) Cfmjqf
+ROT24) Dgnkrg
+ROT25) Eholsh
+ROT26) Fipmti
+ROT27) Gjqnuj
+ROT28) Hkrovk
+ROT29) Ilspwl
+ROT30) Jmtqxm
+```
+
+
 
 ## Enigma script
 
