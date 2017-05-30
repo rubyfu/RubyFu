@@ -184,8 +184,13 @@ In Ruby, array rotation is mutter of using rotate\(\) method. So all what we nee
 # Caesar cipher
 #
 
+#
+# One-liner:
+# encrypter = ([*('a'..'z')].zip([*('a'..'z')].rotate(shift)) + [*('A'..'Z')].zip([*('A'..'Z')].rotate(shift))).to_h
+#
+
 def caesar_cipher(string, shift=1)
-  alphabet = ('a'..'z').to_a
+  alphabet  = ('a'..'z').to_a
   none_caps = alphabet.zip(alphabet.rotate(shift)).to_h
   alphabet  = ('A'..'Z').to_a
   with_caps = alphabet.zip(alphabet.rotate(shift)).to_h
@@ -240,9 +245,9 @@ ROT30) Jmtqxm
 
 **Sources:**
 
-* http://www.blackbytes.info/2015/03/caesar-cipher-in-ruby/
-* https://gist.github.com/matugm/db363c7131e6af27716c
-* https://planetcalc.com/1434/
+* [http://www.blackbytes.info/2015/03/caesar-cipher-in-ruby/](http://www.blackbytes.info/2015/03/caesar-cipher-in-ruby/)
+* [https://gist.github.com/matugm/db363c7131e6af27716c](https://gist.github.com/matugm/db363c7131e6af27716c)
+* [https://planetcalc.com/1434/](https://planetcalc.com/1434/)
 
 ## Enigma script
 
