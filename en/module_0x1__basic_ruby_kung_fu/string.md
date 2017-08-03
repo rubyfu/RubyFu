@@ -1,6 +1,7 @@
 # String
 
 ## Colorize your outputs
+
 Since we mostly working with command-line, we need our output to be more elegant. Here main colors you may need to do so far. you can add these set.
 
 ```ruby
@@ -15,12 +16,14 @@ class String
   def dark_purple; colorize(self, "\e[1;35m"); end
   def cyan; colorize(self, "\e[1;36m"); end
   def dark_cyan; colorize(self, "\e[36m"); end
-  def pure; colorize(self, "\e[1m\e[35m"); end
+  def pure; colorize(self, "\e[0m\e[28m"); end
   def bold; colorize(self, "\e[1m"); end
   def colorize(text, color_code) "#{color_code}#{text}\e[0m" end
 end
 ```
-All you need is to call the color when you ```puts``` it
+
+All you need is to call the color when you `puts` it
+
 ```ruby
 puts "RubyFu".red
 puts "RubyFu".green
@@ -30,7 +33,6 @@ puts "RubyFu".yellow.bold
 To under stand this codes let's to explain it
 
 ```
-
 \033  [0;  31m
  ^     ^    ^    
  |     |    |
@@ -44,21 +46,26 @@ To under stand this codes let's to explain it
                                    | 5 - blinking
 ```
 
-or you can use external gem called [colorized] for more fancy options
+or you can use external gem called \[colorized\] for more fancy options
+
 ```
 gem install colorize
 ```
+
 then just require it in your script
+
 ```ruby
 require 'colorize'
 ```
 
 ## Overwriting Console Output
+
 It's awesome to have more flexibility  in your terminal and sometimes we need to do more and with our scripts.
 
 Overwriting console outputs makes our applications elegant and less noisy for repeated outputs like counting and loading progress bars.
 
-I've read a how-to about [bash Prompt cursor movement][2] and I found it it's convenient to have it in our scripts. Here what have been said so far
+I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html) and I found it it's convenient to have it in our scripts. Here what have been said so far
+
 ```
 - Position the Cursor:
   \033[<L>;<C>H
@@ -82,39 +89,42 @@ I've read a how-to about [bash Prompt cursor movement][2] and I found it it's co
 - Restore cursor position:
   \033[u
 ```
-So to test that I did the following PoC 
+
+So to test that I did the following PoC
+
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
 (1..3).map do |num|
   print "\rNumber: #{num}"
   sleep 0.5
-  print ("\033[1B")	# Move cursor down 1 line 
-  
+  print ("\033[1B")    # Move cursor down 1 line 
+
   ('a'..'c').map do |char|
     print "\rCharacter: #{char}"
     print  ("\e[K")
     sleep 0.5
-    print ("\033[1B")	# Move cursor down 1 lines
-    
+    print ("\033[1B")    # Move cursor down 1 lines
+
     ('A'..'C').map do |char1|
       print "\rCapital letters: #{char1}"
       print  ("\e[K")
       sleep 0.3
     end
-    print ("\033[1A")	# Move curse up 1 line
-    
+    print ("\033[1A")    # Move curse up 1 line
+
   end
 
-  print ("\033[1A")	# Move curse up 1 line
+  print ("\033[1A")    # Move curse up 1 line
 end
 
-print ("\033[2B")	# Move cursor down 2 lines
+print ("\033[2B")    # Move cursor down 2 lines
 
 puts ""
 ```
 
 So far so good, but why don't we make it as ruby methods for more elegant usage? so I came up with the following
+
 ```ruby
 # KING SABRI | @KINGSABRI
 class String
@@ -157,7 +167,8 @@ class String
 end
 ```
 
-Then as PoC, I've used the same previous one (after updating String class on-the-fly in the same script)
+Then as PoC, I've used the same previous one \(after updating String class on-the-fly in the same script\)
+
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
@@ -181,10 +192,11 @@ Then as PoC, I've used the same previous one (after updating String class on-the
 end
 print "".mv_down 3
 ```
+
 It's much more elegant, isn't it?, Say yes plz
 
-
 Some application
+
 ### Create Progress percent
 
 ```ruby
@@ -195,6 +207,7 @@ Some application
 end
 puts "Done!"
 ```
+
 another example
 
 ```ruby
@@ -205,20 +218,17 @@ another example
 end
 ```
 
-Using our elegant way(after updating String class on-the-fly)
+Using our elegant way\(after updating String class on-the-fly\)
+
 ```ruby
 (1..5).to_a.reverse.each do |c|
   print "I'll exit after #{c} second".cls_upline
   sleep 1
 end
-puts 
+puts
 ```
 
-
 ---
-[1]: https://github.com/fazibear/colorize
-[2]: http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html
-
 
 
 
