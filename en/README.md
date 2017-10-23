@@ -12,21 +12,21 @@ This book is a great collection of ideas, tricks and skills that could be useful
 
 ### Who should read this book?
 
-Ideally, Hackers! Those who have enough experience to hack our world and have _at least_ basics in the Ruby programming language. To get the best benefits of the book, open Rubyfu.net and pin its browser tab; Use the irb/pry interactive interpreter to run the code or run it as a script. Enhance the code to fit your needs and yeah, tweet the code and its output to [@Rubyfu](https://twitter.com/rubyfu) to share it with our awesome community.
+Ideally, Hackers! Those who have enough experience to hack our world and have _at least_ basics in the Ruby programming language. To get the best benefits of the book, open Rubyfu.net and pin its browser tab. Use the irb/pry interactive interpreter to run the code, or run it as a script. Enhance the code to fit your needs and yeah, tweet the code and its output to [@Rubyfu](https://twitter.com/rubyfu) to share it with our awesome community.
 
 ### Organization of the book
 
 #### Module 0x0 \| [Introduction](README.md)
 
-Module 0x0 is just a smooth start for you, whether you're a reader, writer, hacker or someone who came to say hi. In this module you'll find a great start for you as a contributor, where all kinds of contributions are welcome starting from proofreading all the way to topic writing.
+Module 0x0 is just a smooth start for you, whether you're a reader, writer, hacker or someone who came to say hi. In this module you'll find a great start for you as a contributor, where all kinds of contributions are welcome starting from proofreading all the way up to topic writing.
 
 #### Module 0x1 \| [Basic Ruby Kung Fu](module_0x1__basic_ruby_kung_fu/README.md)
 
-Module 0x1 is an awesome collection of the most commonly needed String manipulation, extraction and conversion tasks; dealing with real cases that you might face during your hack. Your encoding and data conversion may be a trivial or complex topic and here we don't care, we'll solve it.
+Module 0x1 is an awesome collection of the most commonly needed string manipulation, extraction and conversion tasks; dealing with real cases that you might face during your hack. Your encoding and data conversion may be a trivial or complex challenge and here we don't care, we'll solve it.
 
 #### Module 0x2 \| [System Kung Fu](module_0x2__system_kung_fu/README.md)
 
-Module 0x2 digs more into system hacking, where system commands, file manipulation, cryptography and generating common hashes are commonly needed. Getting simple bind and reverse shells with Ruby is a skill you need no doubt. Almost all mainstream Linux systems are shipped with ruby and if not, no problem, we always have other ways.
+Module 0x2 digs more into system hacking, where system commands, file manipulation, cryptography and generating common hashes are often needed. Getting simple bind and reverse shells with Ruby is a useful skill, no doubt. Almost all mainstream Linux systems are shipped with ruby and if not, no problem, we always have other ways to make use of our knowledge.
 
 #### Module 0x3 \| [Network Kung Fu](module_0x3__network_kung_fu/README.md)
 
@@ -42,7 +42,7 @@ Module 0x5 builds your exploitation abilities with Ruby. Whatever the vulnerabil
 
 #### Module 0x6 \| [Forensic Kung Fu](module_0x6__forensic/README.md)
 
-Module 0x6 explores forensic capabilities with Ruby. Whoever you are, red, blue, or in-between you'll need forensic skills in your hack and/or investigation. Here you'll learn more about how to deal with registry tasks, extracting browser information, and much more.
+Module 0x6 explores forensic capabilities with Rubyfu. Whoever you are: redteam, blueteam, or in-between you'll need some forensic skills in your hack and/or investigation. Here you'll learn more about how to deal with registry tasks, extracting browser information, and much more.
 
 ## ![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
