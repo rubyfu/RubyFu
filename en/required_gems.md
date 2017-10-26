@@ -24,7 +24,7 @@ Note that you don't need to install them all unless you specifically need them.
 
 > **Note:** Most of our examples will be executed on **pry** so please consider it as main part of our environment. Otherwise, when you see `#!/usr/bin/env ruby, it means a file script to execute.`
 
-## Modules gems
+## Module Gems
 
 Due the demand of wrapping all required gems into one gem, we've created [hacker-gems](https://rubygems.org/gems/hacker-gems) which installs all the below gems at one time.
 
