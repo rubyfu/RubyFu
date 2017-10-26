@@ -1,8 +1,8 @@
 # Required Gems
 
-I'd like to list all external gems that might be used in this book. This list will be updated once new gem required.
+I'd like to list all external gems that might be used in this book. This list will be updated once a new gem is required.
 
-Note that you don't need to install it all unless you need it.
+Note that you don't need to install them all unless you specifically need them.
 
 ## Main Gems
 
@@ -22,17 +22,17 @@ Note that you don't need to install it all unless you need it.
   pry --simple-prompt
   ```
 
-> **Note:** Most of our example will be executed on **pry** so please consider it as main part of our environment. Otherwise \(when you see `#!/usr/bin/env ruby) then it means a file script to execute.`
+> **Note:** Most of our examples will be executed on **pry** so please consider it as main part of our environment. Otherwise, when you see `#!/usr/bin/env ruby, it means a file script to execute.`
 
 ## Modules gems
 
-Due the demanding of wrapping all required gems in a one gem, we've created [hacker-gems](https://rubygems.org/gems/hacker-gems) which installs all below gems at one time.
+Due the demand of wrapping all required gems into one gem, we've created [hacker-gems](https://rubygems.org/gems/hacker-gems) which installs all the below gems at one time.
 
 ```
 gem install hacker-gems
 ```
 
-You might need to install some packages before to avoid any error of missing libraries
+You might need to install some packages beforehand to avoid any errors of missing libraries.
 
 ```
 sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev vncviewer libyaml-dev curl nmap
@@ -46,7 +46,7 @@ sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev
 
 * virustotal - A script for automating virustotal.com queries.
 * uirusu - A tool and REST library for interacting with Virustotal.org.
-* clipboard - Lets you access the clipboard on Linux, MacOS, Windows and Cygwin.
+* clipboard - Lets you access the clipboard on Linux, MacOS, Windows, and Cygwin.
 
 **Extra gems**
 
@@ -94,7 +94,7 @@ Useful gems to build command line applications
 * opal - Ruby runtime and core library for JavaScript.
 
 **Extra gems**  
-Useful gem to deal with web
+Useful gems to deal with web:
 
 * Mechanize - a ruby library that makes automated web interaction easy.
 * HTTP.rb - Fast, Elegant HTTP client for ruby.
