@@ -2,7 +2,7 @@
 
 ## Colorize your outputs
 
-Since we mostly working with command-line, we need our output to be more elegant. Here main colors you may need to do so far. you can add these set.
+Since we mostly work with the command-line, we need our output to be more elegant. Here are the main colors you may need to do so. You can always add to this set.
 
 ```ruby
 class String
@@ -30,7 +30,7 @@ puts "RubyFu".green
 puts "RubyFu".yellow.bold
 ```
 
-To under stand this codes let's to explain it
+To understand this code, let's explain it with a diagram
 
 ```
 \033  [0;  31m
@@ -46,13 +46,13 @@ To under stand this codes let's to explain it
                                    | 5 - blinking
 ```
 
-or you can use external gem called \[colorized\] for more fancy options
+Or you can use an external gem called \[colorized\] for fancier options
 
 ```
 gem install colorize
 ```
 
-then just require it in your script
+Then just require it in your script
 
 ```ruby
 require 'colorize'
@@ -60,11 +60,11 @@ require 'colorize'
 
 ## Overwriting Console Output
 
-It's awesome to have more flexibility  in your terminal and sometimes we need to do more and with our scripts.
+It's awesome to have more flexibility in your terminal, and sometimes we need to do more with our scripts.
 
-Overwriting console outputs makes our applications elegant and less noisy for repeated outputs like counting and loading progress bars.
+Overwriting console output makes our applications elegant and less noisy for repeated outputs like counting and loading progress bars.
 
-I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html) and I found it it's convenient to have it in our scripts. Here what have been said so far
+I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html) and I found it is convenient to have in our scripts. Here's what I've found so far
 
 ```
 - Position the Cursor:
@@ -90,7 +90,7 @@ I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO
   \033[u
 ```
 
-So to test that I did the following PoC
+So to test these I created the following PoC
 
 ```ruby
 #!/usr/bin/env ruby
@@ -123,7 +123,7 @@ print ("\033[2B")    # Move cursor down 2 lines
 puts ""
 ```
 
-So far so good, but why don't we make it as ruby methods for more elegant usage? so I came up with the following
+So far so good, but why don't we make these as Ruby methods for more elegant usage? So I came up with the following
 
 ```ruby
 # KING SABRI | @KINGSABRI
@@ -167,7 +167,7 @@ class String
 end
 ```
 
-Then as PoC, I've used the same previous one \(after updating String class on-the-fly in the same script\)
+Then as a PoC, I've used the same previous PoC code \(after updating String class on-the-fly in the same script\)
 
 ```ruby
 #!/usr/bin/env ruby
@@ -193,11 +193,11 @@ end
 print "".mv_down 3
 ```
 
-It's much more elegant, isn't it?, Say yes plz
+It's much more elegant, isn't it? Say yes plz
 
-Some application
+Some application...
 
-### Create Progress percent
+### Create Progress Percent
 
 ```ruby
 (1..10).each do |percent|
@@ -208,7 +208,7 @@ end
 puts "Done!"
 ```
 
-another example
+Another example
 
 ```ruby
 (1..5).to_a.reverse.each do |c|
@@ -218,7 +218,7 @@ another example
 end
 ```
 
-Using our elegant way\(after updating String class on-the-fly\)
+Using our elegant way \(after updating String class on-the-fly\)
 
 ```ruby
 (1..5).to_a.reverse.each do |c|
