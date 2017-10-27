@@ -1,12 +1,12 @@
 # Module 0x1 \| Basic Ruby Kung Fu
 
-Ruby has awesome abilities and tricks for dealing with all strings and arrays scenarios. In this chapter we'll present most known tricks we may need in our hacking life.
+Ruby has awesome abilities and tricks for dealing with string and array scenarios. In this chapter we'll present some tricks we may need in our hacking life.
 
 ## Terminal
 
 ### Terminal size
 
-Here are many ways to get terminal size from ruby
+Here are some different ways to get terminal size from ruby:
 
 * By IO/console standard library
 
@@ -24,7 +24,7 @@ require 'readline'
 Readline.get_screen_size
 ```
 
-* Get terminal size in Environment like IRB or Pry
+* By environment like IRB or Pry
 
 ```ruby
 [ENV['LINES'].to_i, ENV['COLUMNS'].to_i]
@@ -38,11 +38,11 @@ Readline.get_screen_size
 
 ## Console with tab completion
 
-we can't stopping being jealous of Metasploit console\(msfconsole\) where we take a rest from command line switches. Fortunately, here is the main idea of tab completion console in ruby
+We can't stop being jealous of Metasploit console \(msfconsole\), where we take a rest from command line switches. Fortunately, here is the main idea of console tab completion in ruby:
 
 * Readline 
 
-The Readline module provides interface for GNU Readline. This module defines a number of methods to facilitate completion and accesses input history from the Ruby interpreter.
+The Readline module provides an interface for GNU Readline. This module defines a number of methods to facilitate completion and accesses input history from the Ruby interpreter.
 
 **console-basic1.rb**
 
@@ -71,9 +71,9 @@ while line = Readline.readline('-> ', true)
 end
 ```
 
-Now run it and try the tab completion!
+Now run it and try out the tab completion!
 
-Well, The man idea in known the tab completion is make to do things easier not just pressing tab. Here a simple thought
+Well, the main idea for tab completion is to make things easier, not just "press tab". Here is a simple thought...
 
 **console-basic2.rb**
 
