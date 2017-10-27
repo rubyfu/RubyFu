@@ -196,7 +196,7 @@ end
 parser(file).each {|k, v| puts "#{k}:\t#{v.join(', ')}"}
 ```
 
-For one liner lovers
+For one-liner lovers
 
 ```
 ruby -e 'h={};File.read("text.txt").split("\n").map{|l|l.split(":", 2)}.map{|k, v|k.strip!;v.strip!; h[k] ? h[k] << v : h[k] = [v]};h.each {|k, v| puts "#{k}:\t#{v.join(", ")}"}'

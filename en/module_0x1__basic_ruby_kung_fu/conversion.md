@@ -111,7 +111,7 @@ ip.split(".").map(&:to_i).pack("C*")    #=> "\xC0\xA8d\n"
 
 ## Convert Hex \(Return address\) to Little-Endian format
 
-Little-Endian format is simply reversing the string such as reversing/backwarding "Rubyfu" to "ufybuR" which can be done by calling the `reverse` method of the `String` class
+Little-endian format is simply reversing the string such as reversing/backwarding "Rubyfu" to "ufybuR" which can be done by calling the `reverse` method of the `String` class
 
 ```ruby
 "Rubyfu".reverse
