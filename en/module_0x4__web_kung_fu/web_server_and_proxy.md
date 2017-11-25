@@ -1,8 +1,8 @@
 # Ruby as Web Server and Proxy
 
-
 ## Web Server
-You can run Ruby as web server for any folder/file on any unused port
+
+You can run Ruby as web server for any folder/file on any unused port, here's a oneliner code
 
 ```ruby
 ruby -run -e httpd /var/www/ -p 8000
@@ -18,6 +18,7 @@ server.start
 ```
 
 **HTTPS server**
+
 ```ruby
 require 'webrick'
 require 'webrick/https'
@@ -35,7 +36,7 @@ server.start
 
 **Advanced HTTP Server**
 
-During working on [CVE-2016-4971(Wget)](https://github.com/KINGSABRI/CVE-in-Ruby/tree/master/CVE-2016-4971) exploit, more advanced & custom behavior needed. Here is a web server with a fake login form that saves the collected credentials to a text file. This comes in handy when you don't need to make customizations on apache config or you don't have enough privileges to do so. It require no knowledge for web frameworks like Rails or Senatra.
+During working on [CVE-2016-4971\(Wget\)](https://github.com/KINGSABRI/CVE-in-Ruby/tree/master/CVE-2016-4971) exploit, more advanced & custom behavior needed. Here is a web server with a fake login form that saves the collected credentials to a text file. This comes in handy when you don't need to make customizations on apache config or you don't have enough privileges to do so. It require no knowledge for web frameworks like Rails or Senatra.
 
 ```ruby
 #!/usr/bin/env ruby
@@ -129,7 +130,6 @@ rescue Exception => e
   puts e, e.backtrace
   exit 0
 end
-
 ```
 
 Run it
@@ -153,17 +153,26 @@ ruby webrick-server.rb 8080
 [+] user1:12345678
 -----[ END OF POST ]-----
 ```
+
 You'll find credentials have been saved in 'credentials.txt'
 
 **References**
-- http://ruby-doc.org/stdlib-2.0.0/libdoc/webrick/rdoc/WEBrick.html
-- https://www.igvita.com/2007/02/13/building-dynamic-webrick-servers-in-ruby/
-- https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/
-- https://gist.github.com/Integralist/2862917
+
+* [http://ruby-doc.org/stdlib-2.0.0/libdoc/webrick/rdoc/WEBrick.html](http://ruby-doc.org/stdlib-2.0.0/libdoc/webrick/rdoc/WEBrick.html)
+* [https://www.igvita.com/2007/02/13/building-dynamic-webrick-servers-in-ruby/](https://www.igvita.com/2007/02/13/building-dynamic-webrick-servers-in-ruby/)
+* [https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/](https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/)
+* [https://gist.github.com/Integralist/2862917](https://gist.github.com/Integralist/2862917)
 
 ## Web Proxy
 
+As we can run web server, we can run a proxy server, here's a oneliner code to run a web proxy server in ruby
+
+```ruby
+ruby -r webrick/httpproxy -e 's = WEBrick::HTTPProxyServer.new(:Port => 8080, :RequestCallback => Proc.new{|req,res| puts req.request_line, req.raw_header}); trap("INT"){s.shutdown}; s.start'
+```
+
 ### Transparent Web Proxy
+
 ```ruby
 require 'webrick'
 require 'webrick/httpproxy'
@@ -203,11 +212,10 @@ proxy = WEBrick::HTTPProxyServer.new Port: 8000,
 trap 'INT'  do proxy.shutdown end
 
 proxy.start
-
 ```
 
-
 ### Transparent Web Proxy with Authentication
+
 Well, it was great to know that building a proxy server is that easy. Now we need to Force authentication to connect to the proxy server
 
 To enable authentication for requests in WEBrick you will need a user database and an authenticator. To start, here's a htpasswd database for use with a DigestAuth authenticator:
@@ -253,4 +261,12 @@ proxy.start
 If you do it right, you'll get an authentication pop-up in your browser just like below.
 
 ![](webfu__proxy2.png)
+
+**References**
+
+* https://www.fedux.org/articles/2015/04/11/setup-a-proxy-with-ruby.html
+* http://ruby-doc.org/stdlib-2.4.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html
+* http://www.independent-software.com/creating-a-forward-proxy-with-webrick/
+* 
+
 
