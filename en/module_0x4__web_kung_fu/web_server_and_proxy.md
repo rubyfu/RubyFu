@@ -264,9 +264,11 @@ If you do it right, you'll get an authentication pop-up in your browser just lik
 
 **References**
 
-* https://www.fedux.org/articles/2015/04/11/setup-a-proxy-with-ruby.html
-* http://ruby-doc.org/stdlib-2.4.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html
-* http://www.independent-software.com/creating-a-forward-proxy-with-webrick/
-* 
+* [https://www.fedux.org/articles/2015/04/11/setup-a-proxy-with-ruby.html](https://www.fedux.org/articles/2015/04/11/setup-a-proxy-with-ruby.html)
+* [http://ruby-doc.org/stdlib-2.4.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html](http://ruby-doc.org/stdlib-2.4.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html)
+* [http://www.independent-software.com/creating-a-forward-proxy-with-webrick/](http://www.independent-software.com/creating-a-forward-proxy-with-webrick/)
+
+
+
 
 
