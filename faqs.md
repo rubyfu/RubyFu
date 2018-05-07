@@ -44,7 +44,7 @@ Here are some main reasons:
 
 ## Q  When this book get completed?
 
-Well, it shouldn't; This book is an experience base book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
+Well, it shouldn't; This book is an experience-based book, so as far as we learn from our daily hacking and the need of automation we'll keep update this book.
 
 ## Q  What if I didn't understand some code in Rubyfu?
 
@@ -57,7 +57,5 @@ You can contact us on one of the following channels
 * Twitter: [@Rubyfu](https://twitter.com/Rubyfu)
 * Google+: [Rubyfu page](https://plus.google.com/114358908164154763697)
 * Facebook: [Rubyfu page](https://www.facebook.com/Rubyfu-600728320066710/)
-* GitHub: \[Rubyfu Repository\]\[6\]
-
-\[6\]: [https://github.com/Rubyfu/RubyFu](https://github.com/Rubyfu/RubyFu)
+* GitHub: [Rubyfu Repository](https://github.com/Rubyfu/RubyFu)
 
