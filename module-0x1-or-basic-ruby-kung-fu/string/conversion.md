@@ -18,7 +18,9 @@ For a single character
 '\x%02x' % "A".ord    #=> "\\x41"
 ```
 
+{% hint style="info" %}
 **Note:** the symbols `*""` are equal of `.join`
+{% endhint %}
 
 ```ruby
 "ABCD".unpack('H*')[0].scan(/../).map {|h| '\x'+h }.join    #=> "\\x41\\x42\\x43\\x44"
