@@ -10,8 +10,8 @@
 
 Import the Burp Suite Extender Core API `IBurpExtender`
 
-**alert.rb**
-
+{% code-tabs %}
+{% code-tabs-item title="alert.rb" %}
 ```ruby
 require 'java'
 java_import 'burp.IBurpExtender'
@@ -25,6 +25,8 @@ class BurpExtender
   end
 end
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Load the plugin alert.rb  
 ![](../.gitbook/assets/webfu__burp-ext1.png)
