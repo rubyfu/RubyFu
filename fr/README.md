@@ -1,6 +1,6 @@
 # RubyFu
 
-## <cneter>Rubyfu is not begein translated to this language yet!</cneter>
+## <center>Rubyfu is not begein translated to this language yet!</center>
 
 Please consider to translate it to your language or spread Rubyfu to friends that might be interested to translate.
 
@@ -20,4 +20,4 @@ Please consider to translate it to your language or spread Rubyfu to friends tha
 10. Create a new Pull Request (PR).
 
 
-## <cneter>Thank you for translating Rubyfu to your awesome language!
+## <center>Thank you for translating Rubyfu to your awesome language!</center>
