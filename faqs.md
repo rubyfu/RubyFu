@@ -40,7 +40,7 @@ Here are some main reasons:
 * Easy to write - using markdown
 * Easy to contribute - using GitHub
 * Easy to manage - contributions, views, etc
-* And you can download the book with many formats - PDF, EPUB, etc
+* ~~And you can download the book with many formats - PDF, EPUB, etc~~
 
 ## Q  When this book get completed?
 
