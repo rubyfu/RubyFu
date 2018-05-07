@@ -282,12 +282,11 @@ Returns
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" ID=\"agdobjcfikneommfjamdclenjcpcjmgdgbmpgjmo\" Version=\"2.0\" IssueInstant=\"2007-04-26T13:51:56Z\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" ProviderName=\"google.com\" AssertionConsumerServiceURL=\"https://www.google.com/a/solweb.no/acs\" IsPassive=\"true\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">google.com</saml:Issuer><samlp:NameIDPolicy AllowCreate=\"true\" Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified\" /></samlp:AuthnRequest>\r\n"
 ```
 
-[Source](http://stackoverflow.com/questions/3253298/base64-decode64-in-ruby-returning-strange-results)
-
-**Resources**  
 
 
-* [more about SAML](http://dev.gettinderbox.com/2013/12/16/introduction-to-saml/)
+* [Source](http://stackoverflow.com/questions/3253298/base64-decode64-in-ruby-returning-strange-results)
+* **Resources**
+  * [more about SAML](http://dev.gettinderbox.com/2013/12/16/introduction-to-saml/)
 
 
 
