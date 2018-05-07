@@ -33,10 +33,10 @@ Note: This does not consider the Little-endian format, for that there is extra c
 puts (0..255).map {|b| ('\x%02X' % b)}
 ```
 
-> **Notes:**
->
-> * To change value presentation from `\xea` to `0xea`, change `\x%x` to `0x%x`
-> * To make all letters capital \(`\xea` to `\xEA`\) , change `\x%x` to `\x%X`
+{% hint style="warning" %}
+* To change value presentation from \(`\xea` to `0xea`\), change `\x%x` to `0x%x`
+* To make all letters capital \(`\xea` to `\xEA`\) , change `\x%x` to `\x%X`
+{% endhint %}
 
 ### Generate all printable characters
 
