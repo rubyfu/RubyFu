@@ -4,7 +4,7 @@
 
 **Module 0x1 \| Basic Ruby Kung Fu**
 
-* [ ] Non-Alphanumeric Ruby \([link 1](https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/), [link 2](http://techny.tumblr.com/post/43893712330/ruby-brainfuck-interpreter, https://github.com/mattaereal/hieroglyphy-py/blob/master/hieroglyphy.py)\)
+* [ ] Non-Alphanumeric Ruby \([link 1](https://threeifbywhiskey.github.io/2014/03/05/non-alphanumeric-ruby-for-fun-and-not-much-else/), [link 2](http://techny.tumblr.com/post/43893712330/ruby-brainfuck-interpreter,%20https://github.com/mattaereal/hieroglyphy-py/blob/master/hieroglyphy.py)\)
 
 **Module 0x2 \| System Kung Fu**
 
@@ -28,6 +28,4 @@
 
 * [ ] Add Hardware Hacking
 * [ ] Add [ubertooth](http://www.evilsocket.net/2015/02/12/rubertooth-a-complete-ruby-porting-of-the-ubertooth-libraries-and-utilities/)
-
-
 

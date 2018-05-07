@@ -17,7 +17,7 @@ OK, if you believe you're a beginner and need to warm-up, here's a list of tasks
   * Create a simple TCP server listening on port 3211. This server prints `date and time`.
   * Create a simple TCP client to connect to the previous server and print what the server sends.
 
-A good list of [References](references/README.md) can be found under the Beginner section.
+A good list of [References](references.md) can be found under the Beginner section.
 
 ## Challenge Yourself!
 
@@ -27,8 +27,4 @@ There are some awesome websites that push your programming skills via interactiv
 * [rubeque](http://www.rubeque.com/)
 * [Hackerrank](https://www.hackerrank.com/)
 * [RubyQuiz](http://rubyquiz.com/)
-
----
-
-
 
