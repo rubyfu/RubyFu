@@ -50,5 +50,7 @@ short and unclean
 (32..126).map &:chr
 ```
 
-\[1\]: [https://github.com/KINGSABRI/BufferOverflow-Kit/blob/master/lib/pattern.rb](https://github.com/KINGSABRI/BufferOverflow-Kit/blob/master/lib/pattern.rb)
+**Resources**
+
+* [Pattern create and Pattern Offset](https://github.com/KINGSABRI/BufferOverflow-Kit/blob/master/lib/pattern.rb)
 
