@@ -45,8 +45,8 @@ end
 
 #### Simple Shortened URL extractor
 
-**urlextractor.rb**
-
+{% code-tabs %}
+{% code-tabs-item title="urlextractor.rb" %}
 ```ruby
 #!/usr/bin/env ruby
 require 'net/http'
@@ -61,11 +61,13 @@ loop do
   end
 end
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Run it
 
 ```bash
-$ruby redirect.rb http://bit.ly/1JSs7vj
+$ruby urlextractor.rb http://bit.ly/1JSs7vj
 http://bit.ly/1JSs7vj
 http://ow.ly/XLGfi
 https://tinyurl.com/hg69vgm
@@ -258,8 +260,8 @@ uri      = URI("http://rubyfu.net/login")
 
 http = http = Net::HTTP.new(uri.host, uri.port)
 req  = Net::HTTP::Get.new(uri)
-req.basic_auth usernamen, password
-res  = http.request(request)
+req.basic_auth username, password
+res  = http.request(req)
 
 puts res.body
 ```
@@ -383,7 +385,7 @@ http://host/cgi/shell.rb?cmd=ls -la
 echo "GET /cgi/shell.rb?cmd=ls%20-la" | nc host 80
 ```
 
-**WebShellConsole**
+**WebShellConsole \(**[**repository**](https://github.com/KINGSABRI/WebShellConsole)**\)**
 
 run wsc
 
