@@ -5,7 +5,7 @@ description: Ruby System Shell Command Execution
 # Command Execution
 
 Some things to think about when choosing between these ways are:  
-1. Are you going to interact with none interactive shell, like `ncat` ? 2. Do you just want stdout or do you need stderr as well? or even separated out?  
+1. Are you going to interact with none interactive shell, like `ncat` ? 2. Do you just want stdout or do you need stderr as well? Or even separated out?  
 3. How big is your output? Do you want to hold the entire result in memory?  
 4. Do you want to read some of your output while the subprocess is still running?  
 5. Do you need result codes?  
@@ -31,7 +31,7 @@ Sun Sep 27 00:38:01 AST 2015
 
 ### Dealing with `ncat` session?
 
-If you ever wondered how to do deal with interactive command like `passwd` due `ncat` session in Ruby?. You must propuly was using `python -c 'import pty; pty.spawn("/bin/sh")'` Well, in Ruby it's really easy using `exec` or `system`. The main trick is to forward STDERR to STDOUT so you can see system errors.
+Have you ever wondered about how to do deal with interactive commands like `passwd` or `ncat` sessions in Ruby? If you're familiar with Python, you've probably used `python -c 'import pty; pty.spawn("/bin/sh")'`. In Ruby it's really easy using `exec` or `system`. The main trick is to forward STDERR to STDOUT so you can see system errors.
 
 **exec**
 
@@ -124,9 +124,9 @@ To check the status of the backtick operation you can execute $?.success?
 => true
 ```
 
-### How to chose?
+### How to choose?
 
-a great flow chart has been made on [stackoverflow](http://stackoverflow.com/a/37329716/967283)  
+A great flow chart has been made on [stackoverflow](http://stackoverflow.com/a/37329716/967283)  
 ![](../.gitbook/assets/cmd_exec_chart.png)
 
 * [Ruby \| Execute system commands](http://king-sabri.net/?p=2553)
