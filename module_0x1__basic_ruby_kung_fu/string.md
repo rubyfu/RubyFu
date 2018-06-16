@@ -22,7 +22,7 @@ class String
 end
 ```
 
-All you need is to call the color when you `puts` it
+All you need is to call the color when you `puts` it:
 
 ```ruby
 puts "RubyFu".red
@@ -30,7 +30,7 @@ puts "RubyFu".green
 puts "RubyFu".yellow.bold
 ```
 
-To understand this code, let's explain it with a diagram
+To understand this code, let's explain it with a diagram.
 
 ```
 \033  [0;  31m
@@ -46,13 +46,13 @@ To understand this code, let's explain it with a diagram
                                    | 5 - blinking
 ```
 
-Or you can use an external gem called \[colorized\] for fancier options
+Alternatively, you can use an external gem called \[colorized\] for fancier options.
 
 ```
 gem install colorize
 ```
 
-Then just require it in your script
+Then just require it in your script:
 
 ```ruby
 require 'colorize'
@@ -64,7 +64,7 @@ It's awesome to have more flexibility in your terminal, and sometimes we need to
 
 Overwriting console output makes our applications elegant and less noisy for repeated outputs like counting and loading progress bars.
 
-I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html) and I found it is convenient to have in our scripts. Here's what I've found so far
+I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html) and I found it is convenient to have in our scripts. Here's what I've found so far:
 
 ```
 - Position the Cursor:
@@ -90,7 +90,7 @@ I've read a how-to about [bash Prompt cursor movement](http://www.tldp.org/HOWTO
   \033[u
 ```
 
-So to test these I created the following PoC
+So to test these I created the following PoC:
 
 ```ruby
 #!/usr/bin/env ruby
@@ -123,7 +123,7 @@ print ("\033[2B")    # Move cursor down 2 lines
 puts ""
 ```
 
-So far so good, but why don't we make these as Ruby methods for more elegant usage? So I came up with the following
+So far so good, but why don't we make these as Ruby methods for more elegant usage? So I came up with the following:
 
 ```ruby
 # KING SABRI | @KINGSABRI
@@ -167,7 +167,7 @@ class String
 end
 ```
 
-Then as a PoC, I've used the same previous PoC code \(after updating String class on-the-fly in the same script\)
+Then as a PoC, I've used the same previous PoC code \(after updating String class on-the-fly in the same script\).
 
 ```ruby
 #!/usr/bin/env ruby
@@ -193,11 +193,12 @@ end
 print "".mv_down 3
 ```
 
-It's much more elegant, isn't it? Say yes plz
+It's much more elegant, isn't it? Say yes please.
 
-Some application...
 
 ### Create Progress Percent
+
+Here's an application example:
 
 ```ruby
 (1..10).each do |percent|
@@ -208,7 +209,7 @@ end
 puts "Done!"
 ```
 
-Another example
+Here's another:
 
 ```ruby
 (1..5).to_a.reverse.each do |c|
@@ -218,7 +219,7 @@ Another example
 end
 ```
 
-Using our elegant way \(after updating String class on-the-fly\)
+Using our elegant way \(after updating String class on-the-fly\):
 
 ```ruby
 (1..5).to_a.reverse.each do |c|

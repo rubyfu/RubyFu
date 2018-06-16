@@ -4,21 +4,21 @@ String conversion and/or encoding is an important part of exploitation and firew
 
 ## Convert String/Binary to Hex
 
-If no prefix is needed, you just do the following
+If no prefix is needed, you just do the following:
 
 ```ruby
 "Rubyfu".unpack("H*")    #=> ["527562796675"]
 ```
 
-Otherwise, see the below ways
+Otherwise, see the following methods.
 
-For a single character
+For a single character:
 
 ```ruby
 '\x%02x' % "A".ord    #=> "\\x41"
 ```
 
-**Note:** the symbols `*""` are equal of `.join`
+**Note:** the symbols `*""` are equal of `.join`.
 
 ```ruby
 "ABCD".unpack('H*')[0].scan(/../).map {|h| '\x'+h }.join    #=> "\\x41\\x42\\x43\\x44"
@@ -90,7 +90,7 @@ or for raw socket
 "41424344".scan(/../).map(&:hex).pack("C*")    #=> ABCD
 ```
 
-in-case of binary that is out of `.chr` range. For example you may need to convert an IP-address to hex raw then send it through the socket. The case of just converting it to hex would not work for you
+In case of a binary that is out of `.chr` range. For example you may need to convert an IP-address to raw hexadecimal and then send it through the socket. In that case just converting it to hex would not work for you.
 
 ```ruby
 >> ip = "192.168.100.10"
@@ -99,19 +99,19 @@ in-case of binary that is out of `.chr` range. For example you may need to conve
 => "\\xc0\\xa8\\x64\\x0a"
 ```
 
-As you can see, Ruby reads returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to enter this value \(with double-quotes\) `"\xc0\xa8\x64\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which is what should be passed to the raw socket, not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is ruby escapes the backslash\(`\`\).
+As you can see, Ruby returns `"\\xc0\\xa8\\x64\\x0a"` which doesn't equal `"\xc0\xa8\x64\x0a"`. Try to enter this value \(with double-quotes\) `"\xc0\xa8\x64\x0a"` into your irb directly and you'll notice that the return is `"\xC0\xA8d\n"` which is what should be passed to the raw socket, not the `"\\xc0\\xa8\\x64\\x0a"`. The main cause is that ruby escapes the backslash\(`\`\).
 
-To solve this issue, use pack to convert integers to  8-bit unsigned \(unsigned char\)
+To solve this issue, use pack to convert integers to 8-bit unsigned \(unsigned char\).
 
 ```ruby
 ip.split(".").map(&:to_i).pack("C*")    #=> "\xC0\xA8d\n"
 ```
 
-**Note about hex:** Sometimes you might face non-printable characters, especially when dealing with binary raw. In this case, append **\(**`# -*- coding: binary -*-`**\)** at the top of your file to fix any interpretation issues.
+**Note about hex:** Sometimes you might face non-printable characters, especially when dealing with raw binary. In this case, append **\(**`# -*- coding: binary -*-`**\)** to the top of your file to fix any interpretation issues.
 
 ## Convert Hex \(Return address\) to Little-Endian format
 
-Little-endian format is simply reversing the string such as reversing/backwarding "Rubyfu" to "ufybuR" which can be done by calling the `reverse` method of the `String` class
+Little-endian format is simply reversing the string such as reversing/backwarding "Rubyfu" to "ufybuR" which can be done by calling the `reverse` method of the `String` class:
 
 ```ruby
 "Rubyfu".reverse
@@ -121,19 +121,19 @@ In exploitation, this is not as simple as that since we're dealing with hex valu
 
 So assume we have `0x77d6b141` as the return address which we want to convert to Little-Endian format to allow the CPU to read it correctly.
 
-Generally speaking, it's really a trivial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's a one time process, but this is not the case if you have a ROP chain that has to be staged in your exploit. To do so simply `pack` it as an array
+Generally speaking, it's a trivial task to convert `0x77d6b141` to `\x41\xb1\xd6\x77` since it's a one time process, but this is not the case if you have an ROP chain that has to be staged in your exploit. To do so, simply `pack` it as an array.
 
 ```ruby
 [0x77d6b141].pack('V')
 ```
 
-It happens that sometimes you get an error because of a non-Unicode string issue. To solve this issue, just force encoding to UTF-8, but most of the time you will not face this issue
+It happens that sometimes you get an error because of a non-Unicode string issue. To solve this issue, just force encoding to UTF-8, but most of the time you will not face this issue.
 
 ```ruby
 [0x77d6b141].pack('V').force_encoding("UTF-8")
 ```
 
-If you have a ROP chain, then it's not decent to apply this each time - so you can use the first way and append **\(**`# -*- coding: binary -*-`**\)** at top of your exploit file.
+If you have an ROP chain, it's annoying to apply this each time, so you can use the first way and append **\(**`# -*- coding: binary -*-`**\)** to the top of your exploit file.
 
 ## Convert to Unicode Escape
 
@@ -143,13 +143,13 @@ If you have a ROP chain, then it's not decent to apply this each time - so you c
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(16).rjust(4, '0')}.join
 ```
 
-Or using unpack
+Or using unpack:
 
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| '\u' + i.to_s(16).rjust(4, '0') }.join
 ```
 
-A shorter way
+A shorter way would be:
 
 ```ruby
 "Rubyfu".unpack('U*').map{ |i| "\\u00%x" % i }.join
@@ -157,7 +157,7 @@ A shorter way
 
 **Octal unicode escape**
 
-An octal escape is exactly the same, except we convert the string to octal instead of hexadecimal
+An octal escape is exactly the same, except we convert the string to octal instead of hexadecimal:
 
 ```ruby
 "Rubyfu".each_char.map {|c| '\u' + c.ord.to_s(8).rjust(4, '0')}.join
@@ -221,7 +221,7 @@ puts URI.decode "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(
 
 You can encode/decode any non-URL string, of-course.
 
-The above way will encode any non-URL standard strings only \(ex. `<>"{}`\) however if you want to encode the full string use `URI.encode_www_form_component`
+The above way will encode any non-URL standard strings only \(ex. `<>"{}`\) however if you want to encode the full string use `URI.encode_www_form_component`.
 
 ```ruby
 puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
