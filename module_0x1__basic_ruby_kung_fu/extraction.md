@@ -6,7 +6,7 @@ String extraction is one of the main tasks that all programmers need. It's often
 
 ### Extracting MAC address from string
 
-We need to extract all MAC addresses from an arbitrary string
+We need to extract all MAC addresses from an arbitrary string.
 
 ```ruby
 mac = "ads fs:ad fa:fs:fe: Wind00-0C-29-38-1D-61ows 1100:50:7F:E6:96:20dsfsad fas fa1 3c:77:e6:68:66:e9 f2"
@@ -16,7 +16,7 @@ mac = "ads fs:ad fa:fs:fe: Wind00-0C-29-38-1D-61ows 1100:50:7F:E6:96:20dsfsad fa
 
 This regular expression should support Windows and Linux MAC address formats.
 
-Lets to find our mac
+Let's go find our MAC:
 
 ```ruby
 mac_regex = /(?:[0-9A-F][0-9A-F][:\-]){5}[0-9A-F][0-9A-F]/i
@@ -31,7 +31,7 @@ Returns
 
 ### Extracting IPv4 address from string
 
-We need to extract all IPv4 addresses from an arbitrary string
+Say we need to extract all IPv4 addresses from an arbitrary string.
 
 ```ruby
 ip = "ads fs:ad fa:fs:fe: Wind10.0.4.5ows 11192.168.0.15dsfsad fas fa1 20.555.1.700 f2"
@@ -41,7 +41,7 @@ ip = "ads fs:ad fa:fs:fe: Wind10.0.4.5ows 11192.168.0.15dsfsad fas fa1 20.555.1.
 ipv4_regex = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/
 ```
 
-Let's find our IPs
+Let's find our IP adresses.
 
 ```ruby
 ip.scan ipv4_regex
@@ -68,10 +68,10 @@ Returns
 
 ### Extracting URLs from a file
 
-Assume we have the following string
+Assume we have the following string:
 
 ```ruby
-string = "text here http://foo1.example.org/bla1 and http://foo2.example.org/bla2 and here mailto:test@example.com and here also."
+string = "text here http://foo1.example.org/bla1, here http://foo2.example.org/bla2, here mailto:test@example.com and here also."
 ```
 
 **Using Regular Expressions**
@@ -81,7 +81,7 @@ string.scan(/https?:\/\/[\S]+/)
 ```
 
 **Using standard URI module**  
-This returns an array of URLs
+This returns an array of URLs:
 
 ```ruby
 require 'uri'
@@ -90,14 +90,14 @@ URI.extract(string, ["http" , "https"])
 
 ### Extracting URLs from web page
 
-Using above tricks
+Using above tricks:
 
 ```ruby
 require 'net/http'
 URI.extract(Net::HTTP.get(URI.parse("http://rubyfu.net")), ["http", "https"])
 ```
 
-or using a regular expression
+or using a regular expression:
 
 ```ruby
 require 'net/http'
@@ -117,7 +117,7 @@ Net::HTTP.get(URI.parse("http://isemail.info/_system/is_email/test/?all")).scan(
 
 ### Extracting strings from HTML tags
 
-Assume we have the following HTML contents and we need to get strings only and eliminate all HTML tags
+Assume we have the following HTML contents and we need to get strings only and eliminate all HTML tags.
 
 ```ruby
 string = "<!DOCTYPE html>
@@ -150,7 +150,7 @@ This is another contents.
 
 ### Parsing colon separated data from a file
 
-During a pentest, you may need to parse text that has a very common format as follows
+During a pentest, you may need to parse text that has a very common format as follows:
 
 ```
 description : AAAA
@@ -196,7 +196,7 @@ end
 parser(file).each {|k, v| puts "#{k}:\t#{v.join(', ')}"}
 ```
 
-For one-liner lovers
+For one-liner lovers:
 
 ```
 ruby -e 'h={};File.read("text.txt").split("\n").map{|l|l.split(":", 2)}.map{|k, v|k.strip!;v.strip!; h[k] ? h[k] << v : h[k] = [v]};h.each {|k, v| puts "#{k}:\t#{v.join(", ")}"}'
