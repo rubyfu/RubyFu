@@ -176,11 +176,11 @@ Socket.new(domain, socktype [, protocol])
 
 **socktype:** like SOCK\_RAW, SOCK\_STREAM
 
-**protocol: ** by default, it's `0`m it should be a protocol defined \(we'll manipulate that later\)
+**protocol:**  by default, it's `0`m it should be a protocol defined \(we'll manipulate that later\)
 
 ## TCP Socket
 
-**Server\/Client life cycle **
+**Server\/Client life cycle** 
 
 ```text
             Client        Server

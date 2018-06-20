@@ -174,7 +174,7 @@ plain = decipher.update(encrypted) + decipher.final  # Finalize the dencryption
 
 ## Caesar cipher
 
-**Caesar cipher **is one of the oldest known encryption methods. It is very simple - it is just shifting an alphabet. Transformation is termed ROTN, where N is shift value and ROT is from "ROTATE" because this is a cyclic shift.
+**Caesar cipher** is one of the oldest known encryption methods. It is very simple - it is just shifting an alphabet. Transformation is termed ROTN, where N is shift value and ROT is from "ROTATE" because this is a cyclic shift.
 
 In Ruby, array rotation is mutter of using rotate\(\) method. So all what we need is to have array of all alphabets rotate it and map it with the original given string.
 

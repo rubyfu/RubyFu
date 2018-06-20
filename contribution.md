@@ -49,7 +49,7 @@ Not sure where to start helping? Go to [TODO list](contributors/todo.md) and che
 
 #### Ruby code
 
-* Use the triple ticks ``````` ```` followed by `ruby` then your code in between the ``````` ```` to get ruby code highlighted. e.g.
+* Use the triple ticks ```````````  followed by `ruby` then your code in between the ```````````  to get ruby code highlighted. e.g.
 
   ```ruby
         puts "Ruby Code here"

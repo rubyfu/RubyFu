@@ -131,7 +131,7 @@ include PacketFu
 packets = PcapFile.file\_to\_array '/home/KING/wireless.pcap'
 
 packets.each_with\_index do \|packet , ref\|  
-puts "_" _ 75  
+puts "_"  _75  
 puts "Reference: \#{ref}"  
 puts "\_" \_ 75
 
