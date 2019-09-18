@@ -19,6 +19,7 @@
 **Module 0x5 \| Exploitation Kung Fu**
 
 * [ ] Enhance Metasm
+* [ ] [pwntools-ruby](https://github.com/peter50216/pwntools-ruby)
 
 **Module 0x6 \| Forensic Kung Fu**
 
