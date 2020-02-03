@@ -10,7 +10,7 @@ gem install ruby-nessus
 
 ## Usage
 
-In this example I'm going to search the Nessus report for any hosts with vulnerabilities which can be exploited by Metasploit.
+In this example I'm going to search the Nessus report for any hosts with vulnerabilities which can be exploited using Metasploit.
 
 ```ruby
 require 'ruby-nessus'
