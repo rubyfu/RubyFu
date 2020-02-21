@@ -25,6 +25,7 @@
 * Sven Vetsch \| @disenchant - _PR proofreading_
 * Christian Fernandez \| @b1naryFreed0m - _Code and PR_
 * Arron Crawford \| @SquirrelsNabrrl - _Social media, background, advices and more_
+* Alexandre ZANNI \| @noraj - _Code and PR_ 
 
 ## Sponsors
 
