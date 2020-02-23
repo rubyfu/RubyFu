@@ -28,6 +28,7 @@
     * [SMTP Enumeration](module-0x3-or-network-kung-fu/email/smtp-enumeration.md)
   * [Network Scanning](module-0x3-or-network-kung-fu/network-scanning/README.md)
     * [Nmap](module-0x3-or-network-kung-fu/network-scanning/nmap.md)
+    * [Nessus](module-0x3-or-network-kung-fu/network-scanning/nessus.md)
   * [DNS](module-0x3-or-network-kung-fu/dns/README.md)
     * [DNS Enumeration](module-0x3-or-network-kung-fu/dns/dns-enumeration.md)
   * [SNMP Enumeration](module-0x3-or-network-kung-fu/snmp-enumeration.md)
