@@ -56,6 +56,14 @@
   * WhatWeb - Website Fingerprinter \[ [link](https://github.com/urbanadventurer/WhatWeb) \]
   * Relyze - reverse engineer similar to IDA-Pro supports Ruby plugins \[ [link](https://www.relyze.com/) \]
   * Capstone - multi-platform, multi-architecture disassembly framework supports Ruby \[ [link](http://www.capstone-engine.org/) \]
+  * Rabid - A CLI tool and library allowing to simply decode all kind of BigIP cookies \[ [link](https://github.com/Orange-Cyberdefense/rabid) \]
+  * Haiti - A CLI tool to identify the hash type of a given hash \[ [link](https://github.com/Orange-Cyberdefense/haiti) \]
+  * ctf-party - A library to enhance and speed up script/exploit writing for CTF players \[ [link](https://github.com/Orange-Cyberdefense/ctf-party) \]
+  * Fingerprinter - CMS/LMS/Library etc Versions Fingerprinter \[ [link](https://github.com/erwanlr/Fingerprinter) \]
+  * API-fuzzer - API Fuzzer which allows to fuzz request attributes using common pentesting techniques and lists vulnerabilities \[ [link](https://github.com/Fuzzapi/API-fuzzer) \]
+  * oxml_xxe - Tool for embedding XXE/XML exploits into different filetypes (docx/xlsx, odt/ods, svg, xml, etc.) \[ [link](https://github.com/BuffaloWill/oxml_xxe) \]
+  * SSRF Proxy - Facilitates tunneling HTTP communications through servers vulnerable to SSRF \[ [link](https://github.com/bcoles/ssrf_proxy) \]
+  * XXEinjector - Tool for automatic exploitation of XXE vulnerability using direct and different out of band methods \[ [link](https://github.com/enjoiz/XXEinjector) \]
   * **\[**ADD YOUR RUBY HACKING TOOL HERE!**\]**
 
 ---

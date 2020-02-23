@@ -48,6 +48,7 @@
       * [Telegram API](module-0x4-or-web-kung-fu/web-services-and-apis/interacting-with-apis/telegram-api.md)
   * [Ruby 2 JavaScript](module-0x4-or-web-kung-fu/ruby-2-javascript.md)
   * [Web Server and Proxy](module-0x4-or-web-kung-fu/web-server-and-proxy.md)
+  * [LDAP injection](module-0x4-or-web-kung-fu/ldap-injection.md)
 * [Module 0x5 \| Exploitation Kung Fu](module-0x5-or-exploitation-kung-fu/README.md)
   * [Fuzzer](module-0x5-or-exploitation-kung-fu/fuzzer.md)
   * [Calling Windows APIs](module-0x5-or-exploitation-kung-fu/calling-windows-apis.md)
