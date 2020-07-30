@@ -59,7 +59,7 @@
   * Rabid - A CLI tool and library allowing to simply decode all kind of BigIP cookies \[ [link](https://github.com/noraj/rabid) \]
   * Haiti - A CLI tool and library to identify the hash type of a given hash \[ [link](https://github.com/noraj/haiti) \]
   * ctf-party - A library to enhance and speed up script/exploit writing for CTF players \[ [link](https://github.com/noraj/ctf-party) \]
-  * itdis - A small tool that allows you to check if a list of domains you have been provided is in the scope of your pentest or not. \[ [link](https://gitlab.com/noraj/itdis \]
+  * itdis - A small tool that allows you to check if a list of domains you have been provided is in the scope of your pentest or not. \[ [link](https://gitlab.com/noraj/itdis) \]
   * nvd_feed_api - A simple ruby API/library for managing NVD CVE feeds. The API will help you to download and manage NVD Data Feeds, search for CVEs, build your vulnerability assessment platform or vulnerability database. \[ [link](https://gitlab.com/noraj/nvd_api) \]
   * VBSmin - VBScript minifier CLI tool and library \[ [link](https://github.com/noraj/vbsmin) \]
   * Fingerprinter - CMS/LMS/Library etc Versions Fingerprinter \[ [link](https://github.com/erwanlr/Fingerprinter) \]
@@ -70,5 +70,6 @@
   * envizon - Network visualization & vulnerability management/reporting \[ [link](https://github.com/evait-security/envizon) \]
   * HellRaiser - Vulnerability Scanner \[ [link](https://github.com/m0nad/HellRaiser) \]
   * YASUO - A ruby script that scans for vulnerable & exploitable 3rd-party web applications on a network \[ [link](https://github.com/0xsauby/yasuo) \]
+  * Evil-WinRM - WinRM shell for hacking/pentesting enhanced with a lot of features \[ [link](https://github.com/Hackplayers/evil-winrm) \]
   * **\[**ADD YOUR RUBY HACKING TOOL HERE!**\]**
 
