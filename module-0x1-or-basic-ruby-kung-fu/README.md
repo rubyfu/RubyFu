@@ -44,8 +44,7 @@ We can't stop being jealous of Metasploit console \(msfconsole\), where we take 
 
 The Readline module provides an interface for GNU Readline. This module defines a number of methods to facilitate completion and accesses input history from the Ruby interpreter.
 
-{% code-tabs %}
-{% code-tabs-item title="console-basic1.rb" %}
+{% code title="console-basic1.rb" %}
 ```ruby
 #!/usr/bin/env ruby
 # KING SABRI | @KINGSABRI
@@ -70,15 +69,13 @@ while line = Readline.readline('-> ', true)
   break if line =~ /^quit.*/i or line =~ /^exit.*/i
 end
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Now run it and try out the tab completion!
 
 Well, the main idea for tab completion is to make things easier, not just "press tab". Here is a simple thought...
 
-{% code-tabs %}
-{% code-tabs-item title="console-basic2.rb" %}
+{% code title="console-basic2.rb" %}
 ```ruby
 require 'readline'
 
@@ -115,8 +112,7 @@ while line = Readline.readline('-> ', true)  # Start console with character -> a
   break if line =~ /^quit.*/i or line =~ /^exit.*/i
 end
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Things can go much farther, like _msfconsole_, maybe?
 

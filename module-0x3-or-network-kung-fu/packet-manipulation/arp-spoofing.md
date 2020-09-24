@@ -16,7 +16,7 @@ We have 3 machines in this scenario as shown below.
 Here the list of IP and MAC addresses of each of theme in the following table
 
 | Host/Info | IP Address | MAC Address |
-| --- | :---: | :---: |
+| :--- | :---: | :---: |
 | Attacker | 192.168.0.100 | 3C:77:E6:68:66:E9 |
 | Victim | 192.168.0.21 | 00:0C:29:38:1D:61 |
 | Router | 192.168.0.1 | 00:50:7F:E6:96:20 |

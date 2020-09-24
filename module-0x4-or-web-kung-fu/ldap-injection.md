@@ -1,7 +1,6 @@
-## Special Blind LDAP Injection (without "*")
+# LDAP injection
 
 The is a very basic script that will retrieve the password of a user in a Blind LDAP Injection case by bruteforcing all characters one by one.
-
 
 ```ruby
 #!/usr/bin/env ruby
@@ -20,3 +19,4 @@ flag = ''
   end
 end
 ```
+

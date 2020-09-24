@@ -45,8 +45,7 @@ end
 
 #### Simple Shortened URL extractor
 
-{% code-tabs %}
-{% code-tabs-item title="urlextractor.rb" %}
+{% code title="urlextractor.rb" %}
 ```ruby
 #!/usr/bin/env ruby
 require 'net/http'
@@ -61,8 +60,7 @@ loop do
   end
 end
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Run it
 

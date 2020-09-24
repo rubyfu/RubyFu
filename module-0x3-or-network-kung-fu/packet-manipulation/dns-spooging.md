@@ -280,10 +280,10 @@ end
 
 [https://github.com/SilverFoxx/Spoofa/blob/master/spoofa](https://github.com/SilverFoxx/Spoofa/blob/master/spoofa)
 
-Sources  - The code has been modified and fixed
+Sources - The code has been modified and fixed
 
 | Bit | Flag | Description | Reference |
-| :---: | --- | --- | --- |
+| :---: | :--- | :--- | :--- |
 | bit 5 | AA | Authoritative Answer | \[RFC1035\] |
 | bit 6 | TC | Truncated Response | \[RFC1035\] |
 | bit 7 | RD | Recursion Desired | \[RFC1035\] |

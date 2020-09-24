@@ -8,6 +8,8 @@ description: ruby for pentesters
 _**Rubyfu, where Ruby goes evil!**_  
 ![Twitter Follow](https://img.shields.io/twitter/follow/Rubyfu.svg?style=social&label=Follow&style=plastic)
 
+## Introduction
+
 This book is a great collection of ideas, tricks, and skills that could be useful for Hackers. It's a unique extraction reference, summarizes a lot of research and experience in order to achieve your **w00t** in the shortest and smartest way. Rubyfu is where you'll find plug-n-hack code. Rubyfu is a book to use not only to read, it's where ruby goes evil.
 
 ### Who should read this book?
@@ -45,4 +47,41 @@ Module 0x5 builds your exploitation abilities with Ruby. Whatever the vulnerabil
 Module 0x6 explores forensic capabilities with Rubyfu. Whoever you are: redteam, blueteam, or in-between you'll need some forensic skills in your hack and/or investigation. Here you'll learn more about how to deal with registry tasks, extracting browser information, and much more.
 
 ![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+## Black Hat Ruby **— Offensive Ruby programming book for hackers & pentesters**
+
+Black Hat Ruby is the commercial edition of Rubyfu. The book contains many new topics and solving a lot of real-world challenges with detailed explanations targeting professionals.
+
+![Black Hat Ruby cover](.gitbook/assets/bhr-cover.png)
+
+{% hint style="success" %}
+You can purchase [**Black Hat Ruby on Amazon**](https://www.amazon.com/dp/B08JHSF6GT)\*\*\*\*
+{% endhint %}
+
+The primary goal of Black Hat Ruby book is to provide you with a vast angle of using Ruby as an information security professional in an offensive manner. The book meant to help you with weaponizing Ruby language in various offensive scenarios whether you are testing web applications, networks, systems, or exploit development to carve your ideas into working and achieving code.
+
+Another intended goal of the book is to route you to the code that achieves your goal in the shortest time. This book is aimed at security researchers, security consultants, penetration testers, red teamers, or any professional who is interested in writing offensive Code.
+
+In this book, you will learn: 
+
+* Hacker's day to day string manipulation, conversion, and extraction. 
+* Compiling ruby to exe, parsing, and files such as XML, JSON, HTML, and binary. 
+* Manipulating files stamps, creating malicious Shortcut, Excel & PDF files. 
+* Generating the most common hashes for various platforms. 
+* Using ruby to execute system commands. 
+* Tactical code for red teaming activities, such as lateral movements via WinRM, WMI and creating malicious OLE and malicious Excel files for spear phishing. 
+* Importing Windows system internal for execute shellcode, dll injection. 
+* Introduction to the network Socket operations in Ruby and creating a remote shell. 
+* Malicious use for network services such as HTTP, SSH, DNS, FTP, TFTP for exploitation and data exfiltration. 
+* Packet manipulation and building network packet from the ground up to for ARP spoofing, rogue wireless access point \(AP\), SNMP spoofing and parsing captured pcap files. 
+* Introduction about dealing with services and creating covert C2 for data exfiltration. 
+* Automating the hunting of XSS and blind-XSS. • Exploiting Web socket and WSDL services and its APIs. 
+* Using Slack as a C2 
+* Understanding and creating advanced Burp Suite scanner extensions \(active and passive\) and manipulate the Burp user interface in detail. 
+* Step by step basic buffer overflow exploit development using ruby. 
+* Porting your stand-alone exploit to Metasploit and creating Auxiliary, Exploit and Post modules.
+
+Happy Hacking!
+
+
 
