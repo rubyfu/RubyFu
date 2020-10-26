@@ -37,6 +37,7 @@
     * [DNS Spooging](module-0x3-or-network-kung-fu/packet-manipulation/dns-spooging.md)
     * [MiTM Attack](module-0x3-or-network-kung-fu/packet-manipulation/mitm-attack.md)
   * [Memcached](module-0x3-or-network-kung-fu/memcached.md)
+  * [AMQP](module-0x3-or-network-kung-fu/amqp.md)
 * [Module 0x4 \| Web Kung Fu](module-0x4-or-web-kung-fu/README.md)
   * [SQL Injection Scanner](module-0x4-or-web-kung-fu/sql-injection-scanner.md)
   * [Databases](module-0x4-or-web-kung-fu/databases.md)
