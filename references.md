@@ -71,5 +71,6 @@
   * HellRaiser - Vulnerability Scanner \[ [link](https://github.com/m0nad/HellRaiser) \]
   * YASUO - A ruby script that scans for vulnerable & exploitable 3rd-party web applications on a network \[ [link](https://github.com/0xsauby/yasuo) \]
   * Evil-WinRM - WinRM shell for hacking/pentesting enhanced with a lot of features \[ [link](https://github.com/Hackplayers/evil-winrm) \]
+  * apullo - A scanner for taking basic fingerprints \[ [link](https://github.com/ninoseki/apullo) \]
   * **\[**ADD YOUR RUBY HACKING TOOL HERE!**\]**
 
