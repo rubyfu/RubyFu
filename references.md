@@ -47,7 +47,7 @@
   * BufferOverflow kit - Exploitation tool Kit \[ [link](https://github.com/KINGSABRI/BufferOverflow-Kit) \]
   * HTTP Traceroute \[ [link](https://digi.ninja/projects/http_traceroute.php) \]
   * CeWL - Custom Word List generator \[ [link](https://digi.ninja/projects/cewl.php) \]
-  * Roini - Vulnerability research and exploit development framework \[ [link](http://ronin-ruby.github.io/) \]
+  * Ronin - Vulnerability research and exploit development framework \[ [link](https://ronin-rb.dev/) \]
   * Idb - Simplifys some common tasks for iOS pentesting & research \[ [link](https://github.com/dmayer/idb) \]
   * Bettercap - Extensible MitM tool and framework \[ [link](https://www.bettercap.org/) \]
   * WATOBO - The Web Application Security Toolbox \[ [link](http://watobo.sourceforge.net/) \]
