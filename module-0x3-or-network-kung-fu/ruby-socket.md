@@ -341,3 +341,27 @@ server.start            # Start the service
 server.join
 ```
 
+## Port knocking
+
+Simple port knocker using the socket standard library.
+
+```ruby
+require 'socket'
+
+ports = [42, 1337, 10420, 6969, 63000]
+
+ports.each do |port|
+  puts "[+] Port: #{port}"
+  sleep 1
+  begin
+    s = TCPSocket.new '10.10.70.53', port
+    s.close
+  rescue Errno::ECONNREFUSED, Errno::EHOSTUNREACH
+    next
+  end
+end
+```
+
+Ref.:
+
+- [The Great Escape - Write-up - TryHackMe](https://blog.raw.pm/en/TryHackMe-The-Great-Escape-write-up/)
