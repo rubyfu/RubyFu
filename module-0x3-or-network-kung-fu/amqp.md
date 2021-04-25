@@ -1,6 +1,6 @@
 # AMQP
 
-> The Advanced Message Queuing Protocol (AMQP) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing (including point-to-point and publish-and-subscribe), reliability and security.[1]
+> The Advanced Message Queuing Protocol \(AMQP\) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing \(including point-to-point and publish-and-subscribe\), reliability and security.\[1\]
 
 Ref. [Wikipedia](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)
 
@@ -64,5 +64,6 @@ connection.close
 
 Ref.:
 
-- [RabbitMQ - Tutorial 3 - Publish/Subscribe](https://www.rabbitmq.com/tutorials/tutorial-three-ruby.html)
-- [Rawsec - Dyplesher - Write-up - HackTheBox](https://blog.raw.pm/en/HackTheBox-Dyplesher-write-up/#Elevation-of-Privilege-EoP-from-felamos-to-root)
+* [RabbitMQ - Tutorial 3 - Publish/Subscribe](https://www.rabbitmq.com/tutorials/tutorial-three-ruby.html)
+* [Rawsec - Dyplesher - Write-up - HackTheBox](https://blog.raw.pm/en/HackTheBox-Dyplesher-write-up/#Elevation-of-Privilege-EoP-from-felamos-to-root)
+

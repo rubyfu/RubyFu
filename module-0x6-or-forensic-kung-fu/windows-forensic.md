@@ -2,7 +2,7 @@
 
 ## Windows Registry
 
-![](../.gitbook/assets/win-foren__winreg1.png)
+![](../.gitbook/assets/win-foren__winreg1%20%284%29.png)
 
 ### Enumeration
 

@@ -1,4 +1,4 @@
-# DNS Spooging
+# DNS Spoofing
 
 Continuing our attack through [ARP Spoofing](https://github.com/rubyfu/RubyFu/tree/ad6b6208f7c83788d0947fbc95bfa8ea8e3b6ed7/module_0x3__network_kung_fu/module_0x4__network_kung_fu/arp_spoofing.md), we want to change the victim's DNS request to whatever destination we like.
 

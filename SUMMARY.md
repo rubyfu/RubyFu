@@ -34,7 +34,7 @@
   * [SNMP Enumeration](module-0x3-or-network-kung-fu/snmp-enumeration.md)
   * [Packet Manipulation](module-0x3-or-network-kung-fu/packet-manipulation/README.md)
     * [ARP Spoofing](module-0x3-or-network-kung-fu/packet-manipulation/arp-spoofing.md)
-    * [DNS Spooging](module-0x3-or-network-kung-fu/packet-manipulation/dns-spooging.md)
+    * [DNS Spoofing](module-0x3-or-network-kung-fu/packet-manipulation/dns-spoofing.md)
     * [MiTM Attack](module-0x3-or-network-kung-fu/packet-manipulation/mitm-attack.md)
   * [Memcached](module-0x3-or-network-kung-fu/memcached.md)
   * [AMQP](module-0x3-or-network-kung-fu/amqp.md)

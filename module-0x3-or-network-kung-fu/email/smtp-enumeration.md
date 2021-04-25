@@ -1,7 +1,8 @@
-# SMTP email address enumeration
+# SMTP Enumeration
 
-Interacting with SMTP is easy and since the protocol is straight forward.
-We can use the [VRFY](https://book.hacktricks.xyz/pentesting/pentesting-smtp#vrfy) command to check if an email address exists or not:
+## SMTP email address enumeration
+
+Interacting with SMTP is easy and since the protocol is straight forward. We can use the [VRFY](https://book.hacktricks.xyz/pentesting/pentesting-smtp#vrfy) command to check if an email address exists or not:
 
 ```ruby
 #!/usr/bin/env ruby
@@ -51,7 +52,7 @@ postgres
 
 **Your turn**, there are other commands that can be used such as [EXPN](https://book.hacktricks.xyz/pentesting/pentesting-smtp#expn), `RCPT`. Enhance the above script to include all these commands to avoid restricted commands that might you face. More SMTP commands are listed [here](https://book.hacktricks.xyz/pentesting/pentesting-smtp/smtp-commands).
 
-# SMTP open relay abuse
+## SMTP open relay abuse
 
 SMTP not protected by authentication can be abused to send emails from anyone:
 
@@ -77,3 +78,4 @@ end
 puts "[*] Result:-"
 puts "[+] Banner: " + @banner
 ```
+

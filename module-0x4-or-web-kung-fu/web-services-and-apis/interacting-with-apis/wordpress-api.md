@@ -279,7 +279,7 @@ Results
   "custom_fields"=>[]}]
 ```
 
-and here is the new post ![](../../../.gitbook/assets/webfu__xmlrpc1.png)
+and here is the new post ![](../../../.gitbook/assets/webfu__xmlrpc1%20%281%29.png)
 
 Source: [HOW TO PROGRAMATICALLY CONTROL WORDPRESS WITH RUBY USING XML-RPC](http://notes.jerzygangi.com/how-to-programatically-control-wordpress-with-ruby-using-xml-rpc/)
 

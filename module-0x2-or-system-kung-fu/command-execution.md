@@ -127,7 +127,7 @@ To check the status of the backtick operation you can execute $?.success?
 ### How to choose?
 
 A great flow chart has been made on [stackoverflow](http://stackoverflow.com/a/37329716/967283)  
-![](../.gitbook/assets/cmd_exec_chart.png)
+![](../.gitbook/assets/cmd_exec_chart%20%281%29.png)
 
 * [Ruby \| Execute system commands](http://king-sabri.net/?p=2553)
 * [5 ways to run commands from Ruby](http://mentalized.net/journal/2010/03/08/5-ways-to-run-commands-from-ruby/)

@@ -244,7 +244,7 @@ ROT30) Jmtqxm
 
 ## Enigma script
 
-| ![](../.gitbook/assets/cryptography__wiringdiagram.png) |
+| ![](../.gitbook/assets/Cryptography__wiringdiagram%20%285%29.png) |
 | :---: |
 | **Figure 1.** Enigma machine diagram |
 
