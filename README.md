@@ -62,7 +62,7 @@ The primary goal of Black Hat Ruby book is to provide you with a vast angle of u
 
 Another intended goal of the book is to route you to the code that achieves your goal in the shortest time. This book is aimed at security researchers, security consultants, penetration testers, red teamers, or any professional who is interested in writing offensive Code.
 
-In this book, you will learn: 
+In this book, you will learn:
 
 * Hacker's day to day string manipulation, conversion, and extraction. 
 * Compiling ruby to exe, parsing, and files such as XML, JSON, HTML, and binary. 
@@ -82,6 +82,4 @@ In this book, you will learn:
 * Porting your stand-alone exploit to Metasploit and creating Auxiliary, Exploit and Post modules.
 
 Happy Hacking!
-
-
 

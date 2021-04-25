@@ -69,6 +69,8 @@
   * [Memory Forensic](module-0x6-or-forensic-kung-fu/memory-forensic.md)
   * [Network Traffic Analysis](module-0x6-or-forensic-kung-fu/network-traffic-analysis.md)
   * [Parsing Log Files](module-0x6-or-forensic-kung-fu/parsing-log-files.md)
+* [Module 0x7 \| OSINT Kung Fu](module-0x7-or-osint-kung-fu/README.md)
+  * [Shodan](module-0x7-or-osint-kung-fu/shodan.md)
 * [References](references.md)
 * [FAQs](faqs.md)
 * [Contributors](contributors/README.md)
