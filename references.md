@@ -74,6 +74,8 @@
   * YASUO - A ruby script that scans for vulnerable & exploitable 3rd-party web applications on a network \[ [link](https://github.com/0xsauby/yasuo) \]
   * Evil-WinRM - WinRM shell for hacking/pentesting enhanced with a lot of features \[ [link](https://github.com/Hackplayers/evil-winrm) \]
   * apullo - A scanner for taking basic fingerprints \[ [link](https://github.com/ninoseki/apullo) \]
-  * Pipal - Password analyser and statistics generator \[ [link](https://github.com/digininja/pipal) \] 
+  * Pipal - Password analyser and statistics generator \[ [link](https://github.com/digininja/pipal) \]
+  * PacketFu - mid-level packet manipulation library for reading and writing packets to an interface or to a libpcap-formatted file \[ [link](https://github.com/packetfu/packetfu) \]
+  * PacketGen - library to generate, send and capture network packets \[ [link](https://github.com/sdaubert/packetgen) \]
   * **\[**ADD YOUR RUBY HACKING TOOL HERE!**\]**
 
