@@ -64,6 +64,7 @@
   * VBSmin - VBScript minifier CLI tool and library \[ [link](https://github.com/noraj/vbsmin) \]
   * Pass Station - CLI & library to search for default credentials among thousands of Products / Vendors \[ [link](https://github.com/sec-it/pass-station) \]
   * vrt-cli - A simple tool to visualize VRT \(Vulnerability Rating Taxonomy\) from the CLI \[ [link](https://github.com/noraj/vrt-cli) \]
+  * TLS map - CLI & library for mapping TLS cipher algorithm names: IANA, OpenSSL, GnuTLS, NSS \[ [link](https://github.com/sec-it/tls-map) \]
   * Fingerprinter - CMS/LMS/Library etc Versions Fingerprinter \[ [link](https://github.com/erwanlr/Fingerprinter) \]
   * API-fuzzer - API Fuzzer which allows to fuzz request attributes using common pentesting techniques and lists vulnerabilities \[ [link](https://github.com/Fuzzapi/API-fuzzer) \]
   * oxml\_xxe - Tool for embedding XXE/XML exploits into different filetypes \(docx/xlsx, odt/ods, svg, xml, etc.\) \[ [link](https://github.com/BuffaloWill/oxml_xxe) \]
