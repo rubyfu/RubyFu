@@ -78,5 +78,6 @@
   * Pipal - Password analyser and statistics generator \[ [link](https://github.com/digininja/pipal) \]
   * PacketFu - mid-level packet manipulation library for reading and writing packets to an interface or to a libpcap-formatted file \[ [link](https://github.com/packetfu/packetfu) \]
   * PacketGen - library to generate, send and capture network packets \[ [link](https://github.com/sdaubert/packetgen) \]
+  * ssllabs.rb - library for Qualys SSL Labs API, SSL/TLS security analysis \[ [link](https://github.com/Shopify/ssllabs.rb) \]
   * **\[**ADD YOUR RUBY HACKING TOOL HERE!**\]**
 
