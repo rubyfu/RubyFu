@@ -24,7 +24,10 @@ A good list of [References](references.md) can be found under the Beginner secti
 There are some awesome websites that push your programming skills via interactive challenges and I really encourage you to go through one or more of them.
 
 * [Codewars](http://www.codewars.com/?language=ruby)
-* [rubeque](http://www.rubeque.com/)
 * [Hackerrank](https://www.hackerrank.com/)
 * [RubyQuiz](http://rubyquiz.com/)
 
+There are some interactive courses, MOOCs and great resources to learn too:
+
+* [Exercism](https://exercism.org/tracks/ruby)
+* [SoloLearn](https://www.sololearn.com/learning/1081)
