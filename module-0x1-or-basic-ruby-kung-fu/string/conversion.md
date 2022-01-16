@@ -74,6 +74,14 @@ or
 "ABCD".chars.map {|c| '\x%x' % c.ord}.join    #=> "\\x41\\x42\\x43\\x44"
 ```
 
+or with [ctf-party][ctf-party]
+
+```ruby
+require 'ctf_party'
+'ABCD'.to_hex #=> "41424344"
+'ABCD'.to_hex(prefixall: '\\x') #=> "\\x41\\x42\\x43\\x44"
+```
+
 ## Convert Hex to String/Binary
 
 ```ruby
@@ -92,6 +100,13 @@ or for raw socket
 "41424344".scan(/../).map(&:hex).pack("C*")    #=> ABCD
 ```
 
+or with [ctf-party][ctf-party]
+
+```ruby
+require 'ctf_party'
+'41424344'.from_hex #=> "ABCD"
+```
+
 in-case of binary that is out of `.chr` range. For example you may need to convert an IP-address to hex raw then send it through the socket. The case of just converting it to hex would not work for you
 
 ```ruby
@@ -107,6 +122,14 @@ To solve this issue, use pack to convert integers to 8-bit unsigned \(unsigned c
 
 ```ruby
 ip.split(".").map(&:to_i).pack("C*")    #=> "\xC0\xA8d\n"
+```
+
+or with [ctf-party][ctf-party]
+
+```ruby
+require 'ctf_party'
+'192.168.100.10'.to_hexip #=> "c0a8640a"
+'192.168.100.10'.to_hexip(prefixall: '\\x') #=> "\\xc0\\xa8\\x64\\x0a"
 ```
 
 **Note about hex:** Sometimes you might face non-printable characters, especially when dealing with binary raw. In this case, append **\(**`# -*- coding: binary -*-`**\)** at the top of your file to fix any interpretation issues.
@@ -188,21 +211,36 @@ require 'base64'
 Base64.encode64 "RubyFu"
 ```
 
+or with [ctf-party][ctf-party]
+
+```ruby
+require 'ctf_party'
+'RubyFu'.to_b64 #=> "UnVieUZ1"
+```
+
 **Decode**
 
 ```ruby
 "UnVieUZ1".unpack('m0')
 ```
 
-or
-
-```ruby
- Base64.decode64 "UnVieUZ1"
-```
-
 {% hint style="info" %}
 **TIP:** The string unpack method is incredibly useful for converting data we read as strings back to their original form. To read more, visit the String class reference at www.ruby-doc.org/core/classes/String.html .
 {% endhint %}
+
+or
+
+```ruby
+require 'base64'
+Base64.decode64 "UnVieUZ1"
+```
+
+or with [ctf-party][ctf-party]
+
+```ruby
+require 'ctf_party'
+'UnVieUZ1'.from_b64 #=> "RubyFu"
+```
 
 ## En/Decode URL String
 
@@ -212,22 +250,74 @@ URL encoding/decoding is well known. From a hacker's point of view, we need it o
 
 ```ruby
 require 'uri'
-puts URI.encode 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
+URI('http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>').to_s #=> "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E"
+```
+
+or
+
+```ruby
+require 'uri'
+URI::Parser.new.escape 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>' #=> "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E"
+```
+
+You can encode/decode any non-URL string, of-course.
+
+The above way will encode any non-URL standard strings only \(ex. `<>"{}`\) however if you want to encode the full string use one of the following methods:
+
+```ruby
+require 'uri'
+URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>' #=> "http%3A%2F%2Fvulnerable.site%2Fsearch.aspx%3Ftxt%3D%22%3E%3Cscript%3Ealert%28%2FRubyfu%2F.source%29%3C%2Fscript%3E"
+```
+
+or
+
+```ruby
+require 'cgi'
+CGI.escape 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>' #=> "http%3A%2F%2Fvulnerable.site%2Fsearch.aspx%3Ftxt%3D%22%3E%3Cscript%3Ealert%28%2FRubyfu%2F.source%29%3C%2Fscript%3E"
+```
+
+or
+
+```ruby
+require 'erb'
+ERB::Util.url_encode 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>' #=> "http%3A%2F%2Fvulnerable.site%2Fsearch.aspx%3Ftxt%3D%22%3E%3Cscript%3Ealert%28%2FRubyfu%2F.source%29%3C%2Fscript%3E"
+```
+
+or with [ctf-party][ctf-party]
+
+```ruby
+require 'ctf_party'
+'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'.urlencode #=> "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E"
+'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'.urlencode_component #=> "http%3A%2F%2Fvulnerable.site%2Fsearch.aspx%3Ftxt%3D%22%3E%3Cscript%3Ealert%28%2FRubyfu%2F.source%29%3C%2Fscript%3E"
 ```
 
 **Decoding string**
 
 ```ruby
 require 'uri'
-puts URI.decode "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E"
+URI::Parser.new.unescape "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E" #=> "http://vulnerable.site/search.aspx?txt=\"><script>alert(/Rubyfu/.source)</script>"
 ```
 
-You can encode/decode any non-URL string, of-course.
-
-The above way will encode any non-URL standard strings only \(ex. `<>"{}`\) however if you want to encode the full string use `URI.encode_www_form_component`
+or
 
 ```ruby
-puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><script>alert(/Rubyfu/.source)</script>'
+require 'uri'
+URI.decode_www_form_component "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E" #=> "http://vulnerable.site/search.aspx?txt=\"><script>alert(/Rubyfu/.source)</script>"
+```
+
+or
+
+```ruby
+require 'cgi'
+CGI.unescape "http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E" #=> "http://vulnerable.site/search.aspx?txt=\"><script>alert(/Rubyfu/.source)</script>"
+```
+
+or with [ctf-party][ctf-party]
+
+```ruby
+require 'ctf_party'
+"http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E".urldecode #=> "http://vulnerable.site/search.aspx?txt=\"><script>alert(/Rubyfu/.source)</script>"
+"http://vulnerable.site/search.aspx?txt=%22%3E%3Cscript%3Ealert(/Rubyfu/.source)%3C/script%3E".urldecode_component #=> "http://vulnerable.site/search.aspx?txt=\"><script>alert(/Rubyfu/.source)</script>"
 ```
 
 ## HTML En/Decode
@@ -236,26 +326,28 @@ puts URI.encode_www_form_component 'http://vulnerable.site/search.aspx?txt="><sc
 
 ```ruby
 require 'cgi'
-CGI.escapeHTML('"><script>alert("Rubyfu!")</script>')
+CGI.escapeHTML('"><script>alert("Rubyfu!")</script>') #=> "&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;"
 ```
 
-Returns
+or with [ctf-party][ctf-party]
 
-```text
-&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;
+```ruby
+require 'ctf_party'
+'"><script>alert("Rubyfu!")</script>'.htmlescape # => "&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;"
 ```
 
 **Decoding HTML**
 
 ```ruby
 require 'cgi'
-CGI.unescapeHTML("&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;")
+CGI.unescapeHTML("&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;") #=> "\"><script>alert(\"Rubyfu!\")</script>"
 ```
 
-Returns
+or with [ctf-party][ctf-party]
 
-```text
-"><script>alert("Rubyfu!")</script>
+```ruby
+require 'ctf_party'
+"&quot;&gt;&lt;script&gt;alert(&quot;Rubyfu!&quot;)&lt;/script&gt;".htmlunescape # => "\"><script>alert(\"Rubyfu!\")</script>"
 ```
 
 ## En/Decode SAML String
@@ -282,11 +374,9 @@ Returns
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<samlp:AuthnRequest xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" ID=\"agdobjcfikneommfjamdclenjcpcjmgdgbmpgjmo\" Version=\"2.0\" IssueInstant=\"2007-04-26T13:51:56Z\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" ProviderName=\"google.com\" AssertionConsumerServiceURL=\"https://www.google.com/a/solweb.no/acs\" IsPassive=\"true\"><saml:Issuer xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\">google.com</saml:Issuer><samlp:NameIDPolicy AllowCreate=\"true\" Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified\" /></samlp:AuthnRequest>\r\n"
 ```
 
-
-
 * [Source](http://stackoverflow.com/questions/3253298/base64-decode64-in-ruby-returning-strange-results)
 * **Resources**
   * [more about SAML](http://dev.gettinderbox.com/2013/12/16/introduction-to-saml/)
 
 
-
+[ctf-party]:https://github.com/noraj/ctf-party
