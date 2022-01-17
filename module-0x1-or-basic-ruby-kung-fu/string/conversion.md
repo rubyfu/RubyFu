@@ -74,7 +74,7 @@ or
 "ABCD".chars.map {|c| '\x%x' % c.ord}.join    #=> "\\x41\\x42\\x43\\x44"
 ```
 
-or with [ctf-party][ctf-party]
+or with [ctf-party][ctf-party] (`gem install ctf-party`)
 
 ```ruby
 require 'ctf_party'
