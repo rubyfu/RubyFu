@@ -2,7 +2,7 @@
 
 ## Windows Registry
 
-![](../.gitbook/assets/win-foren__winreg1%20%284%29.png)
+![](<../.gitbook/assets/win-foren\_\_winreg1 (6) (1).png>)
 
 ### Enumeration
 
@@ -28,4 +28,3 @@ end
 ```
 
 Note: `KEY_ALL_ACCESS` enables you to write and deleted. The default access is `KEY_READ` if you specify nothing.
-

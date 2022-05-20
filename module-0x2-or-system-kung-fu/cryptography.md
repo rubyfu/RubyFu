@@ -20,7 +20,7 @@ puts Digest::SHA1.hexdigest 'P@ssw0rd'
 
 In SHA2 you have 2 ways to do it.
 
-**Way \#1:** By creating a new SHA2 hash object with a given bit length.
+**Way #1:** By creating a new SHA2 hash object with a given bit length.
 
 ```ruby
 require 'digest'
@@ -33,7 +33,7 @@ sha2_256.hexdigest 'P@ssw0rd'
 Digest::SHA2.new(bitlen = 256).hexdigest 'P@ssw0rd'
 ```
 
-**Way \#2:** By Using the class directly
+**Way #2:** By Using the class directly
 
 ```ruby
 require 'digest'
@@ -88,7 +88,7 @@ end
 puts lm_hash "P@ssw0rd"
 ```
 
-[Source \| RubyNTLM](https://github.com/wimm/rubyntlm/blob/master/lib/net/ntlm.rb)
+[Source | RubyNTLM](https://github.com/wimm/rubyntlm/blob/master/lib/net/ntlm.rb)
 
 ### Windows NTLMv1 Password hash
 
@@ -132,13 +132,13 @@ require 'openssl'
 puts OpenSSL::Cipher.ciphers
 ```
 
-To unserdatand the cipher naming \(eg. `AES-128-CBC`\), it devided to 3 parts seperated by hyphen `<Name>-<Key_length>-<Mode>`
+To unserdatand the cipher naming (eg. `AES-128-CBC`), it devided to 3 parts seperated by hyphen `<Name>-<Key_length>-<Mode>`
 
 Symmetric encrption algorithms modes need 3 import data in order to work
 
-1. Key \(password\)
-2. Initial Vector \(iv\)
-3. Data to encrypt \(plain text\) 
+1. Key (password)
+2. Initial Vector (iv)
+3. Data to encrypt (plain text)&#x20;
 
 ### AES encryption
 
@@ -170,13 +170,13 @@ plain = decipher.update(encrypted) + decipher.final  # Finalize the dencryption
 **Resources**
 
 * [OpenSSL::Cipher docs](https://ruby-doc.org/stdlib-2.3.3/libdoc/openssl/rdoc/OpenSSL/Cipher.html)
-* [\(Symmetric\) Encryption With Ruby \(and Rails\)](http://stuff-things.net/2015/02/12/symmetric-encryption-with-ruby-and-rails/)
+* [(Symmetric) Encryption With Ruby (and Rails)](http://stuff-things.net/2015/02/12/symmetric-encryption-with-ruby-and-rails/)
 
 ## Caesar cipher
 
 **Caesar cipher** is one of the oldest known encryption methods. It is very simple - it is just shifting an alphabet. Transformation is termed ROTN, where N is shift value and ROT is from "ROTATE" because this is a cyclic shift.
 
-In Ruby, array rotation is mutter of using rotate\(\) method. So all what we need is to have array of all alphabets rotate it and map it with the original given string.
+In Ruby, array rotation is mutter of using rotate() method. So all what we need is to have array of all alphabets rotate it and map it with the original given string.
 
 ```ruby
 #!/usb/bin/env ruby
@@ -202,7 +202,7 @@ end
 
 result
 
-```text
+```
 $-> ruby caesar-cypher.rb Fipmti
 ROT1) Gjqnuj
 ROT2) Hkrovk
@@ -244,9 +244,9 @@ ROT30) Jmtqxm
 
 ## Enigma script
 
-| ![](../.gitbook/assets/Cryptography__wiringdiagram%20%285%29.png) |
-| :---: |
-| **Figure 1.** Enigma machine diagram |
+| ![](<../.gitbook/assets/Cryptography\_\_wiringdiagram (6) (1).png>) |
+| :-----------------------------------------------------------------: |
+|                 **Figure 1.** Enigma machine diagram                |
 
 ```ruby
 Plugboard = Hash[*('A'..'Z').to_a.shuffle.first(20)]
@@ -296,5 +296,4 @@ puts "Decrypted '#{encrypted}' to '#{decrypted = input(encrypted)}'"
 puts 'Success!' if plain_text == decrypted
 ```
 
-[Source \| Understanding the Enigma machine with 30 lines of Ruby](http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game)
-
+[Source | Understanding the Enigma machine with 30 lines of Ruby](http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game)
