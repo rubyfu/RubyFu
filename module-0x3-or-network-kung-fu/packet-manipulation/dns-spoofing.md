@@ -1,10 +1,10 @@
 # DNS Spoofing
 
-Continuing our attack through [ARP Spoofing](https://github.com/rubyfu/RubyFu/tree/ad6b6208f7c83788d0947fbc95bfa8ea8e3b6ed7/module\_0x3\_\_network\_kung\_fu/module\_0x4\_\_network\_kung\_fu/arp\_spoofing.md), we want to change the victim's DNS request to whatever destination we like.
+Continuing our attack through [ARP Spoofing](https://github.com/rubyfu/RubyFu/tree/ad6b6208f7c83788d0947fbc95bfa8ea8e3b6ed7/module_0x3__network_kung_fu/module_0x4__network_kung_fu/arp_spoofing.md), we want to change the victim's DNS request to whatever destination we like.
 
 ## Scenario
 
-```
+```text
                 |Attacker|
                     | AttackerSite
                     ٧                      AttackerSite
@@ -16,49 +16,49 @@ Continuing our attack through [ARP Spoofing](https://github.com/rubyfu/RubyFu/tr
 
 The same IPs of ARP spoof attack
 
-|   Host   |   IP Address  |
-| :------: | :-----------: |
+| Host | IP Address |
+| :---: | :---: |
 | Attacker | 192.168.0.100 |
-|  Victim  |  192.168.0.21 |
-|  Router  |  192.168.0.1  |
+| Victim | 192.168.0.21 |
+| Router | 192.168.0.1 |
 
-Now we cant intercept DNS Query packet coming from victim's machine. Since PacketFu supports filters in capturing (to reduce mount of captured packets) we'll use `udp and port 53 and host` filter, then we'll inspect the captured packet to ensure that it's a query then find the requested domain. [**Download DNS packet**](https://github.com/rubyfu/RubyFu/tree/ad6b6208f7c83788d0947fbc95bfa8ea8e3b6ed7/files/module03/dns\_spoofing\_dns-req\_res.pcap.pcapng).
+Now we cant intercept DNS Query packet coming from victim's machine. Since PacketFu supports filters in capturing \(to reduce mount of captured packets\) we'll use `udp and port 53 and host` filter, then we'll inspect the captured packet to ensure that it's a query then find the requested domain. [**Download DNS packet**](https://github.com/rubyfu/RubyFu/tree/ad6b6208f7c83788d0947fbc95bfa8ea8e3b6ed7/files/module03/dns_spoofing_dns-req_res.pcap.pcapng).
 
 From Wireshark, if we take a deeper look at the DNS query payload in `Domain Name System (query)`, we can see its been presented in hexadecimal format.
 
-| ![](../../images/module03/dns\_spoofing\_wireshark1.png) |
-| :------------------------------------------------------: |
-|              **Figure 1.** DNS query Payload             |
+| ![](../../.gitbook/assets/dns_spoofing_wireshark1.png) |
+| :---: |
+| **Figure 1.** DNS query Payload |
 
 Let's to anatomize our payload
 
-```
+```text
 0000   e7 1d 01 00 00 01 00 00 00 00 00 00 07 74 77 69
 0010   74 74 65 72 03 63 6f 6d 00 00 01 00 01
 ```
 
-* The First 2 bytes is the **Transaction ID** and we don't care about it for now. (Our case: `\xe7\x1d`)
-* The next 2 bytes is the **Flags**. (We need: `\x01\x00` = \x10)
+* The First 2 bytes is the **Transaction ID** and we don't care about it for now. \(Our case: `\xe7\x1d`\)
+* The next 2 bytes is the **Flags**. \(We need: `\x01\x00` = \x10\)
 * Furthermore, in **Queries** section which contains
 
-```
+```text
 0000   07 74 77 69 74 74 65 72 03 63 6f 6d 00 00 01 00
 0010   01
 ```
 
 * The **Queries** starts at _13 byte_ of the payload.
-  * The 13th byte specifies the length of the domain name _before_ the _very first dot_ (without last dot com or whatever the top domain is). (Our case: `\x07`) **Try:**`[%w{ 74 77 69 74 74 65 72 }.join].pack("H*")`
+  * The 13th byte specifies the length of the domain name _before_ the _very first dot_ \(without last dot com or whatever the top domain is\). \(Our case: `\x07`\) **Try:**`[%w{ 74 77 69 74 74 65 72 }.join].pack("H*")`
     * Notice The domain name of "twitter.com" equals `\x07` but "www.twitter.com" equals `\x03` the same consideration for subdomains
-    *   Each dot after first dot will be replaced with the length of the followed characters
+    * Each dot after first dot will be replaced with the length of the followed characters
 
-        **e.g.** www.google.co.uk
+      **e.g.** www.google.co.uk
 
-        * First length (**www**)  => will be replaced with `\x03`
-        * First dot(**.google**) => will be replaced with `\x06`
-        * Second dot(**.co**)    => will be replaced with `\x02`
-        * Third dot(**.uk**)     => will be replaced with `\x02`
+      * First length \(**www**\)  =&gt; will be replaced with `\x03`
+      * First dot\(**.google**\) =&gt; will be replaced with `\x06`
+      * Second dot\(**.co**\)    =&gt; will be replaced with `\x02`
+      * Third dot\(**.uk**\)     =&gt; will be replaced with `\x02`
   * The very end of the domain name string is terminated by a `\x00`.
-  * The next 2 bytes refers to the **type of the query**. (Our case: `\x00\x01`)
+  * The next 2 bytes refers to the **type of the query**. \(Our case: `\x00\x01`\)
 
 **Now what?!**
 
@@ -146,11 +146,11 @@ capture.stream.each do |pkt|
 end
 ```
 
-Till now we successfully finished [ARP Spoofing](https://github.com/rubyfu/RubyFu/tree/ad6b6208f7c83788d0947fbc95bfa8ea8e3b6ed7/module\_0x3\_\_network\_kung\_fu/module\_0x3\_\_network\_kung\_fu/arp\_spoofing.md) then DNS capturing but still we need to replace/spoof the original response to our domain. e.g. attacker.zone, now we have to build a DNS response instead of spoofed to be sent. So what we need?
+Till now we successfully finished [ARP Spoofing](https://github.com/rubyfu/RubyFu/tree/ad6b6208f7c83788d0947fbc95bfa8ea8e3b6ed7/module_0x3__network_kung_fu/module_0x3__network_kung_fu/arp_spoofing.md) then DNS capturing but still we need to replace/spoof the original response to our domain. e.g. attacker.zone, now we have to build a DNS response instead of spoofed to be sent. So what we need?
 
-* taking the IP we are going to redirect the user to (the spoofing\_ip)
+* taking the IP we are going to redirect the user to \(the spoofing\_ip\)
   * converting it into hex using the `to_i` and `pack` methods.
-* From there we create a new UDP packet using the data contained in `@ourInfo` (IP and MAC) and fill in the normal UDP fields.
+* From there we create a new UDP packet using the data contained in `@ourInfo` \(IP and MAC\) and fill in the normal UDP fields.
   * I take most of this information straight from the DNS Query packet.
 * The next step is to create the DNS Response.
   * the best way to understand the code here is to look at a DNS header and then
@@ -158,9 +158,9 @@ Till now we successfully finished [ARP Spoofing](https://github.com/rubyfu/RubyF
   * This will let you see what flags are being set.
 * From here, we just calculate the checksum for the UDP packet and send it out to the target's machine.
 
-| ![Wireshark](../../images/module03/dns\_spoofing\_wireshark2.png) |
-| :---------------------------------------------------------------: |
-|                 **Figure 2.** DNS Response Payload                |
+| ![Wireshark](../../.gitbook/assets/dns_spoofing_wireshark2.png) |
+| :---: |
+| **Figure 2.** DNS Response Payload |
 
 ```ruby
 spoofing_ip = "69.171.234.21"
@@ -282,23 +282,24 @@ end
 
 Sources - The code has been modified and fixed
 
-|   Bit  | Flag | Description          | Reference  |
-| :----: | ---- | -------------------- | ---------- |
-|  bit 5 | AA   | Authoritative Answer | \[RFC1035] |
-|  bit 6 | TC   | Truncated Response   | \[RFC1035] |
-|  bit 7 | RD   | Recursion Desired    | \[RFC1035] |
-|  bit 8 | RA   | Recursion Allowed    | \[RFC1035] |
-|  bit 9 |      | Reserved             |            |
-| bit 10 | AD   | Authentic Data       | \[RFC4035] |
-| bit 11 | CD   | Checking Disabled    | \[RFC4035] |
+| Bit | Flag | Description | Reference |
+| :---: | :--- | :--- | :--- |
+| bit 5 | AA | Authoritative Answer | \[RFC1035\] |
+| bit 6 | TC | Truncated Response | \[RFC1035\] |
+| bit 7 | RD | Recursion Desired | \[RFC1035\] |
+| bit 8 | RA | Recursion Allowed | \[RFC1035\] |
+| bit 9 |  | Reserved |  |
+| bit 10 | AD | Authentic Data | \[RFC4035\] |
+| bit 11 | CD | Checking Disabled | \[RFC4035\] |
 
-|  Type | Value |               Description               |
-| :---: | :---: | :-------------------------------------: |
-|   A   |   1   |                IP Address               |
-|   NS  |   2   |               Name Server               |
-| CNAME |   5   |          Alias of a domain name         |
-|  PTR  |   12  | Reverse DNS Lookup using the IP Address |
-| HINFO |   13  |             Host Information            |
-|   MX  |   15  |                MX Record                |
-|  AXFR |  252  |        Request for Zone Transfer        |
-|  ANY  |  255  |         Request for All Records         |
+| Type | Value | Description |
+| :---: | :---: | :---: |
+| A | 1 | IP Address |
+| NS | 2 | Name Server |
+| CNAME | 5 | Alias of a domain name |
+| PTR | 12 | Reverse DNS Lookup using the IP Address |
+| HINFO | 13 | Host Information |
+| MX | 15 | MX Record |
+| AXFR | 252 | Request for Zone Transfer |
+| ANY | 255 | Request for All Records |
+

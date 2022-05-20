@@ -24,6 +24,7 @@
 * Arron Crawford | @SquirrelsNabrrl - _Social media, background, advices and more_
 * Alexandre ZANNI | @noraj - _Code and PR_&#x20;
 * Steve Campbell | @sdcampbell - _Code and PR_
+* Hailey - For contributing with resources  for beginners&#x20;
 
 ## Sponsors
 

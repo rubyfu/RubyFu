@@ -2,11 +2,11 @@
 
 Dealing with Twitter's API is really useful for information gathering, taxonomy and social engineering. However, you have to have some keys and tokens in-order to interact with Twitter's APIs. To do so, please refer to the official [Twitter development page](https://dev.twitter.com/oauth/overview).
 
-*   Install Twitter API gem
+* Install Twitter API gem
 
-    ```
-    gem install twitter
-    ```
+  ```text
+  gem install twitter
+  ```
 
 ## Basic Usage
 
@@ -35,13 +35,13 @@ puts client.status(649235138585366528)       # Fetch a particular Tweet by ID
 puts client.create_direct_message("Rubyfu", "Hi, I'm KINGSABRI")    # Send direct message to a particular user
 ```
 
-![](<../../../.gitbook/assets/webfu\_\_twitterAPI1 (6) (1) (6).png>)
+![](../../../.gitbook/assets/webfu__twitterAPI1.png)
 
 **Your turn**, tweet to @Rubyfu using above example. Tweet your code and output to **@Rubyfu**.
 
 ## Building Stolen Credentials notification bot
 
-We're exploiting an XSS/HTML injection vulnerability and tricking users to enter there Username and Password. The idea is, We'll make a [CGI script](http://rubyfu.net/content/module\_0x4\_\_web\_kung\_fu/index.html#cgi) that takes that stolen credentials then tweet these credentials to us as notification or log system
+We're exploiting an XSS/HTML injection vulnerability and tricking users to enter there Username and Password. The idea is, We'll make a [CGI script](http://rubyfu.net/content/module_0x4__web_kung_fu/index.html#cgi) that takes that stolen credentials then tweet these credentials to us as notification or log system
 
 ```ruby
 #!/usr/bin/ruby -w
@@ -74,3 +74,4 @@ end
 
 puts ""
 ```
+
