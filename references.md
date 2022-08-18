@@ -43,7 +43,7 @@
   * Arachni - Web Application scanner framework \[ [link](http://www.arachni-scanner.com/) \]
   * Metasm - Assembly manipulation suite \[ [link](https://github.com/jjyg/metasm) \]
   * WPscan - WordPress vulnerability scanner \[ [link](http://wpscan.org) \]
-  * WPXF - Wordpress Exploit Framework \[ [link](http://www.getwpxf.com/) \]
+  * WPXF - Wordpress Exploit Framework \[ [link](https://github.com/rastating/wordpress-exploit-framework) \]
   * BufferOverflow kit - Exploitation tool Kit \[ [link](https://github.com/KINGSABRI/BufferOverflow-Kit) \]
   * HTTP Traceroute \[ [link](https://digi.ninja/projects/http_traceroute.php) \]
   * CeWL - Custom Word List generator \[ [link](https://digi.ninja/projects/cewl.php) \]
