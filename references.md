@@ -79,6 +79,7 @@
   * PacketFu - mid-level packet manipulation library for reading and writing packets to an interface or to a libpcap-formatted file \[ [link](https://github.com/packetfu/packetfu) \]
   * PacketGen - library to generate, send and capture network packets \[ [link](https://github.com/sdaubert/packetgen) \]
   * ssllabs.rb - library for Qualys SSL Labs API, SSL/TLS security analysis \[ [link](https://github.com/Shopify/ssllabs.rb) \]
+  * XSpear - XSS scanning and parameter analysis tool \[ [link](https://github.com/hahwul/XSpear) \]
   * Intrigue Core - framework for discovering attack surface \[ [link](https://github.com/intrigueio/intrigue-core) \]
 * **Source Code Analysis Tools (SAST)**
   * Brakeman - static analysis tool which checks Ruby on Rails applications for security vulnerabilities \[ [link](https://brakemanscanner.org/), [source](https://github.com/presidentbeef/brakeman) \]
