@@ -111,6 +111,27 @@ Sun Sep 27 00:59:05 AST 2015
 #=> true
 ```
 
+## IO#ioctl (Injecting Commands)
+You can also inject commands into other terminals using Ruby and IOCTL syscall
+```ruby
+#!/usr/bin/env ruby
+
+# Target TTY device path (Example: /dev/pts/0)
+tty = ARGV[0]
+cmd = ARGV[1] + "\n"
+
+abort("Usage: #{__FILE__} <device> <command>") unless ARGV[0] && ARGV[1]
+abort("#{__FILE__}: Must be run as root") unless Process.uid == 0
+
+dev = IO.new(IO.sysopen(tty))
+
+abort("The given device is not a tty") unless dev.tty?
+
+cmd.each_char do |c|
+    dev.ioctl(0x5412, c)
+end
+```
+
 ## Extra
 
 To check the status of the backtick operation you can execute $?.success?
@@ -123,6 +144,7 @@ To check the status of the backtick operation you can execute $?.success?
 >> $?.success?
 => true
 ```
+
 
 ### How to choose?
 
