@@ -112,7 +112,9 @@ Sun Sep 27 00:59:05 AST 2015
 ```
 
 ## IO#ioctl (Injecting Commands)
+
 You can also inject commands into other terminals using Ruby and IOCTL syscall
+
 ```ruby
 #!/usr/bin/env ruby
 
@@ -144,7 +146,6 @@ To check the status of the backtick operation you can execute $?.success?
 >> $?.success?
 => true
 ```
-
 
 ### How to choose?
 
