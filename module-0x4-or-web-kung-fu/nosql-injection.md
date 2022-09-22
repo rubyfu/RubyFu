@@ -2,6 +2,8 @@
 
 ## Blind NoSQL
 
+Exploit a vulnerable authentication form to find a user's password exploit regexp bruteforce.
+
 ### GET
 
 ```ruby
