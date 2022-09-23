@@ -40,6 +40,7 @@
   * [AMQP](module-0x3-or-network-kung-fu/amqp.md)
 * [Module 0x4 \| Web Kung Fu](module-0x4-or-web-kung-fu/README.md)
   * [SQL Injection Scanner](module-0x4-or-web-kung-fu/sql-injection-scanner.md)
+  * [NoSQL Injection](module-0x4-or-web-kung-fu/nosql-injection.md)
   * [Databases](module-0x4-or-web-kung-fu/databases.md)
   * [Extending Burp Suite](module-0x4-or-web-kung-fu/extending-burp-suite.md)
   * [Browser Manipulation](module-0x4-or-web-kung-fu/browser-manipulation.md)
