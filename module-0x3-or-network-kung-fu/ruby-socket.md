@@ -6,7 +6,7 @@
 
 To know the socket hierarchy in ruby here a simple tree explains it.
 
-```text
+```
 IO                              # The basis for all input and output in Ruby
 └── BasicSocket                 # Abstract base class for all socket classes
     ├── IPSocket                # Super class for protocols using the Internet Protocol (AF_INET)
@@ -19,7 +19,7 @@ IO                              # The basis for all input and output in Ruby
         └── UNIXServer          # Helper class for building UNIX domain protocol socket servers
 ```
 
-I'll verbosely mention some of `Socket::Constants` here since I didn't find an obvious reference listing it except [Programming Ruby1.9 _The Pragmatic Programmers' Guide_](http://media.pragprog.com/titles/ruby3/app_socket.pdf); Otherwise you've to `ri Socket::Constants` from command line which is a good way to get the description of each constant.
+I'll verbosely mention some of `Socket::Constants` here since I didn't find an obvious reference listing it except [Programming Ruby1.9 _The Pragmatic Programmers' Guide_](http://media.pragprog.com/titles/ruby3/app\_socket.pdf); Otherwise you've to `ri Socket::Constants` from command line which is a good way to get the description of each constant.
 
 ### Socket Types
 
@@ -30,7 +30,7 @@ I'll verbosely mention some of `Socket::Constants` here since I didn't find an o
 * SOCK\_RDM
 * SOCK\_SEQPACKET
 
-### Address Families\(Socket Domains\)
+### Address Families(Socket Domains)
 
 * AF\_APPLETALK
 * AF\_ATM
@@ -46,14 +46,14 @@ I'll verbosely mention some of `Socket::Constants` here since I didn't find an o
 * AF\_ECMA
 * AF\_HYLINK
 * AF\_IMPLINK
-* AF\_INET\(IPv4\)  
-* AF\_INET6\(IPv6\)
+* AF\_INET(IPv4) &#x20;
+* AF\_INET6(IPv6)
 * AF\_IPX
 * AF\_ISDN
 * AF\_ISO
 * AF\_LAT
 * AF\_LINK
-* AF\_LOCAL\(UNIX\)
+* AF\_LOCAL(UNIX)
 * AF\_MAX
 * AF\_NATM
 * AF\_NDRV
@@ -172,17 +172,17 @@ I'll verbosely mention some of `Socket::Constants` here since I didn't find an o
 Socket.new(domain, socktype [, protocol])
 ```
 
-**domain\(Address\/Protocol Families\):** like AF\_INET, PF\_PACKET, etc
+**domain(Address\\/Protocol Families):** like AF\_INET, PF\_PACKET, etc
 
 **socktype:** like SOCK\_RAW, SOCK\_STREAM
 
-**protocol:** by default, it's `0`m it should be a protocol defined \(we'll manipulate that later\)
+**protocol:** by default, it's `0`m it should be a protocol defined (we'll manipulate that later)
 
 ## TCP Socket
 
-**Server\/Client life cycle**
+**Server\\/Client life cycle**
 
-```text
+```
             Client        Server
               |             |                  
    socket     +             +      socket
@@ -316,8 +316,8 @@ There alternative for sending and receiving too, figure it out, [RubyDoc](http:/
 GServer standard library implements a generic server, featuring thread pool management, simple logging, and multi-server management. Any kind of application-level server can be implemented using this class:
 
 * It accepts multiple simultaneous connections from clients
-* Several services \(i.e. one service per TCP port\)
-  * can be run simultaneously, 
+* Several services (i.e. one service per TCP port)
+  * can be run simultaneously,&#x20;
   * can be stopped at any time through the class method `GServer.stop(port)`
 * All the threading issues are handled
 * All events are optionally logged
@@ -365,4 +365,3 @@ end
 Ref.:
 
 * [The Great Escape - Write-up - TryHackMe](https://blog.raw.pm/en/TryHackMe-The-Great-Escape-write-up/)
-

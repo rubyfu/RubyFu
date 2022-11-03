@@ -36,7 +36,7 @@ server.start
 
 **Advanced HTTP Server**
 
-During working on [CVE-2016-4971\(Wget\)](https://github.com/KINGSABRI/CVE-in-Ruby/tree/master/CVE-2016-4971) exploit, more advanced & custom behavior needed. Here is a web server with a fake login form that saves the collected credentials to a text file. This comes in handy when you don't need to make customizations on apache config or you don't have enough privileges to do so. It require no knowledge for web frameworks like Rails or Senatra.
+During working on [CVE-2016-4971(Wget)](https://github.com/KINGSABRI/CVE-in-Ruby/tree/master/CVE-2016-4971) exploit, more advanced & custom behavior needed. Here is a web server with a fake login form that saves the collected credentials to a text file. This comes in handy when you don't need to make customizations on apache config or you don't have enough privileges to do so. It require no knowledge for web frameworks like Rails or Senatra.
 
 ```ruby
 #!/usr/bin/env ruby
@@ -134,7 +134,7 @@ end
 
 Run it
 
-```text
+```
 ruby webrick-server.rb 8080
 [+] Starting HTTP server on port: 8080
 
@@ -260,11 +260,10 @@ proxy.start
 
 If you do it right, you'll get an authentication pop-up in your browser just like below.
 
-![](../.gitbook/assets/webfu__proxy2.png)
+![](../images/module04/webfu\_\_proxy2.png)
 
 **References**
 
 * [https://www.fedux.org/articles/2015/04/11/setup-a-proxy-with-ruby.html](https://www.fedux.org/articles/2015/04/11/setup-a-proxy-with-ruby.html)
 * [http://ruby-doc.org/stdlib-2.4.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html](http://ruby-doc.org/stdlib-2.4.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html)
 * [http://www.independent-software.com/creating-a-forward-proxy-with-webrick/](http://www.independent-software.com/creating-a-forward-proxy-with-webrick/)
-
