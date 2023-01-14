@@ -82,6 +82,7 @@
   * XSpear - XSS scanning and parameter analysis tool \[ [link](https://github.com/hahwul/XSpear) \]
   * Intrigue Core - framework for discovering attack surface \[ [link](https://github.com/intrigueio/intrigue-core) \]
   * BQM - Deduplicate custom BloudHound queries from different datasets and merge them in one customqueries.json file. \[ [link](https://github.com/noraj/bqm) \]
+  * zsteg - detect stegano-hidden data in PNG & BMP \[ [link](http://zed.0xff.me/), [source](https://github.com/zed-0xff/zsteg) \]
 * **Source Code Analysis Tools (SAST)**
   * Brakeman - static analysis tool which checks Ruby on Rails applications for security vulnerabilities \[ [link](https://brakemanscanner.org/), [source](https://github.com/presidentbeef/brakeman) \]
   * dawnscanner - static analysis security scanner for ruby written web applications with Sinatra, Padrino and Ruby on Rails frameworks \[ [link](https://dawnscanner.org/), [source](https://github.com/thesp0nge/dawnscanner) \]
