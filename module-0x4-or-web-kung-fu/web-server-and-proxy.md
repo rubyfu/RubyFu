@@ -1,6 +1,6 @@
 # Web Server and Proxy
 
-## Web Server
+## Web Server -- webrick
 
 You can run Ruby as web server for any folder/file on any unused port, here's a oneliner code
 
@@ -162,6 +162,61 @@ You'll find credentials have been saved in 'credentials.txt'
 * [https://www.igvita.com/2007/02/13/building-dynamic-webrick-servers-in-ruby/](https://www.igvita.com/2007/02/13/building-dynamic-webrick-servers-in-ruby/)
 * [https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/](https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/)
 * [https://gist.github.com/Integralist/2862917](https://gist.github.com/Integralist/2862917)
+
+## Web server - iodine
+
+You can run Ruby as web server for any folder/file on any unused port, here's a oneliner code
+
+```ruby
+iodine -p 8000 -t 1 -w 1 -www /var/www/ -v
+```
+
+or
+
+```ruby
+require 'iodine'
+Iodine.listen(service: :http, public: '/var/www/', port: 8000, log: 1) {}
+Iodine.threads = 1
+Iodine.start
+```
+
+## Web server - agoo
+
+Agoo has a logging class which allows controlling which data you want deplayed, this is useful for data grabbing (eg. blind XSS). As yo ucan also configure some routes without using a applicatio nframework it is also useful for quick exploit writting when you need to return a special answer.
+
+```
+require 'agoo'
+
+# https://rubydoc.info/gems/agoo/Agoo/Log#configure-class_method
+Agoo::Log.configure(dir: '',
+        console: true,
+        classic: true,
+        colorize: true,
+        states: {
+          ERROR: false,
+          WARN: false,
+          INFO: false,
+          DEBUG: true,
+          connect: false,
+          request: true,
+          response: false,
+          eval: false,
+          push: false,
+        })
+
+# https://rubydoc.info/gems/agoo/Agoo/Server#init-class_method
+Agoo::Server.init(8000, '/www/data')
+
+class DataLogger
+  def call(req)
+    [ 200, { }, [ "noraj" ] ]
+  end
+end
+
+handler = DataLogger.new
+Agoo::Server.handle(:POST, "/data", handler)
+Agoo::Server.start()
+```
 
 ## Web Proxy
 
