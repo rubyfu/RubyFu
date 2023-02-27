@@ -1,6 +1,8 @@
 # Web Server and Proxy
 
-## Web Server -- webrick
+## Web server
+
+### Webrick Web Server
 
 You can run Ruby as web server for any folder/file on any unused port, here's a oneliner code
 
@@ -163,7 +165,7 @@ You'll find credentials have been saved in 'credentials.txt'
 * [https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/](https://rubyit.wordpress.com/2011/07/25/basic-rest-server-with-webrick/)
 * [https://gist.github.com/Integralist/2862917](https://gist.github.com/Integralist/2862917)
 
-## Web server - iodine
+### Iodine Web Server
 
 You can run Ruby as web server for any folder/file on any unused port, here's a oneliner code
 
@@ -180,7 +182,7 @@ Iodine.threads = 1
 Iodine.start
 ```
 
-## Web server - agoo
+## Agoo Web Server
 
 Agoo has a logging class which allows controlling which data you want deplayed, this is useful for data grabbing (eg. blind XSS). As yo ucan also configure some routes without using a applicatio nframework it is also useful for quick exploit writting when you need to return a special answer.
 
@@ -209,7 +211,7 @@ Agoo::Server.init(8000, '/www/data')
 
 class DataLogger
   def call(req)
-    [ 200, { }, [ "noraj" ] ]
+    [ 200, { }, [ "rubyfu" ] ]
   end
 end
 
