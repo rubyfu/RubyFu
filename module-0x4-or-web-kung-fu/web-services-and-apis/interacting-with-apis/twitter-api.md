@@ -35,7 +35,7 @@ puts client.status(649235138585366528)       # Fetch a particular Tweet by ID
 puts client.create_direct_message("Rubyfu", "Hi, I'm KINGSABRI")    # Send direct message to a particular user
 ```
 
-![](<../../../.gitbook/assets/webfu\_\_twitterAPI1 (6) (1) (2).png>)
+![](<../../../.gitbook/assets/webfu\_\_twitterAPI1 (6) (1) (2) (1).png>)
 
 **Your turn**, tweet to @Rubyfu using above example. Tweet your code and output to **@Rubyfu**.
 

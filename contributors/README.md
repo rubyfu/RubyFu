@@ -1,6 +1,6 @@
 # Contributors
 
-![](Ruby\_Loves\_Us.jpg)
+![](../.gitbook/assets/ruby\_loves\_us.jpg)
 
 **Big love to those people who support this book by any meaning.**
 

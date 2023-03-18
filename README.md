@@ -4,7 +4,7 @@ description: ruby for pentesters
 
 # Module 0x0 | Introduction
 
-![](<.gitbook/assets/rubyfu (4) (2).png>)\
+![](<.gitbook/assets/rubyfu (4) (1) (5).png>)\
 _**Rubyfu, where Ruby goes evil!**_\
 ![Twitter Follow](https://img.shields.io/twitter/follow/Rubyfu.svg?style=social\&label=Follow\&style=plastic)
 

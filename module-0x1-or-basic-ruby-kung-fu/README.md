@@ -1,4 +1,4 @@
-# Module 0x1 \| Basic Ruby Kung Fu
+# Module 0x1 | Basic Ruby Kung Fu
 
 Ruby has awesome abilities and tricks for dealing with string and array scenarios. In this chapter we'll present some tricks we may need in our hacking life.
 
@@ -30,7 +30,7 @@ Readline.get_screen_size
 [ENV['LINES'].to_i, ENV['COLUMNS'].to_i]
 ```
 
-* By tput command line 
+* By tput command line&#x20;
 
 ```ruby
 [`tput cols`.to_i , `tput lines`.to_i]
@@ -38,9 +38,9 @@ Readline.get_screen_size
 
 ## Console with tab completion
 
-We can't stop being jealous of Metasploit console \(msfconsole\), where we take a rest from command line switches. Fortunately, here is the main idea of console tab completion in ruby:
+We can't stop being jealous of Metasploit console (msfconsole), where we take a rest from command line switches. Fortunately, here is the main idea of console tab completion in ruby:
 
-* Readline 
+* Readline&#x20;
 
 The Readline module provides an interface for GNU Readline. This module defines a number of methods to facilitate completion and accesses input history from the Ruby interpreter.
 
@@ -115,6 +115,4 @@ end
 {% endcode %}
 
 Things can go much farther, like _msfconsole_, maybe?
-
-* [Ruby Readline Documentation and Tutorial](http://bogojoker.com/readline/)
 
