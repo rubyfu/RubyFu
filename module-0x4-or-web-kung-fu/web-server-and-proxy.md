@@ -182,9 +182,19 @@ Iodine.threads = 1
 Iodine.start
 ```
 
+**HTTPS server**
+
+Self-signed automatic certificates:
+
+`iodine -b 10.0.0.1 -p 8000 -www /var/www -tls -v`
+
+Manually provide certs
+
+`iodine -b 10.0.0.1 -p 8000 -www /var/www -v -tls-cert serv.crt -tls-key serv.key -tls-pass key_pass`
+
 ## Agoo Web Server
 
-Agoo has a logging class which allows controlling which data you want deplayed, this is useful for data grabbing (eg. blind XSS). As yo ucan also configure some routes without using a applicatio nframework it is also useful for quick exploit writting when you need to return a special answer.
+Agoo has a logging class which allows controlling which data you want deplayed, this is useful for data grabbing (eg. blind XSS). As you can also configure some routes without using an application framework. It is also useful for quick exploit writting when you need to return a special answer.
 
 ```
 require 'agoo'
@@ -219,6 +229,10 @@ handler = DataLogger.new
 Agoo::Server.handle(:POST, "/data", handler)
 Agoo::Server.start()
 ```
+
+One-line:
+
+`agoo -b 10.0.0.1 -p 8000 -d /var/www -v`
 
 ## Web Proxy
 
