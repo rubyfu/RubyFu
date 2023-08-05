@@ -2,7 +2,7 @@
 
 ## Setting up the Ruby environment for Burp Extensions
 
-1. Download a stable version of JRuby from [JRuby Downloads](http://jruby.org/download)
+1. Download a stable version of JRuby from [JRuby Downloads](https://www.jruby.org/download)
 2. Select the jar for Linux \(JRuby x.x.x Complete .jar\) or Executable for Windows.
 3. Import the environment from **Burp Suite** &gt;&gt; **Extender** &gt;&gt; **Options** &gt;&gt; **Ruby Environment**.
 
